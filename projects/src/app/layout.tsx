@@ -4,6 +4,7 @@ import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { JsonLd, generateVideoGameSchema } from '@/components/json-ld';
 import './globals.css';
+import  Script from 'next/script';
 
 export const metadata: Metadata = {
   title: {
@@ -60,6 +61,21 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased min-h-screen flex flex-col">
         <JsonLd data={generateVideoGameSchema()} />
+        <Script
+          id="ga-loader"
+          src="https://www.googletagmanager.com/gtag/js?id=G-1K6LQQSKHV"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-config" strategy="afterInteractive">
+          {`
+            if (typeof window.gtag === 'function') {
+              window.gtag('js', new Date());
+              window.gtag('config', 'G-1K6LQQSKHV');
+            }
+            console.log('GA4 Script Ready ✅');
+          `}
+        </Script>
+
         {isDev && <Inspector />}
         <SiteHeader />
         <main className="flex-1">{children}</main>
