@@ -60,8 +60,17 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <meta
+        name="google-adsense-account"
+        content="ca-pub-3383070348689557"
+      ></meta>
       <body className="antialiased min-h-screen flex flex-col">
         <JsonLd data={generateVideoGameSchema()} />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3383070348689557"
+          strategy="afterInteractive"
+        ></Script>
         <Script
           id="ga-loader"
           src="https://www.googletagmanager.com/gtag/js?id=G-1K6LQQSKHV"
