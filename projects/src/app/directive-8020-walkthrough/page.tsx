@@ -7,9 +7,9 @@ import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 Full Walkthrough - Step by Step Chapter Guide',
+  title: 'Directive 8020 Walkthrough - Full Episode Guide & Routes',
   description:
-    'Directive 8020 walkthrough hub: spoiler-safe first run route, chapter tracking method, QTE and stealth advice, collectibles checklist, Turning Points, and best ending preparation.',
+    'Directive 8020 walkthrough with episode route notes, QTE and stealth tips, scanner use, collectibles, Turning Points, Destinies, endings prep, and spoiler-safe first-run advice.',
   alternates: {
     canonical: '/directive-8020-walkthrough',
   },
@@ -17,110 +17,166 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
+    question: 'How many episodes are in Directive 8020?',
+    answer:
+      'Launch review coverage describes Directive 8020 as an eight-episode story. Use this walkthrough as an eight-slot route tracker, but verify exact late episode titles inside your own Story Tree before publishing final route names.',
+  },
+  {
     question: 'Should I use a walkthrough for my first Directive 8020 playthrough?',
     answer:
-      'Use a spoiler-safe walkthrough if you want help with mechanics, survival principles, and collectible tracking without ruining story outcomes. Use a full spoiler route only after your first ending or if you are targeting trophies.',
+      'Use a spoiler-safe walkthrough on your first run. Read survival rules, exploration habits, and tracking templates, but save exact death and ending routes for a second run unless you are chasing trophies immediately.',
   },
   {
-    question: 'How should I track chapters in Directive 8020?',
+    question: 'What should I track in every Directive 8020 chapter?',
     answer:
-      'For each chapter, record playable character, location, key choices, QTEs, collectibles, suspect behavior, Turning Points, and any survival or relationship changes.',
+      'Track playable character, objective, separated crew, mimic clues, Destinies, QTEs, stealth failures, scanner prompts, collectibles, deaths, relationships, and Turning Points.',
   },
   {
-    question: 'What should I do after a character dies?',
+    question: 'How do Turning Points change the walkthrough?',
     answer:
-      'Check the Story Tree before replaying. The death may be tied to an earlier Turning Point involving trust, separation, relationship state, or missed evidence.',
+      'Turning Points let you revisit major decisions through the story tree, so the best route method is to finish one clean run, then replay specific branches instead of restarting the whole game.',
   },
   {
-    question: 'Is Directive 8020 better blind or guided?',
+    question: 'How many collectibles are in Directive 8020?',
     answer:
-      'For story impact, blind is better. For best ending, trophies, and saving everyone, guided play is more efficient. A hybrid approach works well: play blind, but track choices and collectibles carefully.',
+      'Destructoid review coverage reports 60 collectibles. Treat that as a launch-day count to verify while building your final episode-by-episode checklist.',
   },
 ];
 
-const chapterTemplate = [
-  ['Playable character', 'Who you control and who is nearby.'],
-  ['Location', 'Ship section, planet area, or objective zone.'],
-  ['Main objective', 'What the game asks you to do before the next branch.'],
-  ['Major choices', 'Timed choices, trust decisions, accusations, rescues, and split paths.'],
-  ['QTE / stealth', 'Inputs, failures, injuries, deaths, or route changes.'],
-  ['Collectibles', 'Evidence, logs, relics, secrets, and optional objects.'],
-  ['Mimic clues', 'Suspicious behavior, contradictions, isolation, or impossible knowledge.'],
-  ['Turning Points', 'Story Tree nodes unlocked and branches still hidden.'],
+const sourceNotes = [
+  {
+    source: 'Official Steam Community news',
+    usefulFor:
+      'Release date, five astronauts, mimic premise, QTEs, impossible choices, stealth, Turning Points, Movie Night, and online multiplayer timing.',
+    href: 'https://steamcommunity.com/app/2255370/announcements/',
+  },
+  {
+    source: 'TechRadar interview',
+    usefulFor:
+      'Why Turning Points exist: saving favorite characters, replaying for endings, and achievement cleanup.',
+    href: 'https://www.techradar.com/gaming/directive-8020-executive-producer-says-the-turning-points-system-was-added-for-players-who-want-to-keep-everyone-alive-but-also-for-a-big-percentage-of-our-hardcore-fans-that-will-replay-the-game-to-get-all-endings',
+  },
+  {
+    source: 'PC Gamer preview',
+    usefulFor:
+      'Episode-style pacing, first-run blind advice, second-run branch completion, and episode one / episode four preview context.',
+    href: 'https://www.pcgamer.com/games/horror/directive-8020-is-using-an-episodic-structure-straight-out-of-a-limited-tv-series-to-be-mindful-of-peoples-time/',
+  },
+  {
+    source: 'Destructoid review',
+    usefulFor:
+      'Reviewer-reported Destinies, scanner behavior, 60 collectibles, eight episodes, and five substantial endings.',
+    href: 'https://www.destructoid.com/reviews/directive-8020-review/',
+  },
 ];
 
 const firstRunActions = [
   {
-    step: 'Before starting',
-    doThis: 'Enable subtitles, set readable brightness, test QTE inputs, and close overlays.',
-    why: 'Bad settings can cause missed dialogue, failed QTEs, or poor stealth visibility.',
+    step: 'Before episode 1',
+    doThis: 'Pick readable brightness, enable subtitles, test QTE prompts, and decide whether this is blind or completion-focused.',
+    why: 'Directive 8020 mixes cinematic scenes with sudden action, so unreadable prompts can create avoidable deaths.',
   },
   {
-    step: 'During each scene',
-    doThis: 'Search safe rooms before objective exits and record who separates from the group.',
-    why: 'Evidence and isolation are the two biggest inputs for mimic trust decisions.',
+    step: 'During exploration',
+    doThis: 'Sweep side rooms, terminals, bodies, crew spaces, labs, and objective-adjacent corridors before leaving.',
+    why: 'Review coverage reports 60 collectibles, and evidence can affect trust, Destinies, and route interpretation.',
+  },
+  {
+    step: 'During stealth',
+    doThis: 'Use crouch movement, line-of-sight breaks, hiding spots, and the scanner only when the risk is worth it.',
+    why: 'Official material confirms stealth pressure, while review coverage describes the scanner as a useful objective and enemy tool.',
   },
   {
     step: 'After each episode',
-    doThis: 'Open the Story Tree and note Turning Points, locked branches, deaths, and relationship shifts.',
-    why: 'This creates a route map for endings, save-everyone recovery, and trophy cleanup.',
+    doThis: 'Open the Story Tree, record Turning Points, deaths, relationships, Destinies, locked branches, and missed collectibles.',
+    why: 'Turning Points make replay efficient only if you know which variable you are changing.',
   },
-  {
-    step: 'After a death',
-    doThis: 'Do not replay only the final QTE; check earlier trust, evidence, and separation choices.',
-    why: 'The visible death may be caused by a branch several minutes earlier.',
-  },
+];
+
+const chapterTemplate = [
+  ['Playable character', 'Who you control and whether another player owns them in Movie Night.'],
+  ['Opening state', 'Crew alive, injured, separated, armed, suspicious, or locked out of an area.'],
+  ['Objective', 'The visible mission goal and the hidden route risk behind it.'],
+  ['Destiny / character direction', 'Any trait-like decision that changes how a character acts later.'],
+  ['Mimic clues', 'Contradictions, impossible knowledge, isolation, duplicate characters, or unsafe trust prompts.'],
+  ['QTE / stealth', 'Inputs, chase routes, hiding spots, scanner use, deaths, and injuries.'],
+  ['Collectibles', 'Logs, recordings, notes, secrets, environmental lore, and Deluxe-related relics.'],
+  ['Turning Points', 'Story Tree node, branch tested, result, and whether it affects endings.'],
 ];
 
 const knownEpisodes = [
   {
-    id: 'little-star',
+    id: 'episode-1',
     title: 'Episode 1: Little Star',
-    status: 'Known',
-    focus: 'Prologue structure, Brianna Young waking, crew orientation, first route notes.',
+    status: 'Known title',
+    focus: 'Opening control, Brianna Young baseline, early mimic rules, first Destiny and Turning Point notes.',
+    route:
+      'Play this as calibration. Learn prompt timing, inspect crew spaces, and write down the first moment a character separates or acts with information they should not have.',
   },
   {
-    id: 'best-laid-plans',
+    id: 'episode-2',
     title: 'Episode 2: Best Laid Plans',
-    status: 'Known',
-    focus: 'Mission context, crew tension, early relationship and evidence tracking.',
+    status: 'Known title',
+    focus: 'Mission stress, early relationship shifts, blame, cooperation, and evidence before accusations.',
+    route:
+      'Favor calm, evidence-based choices. If two characters disagree, log both the relationship change and who physically controls the next risky action.',
   },
   {
-    id: 'the-sample',
+    id: 'episode-3',
     title: 'Episode 3: The Sample',
-    status: 'Known',
-    focus: 'Specimen risk, mimic suspicion, lab evidence, and early branch conditions.',
+    status: 'Known title',
+    focus: 'Specimen handling, lab evidence, containment logic, and mimic suspicion.',
+    route:
+      'Search lab spaces before objective exits. Note who argues for containment, destruction, secrecy, or speed because those positions may return in late trust checks.',
   },
   {
-    id: 'dragnet',
+    id: 'episode-4',
     title: 'Episode 4: Dragnet',
-    status: 'Known',
-    focus: 'Stealth introduction, pursuit logic, noise discipline, and safe movement.',
+    status: 'Known title',
+    focus: 'Stealth pressure, pursuit routing, scanner habits, and mid-run branch testing.',
+    route:
+      'Map cover, sight lines, scanner timing, and chase exits. Keep QTE success consistent when testing whether a death came from stealth or from a prior choice.',
   },
   {
     id: 'episode-5',
-    title: 'Episode 5: Title TBC',
-    status: 'Verify in game',
-    focus: 'Use this slot for the next confirmed chapter title after launch capture.',
+    title: 'Episode 5: Title to verify',
+    status: 'Launch capture',
+    focus: 'Mid-game fallout, crew splits, suspect lists, and the first large route lock-ins.',
+    route:
+      'Treat this as the turning point audit. Before changing anything, list every living character, known clue, weapon/tool state, and unresolved suspicion.',
   },
   {
     id: 'episode-6',
-    title: 'Episode 6: Title TBC',
-    status: 'Verify in game',
-    focus: 'Track new environments, crew split points, and mid-game deaths.',
+    title: 'Episode 6: Title to verify',
+    status: 'Launch capture',
+    focus: 'Late-game paranoia, deaths, Destinies paying off, and major ending conditions.',
+    route:
+      'Review coverage says the game becomes stronger from episode six onward. Save this chapter for careful branch testing, not rushed cleanup.',
   },
   {
     id: 'episode-7',
-    title: 'Episode 7: Title TBC',
-    status: 'Verify in game',
-    focus: 'Late-game branch lock-ins, identity reveals, and finale setup.',
+    title: 'Episode 7: Title to verify',
+    status: 'Launch capture',
+    focus: 'Final survivor setup, mimic confirmation, mission priorities, and locked relationships.',
+    route:
+      'Change one variable at a time: a trust decision, a QTE result, a Destiny, or a collectible route. Do not mix tests or the ending logic becomes noisy.',
   },
   {
     id: 'episode-8',
-    title: 'Episode 8: Title TBC',
-    status: 'Verify in game',
-    focus: 'Finale choices, ending conditions, survivors, and post-credits notes.',
+    title: 'Episode 8: Finale title to verify',
+    status: 'Launch capture',
+    focus: 'Final choices, ending split, survivor state, and post-ending cleanup notes.',
+    route:
+      'Record the exact final state: survivors, deaths, mimic status, mission outcome, collectibles, and ending name. Use late Turning Points for all-ending cleanup.',
   },
+];
+
+const routePriorities = [
+  ['Best ending base', 'Keep the crew alive, preserve evidence, verify mimic claims, pass QTEs, and protect useful relationships.'],
+  ['All endings route', 'Finish one clean ending, then branch from late Turning Points to test survivor count, mission choice, and evidence state.'],
+  ['All collectibles route', 'Use the reported 60-collectible target and check every episode before advancing through irreversible exits.'],
+  ['Movie Night route', 'Assign one player to record choices and another to watch for clues, because local co-op can make trust decisions chaotic.'],
+  ['Survival Mode route', 'Accept that consequences are final; use this only after learning prompt timing and route risks.'],
 ];
 
 export default function WalkthroughPage() {
@@ -128,9 +184,9 @@ export default function WalkthroughPage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 Full Walkthrough - Step by Step Chapter Guide',
+          title: 'Directive 8020 Walkthrough - Full Episode Guide & Routes',
           description:
-            'Directive 8020 walkthrough with spoiler-safe route planning, chapter tracking, QTE and stealth advice, collectibles, Turning Points, and survival prep.',
+            'Directive 8020 walkthrough with episode route notes, QTE and stealth tips, scanner use, collectibles, Turning Points, Destinies, endings prep, and spoiler-safe first-run advice.',
           url: '/directive-8020-walkthrough',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
@@ -141,78 +197,112 @@ export default function WalkthroughPage() {
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Walkthrough' }]} />
-        <PageHero src="/d8020-screenshot-07.jpg" alt="Directive 8020 official corridor walkthrough screenshot" />
+        <PageHero src="/d8020-screenshot-07.jpg" alt="Directive 8020 corridor walkthrough screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 Full Walkthrough
+          Directive 8020 Walkthrough: Full Episode Guide
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          BLUF: Directive 8020 is structured around episode-style story routes,
-          major Turning Points, stealth pressure, QTEs, and a mimic threat. Use
-          this full guide as your episode hub: play blind if you want maximum
-          tension, or track every branch here if you want everyone alive.
+          This Directive 8020 walkthrough is built for launch-day play: a
+          spoiler-safe first run, then a structured cleanup route for Turning
+          Points, Destinies, stealth, QTEs, collectibles, deaths, and endings.
+          It uses official feature details plus current review and preview
+          coverage, with late episode titles marked for in-game verification.
         </p>
 
         <BlufBox>
           <p>
-            <strong>Use this as the main Directive 8020 full guide.</strong> Known
-            early episode names include Little Star, Best Laid Plans, The
-            Sample, and Dragnet. For every episode, track Turning Points, QTEs,
-            stealth failures, collectibles, relationship changes, and mimic
-            suspicion. Do not chase all endings until you have one clean route.
+            <strong>Best route:</strong> finish one clean playthrough before
+            chasing every branch. Search thoroughly, keep the crew together when
+            possible, verify separated characters before trusting them, pass
+            QTEs consistently, and log every Turning Point after each episode.
           </p>
         </BlufBox>
 
         <StatusPanel
           items={[
-            { label: 'Episode structure', value: 'Early episode names verified from public wiki/preview material; later titles need launch capture.', status: 'working' },
-            { label: 'Exact choices', value: 'Needs in-game route capture before final option-by-option tables.', status: 'needs-check' },
-            { label: 'Core mechanics', value: 'Turning Points, Story Tree, stealth, Movie Night, and mimic premise are official/store-supported.', status: 'verified' },
-            { label: 'Best route data', value: 'Use this page as the capture template until all episodes are mapped.', status: 'working' },
+            { label: 'Core systems', value: 'Mimic threat, choices, QTEs, stealth, Turning Points, Story Tree, and Movie Night are official-source supported.', status: 'verified' },
+            { label: 'Episode count', value: 'Eight-episode structure is reviewer-reported and should be checked against the final in-game Story Tree.', status: 'working' },
+            { label: 'Collectible count', value: '60 collectibles are reviewer-reported and need route capture before final checklist publication.', status: 'working' },
+            { label: 'Late chapter titles', value: 'Episodes 5-8 need launch capture before exact title and route tables are final.', status: 'needs-check' },
           ]}
         />
 
         <VideoEmbed
           videoId="gaQkzfA14G4"
-          title="Directive 8020 official walkthrough reference trailer"
-          caption="Before using a spoiler-heavy walkthrough, the official video gives a clean reference for Directive 8020 gameplay: ship exploration, crew tension, mimic suspicion, and survival horror pacing."
+          title="Directive 8020 official gameplay reference trailer"
+          caption="Use the official trailer as the visual baseline for this walkthrough: Cassiopeia exploration, crew distrust, mimic pressure, and cinematic survival horror pacing."
         />
+
+        <div className="prose-game">
+          <h2>Walkthrough Sources and What They Confirm</h2>
+          <p>
+            This page does not copy another route. It combines official feature
+            information with current preview and review reporting, then turns
+            that material into an original, player-facing route framework. Exact
+            late-game choices should still be verified from the in-game Story
+            Tree before they are treated as final.
+          </p>
+        </div>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Source</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Walkthrough use</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sourceNotes.map((item) => (
+                <tr key={item.source} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">
+                    <a href={item.href} target="_blank" rel="noreferrer">
+                      {item.source}
+                    </a>
+                  </td>
+                  <td className="px-4 py-3 text-muted-foreground">{item.usefulFor}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <div className="prose-game">
           <h2>Best Way to Use This Walkthrough</h2>
           <p>
-            Directive 8020 is a story game, so the right walkthrough depends on
-            your goal. If you want the strongest first experience, avoid full
-            spoilers and use this page as a checklist. If you want every trophy
-            or the best ending, record every major branch from the start.
+            Directive 8020 is a branching horror story, so a good walkthrough
+            should not push every spoiler into your first screen. Use this page
+            in three passes: first as a survival checklist, second as a Story
+            Tree route map, and third as a completion tracker for endings,
+            deaths, trophies, and collectibles.
           </p>
-          <ArticleImage
-            src="/d8020-screenshot-07.jpg"
-            alt="Directive 8020 corridor walkthrough route screenshot"
-            caption="Walkthrough notes should track more than dialogue: stealth routes, corridor threats, QTE failures, and missed evidence can all change survival outcomes."
-          />
           <ul>
-            <li><strong>Blind story run:</strong> read only the survival rules and collectible checklist.</li>
-            <li><strong>Save everyone run:</strong> track deaths, injuries, relationships, and mimic suspicion.</li>
-            <li><strong>Completion run:</strong> use the chapter template and revisit Turning Points methodically.</li>
-            <li><strong>Co-op run:</strong> assign one player to record choices and another to watch for clues.</li>
+            <li><strong>First run:</strong> stay mostly blind, but track separated characters, evidence, deaths, and Turning Points.</li>
+            <li><strong>Second run:</strong> use the Story Tree to test alternate choices episode by episode.</li>
+            <li><strong>Completion run:</strong> target collectibles, death scenes, endings, trophies, and Movie Night variants.</li>
           </ul>
 
           <h2>First-Run Action Plan</h2>
           <p>
-            This table is the practical version of the walkthrough. If you do
-            only these steps, your first ending will still produce useful data
-            for all endings, all deaths, and save-everyone cleanup.
+            Follow this table if you only want practical advice while playing.
+            It keeps the page useful for both normal players and AI answer
+            extraction because every step has a condition and a reason.
           </p>
           <ActionTable rows={firstRunActions} />
 
-          <h2>Directive 8020 Episode List</h2>
+          <ArticleImage
+            src="/d8020-screenshot-01.jpg"
+            alt="Directive 8020 crew route planning screenshot"
+            caption="The walkthrough starts with crew state: who is alive, who is separated, who has evidence, and who may be unsafe to trust."
+          />
+
+          <h2>Episode Walkthrough Index</h2>
           <p>
-            The early episode names below are known from public wiki and preview
-            material. Later titles should be filled from in-game capture before
-            being treated as final. This structure is still useful now because
-            it gives the main walkthrough page stable anchors and a repeatable
-            format for every chapter.
+            Known public episode titles are listed where available. Later
+            episodes are intentionally labeled as capture slots so the page can
+            be updated with exact in-game titles, decisions, deaths, and
+            collectibles after route verification.
           </p>
         </div>
 
@@ -235,88 +325,51 @@ export default function WalkthroughPage() {
         </div>
 
         <div className="prose-game">
-          <h2 id="little-star">Directive 8020 Episode 1: Little Star Walkthrough</h2>
-          <p>
-            Little Star should be treated as the calibration chapter. Your goal
-            is to learn input timing, observe Brianna Young&apos;s baseline
-            behavior, and record the first moments where the story separates
-            ordinary crew stress from mimic-related suspicion.
-          </p>
-          <ul>
-            <li><strong>Turning Points:</strong> record every timed dialogue prompt, especially if it affects trust or isolation.</li>
-            <li><strong>QTE tips:</strong> do not treat early QTEs as harmless tutorials; failed inputs can teach the game&apos;s death logic.</li>
-            <li><strong>Evidence:</strong> inspect terminals, sleeping areas, and medical or ship-status details before moving on.</li>
-          </ul>
-
-          <h2 id="best-laid-plans">Directive 8020 Episode 2: Best Laid Plans Walkthrough</h2>
-          <p>
-            This chapter is where relationship state becomes important. If the
-            crew begins assigning blame or withholding information, document who
-            trusts whom. Later save-everyone routes often depend on whether a
-            character is willing to help under pressure.
-          </p>
-          <ul>
-            <li><strong>Decision priority:</strong> choose evidence-based lines over emotional accusations.</li>
-            <li><strong>Relationship notes:</strong> write down visible trust gains or losses.</li>
-            <li><strong>Mimic watch:</strong> mark any character who leaves the group without a witness.</li>
-          </ul>
-
-          <ArticleImage
-            src="/d8020-screenshot-01.jpg"
-            alt="Directive 8020 crew episode walkthrough reference"
-            caption="For every episode, track crew state first: who is present, who separated, who has evidence, and who may be compromised."
-          />
-
-          <h2 id="the-sample">Directive 8020 Episode 3: The Sample Walkthrough</h2>
-          <p>
-            The Sample is the point where lab evidence and specimen handling
-            should become central to route tracking. Any object, log, or
-            character reaction tied to the alien organism can become important
-            for later accusation or trust choices.
-          </p>
-          <ul>
-            <li><strong>Evidence priority:</strong> search lab spaces before triggering objective exits.</li>
-            <li><strong>Choice tracking:</strong> note who argues for containment, destruction, or secrecy.</li>
-            <li><strong>Branch logic:</strong> if the Story Tree marks this chapter, test evidence choices before testing dialogue tone.</li>
-          </ul>
-
-          <h2 id="dragnet">Directive 8020 Episode 4: Dragnet Walkthrough</h2>
-          <p>
-            Dragnet is the natural home for stealth and pursuit notes. Public
-            material points to more active survival gameplay than earlier Dark
-            Pictures entries: stealth, evasion, improvised weapons, and reflex
-            checks. Until exact noise values are verified in-game, use a simple
-            rule: slower movement, cover, and patience beat sprinting.
-          </p>
-          <ul>
-            <li><strong>Stealth:</strong> crouch-walk in threat zones, break line of sight, and avoid unnecessary sprinting.</li>
-            <li><strong>Distractions:</strong> if noisemakers or throwable distractions appear, log where they spawn and whether they persist after Turning Points.</li>
-            <li><strong>QTEs:</strong> separate stealth failures from failed inputs when testing consequences.</li>
-          </ul>
-
-          <ArticleImage
-            src="/d8020-screenshot-07.jpg"
-            alt="Directive 8020 Dragnet stealth walkthrough"
-            caption="Dragnet-style sections should be mapped by sight lines, hiding spots, sound risk, QTEs, and the nearest Turning Point."
-          />
-
-          {knownEpisodes.slice(4).map((episode) => (
+          {knownEpisodes.map((episode) => (
             <section key={episode.id}>
               <h2 id={episode.id}>{episode.title} Walkthrough</h2>
-              <p>
-                This chapter slot is reserved for verified launch capture. When
-                filling it, use the same structure: opening objective, playable
-                character, map area, Turning Points, QTEs, stealth route,
-                collectibles, death triggers, and ending impact.
-              </p>
+              <p>{episode.route}</p>
+              <ul>
+                <li><strong>Main focus:</strong> {episode.focus}</li>
+                <li><strong>Record:</strong> playable character, objective, evidence, separated crew, deaths, and Story Tree branches.</li>
+                <li><strong>Replay rule:</strong> change one variable per Turning Point so you can identify what caused the new result.</li>
+              </ul>
             </section>
           ))}
 
+          <ArticleImage
+            src="/d8020-screenshot-07.jpg"
+            alt="Directive 8020 stealth walkthrough route screenshot"
+            caption="Stealth notes should include cover, sound risk, scanner timing, QTEs, deaths, and whether a failure changes the Story Tree."
+          />
+
+          <h2>Route Priorities by Player Goal</h2>
+          <p>
+            Do not use the same route for every goal. A blind story run, a best
+            ending route, and a trophy route all need different tolerance for
+            spoilers and rewinds.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <tbody>
+              {routePriorities.map(([goal, method]) => (
+                <tr key={goal} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 text-foreground font-medium w-44">{goal}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{method}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="prose-game">
           <h2>Chapter Tracking Template</h2>
           <p>
-            Each chapter guide should eventually answer the same questions. Use
-            this template while playing so your first run becomes a useful route
-            map rather than a one-off story file.
+            Use this template for each episode. It is designed for human
+            players, search snippets, and generative engines because every row
+            is a clean knowledge unit.
           </p>
         </div>
 
@@ -334,55 +387,58 @@ export default function WalkthroughPage() {
         </div>
 
         <div className="prose-game">
-          <h2>Spoiler-Safe Walkthrough Rules</h2>
+          <h2>QTE, Stealth, Scanner, and Chase Tips</h2>
           <p>
-            These rules help without naming late-game outcomes. They are based
-            on Directive 8020&apos;s confirmed systems: a mimic enemy, branching
-            story, stealth, improvised weapons, Movie Night, Turning Points, and
-            a Story Tree.
+            Official launch material says Directive 8020 keeps Supermassive
+            staples like split-second QTEs and impossible choices while adding
+            more active stealth. Review coverage also describes a scanner that
+            can point toward objectives and enemies. Use those tools carefully:
+            relying on the scanner can reduce uncertainty, but ignoring it in a
+            dangerous section can cost a character.
           </p>
           <ul>
-            <li>Explore before objective exits if no chase or timer is active.</li>
-            <li>Do not follow isolated characters alone unless you have proof.</li>
-            <li>Preserve group communication whenever the game offers it.</li>
-            <li>Choose stealth and observation before confrontation.</li>
-            <li>Treat every QTE failure as potentially route-changing.</li>
-            <li>After each chapter, inspect the Story Tree for hidden branches.</li>
+            <li>Keep controller or keyboard input stable before long action scenes.</li>
+            <li>Crouch, wait, and break line of sight before sprinting through threat zones.</li>
+            <li>Use the scanner to confirm danger, then put attention back on movement and cover.</li>
+            <li>When testing branches, repeat QTE outcomes consistently so dialogue choices remain the only changed variable.</li>
           </ul>
 
           <h2>Collectibles and Evidence</h2>
           <p>
-            Collectibles in Directive 8020 are likely more than lore. In a mimic
-            story, logs and environmental clues can help identify contradictions
-            and safer routes. The Digital Deluxe Heirlooms mission also makes
-            anthology-related relics worth tracking carefully.
+            Treat collectibles as route data, not just lore. In a mimic story,
+            logs and recordings can explain contradictions, crew history,
+            Cassiopeia systems, and safer trust decisions. For now, use 60 as
+            the reported collectible target and verify the final number during
+            capture.
           </p>
           <ul>
-            <li>Search crew quarters, labs, medical areas, control rooms, and wreckage paths.</li>
-            <li>Inspect bodies, broken equipment, terminals, and sealed doors.</li>
-            <li>Record whether a clue appears before or after a major trust decision.</li>
-            <li>Check if collectibles remain saved when using Turning Points.</li>
+            <li>Search crew quarters, medical areas, labs, control rooms, hydroponics-style spaces, wreckage paths, and sealed doors.</li>
+            <li>Record whether each collectible appears before or after a major trust decision.</li>
+            <li>Check if collectibles remain saved after replaying from a Turning Point.</li>
+            <li>Separate required evidence from optional lore so the final guide can support both casual and 100% players.</li>
           </ul>
 
-          <h2>QTE, Stealth, and Chase Preparation</h2>
+          <h2>When to Rewind with Turning Points</h2>
           <p>
-            Directive 8020&apos;s store description emphasizes evasion,
-            improvised weapons, reflexes, and stealth. That means your
-            walkthrough notes should include more than dialogue choices.
+            Turning Points are useful, but rewinding too often can make the
+            first playthrough feel artificial. The practical rule is simple:
+            accept consequences during a blind run unless a death ruins your
+            goal, then use the Story Tree aggressively for second-run cleanup.
           </p>
-          <ul>
-            <li>Lower input latency before playing: disable distracting overlays and use a stable controller.</li>
-            <li>In stealth, prioritize line of sight and sound over sprinting.</li>
-            <li>If a character drops an item or gets injured, mark that as a possible later consequence.</li>
-            <li>When replaying, keep QTE success consistent so you can isolate choice consequences.</li>
-          </ul>
+          <ol>
+            <li>Finish the episode if the run is still readable.</li>
+            <li>Open the Story Tree and identify the earliest relevant Turning Point.</li>
+            <li>Write down the original choice, new choice, and changed result.</li>
+            <li>Do not change QTE success, evidence, and dialogue in the same test.</li>
+            <li>Move ending tests to late-game branches after one full route is complete.</li>
+          </ol>
 
-          <h2>Related Route Guides</h2>
+          <h2>Related Walkthrough Pages</h2>
           <ul>
             <li><a href="/directive-8020-all-endings">All Endings Guide</a></li>
             <li><a href="/directive-8020-how-to-save-everyone">How to Save Everyone</a></li>
             <li><a href="/directive-8020-choices-consequences">Choices &amp; Consequences</a></li>
-            <li><a href="/directive-8020-trophy-guide">Trophy &amp; Achievement Guide</a></li>
+            <li><a href="/directive-8020-collectibles-heirlooms">Collectibles &amp; Heirlooms</a></li>
           </ul>
         </div>
 
@@ -391,22 +447,22 @@ export default function WalkthroughPage() {
             {
               href: '/directive-8020-how-to-save-everyone',
               title: 'How to Save Everyone',
-              description: 'Use the walkthrough data to repair deaths and preserve the full crew.',
+              description: 'Turn this walkthrough into a best-ending survival route.',
             },
             {
-              href: '/directive-8020-death-scenes-guide',
-              title: 'All 44 Death Scenes',
-              description: 'Branch from Turning Points after one clean route to collect deaths efficiently.',
-            },
-            {
-              href: '/directive-8020-collectibles-heirlooms',
-              title: 'Collectibles & Heirlooms',
-              description: 'Track clues and Deluxe relics by episode and route condition.',
+              href: '/directive-8020-turning-points-story-tree',
+              title: 'Turning Points & Story Tree',
+              description: 'Use rewinds correctly instead of replaying the full game.',
             },
             {
               href: '/directive-8020-stealth-guide',
               title: 'Stealth Guide',
-              description: 'Use this for Dragnet-style pursuit and corridor survival sections.',
+              description: 'Map scanner use, hiding, noise, and chase sections.',
+            },
+            {
+              href: '/directive-8020-trophy-guide',
+              title: 'Trophy & Achievement Guide',
+              description: 'Plan endings, collectibles, deaths, and cleanup efficiently.',
             },
           ]}
         />
