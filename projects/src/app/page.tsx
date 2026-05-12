@@ -427,18 +427,37 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <div className="mb-6 flex items-center gap-3">
-          <div className="h-1 w-8 rounded-full bg-d8020" />
-          <h2 className="text-xl font-bold text-foreground">Video Center</h2>
+        <div className="mb-6 flex items-end justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="h-1 w-8 rounded-full bg-d8020" />
+            <div>
+              <h2 className="text-xl font-bold text-foreground">Video Center</h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Watch the core trailer first, then use short clips for mechanics and story context.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
-          <VideoEmbed
-            videoId={videos[0].id}
-            title={`Directive 8020 ${videos[0].title}`}
-            caption={`${videos[0].title}: ${videos[0].caption}`}
-          />
-          <div className="grid max-h-[720px] gap-4 overflow-y-auto pr-1">
-            {videos.slice(1).map((video) => (
+        <div className="grid gap-5">
+          <div className="grid gap-5 lg:grid-cols-[1.35fr_0.65fr]">
+            <VideoEmbed
+              videoId={videos[0].id}
+              title={`Directive 8020 ${videos[0].title}`}
+              caption={`${videos[0].title}: ${videos[0].caption}`}
+            />
+            <div className="rounded-lg border border-border/50 bg-card/30 p-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-d8020">How to use these videos</p>
+              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+                <li><strong className="text-foreground">Trailer:</strong> decide if the tone and premise are for you.</li>
+                <li><strong className="text-foreground">Turning Points:</strong> understand rewinds before chasing endings.</li>
+                <li><strong className="text-foreground">Gameplay clips:</strong> check stealth, corridors, and encounter pacing.</li>
+                <li><strong className="text-foreground">Story clips:</strong> learn character context without reading ending spoilers.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {videos.slice(1, 4).map((video) => (
               <div key={video.id} className="rounded-lg border border-border/50 bg-card/30 p-4">
                 <div className="aspect-video overflow-hidden rounded-md">
                   <iframe
@@ -455,6 +474,37 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
+          <details className="rounded-lg border border-border/50 bg-card/30">
+            <summary className="cursor-pointer px-5 py-4 text-sm font-semibold text-foreground list-none">
+              More official video references
+            </summary>
+            <div className="grid gap-4 border-t border-border/40 p-4 md:grid-cols-2 lg:grid-cols-4">
+              {videos.slice(4).map((video) => (
+                <a
+                  key={video.id}
+                  href={`https://www.youtube.com/watch?v=${video.id}`}
+                  className="group overflow-hidden rounded-md border border-border/40 bg-background/30 transition-colors hover:border-d8020/40"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="relative aspect-video">
+                    <Image
+                      src={`/yt-${video.id}.jpg`}
+                      alt={`Directive 8020 ${video.title}`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="text-xs font-bold text-foreground">{video.title}</h3>
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{video.caption}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </details>
         </div>
       </section>
 
