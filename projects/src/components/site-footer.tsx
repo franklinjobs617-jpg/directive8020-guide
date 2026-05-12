@@ -4,7 +4,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border/50 bg-background/50">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-4">
           <div>
             <h3 className="text-sm font-semibold text-foreground mb-3">
               Directive 8020 Guides
@@ -84,14 +84,51 @@ export function SiteFooter() {
               </li>
             </ul>
           </div>
+          <div>
+            <h3 className="text-sm font-semibold text-foreground mb-3">
+              Site
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/about"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms-of-use"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Terms of Use
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/copyright-infringement"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Copyright Infringement
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="mt-8 pt-6 border-t border-border/30 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
             Not affiliated with Supermassive Games or Bandai Namco. Fan-made guide.
           </p>
-          <p className="text-xs text-muted-foreground">
-            Directive 8020 &trade; Supermassive Games
-          </p>
+      
         </div>
       </div>
     </footer>
