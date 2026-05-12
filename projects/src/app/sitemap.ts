@@ -77,6 +77,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/directive-8020-death-scenes-guide`,
+      lastModified: '2026-05-12',
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/directive-8020-stealth-guide`,
+      lastModified: '2026-05-12',
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/directive-8020-collectibles-heirlooms`,
+      lastModified: '2026-05-12',
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
       url: `${BASE_URL}/directive-8020-crashing-fix`,
       lastModified: '2026-05-12',
       changeFrequency: 'weekly',

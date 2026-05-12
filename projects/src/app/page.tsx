@@ -24,8 +24,8 @@ const guideLibraries = [
     links: [
       ['All Endings Guide', '/directive-8020-all-endings'],
       ['Choices & Consequences', '/directive-8020-choices-consequences'],
+      ['All 44 Death Scenes', '/directive-8020-death-scenes-guide'],
       ['Characters & Crew Roles', '/directive-8020-characters'],
-      ['Community Questions', '/directive-8020-community-questions'],
     ],
   },
   {
@@ -41,9 +41,10 @@ const guideLibraries = [
     title: 'Completion & Extras',
     links: [
       ['Trophy Guide', '/directive-8020-trophy-guide'],
+      ['Collectibles & Heirlooms', '/directive-8020-collectibles-heirlooms'],
+      ['Stealth Guide', '/directive-8020-stealth-guide'],
       ['Deluxe Edition', '/directive-8020-deluxe-edition'],
       ['Movie Night Multiplayer', '/directive-8020-movie-night-multiplayer'],
-      ['All Guides', '/guides'],
     ],
   },
 ];
@@ -96,6 +97,51 @@ const missionCards = [
     body: 'Use the Story Tree for ending cleanup, collectible checks, Deluxe mission notes, and branch testing.',
     href: '/directive-8020-trophy-guide',
     image: '/official-story-tree.jpg',
+  },
+];
+
+const cornerstoneArticles = [
+  {
+    label: 'Main Guide',
+    title: 'Directive 8020 Walkthrough / Full Guide',
+    body: 'Episode hub with BLUF, known chapter list, Turning Points, QTE tracking, stealth notes, collectibles, and video reference.',
+    href: '/directive-8020-walkthrough',
+    image: '/official-ship-interior.jpg',
+  },
+  {
+    label: 'Survival Route',
+    title: 'How to Save Everyone',
+    body: 'Everyone-lives planning for Young, Eisele, Cernan, Stafford, Cooper, relationship state, mimic checks, and rewind strategy.',
+    href: '/directive-8020-how-to-save-everyone',
+    image: '/official-young-character.jpg',
+  },
+  {
+    label: 'Endings',
+    title: 'All Endings Explained',
+    body: 'Best ending, bad ending, hidden paths, Story Tree cleanup, clone/mimic theory tracking, and finale condition checklist.',
+    href: '/directive-8020-all-endings',
+    image: '/official-story-tree.jpg',
+  },
+  {
+    label: 'Long-tail',
+    title: 'All 44 Death Scenes Checklist',
+    body: 'Death scene tracker with chapter, trigger, victim, avoid method, Turning Point recovery, and spoiler-safe completion structure.',
+    href: '/directive-8020-death-scenes-guide',
+    image: '/official-mimic-scene.jpg',
+  },
+  {
+    label: 'Completion',
+    title: 'Trophy & Achievement Guide',
+    body: 'Platinum route, Survival Mode planning, Movie Night notes, Everyone Lives/Dies routes, and Heirlooms cleanup.',
+    href: '/directive-8020-trophy-guide',
+    image: '/official-story-tree.jpg',
+  },
+  {
+    label: 'Mechanics',
+    title: 'Stealth Guide',
+    body: 'Crouch-walking, hiding spots, distractions, ship systems, scanner habits, and how to survive hunter patrols.',
+    href: '/directive-8020-stealth-guide',
+    image: '/official-corridor-threat.jpg',
   },
 ];
 
@@ -281,6 +327,33 @@ export default function HomePage() {
               ))}
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="mb-6 flex items-center gap-3">
+          <div className="h-1 w-8 rounded-full bg-d8020" />
+          <div>
+            <h2 className="text-xl font-bold text-foreground">Core Article Modules</h2>
+            <p className="mt-1 text-sm text-muted-foreground">The six pages most players search for after launch.</p>
+          </div>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {cornerstoneArticles.map((article) => (
+            <Link key={article.href} href={article.href} className="group overflow-hidden rounded-lg border border-border/50 bg-card/30 transition-colors hover:border-d8020/40">
+              <div className="relative aspect-[16/9]">
+                <Image src={article.image} alt={article.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                <span className="absolute left-4 top-4 rounded border border-d8020/30 bg-d8020/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-d8020">
+                  {article.label}
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold text-foreground group-hover:text-d8020">{article.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{article.body}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 

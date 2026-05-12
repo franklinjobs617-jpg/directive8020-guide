@@ -48,6 +48,57 @@ const chapterTemplate = [
   ['Turning Points', 'Story Tree nodes unlocked and branches still hidden.'],
 ];
 
+const knownEpisodes = [
+  {
+    id: 'little-star',
+    title: 'Episode 1: Little Star',
+    status: 'Known',
+    focus: 'Prologue structure, Brianna Young waking, crew orientation, first route notes.',
+  },
+  {
+    id: 'best-laid-plans',
+    title: 'Episode 2: Best Laid Plans',
+    status: 'Known',
+    focus: 'Mission context, crew tension, early relationship and evidence tracking.',
+  },
+  {
+    id: 'the-sample',
+    title: 'Episode 3: The Sample',
+    status: 'Known',
+    focus: 'Specimen risk, mimic suspicion, lab evidence, and early branch conditions.',
+  },
+  {
+    id: 'dragnet',
+    title: 'Episode 4: Dragnet',
+    status: 'Known',
+    focus: 'Stealth introduction, pursuit logic, noise discipline, and safe movement.',
+  },
+  {
+    id: 'episode-5',
+    title: 'Episode 5: Title TBC',
+    status: 'Verify in game',
+    focus: 'Use this slot for the next confirmed chapter title after launch capture.',
+  },
+  {
+    id: 'episode-6',
+    title: 'Episode 6: Title TBC',
+    status: 'Verify in game',
+    focus: 'Track new environments, crew split points, and mid-game deaths.',
+  },
+  {
+    id: 'episode-7',
+    title: 'Episode 7: Title TBC',
+    status: 'Verify in game',
+    focus: 'Late-game branch lock-ins, identity reveals, and finale setup.',
+  },
+  {
+    id: 'episode-8',
+    title: 'Episode 8: Title TBC',
+    status: 'Verify in game',
+    focus: 'Finale choices, ending conditions, survivors, and post-credits notes.',
+  },
+];
+
 export default function WalkthroughPage() {
   return (
     <>
@@ -72,10 +123,10 @@ export default function WalkthroughPage() {
           Directive 8020 Full Walkthrough
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          This walkthrough hub is designed for launch day: useful before every
-          chapter is fully mapped, and ready to expand into a scene-by-scene
-          route. Use it to survive your first run, track choices, avoid missed
-          collectibles, and prepare for best ending cleanup.
+          BLUF: Directive 8020 is structured around episode-style story routes,
+          major Turning Points, stealth pressure, QTEs, and a mimic threat. Use
+          this full guide as your episode hub: play blind if you want maximum
+          tension, or track every branch here if you want everyone alive.
         </p>
 
         <VideoEmbed
@@ -103,6 +154,112 @@ export default function WalkthroughPage() {
             <li><strong>Completion run:</strong> use the chapter template and revisit Turning Points methodically.</li>
             <li><strong>Co-op run:</strong> assign one player to record choices and another to watch for clues.</li>
           </ul>
+
+          <h2>Directive 8020 Episode List</h2>
+          <p>
+            The early episode names below are known from public wiki and preview
+            material. Later titles should be filled from in-game capture before
+            being treated as final. This structure is still useful now because
+            it gives the main walkthrough page stable anchors and a repeatable
+            format for every chapter.
+          </p>
+        </div>
+
+        <div className="grid gap-3 my-6">
+          {knownEpisodes.map((episode) => (
+            <a
+              key={episode.id}
+              href={`#${episode.id}`}
+              className="rounded-lg border border-border/50 bg-card/30 p-4 transition-colors hover:border-d8020/40"
+            >
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                <h3 className="text-base font-bold text-foreground">{episode.title}</h3>
+                <span className="w-fit rounded border border-d8020/30 bg-d8020/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-d8020">
+                  {episode.status}
+                </span>
+              </div>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{episode.focus}</p>
+            </a>
+          ))}
+        </div>
+
+        <div className="prose-game">
+          <h2 id="little-star">Directive 8020 Episode 1: Little Star Walkthrough</h2>
+          <p>
+            Little Star should be treated as the calibration chapter. Your goal
+            is to learn input timing, observe Brianna Young&apos;s baseline
+            behavior, and record the first moments where the story separates
+            ordinary crew stress from mimic-related suspicion.
+          </p>
+          <ul>
+            <li><strong>Turning Points:</strong> record every timed dialogue prompt, especially if it affects trust or isolation.</li>
+            <li><strong>QTE tips:</strong> do not treat early QTEs as harmless tutorials; failed inputs can teach the game&apos;s death logic.</li>
+            <li><strong>Evidence:</strong> inspect terminals, sleeping areas, and medical or ship-status details before moving on.</li>
+          </ul>
+
+          <h2 id="best-laid-plans">Directive 8020 Episode 2: Best Laid Plans Walkthrough</h2>
+          <p>
+            This chapter is where relationship state becomes important. If the
+            crew begins assigning blame or withholding information, document who
+            trusts whom. Later save-everyone routes often depend on whether a
+            character is willing to help under pressure.
+          </p>
+          <ul>
+            <li><strong>Decision priority:</strong> choose evidence-based lines over emotional accusations.</li>
+            <li><strong>Relationship notes:</strong> write down visible trust gains or losses.</li>
+            <li><strong>Mimic watch:</strong> mark any character who leaves the group without a witness.</li>
+          </ul>
+
+          <ArticleImage
+            src="/official-cassiopeia-crew.jpg"
+            alt="Directive 8020 crew episode walkthrough reference"
+            caption="For every episode, track crew state first: who is present, who separated, who has evidence, and who may be compromised."
+          />
+
+          <h2 id="the-sample">Directive 8020 Episode 3: The Sample Walkthrough</h2>
+          <p>
+            The Sample is the point where lab evidence and specimen handling
+            should become central to route tracking. Any object, log, or
+            character reaction tied to the alien organism can become important
+            for later accusation or trust choices.
+          </p>
+          <ul>
+            <li><strong>Evidence priority:</strong> search lab spaces before triggering objective exits.</li>
+            <li><strong>Choice tracking:</strong> note who argues for containment, destruction, or secrecy.</li>
+            <li><strong>Branch logic:</strong> if the Story Tree marks this chapter, test evidence choices before testing dialogue tone.</li>
+          </ul>
+
+          <h2 id="dragnet">Directive 8020 Episode 4: Dragnet Walkthrough</h2>
+          <p>
+            Dragnet is the natural home for stealth and pursuit notes. Public
+            material points to more active survival gameplay than earlier Dark
+            Pictures entries: stealth, evasion, improvised weapons, and reflex
+            checks. Until exact noise values are verified in-game, use a simple
+            rule: slower movement, cover, and patience beat sprinting.
+          </p>
+          <ul>
+            <li><strong>Stealth:</strong> crouch-walk in threat zones, break line of sight, and avoid unnecessary sprinting.</li>
+            <li><strong>Distractions:</strong> if noisemakers or throwable distractions appear, log where they spawn and whether they persist after Turning Points.</li>
+            <li><strong>QTEs:</strong> separate stealth failures from failed inputs when testing consequences.</li>
+          </ul>
+
+          <ArticleImage
+            src="/official-corridor-threat.jpg"
+            alt="Directive 8020 Dragnet stealth walkthrough"
+            caption="Dragnet-style sections should be mapped by sight lines, hiding spots, sound risk, QTEs, and the nearest Turning Point."
+          />
+
+          {knownEpisodes.slice(4).map((episode) => (
+            <section key={episode.id}>
+              <h2 id={episode.id}>{episode.title} Walkthrough</h2>
+              <p>
+                This chapter slot is reserved for verified launch capture. When
+                filling it, use the same structure: opening objective, playable
+                character, map area, Turning Points, QTEs, stealth route,
+                collectibles, death triggers, and ending impact.
+              </p>
+            </section>
+          ))}
 
           <h2>Chapter Tracking Template</h2>
           <p>
