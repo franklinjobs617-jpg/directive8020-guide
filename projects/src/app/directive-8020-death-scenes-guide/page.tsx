@@ -4,6 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
+import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 All 44 Death Scenes Checklist',
@@ -41,6 +42,13 @@ const deathCategories = [
   ['Finale branch', 'Late-game survivor combinations or mission choices.', 'Use late Story Tree nodes after one full ending.'],
 ];
 
+const deathCaptureRows = [
+  { step: 'Clean route first', doThis: 'Finish one route with as many survivors as possible.', why: 'You need a stable base before branching into deaths.' },
+  { step: 'Late deaths next', doThis: 'Test finale and late-game deaths from nearby Turning Points.', why: 'These are usually fastest to capture after one ending.' },
+  { step: 'System deaths', doThis: 'Replay stealth, QTE, and mimic choices one at a time.', why: 'This separates mechanical failures from story choices.' },
+  { step: 'Document avoid method', doThis: 'Every death entry must include how to prevent it.', why: 'The page serves both all-deaths viewers and save-everyone players.' },
+];
+
 export default function DeathScenesPage() {
   return (
     <>
@@ -70,6 +78,24 @@ export default function DeathScenesPage() {
           method, and nearest Turning Point instead of replaying blindly.
         </p>
 
+        <BlufBox>
+          <p>
+            <strong>Use deaths as a controlled checklist, not a first-run goal.</strong>
+            Preview coverage cites 44 death scenes. Capture them from a clean
+            completed route by branching through Turning Points, and always log
+            the avoid method alongside the trigger.
+          </p>
+        </BlufBox>
+
+        <StatusPanel
+          items={[
+            { label: 'Death count', value: '44 deaths reported by preview coverage; final in-game checklist still needs capture.', status: 'working' },
+            { label: 'Exact death list', value: 'Needs episode-by-episode recording and screenshots.', status: 'needs-check' },
+            { label: 'Capture method', value: 'Turning Point branching and one-variable testing are ready to use.', status: 'verified' },
+            { label: 'Spoiler handling', value: 'Death categories are visible; exact late-game deaths should be spoiler-labeled after capture.', status: 'working' },
+          ]}
+        />
+
         <VideoEmbed
           videoId="oeiMw0KD7w0"
           title="Directive 8020 gameplay trailer for death route context"
@@ -89,6 +115,9 @@ export default function DeathScenesPage() {
             <li>Record the nearest Turning Point and whether an earlier choice is required.</li>
             <li>Record the avoid method so the death guide also helps survival players.</li>
           </ol>
+
+          <h2>Death Capture Plan</h2>
+          <ActionTable rows={deathCaptureRows} />
         </div>
 
         <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
@@ -133,6 +162,31 @@ export default function DeathScenesPage() {
             caption="Many deaths in Directive 8020 should be mapped by system: stealth failure, QTE failure, trust failure, or missing evidence."
           />
         </div>
+
+        <RelatedGuides
+          guides={[
+            {
+              href: '/directive-8020-walkthrough',
+              title: 'Full Walkthrough',
+              description: 'Use episode anchors to place each death in the right chapter.',
+            },
+            {
+              href: '/directive-8020-how-to-save-everyone',
+              title: 'How to Save Everyone',
+              description: 'Every death entry should include the prevention route.',
+            },
+            {
+              href: '/directive-8020-stealth-guide',
+              title: 'Stealth Guide',
+              description: 'Map stealth deaths separately from choice deaths.',
+            },
+            {
+              href: '/directive-8020-trophy-guide',
+              title: 'Trophy Guide',
+              description: 'Check whether all-deaths or death-category trophies exist.',
+            },
+          ]}
+        />
 
         <FAQSection faqs={faqs} />
       </article>

@@ -4,6 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
+import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Stealth Guide - Crouch, Hide & Survive',
@@ -41,6 +42,13 @@ const stealthChecklist = [
   ['Replay testing', 'Keep QTE success consistent when testing stealth branch consequences.'],
 ];
 
+const stealthRows = [
+  { step: 'Enter threat zone', doThis: 'Stop sprinting, crouch-walk, and identify cover before advancing.', why: 'Movement and sight lines matter more than speed in corridor encounters.' },
+  { step: 'Hear or see threat', doThis: 'Break line of sight first, then choose hiding or movement.', why: 'Panic movement can create noisy routes and missed QTEs.' },
+  { step: 'Use distraction', doThis: 'Only use throwable/noise tools after logging where they spawn and what they affect.', why: 'Distraction behavior needs verification for route guides.' },
+  { step: 'After failure', doThis: 'Record injury, death, separation, item loss, and nearest Turning Point.', why: 'Stealth failures can have delayed consequences.' },
+];
+
 export default function StealthGuidePage() {
   return (
     <>
@@ -71,6 +79,24 @@ export default function StealthGuidePage() {
           and every dark corridor where noise or line of sight can matter.
         </p>
 
+        <BlufBox>
+          <p>
+            <strong>Stealth is a survival system, not flavor.</strong> Move
+            slowly in threat zones, break line of sight before reacting, and
+            record whether failures cause injury, death, separation, or route
+            changes. Exact noise values still need in-game verification.
+          </p>
+        </BlufBox>
+
+        <StatusPanel
+          items={[
+            { label: 'Stealth presence', value: 'Official descriptions mention stealth, evasion, reflexes, and improvised weapons.', status: 'verified' },
+            { label: 'Noise values', value: 'Exact percentages such as crouch-walk reduction need launch testing.', status: 'needs-check' },
+            { label: 'Distraction tools', value: 'Noisemaker/smoke behavior should be logged only after in-game confirmation.', status: 'needs-check' },
+            { label: 'Guide method', value: 'Movement, line of sight, QTEs, and Turning Points are ready tracking categories.', status: 'working' },
+          ]}
+        />
+
         <VideoEmbed
           videoId="oeiMw0KD7w0"
           title="Directive 8020 gameplay trailer for stealth reference"
@@ -86,6 +112,9 @@ export default function StealthGuidePage() {
             chase; it can also be the result of a bad trust choice or a missed
             clue.
           </p>
+
+          <h2>Stealth Action Plan</h2>
+          <ActionTable rows={stealthRows} />
         </div>
 
         <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
@@ -129,6 +158,31 @@ export default function StealthGuidePage() {
             option in the same replay, you will not know what caused the branch.
           </p>
         </div>
+
+        <RelatedGuides
+          guides={[
+            {
+              href: '/directive-8020-walkthrough',
+              title: 'Full Walkthrough',
+              description: 'Use stealth notes inside each episode route.',
+            },
+            {
+              href: '/directive-8020-death-scenes-guide',
+              title: 'Death Scenes',
+              description: 'Separate stealth deaths from QTE and choice deaths.',
+            },
+            {
+              href: '/directive-8020-how-to-save-everyone',
+              title: 'Save Everyone',
+              description: 'Avoid stealth failures that create delayed survivor risk.',
+            },
+            {
+              href: '/directive-8020-choices-consequences',
+              title: 'Choices & Consequences',
+              description: 'Track whether stealth outcomes alter later decisions.',
+            },
+          ]}
+        />
 
         <FAQSection faqs={faqs} />
       </article>

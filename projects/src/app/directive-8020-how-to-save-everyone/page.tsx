@@ -4,6 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
+import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
   title: 'How to Save Everyone in Directive 8020 - Full Survival Guide',
@@ -46,6 +47,14 @@ const survivalRules = [
   'Use Turning Points to test one changed decision at a time.',
 ];
 
+const survivorRows = [
+  { step: 'Young', doThis: 'Keep her informed, avoid reckless solo trust decisions, and preserve evidence before accusation scenes.', why: 'Young is a central route anchor; bad trust choices can cascade into later deaths.' },
+  { step: 'Eisele', doThis: 'Track relationship state and whether she has witnessed suspicious behavior before major branch points.', why: 'Witnesses can verify identity and unlock safer group decisions.' },
+  { step: 'Cernan', doThis: 'Avoid isolating him after high-risk scenes until identity or location is verified.', why: 'Isolation is the main mimic-risk pattern to track.' },
+  { step: 'Stafford', doThis: 'Prevent unnecessary blame and record any refusal to help another crew member.', why: 'Relationship failures can become rescue failures later.' },
+  { step: 'Cooper', doThis: 'Keep QTE and stealth outcomes clean; mark injury or separation immediately.', why: 'Mechanical failures can create delayed survival problems.' },
+];
+
 export default function SaveEveryonePage() {
   return (
     <>
@@ -76,6 +85,25 @@ export default function SaveEveryonePage() {
           safety, relationship control, QTE discipline, and Turning Points.
         </p>
 
+        <BlufBox>
+          <p>
+            <strong>To save everyone, protect both people and information.</strong>
+            Keep Young, Eisele, Cernan, Stafford, and Cooper alive by verifying
+            isolated crew members, passing QTEs, preserving relationships,
+            collecting evidence before accusations, and rewinding to the
+            earliest relevant Turning Point after any death.
+          </p>
+        </BlufBox>
+
+        <StatusPanel
+          items={[
+            { label: 'Playable survivor list', value: 'Young, Eisele, Cernan, Stafford, and Cooper are used as the working route table.', status: 'working' },
+            { label: 'Exact save choices', value: 'Needs launch route capture before final option-by-option instructions.', status: 'needs-check' },
+            { label: 'Survival method', value: 'QTEs, relationships, evidence, stealth, and Turning Points are reliable guide categories.', status: 'verified' },
+            { label: 'Spoiler policy', value: 'This page prioritizes spoiler-safe survival logic until final routes are confirmed.', status: 'working' },
+          ]}
+        />
+
         <div className="prose-game">
           <h2>Core Survival Rules</h2>
           <p>
@@ -90,6 +118,14 @@ export default function SaveEveryonePage() {
               <li key={rule}>{rule}</li>
             ))}
           </ul>
+
+          <h2>Everyone Lives Route Table</h2>
+          <p>
+            This table is the working survivor map. Replace each row with exact
+            chapter choices after full capture, but keep the same structure so
+            users can scan the page quickly.
+          </p>
+          <ActionTable rows={survivorRows} />
 
           <h2>The Mimic Rule: Trust Requires Proof</h2>
           <p>
@@ -168,6 +204,31 @@ export default function SaveEveryonePage() {
             <li>Did a failed QTE cause injury, lost equipment, or separation?</li>
           </ul>
         </div>
+
+        <RelatedGuides
+          guides={[
+            {
+              href: '/directive-8020-walkthrough',
+              title: 'Full Walkthrough',
+              description: 'Use the episode guide to identify the exact Turning Point before each death.',
+            },
+            {
+              href: '/directive-8020-choices-consequences',
+              title: 'Choices & Consequences',
+              description: 'Map which dialogue, trust, and action choices alter survivor state.',
+            },
+            {
+              href: '/directive-8020-all-endings',
+              title: 'All Endings Guide',
+              description: 'Use the everyone-lives route as the base for best ending testing.',
+            },
+            {
+              href: '/directive-8020-stealth-guide',
+              title: 'Stealth Guide',
+              description: 'Avoid route damage from pursuit failures and noisy movement.',
+            },
+          ]}
+        />
 
         <FAQSection faqs={faqs} />
       </article>

@@ -4,6 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
+import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Collectibles & Heirlooms Guide',
@@ -40,6 +41,13 @@ const trackingRows = [
   ['Impact', 'Lore only, dialogue option, trophy, ending clue, or mimic evidence.'],
 ];
 
+const collectibleRows = [
+  { step: 'Before leaving a room', doThis: 'Check terminals, corners, personal objects, and objective-adjacent shelves.', why: 'Collectibles often sit near progression triggers.' },
+  { step: 'When finding evidence', doThis: 'Record whether it appears before a trust or accusation choice.', why: 'Evidence may unlock safer mimic decisions.' },
+  { step: 'When using Turning Points', doThis: 'Check whether collected items persist after rewinding.', why: 'Persistence rules change cleanup strategy.' },
+  { step: 'For Heirlooms', doThis: 'Track Deluxe mission items separately from main-story clues.', why: 'Bonus mission relics may have different trophy or lore logic.' },
+];
+
 export default function CollectiblesPage() {
   return (
     <>
@@ -70,6 +78,24 @@ export default function CollectiblesPage() {
           Turning Points.
         </p>
 
+        <BlufBox>
+          <p>
+            <strong>Collectibles are route data.</strong> In Directive 8020,
+            clues can help identify mimic contradictions and may affect safer
+            dialogue routes. Track every item by episode, room, route condition,
+            and whether it persists after Turning Points.
+          </p>
+        </BlufBox>
+
+        <StatusPanel
+          items={[
+            { label: 'Heirlooms Retrieval', value: 'Steam confirms a Deluxe bonus mission with dolls and relics from earlier anthology games.', status: 'verified' },
+            { label: 'Exact collectible count', value: 'Needs full in-game capture.', status: 'needs-check' },
+            { label: 'Story impact', value: 'Evidence impact on dialogue/endings must be verified per item.', status: 'working' },
+            { label: 'Cleanup method', value: 'Episode, room, route condition, and Turning Point persistence are the required fields.', status: 'verified' },
+          ]}
+        />
+
         <VideoEmbed
           videoId="gaQkzfA14G4"
           title="Directive 8020 official trailer for collectible context"
@@ -84,6 +110,9 @@ export default function CollectiblesPage() {
             logged with its chapter, room, route condition, and whether it
             affects story, trophies, or mimic suspicion.
           </p>
+
+          <h2>Collectible Cleanup Plan</h2>
+          <ActionTable rows={collectibleRows} />
         </div>
 
         <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
@@ -124,6 +153,31 @@ export default function CollectiblesPage() {
             instead of mixing them with main-story evidence.
           </p>
         </div>
+
+        <RelatedGuides
+          guides={[
+            {
+              href: '/directive-8020-trophy-guide',
+              title: 'Trophy Guide',
+              description: 'Use collectible data for 100% and platform achievement cleanup.',
+            },
+            {
+              href: '/directive-8020-deluxe-edition',
+              title: 'Deluxe Edition',
+              description: 'Review what the Heirlooms Retrieval bonus mission includes.',
+            },
+            {
+              href: '/directive-8020-choices-consequences',
+              title: 'Choices & Consequences',
+              description: 'Track whether evidence changes later trust decisions.',
+            },
+            {
+              href: '/directive-8020-walkthrough',
+              title: 'Full Walkthrough',
+              description: 'Place every collectible inside the correct episode route.',
+            },
+          ]}
+        />
 
         <FAQSection faqs={faqs} />
       </article>

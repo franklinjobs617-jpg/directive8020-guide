@@ -4,6 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
+import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Full Walkthrough - Step by Step Chapter Guide',
@@ -46,6 +47,29 @@ const chapterTemplate = [
   ['Collectibles', 'Evidence, logs, relics, secrets, and optional objects.'],
   ['Mimic clues', 'Suspicious behavior, contradictions, isolation, or impossible knowledge.'],
   ['Turning Points', 'Story Tree nodes unlocked and branches still hidden.'],
+];
+
+const firstRunActions = [
+  {
+    step: 'Before starting',
+    doThis: 'Enable subtitles, set readable brightness, test QTE inputs, and close overlays.',
+    why: 'Bad settings can cause missed dialogue, failed QTEs, or poor stealth visibility.',
+  },
+  {
+    step: 'During each scene',
+    doThis: 'Search safe rooms before objective exits and record who separates from the group.',
+    why: 'Evidence and isolation are the two biggest inputs for mimic trust decisions.',
+  },
+  {
+    step: 'After each episode',
+    doThis: 'Open the Story Tree and note Turning Points, locked branches, deaths, and relationship shifts.',
+    why: 'This creates a route map for endings, save-everyone recovery, and trophy cleanup.',
+  },
+  {
+    step: 'After a death',
+    doThis: 'Do not replay only the final QTE; check earlier trust, evidence, and separation choices.',
+    why: 'The visible death may be caused by a branch several minutes earlier.',
+  },
 ];
 
 const knownEpisodes = [
@@ -129,6 +153,25 @@ export default function WalkthroughPage() {
           tension, or track every branch here if you want everyone alive.
         </p>
 
+        <BlufBox>
+          <p>
+            <strong>Use this as the main Directive 8020 full guide.</strong> Known
+            early episode names include Little Star, Best Laid Plans, The
+            Sample, and Dragnet. For every episode, track Turning Points, QTEs,
+            stealth failures, collectibles, relationship changes, and mimic
+            suspicion. Do not chase all endings until you have one clean route.
+          </p>
+        </BlufBox>
+
+        <StatusPanel
+          items={[
+            { label: 'Episode structure', value: 'Early episode names verified from public wiki/preview material; later titles need launch capture.', status: 'working' },
+            { label: 'Exact choices', value: 'Needs in-game route capture before final option-by-option tables.', status: 'needs-check' },
+            { label: 'Core mechanics', value: 'Turning Points, Story Tree, stealth, Movie Night, and mimic premise are official/store-supported.', status: 'verified' },
+            { label: 'Best route data', value: 'Use this page as the capture template until all episodes are mapped.', status: 'working' },
+          ]}
+        />
+
         <VideoEmbed
           videoId="gaQkzfA14G4"
           title="Directive 8020 official walkthrough reference trailer"
@@ -154,6 +197,14 @@ export default function WalkthroughPage() {
             <li><strong>Completion run:</strong> use the chapter template and revisit Turning Points methodically.</li>
             <li><strong>Co-op run:</strong> assign one player to record choices and another to watch for clues.</li>
           </ul>
+
+          <h2>First-Run Action Plan</h2>
+          <p>
+            This table is the practical version of the walkthrough. If you do
+            only these steps, your first ending will still produce useful data
+            for all endings, all deaths, and save-everyone cleanup.
+          </p>
+          <ActionTable rows={firstRunActions} />
 
           <h2>Directive 8020 Episode List</h2>
           <p>
@@ -334,6 +385,31 @@ export default function WalkthroughPage() {
             <li><a href="/directive-8020-trophy-guide">Trophy &amp; Achievement Guide</a></li>
           </ul>
         </div>
+
+        <RelatedGuides
+          guides={[
+            {
+              href: '/directive-8020-how-to-save-everyone',
+              title: 'How to Save Everyone',
+              description: 'Use the walkthrough data to repair deaths and preserve the full crew.',
+            },
+            {
+              href: '/directive-8020-death-scenes-guide',
+              title: 'All 44 Death Scenes',
+              description: 'Branch from Turning Points after one clean route to collect deaths efficiently.',
+            },
+            {
+              href: '/directive-8020-collectibles-heirlooms',
+              title: 'Collectibles & Heirlooms',
+              description: 'Track clues and Deluxe relics by episode and route condition.',
+            },
+            {
+              href: '/directive-8020-stealth-guide',
+              title: 'Stealth Guide',
+              description: 'Use this for Dragnet-style pursuit and corridor survival sections.',
+            },
+          ]}
+        />
 
         <FAQSection faqs={faqs} />
       </article>

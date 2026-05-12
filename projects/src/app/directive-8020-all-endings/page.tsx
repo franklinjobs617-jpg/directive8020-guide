@@ -4,6 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
+import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 All Endings Guide - Story Tree & Best Ending Route',
@@ -46,6 +47,13 @@ const endingFactors = [
   ['Turning Points explored', 'Whether hidden branches have been unlocked in the Story Tree.'],
 ];
 
+const endingRouteRows = [
+  { step: 'Best ending base', doThis: 'Keep all core crew alive, preserve evidence, and avoid unverified trust choices.', why: 'Best endings in this genre usually require survivor count plus correct finale conditions.' },
+  { step: 'Bad ending test', doThis: 'Branch from late Turning Points and alter only one major survivor or mission choice.', why: 'This identifies which condition changes the ending without replay noise.' },
+  { step: 'Worst ending test', doThis: 'Use a separate branch to test deaths, relationship failures, and failed finale actions.', why: 'Do not damage your clean route while collecting negative outcomes.' },
+  { step: 'Hidden ending test', doThis: 'Complete collectibles and evidence routes before final branch testing.', why: 'Hidden outcomes often depend on clues or optional objectives.' },
+];
+
 export default function AllEndingsPage() {
   return (
     <>
@@ -75,6 +83,24 @@ export default function AllEndingsPage() {
           and the Story Tree. It avoids inventing unverified ending names while
           giving you a useful route map from your first playthrough.
         </p>
+
+        <BlufBox>
+          <p>
+            <strong>Start endings from one clean completed route.</strong> Do not
+            chase every ending randomly. Finish one route, check the Story Tree,
+            then branch from late Turning Points to test survivor count, mission
+            choices, evidence, and mimic identification one variable at a time.
+          </p>
+        </BlufBox>
+
+        <StatusPanel
+          items={[
+            { label: 'Exact ending names', value: 'Needs full launch capture before final naming.', status: 'needs-check' },
+            { label: 'Ending method', value: 'Story Tree, Turning Points, survivor state, and evidence are confirmed guide pillars.', status: 'verified' },
+            { label: 'Spoiler policy', value: 'This page avoids unverified clone/twist claims until captured.', status: 'working' },
+            { label: 'Route table', value: 'Ready for best/good/bad/worst/hidden ending data as soon as endings are recorded.', status: 'working' },
+          ]}
+        />
 
         <div className="rounded-lg border border-d8020/40 bg-d8020/10 p-5 mb-8">
           <p className="text-xs font-semibold uppercase tracking-wider text-d8020 mb-2">
@@ -135,6 +161,14 @@ export default function AllEndingsPage() {
             <li><strong>Pass QTEs and stealth checks:</strong> mechanical failures can close ending routes immediately.</li>
           </ul>
 
+          <h2>Ending Route Test Plan</h2>
+          <p>
+            Use this sequence to turn one completed playthrough into a full
+            endings guide. It keeps the route clean and prevents false
+            conclusions from multiple changed variables.
+          </p>
+          <ActionTable rows={endingRouteRows} />
+
           <h2>Bad Ending and Worst Ending Triggers</h2>
           <p>
             The worst routes in this style of game usually come from cascading
@@ -179,6 +213,31 @@ export default function AllEndingsPage() {
             <li><strong>Long-term result:</strong> what changed by the end of the chapter.</li>
           </ul>
         </div>
+
+        <RelatedGuides
+          guides={[
+            {
+              href: '/directive-8020-how-to-save-everyone',
+              title: 'How to Save Everyone',
+              description: 'Build the best-ending base route before testing negative endings.',
+            },
+            {
+              href: '/directive-8020-choices-consequences',
+              title: 'Choices & Consequences',
+              description: 'Use choice maps to identify which branch changes each ending.',
+            },
+            {
+              href: '/directive-8020-death-scenes-guide',
+              title: 'All Death Scenes',
+              description: 'Use death branches after you preserve one clean ending route.',
+            },
+            {
+              href: '/directive-8020-collectibles-heirlooms',
+              title: 'Collectibles & Heirlooms',
+              description: 'Check whether evidence or heirlooms unlock hidden ending context.',
+            },
+          ]}
+        />
 
         <FAQSection faqs={faqs} />
       </article>

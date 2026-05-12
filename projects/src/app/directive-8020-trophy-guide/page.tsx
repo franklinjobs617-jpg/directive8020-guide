@@ -4,6 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
+import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Trophy & Achievement Guide - Full List & Unlock Tips',
@@ -64,6 +65,13 @@ const trophyBuckets = [
   },
 ];
 
+const platinumRows = [
+  { step: 'Run 1', doThis: 'Blind or semi-blind survival run while collecting as much evidence as possible.', why: 'Creates the base Story Tree and preserves story impact.' },
+  { step: 'Run 2', doThis: 'Save-everyone cleanup using Turning Points and relationship repair.', why: 'Builds the best route before destructive trophy branches.' },
+  { step: 'Run 3', doThis: 'Endings and deaths cleanup from late Turning Points.', why: 'Fastest way to collect route-specific trophies.' },
+  { step: 'Final cleanup', doThis: 'Collectibles, Heirlooms, Movie Night, and mode-specific requirements.', why: 'These are easier once route locks are known.' },
+];
+
 export default function TrophyGuidePage() {
   return (
     <>
@@ -94,6 +102,24 @@ export default function TrophyGuidePage() {
           while the exact public trophy names are being verified.
         </p>
 
+        <BlufBox>
+          <p>
+            <strong>Do not trophy hunt randomly.</strong> Finish one route,
+            build a save-everyone base, then use Turning Points for endings,
+            deaths, collectibles, Heirlooms, Movie Night, and any Survival Mode
+            cleanup.
+          </p>
+        </BlufBox>
+
+        <StatusPanel
+          items={[
+            { label: 'Steam achievements', value: 'Steam lists achievements for Directive 8020.', status: 'verified' },
+            { label: 'Exact trophy names', value: 'Needs platform list capture before final table.', status: 'needs-check' },
+            { label: 'Cleanup method', value: 'Story Tree and Turning Points are the central route-planning tools.', status: 'verified' },
+            { label: 'Deluxe content', value: 'Heirlooms Retrieval may need separate collectible tracking.', status: 'working' },
+          ]}
+        />
+
         <div className="prose-game">
           <h2>How to Approach 100% Completion</h2>
           <p>
@@ -109,6 +135,9 @@ export default function TrophyGuidePage() {
             <li>Save full replay modes or challenge routes for last.</li>
             <li>Only chase specific hidden achievements once the Story Tree is mostly mapped.</li>
           </ol>
+
+          <h2>Recommended Platinum Route</h2>
+          <ActionTable rows={platinumRows} />
 
           <h2>Expected Trophy Categories</h2>
         </div>
@@ -174,6 +203,31 @@ export default function TrophyGuidePage() {
             <li>Leave mode-specific trophies for a separate run if the game marks them separately.</li>
           </ul>
         </div>
+
+        <RelatedGuides
+          guides={[
+            {
+              href: '/directive-8020-collectibles-heirlooms',
+              title: 'Collectibles & Heirlooms',
+              description: 'Track secrets, clues, Deluxe relics, and route-locked items.',
+            },
+            {
+              href: '/directive-8020-all-endings',
+              title: 'All Endings',
+              description: 'Use finale branches for ending-related achievements.',
+            },
+            {
+              href: '/directive-8020-death-scenes-guide',
+              title: 'All Death Scenes',
+              description: 'Check death-related trophies after the save-everyone route.',
+            },
+            {
+              href: '/directive-8020-movie-night-multiplayer',
+              title: 'Movie Night',
+              description: 'Plan local co-op trophies and character assignment.',
+            },
+          ]}
+        />
 
         <FAQSection faqs={faqs} />
       </article>
