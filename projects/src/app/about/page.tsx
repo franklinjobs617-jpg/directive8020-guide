@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Breadcrumb } from '@/components/breadcrumb';
 import { JsonLd, generateWebPageSchema } from '@/components/json-ld';
 
-const contactEmail = 'admin@enjoy4game.com';
+const contactEmail = 'stephen@enjoy4game.com';
 const pageTitle = 'About Directive 8020 Guide Hub';
 const pageDescription =
   'About Directive 8020 Guide Hub, an unofficial fan-made resource for walkthroughs, endings, trophies, survival routes, and practical player guides.';

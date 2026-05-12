@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Breadcrumb } from '@/components/breadcrumb';
 import { JsonLd, generateWebPageSchema } from '@/components/json-ld';
 
-const contactEmail = 'admin@enjoy4game.com';
+const contactEmail = 'stephen@enjoy4game.com';
 const pageTitle = 'Copyright Infringement Policy';
 const pageDescription =
   'Copyright infringement and DMCA-style contact policy for Directive 8020 Guide Hub, including takedown notice requirements.';
