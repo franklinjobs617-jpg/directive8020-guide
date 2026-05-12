@@ -14,88 +14,88 @@ const allGuides = [
   {
     href: '/directive-8020-overview',
     title: 'What is Directive 8020?',
-    description: 'Complete overview of the game: story, gameplay mechanics, Turning Points, and Story Tree.',
+    description: 'Story, mimic threat, survival gameplay, Turning Points, Story Tree, and official video overview.',
     tag: 'Available',
     tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
-    image: '/overview-card.jpg',
+    image: '/official-cassiopeia-crew.jpg',
   },
   {
     href: '/directive-8020-system-requirements',
     title: 'System Requirements',
-    description: 'Minimum and recommended PC specs, storage space, and performance tips.',
+    description: 'Official Steam PC specs, storage, SSD advice, and performance settings explained.',
     tag: 'Available',
     tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
-    image: '/system-card.jpg',
+    image: '/official-corridor-threat.jpg',
   },
   {
     href: '/directive-8020-release-time',
-    title: 'Release Time & Pre-Load',
-    description: 'Exact unlock times for every region, pre-load info, and edition comparison.',
+    title: 'Release Time & Deluxe Content',
+    description: 'Steam unlock time by region, platform notes, Digital Deluxe contents, and launch checklist.',
     tag: 'Available',
     tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
-    image: '/release-time-card.jpg',
+    image: '/official-ship-interior.jpg',
   },
   {
     href: '/directive-8020-characters',
-    title: 'Characters & Cast',
-    description: 'Meet the crew of the Cassiopeia. Every character profile and survival tips.',
+    title: 'Characters, Cast & Crew Roles',
+    description: 'Lashana Lynch as Young, Cassiopeia crew survival roles, mimic clues, and Movie Night tips.',
     tag: 'Available',
     tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
-    image: '/characters-card.jpg',
+    image: '/official-young-character.jpg',
   },
   {
     href: '/directive-8020-all-endings',
     title: 'All Endings Guide',
-    description: 'Every ending explained and how to unlock each one. Best and worst outcomes.',
-    tag: 'May 12',
+    description: 'Story Tree route tracking, best ending principles, bad ending triggers, and Turning Points cleanup.',
+    tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/endings-card.jpg',
+    image: '/official-story-tree.jpg',
   },
   {
     href: '/directive-8020-how-to-save-everyone',
     title: 'How to Save Everyone',
-    description: 'Step-by-step guide to keeping all characters alive through every chapter.',
-    tag: 'May 12',
+    description: 'Spoiler-safe survival rules for mimic trust checks, QTEs, relationships, and recovery after deaths.',
+    tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/save-everyone-card.jpg',
+    image: '/official-mimic-scene.jpg',
   },
   {
     href: '/directive-8020-choices-consequences',
     title: 'Choices & Consequences',
-    description: 'Every major decision mapped out. Know what happens before you choose.',
-    tag: 'May 12',
+    description: 'Decision types, consequence tracking, trust logic, and how to map branches without guessing.',
+    tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/choices-card.jpg',
+    image: '/official-ship-interior.jpg',
   },
   {
     href: '/directive-8020-trophy-guide',
     title: 'Trophy & Achievement Guide',
-    description: 'Full trophy list with tips for unlocking every achievement.',
-    tag: 'May 12',
+    description: 'Steam achievements, missable planning, collectibles, endings, and 100% cleanup strategy.',
+    tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/trophy-card.jpg',
+    image: '/official-story-tree.jpg',
   },
   {
     href: '/directive-8020-crashing-fix',
     title: 'Crashing & Performance Fix',
-    description: 'Fix launch crashes, black screens, stuttering, and other Day-1 issues.',
-    tag: 'May 12',
+    description: 'Startup crashes, black screen, stuttering, audio, controller, and console troubleshooting.',
+    tag: 'Updated',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/crashing-card.jpg',
+    image: '/official-corridor-threat.jpg',
   },
   {
     href: '/directive-8020-walkthrough',
     title: 'Full Chapter Walkthrough',
-    description: 'Complete step-by-step walkthrough covering every chapter and collectible.',
-    tag: 'May 12',
+    description: 'Spoiler-safe first run route, chapter template, collectibles, QTEs, and Story Tree planning.',
+    tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/walkthrough-card.jpg',
+    image: '/official-corridor-threat.jpg',
   },
 ];
 
 export default function GuidesPage() {
   const available = allGuides.filter((g) => g.tag === 'Available');
-  const coming = allGuides.filter((g) => g.tag === 'May 12');
+  const launchGuides = allGuides.filter((g) => g.tag !== 'Available');
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 py-8">
@@ -104,7 +104,8 @@ export default function GuidesPage() {
       </h1>
       <p className="text-lg text-muted-foreground leading-relaxed mb-10">
         Every guide for Directive 8020 in one place. From system requirements
-        to all endings — we&apos;ve got you covered.
+        to all endings, this hub is built for launch-day players who want useful
+        routes, official facts, screenshots, and video references.
       </p>
 
       <section className="mb-12">
@@ -123,11 +124,11 @@ export default function GuidesPage() {
         <div className="flex items-center gap-3 mb-6">
           <div className="h-1 w-8 bg-d8020 rounded-full" />
           <h2 className="text-xl font-bold text-foreground">
-            Launch Day — May 12
+            Launch Day Guides
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {coming.map((guide) => (
+          {launchGuides.map((guide) => (
             <GuideCard key={guide.href} {...guide} />
           ))}
         </div>

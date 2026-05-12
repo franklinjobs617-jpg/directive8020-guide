@@ -30,16 +30,16 @@ const day0Guides = [
   },
   {
     href: '/directive-8020-release-time',
-    title: 'Release Time & Pre-Load Guide',
-    description: 'Exact unlock times for every region, how to pre-load, and which edition to buy.',
+    title: 'Release Time & Deluxe Content',
+    description: 'Steam unlock time by region, platform notes, Digital Deluxe contents, and launch-day checklist.',
     tag: 'Ready',
     tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
     image: '/release-time-card.jpg',
   },
   {
     href: '/directive-8020-characters',
-    title: 'Characters & Cast',
-    description: 'Meet the crew of the Cassiopeia. Every character profile, actor, and what we know so far.',
+    title: 'Characters, Cast & Crew Roles',
+    description: 'Lashana Lynch as Young, Cassiopeia crew survival roles, mimic suspicion clues, and co-op tips.',
     tag: 'Ready',
     tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
     image: '/characters-card.jpg',
@@ -47,7 +47,7 @@ const day0Guides = [
   {
     href: '/directive-8020-overview',
     title: 'What is Directive 8020?',
-    description: 'Everything we know about the game: story, gameplay mechanics, Turning Points, and the Story Tree system.',
+    description: 'Story, mimic threat, survival gameplay, Turning Points, Story Tree, and Movie Night co-op explained.',
     tag: 'Ready',
     tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
     image: '/overview-card.jpg',
@@ -59,7 +59,7 @@ const day1Guides = [
     href: '/directive-8020-all-endings',
     title: 'All Endings Guide',
     description: 'Every ending explained, how to unlock each one, and the requirements for the best and worst outcomes.',
-    tag: 'Coming May 12',
+    tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
     image: '/endings-card.jpg',
   },
@@ -67,7 +67,7 @@ const day1Guides = [
     href: '/directive-8020-how-to-save-everyone',
     title: 'How to Save Everyone',
     description: 'Step-by-step guide to keeping all characters alive through every chapter and decision point.',
-    tag: 'Coming May 12',
+    tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
     image: '/save-everyone-card.jpg',
   },
@@ -75,7 +75,7 @@ const day1Guides = [
     href: '/directive-8020-choices-consequences',
     title: 'All Choices & Consequences',
     description: 'Every major decision mapped out. Know exactly what happens before you choose.',
-    tag: 'Coming May 12',
+    tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
     image: '/choices-card.jpg',
   },
@@ -83,7 +83,7 @@ const day1Guides = [
     href: '/directive-8020-trophy-guide',
     title: 'Trophy & Achievement Guide',
     description: 'Full list of all trophies and achievements, with tips for unlocking every single one.',
-    tag: 'Coming May 12',
+    tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
     image: '/trophy-card.jpg',
   },
@@ -91,7 +91,7 @@ const day1Guides = [
     href: '/directive-8020-crashing-fix',
     title: 'Crashing, Black Screen & Performance Fix',
     description: 'Fix launch crashes, black screens, stuttering, and other common Day-1 technical issues.',
-    tag: 'Coming May 12',
+    tag: 'Updated',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
     image: '/crashing-card.jpg',
   },
@@ -99,7 +99,7 @@ const day1Guides = [
     href: '/directive-8020-walkthrough',
     title: 'Full Chapter Walkthrough',
     description: 'Complete step-by-step walkthrough covering every chapter, collectible, and hidden secret.',
-    tag: 'Coming May 12',
+    tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
     image: '/walkthrough-card.jpg',
   },
@@ -109,7 +109,7 @@ const homeFaqs = [
   {
     question: 'What is Directive 8020?',
     answer:
-      'Directive 8020 is a cinematic sci-fi survival horror game developed by Supermassive Games, the creators of Until Dawn and The Dark Pictures Anthology. Set aboard the colony ship Cassiopeia, players must survive an alien threat that can perfectly mimic its prey. The game features branching narratives where your choices determine who lives and who dies.',
+      'Directive 8020 is a cinematic sci-fi survival horror game developed and published by Supermassive Games, the creators of Until Dawn and The Dark Pictures Anthology. Set aboard the colony ship Cassiopeia, players must survive an alien threat that can perfectly mimic its prey. The game features branching narratives where your choices determine who lives and who dies.',
   },
   {
     question: 'When does Directive 8020 release?',
@@ -159,7 +159,7 @@ export default function HomePage() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-d8020 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-d8020"></span>
               </span>
-              Releasing May 12, 2026
+              Launching May 12, 2026
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-foreground leading-tight tracking-tight mb-4">
               Directive 8020
@@ -232,7 +232,7 @@ export default function HomePage() {
             <div>
               <dt className="text-muted-foreground mb-1">Publisher</dt>
               <dd className="text-foreground font-medium">
-                Bandai Namco Entertainment
+                Supermassive Games
               </dd>
             </div>
             <div>
@@ -266,7 +266,7 @@ export default function HomePage() {
             <div>
               <dt className="text-muted-foreground mb-1">Steam</dt>
               <dd className="text-foreground font-medium">
-                Available for Pre-Order
+                $49.99 / Digital Deluxe Upgrade
               </dd>
             </div>
           </div>

@@ -3,11 +3,12 @@ import { Breadcrumb } from '@/components/breadcrumb';
 import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
+import { ArticleImage, VideoEmbed } from '@/components/article-media';
 
 export const metadata: Metadata = {
   title: 'What is Directive 8020? - Story, Gameplay & New Mechanics',
   description:
-    'Everything we know about Directive 8020: story, gameplay mechanics, Turning Points system, Story Tree, stealth mechanics, and how it evolves The Dark Pictures Anthology.',
+    'Everything we know about Directive 8020: story, gameplay mechanics, Turning Points system, Story Tree, stealth mechanics, Movie Night co-op, and how it evolves The Dark Pictures Anthology.',
   alternates: {
     canonical: '/directive-8020-overview',
   },
@@ -15,30 +16,41 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'Is Directive 8020 a sequel to Until Dawn?',
+    question: 'Is Directive 8020 part of The Dark Pictures Anthology?',
     answer:
-      'Directive 8020 is not a direct sequel to Until Dawn, but it is made by the same developer, Supermassive Games. It is the newest entry in The Dark Pictures Anthology series. It shares the same interactive drama DNA—branching narratives where your choices determine who survives—but introduces new mechanics like Turning Points and the Story Tree.',
+      'Yes. Directive 8020 is the next entry in The Dark Pictures Anthology from Supermassive Games, moving the series into a sci-fi horror setting aboard the colony ship Cassiopeia.',
+  },
+  {
+    question: 'What is the story of Directive 8020?',
+    answer:
+      'Earth is dying, and the colony ship Cassiopeia is sent toward Tau Ceti f, a planet 12 light years from home. After the ship crash lands, the crew is hunted by an alien organism that can mimic its prey.',
   },
   {
     question: 'What are Turning Points in Directive 8020?',
     answer:
-      'Turning Points are a new mechanic in Directive 8020 that allow players to rewind to key decision moments and experience different story branches. This is the first time this feature has appeared in The Dark Pictures Anthology, giving players more control over exploring different outcomes without replaying the entire game.',
+      'Turning Points are key moments in the story tree that let players revisit decisions, explore hidden paths, unlock multiple endings, and try to save crew members from deaths they previously triggered.',
   },
   {
-    question: 'What is the Story Tree in Directive 8020?',
+    question: 'Does Directive 8020 have co-op?',
     answer:
-      'The Story Tree is a visual map of your decisions and their consequences throughout the game. It lets you see which paths you have taken and which branches remain unexplored. Combined with Turning Points, it gives players a comprehensive overview of the narrative structure.',
+      'The Steam page lists Movie Night couch co-op for up to five players. Players choose which crew members to control and pass decisions between friends during the story.',
   },
   {
-    question: 'Does Directive 8020 have multiplayer?',
+    question: 'Who stars in Directive 8020?',
     answer:
-      'Based on the Dark Pictures Anthology tradition, Directive 8020 is expected to include multiplayer modes similar to previous entries, such as Shared Story mode (online co-op) and Movie Night mode (local pass-the-controller). Official details will be confirmed closer to launch.',
+      'Lashana Lynch stars as Young, a major astronaut character in the story. She is known for Bob Marley: One Love and The Woman King, among other roles.',
   },
-  {
-    question: 'How long is Directive 8020?',
-    answer:
-      'While official playtime has not been confirmed, previous Dark Pictures games typically take 5-7 hours for a single playthrough. With multiple endings, the Turning Points system, and collectibles, completionists can expect significantly more time to see everything the game has to offer.',
-  },
+];
+
+const quickFacts = [
+  ['Release date', 'May 12, 2026'],
+  ['Developer / Publisher', 'Supermassive Games'],
+  ['Platforms', 'PlayStation 5, Xbox Series X|S, PC'],
+  ['Series', 'The Dark Pictures Anthology'],
+  ['Setting', 'The colony ship Cassiopeia and Tau Ceti f'],
+  ['Main threat', 'An alien organism that mimics its prey'],
+  ['New systems', 'Turning Points and Story Tree'],
+  ['Co-op', 'Movie Night couch co-op for up to five players'],
 ];
 
 export default function OverviewPage() {
@@ -48,119 +60,158 @@ export default function OverviewPage() {
         data={generateArticleSchema({
           title: 'What is Directive 8020? - Story, Gameplay & New Mechanics',
           description:
-            'Everything we know about Directive 8020: story, gameplay mechanics, Turning Points system, Story Tree, and how it evolves The Dark Pictures Anthology.',
+            'Everything we know about Directive 8020: story, gameplay mechanics, Turning Points, Story Tree, Movie Night co-op, and how it evolves The Dark Pictures Anthology.',
           url: '/directive-8020-overview',
           datePublished: '2026-05-10',
+          dateModified: '2026-05-12',
+          imageUrl: '/official-cassiopeia-crew.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Overview' }]} />
-        <PageHero src="/overview-card.jpg" alt="Directive 8020 game overview - sci-fi horror space station" />
+        <PageHero src="/official-cassiopeia-crew.jpg" alt="Directive 8020 official screenshot of the Cassiopeia crew" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           What is Directive 8020?
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          Everything we know about Supermassive Games&apos; cinematic sci-fi
-          survival horror — story, gameplay, and the new mechanics that change
-          everything.
+          Directive 8020 is Supermassive Games&apos; sci-fi horror entry in The
+          Dark Pictures Anthology: a branching survival story about a desperate
+          colony mission, an alien mimic, and a crew that can no longer trust
+          what it sees.
         </p>
 
+        <VideoEmbed
+          videoId="gaQkzfA14G4"
+          title="Directive 8020 official trailer"
+          caption="Official Directive 8020 video from Supermassive / The Dark Pictures. Watch this first if you want the tone, setting, mimic threat, and cinematic presentation without reading late-game spoilers."
+        />
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden mb-8">
+          <table className="w-full text-sm">
+            <tbody>
+              {quickFacts.map(([label, value]) => (
+                <tr key={label} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 text-muted-foreground font-medium w-44">{label}</td>
+                  <td className="px-4 py-3 text-foreground">{value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
         <div className="prose-game">
-          <h2>The Story</h2>
+          <h2>The Premise: A Colony Mission Becomes a Trust Test</h2>
           <p>
-            Earth is dying. Humanity&apos;s last hope lies 12 light-years away on a
-            planet orbiting Tau Ceti f. The colony ship <strong>Cassiopeia</strong> is
-            dispatched to establish a new home for mankind. But when the crew
-            crash-lands on the planet, they quickly discover they are not alone.
+            Directive 8020 begins with a familiar survival-horror pressure
+            point: Earth is running out of time. Tau Ceti f, 12 light years from
+            home, becomes humanity&apos;s possible escape route, and the colony ship
+            <strong> Cassiopeia</strong> is sent to secure that future. The
+            mission collapses when the ship crash lands and the crew discovers
+            that the planet is not empty.
           </p>
           <p>
-            A deadly alien organism — one that can <strong>perfectly mimic its
-            prey</strong> — begins hunting the survivors. Trust between crew
-            members collapses. Paranoia spreads. And every decision you make
-            determines who lives and who dies.
-          </p>
-          <p>
-            The tagline says it all: <strong>&ldquo;Trust No One.&rdquo;</strong>
+            The central threat is not just a monster in the corridor. It is an
+            alien organism that can <strong>perfectly imitate its prey</strong>.
+            That changes the normal Dark Pictures tension: a wrong choice can
+            kill someone, but a wrong act of trust can also put the entire crew
+            in danger.
           </p>
 
-          <h2>Gameplay &amp; Mechanics</h2>
+          <ArticleImage
+            src="/official-mimic-scene.jpg"
+            alt="Directive 8020 official mimic threat screenshot"
+            caption="The mimic premise is the core keyword and gameplay hook: Directive 8020 is not only a space horror game, but a trust and identity horror story where any crew member can become a suspect."
+          />
+
+          <h2>Why the Mimic Matters for Gameplay</h2>
           <p>
-            Directive 8020 builds on the foundation of The Dark Pictures
-            Anthology but introduces significant evolutions to the formula:
+            The mimic premise gives Directive 8020 a stronger deduction layer
+            than many earlier anthology entries. Players are not simply choosing
+            kind, aggressive, or cautious dialogue. They are judging whether a
+            crew member&apos;s behavior, timing, memory, and emotional response
+            still fit the person they claim to be.
           </p>
           <ul>
-            <li>
-              <strong>Stealth Mechanics:</strong> For the first time in the
-              series, players can actively hide and sneak past threats using
-              cover and environmental objects. This adds a survival-horror layer
-              beyond the typical QTE-driven action.
-            </li>
-            <li>
-              <strong>Real-Time Decision Making:</strong> Choices are no longer
-              just dialogue prompts. You must make split-second decisions under
-              pressure while threats are actively present.
-            </li>
-            <li>
-              <strong>The Mimic Threat:</strong> The alien can disguise itself as
-              any crew member. This means the person standing next to you might
-              not be who they appear to be — creating a constant state of
-              uncertainty and tension.
-            </li>
+            <li><strong>Dialogue becomes evidence:</strong> evasive answers and inconsistent memories may matter.</li>
+            <li><strong>Relationships become risky:</strong> trusting a close ally can be correct or fatal.</li>
+            <li><strong>Separation is dangerous:</strong> isolated characters are easier targets and harder to verify.</li>
+            <li><strong>Observation matters:</strong> the safest player is not always the fastest player.</li>
           </ul>
 
-          <h2>Turning Points System</h2>
+          <h2>Survival Gameplay, Stealth, and Improvised Weapons</h2>
           <p>
-            The biggest new feature in Directive 8020 is the <strong>Turning
-            Points</strong> system. This is a first for The Dark Pictures
-            Anthology and addresses one of the most common player complaints:
-            having to replay the entire game to see different outcomes.
+            Official store copy describes Directive 8020 as combining cinematic
+            storytelling with more active survival gameplay. The crew must evade
+            threats in the dark corridors of the ship, use stealth, react under
+            pressure, and rely on improvised weapons when escape is not enough.
           </p>
           <p>
-            With Turning Points, you can <strong>rewind to key decision
-            moments</strong> and choose a different path. This allows you to:
+            For players coming from Man of Medan, Little Hope, House of Ashes,
+            or The Devil in Me, the important shift is that Directive 8020 looks
+            less passive. Choices still drive the story, but moment-to-moment
+            survival now has more room for movement, hiding, and immediate
+            threat management.
+          </p>
+
+          <ArticleImage
+            src="/official-corridor-threat.jpg"
+            alt="Directive 8020 official corridor survival gameplay screenshot"
+            caption="Dark corridors, stealth, improvised weapons, and reflex checks make Directive 8020 more active than a pure dialogue-driven interactive drama."
+          />
+
+          <h2>Turning Points and the Story Tree</h2>
+          <p>
+            The biggest structural feature is the <strong>Turning Points story
+            tree</strong>. Instead of forcing every player to replay the entire
+            game from the beginning, the story tree is built around revisiting
+            major branch points, unlocking hidden paths, and changing the fate
+            of crew members.
+          </p>
+          <p>
+            That is useful for three different audiences: players who want all
+            endings, trophy hunters who need specific branches, and casual
+            players who lose a character and want to understand which decision
+            caused the death.
+          </p>
+
+          <ArticleImage
+            src="/official-story-tree.jpg"
+            alt="Directive 8020 official Turning Points Story Tree screenshot"
+            caption="The Story Tree and Turning Points are important for all endings, save everyone routes, trophy cleanup, and choice consequence testing."
+          />
+
+          <h2>Movie Night Co-op</h2>
+          <p>
+            Directive 8020 keeps the social side of The Dark Pictures formula
+            through Movie Night couch co-op. Steam lists support for up to five
+            players, with each person assigned crew members to control. This is
+            a good mode for first runs because the mimic premise creates natural
+            debate: who is lying, who should be trusted, and who should take the
+            risk in a dangerous scene?
+          </p>
+          <p>
+            The official Dark Pictures site also notes that online multiplayer
+            is planned as a post-launch update. For launch-day players, treat
+            Movie Night as the confirmed co-op mode and online play as a feature
+            to check after patches arrive.
+          </p>
+
+          <h2>How to Approach Your First Playthrough</h2>
+          <p>
+            If you care about story impact, play the first run with minimal
+            spoilers and only use guides for mechanics, collectibles, or
+            non-spoiler survival principles. If you care about trophies or the
+            best ending, use the Story Tree and Turning Points after each major
+            chapter to identify the branch that created a bad outcome.
           </p>
           <ul>
-            <li>Explore different story branches without a full replay</li>
-            <li>Undo a character&apos;s death and try to save them</li>
-            <li>Discover hidden narrative paths you might have missed</li>
-            <li>Work toward the best possible ending systematically</li>
-          </ul>
-
-          <h2>Story Tree</h2>
-          <p>
-            Working hand-in-hand with Turning Points, the <strong>Story
-            Tree</strong> gives you a visual overview of every decision you&apos;ve
-            made and every branch the narrative can take. Think of it as a
-            flowchart of the entire story — showing you which paths you&apos;ve
-            explored and which remain hidden.
-          </p>
-          <p>
-            This is particularly valuable for completionists who want to see
-            every possible outcome and find every secret the game has to offer.
-          </p>
-
-          <h2>Survivor Mode</h2>
-          <p>
-            For players who want the classic Dark Pictures experience, Survivor
-            Mode removes the Turning Points safety net. Every decision is
-            permanent, and you must live with the consequences — just like the
-            earlier games in the series. This mode is recommended for veterans
-            seeking maximum tension.
-          </p>
-
-          <h2>How It Compares to Previous Dark Pictures Games</h2>
-          <p>
-            Directive 8020 represents the most significant evolution of The Dark
-            Pictures formula since the series began:
-          </p>
-          <ul>
-            <li><strong>More agency:</strong> Stealth and real-time decisions give players more direct control over survival</li>
-            <li><strong>More replayability:</strong> Turning Points and the Story Tree make exploring branches faster and more intuitive</li>
-            <li><strong>Bigger scale:</strong> The sci-fi setting and colony ship premise allow for larger, more varied environments</li>
-            <li><strong>Higher stakes:</strong> The mimic mechanic means you can never be sure who to trust</li>
+            <li>For immersion: play blind, accept deaths, then replay branches later.</li>
+            <li>For best ending: prioritize trust verification, group safety, and successful QTEs.</li>
+            <li>For completion: document every Turning Point and unexplored branch.</li>
+            <li>For co-op: assign cautious players to key decision makers and fast-reacting players to action-heavy characters.</li>
           </ul>
         </div>
 

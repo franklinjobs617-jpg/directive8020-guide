@@ -3,154 +3,172 @@ import { Breadcrumb } from '@/components/breadcrumb';
 import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
+import { ArticleImage } from '@/components/article-media';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 System Requirements - Minimum & Recommended PC Specs',
+  title: 'Directive 8020 System Requirements - Official PC Specs',
   description:
-    'Can your PC run Directive 8020? Check the minimum and recommended system requirements, storage space, GPU, CPU, and RAM specs for optimal performance.',
+    'Official Directive 8020 PC system requirements from Steam: minimum and recommended CPU, GPU, RAM, storage, SSD advice, and launch-day performance settings.',
   alternates: {
     canonical: '/directive-8020-system-requirements',
   },
 };
 
+const minimumSpecs = [
+  ['OS', 'Windows 10/11 64-bit'],
+  ['Processor', 'Intel Core i5-8500 / AMD Ryzen 5 3500'],
+  ['Memory', '16 GB RAM'],
+  ['Graphics', 'NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700'],
+  ['Storage', '40 GB available space'],
+  ['Additional Notes', 'SSD recommended'],
+];
+
+const recommendedSpecs = [
+  ['OS', 'Windows 10/11 64-bit'],
+  ['Processor', 'Intel Core i5-12400F / AMD Ryzen 5 5600X'],
+  ['Memory', '16 GB RAM'],
+  ['Graphics', 'NVIDIA GeForce RTX 3070 Ti / AMD Radeon RX 6800'],
+  ['Storage', '40 GB available space'],
+];
+
 const faqs = [
   {
-    question: 'Can I run Directive 8020 on a low-end PC?',
+    question: 'What are the official Directive 8020 minimum PC specs?',
     answer:
-      'Directive 8020 requires at least a modern mid-range system to run. If your PC meets the minimum requirements, you can play at low settings at 1080p/30fps. For the best cinematic experience, you will want hardware that meets or exceeds the recommended specs.',
+      'The Steam page lists Windows 10/11 64-bit, Intel Core i5-8500 or AMD Ryzen 5 3500, 16 GB RAM, NVIDIA GeForce RTX 2060 or AMD Radeon RX 5700, and 40 GB storage. An SSD is recommended.',
   },
   {
-    question: 'Does Directive 8020 support ray tracing?',
+    question: 'What are the official Directive 8020 recommended PC specs?',
     answer:
-      'Official details on ray tracing support will be confirmed closer to launch. Previous Supermassive Games titles have offered optional ray tracing features. We will update this page as soon as more information is available.',
+      'The Steam page lists Windows 10/11 64-bit, Intel Core i5-12400F or AMD Ryzen 5 5600X, 16 GB RAM, NVIDIA GeForce RTX 3070 Ti or AMD Radeon RX 6800, and 40 GB storage.',
   },
   {
-    question: 'How much storage space does Directive 8020 need?',
+    question: 'Does Directive 8020 need an SSD?',
     answer:
-      'Storage requirements have not been officially confirmed yet. Based on previous Dark Pictures games (which typically required 30-50 GB), expect Directive 8020 to need approximately 50-70 GB of storage space. An SSD is strongly recommended for faster loading times.',
+      'Steam lists an SSD as recommended for the minimum configuration. Because Directive 8020 is a cinematic horror game with scene transitions, an SSD is the safer option even though the requirement line does not mark it as mandatory.',
   },
   {
-    question: 'Is Directive 8020 available on PS4 or Xbox One?',
+    question: 'Is Directive 8020 available on low-end GPUs like GTX 1060?',
     answer:
-      'No. Directive 8020 is only releasing on PlayStation 5, Xbox Series X|S, and PC (Steam). It will not be available on last-generation consoles.',
+      'The official minimum GPU is RTX 2060 or RX 5700, so a GTX 1060 is below the listed minimum. It may not provide a stable or supported experience.',
   },
 ];
+
+function SpecTable({ rows }: { rows: string[][] }) {
+  return (
+    <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden mb-6">
+      <table className="w-full text-sm">
+        <tbody>
+          {rows.map(([label, value]) => (
+            <tr key={label} className="border-b border-border/30 last:border-0">
+              <td className="px-4 py-3 text-muted-foreground font-medium w-40">{label}</td>
+              <td className="px-4 py-3 text-foreground">{value}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 
 export default function SystemRequirementsPage() {
   return (
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 System Requirements - Minimum & Recommended PC Specs',
+          title: 'Directive 8020 System Requirements - Official PC Specs',
           description:
-            'Can your PC run Directive 8020? Check the minimum and recommended system requirements for optimal performance.',
+            'Official Directive 8020 PC system requirements from Steam with minimum, recommended, storage, and performance advice.',
           url: '/directive-8020-system-requirements',
           datePublished: '2026-05-10',
+          dateModified: '2026-05-12',
+          imageUrl: '/official-corridor-threat.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'System Requirements' }]} />
-        <PageHero src="/system-card.jpg" alt="Directive 8020 system requirements and PC specs" />
+        <PageHero src="/official-corridor-threat.jpg" alt="Directive 8020 official corridor horror screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 System Requirements
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          Can your PC run Directive 8020? Here are the minimum and recommended
-          specs to survive the Cassiopeia.
+          These are the official PC requirements listed on Steam, with practical
+          notes for launch-day settings, storage, and what to lower first if
+          the Cassiopeia is stuttering.
         </p>
 
         <div className="prose-game">
           <h2>Minimum Requirements</h2>
-          <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden mb-6">
-            <table className="w-full text-sm">
-              <tbody>
-                {[
-                  ['OS', 'Windows 10 64-bit'],
-                  ['Processor', 'Intel Core i5-8400 / AMD Ryzen 5 2600'],
-                  ['Memory', '8 GB RAM'],
-                  ['Graphics', 'NVIDIA GeForce GTX 1060 / AMD Radeon RX 580'],
-                  ['DirectX', 'Version 12'],
-                  ['Storage', 'SSD recommended'],
-                ].map(([label, value]) => (
-                  <tr key={label} className="border-b border-border/30 last:border-0">
-                    <td className="px-4 py-3 text-muted-foreground font-medium w-40">{label}</td>
-                    <td className="px-4 py-3 text-foreground">{value}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <SpecTable rows={minimumSpecs} />
           <p>
-            Meeting minimum requirements will let you play at <strong>1080p / 30
-            FPS on Low settings</strong>. This is the baseline experience — the
-            game will run, but visual fidelity and smoothness will be limited.
+            The biggest change from many pre-launch estimates is the baseline
+            GPU: Directive 8020 lists an <strong>RTX 2060</strong> or{' '}
+            <strong>RX 5700</strong> as the minimum, not older cards like the
+            GTX 1060. Treat the minimum spec as the floor for a supported PC
+            experience.
           </p>
 
           <h2>Recommended Requirements</h2>
-          <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden mb-6">
-            <table className="w-full text-sm">
-              <tbody>
-                {[
-                  ['OS', 'Windows 10/11 64-bit'],
-                  ['Processor', 'Intel Core i7-9700K / AMD Ryzen 7 3700X'],
-                  ['Memory', '16 GB RAM'],
-                  ['Graphics', 'NVIDIA GeForce RTX 2070 / AMD Radeon RX 5700 XT'],
-                  ['DirectX', 'Version 12'],
-                  ['Storage', 'SSD required'],
-                ].map(([label, value]) => (
-                  <tr key={label} className="border-b border-border/30 last:border-0">
-                    <td className="px-4 py-3 text-muted-foreground font-medium w-40">{label}</td>
-                    <td className="px-4 py-3 text-foreground">{value}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <SpecTable rows={recommendedSpecs} />
           <p>
-            Meeting recommended requirements will give you <strong>1080p / 60
-            FPS on High settings</strong>. This is the ideal way to experience
-            Directive 8020&apos;s cinematic horror with smooth performance and full
-            visual detail.
+            The recommended GPU target is much higher: <strong>RTX 3070 Ti</strong>{' '}
+            or <strong>RX 6800</strong>. That suggests Supermassive is targeting
+            a more demanding visual presentation than earlier anthology entries,
+            especially in dark ship interiors, cinematic lighting, and creature
+            encounters.
           </p>
 
-          <h2>Performance Tips</h2>
+          <h2>What the Specs Mean in Practice</h2>
+          <p>
+            Directive 8020 is not a competitive shooter, so consistent frame
+            pacing is more important than chasing the highest possible FPS. The
+            game depends on cutscenes, QTE timing, stealth movement, facial
+            animation, and low-light readability. A stable 30 or 60 FPS is
+            preferable to an unlocked frame rate that swings during tense scenes.
+          </p>
+
+          <ArticleImage
+            src="/official-ship-interior.jpg"
+            alt="Directive 8020 official ship interior screenshot for PC performance"
+            caption="Directive 8020 relies on dark interiors, cinematic lighting, facial detail, and dense ship spaces. Stable frame pacing matters more than simply pushing the highest FPS."
+          />
           <ul>
             <li>
-              <strong>Use an SSD:</strong> Loading times on HDD will be
-              significantly longer. An SSD is essential for smooth scene
-              transitions in this cinematic game.
+              <strong>CPU:</strong> If you are near minimum, close browsers and
+              capture software before playing. Cinematic transitions and scripted
+              scenes can spike CPU usage.
             </li>
             <li>
-              <strong>Close background apps:</strong> Free up RAM and CPU
-              resources before launching. Browser tabs and background software
-              can cause stuttering during cutscenes.
+              <strong>GPU:</strong> Start by lowering shadows, volumetrics, and
+              reflections before lowering texture quality.
             </li>
             <li>
-              <strong>Update your GPU drivers:</strong> Make sure you have the
-              latest NVIDIA or AMD drivers installed. Day-1 driver updates
-              often include optimizations for new game releases.
+              <strong>RAM:</strong> 16 GB is listed for both minimum and
+              recommended, so avoid running memory-heavy apps in the background.
             </li>
             <li>
-              <strong>Lower shadow quality first:</strong> If you need better
-              performance, shadow settings typically have the biggest impact on
-              FPS with the least visual sacrifice in dark scenes.
-            </li>
-            <li>
-              <strong>Disable motion blur if sensitive:</strong> Some players
-              experience discomfort with motion blur. It can be disabled in the
-              graphics settings without affecting performance.
+              <strong>Storage:</strong> The game lists 40 GB. Keep additional
+              free space for patches, shader cache, and Steam unpacking.
             </li>
           </ul>
 
-          <h2>Steam Page</h2>
+          <h2>Recommended Launch Settings</h2>
           <p>
-            You can check the latest system requirements and pre-order Directive
-            8020 on the official Steam page. Requirements may be updated closer
-            to launch as the developers finalize optimizations.
+            If you want the safest first playthrough, start with settings that
+            protect readability and input timing. The alien mimic premise makes
+            small visual and audio cues important, so do not crush brightness or
+            overuse motion blur on your first run.
           </p>
+          <ul>
+            <li>Use fullscreen or borderless fullscreen, whichever is more stable on your setup.</li>
+            <li>Cap FPS to 60 if your frame time is uneven.</li>
+            <li>Keep textures high only if your GPU has enough VRAM headroom.</li>
+            <li>Disable heavy overlays if crashes or black screens appear.</li>
+            <li>Use headphones or a clean stereo/surround profile for dialogue and threat cues.</li>
+          </ul>
         </div>
 
         <FAQSection faqs={faqs} />

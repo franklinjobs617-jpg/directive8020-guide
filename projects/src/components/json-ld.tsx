@@ -53,7 +53,7 @@ export function generateArticleSchema({
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Bandai Namco Entertainment',
+        name: 'Supermassive Games',
       },
       datePublished: '2026-05-12',
     },
@@ -113,7 +113,7 @@ export function generateVideoGameSchema() {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Bandai Namco Entertainment',
+      name: 'Supermassive Games',
     },
     datePublished: '2026-05-12',
     url: 'https://store.steampowered.com/app/2255370/Directive_8020/',

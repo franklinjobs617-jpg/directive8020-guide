@@ -3,11 +3,12 @@ import { Breadcrumb } from '@/components/breadcrumb';
 import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
+import { ArticleImage } from '@/components/article-media';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 All Choices & Consequences - Decision Map',
   description:
-    'Every choice in Directive 8020 and its consequences. Complete decision map showing all major choices, branching paths, and how each decision affects the story and character survival.',
+    'Directive 8020 choices and consequences guide: how to read major decisions, mimic trust checks, relationship changes, Story Tree branches, and Turning Points.',
   alternates: {
     canonical: '/directive-8020-choices-consequences',
   },
@@ -17,17 +18,49 @@ const faqs = [
   {
     question: 'Do all choices matter in Directive 8020?',
     answer:
-      'While not every single choice has major consequences, many decisions significantly impact the story. Key choices can determine whether characters live or die, alter relationships between crew members, and change the ending you receive.',
+      'Not every dialogue line will create a major branch, but Directive 8020 is built around meaningful choices, character survival, relationships, mimic trust, and Story Tree branches. Track timed decisions, separation choices, accusations, and rescue decisions first.',
   },
   {
     question: 'Can I undo a choice in Directive 8020?',
     answer:
-      'Yes! The Turning Points system allows you to rewind to key decision moments and choose a different path. This is useful if you want to see the consequences of different choices without replaying the entire game.',
+      'Yes. Directive 8020 introduces Turning Points in the Story Tree, letting players revisit key decisions, explore hidden paths, and change character fates without always replaying the full game.',
   },
   {
-    question: 'How do I know which choices are important?',
+    question: 'Which choices are most dangerous?',
     answer:
-      'Important choices are typically marked by dramatic pauses, character close-ups, or the signature Dark Pictures &ldquo;choice timer.&rdquo; The Story Tree also shows you which decision points led to significant branches.',
+      'The most dangerous choices are trust decisions after a character has been isolated, timed QTE or stealth decisions, accusations without enough evidence, and choices that split the crew before the mimic is understood.',
+  },
+  {
+    question: 'Should I choose fast or careful options?',
+    answer:
+      'Choose fast only when the game presents immediate physical danger. If there is no active timer or threat, careful evidence gathering and communication are usually safer for survival and best-ending routes.',
+  },
+];
+
+const decisionTypes = [
+  {
+    type: 'Trust choice',
+    signal: 'A character asks to be believed, followed, rescued, or left alone.',
+    risk: 'The person may be the mimic, or the choice may isolate another survivor.',
+    bestPractice: 'Verify identity through memory, witnesses, evidence, or group communication before committing.',
+  },
+  {
+    type: 'Relationship choice',
+    signal: 'Dialogue changes tone between crew members or creates blame.',
+    risk: 'A damaged relationship can affect whether a character helps later.',
+    bestPractice: 'Choose calm, practical lines unless suspicion is backed by evidence.',
+  },
+  {
+    type: 'Action choice',
+    signal: 'The game asks you to run, hide, attack, help, or abandon someone.',
+    risk: 'Immediate injury, death, lost equipment, or route closure.',
+    bestPractice: 'Prioritize survival, group visibility, and avoiding unnecessary separation.',
+  },
+  {
+    type: 'Evidence choice',
+    signal: 'Optional exploration, logs, objects, or environmental clues appear.',
+    risk: 'Missing evidence can remove safer options in later trust checks.',
+    bestPractice: 'Explore before advancing whenever the scene is not under direct threat.',
   },
 ];
 
@@ -38,89 +71,124 @@ export default function ChoicesConsequencesPage() {
         data={generateArticleSchema({
           title: 'Directive 8020 All Choices & Consequences - Decision Map',
           description:
-            'Every choice in Directive 8020 and its consequences. Complete decision map and branching paths.',
+            'Directive 8020 choices and consequences guide with mimic trust checks, relationship logic, Story Tree branches, and Turning Points strategy.',
           url: '/directive-8020-choices-consequences',
           datePublished: '2026-05-12',
+          dateModified: '2026-05-12',
+          imageUrl: '/official-ship-interior.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Choices & Consequences' }]} />
-        <PageHero src="/choices-card.jpg" alt="Directive 8020 choices and consequences guide" />
+        <PageHero src="/official-ship-interior.jpg" alt="Directive 8020 official ship interior decision scene" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020: All Choices &amp; Consequences
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          Every major decision mapped out. Know exactly what happens before you
-          choose — no more guessing.
+          Directive 8020 choices are dangerous because the obvious human answer
+          may be the wrong survival answer. This guide explains how to identify
+          major decisions, what consequences to track, and how to use the Story
+          Tree to build a complete decision map.
         </p>
 
-        <div className="rounded-lg border border-d8020/40 bg-d8020/10 p-6 mb-8 text-center">
-          <p className="text-sm text-d8020 font-semibold mb-2">
-            Guide In Progress
-          </p>
-          <p className="text-sm text-muted-foreground">
-            Full choice-and-consequence mapping will be published on launch day
-            (May 12, 2026). Below is the framework for how choices work in
-            Directive 8020.
+        <div className="prose-game">
+          <h2>How to Tell If a Choice Matters</h2>
+          <p>
+            Major choices in Directive 8020 usually involve one of four things:
+            trust, separation, evidence, or physical danger. A harmless line of
+            dialogue may only shift tone, but a timed decision near an isolated
+            character can change a route, close a branch, or set up a later
+            death.
           </p>
         </div>
 
+        <div className="space-y-4 my-8">
+          {decisionTypes.map((item) => (
+            <section key={item.type} className="rounded-lg border border-border/50 bg-card/30 p-5">
+              <h2 className="text-lg font-bold text-foreground mb-2">{item.type}</h2>
+              <dl className="grid gap-3 text-sm sm:grid-cols-3">
+                <div>
+                  <dt className="text-muted-foreground mb-1">Signal</dt>
+                  <dd className="text-foreground leading-relaxed">{item.signal}</dd>
+                </div>
+                <div>
+                  <dt className="text-muted-foreground mb-1">Risk</dt>
+                  <dd className="text-foreground leading-relaxed">{item.risk}</dd>
+                </div>
+                <div>
+                  <dt className="text-muted-foreground mb-1">Best practice</dt>
+                  <dd className="text-foreground leading-relaxed">{item.bestPractice}</dd>
+                </div>
+              </dl>
+            </section>
+          ))}
+        </div>
+
         <div className="prose-game">
-          <h2>How Choices Work in Directive 8020</h2>
+          <h2>The Mimic Changes Choice Logic</h2>
           <p>
-            Directive 8020 features several types of decisions that affect the
-            story:
-          </p>
-          <ul>
-            <li><strong>Timed dialogue choices:</strong> You have a limited window to choose your response. The timer adds pressure and realism.</li>
-            <li><strong>Action decisions:</strong> Real-time choices during stealth or escape sequences where you must act quickly.</li>
-            <li><strong>Relationship choices:</strong> How you interact with other characters affects their willingness to help you later.</li>
-            <li><strong>Trust decisions:</strong> Given the mimic mechanic, deciding whether to trust someone is a recurring and high-stakes choice.</li>
-          </ul>
-
-          <h2>The Mimic Mechanic &amp; Trust</h2>
-          <p>
-            The most unique aspect of Directive 8020&apos;s choice system is the
-            mimic. Since the alien can disguise itself as any crew member,
-            choosing to trust someone is always a gamble. Key questions
-            throughout the game include:
-          </p>
-          <ul>
-            <li>Is this person really who they say they are?</li>
-            <li>Should I help them or protect myself?</li>
-            <li>Are they acting normally, or are they the alien?</li>
-            <li>Should I warn others about my suspicions?</li>
-          </ul>
-          <p>
-            Getting the trust decisions wrong can lead to deadly consequences.
-            Our guide will map out every trust-related choice and its outcome.
+            In a normal branching drama, helping a frightened ally is usually a
+            positive action. In Directive 8020, that same action can be a trap.
+            The alien organism can imitate its prey, so the game&apos;s most
+            important decisions are likely to ask: is this person really who
+            they claim to be?
           </p>
 
-          <h2>Choice Categories</h2>
-          <p>
-            Based on the series pattern, choices in Directive 8020 fall into
-            these categories:
-          </p>
+          <ArticleImage
+            src="/official-mimic-scene.jpg"
+            alt="Directive 8020 mimic choice consequence screenshot"
+            caption="Directive 8020 choice consequences revolve around trust: every isolated return, contradiction, and urgent rescue request can become a branch."
+          />
           <ul>
-            <li><strong>Critical Choices:</strong> Directly determine whether a character lives or dies</li>
-            <li><strong>Relationship Choices:</strong> Affect how characters interact and whether they help each other</li>
-            <li><strong>Story Choices:</strong> Change the narrative direction and available paths</li>
-            <li><strong>Hidden Choices:</strong> Subtle decisions that have delayed consequences</li>
+            <li>If a character was off-screen, ask how they returned.</li>
+            <li>If someone avoids details, treat that as evidence, not flavor text.</li>
+            <li>If a person wants you alone, look for a group-safe alternative.</li>
+            <li>If two accounts conflict, preserve both witnesses until you can verify.</li>
           </ul>
 
-          <h2>Full Choice Map</h2>
+          <h2>Consequences Worth Tracking</h2>
           <p>
-            <em>Complete choice-by-choice breakdown with consequences will be added on launch day.</em> Each
-            entry will include:
+            A consequence is not always a death. Many important consequences are
+            invisible until later. Use the Story Tree and your own notes to
+            record these outcomes as soon as they happen.
           </p>
           <ul>
-            <li>The choice and its two (or more) options</li>
-            <li>Immediate consequences of each option</li>
-            <li>Long-term effects on the story and characters</li>
-            <li>Which ending path the choice leads toward</li>
+            <li><strong>Survival state:</strong> alive, injured, separated, captured, or missing.</li>
+            <li><strong>Relationship state:</strong> trust gained, trust lost, blame created, rescue promised.</li>
+            <li><strong>Information state:</strong> clue found, clue missed, identity verified, contradiction noticed.</li>
+            <li><strong>Route state:</strong> new branch opened, branch locked, Turning Point discovered.</li>
+            <li><strong>Resource state:</strong> weapon, tool, access card, communication route, or ship system changed.</li>
+          </ul>
+
+          <h2>Choice Mapping Method</h2>
+          <p>
+            To build a real all-choices guide, do not replay randomly. Change
+            one variable at a time. If you change a trust choice and also fail a
+            QTE, you will not know which action caused the new outcome.
+          </p>
+          <ol>
+            <li>Play a scene once and record the choice, timer, characters present, and immediate result.</li>
+            <li>Check the Story Tree for a Turning Point or locked branch.</li>
+            <li>Replay from that Turning Point and choose the opposite option.</li>
+            <li>Keep QTE performance and exploration the same where possible.</li>
+            <li>Compare the end-of-scene and end-of-chapter results.</li>
+          </ol>
+
+          <h2>Spoiler-Safe First Run Advice</h2>
+          <p>
+            If this is your first playthrough, avoid reading full consequence
+            lists scene by scene. Instead, use these rules to make better
+            decisions without ruining the story:
+          </p>
+          <ul>
+            <li>Do not trust isolated returns without verification.</li>
+            <li>Explore rooms before advancing if no threat is active.</li>
+            <li>Keep relationships stable unless evidence demands confrontation.</li>
+            <li>Use stealth and observation before aggressive action.</li>
+            <li>After a death, inspect the Story Tree before assuming the final choice caused it.</li>
           </ul>
         </div>
 

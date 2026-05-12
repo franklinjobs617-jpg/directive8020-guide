@@ -3,11 +3,12 @@ import { Breadcrumb } from '@/components/breadcrumb';
 import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
+import { ArticleImage } from '@/components/article-media';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Trophy & Achievement Guide - Full List & Unlock Tips',
   description:
-    'Complete Directive 8020 trophy and achievement guide. Full list of all trophies, unlock requirements, missable achievements, and tips for getting 100% completion.',
+    'Directive 8020 trophy and achievement guide: Steam achievements, likely trophy categories, missable route planning, Turning Points cleanup, collectibles, endings, and 100% strategy.',
   alternates: {
     canonical: '/directive-8020-trophy-guide',
   },
@@ -15,19 +16,51 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'How many trophies does Directive 8020 have?',
+    question: 'Does Directive 8020 have Steam achievements?',
     answer:
-      'The full trophy list will be revealed on launch day. Based on previous Dark Pictures games, expect approximately 30-40 trophies including a Platinum trophy on PlayStation.',
+      'Yes. Steam lists Steam Achievements for Directive 8020. The exact public achievement list should be verified at launch before writing individual trophy names.',
   },
   {
-    question: 'Are there missable trophies in Directive 8020?',
+    question: 'Are Directive 8020 trophies missable?',
     answer:
-      'Yes, based on the series tradition, many trophies are tied to specific choices and can be missed in a single playthrough. However, the Turning Points system makes it easier to go back and unlock missable trophies without restarting.',
+      'Choice-driven Supermassive games usually include missable trophies tied to endings, character survival, deaths, collectibles, and specific decisions. Turning Points should make cleanup easier than replaying the entire game.',
   },
   {
-    question: 'How long does it take to get 100% achievements?',
+    question: 'Should I use Turning Points for trophy cleanup?',
     answer:
-      'Estimating 15-25 hours for full completion, depending on how efficiently you use Turning Points to revisit different story branches. This is significantly faster than previous Dark Pictures games which required multiple full playthroughs.',
+      'Yes. Turning Points and the Story Tree are likely the most efficient way to revisit specific choices, deaths, and hidden paths for achievements without repeating a full playthrough.',
+  },
+  {
+    question: 'What should I track for 100% completion?',
+    answer:
+      'Track character survival, major choices, collectibles, hidden paths, endings, Movie Night progress if relevant, and any bonus mission or Deluxe content objectives.',
+  },
+];
+
+const trophyBuckets = [
+  {
+    name: 'Story progression',
+    value: 'Chapter and finale trophies that unlock naturally as you complete the game.',
+  },
+  {
+    name: 'Survival outcomes',
+    value: 'Trophies for keeping characters alive, allowing specific deaths, or reaching certain crew states.',
+  },
+  {
+    name: 'Ending routes',
+    value: 'Best ending, bad ending, worst ending, and route-specific finale outcomes.',
+  },
+  {
+    name: 'Collectibles and evidence',
+    value: 'Logs, secrets, clues, heirlooms, or objects that explain the mimic and the Dark Pictures universe.',
+  },
+  {
+    name: 'Choice-specific',
+    value: 'Achievements tied to trusting, accusing, saving, abandoning, or confronting characters at key points.',
+  },
+  {
+    name: 'Mode and replay systems',
+    value: 'Possible trophies involving Movie Night, Turning Points, Story Tree completion, or Survivor-style play.',
   },
 ];
 
@@ -38,62 +71,108 @@ export default function TrophyGuidePage() {
         data={generateArticleSchema({
           title: 'Directive 8020 Trophy & Achievement Guide - Full List & Unlock Tips',
           description:
-            'Complete Directive 8020 trophy and achievement guide with unlock tips for 100% completion.',
+            'Directive 8020 trophy guide covering achievement categories, missable planning, Turning Points cleanup, collectibles, endings, and 100% strategy.',
           url: '/directive-8020-trophy-guide',
           datePublished: '2026-05-12',
+          dateModified: '2026-05-12',
+          imageUrl: '/official-story-tree.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Trophy Guide' }]} />
-        <PageHero src="/trophy-card.jpg" alt="Directive 8020 trophy and achievement guide" />
+        <PageHero src="/official-story-tree.jpg" alt="Directive 8020 Story Tree trophy guide screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 Trophy &amp; Achievement Guide
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          Full list of all trophies and achievements, with tips for unlocking
-          every single one and achieving 100% completion.
+          Directive 8020 supports Steam achievements and is built around
+          branching routes, deaths, endings, collectibles, and Turning Points.
+          This guide gives you a 100% strategy that avoids wasted full replays
+          while the exact public trophy names are being verified.
         </p>
 
-        <div className="rounded-lg border border-d8020/40 bg-d8020/10 p-6 mb-8 text-center">
-          <p className="text-sm text-d8020 font-semibold mb-2">
-            Guide In Progress
+        <div className="prose-game">
+          <h2>How to Approach 100% Completion</h2>
+          <p>
+            Do not trophy-hunt Directive 8020 like a linear action game. The
+            efficient route is to complete one strong blind or semi-blind run,
+            document the Story Tree, then use Turning Points to clean up
+            alternate deaths, trust decisions, and endings.
           </p>
-          <p className="text-sm text-muted-foreground">
-            The complete trophy list with detailed unlock instructions will be
-            published on launch day (May 12, 2026).
-          </p>
+          <ol>
+            <li>Finish one full playthrough and note every death, ending, and major locked branch.</li>
+            <li>Collect as much evidence as possible before route cleanup.</li>
+            <li>Use Turning Points to branch into alternate outcomes one at a time.</li>
+            <li>Save full replay modes or challenge routes for last.</li>
+            <li>Only chase specific hidden achievements once the Story Tree is mostly mapped.</li>
+          </ol>
+
+          <h2>Expected Trophy Categories</h2>
+        </div>
+
+        <div className="grid gap-4 my-6 sm:grid-cols-2">
+          {trophyBuckets.map((bucket) => (
+            <section key={bucket.name} className="rounded-lg border border-border/50 bg-card/30 p-5">
+              <h3 className="text-base font-bold text-foreground mb-2">{bucket.name}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{bucket.value}</p>
+            </section>
+          ))}
         </div>
 
         <div className="prose-game">
-          <h2>Expected Trophy Categories</h2>
+          <h2>Missable Trophy Planning</h2>
           <p>
-            Based on the Dark Pictures series, Directive 8020 trophies are
-            likely to fall into these categories:
+            The most expensive trophies in this genre are not the automatic
+            chapter trophies. They are the route-specific trophies that require
+            a character to be alive, dead, trusted, blamed, or present at a
+            particular scene. Track these conditions from the start:
           </p>
           <ul>
-            <li><strong>Story progression:</strong> Unlocked automatically as you advance through the narrative</li>
-            <li><strong>Character survival:</strong> Keeping specific characters alive or letting them die</li>
-            <li><strong>Ending-related:</strong> Reaching specific endings or combinations of outcomes</li>
-            <li><strong>Collectible:</strong> Finding all secrets, clues, or hidden items</li>
-            <li><strong>Choice-specific:</strong> Making particular choices at key decision points</li>
-            <li><strong>Completion:</strong> Exploring all story branches or unlocking all Turning Points</li>
+            <li><strong>Character state:</strong> alive, dead, injured, separated, or suspected.</li>
+            <li><strong>Relationship state:</strong> who trusts whom and who refused help.</li>
+            <li><strong>Evidence state:</strong> which clues were found before accusation scenes.</li>
+            <li><strong>Ending state:</strong> who survives into the finale and what mission choice is made.</li>
+            <li><strong>Branch state:</strong> which Turning Points still show unexplored paths.</li>
           </ul>
 
-          <h2>Tips for Efficient Trophy Hunting</h2>
-          <ul>
-            <li><strong>Use Turning Points:</strong> This is the biggest advantage Directive 8020 gives trophy hunters. Instead of replaying the entire game, rewind to specific decisions to unlock choice-based trophies.</li>
-            <li><strong>Check the Story Tree:</strong> The Story Tree shows you which paths you haven&apos;t explored yet — these unexplored branches often correspond to unlockable trophies.</li>
-            <li><strong>Play Survivor Mode last:</strong> Get all your story-related trophies first with Turning Points, then do a clean Survivor Mode run for the challenge trophies.</li>
-            <li><strong>Don&apos;t skip QTEs:</strong> Many trophies require successful QTE completion. Pay attention during action sequences.</li>
-          </ul>
-
-          <h2>Full Trophy List</h2>
+          <h2>Collectibles and Deluxe Mission Notes</h2>
           <p>
-            <em>Complete trophy list with descriptions and unlock tips will be added on launch day.</em>
+            The Digital Deluxe content listed on Steam includes a bonus mission
+            called <strong>The Dark Pictures Heirlooms Retrieval</strong>, which
+            involves hidden dolls and relics from Man of Medan, Little Hope,
+            House of Ashes, and The Devil in Me. If achievements connect to this
+            content, collectible tracking will matter even outside the main
+            story route.
           </p>
+
+          <ArticleImage
+            src="/official-ship-interior.jpg"
+            alt="Directive 8020 collectible route screenshot"
+            caption="Collectible and achievement cleanup should focus on searchable ship spaces: crew areas, terminals, labs, medical rooms, and objective-adjacent corners."
+          />
+          <ul>
+            <li>Search rooms before triggering obvious exits.</li>
+            <li>Rotate camera angles in dark interiors; collectibles may be near equipment or bunks.</li>
+            <li>Record chapter, room name, and nearby objective for every collectible.</li>
+            <li>Check whether collectibles persist after rewinding with Turning Points.</li>
+          </ul>
+
+          <h2>Turning Points Cleanup Strategy</h2>
+          <p>
+            Turning Points are the main tool for reducing replay time. The
+            correct method is controlled branching: change one decision, observe
+            the trophy or Story Tree result, then return and test the next
+            branch.
+          </p>
+          <ul>
+            <li>Use one clean survival route as your base file.</li>
+            <li>Do death-related trophies after saving everyone, not before.</li>
+            <li>Do ending trophies in clusters from the nearest finale Turning Point.</li>
+            <li>Leave mode-specific trophies for a separate run if the game marks them separately.</li>
+          </ul>
         </div>
 
         <FAQSection faqs={faqs} />
