@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
 import { Breadcrumb } from '@/components/breadcrumb';
+import { JsonLd, generateWebPageSchema } from '@/components/json-ld';
 
 const contactEmail = 'admin@enjoy4game.com';
+const pageTitle = 'Terms of Use';
+const pageDescription =
+  'Terms of Use for Directive 8020 Guide Hub covering fan-site status, guide accuracy, third-party links, and copyright notices.';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use',
-  description:
-    'Terms of Use for Directive 8020 Guide Hub, including fan-site status, acceptable use, guide accuracy, third-party links, and copyright notices.',
+  title: pageTitle,
+  description: pageDescription,
   alternates: {
     canonical: '/terms-of-use',
   },
@@ -15,6 +18,13 @@ export const metadata: Metadata = {
 export default function TermsOfUsePage() {
   return (
     <article className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+      <JsonLd
+        data={generateWebPageSchema({
+          title: pageTitle,
+          description: pageDescription,
+          url: '/terms-of-use',
+        })}
+      />
       <Breadcrumb items={[{ label: 'Terms of Use' }]} />
 
       <h1 className="mb-4 text-3xl font-black leading-tight text-foreground sm:text-4xl">

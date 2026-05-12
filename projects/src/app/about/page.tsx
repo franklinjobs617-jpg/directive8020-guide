@@ -1,13 +1,16 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Breadcrumb } from '@/components/breadcrumb';
+import { JsonLd, generateWebPageSchema } from '@/components/json-ld';
 
 const contactEmail = 'admin@enjoy4game.com';
+const pageTitle = 'About Directive 8020 Guide Hub';
+const pageDescription =
+  'About Directive 8020 Guide Hub, an unofficial fan-made resource for walkthroughs, endings, trophies, survival routes, and practical player guides.';
 
 export const metadata: Metadata = {
-  title: 'About Directive 8020 Guide Hub',
-  description:
-    'About Directive 8020 Guide Hub, an unofficial fan-made resource for walkthroughs, endings, trophies, survival routes, and practical player guides.',
+  title: pageTitle,
+  description: pageDescription,
   alternates: {
     canonical: '/about',
   },
@@ -16,6 +19,13 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <article className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+      <JsonLd
+        data={generateWebPageSchema({
+          title: pageTitle,
+          description: pageDescription,
+          url: '/about',
+        })}
+      />
       <Breadcrumb items={[{ label: 'About' }]} />
 
       <h1 className="mb-4 text-3xl font-black leading-tight text-foreground sm:text-4xl">

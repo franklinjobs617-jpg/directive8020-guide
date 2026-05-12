@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
 import { Breadcrumb } from '@/components/breadcrumb';
+import { JsonLd, generateWebPageSchema } from '@/components/json-ld';
 
 const contactEmail = 'admin@enjoy4game.com';
+const pageTitle = 'Privacy Policy';
+const pageDescription =
+  'Privacy Policy for Directive 8020 Guide Hub covering analytics, ads, cookies, contact data, and user choices.';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
-  description:
-    'Privacy Policy for Directive 8020 Guide Hub, including analytics, advertising, cookies, contact data, and user privacy rights.',
+  title: pageTitle,
+  description: pageDescription,
   alternates: {
     canonical: '/privacy-policy',
   },
@@ -15,6 +18,13 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <article className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+      <JsonLd
+        data={generateWebPageSchema({
+          title: pageTitle,
+          description: pageDescription,
+          url: '/privacy-policy',
+        })}
+      />
       <Breadcrumb items={[{ label: 'Privacy Policy' }]} />
 
       <h1 className="mb-4 text-3xl font-black leading-tight text-foreground sm:text-4xl">

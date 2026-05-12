@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inspector } from "react-dev-inspector";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { JsonLd, generateVideoGameSchema } from "@/components/json-ld";
 import "./globals.css";
-import Script from "next/script";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://enjoy4game.com"),
   title: {
     default:
       "Directive 8020 Guide - All Endings, Choices, Trophies & Walkthrough",
@@ -28,6 +29,9 @@ export const metadata: Metadata = {
     "Supermassive Games",
   ],
   authors: [{ name: "Directive 8020 Guide Hub" }],
+  other: {
+    "google-adsense-account": "ca-pub-3383070348689557",
+  },
   openGraph: {
     title: "Directive 8020 Guide - All Endings, Choices & Walkthrough",
     description:
@@ -60,17 +64,13 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <meta
-        name="google-adsense-account"
-        content="ca-pub-3383070348689557"
-      ></meta>
       <body className="antialiased min-h-screen flex flex-col">
         <JsonLd data={generateVideoGameSchema()} />
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3383070348689557"
           strategy="afterInteractive"
-        ></Script>
+        />
         <Script
           id="ga-loader"
           src="https://www.googletagmanager.com/gtag/js?id=G-1K6LQQSKHV"
@@ -80,13 +80,12 @@ export default function RootLayout({
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag; 
-            
+            window.gtag = gtag;
+
             gtag('js', new Date());
             gtag('config', 'G-1K6LQQSKHV', {
               page_path: window.location.pathname,
             });
-            console.log('GA4 Script Ready ✅');
           `}
         </Script>
 

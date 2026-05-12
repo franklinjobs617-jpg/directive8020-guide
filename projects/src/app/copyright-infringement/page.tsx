@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
 import { Breadcrumb } from '@/components/breadcrumb';
+import { JsonLd, generateWebPageSchema } from '@/components/json-ld';
 
 const contactEmail = 'admin@enjoy4game.com';
+const pageTitle = 'Copyright Infringement Policy';
+const pageDescription =
+  'Copyright infringement and DMCA-style contact policy for Directive 8020 Guide Hub, including takedown notice requirements.';
 
 export const metadata: Metadata = {
-  title: 'Copyright Infringement Policy',
-  description:
-    'Copyright infringement and DMCA-style contact policy for Directive 8020 Guide Hub, including rights-owner notice requirements and takedown review process.',
+  title: pageTitle,
+  description: pageDescription,
   alternates: {
     canonical: '/copyright-infringement',
   },
@@ -15,6 +18,13 @@ export const metadata: Metadata = {
 export default function CopyrightInfringementPage() {
   return (
     <article className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+      <JsonLd
+        data={generateWebPageSchema({
+          title: pageTitle,
+          description: pageDescription,
+          url: '/copyright-infringement',
+        })}
+      />
       <Breadcrumb items={[{ label: 'Copyright Infringement' }]} />
 
       <h1 className="mb-4 text-3xl font-black leading-tight text-foreground sm:text-4xl">

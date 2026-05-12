@@ -96,6 +96,33 @@ export function generateBreadcrumbSchema(
   };
 }
 
+export function generateWebPageSchema({
+  title,
+  description,
+  url,
+}: {
+  title: string;
+  description: string;
+  url: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title,
+    description,
+    url,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Directive 8020 Guide Hub',
+      url: 'https://enjoy4game.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Directive 8020 Guide Hub',
+    },
+  };
+}
+
 export function generateVideoGameSchema() {
   return {
     '@context': 'https://schema.org',

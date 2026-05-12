@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import { Breadcrumb } from '@/components/breadcrumb';
 import { GuideCard } from '@/components/guide-card';
+import { JsonLd, generateArticleSchema } from '@/components/json-ld';
 
 export const metadata: Metadata = {
   title: 'All Guides - Complete Directive 8020 Walkthrough & Tips',
@@ -183,6 +185,19 @@ export default function GuidesPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 py-8">
+      <JsonLd
+        data={generateArticleSchema({
+          title: 'All Guides - Complete Directive 8020 Walkthrough & Tips',
+          description:
+            'Browse all Directive 8020 guides: endings, choices, character survival, trophies, system requirements, and more.',
+          url: '/guides',
+          datePublished: '2026-05-10',
+          dateModified: '2026-05-12',
+          imageUrl: '/d8020-screenshot-01.jpg',
+        })}
+      />
+      <Breadcrumb items={[{ label: 'Guides', href: '/guides' }]} />
+
       <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
         All Guides
       </h1>
