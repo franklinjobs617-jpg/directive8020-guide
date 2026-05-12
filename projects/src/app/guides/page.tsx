@@ -12,6 +12,14 @@ export const metadata: Metadata = {
 
 const allGuides = [
   {
+    href: '/directive-8020-review',
+    title: 'Review / Worth Buying?',
+    description: 'Guide Hub verdict, media score roundup, pros and cons, performance, replay value, and buying advice.',
+    tag: 'Review',
+    tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
+    image: '/d8020-screenshot-01.jpg',
+  },
+  {
     href: '/directive-8020-beginner-tips',
     title: 'Beginner Tips',
     description: 'Spoiler-free first-run advice for settings, mimic clues, QTEs, stealth, and Story Tree habits.',
@@ -167,10 +175,10 @@ const allGuides = [
 
 export default function GuidesPage() {
   const available = allGuides.filter((g) =>
-    ['Available', 'Start Here', 'Platform', 'FAQ Hub'].includes(g.tag)
+    ['Available', 'Start Here', 'Platform', 'FAQ Hub', 'Review'].includes(g.tag)
   );
   const launchGuides = allGuides.filter(
-    (g) => !['Available', 'Start Here', 'Platform', 'FAQ Hub'].includes(g.tag)
+    (g) => !['Available', 'Start Here', 'Platform', 'FAQ Hub', 'Review'].includes(g.tag)
   );
 
   return (

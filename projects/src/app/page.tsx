@@ -31,6 +31,7 @@ const guideLibraries = [
   {
     title: 'Setup & Platforms',
     links: [
+      ['Review / Worth Buying?', '/directive-8020-review'],
       ['Release Time', '/directive-8020-release-time'],
       ['System Requirements', '/directive-8020-system-requirements'],
       ['Steam Deck & Low-End PC', '/directive-8020-steam-deck'],
@@ -122,6 +123,13 @@ const missionCards = [
 ];
 
 const cornerstoneArticles = [
+  {
+    label: 'Review',
+    title: 'Directive 8020 Review / Worth Buying?',
+    body: 'Media score roundup, Guide Hub verdict, pros and cons, performance, replay value, and buying advice.',
+    href: '/directive-8020-review',
+    image: '/d8020-screenshot-01.jpg',
+  },
   {
     label: 'Main Guide',
     title: 'Directive 8020 Walkthrough / Full Guide',
@@ -272,15 +280,27 @@ export default function HomePage() {
             priority
             quality={88}
           />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,oklch(0.07_0.005_260)_0%,oklch(0.07_0.005_260/0.94)_42%,oklch(0.07_0.005_260/0.58)_100%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,oklch(0.55_0.22_270/0.26),transparent_32%)]" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                'linear-gradient(90deg, oklch(0.07 0.005 260) 0%, oklch(0.07 0.005 260 / 0.94) 42%, oklch(0.07 0.005 260 / 0.58) 100%)',
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                'radial-gradient(circle at 78% 18%, oklch(0.55 0.22 270 / 0.26), transparent 32%)',
+            }}
+          />
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
         </div>
 
         <div className="mx-auto grid min-h-[680px] max-w-6xl items-end gap-8 px-4 pb-10 pt-20 sm:px-6 lg:grid-cols-[1fr_460px] lg:pb-16">
           <div className="max-w-2xl">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-d8020/30 bg-d8020/10 px-3 py-1 text-xs font-medium text-d8020">
-              <span className="h-2 w-2 rounded-full bg-d8020 shadow-[0_0_18px_var(--d8020-glow)]" />
+              <span className="h-2 w-2 rounded-full bg-d8020 glow-card" />
               Launch guide updated May 12
             </div>
             <h1 className="mb-5 text-4xl font-black leading-none tracking-tight text-foreground sm:text-5xl lg:text-6xl">

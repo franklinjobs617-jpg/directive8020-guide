@@ -41,6 +41,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/directive-8020-review`,
+      lastModified: '2026-05-12',
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${BASE_URL}/directive-8020-beginner-tips`,
       lastModified: '2026-05-12',
       changeFrequency: 'weekly',
