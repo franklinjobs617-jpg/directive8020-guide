@@ -5,6 +5,7 @@ const SITE_URL = 'https://enjoy4game.com';
 const LABEL_PATHS: Record<string, string> = {
   'All Endings': '/directive-8020-all-endings',
   'Beginner Tips': '/directive-8020-beginner-tips',
+  'Cast and Actors': '/directive-8020-cast-actors',
   Characters: '/directive-8020-characters',
   'Choices & Consequences': '/directive-8020-choices-consequences',
   'Collectibles & Heirlooms': '/directive-8020-collectibles-heirlooms',
@@ -21,6 +22,7 @@ const LABEL_PATHS: Record<string, string> = {
   'Stealth Guide': '/directive-8020-stealth-guide',
   'System Requirements': '/directive-8020-system-requirements',
   'Trophy Guide': '/directive-8020-trophy-guide',
+  'Trophy List': '/directive-8020-trophy-list',
   'Turning Points & Story Tree': '/directive-8020-turning-points-story-tree',
   Walkthrough: '/directive-8020-walkthrough',
   About: '/about',

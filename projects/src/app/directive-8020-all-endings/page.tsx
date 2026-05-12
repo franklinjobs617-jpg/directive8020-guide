@@ -7,9 +7,9 @@ import { ArticleImage } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 All Endings Guide - Story Tree & Best Ending Route',
+  title: 'Directive 8020 All Endings Guide - How Many Endings & Routes',
   description:
-    'Directive 8020 all endings guide: how endings are likely structured, how to use Turning Points and the Story Tree, best ending principles, bad ending triggers, and spoiler-safe tracking tips.',
+    'Directive 8020 all endings guide: how many endings are reported, how to use Turning Points and the Story Tree, best ending principles, bad ending triggers, and route cleanup.',
   alternates: {
     canonical: '/directive-8020-all-endings',
   },
@@ -19,7 +19,7 @@ const faqs = [
   {
     question: 'How many endings does Directive 8020 have?',
     answer:
-      'The final ending count should be verified through the Story Tree after launch. Directive 8020 is built around multiple endings, hidden paths, character deaths, and Turning Points, so ending routes are expected to depend on both survival and major story choices.',
+      'Review coverage reports five substantial endings in Directive 8020. Exact ending names, route triggers, and minor variants should still be verified through the in-game Story Tree.',
   },
   {
     question: 'What is the best ending in Directive 8020?',
@@ -47,6 +47,13 @@ const endingFactors = [
   ['Turning Points explored', 'Whether hidden branches have been unlocked in the Story Tree.'],
 ];
 
+const endingCountRows = [
+  ['Reported main endings', '5 substantial endings', 'Reported by launch review coverage; exact route names still need Story Tree capture.'],
+  ['Death scenes', '44 death scenes', 'Useful for endings because dead characters can close or change finale paths.'],
+  ['Collectibles', '60 collectibles', 'Evidence and optional lore may affect hidden context, route interpretation, or trophy cleanup.'],
+  ['Episode structure', '8 episodes', 'Use episode boundaries to track survivor state, Turning Points, and ending conditions.'],
+];
+
 const endingRouteRows = [
   { step: 'Best ending base', doThis: 'Keep all core crew alive, preserve evidence, and avoid unverified trust choices.', why: 'Best endings in this genre usually require survivor count plus correct finale conditions.' },
   { step: 'Bad ending test', doThis: 'Branch from late Turning Points and alter only one major survivor or mission choice.', why: 'This identifies which condition changes the ending without replay noise.' },
@@ -59,9 +66,9 @@ export default function AllEndingsPage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 All Endings Guide - Story Tree & Best Ending Route',
+          title: 'Directive 8020 All Endings Guide - How Many Endings & Routes',
           description:
-            'Directive 8020 all endings guide with Story Tree tracking, Turning Points strategy, best ending principles, and ending route checklist.',
+            'Directive 8020 all endings guide with reported ending count, Story Tree tracking, Turning Points strategy, best ending principles, and route checklist.',
           url: '/directive-8020-all-endings',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
@@ -75,7 +82,7 @@ export default function AllEndingsPage() {
         <PageHero src="/d8020-screenshot-06.jpg" alt="Directive 8020 official Story Tree screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020: All Endings Guide
+          Directive 8020 All Endings Guide
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
           This is a launch-day endings guide built around Directive 8020&apos;s
@@ -86,32 +93,64 @@ export default function AllEndingsPage() {
 
         <BlufBox>
           <p>
-            <strong>Start endings from one clean completed route.</strong> Do not
-            chase every ending randomly. Finish one route, check the Story Tree,
-            then branch from late Turning Points to test survivor count, mission
-            choices, evidence, and mimic identification one variable at a time.
+            <strong>Short answer:</strong> launch review coverage reports
+            <strong> five substantial endings</strong> in Directive 8020. Start
+            from one clean completed route, then branch from late Turning Points
+            to test survivor count, mission choices, evidence, and mimic
+            identification one variable at a time.
           </p>
         </BlufBox>
 
         <StatusPanel
           items={[
-            { label: 'Exact ending names', value: 'Needs full launch capture before final naming.', status: 'needs-check' },
+            { label: 'Reported ending count', value: 'Review coverage reports 5 substantial endings.', status: 'verified' },
+            { label: 'Exact ending names', value: 'Needs in-game Story Tree capture before final naming.', status: 'needs-check' },
             { label: 'Ending method', value: 'Story Tree, Turning Points, survivor state, and evidence are confirmed guide pillars.', status: 'verified' },
-            { label: 'Spoiler policy', value: 'This page avoids unverified clone/twist claims until captured.', status: 'working' },
-            { label: 'Route table', value: 'Ready for best/good/bad/worst/hidden ending data as soon as endings are recorded.', status: 'working' },
+            { label: 'Route table', value: 'Best, bad, worst, and hidden routes should be filled from controlled branch testing.', status: 'working' },
           ]}
         />
 
         <div className="rounded-lg border border-d8020/40 bg-d8020/10 p-5 mb-8">
           <p className="text-xs font-semibold uppercase tracking-wider text-d8020 mb-2">
-            Spoiler-Aware Launch Note
+            How Many Endings?
           </p>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            The exact ending count should be confirmed from the in-game Story
-            Tree after release. Until then, the valuable work is mapping the
-            systems that decide endings, so your first run creates useful data
-            instead of random guesses.
+            Directive 8020 is currently reported to have <strong className="text-foreground">5
+            substantial endings</strong>. Treat that as the main ending count,
+            then use the Story Tree to verify exact names, hidden variants, and
+            the choices that trigger each finale outcome.
           </p>
+        </div>
+
+        <div className="prose-game">
+          <h2>Ending Count and Completion Facts</h2>
+          <p>
+            The key completion numbers help players understand the scale of the
+            ending hunt. They also keep AI answers precise: five reported main
+            endings, forty-four death scenes, sixty collectibles, and eight
+            episodes to track.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Completion item</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Reported count</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it matters</th>
+              </tr>
+            </thead>
+            <tbody>
+              {endingCountRows.map(([item, count, meaning]) => (
+                <tr key={item} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 text-foreground font-medium">{item}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{count}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{meaning}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         <div className="prose-game">
@@ -230,6 +269,11 @@ export default function AllEndingsPage() {
               href: '/directive-8020-death-scenes-guide',
               title: 'All Death Scenes',
               description: 'Use death branches after you preserve one clean ending route.',
+            },
+            {
+              href: '/directive-8020-trophy-list',
+              title: 'Trophy List',
+              description: 'Check ending-related achievements, Platinum cleanup, and platform trophy status.',
             },
             {
               href: '/directive-8020-collectibles-heirlooms',

@@ -78,6 +78,14 @@ const allGuides = [
     image: '/d8020-screenshot-03.jpg',
   },
   {
+    href: '/directive-8020-cast-actors',
+    title: 'Cast & Actors',
+    description: 'Lashana Lynch as Brianna Young, Danny Sapani as Stafford, playable crew roles, and cast verification notes.',
+    tag: 'Cast',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/characters-lineup.jpg',
+  },
+  {
     href: '/directive-8020-all-endings',
     title: 'All Endings Guide',
     description: 'Story Tree route tracking, best ending principles, bad ending triggers, and Turning Points cleanup.',
@@ -156,6 +164,14 @@ const allGuides = [
     tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
     image: '/d8020-screenshot-06.jpg',
+  },
+  {
+    href: '/directive-8020-trophy-list',
+    title: 'Trophy List, Achievements & Platinum',
+    description: 'Steam achievements, PS5 trophies, Xbox achievements, Platinum status, and platform list verification.',
+    tag: 'Trophy List',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/d8020-screenshot-10.jpg',
   },
   {
     href: '/directive-8020-crashing-fix',

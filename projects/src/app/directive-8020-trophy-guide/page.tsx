@@ -107,7 +107,9 @@ export default function TrophyGuidePage() {
             <strong>Do not trophy hunt randomly.</strong> Finish one route,
             build a save-everyone base, then use Turning Points for endings,
             deaths, collectibles, Heirlooms, Movie Night, and any Survival Mode
-            cleanup.
+            cleanup. For platform status, PS5 trophies, Steam achievements, and
+            Platinum planning, use the <a href="/directive-8020-trophy-list">Directive
+            8020 trophy list</a>.
           </p>
         </BlufBox>
 
@@ -121,6 +123,15 @@ export default function TrophyGuidePage() {
         />
 
         <div className="prose-game">
+          <h2>Trophy Guide vs Trophy List</h2>
+          <p>
+            This page is the 100% strategy guide. It explains cleanup order,
+            missable planning, Turning Points, collectibles, endings, and route
+            control. The separate trophy list page tracks platform-specific
+            queries such as Steam achievements, PS5 trophies, Xbox achievements,
+            and Platinum status.
+          </p>
+
           <h2>How to Approach 100% Completion</h2>
           <p>
             Do not trophy-hunt Directive 8020 like a linear action game. The
@@ -206,6 +217,11 @@ export default function TrophyGuidePage() {
 
         <RelatedGuides
           guides={[
+            {
+              href: '/directive-8020-trophy-list',
+              title: 'Trophy List',
+              description: 'Check Steam achievements, PS5 trophies, Xbox achievements, and Platinum status.',
+            },
             {
               href: '/directive-8020-collectibles-heirlooms',
               title: 'Collectibles & Heirlooms',

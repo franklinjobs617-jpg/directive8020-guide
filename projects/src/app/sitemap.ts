@@ -41,6 +41,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/directive-8020-cast-actors`,
+      lastModified: '2026-05-12',
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
       url: `${BASE_URL}/directive-8020-review`,
       lastModified: '2026-05-12',
       changeFrequency: 'weekly',
@@ -129,6 +135,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: '2026-05-12',
       changeFrequency: 'weekly',
       priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/directive-8020-trophy-list`,
+      lastModified: '2026-05-12',
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
       url: `${BASE_URL}/directive-8020-walkthrough`,

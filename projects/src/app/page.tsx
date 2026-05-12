@@ -25,6 +25,7 @@ const guideLibraries = [
       ['All Endings Guide', '/directive-8020-all-endings'],
       ['Choices & Consequences', '/directive-8020-choices-consequences'],
       ['All 44 Death Scenes', '/directive-8020-death-scenes-guide'],
+      ['Cast & Actors', '/directive-8020-cast-actors'],
       ['Characters & Crew Roles', '/directive-8020-characters'],
     ],
   },
@@ -42,6 +43,7 @@ const guideLibraries = [
     title: 'Completion & Extras',
     links: [
       ['Trophy Guide', '/directive-8020-trophy-guide'],
+      ['Trophy List & Platinum', '/directive-8020-trophy-list'],
       ['Collectibles & Heirlooms', '/directive-8020-collectibles-heirlooms'],
       ['Stealth Guide', '/directive-8020-stealth-guide'],
       ['Deluxe Edition', '/directive-8020-deluxe-edition'],
@@ -98,6 +100,34 @@ const quickFacts = [
   ['PC minimum', 'RTX 2060 / RX 5700, 16 GB RAM'],
 ];
 
+const trendingSearches = [
+  {
+    query: 'directive 8020 trophy list',
+    answer: 'Steam achievements are confirmed; exact PS5, Xbox, and Platinum names need platform capture.',
+    href: '/directive-8020-trophy-list',
+  },
+  {
+    query: 'directive 8020 achievements',
+    answer: 'Use the trophy list page for platform status and the trophy guide for cleanup strategy.',
+    href: '/directive-8020-trophy-list',
+  },
+  {
+    query: 'directive 8020 cast',
+    answer: 'Lashana Lynch plays Brianna Young, with five playable Cassiopeia crew members tracked by role.',
+    href: '/directive-8020-cast-actors',
+  },
+  {
+    query: 'directive 8020 actors',
+    answer: 'Actor rows are separated into confirmed, reported, and pending verification to avoid bad cast data.',
+    href: '/directive-8020-cast-actors',
+  },
+  {
+    query: 'directive 8020 how many endings',
+    answer: 'Launch review coverage reports 5 substantial endings; route names still need Story Tree capture.',
+    href: '/directive-8020-all-endings',
+  },
+];
+
 const missionCards = [
   {
     label: 'New player',
@@ -116,8 +146,8 @@ const missionCards = [
   {
     label: 'Completionist',
     title: 'I want every trophy',
-    body: 'Use the Story Tree for ending cleanup, collectible checks, Deluxe mission notes, and branch testing.',
-    href: '/directive-8020-trophy-guide',
+    body: 'Check the trophy list, Platinum status, Story Tree cleanup, collectible checks, and branch testing.',
+    href: '/directive-8020-trophy-list',
     image: '/d8020-screenshot-06.jpg',
   },
 ];
@@ -164,6 +194,20 @@ const cornerstoneArticles = [
     body: 'Platinum route, Survival Mode planning, Movie Night notes, Everyone Lives/Dies routes, and Heirlooms cleanup.',
     href: '/directive-8020-trophy-guide',
     image: '/d8020-screenshot-10.jpg',
+  },
+  {
+    label: 'Trophy List',
+    title: 'Trophy List, Achievements & Platinum',
+    body: 'Steam achievements, PS5 trophies, Xbox achievements, Platinum planning, and platform verification status.',
+    href: '/directive-8020-trophy-list',
+    image: '/d8020-screenshot-06.jpg',
+  },
+  {
+    label: 'Cast',
+    title: 'Cast & Actors',
+    body: 'Lashana Lynch as Brianna Young, Danny Sapani as Stafford, five playable crew members, and cast verification notes.',
+    href: '/directive-8020-cast-actors',
+    image: '/characters-lineup.jpg',
   },
   {
     label: 'Mechanics',
@@ -232,6 +276,11 @@ const answerGroups = [
         q: 'What if the game crashes?',
         a: 'Start with driver updates, Steam file verification, overlay disable, SSD install, and stable frame caps.',
         href: '/directive-8020-crashing-fix',
+      },
+      {
+        q: 'Does Directive 8020 have a Platinum trophy?',
+        a: 'Treat Platinum status as pending until trusted PS5 trophy data is captured; use the trophy list page for the current roadmap.',
+        href: '/directive-8020-trophy-list',
       },
     ],
   },
@@ -368,6 +417,24 @@ export default function HomePage() {
               ))}
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="mb-6 flex items-center gap-3">
+          <div className="h-1 w-8 rounded-full bg-d8020" />
+          <div>
+            <h2 className="text-xl font-bold text-foreground">Trending Search Answers</h2>
+            <p className="mt-1 text-sm text-muted-foreground">New search demand from trophy, cast, actor, and ending-count queries.</p>
+          </div>
+        </div>
+        <div className="grid gap-3 md:grid-cols-2">
+          {trendingSearches.map((item) => (
+            <Link key={item.query} href={item.href} className="rounded-lg border border-border/50 bg-card/30 p-4 transition-colors hover:border-d8020/40 hover:bg-card/50">
+              <h3 className="text-sm font-semibold text-foreground">{item.query}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.answer}</p>
+            </Link>
+          ))}
         </div>
       </section>
 

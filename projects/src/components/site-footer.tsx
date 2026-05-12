@@ -53,6 +53,14 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
+                  href="/directive-8020-trophy-list"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Trophy List
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/directive-8020-choices-consequences"
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
@@ -88,6 +96,14 @@ export function SiteFooter() {
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Characters
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/directive-8020-cast-actors"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Cast & Actors
                 </Link>
               </li>
             </ul>

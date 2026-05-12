@@ -55,18 +55,18 @@ export function SiteHeader() {
             Endings
           </Link>
           <Link
-            href="/directive-8020-community-questions"
+            href="/directive-8020-trophy-list"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
-            FAQ
+            Trophies
           </Link>
         </nav>
 
         <Link
-          href="/directive-8020-system-requirements"
+          href="/directive-8020-cast-actors"
           className="text-xs font-medium px-3 py-1.5 rounded-md bg-d8020/15 text-d8020 border border-d8020/30 hover:bg-d8020/25 transition-colors"
         >
-          System Req.
+          Cast
         </Link>
       </div>
     </header>
