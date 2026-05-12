@@ -68,10 +68,14 @@ export default function RootLayout({
         />
         <Script id="ga-config" strategy="afterInteractive">
           {`
-            if (typeof window.gtag === 'function') {
-              window.gtag('js', new Date());
-              window.gtag('config', 'G-1K6LQQSKHV');
-            }
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag; 
+            
+            gtag('js', new Date());
+            gtag('config', 'G-1K6LQQSKHV', {
+              page_path: window.location.pathname,
+            });
             console.log('GA4 Script Ready ✅');
           `}
         </Script>
