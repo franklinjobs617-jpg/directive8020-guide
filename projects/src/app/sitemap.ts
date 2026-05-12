@@ -65,6 +65,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/directive-8020-steam-deck`,
+      lastModified: '2026-05-12',
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/directive-8020-community-questions`,
+      lastModified: '2026-05-12',
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${BASE_URL}/directive-8020-crashing-fix`,
       lastModified: '2026-05-12',
       changeFrequency: 'weekly',

@@ -49,10 +49,10 @@ export function SiteHeader() {
             Endings
           </Link>
           <Link
-            href="/directive-8020-trophy-guide"
+            href="/directive-8020-community-questions"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
-            Trophies
+            FAQ
           </Link>
         </nav>
 

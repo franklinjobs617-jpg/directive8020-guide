@@ -36,6 +36,22 @@ const allGuides = [
     image: '/official-corridor-threat.jpg',
   },
   {
+    href: '/directive-8020-steam-deck',
+    title: 'Steam Deck & Low-End PC',
+    description: 'Verified status, official specs, handheld expectations, best settings, and low-end PC advice.',
+    tag: 'Platform',
+    tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
+    image: '/official-ship-interior.jpg',
+  },
+  {
+    href: '/directive-8020-community-questions',
+    title: 'Community Questions',
+    description: 'Answers for multiplayer, Steam Deck, blind runs, Turning Points, Deluxe, endings, and performance.',
+    tag: 'FAQ Hub',
+    tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
+    image: '/official-cassiopeia-crew.jpg',
+  },
+  {
     href: '/directive-8020-release-time',
     title: 'Release Time & Deluxe Content',
     description: 'Steam unlock time by region, platform notes, Digital Deluxe contents, and launch checklist.',
@@ -126,8 +142,12 @@ const allGuides = [
 ];
 
 export default function GuidesPage() {
-  const available = allGuides.filter((g) => g.tag === 'Available' || g.tag === 'Start Here');
-  const launchGuides = allGuides.filter((g) => g.tag !== 'Available');
+  const available = allGuides.filter((g) =>
+    ['Available', 'Start Here', 'Platform', 'FAQ Hub'].includes(g.tag)
+  );
+  const launchGuides = allGuides.filter(
+    (g) => !['Available', 'Start Here', 'Platform', 'FAQ Hub'].includes(g.tag)
+  );
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 py-8">
