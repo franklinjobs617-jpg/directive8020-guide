@@ -36,9 +36,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/directive-8020-characters`,
-      lastModified: '2026-05-10',
+      lastModified: '2026-05-12',
       changeFrequency: 'weekly',
       priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/directive-8020-beginner-tips`,
+      lastModified: '2026-05-12',
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/directive-8020-turning-points-story-tree`,
+      lastModified: '2026-05-12',
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/directive-8020-movie-night-multiplayer`,
+      lastModified: '2026-05-12',
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/directive-8020-deluxe-edition`,
+      lastModified: '2026-05-12',
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
     {
       url: `${BASE_URL}/directive-8020-crashing-fix`,

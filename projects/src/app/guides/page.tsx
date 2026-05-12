@@ -12,6 +12,14 @@ export const metadata: Metadata = {
 
 const allGuides = [
   {
+    href: '/directive-8020-beginner-tips',
+    title: 'Beginner Tips',
+    description: 'Spoiler-free first-run advice for settings, mimic clues, QTEs, stealth, and Story Tree habits.',
+    tag: 'Start Here',
+    tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
+    image: '/official-corridor-threat.jpg',
+  },
+  {
     href: '/directive-8020-overview',
     title: 'What is Directive 8020?',
     description: 'Story, mimic threat, survival gameplay, Turning Points, Story Tree, and official video overview.',
@@ -68,6 +76,30 @@ const allGuides = [
     image: '/official-ship-interior.jpg',
   },
   {
+    href: '/directive-8020-turning-points-story-tree',
+    title: 'Turning Points & Story Tree',
+    description: 'How rewind, hidden paths, branch testing, all endings, and save-everyone cleanup work.',
+    tag: 'Core Mechanic',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/official-story-tree.jpg',
+  },
+  {
+    href: '/directive-8020-movie-night-multiplayer',
+    title: 'Movie Night Multiplayer',
+    description: 'Couch co-op setup, character assignment, online multiplayer note, and group survival rules.',
+    tag: 'Co-op',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/official-cassiopeia-crew.jpg',
+  },
+  {
+    href: '/directive-8020-deluxe-edition',
+    title: 'Deluxe Edition Content',
+    description: 'Bonus mission, outfit pack, filters, artbook, soundtrack, and whether Deluxe is worth it.',
+    tag: 'Edition Guide',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/official-ship-interior.jpg',
+  },
+  {
     href: '/directive-8020-trophy-guide',
     title: 'Trophy & Achievement Guide',
     description: 'Steam achievements, missable planning, collectibles, endings, and 100% cleanup strategy.',
@@ -94,7 +126,7 @@ const allGuides = [
 ];
 
 export default function GuidesPage() {
-  const available = allGuides.filter((g) => g.tag === 'Available');
+  const available = allGuides.filter((g) => g.tag === 'Available' || g.tag === 'Start Here');
   const launchGuides = allGuides.filter((g) => g.tag !== 'Available');
 
   return (

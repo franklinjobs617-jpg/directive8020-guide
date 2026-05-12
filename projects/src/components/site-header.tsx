@@ -31,10 +31,16 @@ export function SiteHeader() {
             Guides
           </Link>
           <Link
-            href="/directive-8020-characters"
+            href="/directive-8020-beginner-tips"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
-            Characters
+            Tips
+          </Link>
+          <Link
+            href="/directive-8020-turning-points-story-tree"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Story Tree
           </Link>
           <Link
             href="/directive-8020-all-endings"
