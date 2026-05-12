@@ -37,6 +37,12 @@ export function SiteHeader() {
             Tips
           </Link>
           <Link
+            href="/directive-8020-walkthrough"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Walkthrough
+          </Link>
+          <Link
             href="/directive-8020-turning-points-story-tree"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >

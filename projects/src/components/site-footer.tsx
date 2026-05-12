@@ -21,6 +21,14 @@ export function SiteFooter() {
             <ul className="space-y-2">
               <li>
                 <Link
+                  href="/directive-8020-walkthrough"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Full Walkthrough
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/directive-8020-all-endings"
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
