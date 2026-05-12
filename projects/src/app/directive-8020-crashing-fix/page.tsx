@@ -57,14 +57,14 @@ export default function CrashingFixPage() {
           url: '/directive-8020-crashing-fix',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-corridor-threat.jpg',
+          imageUrl: '/d8020-screenshot-02.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Crash Fix' }]} />
-        <PageHero src="/official-corridor-threat.jpg" alt="Directive 8020 official dark corridor performance fix guide" />
+        <PageHero src="/d8020-screenshot-02.jpg" alt="Directive 8020 official dark corridor performance fix guide" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020: Crashing, Black Screen &amp; Performance Fix
@@ -122,7 +122,7 @@ export default function CrashingFixPage() {
           </p>
 
           <ArticleImage
-            src="/official-ship-interior.jpg"
+            src="/d8020-screenshot-04.jpg"
             alt="Directive 8020 PC stuttering and performance screenshot"
             caption="Ship interiors combine dark lighting, reflections, post-processing, and cinematic camera work. If performance is uneven, lower visual effects before sacrificing readability."
           />

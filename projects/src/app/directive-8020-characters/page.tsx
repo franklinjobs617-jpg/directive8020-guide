@@ -80,14 +80,14 @@ export default function CharactersPage() {
           url: '/directive-8020-characters',
           datePublished: '2026-05-10',
           dateModified: '2026-05-12',
-          imageUrl: '/official-young-character.jpg',
+          imageUrl: '/d8020-screenshot-03.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Characters' }]} />
-        <PageHero src="/official-young-character.jpg" alt="Directive 8020 official screenshot of Young" />
+        <PageHero src="/d8020-screenshot-03.jpg" alt="Directive 8020 official screenshot of Young" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 Characters
@@ -124,7 +124,7 @@ export default function CharactersPage() {
           </p>
 
           <ArticleImage
-            src="/official-cassiopeia-crew.jpg"
+            src="/d8020-screenshot-01.jpg"
             alt="Directive 8020 official Cassiopeia crew screenshot"
             caption="The Cassiopeia crew is the center of every survival route. For character guides, record who is present, who leaves, and who returns with unverifiable information."
           />

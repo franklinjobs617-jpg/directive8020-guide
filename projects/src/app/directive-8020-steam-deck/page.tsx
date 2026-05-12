@@ -59,14 +59,14 @@ export default function SteamDeckPage() {
           url: '/directive-8020-steam-deck',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-corridor-threat.jpg',
+          imageUrl: '/d8020-screenshot-10.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Steam Deck & Low-End PC' }]} />
-        <PageHero src="/official-corridor-threat.jpg" alt="Directive 8020 Steam Deck and low-end PC settings guide" />
+        <PageHero src="/d8020-screenshot-10.jpg" alt="Directive 8020 Steam Deck and low-end PC settings guide" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 Steam Deck &amp; Low-End PC Guide
@@ -94,7 +94,7 @@ export default function SteamDeckPage() {
           </p>
 
           <ArticleImage
-            src="/official-ship-interior.jpg"
+            src="/d8020-screenshot-04.jpg"
             alt="Directive 8020 dark ship interior performance reference"
             caption="Directive 8020 uses dark ship interiors, cinematic lighting, and stealth readability. On handheld screens, brightness and frame pacing matter as much as raw resolution."
           />

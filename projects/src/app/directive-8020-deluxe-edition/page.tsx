@@ -71,14 +71,14 @@ export default function DeluxeEditionPage() {
           url: '/directive-8020-deluxe-edition',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-ship-interior.jpg',
+          imageUrl: '/d8020-screenshot-08.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Deluxe Edition' }]} />
-        <PageHero src="/official-ship-interior.jpg" alt="Directive 8020 Deluxe Edition guide screenshot" />
+        <PageHero src="/d8020-screenshot-08.jpg" alt="Directive 8020 Deluxe Edition guide screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 Deluxe Edition Guide
@@ -130,7 +130,7 @@ export default function DeluxeEditionPage() {
           </ul>
 
           <ArticleImage
-            src="/official-story-tree.jpg"
+            src="/d8020-screenshot-06.jpg"
             alt="Directive 8020 Deluxe route planning screenshot"
             caption="If Deluxe content adds collectible or mission objectives, track it alongside Story Tree progress so cleanup does not become messy."
           />

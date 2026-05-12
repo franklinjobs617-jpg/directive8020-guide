@@ -75,14 +75,14 @@ export default function ChoicesConsequencesPage() {
           url: '/directive-8020-choices-consequences',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-ship-interior.jpg',
+          imageUrl: '/d8020-screenshot-04.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Choices & Consequences' }]} />
-        <PageHero src="/official-ship-interior.jpg" alt="Directive 8020 official ship interior decision scene" />
+        <PageHero src="/d8020-screenshot-04.jpg" alt="Directive 8020 official ship interior decision scene" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020: All Choices &amp; Consequences
@@ -138,7 +138,7 @@ export default function ChoicesConsequencesPage() {
           </p>
 
           <ArticleImage
-            src="/official-mimic-scene.jpg"
+            src="/d8020-screenshot-05.jpg"
             alt="Directive 8020 mimic choice consequence screenshot"
             caption="Directive 8020 choice consequences revolve around trust: every isolated return, contradiction, and urgent rescue request can become a branch."
           />

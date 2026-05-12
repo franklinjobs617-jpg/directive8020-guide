@@ -64,14 +64,14 @@ export default function OverviewPage() {
           url: '/directive-8020-overview',
           datePublished: '2026-05-10',
           dateModified: '2026-05-12',
-          imageUrl: '/official-cassiopeia-crew.jpg',
+          imageUrl: '/d8020-screenshot-01.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Overview' }]} />
-        <PageHero src="/official-cassiopeia-crew.jpg" alt="Directive 8020 official screenshot of the Cassiopeia crew" />
+        <PageHero src="/d8020-screenshot-01.jpg" alt="Directive 8020 official screenshot of the Cassiopeia crew" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           What is Directive 8020?
@@ -121,7 +121,7 @@ export default function OverviewPage() {
           </p>
 
           <ArticleImage
-            src="/official-mimic-scene.jpg"
+            src="/d8020-screenshot-05.jpg"
             alt="Directive 8020 official mimic threat screenshot"
             caption="The mimic premise is the core keyword and gameplay hook: Directive 8020 is not only a space horror game, but a trust and identity horror story where any crew member can become a suspect."
           />
@@ -157,7 +157,7 @@ export default function OverviewPage() {
           </p>
 
           <ArticleImage
-            src="/official-corridor-threat.jpg"
+            src="/d8020-screenshot-02.jpg"
             alt="Directive 8020 official corridor survival gameplay screenshot"
             caption="Dark corridors, stealth, improvised weapons, and reflex checks make Directive 8020 more active than a pure dialogue-driven interactive drama."
           />
@@ -178,7 +178,7 @@ export default function OverviewPage() {
           </p>
 
           <ArticleImage
-            src="/official-story-tree.jpg"
+            src="/d8020-screenshot-06.jpg"
             alt="Directive 8020 official Turning Points Story Tree screenshot"
             caption="The Story Tree and Turning Points are important for all endings, save everyone routes, trophy cleanup, and choice consequence testing."
           />

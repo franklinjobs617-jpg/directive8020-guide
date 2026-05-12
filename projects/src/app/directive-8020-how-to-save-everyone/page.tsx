@@ -57,14 +57,14 @@ export default function SaveEveryonePage() {
           url: '/directive-8020-how-to-save-everyone',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-mimic-scene.jpg',
+          imageUrl: '/d8020-screenshot-05.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'How to Save Everyone' }]} />
-        <PageHero src="/official-mimic-scene.jpg" alt="Directive 8020 official mimic horror scene screenshot" />
+        <PageHero src="/d8020-screenshot-05.jpg" alt="Directive 8020 official mimic horror scene screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           How to Save Everyone in Directive 8020
@@ -101,7 +101,7 @@ export default function SaveEveryonePage() {
           </p>
 
           <ArticleImage
-            src="/official-young-character.jpg"
+            src="/d8020-screenshot-03.jpg"
             alt="Directive 8020 Young survival route screenshot"
             caption="For save-everyone routing, treat major characters like Young as both decision makers and survival anchors: their relationships, evidence, and location can shape later branches."
           />

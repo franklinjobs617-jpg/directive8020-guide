@@ -75,14 +75,14 @@ export default function TrophyGuidePage() {
           url: '/directive-8020-trophy-guide',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-story-tree.jpg',
+          imageUrl: '/d8020-screenshot-06.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Trophy Guide' }]} />
-        <PageHero src="/official-story-tree.jpg" alt="Directive 8020 Story Tree trophy guide screenshot" />
+        <PageHero src="/d8020-screenshot-06.jpg" alt="Directive 8020 Story Tree trophy guide screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 Trophy &amp; Achievement Guide
@@ -149,7 +149,7 @@ export default function TrophyGuidePage() {
           </p>
 
           <ArticleImage
-            src="/official-ship-interior.jpg"
+            src="/d8020-screenshot-09.jpg"
             alt="Directive 8020 collectible route screenshot"
             caption="Collectible and achievement cleanup should focus on searchable ship spaces: crew areas, terminals, labs, medical rooms, and objective-adjacent corners."
           />

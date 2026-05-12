@@ -57,14 +57,14 @@ export default function AllEndingsPage() {
           url: '/directive-8020-all-endings',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-story-tree.jpg',
+          imageUrl: '/d8020-screenshot-06.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'All Endings' }]} />
-        <PageHero src="/official-story-tree.jpg" alt="Directive 8020 official Story Tree screenshot" />
+        <PageHero src="/d8020-screenshot-06.jpg" alt="Directive 8020 official Story Tree screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020: All Endings Guide
@@ -123,7 +123,7 @@ export default function AllEndingsPage() {
           </p>
 
           <ArticleImage
-            src="/official-cassiopeia-crew.jpg"
+            src="/d8020-screenshot-01.jpg"
             alt="Directive 8020 official crew screenshot for ending routes"
             caption="Most Directive 8020 endings should be read through crew state: who survives, who trusts whom, who has evidence, and who reaches the finale."
           />

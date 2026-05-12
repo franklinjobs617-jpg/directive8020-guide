@@ -17,7 +17,7 @@ const allGuides = [
     description: 'Spoiler-free first-run advice for settings, mimic clues, QTEs, stealth, and Story Tree habits.',
     tag: 'Start Here',
     tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
-    image: '/official-corridor-threat.jpg',
+    image: '/d8020-screenshot-02.jpg',
   },
   {
     href: '/directive-8020-overview',
@@ -25,7 +25,7 @@ const allGuides = [
     description: 'Story, mimic threat, survival gameplay, Turning Points, Story Tree, and official video overview.',
     tag: 'Available',
     tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
-    image: '/official-cassiopeia-crew.jpg',
+    image: '/d8020-screenshot-01.jpg',
   },
   {
     href: '/directive-8020-system-requirements',
@@ -33,7 +33,7 @@ const allGuides = [
     description: 'Official Steam PC specs, storage, SSD advice, and performance settings explained.',
     tag: 'Available',
     tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
-    image: '/official-corridor-threat.jpg',
+    image: '/d8020-screenshot-02.jpg',
   },
   {
     href: '/directive-8020-steam-deck',
@@ -41,7 +41,7 @@ const allGuides = [
     description: 'Verified status, official specs, handheld expectations, best settings, and low-end PC advice.',
     tag: 'Platform',
     tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
-    image: '/official-ship-interior.jpg',
+    image: '/d8020-screenshot-04.jpg',
   },
   {
     href: '/directive-8020-community-questions',
@@ -49,7 +49,7 @@ const allGuides = [
     description: 'Answers for multiplayer, Steam Deck, blind runs, Turning Points, Deluxe, endings, and performance.',
     tag: 'FAQ Hub',
     tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
-    image: '/official-cassiopeia-crew.jpg',
+    image: '/d8020-screenshot-01.jpg',
   },
   {
     href: '/directive-8020-release-time',
@@ -57,7 +57,7 @@ const allGuides = [
     description: 'Steam unlock time by region, platform notes, Digital Deluxe contents, and launch checklist.',
     tag: 'Available',
     tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
-    image: '/official-ship-interior.jpg',
+    image: '/d8020-screenshot-04.jpg',
   },
   {
     href: '/directive-8020-characters',
@@ -65,7 +65,7 @@ const allGuides = [
     description: 'Lashana Lynch as Young, Cassiopeia crew survival roles, mimic clues, and Movie Night tips.',
     tag: 'Available',
     tagColor: 'text-green-400 bg-green-400/10 border-green-400/30',
-    image: '/official-young-character.jpg',
+    image: '/d8020-screenshot-03.jpg',
   },
   {
     href: '/directive-8020-all-endings',
@@ -73,7 +73,7 @@ const allGuides = [
     description: 'Story Tree route tracking, best ending principles, bad ending triggers, and Turning Points cleanup.',
     tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/official-story-tree.jpg',
+    image: '/d8020-screenshot-06.jpg',
   },
   {
     href: '/directive-8020-how-to-save-everyone',
@@ -81,7 +81,7 @@ const allGuides = [
     description: 'Spoiler-safe survival rules for mimic trust checks, QTEs, relationships, and recovery after deaths.',
     tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/official-mimic-scene.jpg',
+    image: '/d8020-screenshot-05.jpg',
   },
   {
     href: '/directive-8020-choices-consequences',
@@ -89,7 +89,7 @@ const allGuides = [
     description: 'Decision types, consequence tracking, trust logic, and how to map branches without guessing.',
     tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/official-ship-interior.jpg',
+    image: '/d8020-screenshot-04.jpg',
   },
   {
     href: '/directive-8020-death-scenes-guide',
@@ -97,7 +97,7 @@ const allGuides = [
     description: 'Death checklist with chapter triggers, victims, avoid methods, and Turning Points recovery.',
     tag: 'Death Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/official-mimic-scene.jpg',
+    image: '/d8020-screenshot-05.jpg',
   },
   {
     href: '/directive-8020-turning-points-story-tree',
@@ -105,7 +105,7 @@ const allGuides = [
     description: 'How rewind, hidden paths, branch testing, all endings, and save-everyone cleanup work.',
     tag: 'Core Mechanic',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/official-story-tree.jpg',
+    image: '/d8020-screenshot-06.jpg',
   },
   {
     href: '/directive-8020-movie-night-multiplayer',
@@ -113,7 +113,7 @@ const allGuides = [
     description: 'Couch co-op setup, character assignment, online multiplayer note, and group survival rules.',
     tag: 'Co-op',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/official-cassiopeia-crew.jpg',
+    image: '/d8020-screenshot-01.jpg',
   },
   {
     href: '/directive-8020-deluxe-edition',
@@ -121,7 +121,7 @@ const allGuides = [
     description: 'Bonus mission, outfit pack, filters, artbook, soundtrack, and whether Deluxe is worth it.',
     tag: 'Edition Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/official-ship-interior.jpg',
+    image: '/d8020-screenshot-04.jpg',
   },
   {
     href: '/directive-8020-stealth-guide',
@@ -129,7 +129,7 @@ const allGuides = [
     description: 'Crouch-walking, hiding, sound discipline, pursuit routes, QTEs, and Dragnet-style encounters.',
     tag: 'Mechanics',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/official-corridor-threat.jpg',
+    image: '/d8020-screenshot-02.jpg',
   },
   {
     href: '/directive-8020-collectibles-heirlooms',
@@ -137,7 +137,7 @@ const allGuides = [
     description: 'Secrets, clues, premonitions, Heirlooms Retrieval, chapter tracking, and trophy cleanup.',
     tag: 'Collectibles',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/official-ship-interior.jpg',
+    image: '/d8020-screenshot-04.jpg',
   },
   {
     href: '/directive-8020-trophy-guide',
@@ -145,7 +145,7 @@ const allGuides = [
     description: 'Steam achievements, missable planning, collectibles, endings, and 100% cleanup strategy.',
     tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/official-story-tree.jpg',
+    image: '/d8020-screenshot-06.jpg',
   },
   {
     href: '/directive-8020-crashing-fix',
@@ -153,7 +153,7 @@ const allGuides = [
     description: 'Startup crashes, black screen, stuttering, audio, controller, and console troubleshooting.',
     tag: 'Updated',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/official-corridor-threat.jpg',
+    image: '/d8020-screenshot-02.jpg',
   },
   {
     href: '/directive-8020-walkthrough',
@@ -161,7 +161,7 @@ const allGuides = [
     description: 'Spoiler-safe first run route, chapter template, collectibles, QTEs, and Story Tree planning.',
     tag: 'Launch Guide',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
-    image: '/official-corridor-threat.jpg',
+    image: '/d8020-screenshot-02.jpg',
   },
 ];
 

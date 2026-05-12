@@ -51,14 +51,14 @@ export default function CollectiblesPage() {
           url: '/directive-8020-collectibles-heirlooms',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-ship-interior.jpg',
+          imageUrl: '/d8020-screenshot-09.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Collectibles & Heirlooms' }]} />
-        <PageHero src="/official-ship-interior.jpg" alt="Directive 8020 collectibles and heirlooms guide screenshot" />
+        <PageHero src="/d8020-screenshot-09.jpg" alt="Directive 8020 collectibles and heirlooms guide screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 Collectibles &amp; Heirlooms Guide
@@ -110,7 +110,7 @@ export default function CollectiblesPage() {
           </ul>
 
           <ArticleImage
-            src="/official-story-tree.jpg"
+            src="/d8020-screenshot-06.jpg"
             alt="Directive 8020 collectibles Story Tree tracking"
             caption="If a collectible is route-locked, record the Turning Point that opens the path. That makes trophy cleanup much faster."
           />

@@ -52,14 +52,14 @@ export default function StealthGuidePage() {
           url: '/directive-8020-stealth-guide',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-corridor-threat.jpg',
+          imageUrl: '/d8020-screenshot-07.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Stealth Guide' }]} />
-        <PageHero src="/official-corridor-threat.jpg" alt="Directive 8020 stealth guide corridor screenshot" />
+        <PageHero src="/d8020-screenshot-07.jpg" alt="Directive 8020 stealth guide corridor screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 Stealth Guide
@@ -117,7 +117,7 @@ export default function StealthGuidePage() {
           </ul>
 
           <ArticleImage
-            src="/official-mimic-scene.jpg"
+            src="/d8020-screenshot-05.jpg"
             alt="Directive 8020 mimic stealth threat"
             caption="Stealth and mimic suspicion overlap: the safest route may depend on both movement and whether you trusted the right crew member."
           />

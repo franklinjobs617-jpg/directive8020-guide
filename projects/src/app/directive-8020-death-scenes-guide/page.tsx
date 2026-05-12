@@ -52,14 +52,14 @@ export default function DeathScenesPage() {
           url: '/directive-8020-death-scenes-guide',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-mimic-scene.jpg',
+          imageUrl: '/d8020-screenshot-11.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Death Scenes' }]} />
-        <PageHero src="/official-mimic-scene.jpg" alt="Directive 8020 death scenes guide screenshot" />
+        <PageHero src="/d8020-screenshot-11.jpg" alt="Directive 8020 death scenes guide screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 All 44 Death Scenes Checklist
@@ -128,7 +128,7 @@ export default function DeathScenesPage() {
           </ul>
 
           <ArticleImage
-            src="/official-corridor-threat.jpg"
+            src="/d8020-screenshot-02.jpg"
             alt="Directive 8020 death scene stealth risk"
             caption="Many deaths in Directive 8020 should be mapped by system: stealth failure, QTE failure, trust failure, or missing evidence."
           />

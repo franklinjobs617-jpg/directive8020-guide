@@ -56,14 +56,14 @@ export default function MovieNightPage() {
           url: '/directive-8020-movie-night-multiplayer',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-cassiopeia-crew.jpg',
+          imageUrl: '/d8020-screenshot-01.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Movie Night Multiplayer' }]} />
-        <PageHero src="/official-cassiopeia-crew.jpg" alt="Directive 8020 Movie Night crew co-op screenshot" />
+        <PageHero src="/d8020-screenshot-01.jpg" alt="Directive 8020 Movie Night crew co-op screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 Movie Night Multiplayer Guide
@@ -98,7 +98,7 @@ export default function MovieNightPage() {
           </ul>
 
           <ArticleImage
-            src="/official-young-character.jpg"
+            src="/d8020-screenshot-03.jpg"
             alt="Directive 8020 co-op character assignment screenshot"
             caption="Character assignment matters in Movie Night. Give high-pressure characters to players who can handle timed decisions and QTEs."
           />

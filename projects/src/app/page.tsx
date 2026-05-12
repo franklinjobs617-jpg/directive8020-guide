@@ -56,6 +56,11 @@ const videos = [
     caption: 'Best first watch: Cassiopeia setup, mimic threat, cinematic horror tone, and core story hook.',
   },
   {
+    id: 'S1wyl5-8E7E',
+    title: 'Turning Points Showcase',
+    caption: 'Best for route planning: rewind decisions, hidden branches, death recovery, and completion cleanup.',
+  },
+  {
     id: 'oeiMw0KD7w0',
     title: 'Gameplay / Turning Points Trailer',
     caption: 'Best for mechanics: Story Tree, branch testing, stealth pressure, and gameplay pacing.',
@@ -64,6 +69,22 @@ const videos = [
     id: 'cdmKOH4RIWU',
     title: 'Story Trailer',
     caption: 'Best for story context: crew conflict, trust breakdown, and the sci-fi horror premise.',
+  },
+
+  {
+    id: '4a_VXgNSfME',
+    title: 'Official Gameplay Clip',
+    caption: 'Use as a visual reference for ship spaces, movement, and encounter pacing.',
+  },
+  {
+    id: '9CtX9O7nZeQ',
+    title: 'Official Horror Clip',
+    caption: 'Best for mimic and corridor-threat visual context.',
+  },
+  {
+    id: '7nTCMOt_-Bw',
+    title: 'Official Systems Clip',
+    caption: 'Useful for route planning, Story Tree context, or gameplay systems.',
   },
 ];
 
@@ -82,21 +103,21 @@ const missionCards = [
     title: 'I want a spoiler-free start',
     body: 'Settings, exploration habits, mimic warning signs, and when to check the Story Tree without ruining the first ending.',
     href: '/directive-8020-beginner-tips',
-    image: '/official-corridor-threat.jpg',
+    image: '/d8020-screenshot-02.jpg',
   },
   {
     label: 'Route player',
     title: 'I want the best ending',
     body: 'Track deaths, evidence, relationships, QTEs, and Turning Points so you can repair a bad branch cleanly.',
     href: '/directive-8020-how-to-save-everyone',
-    image: '/official-mimic-scene.jpg',
+    image: '/d8020-screenshot-05.jpg',
   },
   {
     label: 'Completionist',
     title: 'I want every trophy',
     body: 'Use the Story Tree for ending cleanup, collectible checks, Deluxe mission notes, and branch testing.',
     href: '/directive-8020-trophy-guide',
-    image: '/official-story-tree.jpg',
+    image: '/d8020-screenshot-06.jpg',
   },
 ];
 
@@ -106,42 +127,42 @@ const cornerstoneArticles = [
     title: 'Directive 8020 Walkthrough / Full Guide',
     body: 'Episode hub with BLUF, known chapter list, Turning Points, QTE tracking, stealth notes, collectibles, and video reference.',
     href: '/directive-8020-walkthrough',
-    image: '/official-ship-interior.jpg',
+    image: '/d8020-screenshot-04.jpg',
   },
   {
     label: 'Survival Route',
     title: 'How to Save Everyone',
     body: 'Everyone-lives planning for Young, Eisele, Cernan, Stafford, Cooper, relationship state, mimic checks, and rewind strategy.',
     href: '/directive-8020-how-to-save-everyone',
-    image: '/official-young-character.jpg',
+    image: '/d8020-screenshot-03.jpg',
   },
   {
     label: 'Endings',
     title: 'All Endings Explained',
     body: 'Best ending, bad ending, hidden paths, Story Tree cleanup, clone/mimic theory tracking, and finale condition checklist.',
     href: '/directive-8020-all-endings',
-    image: '/official-story-tree.jpg',
+    image: '/d8020-screenshot-06.jpg',
   },
   {
     label: 'Long-tail',
     title: 'All 44 Death Scenes Checklist',
     body: 'Death scene tracker with chapter, trigger, victim, avoid method, Turning Point recovery, and spoiler-safe completion structure.',
     href: '/directive-8020-death-scenes-guide',
-    image: '/official-mimic-scene.jpg',
+    image: '/d8020-screenshot-05.jpg',
   },
   {
     label: 'Completion',
     title: 'Trophy & Achievement Guide',
     body: 'Platinum route, Survival Mode planning, Movie Night notes, Everyone Lives/Dies routes, and Heirlooms cleanup.',
     href: '/directive-8020-trophy-guide',
-    image: '/official-story-tree.jpg',
+    image: '/d8020-screenshot-10.jpg',
   },
   {
     label: 'Mechanics',
     title: 'Stealth Guide',
     body: 'Crouch-walking, hiding spots, distractions, ship systems, scanner habits, and how to survive hunter patrols.',
     href: '/directive-8020-stealth-guide',
-    image: '/official-corridor-threat.jpg',
+    image: '/d8020-screenshot-07.jpg',
   },
 ];
 
@@ -298,7 +319,7 @@ export default function HomePage() {
           <aside className="overflow-hidden rounded-lg border border-border/50 bg-background/75 backdrop-blur-md">
             <div className="relative aspect-video">
               <Image
-                src="/official-story-tree.jpg"
+                src="/d8020-screenshot-06.jpg"
                 alt="Directive 8020 Story Tree guide"
                 fill
                 className="object-cover"
@@ -410,13 +431,13 @@ export default function HomePage() {
           <div className="h-1 w-8 rounded-full bg-d8020" />
           <h2 className="text-xl font-bold text-foreground">Video Center</h2>
         </div>
-        <div className="grid gap-5 lg:grid-cols-[1.25fr_0.75fr]">
+        <div className="grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
           <VideoEmbed
             videoId={videos[0].id}
             title={`Directive 8020 ${videos[0].title}`}
             caption={`${videos[0].title}: ${videos[0].caption}`}
           />
-          <div className="grid gap-4">
+          <div className="grid max-h-[720px] gap-4 overflow-y-auto pr-1">
             {videos.slice(1).map((video) => (
               <div key={video.id} className="rounded-lg border border-border/50 bg-card/30 p-4">
                 <div className="aspect-video overflow-hidden rounded-md">
@@ -476,17 +497,17 @@ export default function HomePage() {
         <div className="grid gap-4 lg:grid-cols-3">
           {[
             {
-              src: '/official-mimic-scene.jpg',
+              src: '/d8020-screenshot-05.jpg',
               title: 'Mimic decisions',
               body: 'The main enemy can imitate the crew. Every isolated return, urgent rescue request, and contradiction matters.',
             },
             {
-              src: '/official-story-tree.jpg',
+              src: '/d8020-screenshot-06.jpg',
               title: 'Branch control',
               body: 'Turning Points and the Story Tree are the foundation for endings, trophies, and save-everyone recovery.',
             },
             {
-              src: '/official-young-character.jpg',
+              src: '/d8020-screenshot-03.jpg',
               title: 'Crew state',
               body: 'Track who is alive, who has evidence, who trusts whom, and who was alone before each major choice.',
             },

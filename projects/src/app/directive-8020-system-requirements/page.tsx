@@ -82,14 +82,14 @@ export default function SystemRequirementsPage() {
           url: '/directive-8020-system-requirements',
           datePublished: '2026-05-10',
           dateModified: '2026-05-12',
-          imageUrl: '/official-corridor-threat.jpg',
+          imageUrl: '/d8020-screenshot-02.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'System Requirements' }]} />
-        <PageHero src="/official-corridor-threat.jpg" alt="Directive 8020 official corridor horror screenshot" />
+        <PageHero src="/d8020-screenshot-02.jpg" alt="Directive 8020 official corridor horror screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 System Requirements
@@ -131,7 +131,7 @@ export default function SystemRequirementsPage() {
           </p>
 
           <ArticleImage
-            src="/official-ship-interior.jpg"
+            src="/d8020-screenshot-04.jpg"
             alt="Directive 8020 official ship interior screenshot for PC performance"
             caption="Directive 8020 relies on dark interiors, cinematic lighting, facial detail, and dense ship spaces. Stable frame pacing matters more than simply pushing the highest FPS."
           />

@@ -57,14 +57,14 @@ export default function TurningPointsPage() {
           url: '/directive-8020-turning-points-story-tree',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-story-tree.jpg',
+          imageUrl: '/d8020-screenshot-06.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Turning Points & Story Tree' }]} />
-        <PageHero src="/official-story-tree.jpg" alt="Directive 8020 Turning Points and Story Tree screenshot" />
+        <PageHero src="/d8020-screenshot-06.jpg" alt="Directive 8020 Turning Points and Story Tree screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 Turning Points &amp; Story Tree Explained
@@ -98,7 +98,7 @@ export default function TurningPointsPage() {
           </p>
 
           <ArticleImage
-            src="/official-story-tree.jpg"
+            src="/d8020-screenshot-06.jpg"
             alt="Directive 8020 Story Tree branch planning"
             caption="Use the Story Tree as a route map: endings, hidden paths, character deaths, and trophy cleanup should all be tracked from Turning Points."
           />

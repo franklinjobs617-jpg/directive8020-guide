@@ -59,14 +59,14 @@ export default function BeginnerTipsPage() {
           url: '/directive-8020-beginner-tips',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-corridor-threat.jpg',
+          imageUrl: '/d8020-screenshot-02.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Beginner Tips' }]} />
-        <PageHero src="/official-corridor-threat.jpg" alt="Directive 8020 beginner tips corridor screenshot" />
+        <PageHero src="/d8020-screenshot-02.jpg" alt="Directive 8020 beginner tips corridor screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 Beginner Tips
@@ -98,7 +98,7 @@ export default function BeginnerTipsPage() {
           </ul>
 
           <ArticleImage
-            src="/official-ship-interior.jpg"
+            src="/d8020-screenshot-09.jpg"
             alt="Directive 8020 beginner exploration screenshot"
             caption="For beginners, the safest habit is slow exploration. Terminals, objects, and ship interiors can hold context that changes later decisions."
           />

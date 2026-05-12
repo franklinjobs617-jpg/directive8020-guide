@@ -71,14 +71,14 @@ export default function CommunityQuestionsPage() {
           url: '/directive-8020-community-questions',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-cassiopeia-crew.jpg',
+          imageUrl: '/d8020-screenshot-01.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Community Questions' }]} />
-        <PageHero src="/official-cassiopeia-crew.jpg" alt="Directive 8020 community questions guide" />
+        <PageHero src="/d8020-screenshot-01.jpg" alt="Directive 8020 community questions guide" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 Community Questions
@@ -118,7 +118,7 @@ export default function CommunityQuestionsPage() {
           </p>
 
           <ArticleImage
-            src="/official-story-tree.jpg"
+            src="/d8020-screenshot-06.jpg"
             alt="Directive 8020 community questions Story Tree screenshot"
             caption="Many community questions lead back to the Story Tree: endings, saving everyone, trophy cleanup, and whether rewinding changes the first-run experience."
           />

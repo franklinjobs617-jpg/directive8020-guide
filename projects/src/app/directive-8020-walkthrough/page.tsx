@@ -110,14 +110,14 @@ export default function WalkthroughPage() {
           url: '/directive-8020-walkthrough',
           datePublished: '2026-05-12',
           dateModified: '2026-05-12',
-          imageUrl: '/official-corridor-threat.jpg',
+          imageUrl: '/d8020-screenshot-07.jpg',
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Walkthrough' }]} />
-        <PageHero src="/official-corridor-threat.jpg" alt="Directive 8020 official corridor walkthrough screenshot" />
+        <PageHero src="/d8020-screenshot-07.jpg" alt="Directive 8020 official corridor walkthrough screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 Full Walkthrough
@@ -144,7 +144,7 @@ export default function WalkthroughPage() {
             or the best ending, record every major branch from the start.
           </p>
           <ArticleImage
-            src="/official-corridor-threat.jpg"
+            src="/d8020-screenshot-07.jpg"
             alt="Directive 8020 corridor walkthrough route screenshot"
             caption="Walkthrough notes should track more than dialogue: stealth routes, corridor threats, QTE failures, and missed evidence can all change survival outcomes."
           />
@@ -211,7 +211,7 @@ export default function WalkthroughPage() {
           </ul>
 
           <ArticleImage
-            src="/official-cassiopeia-crew.jpg"
+            src="/d8020-screenshot-01.jpg"
             alt="Directive 8020 crew episode walkthrough reference"
             caption="For every episode, track crew state first: who is present, who separated, who has evidence, and who may be compromised."
           />
@@ -244,7 +244,7 @@ export default function WalkthroughPage() {
           </ul>
 
           <ArticleImage
-            src="/official-corridor-threat.jpg"
+            src="/d8020-screenshot-07.jpg"
             alt="Directive 8020 Dragnet stealth walkthrough"
             caption="Dragnet-style sections should be mapped by sight lines, hiding spots, sound risk, QTEs, and the nearest Turning Point."
           />
