@@ -5,6 +5,7 @@ import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
+import { TrophyProgressTracker } from '@/components/tools/trophy-progress-tracker';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Trophy & Achievement Guide - Full List & Unlock Tips',
@@ -133,6 +134,8 @@ export default function TrophyGuidePage() {
             { label: 'Collectible route', value: 'Current guides list 65 total collectibles including 5 O Death Secrets.', status: 'verified' },
           ]}
         />
+
+        <TrophyProgressTracker />
 
         <div className="prose-game">
           <h2>Trophy Guide vs Trophy List</h2>

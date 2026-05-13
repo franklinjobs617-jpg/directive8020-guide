@@ -5,6 +5,7 @@ import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
+import { CollectibleChecklist } from '@/components/tools/collectible-checklist';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Collectibles & Heirlooms Guide',
@@ -114,6 +115,8 @@ export default function CollectiblesPage() {
           title="Directive 8020 official trailer for collectible context"
           caption="Use official footage to identify likely searchable spaces: ship corridors, terminals, labs, crew areas, and dark objective rooms."
         />
+
+        <CollectibleChecklist />
 
         <div className="prose-game">
           <h2>What to Track</h2>

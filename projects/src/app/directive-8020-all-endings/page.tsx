@@ -5,6 +5,7 @@ import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
+import { SurvivalEndingTracker } from '@/components/tools/survival-ending-tracker';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 All Endings Guide - How Many Endings & Routes',
@@ -133,6 +134,8 @@ export default function AllEndingsPage() {
             the choices that trigger each finale outcome.
           </p>
         </div>
+
+        <SurvivalEndingTracker />
 
         <div className="prose-game">
           <h2>Ending Count and Completion Facts</h2>
