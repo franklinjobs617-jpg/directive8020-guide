@@ -22,6 +22,11 @@ const faqs = [
       'Yes. Steam lists Steam Achievements for Directive 8020. The exact public achievement list should be verified at launch before writing individual trophy names.',
   },
   {
+    question: 'Why are Directive 8020 PS5 trophies not showing?',
+    answer:
+      'Some players report that PS5 trophies may not appear immediately in the online trophy view. Check the local console trophy list and wait for PlayStation Network data to sync before assuming the list is missing.',
+  },
+  {
     question: 'Are Directive 8020 trophies missable?',
     answer:
       'Choice-driven Supermassive games usually include missable trophies tied to endings, character survival, deaths, collectibles, and specific decisions. Turning Points should make cleanup easier than replaying the entire game.',
@@ -72,6 +77,13 @@ const platinumRows = [
   { step: 'Final cleanup', doThis: 'Collectibles, Heirlooms, Movie Night, and mode-specific requirements.', why: 'These are easier once route locks are known.' },
 ];
 
+const platformIssues = [
+  ['PS5 trophy list not showing', 'Check the local console trophy screen, then wait for PSN sync before relying on online trophy databases.'],
+  ['Steam achievements visible', 'Steam lists achievements as a store feature, but exact names should be captured from the live achievement list.'],
+  ['Missable route trophies', 'Use Turning Points only after one clean route so deaths and endings do not corrupt the base save.'],
+  ['Collectible trophies', 'Use the 65-collectible structure: 50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets.'],
+];
+
 export default function TrophyGuidePage() {
   return (
     <>
@@ -82,7 +94,7 @@ export default function TrophyGuidePage() {
             'Directive 8020 trophy guide covering achievement categories, missable planning, Turning Points cleanup, collectibles, endings, and 100% strategy.',
           url: '/directive-8020-trophy-guide',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-13',
           imageUrl: '/d8020-screenshot-06.jpg',
         })}
       />
@@ -116,9 +128,9 @@ export default function TrophyGuidePage() {
         <StatusPanel
           items={[
             { label: 'Steam achievements', value: 'Steam lists achievements for Directive 8020.', status: 'verified' },
-            { label: 'Exact trophy names', value: 'Needs platform list capture before final table.', status: 'needs-check' },
+            { label: 'Exact trophy names', value: 'Use live platform lists before final names; some PS5 trophy views may lag behind local console data.', status: 'working' },
             { label: 'Cleanup method', value: 'Story Tree and Turning Points are the central route-planning tools.', status: 'verified' },
-            { label: 'Deluxe content', value: 'Heirlooms Retrieval may need separate collectible tracking.', status: 'working' },
+            { label: 'Collectible route', value: 'Current guides list 65 total collectibles including 5 O Death Secrets.', status: 'verified' },
           ]}
         />
 
@@ -150,6 +162,28 @@ export default function TrophyGuidePage() {
           <h2>Recommended Platinum Route</h2>
           <ActionTable rows={platinumRows} />
 
+          <h2>Platform Trophy Issues Players Are Searching</h2>
+          <p>
+            After launch, trophy searches are not only about the final list.
+            Players also look for missing PS5 trophy data, Steam achievement
+            visibility, and which trophies are missable.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <tbody>
+              {platformIssues.map(([issue, fix]) => (
+                <tr key={issue} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 text-foreground font-medium w-48">{issue}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{fix}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="prose-game">
           <h2>Expected Trophy Categories</h2>
         </div>
 

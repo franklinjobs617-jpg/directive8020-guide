@@ -4,6 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
+import { BlufBox, RelatedGuides } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 All Choices & Consequences - Decision Map',
@@ -19,6 +20,11 @@ const faqs = [
     question: 'Do all choices matter in Directive 8020?',
     answer:
       'Not every dialogue line will create a major branch, but Directive 8020 is built around meaningful choices, character survival, relationships, mimic trust, and Story Tree branches. Track timed decisions, separation choices, accusations, and rescue decisions first.',
+  },
+  {
+    question: 'Why do some Directive 8020 choices feel like flavor text?',
+    answer:
+      'Some short dialogue choices mainly adjust tone or relationship texture. The choices that usually matter most are tied to Destinies, trust, separation, QTEs, stealth, evidence, and finale conditions.',
   },
   {
     question: 'Can I undo a choice in Directive 8020?',
@@ -64,6 +70,14 @@ const decisionTypes = [
   },
 ];
 
+const redditDemandRows = [
+  ['Do choices matter?', 'Answer directly: yes, but not every line is a major branch. Separate flavor dialogue from route-changing decisions.'],
+  ['Until Dawn comparison', 'Explain that Directive 8020 uses anthology-style branching plus Turning Points, so impact is often seen through Story Tree cleanup.'],
+  ['Relationship changes', 'Tell players to track visible relationship shifts only when they happen near rescues, accusations, or split paths.'],
+  ['Destinies', 'Call out Destinies as higher-priority than casual dialogue because they describe long-term character direction.'],
+  ['Failed QTEs', 'Treat failed QTEs and stealth mistakes as choice consequences because they can injure, separate, or kill characters.'],
+];
+
 export default function ChoicesConsequencesPage() {
   return (
     <>
@@ -74,7 +88,7 @@ export default function ChoicesConsequencesPage() {
             'Directive 8020 choices and consequences guide with mimic trust checks, relationship logic, Story Tree branches, and Turning Points strategy.',
           url: '/directive-8020-choices-consequences',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-13',
           imageUrl: '/d8020-screenshot-04.jpg',
         })}
       />
@@ -93,6 +107,40 @@ export default function ChoicesConsequencesPage() {
           major decisions, what consequences to track, and how to use the Story
           Tree to build a complete decision map.
         </p>
+
+        <BlufBox>
+          <p>
+            <strong>Short answer:</strong> choices do matter in Directive 8020,
+            but the important ones are not always ordinary dialogue lines.
+            Prioritize Destinies, trust checks, separation decisions, QTEs,
+            stealth outcomes, evidence, and finale choices.
+          </p>
+        </BlufBox>
+
+        <div className="prose-game">
+          <h2>Do Choices Matter in Directive 8020?</h2>
+          <p>
+            This is the biggest post-launch community question. The practical
+            answer is yes, but with a caveat: Directive 8020 has both small
+            flavor choices and route-changing choices. A short conversation
+            option may only adjust tone, while a Destiny, trust check, failed
+            QTE, stealth result, or separation choice can change deaths,
+            relationships, locked branches, and endings.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <tbody>
+              {redditDemandRows.map(([question, answer]) => (
+                <tr key={question} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 text-foreground font-medium w-44">{question}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <div className="prose-game">
           <h2>How to Tell If a Choice Matters</h2>
@@ -191,6 +239,31 @@ export default function ChoicesConsequencesPage() {
             <li>After a death, inspect the Story Tree before assuming the final choice caused it.</li>
           </ul>
         </div>
+
+        <RelatedGuides
+          guides={[
+            {
+              href: '/directive-8020-how-to-save-everyone',
+              title: 'How to Save Everyone',
+              description: 'Use route-changing choices to protect every major survivor.',
+            },
+            {
+              href: '/directive-8020-all-endings',
+              title: 'All Endings',
+              description: 'Use choice branches to test finale outcomes and ending explanations.',
+            },
+            {
+              href: '/directive-8020-walkthrough',
+              title: 'Full Walkthrough',
+              description: 'Place every major choice inside the correct episode route.',
+            },
+            {
+              href: '/directive-8020-turning-points-story-tree',
+              title: 'Turning Points & Story Tree',
+              description: 'Replay one variable at a time to confirm consequences.',
+            },
+          ]}
+        />
 
         <FAQSection faqs={faqs} />
       </article>

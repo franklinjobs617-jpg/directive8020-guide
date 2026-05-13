@@ -19,7 +19,12 @@ const faqs = [
   {
     question: 'Is it possible to save everyone in Directive 8020?',
     answer:
-      'The Dark Pictures Anthology structure is built around variable survival outcomes, and Directive 8020 includes Turning Points to revisit deaths. A full survival route should be possible or at least directly trackable through the Story Tree after launch.',
+      'Yes. Directive 8020 is built around variable survival outcomes, and Turning Points let you revisit deaths and repair a route through the Story Tree.',
+  },
+  {
+    question: 'Can NPC characters die in Directive 8020?',
+    answer:
+      'Yes. Some non-playable or supporting characters can die, and those deaths may shape scenes even if they are not part of the main playable survivor route.',
   },
   {
     question: 'What is the biggest survival risk in Directive 8020?',
@@ -55,6 +60,15 @@ const survivorRows = [
   { step: 'Cooper', doThis: 'Keep QTE and stealth outcomes clean; mark injury or separation immediately.', why: 'Mechanical failures can create delayed survival problems.' },
 ];
 
+const routeMilestones = [
+  ['Episodes 1-2', 'Build stable relationships and avoid reckless blame before the mimic threat fully dominates decisions.'],
+  ['Episodes 3-4', 'Prioritize evidence, sample context, stealth success, and scanner awareness before the route opens wider.'],
+  ['Episode 5: Mr. Williams', 'Audit everyone alive, every clue found, and every unresolved suspicion before mid-game fallout locks in.'],
+  ['Episode 6: Hostile Takeover', 'Treat survivor-dependent scenes carefully because who is alive can change what you can save next.'],
+  ['Episode 7: Revelation', 'Handle late 50-50 style decisions one at a time and preserve mission-critical information.'],
+  ['Episode 8: Come True', 'Use the best-ending base route, then branch for alternate endings only after everyone survives.'],
+];
+
 export default function SaveEveryonePage() {
   return (
     <>
@@ -65,7 +79,7 @@ export default function SaveEveryonePage() {
             'Spoiler-safe Directive 8020 survival guide covering mimic trust checks, QTEs, stealth, relationships, and Turning Points recovery.',
           url: '/directive-8020-how-to-save-everyone',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-13',
           imageUrl: '/d8020-screenshot-05.jpg',
         })}
       />
@@ -79,10 +93,10 @@ export default function SaveEveryonePage() {
           How to Save Everyone in Directive 8020
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          A full survival route depends on chapter-specific testing, but you can
-          start playing intelligently now. This guide explains the survival
-          logic Directive 8020 is built around: mimic verification, group
-          safety, relationship control, QTE discipline, and Turning Points.
+          Directive 8020 is now out, and the everyone-lives route should be
+          approached through chapter milestones, survivor state, mimic
+          verification, group safety, relationship control, QTE discipline, and
+          Turning Points.
         </p>
 
         <BlufBox>
@@ -98,9 +112,9 @@ export default function SaveEveryonePage() {
         <StatusPanel
           items={[
             { label: 'Playable survivor list', value: 'Young, Eisele, Cernan, Stafford, and Cooper are used as the working route table.', status: 'working' },
-            { label: 'Exact save choices', value: 'Needs launch route capture before final option-by-option instructions.', status: 'needs-check' },
+            { label: 'Exact save choices', value: 'Use chapter route testing and Turning Points for option-by-option cleanup.', status: 'working' },
             { label: 'Survival method', value: 'QTEs, relationships, evidence, stealth, and Turning Points are reliable guide categories.', status: 'verified' },
-            { label: 'Spoiler policy', value: 'This page prioritizes spoiler-safe survival logic until final routes are confirmed.', status: 'working' },
+            { label: 'NPC deaths', value: 'Supporting-character deaths should be tracked separately from the five playable survivor route.', status: 'working' },
           ]}
         />
 
@@ -127,6 +141,28 @@ export default function SaveEveryonePage() {
           </p>
           <ActionTable rows={survivorRows} />
 
+          <h2>Save-Everyone Chapter Milestones</h2>
+          <p>
+            Use these milestones to keep the everyone-lives route organized.
+            They are not a replacement for exact choices, but they tell you what
+            each section of the route is trying to protect.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <tbody>
+              {routeMilestones.map(([episode, goal]) => (
+                <tr key={episode} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 text-foreground font-medium w-48">{episode}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{goal}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="prose-game">
           <h2>The Mimic Rule: Trust Requires Proof</h2>
           <p>
             In earlier anthology games, helping another character is often the

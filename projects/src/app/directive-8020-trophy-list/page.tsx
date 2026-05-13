@@ -93,14 +93,16 @@ const platinumPlan = [
 const sources = [
   ['Steam store page', 'Confirms Steam Achievements, platforms, Movie Night, Deluxe content, and official feature framing.', 'https://store.steampowered.com/app/2255370/Directive_8020/'],
   ['PlayStation store page', 'Confirms PS5 platform context and official feature positioning for PlayStation players.', 'https://store.playstation.com/en-us/concept/10010841'],
-  ['Destructoid review coverage', 'Reports 60 collectibles, 8 episodes, Destinies, and 5 substantial endings.', 'https://www.destructoid.com/reviews/directive-8020-review/'],
+  ['Destructoid review coverage', 'Reports 8 episodes, Destinies, and 5 substantial endings.', 'https://www.destructoid.com/reviews/directive-8020-review/'],
+  ['100% Guides collectible guide', 'Reports 65 collectibles: 50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets.', 'https://www.100pguides.com/guides/directive-8020-all-collectibles'],
   ['PC Gamer review coverage', 'Reports 44 death scenes and reinforces the branching horror route structure.', 'https://www.pcgamer.com/games/horror/directive-8020-review-one-giant-leap-for-sci-fi-body-horror/'],
   ['TechRadar review coverage', 'Useful for PS5 review context, Turning Points, and launch-day player experience.', 'https://www.techradar.com/gaming/directive-8020-review'],
 ];
 
 const updateLog = [
   ['2026-05-12', 'Created platform-status trophy list page from GSC demand for trophies, trophy list, achievements, PS5 trophies, and Platinum queries.'],
-  ['2026-05-12', 'Added verified completion signals: 5 substantial endings, 44 death scenes, 60 collectibles, and 8 episodes.'],
+  ['2026-05-13', 'Updated collectible signal to 65 total collectibles: 50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets.'],
+  ['2026-05-12', 'Added verified completion signals: 5 substantial endings, 44 death scenes, and 8 episodes.'],
   ['2026-05-12', 'Marked exact PS5 trophy names, Xbox achievement values, and Platinum name as pending platform capture.'],
 ];
 
@@ -148,7 +150,7 @@ export default function TrophyListPage() {
             { label: 'Steam achievements', value: 'Confirmed as a Steam store feature for Directive 8020.', status: 'verified' },
             { label: 'PS5 trophy list', value: 'Needs trusted PlayStation trophy capture before exact names are final.', status: 'needs-check' },
             { label: 'Platinum route', value: 'Roadmap can be planned from endings, deaths, collectibles, and Turning Points.', status: 'working' },
-            { label: 'Completion data', value: 'Review coverage reports 5 substantial endings, 44 death scenes, and 60 collectibles.', status: 'verified' },
+            { label: 'Completion data', value: 'Current coverage reports 5 substantial endings, 44 death scenes, and 65 collectibles.', status: 'verified' },
           ]}
         />
 
@@ -240,7 +242,7 @@ export default function TrophyListPage() {
             <li><strong>Survivor state:</strong> who is alive, injured, separated, or suspected.</li>
             <li><strong>Death state:</strong> who died, where they died, and which Turning Point can prevent it.</li>
             <li><strong>Ending state:</strong> which finale outcome was reached and which crew members survived.</li>
-            <li><strong>Collectible state:</strong> which of the reported 60 collectibles were found before irreversible exits.</li>
+            <li><strong>Collectible state:</strong> which of the 65 listed collectibles were found before irreversible exits.</li>
             <li><strong>Branch state:</strong> which Story Tree paths remain hidden or locked.</li>
           </ul>
 
@@ -361,7 +363,7 @@ export default function TrophyListPage() {
             {
               href: '/directive-8020-collectibles-heirlooms',
               title: 'Collectibles & Heirlooms',
-              description: 'Track the reported 60 collectibles and Deluxe Heirlooms content.',
+              description: 'Track the 65 listed collectibles and Deluxe Heirlooms content.',
             },
           ]}
         />

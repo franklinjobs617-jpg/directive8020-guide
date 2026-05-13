@@ -1,0 +1,358 @@
+import type { EpisodeWalkthroughData } from '@/components/episode-walkthrough-page';
+
+const commonWarnings = [
+  'Do not change multiple route variables during a replay; test one choice, QTE result, or exploration path at a time.',
+  'Check the Story Tree after the episode before assuming the final visible choice caused the outcome.',
+  'If a character was isolated, treat later trust prompts as route-critical until evidence proves otherwise.',
+];
+
+export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
+  'directive-8020-little-star-walkthrough': {
+    slug: 'directive-8020-little-star-walkthrough',
+    title: 'Directive 8020 Little Star Walkthrough',
+    metaTitle: 'Directive 8020 Little Star Walkthrough - Episode 1 Guide',
+    description:
+      'Directive 8020 Little Star walkthrough for Episode 1: first-run route priorities, QTE setup, crew baseline, collectibles, Turning Points, and spoiler-safe tracking.',
+    h1: 'Directive 8020 Episode 1: Little Star Walkthrough',
+    episodeNumber: 'Episode 1',
+    episodeName: 'Little Star',
+    heroImage: '/review/episode_1_little_star.png',
+    alt: 'Directive 8020 Little Star episode walkthrough image',
+    videoId: 'gaQkzfA14G4',
+    intro:
+      'Little Star is Directive 8020 Episode 1 and works as the player calibration chapter. Use it to learn the interface, QTE rhythm, early crew dynamics, and the first signs that ordinary tension and mimic suspicion are not the same thing.',
+    bluf:
+      'Play carefully, explore safe spaces, and write down who is present before any separation. This episode is less about solving everything and more about creating a clean baseline for later branches.',
+    verifiedSummary: 'GamesRadar lists Little Star as Episode 1 in the eight-episode structure.',
+    routeFocus: 'Baseline crew state, early prompts, first route notes, and spoiler-safe setup.',
+    spoilerNote: 'This guide avoids late-ending spoilers and focuses on replay-safe tracking.',
+    facts: [
+      { label: 'Episode position', value: 'Episode 1 of 8.' },
+      { label: 'Primary purpose', value: 'Tutorial, tone setup, crew baseline, and first route tracking.' },
+      { label: 'Best first-run goal', value: 'Finish without rushing and document the first Story Tree-relevant decisions.' },
+      { label: 'Image / video', value: 'Uses local episode art plus official trailer video context.' },
+    ],
+    checklist: [
+      { step: 'Opening scenes', doThis: 'Set subtitles, brightness, and QTE comfort before committing to long scenes.', why: 'Episode 1 teaches the controls and prevents avoidable prompt failures later.' },
+      { step: 'Crew introductions', doThis: 'Record who is together, who separates, and who has useful knowledge.', why: 'Later trust checks depend on memory, witnesses, and location context.' },
+      { step: 'Exploration', doThis: 'Inspect nearby crew and ship spaces before triggering objective exits.', why: 'Early evidence and logs create a baseline for contradictions.' },
+      { step: 'After the episode', doThis: 'Open the Story Tree and mark any Turning Point or locked path.', why: 'This turns the first run into useful replay data.' },
+    ],
+    collectibles: [
+      'Search personal and ship-status spaces before following major objectives.',
+      'Record any collectible that explains the Cassiopeia crew, mission condition, or early suspicion.',
+      'If the Story Tree marks a branch, note whether the collectible was found before that branch.',
+    ],
+    routeWarnings: commonWarnings,
+    faqs: [
+      { question: 'What episode is Little Star in Directive 8020?', answer: 'Little Star is Episode 1 of Directive 8020.' },
+      { question: 'Should I replay Little Star immediately?', answer: 'Most players should finish the first run, check the Story Tree, and replay Little Star only if an early branch blocks a later goal.' },
+      { question: 'Does Little Star have ending spoilers?', answer: 'Little Star is an early setup chapter, but your notes can still affect later survival and ending cleanup.' },
+    ],
+  },
+  'directive-8020-best-laid-plans-walkthrough': {
+    slug: 'directive-8020-best-laid-plans-walkthrough',
+    title: 'Directive 8020 Best Laid Plans Walkthrough',
+    metaTitle: 'Directive 8020 Best Laid Plans Walkthrough - Episode 2',
+    description:
+      'Directive 8020 Best Laid Plans walkthrough for Episode 2: relationship tracking, evidence-first decisions, QTEs, early branches, and Story Tree notes.',
+    h1: 'Directive 8020 Episode 2: Best Laid Plans Walkthrough',
+    episodeNumber: 'Episode 2',
+    episodeName: 'Best Laid Plans',
+    heroImage: '/review/episode_2_best_laid_plans.png',
+    alt: 'Directive 8020 Best Laid Plans episode walkthrough image',
+    videoId: 'cdmKOH4RIWU',
+    intro:
+      'Best Laid Plans is Directive 8020 Episode 2. This chapter is where relationship state, mission pressure, and early evidence start to matter more than simple exploration.',
+    bluf:
+      'Choose calm, evidence-based options and track visible relationship shifts. If characters start blaming each other, note who has proof and who is speaking from panic.',
+    verifiedSummary: 'GamesRadar lists Best Laid Plans as Episode 2.',
+    routeFocus: 'Relationship state, early trust, mission tension, and evidence before accusations.',
+    spoilerNote: 'Avoids finale spoilers while explaining how to track dangerous early choices.',
+    facts: [
+      { label: 'Episode position', value: 'Episode 2 of 8.' },
+      { label: 'Primary purpose', value: 'Build relationship and evidence context for later trust decisions.' },
+      { label: 'Best first-run goal', value: 'Avoid unnecessary relationship damage and note any split paths.' },
+      { label: 'Replay priority', value: 'Replay only if a relationship change blocks a later rescue or route.' },
+    ],
+    checklist: [
+      { step: 'Dialogue', doThis: 'Prefer practical, evidence-based responses when the crew disagrees.', why: 'Hostile relationships can reduce later rescue and cooperation options.' },
+      { step: 'Evidence', doThis: 'Inspect optional clues before accusations or mission decisions.', why: 'A clue found before a trust choice may unlock safer interpretation later.' },
+      { step: 'Crew movement', doThis: 'Write down who leaves the group and who witnesses it.', why: 'Witnesses make later mimic-style verification easier.' },
+      { step: 'Story Tree', doThis: 'Compare relationship shifts against any Turning Point marker.', why: 'Not every tone change matters, but marked branches should be preserved.' },
+    ],
+    collectibles: [
+      'Search crew and mission-context spaces before advancing objectives.',
+      'Keep a note of clues found before blame or trust scenes.',
+      'Do not assume lore-only objects are useless; some may explain later contradictions.',
+    ],
+    routeWarnings: commonWarnings,
+    faqs: [
+      { question: 'What episode is Best Laid Plans?', answer: 'Best Laid Plans is Episode 2 of Directive 8020.' },
+      { question: 'Do relationship choices matter in Best Laid Plans?', answer: 'Some relationship choices may only shift tone, but choices near accusations, separations, and rescues should be treated as route-relevant.' },
+      { question: 'Should I accuse characters early?', answer: 'Avoid accusations without evidence unless immediate danger forces the decision.' },
+    ],
+  },
+  'directive-8020-the-sample-walkthrough': {
+    slug: 'directive-8020-the-sample-walkthrough',
+    title: 'Directive 8020 The Sample Walkthrough',
+    metaTitle: 'Directive 8020 The Sample Walkthrough - Episode 3 Guide',
+    description:
+      'Directive 8020 The Sample walkthrough for Episode 3: lab evidence, specimen choices, mimic suspicion, collectibles, QTE tracking, and Story Tree cleanup.',
+    h1: 'Directive 8020 Episode 3: The Sample Walkthrough',
+    episodeNumber: 'Episode 3',
+    episodeName: 'The Sample',
+    heroImage: '/review/episode_the_sample.png',
+    alt: 'Directive 8020 The Sample episode walkthrough image',
+    videoId: 'oeiMw0KD7w0',
+    intro:
+      'The Sample is Directive 8020 Episode 3 and should be treated as the evidence chapter. Lab context, specimen handling, and early mimic suspicion become more important here.',
+    bluf:
+      'Search lab and technical areas before objective exits. Track who supports containment, destruction, secrecy, or speed because those positions can matter later.',
+    verifiedSummary: 'GamesRadar lists The Sample as Episode 3.',
+    routeFocus: 'Specimen context, lab evidence, containment logic, and trust setup.',
+    spoilerNote: 'Keeps ending details out and focuses on route-safe evidence tracking.',
+    facts: [
+      { label: 'Episode position', value: 'Episode 3 of 8.' },
+      { label: 'Primary purpose', value: 'Build evidence around the sample and the threat.' },
+      { label: 'Best first-run goal', value: 'Collect clues before irreversible lab or mission prompts.' },
+      { label: 'Replay priority', value: 'Test evidence choices before changing QTE results.' },
+    ],
+    checklist: [
+      { step: 'Lab search', doThis: 'Inspect terminals, equipment, bodies, sample containers, and side rooms.', why: 'Lab evidence can clarify later trust and accusation choices.' },
+      { step: 'Specimen decisions', doThis: 'Record who wants containment, destruction, secrecy, or faster action.', why: 'Character positions may return in later mission conflicts.' },
+      { step: 'QTEs', doThis: 'Keep action outcomes clean on the first route.', why: 'Mechanical failures can hide the real effect of a choice.' },
+      { step: 'Post-episode', doThis: 'Mark any new evidence branch in the Story Tree.', why: 'Episode 3 can become a foundation for later mimic reasoning.' },
+    ],
+    collectibles: [
+      'Prioritize labs, medical spaces, and technical terminals.',
+      'Record whether a collectible appears before or after a specimen-related choice.',
+      'Separate evidence that affects decisions from background lore.',
+    ],
+    routeWarnings: commonWarnings,
+    faqs: [
+      { question: 'What episode is The Sample?', answer: 'The Sample is Episode 3 of Directive 8020.' },
+      { question: 'What should I search in The Sample?', answer: 'Search labs, terminals, sample areas, and medical or technical spaces before objective exits.' },
+      { question: 'Does The Sample affect endings?', answer: 'It can affect route understanding through evidence and trust context, but exact ending impact should be verified through the Story Tree.' },
+    ],
+  },
+  'directive-8020-dragnet-walkthrough': {
+    slug: 'directive-8020-dragnet-walkthrough',
+    title: 'Directive 8020 Dragnet Walkthrough',
+    metaTitle: 'Directive 8020 Dragnet Walkthrough - Episode 4 Stealth Guide',
+    description:
+      'Directive 8020 Dragnet walkthrough for Episode 4: stealth priorities, scanner use, chase routes, collectibles, QTEs, and Story Tree replay notes.',
+    h1: 'Directive 8020 Episode 4: Dragnet Walkthrough',
+    episodeNumber: 'Episode 4',
+    episodeName: 'Dragnet',
+    heroImage: '/review/episode_dragnet.png',
+    alt: 'Directive 8020 Dragnet episode walkthrough image',
+    videoId: '4a_VXgNSfME',
+    intro:
+      'Dragnet is Directive 8020 Episode 4 and the best early chapter for stealth and pursuit notes. Use it to learn scanner discipline, hiding habits, QTE consistency, and route-safe movement.',
+    bluf:
+      'Move slowly, preserve line of sight, and keep QTE outcomes consistent while testing choices. Stealth mistakes can look like choice consequences if you do not track them separately.',
+    verifiedSummary: 'GamesRadar lists Dragnet as Episode 4.',
+    routeFocus: 'Stealth pressure, pursuit routing, scanner habits, and mid-run branch testing.',
+    spoilerNote: 'Contains stealth guidance without revealing late endings.',
+    facts: [
+      { label: 'Episode position', value: 'Episode 4 of 8.' },
+      { label: 'Primary purpose', value: 'Teach stealth, pursuit, scanner, and action-sequence tracking.' },
+      { label: 'Best first-run goal', value: 'Survive cleanly and document whether failures affect the Story Tree.' },
+      { label: 'Replay priority', value: 'Replay stealth failures separately from dialogue choices.' },
+    ],
+    checklist: [
+      { step: 'Threat zones', doThis: 'Crouch, watch sight lines, and avoid unnecessary sprinting.', why: 'Noise and visibility are the main risks in stealth-heavy sections.' },
+      { step: 'Scanner', doThis: 'Use scanner checks deliberately instead of constantly staring at the interface.', why: 'Scanner data helps only if you still move safely.' },
+      { step: 'QTE testing', doThis: 'Repeat QTE success or failure consistently when comparing branches.', why: 'This keeps choice consequences readable.' },
+      { step: 'Collectibles', doThis: 'Search after danger drops, not during active pursuit.', why: 'Collectible cleanup should not cause avoidable deaths.' },
+    ],
+    collectibles: [
+      'Check safe rooms after pursuit pressure ends.',
+      'Mark collectibles that are only reachable after a stealth route opens.',
+      'If you miss an item, note the nearest Turning Point before replaying.',
+    ],
+    routeWarnings: commonWarnings,
+    faqs: [
+      { question: 'What episode is Dragnet?', answer: 'Dragnet is Episode 4 of Directive 8020.' },
+      { question: 'Is Dragnet a stealth chapter?', answer: 'Dragnet is one of the key early chapters for stealth, scanner use, pursuit routing, and QTE tracking.' },
+      { question: 'Should I sprint in Dragnet?', answer: 'Only sprint when the game clearly forces immediate movement. Otherwise use crouch movement, cover, and line-of-sight breaks.' },
+    ],
+  },
+  'directive-8020-mr-williams-walkthrough': {
+    slug: 'directive-8020-mr-williams-walkthrough',
+    title: 'Directive 8020 Mr. Williams Walkthrough',
+    metaTitle: 'Directive 8020 Mr. Williams Walkthrough - Episode 5 Guide',
+    description:
+      'Directive 8020 Mr. Williams walkthrough for Episode 5: mid-game route audit, survivor state, NPC death risks, collectibles, and Turning Points.',
+    h1: 'Directive 8020 Episode 5: Mr. Williams Walkthrough',
+    episodeNumber: 'Episode 5',
+    episodeName: 'Mr. Williams',
+    heroImage: '/review/mid_game_ep5_7.png',
+    alt: 'Directive 8020 Mr. Williams mid-game walkthrough image',
+    videoId: '7nTCMOt_-Bw',
+    intro:
+      'Mr. Williams is Directive 8020 Episode 5 and marks the point where your earlier survivor state and evidence notes start to matter more. Treat it as a mid-game audit before the late chapters narrow the route.',
+    bluf:
+      'Before replaying, list every living character, every major clue, and every unresolved suspicion. The value of this chapter is knowing what earlier choices have already locked in.',
+    verifiedSummary: 'GamesRadar lists Mr. Williams as Episode 5.',
+    routeFocus: 'Mid-game fallout, suspect lists, survivor checks, and route lock-ins.',
+    spoilerNote: 'This guide discusses route pressure but avoids naming final outcomes.',
+    facts: [
+      { label: 'Episode position', value: 'Episode 5 of 8.' },
+      { label: 'Primary purpose', value: 'Bridge early evidence into late-game branch testing.' },
+      { label: 'Best first-run goal', value: 'Audit survivor state before changing any prior choices.' },
+      { label: 'Replay priority', value: 'Work backward from visible deaths or locked branches.' },
+    ],
+    checklist: [
+      { step: 'Route audit', doThis: 'List alive, dead, injured, separated, and suspected characters.', why: 'Mid-game scenes can reflect earlier choices rather than current dialogue only.' },
+      { step: 'Evidence audit', doThis: 'Check what proof you have before accusations or rescues.', why: 'Evidence can make a dangerous trust decision safer.' },
+      { step: 'NPC notes', doThis: 'Track supporting character deaths separately from playable survivor deaths.', why: 'NPC outcomes can still alter scene context and player questions.' },
+      { step: 'Replay plan', doThis: 'Change one earlier Turning Point and return to compare the result.', why: 'Episode 5 is a good place to confirm cascading consequences.' },
+    ],
+    collectibles: [
+      'Check mid-game accessible spaces before the route narrows.',
+      'Log any item that explains Williams, corporate pressure, or mission context.',
+      'Use the collectible page for exact item count and O Death cleanup.',
+    ],
+    routeWarnings: commonWarnings,
+    faqs: [
+      { question: 'What episode is Mr. Williams?', answer: 'Mr. Williams is Episode 5 of Directive 8020.' },
+      { question: 'Why is Mr. Williams important?', answer: 'It is a mid-game checkpoint where earlier survivor, evidence, and relationship choices can begin shaping late-route options.' },
+      { question: 'Should I replay earlier chapters before Mr. Williams?', answer: 'Only replay earlier chapters if the Story Tree shows a death, locked branch, or evidence gap you need to fix.' },
+    ],
+  },
+  'directive-8020-hostile-takeover-walkthrough': {
+    slug: 'directive-8020-hostile-takeover-walkthrough',
+    title: 'Directive 8020 Hostile Takeover Walkthrough',
+    metaTitle: 'Directive 8020 Hostile Takeover Walkthrough - Episode 6',
+    description:
+      'Directive 8020 Hostile Takeover walkthrough for Episode 6: late-game branching, survivor-dependent scenes, choices, QTEs, collectibles, and endings setup.',
+    h1: 'Directive 8020 Episode 6: Hostile Takeover Walkthrough',
+    episodeNumber: 'Episode 6',
+    episodeName: 'Hostile Takeover',
+    heroImage: '/review/hydroponics_bay.png',
+    alt: 'Directive 8020 Hostile Takeover episode walkthrough image',
+    videoId: '9CtX9O7nZeQ',
+    intro:
+      'Hostile Takeover is Directive 8020 Episode 6 and one of the highest-value chapters for route testing. Who is alive, trusted, or missing by now can change how much of the late game you see.',
+    bluf:
+      'Do not rush this chapter. Preserve a clean save-everyone base, then test alternate survivor and trust states from Turning Points after you understand the default route.',
+    verifiedSummary: 'GamesRadar lists Hostile Takeover as Episode 6.',
+    routeFocus: 'Late-game branching, survivor-dependent scenes, stealth, and endings setup.',
+    spoilerNote: 'Contains late-game route advice without naming every finale result.',
+    facts: [
+      { label: 'Episode position', value: 'Episode 6 of 8.' },
+      { label: 'Primary purpose', value: 'Move from mid-game fallout into ending-condition setup.' },
+      { label: 'Best first-run goal', value: 'Keep survivor state stable and document all route-dependent scenes.' },
+      { label: 'Replay priority', value: 'Test survivor-dependent branches after preserving one clean route.' },
+    ],
+    checklist: [
+      { step: 'Survivor check', doThis: 'Compare who is alive against the route you expected.', why: 'Episode 6 can expose earlier deaths or missed rescues.' },
+      { step: 'Trust check', doThis: 'Verify isolated characters before following or saving them.', why: 'Late-game mimic logic makes blind trust riskier.' },
+      { step: 'Action scenes', doThis: 'Treat QTE and stealth results as survival-critical.', why: 'Mechanical failures can close ending paths.' },
+      { step: 'Branch notes', doThis: 'Write down any scene that only appears because a character is alive.', why: 'These become high-value ending and trophy notes.' },
+    ],
+    collectibles: [
+      'Search late-game accessible rooms before route exits.',
+      'Pay attention to environmental evidence tied to the Cassiopeia and mission state.',
+      'Mark any collectible that requires a specific survivor or branch.',
+    ],
+    routeWarnings: commonWarnings,
+    faqs: [
+      { question: 'What episode is Hostile Takeover?', answer: 'Hostile Takeover is Episode 6 of Directive 8020.' },
+      { question: 'Can Episode 6 change depending on who is alive?', answer: 'Yes, late-game episodes can be survivor-dependent, so record who is alive before entering Hostile Takeover.' },
+      { question: 'Should I use Turning Points in Hostile Takeover?', answer: 'Use Turning Points after one clean run through the chapter, then test one survivor or trust condition at a time.' },
+    ],
+  },
+  'directive-8020-revelation-walkthrough': {
+    slug: 'directive-8020-revelation-walkthrough',
+    title: 'Directive 8020 Revelation Walkthrough',
+    metaTitle: 'Directive 8020 Revelation Walkthrough - Episode 7 Guide',
+    description:
+      'Directive 8020 Revelation walkthrough for Episode 7: late choices, survivor state, ending setup, collectibles, 50-50 decisions, and Story Tree replay.',
+    h1: 'Directive 8020 Episode 7: Revelation Walkthrough',
+    episodeNumber: 'Episode 7',
+    episodeName: 'Revelation',
+    heroImage: '/review/final_episode.png',
+    alt: 'Directive 8020 Revelation episode walkthrough image',
+    videoId: 'S1wyl5-8E7E',
+    intro:
+      'Revelation is Directive 8020 Episode 7 and the last major setup chapter before the finale. Players should treat every survivor state, mission decision, and 50-50 style choice as ending-sensitive.',
+    bluf:
+      'Keep one best-ending base route intact. Use Revelation to document final survivor state and mission context before branching into Come True.',
+    verifiedSummary: 'GamesRadar lists Revelation as Episode 7.',
+    routeFocus: 'Final setup, mission stakes, survivor state, and ending-sensitive decisions.',
+    spoilerNote: 'Late-game guide with controlled spoilers; finale explanation belongs on the endings page.',
+    facts: [
+      { label: 'Episode position', value: 'Episode 7 of 8.' },
+      { label: 'Primary purpose', value: 'Prepare finale branches and preserve mission-critical information.' },
+      { label: 'Best first-run goal', value: 'Do not experiment randomly; document exact state entering the finale.' },
+      { label: 'Replay priority', value: 'Test late choices one at a time from Story Tree nodes.' },
+    ],
+    checklist: [
+      { step: 'Final state log', doThis: 'Record survivors, deaths, injuries, evidence, and unresolved suspicion.', why: 'The finale needs a clean state snapshot.' },
+      { step: 'Choice discipline', doThis: 'Change one late decision at a time during replays.', why: 'Revelation choices can become hard to interpret if you stack changes.' },
+      { step: 'Mission context', doThis: 'Track ship, Earth, Cassiopeia, and crew priorities separately.', why: 'Ending value may depend on more than survivor count.' },
+      { step: 'Collectibles', doThis: 'Check for late route-locked items before moving into Come True.', why: 'Finale cleanup is easier if the collectible route is already clear.' },
+    ],
+    collectibles: [
+      'Look for late-game evidence before irreversible finale transitions.',
+      'Separate story explanation clues from trophy collectibles.',
+      'If an item appears only with a survivor alive, note that condition.',
+    ],
+    routeWarnings: commonWarnings,
+    faqs: [
+      { question: 'What episode is Revelation?', answer: 'Revelation is Episode 7 of Directive 8020.' },
+      { question: 'Is Revelation important for endings?', answer: 'Yes. Revelation is a late setup chapter where survivor state and mission choices can feed into the finale.' },
+      { question: 'Should I read ending spoilers before Revelation?', answer: 'Only if you are chasing a specific ending. Otherwise finish Revelation once, then use the Story Tree for cleanup.' },
+    ],
+  },
+  'directive-8020-come-true-walkthrough': {
+    slug: 'directive-8020-come-true-walkthrough',
+    title: 'Directive 8020 Come True Walkthrough',
+    metaTitle: 'Directive 8020 Come True Walkthrough - Episode 8 Finale',
+    description:
+      'Directive 8020 Come True walkthrough for Episode 8: finale route priorities, endings setup, Cycle 13 and Booster Ring context, collectibles, and Story Tree cleanup.',
+    h1: 'Directive 8020 Episode 8: Come True Walkthrough',
+    episodeNumber: 'Episode 8',
+    episodeName: 'Come True',
+    heroImage: '/review/come_true.png',
+    alt: 'Directive 8020 Come True finale walkthrough image',
+    videoId: 'S1wyl5-8E7E',
+    intro:
+      'Come True is Directive 8020 Episode 8 and the finale chapter. Use this walkthrough to preserve your final route state, understand what to record before the ending, and prepare for Cycle 13, Booster Ring, O Death, and all-ending cleanup.',
+    bluf:
+      'Record the final state before the last decisions: survivors, deaths, mimic status, evidence, O Death progress, and mission outcome. Then use late Turning Points for alternate endings.',
+    verifiedSummary: 'GamesRadar lists Come True as Episode 8 and the final chapter.',
+    routeFocus: 'Finale state, ending split, Cycle 13 context, Booster Ring context, and cleanup routes.',
+    spoilerNote: 'This is a finale page and may mention ending-adjacent topics, but it keeps detailed ending explanation on the Cycle 13 and endings pages.',
+    facts: [
+      { label: 'Episode position', value: 'Episode 8 of 8.' },
+      { label: 'Primary purpose', value: 'Resolve the route and define ending outcomes.' },
+      { label: 'Best first-run goal', value: 'Finish once, record ending state, then branch from late Turning Points.' },
+      { label: 'Replay priority', value: 'Use late branches for endings, O Death cleanup, and missed final-state tests.' },
+    ],
+    checklist: [
+      { step: 'Before final choices', doThis: 'Write down survivors, deaths, evidence, and O Death progress.', why: 'This explains which ending or variant you reached.' },
+      { step: 'Finale decisions', doThis: 'Treat mission, crew, and Earth stakes as separate variables.', why: 'Ending meaning is not only survivor count.' },
+      { step: 'After credits', doThis: 'Record the ending name or outcome and any unlocked Story Tree branches.', why: 'This is the base for all-ending cleanup.' },
+      { step: 'Replay cleanup', doThis: 'Branch from the closest late Turning Point and change one final condition.', why: 'This is faster than replaying the whole game.' },
+    ],
+    collectibles: [
+      'Confirm whether any O Death Secrets remain before ending cleanup.',
+      'Record if final collectibles persist after Turning Point rewinds.',
+      'Use the O Death / Curator page if the Curator route is your main target.',
+    ],
+    routeWarnings: [
+      'Come True is finale content; expect ending-adjacent spoilers.',
+      'Do not overwrite your clean route until you have recorded the final survivor and mission state.',
+      ...commonWarnings,
+    ],
+    faqs: [
+      { question: 'What episode is Come True?', answer: 'Come True is Episode 8 and the finale of Directive 8020.' },
+      { question: 'Does Come True decide the ending?', answer: 'Yes. Come True is the finale chapter, but earlier survivor, evidence, Destiny, and trust states can shape what finale options are available.' },
+      { question: 'Should I replay Come True for all endings?', answer: 'Yes, but only after finishing one clean route and noting the final state. Then branch from late Turning Points and change one condition at a time.' },
+    ],
+  },
+};

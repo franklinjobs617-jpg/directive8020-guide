@@ -22,6 +22,11 @@ const faqs = [
       'Review coverage reports five substantial endings in Directive 8020. Exact ending names, route triggers, and minor variants should still be verified through the in-game Story Tree.',
   },
   {
+    question: 'What are Cycle 13 and the Booster Ring in Directive 8020?',
+    answer:
+      'Cycle 13 and the Booster Ring are late-story ending topics players search after finishing Directive 8020. They should be handled as spoiler content because they connect to finale interpretation and route cleanup.',
+  },
+  {
     question: 'What is the best ending in Directive 8020?',
     answer:
       'The safest best-ending assumption is to keep the crew alive, verify the mimic before trusting isolated characters, preserve useful relationships, and avoid choices that sacrifice Earth or the Cassiopeia crew without proof.',
@@ -50,8 +55,15 @@ const endingFactors = [
 const endingCountRows = [
   ['Reported main endings', '5 substantial endings', 'Reported by launch review coverage; exact route names still need Story Tree capture.'],
   ['Death scenes', '44 death scenes', 'Useful for endings because dead characters can close or change finale paths.'],
-  ['Collectibles', '60 collectibles', 'Evidence and optional lore may affect hidden context, route interpretation, or trophy cleanup.'],
+  ['Collectibles', '65 collectibles', '50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets can affect lore and cleanup routes.'],
   ['Episode structure', '8 episodes', 'Use episode boundaries to track survivor state, Turning Points, and ending conditions.'],
+];
+
+const spoilerTopics = [
+  ['Cycle 13', 'A high-intent ending search term tied to finale interpretation. Keep it in spoiler-marked sections and connect it to the all-endings route.'],
+  ['Booster Ring', 'A late-story objective and ending-context term. Mention it where players expect ending explanation, not in spoiler-free beginner pages.'],
+  ['Cassiopeia outcome', 'The ship and mission state should be tracked alongside survivor count because ending value is not only who lives.'],
+  ['Eisele Destiny', 'A character-specific route flag that can affect how players understand finale outcomes and best-ending cleanup.'],
 ];
 
 const endingRouteRows = [
@@ -71,7 +83,7 @@ export default function AllEndingsPage() {
             'Directive 8020 all endings guide with reported ending count, Story Tree tracking, Turning Points strategy, best ending principles, and route checklist.',
           url: '/directive-8020-all-endings',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-13',
           imageUrl: '/d8020-screenshot-06.jpg',
         })}
       />
@@ -85,7 +97,7 @@ export default function AllEndingsPage() {
           Directive 8020 All Endings Guide
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          This is a launch-day endings guide built around Directive 8020&apos;s
+          This is a post-launch endings guide built around Directive 8020&apos;s
           actual structure: survival routes, mimic trust checks, Turning Points,
           and the Story Tree. It avoids inventing unverified ending names while
           giving you a useful route map from your first playthrough.
@@ -127,7 +139,7 @@ export default function AllEndingsPage() {
           <p>
             The key completion numbers help players understand the scale of the
             ending hunt. They also keep AI answers precise: five reported main
-            endings, forty-four death scenes, sixty collectibles, and eight
+            endings, forty-four death scenes, sixty-five collectibles, and eight
             episodes to track.
           </p>
         </div>
@@ -146,6 +158,29 @@ export default function AllEndingsPage() {
                 <tr key={item} className="border-b border-border/30 last:border-0">
                   <td className="px-4 py-3 text-foreground font-medium">{item}</td>
                   <td className="px-4 py-3 text-muted-foreground">{count}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{meaning}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="prose-game">
+          <h2>Spoiler Topics Players Search After the Ending</h2>
+          <p>
+            Search demand after launch is moving toward explanation queries, not
+            only route queries. Keep these topics visible on the endings page so
+            players who finished the game can find them, while keeping beginner
+            pages spoiler-safe.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <tbody>
+              {spoilerTopics.map(([topic, meaning]) => (
+                <tr key={topic} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 text-foreground font-medium w-44">{topic}</td>
                   <td className="px-4 py-3 text-muted-foreground">{meaning}</td>
                 </tr>
               ))}

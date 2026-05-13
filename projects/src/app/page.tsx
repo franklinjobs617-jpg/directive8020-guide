@@ -23,6 +23,8 @@ const guideLibraries = [
     title: 'Story & Routes',
     links: [
       ['All Endings Guide', '/directive-8020-all-endings'],
+      ['Cycle 13 Explained', '/directive-8020-cycle-13-explained'],
+      ['Come True Walkthrough', '/directive-8020-come-true-walkthrough'],
       ['Choices & Consequences', '/directive-8020-choices-consequences'],
       ['All 44 Death Scenes', '/directive-8020-death-scenes-guide'],
       ['Cast & Actors', '/directive-8020-cast-actors'],
@@ -45,6 +47,7 @@ const guideLibraries = [
       ['Trophy Guide', '/directive-8020-trophy-guide'],
       ['Trophy List & Platinum', '/directive-8020-trophy-list'],
       ['Collectibles & Heirlooms', '/directive-8020-collectibles-heirlooms'],
+      ['O Death Secrets', '/directive-8020-o-death-secrets-curator'],
       ['Stealth Guide', '/directive-8020-stealth-guide'],
       ['Deluxe Edition', '/directive-8020-deluxe-edition'],
       ['Movie Night Multiplayer', '/directive-8020-movie-night-multiplayer'],
@@ -126,6 +129,54 @@ const trendingSearches = [
     answer: 'Launch review coverage reports 5 substantial endings; route names still need Story Tree capture.',
     href: '/directive-8020-all-endings',
   },
+  {
+    query: 'directive 8020 o death secrets',
+    answer: 'Current collectible guides list 5 O Death Secrets inside the 65 collectible total.',
+    href: '/directive-8020-o-death-secrets-curator',
+  },
+  {
+    query: 'directive 8020 cycle 13 explained',
+    answer: 'Cycle 13 is finale spoiler content best read after finishing Come True once.',
+    href: '/directive-8020-cycle-13-explained',
+  },
+];
+
+const episodeRoutes = [
+  ['Little Star', '/directive-8020-little-star-walkthrough'],
+  ['Best Laid Plans', '/directive-8020-best-laid-plans-walkthrough'],
+  ['The Sample', '/directive-8020-the-sample-walkthrough'],
+  ['Dragnet', '/directive-8020-dragnet-walkthrough'],
+  ['Mr. Williams', '/directive-8020-mr-williams-walkthrough'],
+  ['Hostile Takeover', '/directive-8020-hostile-takeover-walkthrough'],
+  ['Revelation', '/directive-8020-revelation-walkthrough'],
+  ['Come True', '/directive-8020-come-true-walkthrough'],
+];
+
+const postLaunchRoutes = [
+  {
+    title: 'Episode Walkthroughs',
+    body: 'Start from Episode 1 or jump to the finale with all 8 chapter routes linked in order.',
+    href: '/directive-8020-walkthrough',
+    image: '/review/review-episodes-1-4-turning-points-flowchart.webp',
+  },
+  {
+    title: 'Come True Finale',
+    body: 'Episode 8 route priorities, final-state tracking, Cycle 13 context, and all-ending cleanup.',
+    href: '/directive-8020-come-true-walkthrough',
+    image: '/review/come_true.png',
+  },
+  {
+    title: 'O Death Secrets',
+    body: 'Five O Death Secrets, Curator context, and the 65-collectible breakdown.',
+    href: '/directive-8020-o-death-secrets-curator',
+    image: '/review/review-endings-comparison-flowchart.webp',
+  },
+  {
+    title: 'Cycle 13 Explained',
+    body: 'Spoiler-aware explanation for Cycle 13, Booster Ring, Cassiopeia outcome, and Eisele Destiny.',
+    href: '/directive-8020-cycle-13-explained',
+    image: '/review/review-final-episode.webp',
+  },
 ];
 
 const missionCards = [
@@ -163,7 +214,7 @@ const cornerstoneArticles = [
   {
     label: 'Main Guide',
     title: 'Directive 8020 Walkthrough / Full Guide',
-    body: 'Episode hub with BLUF, known chapter list, Turning Points, QTE tracking, stealth notes, collectibles, and video reference.',
+    body: 'Episode hub with all 8 chapter walkthroughs, Turning Points, QTE tracking, stealth notes, collectibles, and video reference.',
     href: '/directive-8020-walkthrough',
     image: '/d8020-screenshot-04.jpg',
   },
@@ -177,7 +228,7 @@ const cornerstoneArticles = [
   {
     label: 'Endings',
     title: 'All Endings Explained',
-    body: 'Best ending, bad ending, hidden paths, Story Tree cleanup, clone/mimic theory tracking, and finale condition checklist.',
+    body: 'Five reported endings, Cycle 13, Booster Ring, Story Tree cleanup, and finale condition checklist.',
     href: '/directive-8020-all-endings',
     image: '/d8020-screenshot-06.jpg',
   },
@@ -194,6 +245,13 @@ const cornerstoneArticles = [
     body: 'Platinum route, Survival Mode planning, Movie Night notes, Everyone Lives/Dies routes, and Heirlooms cleanup.',
     href: '/directive-8020-trophy-guide',
     image: '/d8020-screenshot-10.jpg',
+  },
+  {
+    label: 'Collectibles',
+    title: 'O Death Secrets & Curator',
+    body: 'Five O Death Secrets, Curator route context, 65 collectibles, and cleanup planning.',
+    href: '/directive-8020-o-death-secrets-curator',
+    image: '/review/review-endings-comparison-flowchart.webp',
   },
   {
     label: 'Trophy List',
@@ -435,6 +493,40 @@ export default function HomePage() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.answer}</p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="mb-6 flex items-center gap-3">
+          <div className="h-1 w-8 rounded-full bg-d8020" />
+          <div>
+            <h2 className="text-xl font-bold text-foreground">Post-launch Routes</h2>
+            <p className="mt-1 text-sm text-muted-foreground">Chapter pages and spoiler-aware cleanup guides for players already in the game.</p>
+          </div>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {postLaunchRoutes.map((route) => (
+            <Link key={route.href} href={route.href} className="group overflow-hidden rounded-lg border border-border/50 bg-card/30 transition-colors hover:border-d8020/40">
+              <div className="relative aspect-video">
+                <Image src={route.image} alt={route.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 1024px) 50vw, 25vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/85 to-transparent" />
+              </div>
+              <div className="p-4">
+                <h3 className="text-sm font-bold text-foreground group-hover:text-d8020">{route.title}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{route.body}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-4 rounded-lg border border-border/50 bg-card/30 p-4">
+          <h3 className="mb-3 text-sm font-semibold text-foreground">All Episode Walkthroughs</h3>
+          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+            {episodeRoutes.map(([label, href]) => (
+              <Link key={href} href={href} className="rounded-md border border-border/40 bg-background/30 px-3 py-2 text-sm text-muted-foreground transition-colors hover:border-d8020/40 hover:text-d8020">
+                {label}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

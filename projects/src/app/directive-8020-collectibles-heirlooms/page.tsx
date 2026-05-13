@@ -19,7 +19,12 @@ const faqs = [
   {
     question: 'What collectibles are in Directive 8020?',
     answer:
-      'Expect story clues, secrets, environmental evidence, and Deluxe Heirlooms content. Exact collectible names and counts should be filled from in-game capture after launch.',
+      'Current collectible guides list 65 collectibles in Directive 8020: 50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets.',
+  },
+  {
+    question: 'What are O Death Secrets in Directive 8020?',
+    answer:
+      'O Death Secrets are a five-item collectible category tied to Curator-style cleanup. Track them separately from normal Secrets and Simms Recordings.',
   },
   {
     question: 'What is the Heirlooms Retrieval mission?',
@@ -41,6 +46,13 @@ const trackingRows = [
   ['Impact', 'Lore only, dialogue option, trophy, ending clue, or mimic evidence.'],
 ];
 
+const collectibleCounts = [
+  ['Normal Secrets', '50', 'Main collectible route across episodes and searchable rooms.'],
+  ['Simms Recordings', '10', 'Audio/log style collectibles tied to Pari Simms context and Cassiopeia background.'],
+  ['O Death Secrets', '5', 'Curator-related collectible route; track separately for completion cleanup.'],
+  ['Total listed collectibles', '65', 'Use this as the current 100% target for collectible route planning.'],
+];
+
 const collectibleRows = [
   { step: 'Before leaving a room', doThis: 'Check terminals, corners, personal objects, and objective-adjacent shelves.', why: 'Collectibles often sit near progression triggers.' },
   { step: 'When finding evidence', doThis: 'Record whether it appears before a trust or accusation choice.', why: 'Evidence may unlock safer mimic decisions.' },
@@ -58,7 +70,7 @@ export default function CollectiblesPage() {
             'Directive 8020 collectibles guide covering secrets, clues, premonitions, Heirlooms Retrieval, Dark Pictures relics, chapter tracking, and trophies.',
           url: '/directive-8020-collectibles-heirlooms',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-13',
           imageUrl: '/d8020-screenshot-09.jpg',
         })}
       />
@@ -81,16 +93,17 @@ export default function CollectiblesPage() {
         <BlufBox>
           <p>
             <strong>Collectibles are route data.</strong> In Directive 8020,
-            clues can help identify mimic contradictions and may affect safer
-            dialogue routes. Track every item by episode, room, route condition,
-            and whether it persists after Turning Points.
+            current guides list <strong>65 collectibles</strong>: 50 normal
+            Secrets, 10 Simms Recordings, and 5 O Death Secrets. Track every
+            item by episode, room, route condition, and whether it persists
+            after Turning Points.
           </p>
         </BlufBox>
 
         <StatusPanel
           items={[
             { label: 'Heirlooms Retrieval', value: 'Steam confirms a Deluxe bonus mission with dolls and relics from earlier anthology games.', status: 'verified' },
-            { label: 'Exact collectible count', value: 'Needs full in-game capture.', status: 'needs-check' },
+            { label: 'Exact collectible count', value: 'Current guides list 65 total collectibles.', status: 'verified' },
             { label: 'Story impact', value: 'Evidence impact on dialogue/endings must be verified per item.', status: 'working' },
             { label: 'Cleanup method', value: 'Episode, room, route condition, and Turning Point persistence are the required fields.', status: 'verified' },
           ]}
@@ -105,12 +118,37 @@ export default function CollectiblesPage() {
         <div className="prose-game">
           <h2>What to Track</h2>
           <p>
-            The exact collectible list should be completed from in-game capture,
-            but the tracking format can be prepared now. Every item should be
-            logged with its chapter, room, route condition, and whether it
-            affects story, trophies, or mimic suspicion.
+            Every item should be logged with its chapter, room, route condition,
+            and whether it affects story, trophies, Curator cleanup, or mimic
+            suspicion. Separate O Death Secrets from normal Secrets so the
+            completion route stays clear.
           </p>
 
+          <h2>Collectible Count Breakdown</h2>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Collectible type</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Count</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Route note</th>
+              </tr>
+            </thead>
+            <tbody>
+              {collectibleCounts.map(([type, count, note]) => (
+                <tr key={type} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 text-foreground font-medium">{type}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{count}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{note}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="prose-game">
           <h2>Collectible Cleanup Plan</h2>
           <ActionTable rows={collectibleRows} />
         </div>

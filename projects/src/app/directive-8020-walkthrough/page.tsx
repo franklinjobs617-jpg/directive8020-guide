@@ -19,7 +19,7 @@ const faqs = [
   {
     question: 'How many episodes are in Directive 8020?',
     answer:
-      'Launch review coverage describes Directive 8020 as an eight-episode story. Use this walkthrough as an eight-slot route tracker, but verify exact late episode titles inside your own Story Tree before publishing final route names.',
+      'Directive 8020 has eight episodes: Little Star, Best Laid Plans, The Sample, Dragnet, Mr. Williams, Hostile Takeover, Revelation, and Come True.',
   },
   {
     question: 'Should I use a walkthrough for my first Directive 8020 playthrough?',
@@ -39,7 +39,7 @@ const faqs = [
   {
     question: 'How many collectibles are in Directive 8020?',
     answer:
-      'Destructoid review coverage reports 60 collectibles. Treat that as a launch-day count to verify while building your final episode-by-episode checklist.',
+      'Current collectible guides list 65 collectibles: 50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets. The O Death route is tied to Curator cleanup.',
   },
 ];
 
@@ -63,10 +63,22 @@ const sourceNotes = [
     href: 'https://www.pcgamer.com/games/horror/directive-8020-is-using-an-episodic-structure-straight-out-of-a-limited-tv-series-to-be-mindful-of-peoples-time/',
   },
   {
+    source: 'GamesRadar episode guide',
+    usefulFor:
+      'Confirmed eight-episode structure, episode names, broad chapter difficulty, and replay guidance for late outcomes.',
+    href: 'https://www.gamesradar.com/games/horror/directive-8020-length-episodes/',
+  },
+  {
     source: 'Destructoid review',
     usefulFor:
-      'Reviewer-reported Destinies, scanner behavior, 60 collectibles, eight episodes, and five substantial endings.',
+      'Reviewer-reported Destinies, scanner behavior, eight episodes, five substantial endings, and late-game pacing.',
     href: 'https://www.destructoid.com/reviews/directive-8020-review/',
+  },
+  {
+    source: '100% Guides collectible guide',
+    usefulFor:
+      '65-collectible breakdown: 50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets.',
+    href: 'https://www.100pguides.com/guides/directive-8020-all-collectibles',
   },
 ];
 
@@ -79,7 +91,7 @@ const firstRunActions = [
   {
     step: 'During exploration',
     doThis: 'Sweep side rooms, terminals, bodies, crew spaces, labs, and objective-adjacent corridors before leaving.',
-    why: 'Review coverage reports 60 collectibles, and evidence can affect trust, Destinies, and route interpretation.',
+    why: 'Current collectible guides list 65 collectibles, and evidence can affect trust, Destinies, and route interpretation.',
   },
   {
     step: 'During stealth',
@@ -108,6 +120,7 @@ const knownEpisodes = [
   {
     id: 'episode-1',
     title: 'Episode 1: Little Star',
+    href: '/directive-8020-little-star-walkthrough',
     status: 'Known title',
     focus: 'Opening control, Brianna Young baseline, early mimic rules, first Destiny and Turning Point notes.',
     route:
@@ -116,6 +129,7 @@ const knownEpisodes = [
   {
     id: 'episode-2',
     title: 'Episode 2: Best Laid Plans',
+    href: '/directive-8020-best-laid-plans-walkthrough',
     status: 'Known title',
     focus: 'Mission stress, early relationship shifts, blame, cooperation, and evidence before accusations.',
     route:
@@ -124,6 +138,7 @@ const knownEpisodes = [
   {
     id: 'episode-3',
     title: 'Episode 3: The Sample',
+    href: '/directive-8020-the-sample-walkthrough',
     status: 'Known title',
     focus: 'Specimen handling, lab evidence, containment logic, and mimic suspicion.',
     route:
@@ -132,6 +147,7 @@ const knownEpisodes = [
   {
     id: 'episode-4',
     title: 'Episode 4: Dragnet',
+    href: '/directive-8020-dragnet-walkthrough',
     status: 'Known title',
     focus: 'Stealth pressure, pursuit routing, scanner habits, and mid-run branch testing.',
     route:
@@ -139,42 +155,46 @@ const knownEpisodes = [
   },
   {
     id: 'episode-5',
-    title: 'Episode 5: Title to verify',
-    status: 'Launch capture',
-    focus: 'Mid-game fallout, crew splits, suspect lists, and the first large route lock-ins.',
+    title: 'Episode 5: Mr. Williams',
+    href: '/directive-8020-mr-williams-walkthrough',
+    status: 'Known title',
+    focus: 'Williams route pressure, prior episode consequences, suspect lists, and mid-game death locks.',
     route:
-      'Treat this as the turning point audit. Before changing anything, list every living character, known clue, weapon/tool state, and unresolved suspicion.',
+      'Treat this as the mid-game audit. Before changing anything, list every living character, known clue, weapon/tool state, and unresolved suspicion. Some outcomes here are influenced by earlier episode choices.',
   },
   {
     id: 'episode-6',
-    title: 'Episode 6: Title to verify',
-    status: 'Launch capture',
-    focus: 'Late-game paranoia, deaths, Destinies paying off, and major ending conditions.',
+    title: 'Episode 6: Hostile Takeover',
+    href: '/directive-8020-hostile-takeover-walkthrough',
+    status: 'Known title',
+    focus: 'Late-game branching, survivor-dependent scenes, paranoia, deaths, and Destinies paying off.',
     route:
-      'Review coverage says the game becomes stronger from episode six onward. Save this chapter for careful branch testing, not rushed cleanup.',
+      'Save this chapter for careful branch testing, not rushed cleanup. Which crew members are alive by this point can change how much of the episode you see.',
   },
   {
     id: 'episode-7',
-    title: 'Episode 7: Title to verify',
-    status: 'Launch capture',
-    focus: 'Final survivor setup, mimic confirmation, mission priorities, and locked relationships.',
+    title: 'Episode 7: Revelation',
+    href: '/directive-8020-revelation-walkthrough',
+    status: 'Known title',
+    focus: 'Final survivor setup, outside-Cassiopeia consequences, mission priorities, and locked relationships.',
     route:
-      'Change one variable at a time: a trust decision, a QTE result, a Destiny, or a collectible route. Do not mix tests or the ending logic becomes noisy.',
+      'Change one variable at a time: a trust decision, a QTE result, a Destiny, or a collectible route. Several 50-50 style decisions here can reshape the final outcome.',
   },
   {
     id: 'episode-8',
-    title: 'Episode 8: Finale title to verify',
-    status: 'Launch capture',
+    title: 'Episode 8: Come True',
+    href: '/directive-8020-come-true-walkthrough',
+    status: 'Known title',
     focus: 'Final choices, ending split, survivor state, and post-ending cleanup notes.',
     route:
-      'Record the exact final state: survivors, deaths, mimic status, mission outcome, collectibles, and ending name. Use late Turning Points for all-ending cleanup.',
+      'Record the exact final state: survivors, deaths, mimic status, mission outcome, O Death progress, collectibles, and ending name. Use late Turning Points for all-ending cleanup.',
   },
 ];
 
 const routePriorities = [
   ['Best ending base', 'Keep the crew alive, preserve evidence, verify mimic claims, pass QTEs, and protect useful relationships.'],
   ['All endings route', 'Finish one clean ending, then branch from late Turning Points to test survivor count, mission choice, and evidence state.'],
-  ['All collectibles route', 'Use the reported 60-collectible target and check every episode before advancing through irreversible exits.'],
+  ['All collectibles route', 'Use the current 65-collectible target and check every episode before advancing through irreversible exits.'],
   ['Movie Night route', 'Assign one player to record choices and another to watch for clues, because local co-op can make trust decisions chaotic.'],
   ['Survival Mode route', 'Accept that consequences are final; use this only after learning prompt timing and route risks.'],
 ];
@@ -189,7 +209,7 @@ export default function WalkthroughPage() {
             'Directive 8020 walkthrough with episode route notes, QTE and stealth tips, scanner use, collectibles, Turning Points, Destinies, endings prep, and spoiler-safe first-run advice.',
           url: '/directive-8020-walkthrough',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-13',
           imageUrl: '/d8020-screenshot-07.jpg',
         })}
       />
@@ -203,7 +223,7 @@ export default function WalkthroughPage() {
           Directive 8020 Walkthrough: Full Episode Guide
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          This Directive 8020 walkthrough is built for launch-day play: a
+          This Directive 8020 walkthrough is built for post-launch play: a
           spoiler-safe first run, then a structured cleanup route for Turning
           Points, Destinies, stealth, QTEs, collectibles, deaths, and endings.
           It uses official feature details plus current review and preview
@@ -222,9 +242,9 @@ export default function WalkthroughPage() {
         <StatusPanel
           items={[
             { label: 'Core systems', value: 'Mimic threat, choices, QTEs, stealth, Turning Points, Story Tree, and Movie Night are official-source supported.', status: 'verified' },
-            { label: 'Episode count', value: 'Eight-episode structure is reviewer-reported and should be checked against the final in-game Story Tree.', status: 'working' },
-            { label: 'Collectible count', value: '60 collectibles are reviewer-reported and need route capture before final checklist publication.', status: 'working' },
-            { label: 'Late chapter titles', value: 'Episodes 5-8 need launch capture before exact title and route tables are final.', status: 'needs-check' },
+            { label: 'Episode count', value: '8 episodes: Little Star through Come True.', status: 'verified' },
+            { label: 'Collectible count', value: '65 collectibles are currently listed: 50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets.', status: 'verified' },
+            { label: 'Late chapter titles', value: 'Episodes 5-8 are Mr. Williams, Hostile Takeover, Revelation, and Come True.', status: 'verified' },
           ]}
         />
 
@@ -310,7 +330,7 @@ export default function WalkthroughPage() {
           {knownEpisodes.map((episode) => (
             <a
               key={episode.id}
-              href={`#${episode.id}`}
+              href={episode.href}
               className="rounded-lg border border-border/50 bg-card/30 p-4 transition-colors hover:border-d8020/40"
             >
               <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
@@ -407,9 +427,9 @@ export default function WalkthroughPage() {
           <p>
             Treat collectibles as route data, not just lore. In a mimic story,
             logs and recordings can explain contradictions, crew history,
-            Cassiopeia systems, and safer trust decisions. For now, use 60 as
-            the reported collectible target and verify the final number during
-            capture.
+            Cassiopeia systems, and safer trust decisions. Current collectible
+            guides list 65 total items: 50 normal Secrets, 10 Simms Recordings,
+            and 5 O Death Secrets tied to Curator cleanup.
           </p>
           <ul>
             <li>Search crew quarters, medical areas, labs, control rooms, hydroponics-style spaces, wreckage paths, and sealed doors.</li>
@@ -439,6 +459,8 @@ export default function WalkthroughPage() {
             <li><a href="/directive-8020-how-to-save-everyone">How to Save Everyone</a></li>
             <li><a href="/directive-8020-choices-consequences">Choices &amp; Consequences</a></li>
             <li><a href="/directive-8020-collectibles-heirlooms">Collectibles &amp; Heirlooms</a></li>
+            <li><a href="/directive-8020-o-death-secrets-curator">O Death Secrets &amp; Curator</a></li>
+            <li><a href="/directive-8020-cycle-13-explained">Cycle 13 Explained</a></li>
           </ul>
         </div>
 

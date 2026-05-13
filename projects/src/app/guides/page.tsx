@@ -88,24 +88,24 @@ const allGuides = [
   {
     href: '/directive-8020-all-endings',
     title: 'All Endings Guide',
-    description: 'Story Tree route tracking, best ending principles, bad ending triggers, and Turning Points cleanup.',
-    tag: 'Launch Guide',
+    description: 'Five reported endings, Cycle 13 and Booster Ring spoiler topics, best ending route, and Story Tree cleanup.',
+    tag: 'Updated',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
     image: '/d8020-screenshot-06.jpg',
   },
   {
     href: '/directive-8020-how-to-save-everyone',
     title: 'How to Save Everyone',
-    description: 'Spoiler-safe survival rules for mimic trust checks, QTEs, relationships, and recovery after deaths.',
-    tag: 'Launch Guide',
+    description: 'Everyone-lives route planning by episode, NPC death notes, mimic trust checks, and Turning Points recovery.',
+    tag: 'Updated',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
     image: '/d8020-screenshot-05.jpg',
   },
   {
     href: '/directive-8020-choices-consequences',
-    title: 'Choices & Consequences',
-    description: 'Decision types, consequence tracking, trust logic, and how to map branches without guessing.',
-    tag: 'Launch Guide',
+    title: 'Do Choices Matter?',
+    description: 'Community-focused answer for flavor choices vs route-changing Destinies, QTEs, trust checks, and endings.',
+    tag: 'Updated',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
     image: '/d8020-screenshot-04.jpg',
   },
@@ -152,16 +152,40 @@ const allGuides = [
   {
     href: '/directive-8020-collectibles-heirlooms',
     title: 'Collectibles & Heirlooms',
-    description: 'Secrets, clues, premonitions, Heirlooms Retrieval, chapter tracking, and trophy cleanup.',
+    description: '65 collectibles: 50 Secrets, 10 Simms Recordings, 5 O Death Secrets, Heirlooms, and trophy cleanup.',
     tag: 'Collectibles',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
     image: '/d8020-screenshot-04.jpg',
   },
   {
+    href: '/directive-8020-o-death-secrets-curator',
+    title: 'O Death Secrets & Curator',
+    description: 'Five O Death Secrets, Curator context, 65-collectible breakdown, and cleanup method.',
+    tag: 'Collectibles',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/review/review-endings-comparison-flowchart.webp',
+  },
+  {
+    href: '/directive-8020-cycle-13-explained',
+    title: 'Cycle 13 Explained',
+    description: 'Spoiler-aware explanation for Cycle 13, Booster Ring, Cassiopeia outcome, and Eisele Destiny.',
+    tag: 'Ending',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/review/review-final-episode.webp',
+  },
+  {
+    href: '/directive-8020-come-true-walkthrough',
+    title: 'Come True Walkthrough',
+    description: 'Episode 8 finale route priorities, final-state tracking, endings setup, and cleanup.',
+    tag: 'Episode',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/review/come_true.png',
+  },
+  {
     href: '/directive-8020-trophy-guide',
     title: 'Trophy & Achievement Guide',
-    description: 'Steam achievements, missable planning, collectibles, endings, and 100% cleanup strategy.',
-    tag: 'Launch Guide',
+    description: 'Steam achievements, PS5 trophy sync issues, missable planning, collectibles, endings, and 100% cleanup.',
+    tag: 'Updated',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
     image: '/d8020-screenshot-06.jpg',
   },
@@ -184,10 +208,66 @@ const allGuides = [
   {
     href: '/directive-8020-walkthrough',
     title: 'Full Chapter Walkthrough',
-    description: 'Spoiler-safe first run route, chapter template, collectibles, QTEs, and Story Tree planning.',
-    tag: 'Launch Guide',
+    description: 'All 8 episodes from Little Star to Come True, collectibles, QTEs, stealth, and Story Tree planning.',
+    tag: 'Updated',
     tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
     image: '/d8020-screenshot-02.jpg',
+  },
+  {
+    href: '/directive-8020-little-star-walkthrough',
+    title: 'Little Star Walkthrough',
+    description: 'Episode 1 first-run setup, crew baseline, early QTEs, collectibles, and Story Tree notes.',
+    tag: 'Episode',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/review/episode_1_little_star.png',
+  },
+  {
+    href: '/directive-8020-best-laid-plans-walkthrough',
+    title: 'Best Laid Plans Walkthrough',
+    description: 'Episode 2 relationship tracking, evidence-first choices, mission pressure, and early branches.',
+    tag: 'Episode',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/review/episode_2_best_laid_plans.png',
+  },
+  {
+    href: '/directive-8020-the-sample-walkthrough',
+    title: 'The Sample Walkthrough',
+    description: 'Episode 3 lab evidence, specimen choices, mimic suspicion, collectibles, and route notes.',
+    tag: 'Episode',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/review/episode_the_sample.png',
+  },
+  {
+    href: '/directive-8020-dragnet-walkthrough',
+    title: 'Dragnet Walkthrough',
+    description: 'Episode 4 stealth priorities, scanner use, chase routes, QTEs, and collectible cleanup.',
+    tag: 'Episode',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/review/episode_dragnet.png',
+  },
+  {
+    href: '/directive-8020-mr-williams-walkthrough',
+    title: 'Mr. Williams Walkthrough',
+    description: 'Episode 5 mid-game route audit, survivor state, NPC death risks, and Turning Points.',
+    tag: 'Episode',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/review/mid_game_ep5_7.png',
+  },
+  {
+    href: '/directive-8020-hostile-takeover-walkthrough',
+    title: 'Hostile Takeover Walkthrough',
+    description: 'Episode 6 late-game branching, survivor-dependent scenes, stealth, and endings setup.',
+    tag: 'Episode',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/review/hydroponics_bay.png',
+  },
+  {
+    href: '/directive-8020-revelation-walkthrough',
+    title: 'Revelation Walkthrough',
+    description: 'Episode 7 late choices, final survivor state, ending setup, and route cleanup.',
+    tag: 'Episode',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/review/final_episode.png',
   },
 ];
 
@@ -208,7 +288,7 @@ export default function GuidesPage() {
             'Browse all Directive 8020 guides: endings, choices, character survival, trophies, system requirements, and more.',
           url: '/guides',
           datePublished: '2026-05-10',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-13',
           imageUrl: '/d8020-screenshot-01.jpg',
         })}
       />
@@ -219,7 +299,7 @@ export default function GuidesPage() {
       </h1>
       <p className="text-lg text-muted-foreground leading-relaxed mb-10">
         Every guide for Directive 8020 in one place. From system requirements
-        to all endings, this hub is built for launch-day players who want useful
+        to all endings, this hub is built for post-launch players who want useful
         routes, official facts, screenshots, and video references.
       </p>
 
@@ -239,7 +319,7 @@ export default function GuidesPage() {
         <div className="flex items-center gap-3 mb-6">
           <div className="h-1 w-8 bg-d8020 rounded-full" />
           <h2 className="text-xl font-bold text-foreground">
-            Launch Day Guides
+            Updated Player Guides
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
