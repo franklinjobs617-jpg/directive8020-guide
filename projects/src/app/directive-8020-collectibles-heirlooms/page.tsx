@@ -119,6 +119,15 @@ export default function CollectiblesPage() {
         <CollectibleChecklist />
 
         <div className="prose-game">
+          <h2>Checklist Accuracy Note</h2>
+          <p>
+            The checklist uses the current 65-collectible structure so players
+            can track real completion categories now. Individual item locations
+            are marked as pending until they are verified against chapter
+            captures, screenshots, or reliable video routes. This avoids mixing
+            confirmed counts with unverified room names.
+          </p>
+
           <h2>What to Track</h2>
           <p>
             Every item should be logged with its chapter, room, route condition,

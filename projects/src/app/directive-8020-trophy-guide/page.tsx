@@ -138,6 +138,17 @@ export default function TrophyGuidePage() {
         <TrophyProgressTracker />
 
         <div className="prose-game">
+          <h2>Current Verification Note</h2>
+          <p>
+            The tracker above separates confirmed systems from route-planning
+            tasks. Steam confirms achievements as a platform feature, Movie
+            Night couch co-op is listed publicly, and the 65-collectible
+            structure is trackable. Exact platform trophy names and any
+            Platinum-specific requirements should still be checked against the
+            live PS5, Xbox, or Steam achievement list before being treated as
+            final.
+          </p>
+
           <h2>Trophy Guide vs Trophy List</h2>
           <p>
             This page is the 100% strategy guide. It explains cleanup order,

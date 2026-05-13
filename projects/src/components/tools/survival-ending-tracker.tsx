@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { AlertTriangle, RotateCcw, ShieldCheck, Skull } from 'lucide-react';
+import { AlertTriangle, RotateCcw, ShieldCheck } from 'lucide-react';
 
 type ChoiceValue = 'safe' | 'risky' | 'fatal';
 
@@ -18,9 +18,9 @@ const choices: Choice[] = [
     label: 'Trust check',
     prompt: 'An isolated crew member returns with a weak explanation.',
     options: [
-      { value: 'safe', label: 'Verify first', helper: 'Safer route: look for evidence before trust.' },
-      { value: 'risky', label: 'Trust quickly', helper: 'Higher mimic risk and weaker evidence control.' },
-      { value: 'fatal', label: 'Split the team', helper: 'Danger route: isolation can cascade into deaths.' },
+      { value: 'safe', label: 'Verify first', helper: 'Best for a clean route: look for evidence before trust.' },
+      { value: 'risky', label: 'Trust quickly', helper: 'Route risk: weaker evidence before a mimic check.' },
+      { value: 'fatal', label: 'Split the team', helper: 'Critical risk: isolation can remove later safety options.' },
     ],
   },
   {
@@ -30,7 +30,7 @@ const choices: Choice[] = [
     options: [
       { value: 'safe', label: 'Search evidence', helper: 'More dialogue options and stronger ending route.' },
       { value: 'risky', label: 'Leave now', helper: 'Faster, but later accusation scenes may be weaker.' },
-      { value: 'fatal', label: 'Ignore warnings', helper: 'Worst-route behavior if repeated.' },
+      { value: 'fatal', label: 'Ignore warnings', helper: 'Critical risk if repeated across multiple branches.' },
     ],
   },
   {
@@ -38,39 +38,45 @@ const choices: Choice[] = [
     label: 'Finale discipline',
     prompt: 'The finale asks for a high-pressure mission decision.',
     options: [
-      { value: 'safe', label: 'Protect crew and mission', helper: 'Best-ending base assumption.' },
+      { value: 'safe', label: 'Protect crew and mission', helper: 'Safest verified-style planning principle.' },
       { value: 'risky', label: 'Sacrifice one variable', helper: 'Useful for controlled alternate ending tests.' },
-      { value: 'fatal', label: 'Panic choice', helper: 'Likely bad or worst-ending route.' },
+      { value: 'fatal', label: 'Panic choice', helper: 'Critical risk for bad-ending cleanup branches.' },
     ],
   },
 ];
 
-const crew = ['Brianna Young', 'Eisele', 'Cernan', 'Stafford', 'Cooper'];
+const routeChecks = [
+  'Crew survival preserved',
+  'Mimic proof collected',
+  'Relationships protected',
+  'Finale branch isolated',
+  'Explorer rewind available',
+];
 
 function getRoute(riskScore: number) {
   if (riskScore >= 6) {
     return {
-      label: 'Worst ending likely',
+      label: 'Critical route risk',
       tone: 'danger',
       feedback:
-        'Multiple high-risk choices are active. Preserve this only as a cleanup branch, not your base save.',
+        'Use this only as an alternate cleanup branch. Do not treat it as a verified worst-ending trigger until the Story Tree confirms the result.',
     };
   }
 
   if (riskScore >= 3) {
     return {
-      label: 'Bad or mixed ending risk',
+      label: 'Mixed ending risk',
       tone: 'warning',
       feedback:
-        'This path may still be useful for alternate endings, but verify survivor state before continuing.',
+        'This path may still be useful for alternate endings, but verify survivor state, evidence, and relationship changes before continuing.',
     };
   }
 
   return {
-    label: 'Best ending base likely',
+    label: 'Clean route candidate',
     tone: 'safe',
     feedback:
-      'This is the clean route to preserve first: evidence, crew safety, and controlled finale choices.',
+      'This is the route to preserve first: evidence, crew safety, and controlled finale choices. It is a planning aid, not a confirmed ending trigger.',
   };
 }
 
@@ -88,12 +94,12 @@ export function SurvivalEndingTracker() {
   }, 0);
 
   const route = getRoute(riskScore);
-  const crewStates = useMemo(() => {
-    return crew.map((name, index) => {
-      if (riskScore >= 6 && index > 1) return { name, state: 'Dead', icon: Skull };
-      if (riskScore >= 3 && index > 2) return { name, state: 'At Risk', icon: AlertTriangle };
-      if (riskScore >= 1 && index === 4) return { name, state: 'At Risk', icon: AlertTriangle };
-      return { name, state: 'Safe', icon: ShieldCheck };
+  const routeStatus = useMemo(() => {
+    return routeChecks.map((name, index) => {
+      if (riskScore >= 6 && index > 1) return { name, state: 'Needs repair', icon: AlertTriangle };
+      if (riskScore >= 3 && index > 2) return { name, state: 'Check before finale', icon: AlertTriangle };
+      if (riskScore >= 1 && index === 4) return { name, state: 'Mode dependent', icon: AlertTriangle };
+      return { name, state: 'Good for base route', icon: ShieldCheck };
     });
   }, [riskScore]);
 
@@ -112,9 +118,10 @@ export function SurvivalEndingTracker() {
               Directive 8020 Survival and Ending Tracker
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Pick route assumptions and get immediate feedback. This tracker
-              uses risk labels, not fake percentages, until every ending trigger
-              is fully verified.
+              Pick route assumptions and get immediate feedback. This is a
+              route planner, not a confirmed death calculator: it helps you
+              decide whether a branch is safe enough to preserve or better
+              saved for cleanup.
             </p>
           </div>
           <button
@@ -140,10 +147,10 @@ export function SurvivalEndingTracker() {
       </div>
 
       <div className="grid gap-3 p-4 sm:grid-cols-5">
-        {crewStates.map(({ name, state, icon: Icon }) => (
+        {routeStatus.map(({ name, state, icon: Icon }) => (
           <div key={name} className="rounded-lg border border-border/50 bg-background/35 p-3 text-center">
             <Icon className={`mx-auto mb-2 h-5 w-5 ${
-              state === 'Safe' ? 'text-green-300' : state === 'At Risk' ? 'text-yellow-300' : 'text-red-300'
+              state === 'Good for base route' ? 'text-green-300' : state === 'Check before finale' ? 'text-yellow-300' : 'text-red-300'
             }`} />
             <p className="text-sm font-semibold text-foreground">{name}</p>
             <p className="mt-1 text-xs text-muted-foreground">{state}</p>

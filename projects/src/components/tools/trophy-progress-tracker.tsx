@@ -8,7 +8,7 @@ interface TrophyItem {
   name: string;
   group: string;
   note: string;
-  status: 'Verified' | 'Likely' | 'Needs verification';
+  status: 'Verified system' | 'Planning item' | 'Needs platform check';
 }
 
 const STORAGE_KEY = 'd8020:trophy-progress:v1';
@@ -19,70 +19,70 @@ const trophies: TrophyItem[] = [
     name: 'Complete the main story',
     group: 'Story',
     note: 'Finish one full route before heavy cleanup.',
-    status: 'Likely',
+    status: 'Planning item',
   },
   {
     id: 'everyone-lives',
     name: 'Everyone lives route',
     group: 'Survival',
     note: 'Keep the core crew alive and preserve evidence before finale branches.',
-    status: 'Likely',
+    status: 'Planning item',
   },
   {
     id: 'all-endings',
     name: 'All endings cleanup',
     group: 'Endings',
     note: 'Use late Turning Points to test route outcomes one variable at a time.',
-    status: 'Likely',
+    status: 'Planning item',
   },
   {
     id: 'death-scenes',
     name: 'Death scene cleanup',
     group: 'Deaths',
     note: 'Do destructive branches after saving a clean survival base.',
-    status: 'Likely',
+    status: 'Planning item',
   },
   {
     id: 'normal-secrets',
     name: '50 normal Secrets',
     group: 'Collectibles',
     note: 'Current guides list 50 normal Secrets.',
-    status: 'Verified',
+    status: 'Verified system',
   },
   {
     id: 'simms-recordings',
     name: '10 Simms Recordings',
     group: 'Collectibles',
     note: 'Track audio/log style entries separately from normal Secrets.',
-    status: 'Verified',
+    status: 'Verified system',
   },
   {
     id: 'o-death-secrets',
     name: '5 O Death Secrets',
     group: 'Collectibles',
     note: 'Keep Curator-style cleanup separate from main evidence.',
-    status: 'Verified',
+    status: 'Verified system',
   },
   {
     id: 'movie-night',
     name: 'Movie Night progress',
     group: 'Mode',
-    note: 'Use a separate route if co-op trophies are platform-specific.',
-    status: 'Needs verification',
+    note: 'Steam lists Movie Night couch co-op; verify whether any achievement requires it.',
+    status: 'Needs platform check',
   },
   {
     id: 'survival-mode',
     name: 'Survival Mode route',
     group: 'Mode',
     note: 'Avoid relying on Explorer-style rewind assumptions.',
-    status: 'Needs verification',
+    status: 'Needs platform check',
   },
   {
     id: 'deluxe-heirlooms',
     name: 'Heirlooms Retrieval',
     group: 'Deluxe',
     note: 'Track Deluxe mission relics separately if achievements use them.',
-    status: 'Verified',
+    status: 'Verified system',
   },
 ];
 
@@ -149,7 +149,9 @@ export function TrophyProgressTracker() {
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
               Check items as you finish them. Progress is saved in this browser,
-              so players can close the guide and come back during cleanup.
+              so players can close the guide and come back during cleanup. Items
+              marked as planning items are route tasks, not confirmed platform
+              trophy names.
             </p>
           </div>
           <button

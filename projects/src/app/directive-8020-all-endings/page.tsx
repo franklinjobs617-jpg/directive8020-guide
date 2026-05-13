@@ -138,6 +138,15 @@ export default function AllEndingsPage() {
         <SurvivalEndingTracker />
 
         <div className="prose-game">
+          <h2>How to Read the Tracker</h2>
+          <p>
+            The tracker is intentionally conservative. It does not claim that a
+            specific character dies from a single choice unless the route is
+            verified in the Story Tree. Use it to decide whether a branch is
+            clean enough to preserve, risky enough to test separately, or too
+            unstable for your best-ending base save.
+          </p>
+
           <h2>Ending Count and Completion Facts</h2>
           <p>
             The key completion numbers help players understand the scale of the

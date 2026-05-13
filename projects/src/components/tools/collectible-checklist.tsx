@@ -15,20 +15,44 @@ interface CollectibleItem {
 
 const STORAGE_KEY = 'd8020:collectibles:v1';
 
+const normalSecrets: CollectibleItem[] = Array.from({ length: 50 }, (_, index) => ({
+  id: `normal-secret-${index + 1}`,
+  episode: 'Main Story',
+  type: 'Normal Secret',
+  label: `Normal Secret ${index + 1}`,
+  note: 'Location pending item-by-item verification. Use this slot to track the confirmed 50-secret route.',
+}));
+
+const simmsRecordings: CollectibleItem[] = Array.from({ length: 10 }, (_, index) => ({
+  id: `simms-recording-${index + 1}`,
+  episode: 'Main Story',
+  type: 'Simms Recording',
+  label: `Simms Recording ${index + 1}`,
+  note: 'Location pending item-by-item verification. Track separately from normal Secrets.',
+}));
+
+const oDeathSecrets: CollectibleItem[] = Array.from({ length: 5 }, (_, index) => ({
+  id: `o-death-secret-${index + 1}`,
+  episode: 'Main Story',
+  type: 'O Death Secret',
+  label: `O Death Secret ${index + 1}`,
+  note: 'Location pending item-by-item verification. Keep Curator-style cleanup separate.',
+}));
+
 const collectibles: CollectibleItem[] = [
-  { id: 'ep1-secret', episode: 'Episode 1', type: 'Normal Secret', label: 'Crew quarters evidence sweep', note: 'Check personal objects before leaving the first safe area.' },
-  { id: 'ep1-simms', episode: 'Episode 1', type: 'Simms Recording', label: 'Early Simms Recording', note: 'Track audio logs separately from normal Secrets.' },
-  { id: 'ep2-secret', episode: 'Episode 2', type: 'Normal Secret', label: 'Mission briefing terminal', note: 'Search terminals near objective prompts.' },
-  { id: 'ep3-odeath', episode: 'Episode 3', type: 'O Death Secret', label: 'O Death clue route', note: 'Curator-style secrets should have their own count.' },
-  { id: 'ep4-secret', episode: 'Episode 4', type: 'Normal Secret', label: 'Lab sample evidence', note: 'Evidence found before accusation scenes may matter.' },
-  { id: 'ep5-simms', episode: 'Episode 5', type: 'Simms Recording', label: 'Mid-game Simms Recording', note: 'Recheck after major Turning Points.' },
-  { id: 'ep6-secret', episode: 'Episode 6', type: 'Normal Secret', label: 'Medical bay clue', note: 'Medical rooms are likely evidence-heavy spaces.' },
-  { id: 'ep7-odeath', episode: 'Episode 7', type: 'O Death Secret', label: 'Late O Death Secret', note: 'Mark route conditions if a survivor must be present.' },
-  { id: 'ep8-secret', episode: 'Episode 8', type: 'Normal Secret', label: 'Finale evidence check', note: 'Search before irreversible finale choices.' },
-  { id: 'deluxe-heirloom', episode: 'Deluxe', type: 'Heirloom', label: 'Heirlooms Retrieval relic', note: 'Track bonus mission relics outside the main story count.' },
+  ...normalSecrets,
+  ...simmsRecordings,
+  ...oDeathSecrets,
+  {
+    id: 'deluxe-heirlooms-retrieval',
+    episode: 'Deluxe',
+    type: 'Heirloom',
+    label: 'Heirlooms Retrieval bonus mission',
+    note: 'Steam describes this as Deluxe content. Track bonus relics separately from the 65 main listed collectibles.',
+  },
 ];
 
-const filters = ['All', 'Episode 1', 'Episode 2', 'Episode 3', 'Episode 4', 'Episode 5', 'Episode 6', 'Episode 7', 'Episode 8', 'Deluxe'];
+const filters = ['All', 'Normal Secret', 'Simms Recording', 'O Death Secret', 'Deluxe'];
 
 function readStoredItems(): string[] {
   if (typeof window === 'undefined') return [];
@@ -61,7 +85,7 @@ export function CollectibleChecklist() {
   }, [checked, ready]);
 
   const checkedSet = useMemo(() => new Set(checked), [checked]);
-  const visibleItems = collectibles.filter((item) => filter === 'All' || item.episode === filter);
+  const visibleItems = collectibles.filter((item) => filter === 'All' || item.type === filter || item.episode === filter);
   const percent = Math.round((checked.length / collectibles.length) * 100);
 
   function toggle(id: string) {
@@ -89,8 +113,9 @@ export function CollectibleChecklist() {
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
               Use this as a cleanup scratchpad while the full item-by-item map is
-              being verified. It saves progress locally and separates Secrets,
-              Simms Recordings, O Death Secrets, and Heirlooms.
+              being verified. It saves progress locally and reflects the current
+              65-item structure: 50 normal Secrets, 10 Simms Recordings, and 5
+              O Death Secrets, plus a separate Deluxe Heirlooms slot.
             </p>
           </div>
           <button
