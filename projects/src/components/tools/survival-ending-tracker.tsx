@@ -1,9 +1,15 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { AlertTriangle, RotateCcw, ShieldCheck } from 'lucide-react';
+import Image from 'next/image';
+import { AlertTriangle, RotateCcw, ShieldCheck, Skull, UserRoundCheck } from 'lucide-react';
+import {
+  directiveCharacters,
+  type DirectiveCharacterId,
+} from '@/lib/directive-8020-characters';
 
 type ChoiceValue = 'safe' | 'risky' | 'fatal';
+type PlayMode = 'Explorer' | 'Survival';
 
 interface Choice {
   id: string;
@@ -45,6 +51,19 @@ const choices: Choice[] = [
   },
 ];
 
+const characterThresholds: Record<DirectiveCharacterId, { injured: number; dead: number }> = {
+  young: { injured: 3, dead: 7 },
+  stafford: { injured: 4, dead: 8 },
+  eisele: { injured: 2, dead: 6 },
+  cooper: { injured: 4, dead: 9 },
+  cernan: { injured: 3, dead: 7 },
+};
+
+const characters = directiveCharacters.map((character) => ({
+  ...character,
+  thresholds: characterThresholds[character.id],
+}));
+
 const routeChecks = [
   'Crew survival preserved',
   'Mimic proof collected',
@@ -81,6 +100,7 @@ function getRoute(riskScore: number) {
 }
 
 export function SurvivalEndingTracker() {
+  const [mode, setMode] = useState<PlayMode>('Explorer');
   const [answers, setAnswers] = useState<Record<string, ChoiceValue>>({
     trust: 'safe',
     evidence: 'safe',
@@ -94,6 +114,34 @@ export function SurvivalEndingTracker() {
   }, 0);
 
   const route = getRoute(riskScore);
+  const endingCandidate = riskScore >= 6 ? 'Ending #4 risk branch' : riskScore >= 3 ? 'Ending #2 / #3 mixed branch' : 'Ending #1 clean-route candidate';
+  const modeWarning = mode === 'Survival'
+    ? 'Survival Mode: treat this result as a commitment unless the game explicitly gives you a recovery path.'
+    : 'Explorer Mode: preserve this route, then test changes through Turning Points one variable at a time.';
+
+  const characterStates = characters.map((character, index) => {
+    const adjustedScore = riskScore + (index === 2 && answers.evidence !== 'safe' ? 1 : 0) + (index === 0 && answers.trust === 'fatal' ? 1 : 0);
+    if (adjustedScore >= character.thresholds.dead) {
+      return {
+        ...character,
+        state: mode === 'Survival' ? 'Death risk' : 'Route lost until rewind',
+        tone: 'danger',
+      };
+    }
+    if (adjustedScore >= character.thresholds.injured) {
+      return {
+        ...character,
+        state: 'Injury / separation risk',
+        tone: 'warning',
+      };
+    }
+    return {
+      ...character,
+      state: 'Stable for base route',
+      tone: 'safe',
+    };
+  });
+
   const routeStatus = useMemo(() => {
     return routeChecks.map((name, index) => {
       if (riskScore >= 6 && index > 1) return { name, state: 'Needs repair', icon: AlertTriangle };
@@ -115,7 +163,7 @@ export function SurvivalEndingTracker() {
               Interactive route feedback
             </p>
             <h2 id="survival-ending-tracker" className="text-xl font-bold text-foreground">
-              Directive 8020 Survival and Ending Tracker
+              Directive 8020 Survival and Ending Simulator
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
               Pick route assumptions and get immediate feedback. This is a
@@ -124,26 +172,80 @@ export function SurvivalEndingTracker() {
               saved for cleanup.
             </p>
           </div>
-          <button
-            type="button"
-            onClick={() => setAnswers({ trust: 'safe', evidence: 'safe', finale: 'safe' })}
-            className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-border/60 px-3 text-sm text-muted-foreground transition-colors hover:border-d8020/60 hover:text-foreground"
-          >
-            <RotateCcw className="h-4 w-4" />
-            Reset
-          </button>
+          <div className="flex flex-wrap gap-2">
+            {(['Explorer', 'Survival'] as PlayMode[]).map((item) => (
+              <button
+                key={item}
+                type="button"
+                onClick={() => setMode(item)}
+                className={`h-10 rounded-md border px-3 text-sm transition-colors ${
+                  mode === item
+                    ? 'border-d8020 bg-d8020/15 text-foreground'
+                    : 'border-border/60 text-muted-foreground hover:border-d8020/60 hover:text-foreground'
+                }`}
+              >
+                {item}
+              </button>
+            ))}
+            <button
+              type="button"
+              onClick={() => {
+                setAnswers({ trust: 'safe', evidence: 'safe', finale: 'safe' });
+                setMode('Explorer');
+              }}
+              className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-border/60 px-3 text-sm text-muted-foreground transition-colors hover:border-d8020/60 hover:text-foreground"
+            >
+              <RotateCcw className="h-4 w-4" />
+              Reset
+            </button>
+          </div>
         </div>
 
-        <div className={`mt-5 rounded-lg border p-4 ${
-          route.tone === 'safe'
-            ? 'border-green-400/40 bg-green-400/10'
-            : route.tone === 'warning'
-              ? 'border-yellow-400/40 bg-yellow-400/10'
-              : 'border-red-400/40 bg-red-400/10'
-        }`}>
-          <p className="text-sm font-bold text-foreground">{route.label}</p>
-          <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{route.feedback}</p>
+        <div className="mt-5 grid gap-3 lg:grid-cols-[1fr_1fr]">
+          <div className={`rounded-lg border p-4 ${
+            route.tone === 'safe'
+              ? 'border-green-400/40 bg-green-400/10'
+              : route.tone === 'warning'
+                ? 'border-yellow-400/40 bg-yellow-400/10'
+                : 'border-red-400/40 bg-red-400/10'
+          }`}>
+            <p className="text-sm font-bold text-foreground">{route.label}</p>
+            <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{route.feedback}</p>
+          </div>
+          <div className="rounded-lg border border-border/50 bg-background/35 p-4">
+            <p className="text-sm font-bold text-foreground">{endingCandidate}</p>
+            <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{modeWarning}</p>
+          </div>
         </div>
+      </div>
+
+      <div className="grid gap-3 p-4 sm:grid-cols-5">
+        {characterStates.map((character) => (
+          <div
+            key={character.id}
+            className={`rounded-lg border p-3 text-center ${
+              character.tone === 'safe'
+                ? 'border-green-400/40 bg-green-400/10'
+                : character.tone === 'warning'
+                  ? 'border-yellow-400/40 bg-yellow-400/10'
+                  : 'border-red-400/40 bg-red-400/10'
+            }`}
+          >
+            <div className="relative mx-auto mb-3 h-16 w-16 overflow-hidden rounded-lg border border-white/10 bg-black">
+              <Image src={character.avatar} alt={character.alt} fill className="object-cover" sizes="64px" />
+            </div>
+            {character.tone === 'danger' ? (
+              <Skull className="mx-auto mb-2 h-5 w-5 text-red-300" />
+            ) : character.tone === 'warning' ? (
+              <AlertTriangle className="mx-auto mb-2 h-5 w-5 text-yellow-300" />
+            ) : (
+              <UserRoundCheck className="mx-auto mb-2 h-5 w-5 text-green-300" />
+            )}
+            <p className="text-sm font-semibold text-foreground">{character.character}</p>
+            <p className="text-xs text-muted-foreground">{character.role}</p>
+            <p className="mt-2 text-xs font-medium text-foreground">{character.state}</p>
+          </div>
+        ))}
       </div>
 
       <div className="grid gap-3 p-4 sm:grid-cols-5">
@@ -186,6 +288,16 @@ export function SurvivalEndingTracker() {
             </div>
           </fieldset>
         ))}
+      </div>
+
+      <div className="border-t border-border/50 p-4">
+        <p className="text-xs leading-relaxed text-muted-foreground">
+          Found a route mismatch? Email{' '}
+          <a href="mailto:stephen@enjoy4game.com" className="text-d8020 underline underline-offset-4">
+            stephen@enjoy4game.com
+          </a>{' '}
+          with the mode, choice combination, episode, and Story Tree node.
+        </p>
       </div>
     </section>
   );

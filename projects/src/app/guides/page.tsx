@@ -110,6 +110,14 @@ const allGuides = [
     image: '/d8020-screenshot-04.jpg',
   },
   {
+    href: '/directive-8020-mimic-detection-survival-guide',
+    title: 'Mimic Detection Survival Guide',
+    description: 'Interactive suspicion tracker for isolation clues, memory gaps, Explorer Mode, and Survival Mode trust decisions.',
+    tag: 'Tool',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/official-mimic-scene.jpg',
+  },
+  {
     href: '/directive-8020-death-scenes-guide',
     title: 'All 44 Death Scenes',
     description: 'Death checklist with chapter triggers, victims, avoid methods, and Turning Points recovery.',

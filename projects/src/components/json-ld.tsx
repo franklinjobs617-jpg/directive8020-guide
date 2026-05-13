@@ -81,6 +81,32 @@ export function generateFAQSchema(faqs: { question: string; answer: string }[]) 
   };
 }
 
+export function generateHowToSchema({
+  name,
+  description,
+  url,
+  steps,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  steps: { name: string; text: string }[];
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description,
+    url,
+    step: steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+    })),
+  };
+}
+
 export function generateBreadcrumbSchema(
   items: { name: string; url: string }[]
 ) {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Breadcrumb } from '@/components/breadcrumb';
 import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
-import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
+import { JsonLd, generateArticleSchema, generateFAQSchema, generateHowToSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 import { TrophyProgressTracker } from '@/components/tools/trophy-progress-tracker';
@@ -100,6 +100,32 @@ export default function TrophyGuidePage() {
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
+      <JsonLd
+        data={generateHowToSchema({
+          name: 'How to plan Directive 8020 trophy cleanup',
+          description:
+            'A conservative trophy cleanup route for Directive 8020 using one clean route, Turning Points, endings, deaths, collectibles, and final platform checks.',
+          url: '/directive-8020-trophy-guide',
+          steps: [
+            {
+              name: 'Complete one full route',
+              text: 'Finish one natural playthrough and record deaths, endings, collectibles, and major Story Tree branches.',
+            },
+            {
+              name: 'Build a save-everyone base',
+              text: 'Use Turning Points to repair deaths and preserve a clean survivor route before destructive trophy cleanup.',
+            },
+            {
+              name: 'Branch for endings and deaths',
+              text: 'Change one late-game variable at a time so each ending or death result can be verified.',
+            },
+            {
+              name: 'Finish collectibles and platform checks',
+              text: 'Complete Secrets, Simms Recordings, O Death Secrets, Heirlooms, mode checks, and verified platform trophy names.',
+            },
+          ],
+        })}
+      />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Trophy Guide' }]} />

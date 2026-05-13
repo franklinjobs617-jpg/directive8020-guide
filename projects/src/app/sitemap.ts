@@ -149,6 +149,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/directive-8020-mimic-detection-survival-guide`,
+      lastModified: '2026-05-13',
+      changeFrequency: 'weekly',
+      priority: 0.88,
+    },
+    {
       url: `${BASE_URL}/directive-8020-trophy-guide`,
       lastModified: '2026-05-13',
       changeFrequency: 'weekly',

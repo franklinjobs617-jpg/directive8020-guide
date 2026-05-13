@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Breadcrumb } from '@/components/breadcrumb';
 import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
+import { crewPortraitHero, directiveCharacters } from '@/lib/directive-8020-characters';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Characters - Cast, Crew & Survival Roles',
@@ -37,30 +39,6 @@ const faqs = [
   },
 ];
 
-const characterNotes = [
-  {
-    name: 'Young',
-    role: 'Astronaut / major story character',
-    actor: 'Lashana Lynch',
-    guideValue:
-      'Treat Young as a central decision maker. When the story asks you to choose between crew safety and mission pressure, track how her choices affect trust and access to later branches.',
-  },
-  {
-    name: 'The Cassiopeia Crew',
-    role: 'Playable survivor group',
-    actor: 'Ensemble cast',
-    guideValue:
-      'The crew structure is built for survival routing. Keep notes on who witnesses suspicious behavior, who separates from the group, and who has information that can verify another person.',
-  },
-  {
-    name: 'The Mimic',
-    role: 'Alien infiltrator',
-    actor: 'Threat system',
-    guideValue:
-      'The mimic should be treated like a character in your decision map. Every trust choice should be logged with what the suspect knew, where they appeared, and who was alone before the scene.',
-  },
-];
-
 const suspicionChecklist = [
   'A character appears immediately after being separated from the group.',
   'Someone gives a vague answer to a detail they should know.',
@@ -79,15 +57,15 @@ export default function CharactersPage() {
             'Meet the Directive 8020 characters and Cassiopeia crew, including Lashana Lynch as Young, crew roles, mimic threat, and survival notes.',
           url: '/directive-8020-characters',
           datePublished: '2026-05-10',
-          dateModified: '2026-05-12',
-          imageUrl: '/d8020-screenshot-03.jpg',
+          dateModified: '2026-05-13',
+          imageUrl: crewPortraitHero,
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Characters' }]} />
-        <PageHero src="/d8020-screenshot-03.jpg" alt="Directive 8020 official screenshot of Young" />
+        <PageHero src={crewPortraitHero} alt="Directive 8020 official playable Cassiopeia crew portraits" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 Characters
@@ -109,7 +87,7 @@ export default function CharactersPage() {
           <h2>Confirmed Cast and Character Information</h2>
           <p>
             The most clearly confirmed cast detail is <strong>Lashana Lynch as
-            Young</strong>. Official Steam copy describes Young as a
+            Brianna Young</strong>. Official Steam copy describes Young as a
             ground-breaking astronaut and uses her role to frame the game&apos;s
             cinematic storytelling. Because Directive 8020 is choice-driven,
             expect Young&apos;s route to be central to both story decisions and
@@ -124,33 +102,56 @@ export default function CharactersPage() {
           </p>
 
           <ArticleImage
-            src="/d8020-screenshot-01.jpg"
-            alt="Directive 8020 official Cassiopeia crew screenshot"
+            src={crewPortraitHero}
+            alt="Directive 8020 official Cassiopeia playable crew portraits"
             caption="The Cassiopeia crew is the center of every survival route. For character guides, record who is present, who leaves, and who returns with unverifiable information."
           />
         </div>
 
-        <div className="my-8 grid gap-4">
-          {characterNotes.map((char) => (
+        <div className="my-8 grid gap-4 sm:grid-cols-2">
+          {directiveCharacters.map((char) => (
             <section
-              key={char.name}
-              className="rounded-lg border border-border/50 bg-card/30 p-5"
+              key={char.id}
+              className="overflow-hidden rounded-lg border border-border/50 bg-card/30"
             >
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between mb-3">
-                <div>
-                  <h2 className="text-lg font-bold text-foreground">{char.name}</h2>
-                  <p className="text-xs text-muted-foreground">{char.role}</p>
+              <div className="grid sm:grid-cols-[140px_1fr]">
+                <div className="relative min-h-40 bg-black">
+                  <Image
+                    src={char.avatar}
+                    alt={char.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 140px"
+                  />
                 </div>
-                <span className="w-fit text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded border text-d8020 bg-d8020/15 border-d8020/30">
-                  {char.actor}
-                </span>
+                <div className="p-5">
+                  <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <h2 className="text-lg font-bold text-foreground">{char.character}</h2>
+                      <p className="text-xs text-muted-foreground">{char.role}</p>
+                    </div>
+                    <span className="w-fit rounded border border-d8020/30 bg-d8020/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-d8020">
+                      {char.actor}
+                    </span>
+                  </div>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {char.guideValue}
+                  </p>
+                </div>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {char.guideValue}
-              </p>
             </section>
           ))}
         </div>
+
+        <section className="my-8 rounded-lg border border-d8020/40 bg-d8020/10 p-5">
+          <h2 className="text-lg font-bold text-foreground">The Mimic</h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            Treat the mimic like a route variable, not a normal enemy entry.
+            Every trust choice should record what the suspect knew, where they
+            appeared, who witnessed them, and whether they were alone before
+            the scene.
+          </p>
+        </section>
 
         <div className="prose-game">
           <h2>How Character Survival Works</h2>
