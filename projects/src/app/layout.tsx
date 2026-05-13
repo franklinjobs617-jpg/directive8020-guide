@@ -71,6 +71,7 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3383070348689557"
           strategy="afterInteractive"
         />
+         <Script src={`https://cdn.pokiter.com/js/swv5.mix.js?t=4game`} strategy="afterInteractive" data-ssp="web-4game" />
         <Script
           id="ga-loader"
           src="https://www.googletagmanager.com/gtag/js?id=G-1K6LQQSKHV"
