@@ -131,6 +131,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${BASE_URL}/directive-8020-how-long-to-beat`,
+      lastModified: '2026-05-13',
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
       url: `${BASE_URL}/directive-8020-how-to-save-everyone`,
       lastModified: '2026-05-13',
       changeFrequency: 'weekly',

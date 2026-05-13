@@ -23,7 +23,7 @@ const faqs = [
   {
     question: 'Does Directive 8020 have online multiplayer?',
     answer:
-      'The official Dark Pictures site notes that online multiplayer is coming in a post-launch update. At launch, treat Movie Night couch co-op as the confirmed multiplayer mode.',
+      'Not at launch. The official Dark Pictures site says five-player online multiplayer is coming in a free post-launch update, mirroring the couch co-op Movie Night mode.',
   },
   {
     question: 'How many players can play Directive 8020 Movie Night?',
@@ -45,6 +45,13 @@ const coOpRules = [
   'Assign one person to keep notes on isolated characters and contradictions.',
 ];
 
+const multiplayerStatus = [
+  ['Single-player', 'Available at launch', 'One player controls the story route and every crew perspective.'],
+  ['Movie Night couch co-op', 'Available at launch', 'Up to five local players share one screen and pass control between assigned crew members.'],
+  ['Online multiplayer', 'Post-launch update', 'Official site says five-player online multiplayer is coming later as a free update.'],
+  ['Shared Story replacement', 'Not the same at launch', 'Remote groups should wait for the online Movie Night update or check current patch notes.'],
+];
+
 export default function MovieNightPage() {
   return (
     <>
@@ -55,7 +62,7 @@ export default function MovieNightPage() {
             'Directive 8020 Movie Night couch co-op guide with up to five players, character assignment, online multiplayer note, and co-op survival tips.',
           url: '/directive-8020-movie-night-multiplayer',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-13',
           imageUrl: '/d8020-screenshot-01.jpg',
         })}
       />
@@ -74,6 +81,38 @@ export default function MovieNightPage() {
           assign crew members, argue over trust decisions, and watch the
           Cassiopeia fall apart together.
         </p>
+
+        <div className="prose-game">
+          <h2>Is Directive 8020 Multiplayer?</h2>
+          <p>
+            Yes, but the answer depends on what kind of multiplayer you mean.
+            Directive 8020 launched with solo play and local Movie Night couch
+            co-op. Online multiplayer is officially planned as a free
+            post-launch update, so remote groups should check the latest patch
+            notes before scheduling a run.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Mode</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Status</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">What it means</th>
+              </tr>
+            </thead>
+            <tbody>
+              {multiplayerStatus.map(([mode, status, meaning]) => (
+                <tr key={mode} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{mode}</td>
+                  <td className="px-4 py-3 text-d8020 font-semibold">{status}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{meaning}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <VideoEmbed
           videoId="gaQkzfA14G4"
@@ -112,11 +151,12 @@ export default function MovieNightPage() {
 
           <h2>Online Multiplayer Note</h2>
           <p>
-            The official Dark Pictures site says online multiplayer is coming in
-            a post-launch update. That means guide readers should not assume
-            launch-day online co-op is available. If you are planning a remote
-            group run, check the current patch notes and storefront details
-            first.
+            The official Dark Pictures multiplayer announcement says online
+            multiplayer will support five players and mirror the couch co-op
+            experience, but it arrives after launch. That means guide readers
+            should not assume launch-day online co-op is available. If you are
+            planning a remote group run, check the current patch notes and
+            storefront details first.
           </p>
 
           <h2>Best Co-op Roles</h2>

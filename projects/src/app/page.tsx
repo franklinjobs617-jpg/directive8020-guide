@@ -24,6 +24,7 @@ const guideLibraries = [
     links: [
       ['All Endings Guide', '/directive-8020-all-endings'],
       ['Cycle 13 Explained', '/directive-8020-cycle-13-explained'],
+      ['How Long to Beat', '/directive-8020-how-long-to-beat'],
       ['Come True Walkthrough', '/directive-8020-come-true-walkthrough'],
       ['Choices & Consequences', '/directive-8020-choices-consequences'],
       ['All 44 Death Scenes', '/directive-8020-death-scenes-guide'],
@@ -139,6 +140,16 @@ const trendingSearches = [
     answer: 'Cycle 13 is finale spoiler content best read after finishing Come True once.',
     href: '/directive-8020-cycle-13-explained',
   },
+  {
+    query: 'how long is directive 8020',
+    answer: 'One route takes about 8 hours; all major outcomes and cleanup can take around 30 hours.',
+    href: '/directive-8020-how-long-to-beat',
+  },
+  {
+    query: 'directive 8020 length',
+    answer: 'The game has 8 episodes, from Little Star through Come True, with replay time driven by endings and collectibles.',
+    href: '/directive-8020-how-long-to-beat',
+  },
 ];
 
 const episodeRoutes = [
@@ -176,6 +187,12 @@ const postLaunchRoutes = [
     body: 'Spoiler-aware explanation for Cycle 13, Booster Ring, Cassiopeia outcome, and Eisele Destiny.',
     href: '/directive-8020-cycle-13-explained',
     image: '/review/review-final-episode.webp',
+  },
+  {
+    title: 'How Long to Beat',
+    body: '8-hour main route, 30-hour completion estimate, all 8 episodes, and replay planning.',
+    href: '/directive-8020-how-long-to-beat',
+    image: '/review/review-episodes-1-4-turning-points-flowchart.webp',
   },
 ];
 
@@ -339,6 +356,11 @@ const answerGroups = [
         q: 'Does Directive 8020 have a Platinum trophy?',
         a: 'Treat Platinum status as pending until trusted PS5 trophy data is captured; use the trophy list page for the current roadmap.',
         href: '/directive-8020-trophy-list',
+      },
+      {
+        q: 'How long is Directive 8020?',
+        a: 'Plan about 8 hours for one route and around 30 hours for all major outcomes and cleanup.',
+        href: '/directive-8020-how-long-to-beat',
       },
     ],
   },

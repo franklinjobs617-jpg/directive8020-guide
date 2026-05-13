@@ -15,6 +15,7 @@ const LABEL_PATHS: Record<string, string> = {
   'Deluxe Edition': '/directive-8020-deluxe-edition',
   'O Death Secrets': '/directive-8020-o-death-secrets-curator',
   'Cycle 13 Explained': '/directive-8020-cycle-13-explained',
+  'How Long to Beat': '/directive-8020-how-long-to-beat',
   'How to Save Everyone': '/directive-8020-how-to-save-everyone',
   'Movie Night Multiplayer': '/directive-8020-movie-night-multiplayer',
   Overview: '/directive-8020-overview',

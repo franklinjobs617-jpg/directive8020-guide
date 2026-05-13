@@ -174,6 +174,14 @@ const allGuides = [
     image: '/review/review-final-episode.webp',
   },
   {
+    href: '/directive-8020-how-long-to-beat',
+    title: 'How Long to Beat',
+    description: '8-hour main story, 30-hour completion estimate, 8 episodes, and replay planning.',
+    tag: 'Length',
+    tagColor: 'text-d8020 bg-d8020/15 border-d8020/30',
+    image: '/review/review-episodes-1-4-turning-points-flowchart.webp',
+  },
+  {
     href: '/directive-8020-come-true-walkthrough',
     title: 'Come True Walkthrough',
     description: 'Episode 8 finale route priorities, final-state tracking, endings setup, and cleanup.',

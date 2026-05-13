@@ -70,7 +70,7 @@ export default function DeluxeEditionPage() {
             'Directive 8020 Deluxe Edition guide covering Digital Deluxe content, Heirlooms Retrieval, outfits, filters, artbook, soundtrack, and value.',
           url: '/directive-8020-deluxe-edition',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-13',
           imageUrl: '/d8020-screenshot-08.jpg',
         })}
       />
@@ -89,6 +89,19 @@ export default function DeluxeEditionPage() {
           soundtrack content, which makes it relevant for collectible hunters
           and Dark Pictures fans.
         </p>
+
+        <div className="rounded-lg border border-d8020/35 bg-d8020/10 p-5 mb-8">
+          <p className="text-xs font-semibold uppercase tracking-wider text-d8020 mb-2">
+            Quick Answer
+          </p>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            The Directive 8020 Deluxe Edition is worth considering if you want
+            the <strong className="text-foreground">Heirlooms Retrieval</strong>
+            bonus mission, Dark Pictures outfits, extra collectibles, cinematic
+            filters, digital artbook, and soundtrack. For one blind story run,
+            the base game is usually enough.
+          </p>
+        </div>
 
         <VideoEmbed
           videoId="gaQkzfA14G4"
@@ -113,6 +126,18 @@ export default function DeluxeEditionPage() {
               <p className="text-sm text-muted-foreground leading-relaxed">{item.value}</p>
             </section>
           ))}
+        </div>
+
+        <div className="prose-game">
+          <h2>Deluxe Edition Source Check</h2>
+          <p>
+            Steam localized store data and the official Dark Pictures launch
+            post both describe the Deluxe upgrade as a content bundle, not a
+            separate story season. The clearest gameplay addition is the
+            Heirlooms Retrieval mission / extra Dark Pictures collectibles; the
+            outfits, filters, artbook, and soundtrack are presentation or
+            collector extras.
+          </p>
         </div>
 
         <div className="prose-game">

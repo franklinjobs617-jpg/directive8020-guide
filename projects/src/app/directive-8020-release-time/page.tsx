@@ -23,7 +23,12 @@ const faqs = [
   {
     question: 'Does Directive 8020 release on the same day for console?',
     answer:
-      'The official release date is May 12, 2026 for PlayStation 5, Xbox Series X|S, and PC. Console store unlocks can follow local storefront timing, so use your PlayStation or Xbox countdown as the final source for console access.',
+      'Yes. Directive 8020 released on May 12, 2026 for PlayStation 5, Xbox Series X|S, and PC. Console store unlocks can follow local storefront timing, so use your PlayStation or Xbox store page as the final source for console access.',
+  },
+  {
+    question: 'Is Directive 8020 on the PlayStation Store?',
+    answer:
+      'Yes. Official Dark Pictures pages link to PlayStation Store availability for the PS5 version, and the game is available now after its May 12, 2026 launch.',
   },
   {
     question: 'What is included in the Directive 8020 Digital Deluxe upgrade?',
@@ -67,7 +72,7 @@ export default function ReleaseTimePage() {
             'Directive 8020 release time by region, Steam unlock conversion, Deluxe Edition content, and launch-day checklist.',
           url: '/directive-8020-release-time',
           datePublished: '2026-05-10',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-13',
           imageUrl: '/d8020-screenshot-08.jpg',
         })}
       />
@@ -85,6 +90,19 @@ export default function ReleaseTimePage() {
           unlock is listed for 14:00 UTC, which puts the game live during the
           morning in North America and late evening in China and Japan.
         </p>
+
+        <div className="rounded-lg border border-d8020/35 bg-d8020/10 p-5 mb-8">
+          <p className="text-xs font-semibold uppercase tracking-wider text-d8020 mb-2">
+            Post-launch status
+          </p>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Directive 8020 is now available on
+            <strong className="text-foreground"> Steam, PlayStation 5, and Xbox Series X|S</strong>.
+            This page remains useful for players checking historical unlock
+            time, PlayStation Store release wording, Deluxe upgrade contents,
+            or platform availability.
+          </p>
+        </div>
 
         <VideoEmbed
           videoId="gaQkzfA14G4"
@@ -143,6 +161,15 @@ export default function ReleaseTimePage() {
             <strong>Xbox Series X|S</strong>, and <strong>PC via Steam</strong>.
             It is a current-generation release, with no PS4 or Xbox One version
             listed on official storefronts.
+          </p>
+
+          <h2>PlayStation Store Release</h2>
+          <p>
+            For the search query "Directive 8020 PlayStation Store release,"
+            the direct answer is that the PS5 version launched on May 12, 2026.
+            If the PlayStation Store page shows a different local unlock,
+            download, or edition message in your region, trust the storefront
+            because console access can be region and account dependent.
           </p>
 
           <h2>Pre-Order and Digital Deluxe Content</h2>

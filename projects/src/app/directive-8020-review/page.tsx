@@ -29,7 +29,17 @@ const faqs = [
   {
     question: 'What score did Directive 8020 get?',
     answer:
-      'Media scores are mixed-to-positive overall, with stronger reviews praising atmosphere and branching systems and lower reviews criticizing stealth, pacing, or execution. This page uses a provisional Guide Hub score of 7.8/10.',
+      'Metacritic lists Directive 8020 as Mixed or Average with a 72 Metascore on PS5 as of May 13, 2026. This page uses a provisional Guide Hub score of 7.8/10.',
+  },
+  {
+    question: 'What is the Directive 8020 Metacritic score?',
+    answer:
+      'Metacritic shows a 72 PS5 Metascore, plus 73 on PC and 72 on Xbox Series X as of May 13, 2026. Scores can move as more reviews are indexed.',
+  },
+  {
+    question: 'Is this a Directive 8020 test or review?',
+    answer:
+      'This is a review-style buying guide and score roundup. It is not a lab benchmark, but it does compare media scores, performance concerns, platform notes, replay value, and whether the game is worth buying.',
   },
   {
     question: 'Does Directive 8020 have Chinese language support?',
@@ -59,8 +69,8 @@ const faqs = [
 ];
 
 const mediaScores = [
+  { outlet: 'Metacritic', score: '72 PS5 / 73 PC / 72 Xbox', note: 'Mixed or Average; platform pages checked May 13, 2026', href: 'https://www.metacritic.com/game/directive-8020/' },
   { outlet: 'OpenCritic', score: '76 avg / ~62% recommended', note: 'Broadly positive but not unanimous consensus', href: 'https://opencritic.com/' },
-  { outlet: 'Metacritic', score: '~71-72 average', note: 'Mixed or average media reception reported around launch', href: 'https://www.metacritic.com/game/directive-8020/' },
   { outlet: 'IGN', score: '8/10', note: 'Praised the stronger series direction and sci-fi setup', href: 'https://www.ign.com/' },
   { outlet: 'PC Gamer', score: '85/100', note: 'One of the more positive review scores reported', href: 'https://www.pcgamer.com/' },
   { outlet: 'GameSpot', score: '5/10 reported impression', note: 'More critical of execution and gameplay friction', href: 'https://www.gamespot.com/' },
@@ -113,7 +123,7 @@ export default function Directive8020ReviewPage() {
             'Directive 8020 review with media scores, pros and cons, Turning Points analysis, story, performance, replay value, and buying advice.',
           url: '/directive-8020-review',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-13',
           imageUrl: '/review/review-little-star.webp',
         })}
       />
@@ -151,11 +161,23 @@ export default function Directive8020ReviewPage() {
         <StatusPanel
           items={[
             { label: 'Guide Hub score', value: '7.8/10 provisional review score', status: 'working' },
-            { label: 'Media consensus', value: 'Mixed-to-positive, with scores ranging from critical to very positive', status: 'working' },
+            { label: 'Metacritic status', value: '72 PS5 Metascore, Mixed or Average, checked May 13, 2026', status: 'verified' },
+            { label: 'Media consensus', value: 'Mixed-to-positive, with scores ranging from critical to very positive', status: 'verified' },
             { label: 'Full route verification', value: 'Still needs complete in-game capture for endings, deaths, and trophies', status: 'needs-check' },
             { label: 'Best audience', value: 'Dark Pictures fans, sci-fi horror fans, completionists, and branch-route players', status: 'verified' },
           ]}
         />
+
+        <div className="prose-game">
+          <h2>Directive 8020 Metacritic, Test, and Review Scores</h2>
+          <p>
+            Players are searching for "Directive 8020 Metacritic" and "test
+            Directive 8020" because the launch reception is not unanimous. Use
+            score aggregators as a temperature check, then read the reason:
+            positive reviews usually praise the sci-fi premise and branching
+            systems, while lower reviews focus on stealth, pacing, or execution.
+          </p>
+        </div>
 
         <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-8">
           <table className="w-full text-sm">

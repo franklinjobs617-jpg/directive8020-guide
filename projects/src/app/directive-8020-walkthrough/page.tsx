@@ -461,6 +461,7 @@ export default function WalkthroughPage() {
             <li><a href="/directive-8020-collectibles-heirlooms">Collectibles &amp; Heirlooms</a></li>
             <li><a href="/directive-8020-o-death-secrets-curator">O Death Secrets &amp; Curator</a></li>
             <li><a href="/directive-8020-cycle-13-explained">Cycle 13 Explained</a></li>
+            <li><a href="/directive-8020-how-long-to-beat">How Long to Beat</a></li>
           </ul>
         </div>
 
@@ -475,6 +476,11 @@ export default function WalkthroughPage() {
               href: '/directive-8020-turning-points-story-tree',
               title: 'Turning Points & Story Tree',
               description: 'Use rewinds correctly instead of replaying the full game.',
+            },
+            {
+              href: '/directive-8020-how-long-to-beat',
+              title: 'How Long to Beat',
+              description: 'Plan an 8-hour first route or a 30-hour completion cleanup.',
             },
             {
               href: '/directive-8020-stealth-guide',
