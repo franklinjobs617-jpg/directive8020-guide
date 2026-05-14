@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Breadcrumb } from '@/components/breadcrumb';
 import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
+import { crewPortraitHero, directiveCharacters } from '@/lib/directive-8020-characters';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Cast and Actors - Brianna Young, Stafford, Eisele & Crew',
@@ -43,43 +45,7 @@ const faqs = [
   },
 ];
 
-const playableCrew = [
-  {
-    character: 'Brianna Young',
-    actor: 'Lashana Lynch',
-    role: 'Pilot / co-pilot of the Cassiopeia',
-    status: 'Confirmed lead cast signal',
-    guideValue: 'Track Young as a central route anchor for trust choices, leadership tension, and survival planning.',
-  },
-  {
-    character: 'Nolan Stafford',
-    actor: 'Danny Sapani',
-    role: 'Commander of the Cassiopeia',
-    status: 'Reported cast signal',
-    guideValue: 'Track Stafford for command decisions, mission pressure, and crew relationship consequences.',
-  },
-  {
-    character: 'Laura Eisele',
-    actor: 'Actor to verify',
-    role: 'Senior Mission Officer / mission architect',
-    status: 'Character confirmed, actor pending',
-    guideValue: 'Track Eisele for ship systems, technical decisions, and evidence connected to the Cassiopeia.',
-  },
-  {
-    character: 'Dr. Samantha Cooper',
-    actor: 'Actor to verify',
-    role: 'Medical specialist',
-    status: 'Character confirmed, actor pending',
-    guideValue: 'Track Cooper for rescue routes, injury outcomes, medical choices, and survival branches.',
-  },
-  {
-    character: 'Josef Cernan',
-    actor: 'Actor to verify',
-    role: 'Technical engineer',
-    status: 'Character confirmed, actor pending',
-    guideValue: 'Track Cernan for repairs, ship access, mechanical route locks, and crew support choices.',
-  },
-];
+const playableCrew = directiveCharacters;
 
 const widerCrew = [
   ['Noah Mitchell', 'Pilot / flight crew', 'Non-playable or supporting status should be verified in route capture.'],
@@ -120,15 +86,15 @@ export default function CastActorsPage() {
             'Directive 8020 cast and actors guide covering Lashana Lynch as Brianna Young, Danny Sapani as Stafford, the five playable Cassiopeia crew members, and voice cast verification.',
           url: '/directive-8020-cast-actors',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-12',
-          imageUrl: '/characters-lineup.jpg',
+          dateModified: '2026-05-13',
+          imageUrl: crewPortraitHero,
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Cast and Actors' }]} />
-        <PageHero src="/characters-lineup.jpg" alt="Directive 8020 Cassiopeia crew cast lineup" />
+        <PageHero src={crewPortraitHero} alt="Directive 8020 official Cassiopeia playable crew portraits" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
           Directive 8020 Cast and Actors
@@ -172,6 +138,27 @@ export default function CastActorsPage() {
           </p>
         </div>
 
+        <div className="my-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          {playableCrew.map((member) => (
+            <section key={member.id} className="overflow-hidden rounded-lg border border-border/50 bg-card/30">
+              <div className="relative aspect-square bg-black">
+                <Image
+                  src={member.avatar}
+                  alt={member.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 180px"
+                />
+              </div>
+              <div className="p-3">
+                <h2 className="text-sm font-bold text-foreground">{member.character}</h2>
+                <p className="mt-1 text-[10px] font-semibold uppercase tracking-wider text-d8020">{member.status}</p>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{member.role}</p>
+              </div>
+            </section>
+          ))}
+        </div>
+
         <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
           <table className="w-full text-sm">
             <thead>
@@ -186,8 +173,15 @@ export default function CastActorsPage() {
               {playableCrew.map((member) => (
                 <tr key={member.character} className="border-b border-border/30 last:border-0">
                   <td className="px-4 py-3 align-top">
-                    <p className="font-semibold text-foreground">{member.character}</p>
-                    <p className="mt-1 text-[10px] uppercase tracking-wider text-d8020">{member.status}</p>
+                    <div className="flex items-center gap-3">
+                      <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-md border border-border/50 bg-black">
+                        <Image src={member.avatar} alt={member.alt} fill className="object-cover" sizes="48px" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">{member.character}</p>
+                        <p className="mt-1 text-[10px] uppercase tracking-wider text-d8020">{member.status}</p>
+                      </div>
+                    </div>
                   </td>
                   <td className="px-4 py-3 align-top text-muted-foreground">{member.actor}</td>
                   <td className="px-4 py-3 align-top text-muted-foreground">{member.role}</td>
@@ -214,7 +208,7 @@ export default function CastActorsPage() {
           </p>
 
           <ArticleImage
-            src="/official-young-character.jpg"
+            src="/characters/brianna-young-portrait.webp"
             alt="Directive 8020 Brianna Young character image"
             caption="Brianna Young is the strongest confirmed cast anchor for Directive 8020 searches, so her actor, role, and route value should stay consistent across character pages."
           />

@@ -17,6 +17,7 @@ const LABEL_PATHS: Record<string, string> = {
   'Cycle 13 Explained': '/directive-8020-cycle-13-explained',
   'How Long to Beat': '/directive-8020-how-long-to-beat',
   'How to Save Everyone': '/directive-8020-how-to-save-everyone',
+  'Mimic Detection': '/directive-8020-mimic-detection-survival-guide',
   'Movie Night Multiplayer': '/directive-8020-movie-night-multiplayer',
   Overview: '/directive-8020-overview',
   'Release Time': '/directive-8020-release-time',

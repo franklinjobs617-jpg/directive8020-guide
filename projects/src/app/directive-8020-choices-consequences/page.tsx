@@ -5,6 +5,7 @@ import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
 import { BlufBox, RelatedGuides } from '@/components/guide-blocks';
+import { MimicDetector } from '@/components/tools/mimic-detector';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 All Choices & Consequences - Decision Map',
@@ -196,6 +197,11 @@ export default function ChoicesConsequencesPage() {
             <li>If a person wants you alone, look for a group-safe alternative.</li>
             <li>If two accounts conflict, preserve both witnesses until you can verify.</li>
           </ul>
+        </div>
+
+        <MimicDetector />
+
+        <div className="prose-game">
 
           <h2>Consequences Worth Tracking</h2>
           <p>
@@ -251,6 +257,11 @@ export default function ChoicesConsequencesPage() {
               href: '/directive-8020-all-endings',
               title: 'All Endings',
               description: 'Use choice branches to test finale outcomes and ending explanations.',
+            },
+            {
+              href: '/directive-8020-mimic-detection-survival-guide',
+              title: 'Mimic Detection',
+              description: 'Rank suspicion clues before trusting an isolated crew member.',
             },
             {
               href: '/directive-8020-walkthrough',

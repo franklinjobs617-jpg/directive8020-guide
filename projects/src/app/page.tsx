@@ -27,6 +27,7 @@ const guideLibraries = [
       ['How Long to Beat', '/directive-8020-how-long-to-beat'],
       ['Come True Walkthrough', '/directive-8020-come-true-walkthrough'],
       ['Choices & Consequences', '/directive-8020-choices-consequences'],
+      ['Mimic Detection Tool', '/directive-8020-mimic-detection-survival-guide'],
       ['All 44 Death Scenes', '/directive-8020-death-scenes-guide'],
       ['Cast & Actors', '/directive-8020-cast-actors'],
       ['Characters & Crew Roles', '/directive-8020-characters'],
@@ -129,6 +130,11 @@ const trendingSearches = [
     query: 'directive 8020 how many endings',
     answer: 'Launch review coverage reports 5 substantial endings; route names still need Story Tree capture.',
     href: '/directive-8020-all-endings',
+  },
+  {
+    query: 'directive 8020 mimic',
+    answer: 'Use the Mimic Detector to rank isolation, memory, timeline, and evidence clues before trusting a crew member.',
+    href: '/directive-8020-mimic-detection-survival-guide',
   },
   {
     query: 'directive 8020 o death secrets',
@@ -283,6 +289,13 @@ const cornerstoneArticles = [
     body: 'Lashana Lynch as Brianna Young, Danny Sapani as Stafford, five playable crew members, and cast verification notes.',
     href: '/directive-8020-cast-actors',
     image: '/characters-lineup.jpg',
+  },
+  {
+    label: 'Tool',
+    title: 'Mimic Detection Survival Guide',
+    body: 'Rank suspicious clue patterns, compare Explorer and Survival Mode risk, and avoid unsafe solo trust branches.',
+    href: '/directive-8020-mimic-detection-survival-guide',
+    image: '/official-mimic-scene.jpg',
   },
   {
     label: 'Mechanics',
