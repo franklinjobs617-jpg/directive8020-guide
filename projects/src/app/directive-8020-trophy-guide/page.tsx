@@ -6,6 +6,7 @@ import { JsonLd, generateArticleSchema, generateFAQSchema, generateHowToSchema }
 import { ArticleImage } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 import { TrophyProgressTracker } from '@/components/tools/trophy-progress-tracker';
+import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Trophy & Achievement Guide - Full List & Unlock Tips',
@@ -161,6 +162,7 @@ export default function TrophyGuidePage() {
           ]}
         />
 
+        <MyProgressPanel />
         <TrophyProgressTracker />
 
         <div className="prose-game">

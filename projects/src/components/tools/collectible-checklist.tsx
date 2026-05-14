@@ -72,6 +72,7 @@ function readStoredItems(): string[] {
 export function CollectibleChecklist() {
   const [checked, setChecked] = useState<string[]>([]);
   const [filter, setFilter] = useState('All');
+  const [missingOnly, setMissingOnly] = useState(false);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -85,8 +86,34 @@ export function CollectibleChecklist() {
   }, [checked, ready]);
 
   const checkedSet = useMemo(() => new Set(checked), [checked]);
-  const visibleItems = collectibles.filter((item) => filter === 'All' || item.type === filter || item.episode === filter);
+  const visibleItems = collectibles.filter((item) => {
+    const matchesFilter = filter === 'All' || item.type === filter || item.episode === filter;
+    const matchesMissing = !missingOnly || !checkedSet.has(item.id);
+    return matchesFilter && matchesMissing;
+  });
   const percent = Math.round((checked.length / collectibles.length) * 100);
+  const typeProgress = [
+    {
+      label: 'Normal Secrets',
+      done: collectibles.filter((item) => item.type === 'Normal Secret' && checkedSet.has(item.id)).length,
+      total: 50,
+    },
+    {
+      label: 'Simms Recordings',
+      done: collectibles.filter((item) => item.type === 'Simms Recording' && checkedSet.has(item.id)).length,
+      total: 10,
+    },
+    {
+      label: 'O Death Secrets',
+      done: collectibles.filter((item) => item.type === 'O Death Secret' && checkedSet.has(item.id)).length,
+      total: 5,
+    },
+    {
+      label: 'Deluxe',
+      done: collectibles.filter((item) => item.type === 'Heirloom' && checkedSet.has(item.id)).length,
+      total: 1,
+    },
+  ];
 
   function toggle(id: string) {
     setChecked((current) =>
@@ -143,21 +170,45 @@ export function CollectibleChecklist() {
           </div>
         </div>
 
-        <div className="mt-4 flex gap-2 overflow-x-auto pb-1">
-          {filters.map((item) => (
-            <button
-              key={item}
-              type="button"
-              onClick={() => setFilter(item)}
-              className={`shrink-0 rounded-md border px-3 py-2 text-sm transition-colors ${
-                filter === item
-                  ? 'border-d8020 bg-d8020/15 text-foreground'
-                  : 'border-border/50 text-muted-foreground hover:border-d8020/50 hover:text-foreground'
-              }`}
-            >
-              {item}
-            </button>
+        <div className="mt-4 grid gap-2 sm:grid-cols-4">
+          {typeProgress.map((item) => (
+            <div key={item.label} className="rounded-md border border-border/50 bg-background/35 p-3">
+              <p className="text-xs text-muted-foreground">{item.label}</p>
+              <p className="mt-1 text-sm font-semibold text-foreground">
+                {item.done} / {item.total}
+              </p>
+            </div>
           ))}
+        </div>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          <div className="flex gap-2 overflow-x-auto pb-1">
+            {filters.map((item) => (
+              <button
+                key={item}
+                type="button"
+                onClick={() => setFilter(item)}
+                className={`shrink-0 rounded-md border px-3 py-2 text-sm transition-colors ${
+                  filter === item
+                    ? 'border-d8020 bg-d8020/15 text-foreground'
+                    : 'border-border/50 text-muted-foreground hover:border-d8020/50 hover:text-foreground'
+                }`}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={() => setMissingOnly((current) => !current)}
+            className={`rounded-md border px-3 py-2 text-sm transition-colors ${
+              missingOnly
+                ? 'border-green-400/50 bg-green-400/10 text-green-200'
+                : 'border-border/50 text-muted-foreground hover:border-d8020/50 hover:text-foreground'
+            }`}
+          >
+            Missing only
+          </button>
         </div>
       </div>
 

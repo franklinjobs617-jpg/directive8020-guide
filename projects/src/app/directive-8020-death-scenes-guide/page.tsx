@@ -6,6 +6,7 @@ import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/j
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 import { DeathSceneTracker } from '@/components/tools/death-scene-tracker';
+import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 All 44 Death Scenes Checklist',
@@ -103,6 +104,7 @@ export default function DeathScenesPage() {
           caption="Gameplay footage is useful for spotting death-risk systems: stealth pressure, QTE timing, mimic encounters, and Story Tree recovery."
         />
 
+        <MyProgressPanel />
         <DeathSceneTracker />
 
         <div className="prose-game">

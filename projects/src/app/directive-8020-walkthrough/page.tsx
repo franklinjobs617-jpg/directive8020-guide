@@ -5,6 +5,8 @@ import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
+import { EpisodeNavigator } from '@/components/tools/episode-navigator';
+import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Walkthrough - Full Episode Guide & Routes',
@@ -199,6 +201,35 @@ const routePriorities = [
   ['Survival Mode route', 'Accept that consequences are final; use this only after learning prompt timing and route risks.'],
 ];
 
+const navigatorEpisodes = knownEpisodes.map((episode, index) => ({
+  id: episode.id,
+  title: episode.title,
+  href: episode.href,
+  focus: episode.focus,
+  qte:
+    index === 3
+      ? 'Stealth and chase pressure'
+      : index >= 6
+        ? 'Finale timing checks'
+        : 'Prompt timing and route notes',
+  collectible:
+    index >= 7
+      ? 'Final sweep before ending'
+      : index >= 4
+        ? 'Route-locked evidence check'
+        : 'Search before objective exit',
+  turningPoint:
+    index >= 6
+      ? 'Change one finale variable'
+      : 'Record branch before replay',
+  time:
+    index === 0
+      ? 'First-run calibration'
+      : index >= 6
+        ? 'Ending cleanup'
+        : 'Route mapping',
+}));
+
 export default function WalkthroughPage() {
   return (
     <>
@@ -247,6 +278,9 @@ export default function WalkthroughPage() {
             { label: 'Late chapter titles', value: 'Episodes 5-8 are Mr. Williams, Hostile Takeover, Revelation, and Come True.', status: 'verified' },
           ]}
         />
+
+        <MyProgressPanel />
+        <EpisodeNavigator episodes={navigatorEpisodes} />
 
         <VideoEmbed
           videoId="gaQkzfA14G4"
