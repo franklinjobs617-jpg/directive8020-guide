@@ -6,6 +6,7 @@ import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/j
 import { ArticleImage } from '@/components/article-media';
 import { BlufBox, RelatedGuides } from '@/components/guide-blocks';
 import { MimicDetector } from '@/components/tools/mimic-detector';
+import { ChoiceImpactFilter } from '@/components/tools/choice-impact-filter';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 All Choices & Consequences - Decision Map',
@@ -117,6 +118,8 @@ export default function ChoicesConsequencesPage() {
             stealth outcomes, evidence, and finale choices.
           </p>
         </BlufBox>
+
+        <ChoiceImpactFilter />
 
         <div className="prose-game">
           <h2>Do Choices Matter in Directive 8020?</h2>

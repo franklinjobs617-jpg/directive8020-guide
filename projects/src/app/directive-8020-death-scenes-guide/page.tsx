@@ -5,6 +5,7 @@ import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
+import { DeathSceneTracker } from '@/components/tools/death-scene-tracker';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 All 44 Death Scenes Checklist',
@@ -101,6 +102,8 @@ export default function DeathScenesPage() {
           title="Directive 8020 gameplay trailer for death route context"
           caption="Gameplay footage is useful for spotting death-risk systems: stealth pressure, QTE timing, mimic encounters, and Story Tree recovery."
         />
+
+        <DeathSceneTracker />
 
         <div className="prose-game">
           <h2>How to Use This Checklist</h2>

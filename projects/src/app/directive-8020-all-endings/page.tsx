@@ -6,6 +6,7 @@ import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/j
 import { ArticleImage } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 import { SurvivalEndingTracker } from '@/components/tools/survival-ending-tracker';
+import { EndingIndex } from '@/components/tools/ending-index';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 All Endings Guide - How Many Endings & Routes',
@@ -136,6 +137,7 @@ export default function AllEndingsPage() {
         </div>
 
         <SurvivalEndingTracker />
+        <EndingIndex />
 
         <div className="prose-game">
           <h2>How to Read the Tracker</h2>

@@ -4,6 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
+import { FixChecklist } from '@/components/tools/fix-checklist';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Crashing, Black Screen & Performance Fix',
@@ -88,7 +89,11 @@ export default function CrashingFixPage() {
               <li key={fix}>{fix}</li>
             ))}
           </ul>
+        </div>
 
+        <FixChecklist />
+
+        <div className="prose-game">
           <h2>Fix: Crashes on Startup</h2>
           <ol>
             <li>Confirm your PC meets the official minimum: RTX 2060 / RX 5700, 16 GB RAM, and Windows 10/11 64-bit.</li>
