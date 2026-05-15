@@ -80,6 +80,14 @@ const redditDemandRows = [
   ['Failed QTEs', 'Treat failed QTEs and stealth mistakes as choice consequences because they can injure, separate, or kill characters.'],
 ];
 
+const transcriptChoiceExamples = [
+  ['Consult Oracle or act fast', 'Early breach response', 'Asking Oracle for data gives safer context before moving into damaged ship systems.', 'Evidence choice'],
+  ['Wake the crew or inspect first', 'Opening lockdown/breach route', 'Who knows about the breach can affect later witness and trust context.', 'Communication choice'],
+  ['Detain or trust Williams', 'Mid-game identity confusion', 'Scanner, witness, and timeline evidence should come before letting a returned character move freely.', 'Trust choice'],
+  ['Rescue through hazard or hold position', 'Hydroponics and fire-control pressure', 'Physical rescue choices should be tracked separately from suspicion and QTE performance.', 'Rescue choice'],
+  ['Send distress or send warning', 'Finale message decision', 'This is a mission-priority choice: crew survival, Andromeda risk, and Earth contamination are different variables.', 'Ending choice'],
+];
+
 export default function ChoicesConsequencesPage() {
   return (
     <>
@@ -90,7 +98,7 @@ export default function ChoicesConsequencesPage() {
             'Directive 8020 choices and consequences guide with mimic trust checks, relationship logic, Story Tree branches, and Turning Points strategy.',
           url: '/directive-8020-choices-consequences',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-13',
+          dateModified: '2026-05-15',
           imageUrl: '/d8020-screenshot-04.jpg',
         })}
       />
@@ -140,6 +148,39 @@ export default function ChoicesConsequencesPage() {
                 <tr key={question} className="border-b border-border/30 last:border-0">
                   <td className="px-4 py-3 text-foreground font-medium w-44">{question}</td>
                   <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="prose-game">
+          <h2>Concrete Choice Examples from the Full-Game Transcript</h2>
+          <p>
+            The transcript gives useful route examples without needing to copy
+            dialogue. Use these as categories when you decide whether a choice
+            is flavor text, a trust branch, a rescue branch, or an ending
+            condition.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Scene</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">What happens</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player action</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Choice type</th>
+              </tr>
+            </thead>
+            <tbody>
+              {transcriptChoiceExamples.map(([scene, whatHappens, action, type]) => (
+                <tr key={scene} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{scene}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{whatHappens}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{action}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{type}</td>
                 </tr>
               ))}
             </tbody>

@@ -20,7 +20,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     alt: 'Directive 8020 Little Star episode walkthrough image',
     videoId: 'gaQkzfA14G4',
     intro:
-      'Little Star is Directive 8020 Episode 1 and works as the player calibration chapter. Use it to learn the interface, QTE rhythm, early crew dynamics, and the first signs that ordinary tension and mimic suspicion are not the same thing.',
+      'Little Star is Directive 8020 Episode 1 and works as the player calibration chapter. The full-game transcript frames the mission around a dying Earth, the Cassiopeia survey route to Tau Ceti f, the colony ship Andromeda, Oracle, an early hull breach, and the first scanner tutorial beats.',
     bluf:
       'Play carefully, explore safe spaces, and write down who is present before any separation. This episode is less about solving everything and more about creating a clean baseline for later branches.',
     verifiedSummary: 'GamesRadar lists Little Star as Episode 1 in the eight-episode structure.',
@@ -28,19 +28,21 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     spoilerNote: 'This guide avoids late-ending spoilers and focuses on replay-safe tracking.',
     facts: [
       { label: 'Episode position', value: 'Episode 1 of 8.' },
-      { label: 'Primary purpose', value: 'Tutorial, tone setup, crew baseline, and first route tracking.' },
+      { label: 'Primary purpose', value: 'Tutorial, tone setup, crew baseline, mission premise, and first route tracking.' },
+      { label: 'Transcript route evidence', value: 'Opening scenes establish Earth decline, Tau Ceti f, Andromeda support, Oracle reporting, a deck breach, and scanner tracing.' },
       { label: 'Best first-run goal', value: 'Finish without rushing and document the first Story Tree-relevant decisions.' },
       { label: 'Image / video', value: 'Uses local episode art plus official trailer video context.' },
     ],
     checklist: [
       { step: 'Opening scenes', doThis: 'Set subtitles, brightness, and QTE comfort before committing to long scenes.', why: 'Episode 1 teaches the controls and prevents avoidable prompt failures later.' },
-      { step: 'Crew introductions', doThis: 'Record who is together, who separates, and who has useful knowledge.', why: 'Later trust checks depend on memory, witnesses, and location context.' },
-      { step: 'Exploration', doThis: 'Inspect nearby crew and ship spaces before triggering objective exits.', why: 'Early evidence and logs create a baseline for contradictions.' },
+      { step: 'Mission briefing', doThis: 'Record the Cassiopeia objective, Andromeda connection, Oracle status report, and the first breach location.', why: 'These details become the baseline for later mission-priority and contamination choices.' },
+      { step: 'Crew introductions', doThis: 'Record who is together, who separates, and who has useful knowledge, especially Carter, Sims, and ship-system context.', why: 'Later trust checks depend on memory, witnesses, and location context.' },
+      { step: 'Scanner tutorial', doThis: 'Use the scanner to trace live wires, terminals, and blocked routes instead of rushing through the breach repair path.', why: 'The transcript shows scanner use as an early navigation and evidence skill, not just a late stealth tool.' },
       { step: 'After the episode', doThis: 'Open the Story Tree and mark any Turning Point or locked path.', why: 'This turns the first run into useful replay data.' },
     ],
     collectibles: [
       'Search personal and ship-status spaces before following major objectives.',
-      'Record any collectible that explains the Cassiopeia crew, mission condition, or early suspicion.',
+      'Record any collectible that explains the Cassiopeia crew, mission condition, Corinth messaging, Oracle behavior, or early suspicion.',
       'If the Story Tree marks a branch, note whether the collectible was found before that branch.',
     ],
     routeWarnings: commonWarnings,
@@ -192,7 +194,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     alt: 'Directive 8020 Mr. Williams mid-game walkthrough image',
     videoId: '7nTCMOt_-Bw',
     intro:
-      'Mr. Williams is Directive 8020 Episode 5 and marks the point where your earlier survivor state and evidence notes start to matter more. Treat it as a mid-game audit before the late chapters narrow the route.',
+      'Mr. Williams is Directive 8020 Episode 5 and marks the point where earlier survivor state, evidence notes, and corporate suspicion start to matter more. Transcript route notes point to Williams, encrypted Oracle access, organic scanning, and a dangerous return-after-death style identity check.',
     bluf:
       'Before replaying, list every living character, every major clue, and every unresolved suspicion. The value of this chapter is knowing what earlier choices have already locked in.',
     verifiedSummary: 'GamesRadar lists Mr. Williams as Episode 5.',
@@ -201,18 +203,20 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     facts: [
       { label: 'Episode position', value: 'Episode 5 of 8.' },
       { label: 'Primary purpose', value: 'Bridge early evidence into late-game branch testing.' },
+      { label: 'Transcript route evidence', value: 'Williams becomes tied to suspicious behavior, possible death-state confusion, secure storage, scanner testing, and Oracle-linked files.' },
       { label: 'Best first-run goal', value: 'Audit survivor state before changing any prior choices.' },
       { label: 'Replay priority', value: 'Work backward from visible deaths or locked branches.' },
     ],
     checklist: [
       { step: 'Route audit', doThis: 'List alive, dead, injured, separated, and suspected characters.', why: 'Mid-game scenes can reflect earlier choices rather than current dialogue only.' },
-      { step: 'Evidence audit', doThis: 'Check what proof you have before accusations or rescues.', why: 'Evidence can make a dangerous trust decision safer.' },
+      { step: 'Evidence audit', doThis: 'Check what proof you have before accusations, detainment, or rescue decisions involving Williams.', why: 'Evidence can make a dangerous trust decision safer and prevents guessing from panic.' },
+      { step: 'Identity check', doThis: 'Use scanner, witness, body-location, and timeline clues before deciding whether a returned character is safe.', why: 'The transcript emphasizes confusion around Williams being seen dead and then physically present again.' },
       { step: 'NPC notes', doThis: 'Track supporting character deaths separately from playable survivor deaths.', why: 'NPC outcomes can still alter scene context and player questions.' },
       { step: 'Replay plan', doThis: 'Change one earlier Turning Point and return to compare the result.', why: 'Episode 5 is a good place to confirm cascading consequences.' },
     ],
     collectibles: [
       'Check mid-game accessible spaces before the route narrows.',
-      'Log any item that explains Williams, corporate pressure, or mission context.',
+      'Log any item that explains Williams, corporate pressure, Oracle access, encrypted files, or mission context.',
       'Use the collectible page for exact item count and O Death cleanup.',
     ],
     routeWarnings: commonWarnings,
@@ -235,7 +239,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     alt: 'Directive 8020 Hostile Takeover episode walkthrough image',
     videoId: '9CtX9O7nZeQ',
     intro:
-      'Hostile Takeover is Directive 8020 Episode 6 and one of the highest-value chapters for route testing. Who is alive, trusted, or missing by now can change how much of the late game you see.',
+      'Hostile Takeover is Directive 8020 Episode 6 and one of the highest-value chapters for route testing. The transcript highlights hydroponics damage, fire or liquid-oxygen danger, rescue pressure, antenna repair limits, and suspicion that can reshape late-game trust.',
     bluf:
       'Do not rush this chapter. Preserve a clean save-everyone base, then test alternate survivor and trust states from Turning Points after you understand the default route.',
     verifiedSummary: 'GamesRadar lists Hostile Takeover as Episode 6.',
@@ -244,18 +248,20 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     facts: [
       { label: 'Episode position', value: 'Episode 6 of 8.' },
       { label: 'Primary purpose', value: 'Move from mid-game fallout into ending-condition setup.' },
+      { label: 'Transcript route evidence', value: 'Hydroponics, fire control, antenna repair, Williams suspicion, and group containment logic create route-critical rescue pressure.' },
       { label: 'Best first-run goal', value: 'Keep survivor state stable and document all route-dependent scenes.' },
       { label: 'Replay priority', value: 'Test survivor-dependent branches after preserving one clean route.' },
     ],
     checklist: [
       { step: 'Survivor check', doThis: 'Compare who is alive against the route you expected.', why: 'Episode 6 can expose earlier deaths or missed rescues.' },
+      { step: 'Hydroponics crisis', doThis: 'Treat locked doors, fire control, oxygen hazards, and rescue timing as separate route variables.', why: 'The transcript shows this sequence mixing physical danger with suspicion and communications pressure.' },
       { step: 'Trust check', doThis: 'Verify isolated characters before following or saving them.', why: 'Late-game mimic logic makes blind trust riskier.' },
       { step: 'Action scenes', doThis: 'Treat QTE and stealth results as survival-critical.', why: 'Mechanical failures can close ending paths.' },
       { step: 'Branch notes', doThis: 'Write down any scene that only appears because a character is alive.', why: 'These become high-value ending and trophy notes.' },
     ],
     collectibles: [
       'Search late-game accessible rooms before route exits.',
-      'Pay attention to environmental evidence tied to the Cassiopeia and mission state.',
+      'Pay attention to environmental evidence tied to hydroponics, antenna repairs, Oracle, the Cassiopeia, and mission state.',
       'Mark any collectible that requires a specific survivor or branch.',
     ],
     routeWarnings: commonWarnings,
@@ -278,7 +284,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     alt: 'Directive 8020 Revelation episode walkthrough image',
     videoId: 'S1wyl5-8E7E',
     intro:
-      'Revelation is Directive 8020 Episode 7 and the last major setup chapter before the finale. Players should treat every survivor state, mission decision, and 50-50 style choice as ending-sensitive.',
+      'Revelation is Directive 8020 Episode 7 and the last major setup chapter before the finale. Transcript route notes point to the clone/cycle reveal, neural upload context, Williams and Oracle disclosures, and the shift from survival horror into mission-truth decisions.',
     bluf:
       'Keep one best-ending base route intact. Use Revelation to document final survivor state and mission context before branching into Come True.',
     verifiedSummary: 'GamesRadar lists Revelation as Episode 7.',
@@ -287,18 +293,20 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     facts: [
       { label: 'Episode position', value: 'Episode 7 of 8.' },
       { label: 'Primary purpose', value: 'Prepare finale branches and preserve mission-critical information.' },
+      { label: 'Transcript route evidence', value: 'The late reveal connects copied memories, synthetic bodies, a chain of Cassiopeia missions, Earth knowledge, Corinth, and Oracle protocols.' },
       { label: 'Best first-run goal', value: 'Do not experiment randomly; document exact state entering the finale.' },
       { label: 'Replay priority', value: 'Test late choices one at a time from Story Tree nodes.' },
     ],
     checklist: [
       { step: 'Final state log', doThis: 'Record survivors, deaths, injuries, evidence, and unresolved suspicion.', why: 'The finale needs a clean state snapshot.' },
+      { step: 'Truth reveal', doThis: 'Separate clone/cycle facts from character reactions and mission choices in your notes.', why: 'The reveal changes interpretation, but ending routes still depend on playable decisions and survivor state.' },
       { step: 'Choice discipline', doThis: 'Change one late decision at a time during replays.', why: 'Revelation choices can become hard to interpret if you stack changes.' },
       { step: 'Mission context', doThis: 'Track ship, Earth, Cassiopeia, and crew priorities separately.', why: 'Ending value may depend on more than survivor count.' },
       { step: 'Collectibles', doThis: 'Check for late route-locked items before moving into Come True.', why: 'Finale cleanup is easier if the collectible route is already clear.' },
     ],
     collectibles: [
       'Look for late-game evidence before irreversible finale transitions.',
-      'Separate story explanation clues from trophy collectibles.',
+      'Separate story explanation clues, Oracle records, cycle evidence, and trophy collectibles.',
       'If an item appears only with a survivor alive, note that condition.',
     ],
     routeWarnings: commonWarnings,
@@ -321,7 +329,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     alt: 'Directive 8020 Come True finale walkthrough image',
     videoId: 'S1wyl5-8E7E',
     intro:
-      'Come True is Directive 8020 Episode 8 and the finale chapter. Use this walkthrough to preserve your final route state, understand what to record before the ending, and prepare for Cycle 13, Booster Ring, O Death, and all-ending cleanup.',
+      'Come True is Directive 8020 Episode 8 and the finale chapter. Use this walkthrough to preserve your final route state, compare distress-signal and warning logic, understand Andromeda contamination risk, and prepare for Cycle 13, Booster Ring, O Death, and all-ending cleanup.',
     bluf:
       'Record the final state before the last decisions: survivors, deaths, mimic status, evidence, O Death progress, and mission outcome. Then use late Turning Points for alternate endings.',
     verifiedSummary: 'GamesRadar lists Come True as Episode 8 and the final chapter.',
@@ -330,12 +338,14 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     facts: [
       { label: 'Episode position', value: 'Episode 8 of 8.' },
       { label: 'Primary purpose', value: 'Resolve the route and define ending outcomes.' },
+      { label: 'Transcript route evidence', value: 'Finale scenes frame the key conflict as rescue versus warning, Andromeda safety, Earth contamination risk, and the deeper cycle/truth reveal.' },
       { label: 'Best first-run goal', value: 'Finish once, record ending state, then branch from late Turning Points.' },
       { label: 'Replay priority', value: 'Use late branches for endings, O Death cleanup, and missed final-state tests.' },
     ],
     checklist: [
       { step: 'Before final choices', doThis: 'Write down survivors, deaths, evidence, and O Death progress.', why: 'This explains which ending or variant you reached.' },
-      { step: 'Finale decisions', doThis: 'Treat mission, crew, and Earth stakes as separate variables.', why: 'Ending meaning is not only survivor count.' },
+      { step: 'Finale decisions', doThis: 'Treat rescue, warning, crew survival, Andromeda safety, and Earth contamination risk as separate variables.', why: 'Ending meaning is not only survivor count.' },
+      { step: 'Truth context', doThis: 'Record whether the route exposes clone/cycle information, Corinth involvement, and one-way mission implications.', why: 'The transcript shows that finale interpretation depends on information state as much as the final action.' },
       { step: 'After credits', doThis: 'Record the ending name or outcome and any unlocked Story Tree branches.', why: 'This is the base for all-ending cleanup.' },
       { step: 'Replay cleanup', doThis: 'Branch from the closest late Turning Point and change one final condition.', why: 'This is faster than replaying the whole game.' },
     ],
@@ -346,6 +356,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     ],
     routeWarnings: [
       'Come True is finale content; expect ending-adjacent spoilers.',
+      'Do not treat the distress-signal choice and the warning choice as simple good-versus-bad options; log contamination, Andromeda, Earth, and crew-state consequences separately.',
       'Do not overwrite your clean route until you have recorded the final survivor and mission state.',
       ...commonWarnings,
     ],

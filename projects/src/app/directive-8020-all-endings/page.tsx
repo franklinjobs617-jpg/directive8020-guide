@@ -68,6 +68,14 @@ const spoilerTopics = [
   ['Eisele Destiny', 'A character-specific route flag that can affect how players understand finale outcomes and best-ending cleanup.'],
 ];
 
+const transcriptEndingRows = [
+  ['Distress signal', 'The finale transcript frames rescue as a possible way to reach Andromeda or outside help.', 'Record contamination risk and what the crew knows before treating rescue as good.', 'High'],
+  ['Warning message', 'The alternate logic is to warn Andromeda away if the ship or crew may carry alien matter.', 'Track this as an Earth-protection condition, not just a sacrifice option.', 'High'],
+  ['Andromeda risk', 'The rescue vessel matters because saving the Cassiopeia crew can also expose another crew.', 'Record whether the ending protects the crew, Andromeda, Earth, or evidence.', 'High'],
+  ['Cycle truth', 'Late scenes describe copied memories, synthetic bodies, repeat missions, and Corinth or Earth knowledge.', 'Use Cycle 13 notes to interpret the ending after recording the visible outcome.', 'High'],
+  ['Oracle protocols', 'Oracle is tied to mission truth, distress management, and late-story protocol options.', 'Track whether Oracle data was accessed, trusted, resisted, or used as evidence.', 'Medium'],
+];
+
 const endingRouteRows = [
   { step: 'Best ending base', doThis: 'Keep all core crew alive, preserve evidence, and avoid unverified trust choices.', why: 'Best endings in this genre usually require survivor count plus correct finale conditions.' },
   { step: 'Bad ending test', doThis: 'Branch from late Turning Points and alter only one major survivor or mission choice.', why: 'This identifies which condition changes the ending without replay noise.' },
@@ -85,7 +93,7 @@ export default function AllEndingsPage() {
             'Directive 8020 all endings guide with reported ending count, Story Tree tracking, Turning Points strategy, best ending principles, and route checklist.',
           url: '/directive-8020-all-endings',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-13',
+          dateModified: '2026-05-15',
           imageUrl: '/d8020-screenshot-06.jpg',
         })}
       />
@@ -173,6 +181,40 @@ export default function AllEndingsPage() {
                   <td className="px-4 py-3 text-foreground font-medium">{item}</td>
                   <td className="px-4 py-3 text-muted-foreground">{count}</td>
                   <td className="px-4 py-3 text-muted-foreground">{meaning}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="prose-game">
+          <h2>Transcript-Based Finale Conditions</h2>
+          <p>
+            The full-game transcript makes the finale easier to map because it
+            separates the final outcome into message choice, survivor state,
+            contamination risk, Andromeda safety, Oracle information, and the
+            cycle reveal. These notes are spoiler-heavy and should be used after
+            one completed route.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Transcript evidence</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">What happens</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it matters</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Spoiler level</th>
+              </tr>
+            </thead>
+            <tbody>
+              {transcriptEndingRows.map(([evidence, whatHappens, why, spoilerLevel]) => (
+                <tr key={evidence} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{evidence}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{whatHappens}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{why}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{spoilerLevel}</td>
                 </tr>
               ))}
             </tbody>

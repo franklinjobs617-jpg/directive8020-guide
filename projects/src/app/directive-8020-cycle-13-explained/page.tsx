@@ -52,6 +52,14 @@ const sourceRows = [
   ['TechRadar Turning Points interview', 'Why Story Tree replay exists for keeping characters alive and all-ending cleanup.', 'https://www.techradar.com/gaming/directive-8020-executive-producer-says-the-turning-points-system-was-added-for-players-who-want-to-keep-everyone-alive-but-also-for-a-big-percentage-of-our-hardcore-fans-that-will-replay-the-game-to-get-all-endings'],
 ];
 
+const transcriptRevealRows = [
+  ['Memory copy', 'Late transcript scenes describe personalities and memories being copied before the mission route begins.', 'Explains why identity is more complicated than simple human-versus-alien suspicion.'],
+  ['Synthetic bodies', 'The reveal connects those copied memories to replacement bodies used during the mission cycle.', 'Track survivor state separately from original-person identity when explaining endings.'],
+  ['Chain of missions', 'The transcript points to more than one Cassiopeia-style mission rather than a single rescue follow-up.', 'Cycle 13 should be interpreted as a repeat-program topic, not only one ending label.'],
+  ['Earth and Corinth knowledge', 'Late disclosures suggest powerful groups knew more about the life form and mission risk than the crew did.', 'Adds motive context for warnings, rescue denial, and one-way mission implications.'],
+  ['Oracle protocol', 'Oracle appears tied to late truth management and distress response.', 'Record whether the player saw Oracle data before judging a finale route.'],
+];
+
 export default function Cycle13ExplainedPage() {
   return (
     <>
@@ -62,7 +70,7 @@ export default function Cycle13ExplainedPage() {
             'Directive 8020 Cycle 13 explained with spoiler-aware context for the ending, Booster Ring, Cassiopeia outcome, Eisele Destiny, and Story Tree cleanup.',
           url: '/directive-8020-cycle-13-explained',
           datePublished: '2026-05-13',
-          dateModified: '2026-05-13',
+          dateModified: '2026-05-15',
           imageUrl: '/review/review-endings-comparison-flowchart.webp',
         })}
       />
@@ -125,6 +133,37 @@ export default function Cycle13ExplainedPage() {
                 <tr key={topic} className="border-b border-border/30 last:border-0">
                   <td className="px-4 py-3 font-semibold text-foreground">{topic}</td>
                   <td className="px-4 py-3 text-muted-foreground">{type}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{use}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="prose-game">
+          <h2>What the Full-Game Transcript Adds</h2>
+          <p>
+            This is a spoiler-heavy interpretation section. The transcript
+            supports a clearer Cycle 13 explanation by separating the reveal
+            into memory copying, synthetic bodies, repeat missions, Earth and
+            Corinth knowledge, and Oracle protocols.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Transcript evidence</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">What happens</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Guide use</th>
+              </tr>
+            </thead>
+            <tbody>
+              {transcriptRevealRows.map(([evidence, whatHappens, use]) => (
+                <tr key={evidence} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{evidence}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{whatHappens}</td>
                   <td className="px-4 py-3 text-muted-foreground">{use}</td>
                 </tr>
               ))}

@@ -53,6 +53,13 @@ const modeRows = [
   ['Movie Night', 'Assign one player to track suspicion clues so group debate does not erase important evidence.'],
 ];
 
+const transcriptIdentityRows = [
+  ['Returned after reported death', 'A character appears after the crew believes they saw a death or impossible body state.', 'Run scanner checks, compare witness accounts, and avoid solo trust until identity is verified.'],
+  ['Oracle-linked secrecy', 'A character or file path appears connected to hidden Oracle access or encrypted data.', 'Treat hidden access as evidence context, not instant proof of guilt.'],
+  ['Secure storage debate', 'The crew considers detaining a suspicious person while tests are prepared.', 'Record who supports containment, who resists it, and whether the organic scanner is ready.'],
+  ['Scanner damaged or unavailable', 'Late routes can remove easy verification tools.', 'Use witnesses, shared memories, timeline, and group-safe movement when scans are not available.'],
+];
+
 export default function MimicDetectionPage() {
   return (
     <>
@@ -63,7 +70,7 @@ export default function MimicDetectionPage() {
             'Directive 8020 mimic detection guide with an interactive suspicion tracker, isolation clues, trust checks, Explorer vs Survival Mode advice, and safe route planning.',
           url: '/directive-8020-mimic-detection-survival-guide',
           datePublished: '2026-05-13',
-          dateModified: '2026-05-13',
+          dateModified: '2026-05-15',
           imageUrl: '/official-mimic-scene.jpg',
         })}
       />
@@ -166,6 +173,37 @@ export default function MimicDetectionPage() {
                   <td className="px-4 py-3 font-semibold text-foreground">{clue}</td>
                   <td className="px-4 py-3 text-muted-foreground">{meaning}</td>
                   <td className="px-4 py-3 text-muted-foreground">{response}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="prose-game">
+          <h2>Transcript Identity-Check Examples</h2>
+          <p>
+            The full-game transcript gives several useful mimic-detection
+            patterns around Williams, scanner access, Oracle secrecy, and
+            containment debates. These examples do not name a guaranteed mimic;
+            they show how to decide when verification is required.
+          </p>
+        </div>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Scene</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">What happens</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {transcriptIdentityRows.map(([scene, whatHappens, action]) => (
+                <tr key={scene} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{scene}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{whatHappens}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{action}</td>
                 </tr>
               ))}
             </tbody>

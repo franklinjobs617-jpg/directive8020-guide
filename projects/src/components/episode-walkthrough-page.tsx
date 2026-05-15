@@ -54,7 +54,7 @@ export function EpisodeWalkthroughPage({ data }: { data: EpisodeWalkthroughData 
           description: data.description,
           url: `/${data.slug}`,
           datePublished: '2026-05-13',
-          dateModified: '2026-05-13',
+          dateModified: '2026-05-15',
           imageUrl: data.heroImage,
         })}
       />

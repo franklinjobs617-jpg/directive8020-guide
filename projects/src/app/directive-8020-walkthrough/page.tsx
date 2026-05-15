@@ -201,6 +201,15 @@ const routePriorities = [
   ['Survival Mode route', 'Accept that consequences are final; use this only after learning prompt timing and route risks.'],
 ];
 
+const transcriptRouteNotes = [
+  ['Opening mission', 'The transcript frames the Cassiopeia as a survey vessel sent from a dying Earth toward Tau Ceti f, with Andromeda positioned as the colony follow-up.', 'Record mission context before judging late rescue or warning choices.', 'Low'],
+  ['Early breach and Oracle', 'A hull breach, Oracle status reporting, lockdowns, and scanner tracing appear early in the route.', 'Treat scanner use and ship-system notes as core walkthrough data, not optional flavor.', 'Low'],
+  ['Williams suspicion', 'Mid-game scenes connect Williams with Oracle access, identity confusion, scanner checks, and corporate secrecy.', 'Verify returned or isolated characters through timeline, witnesses, and scan evidence.', 'Medium'],
+  ['Hydroponics / fire crisis', 'A later route mixes locked doors, fire control, oxygen danger, antenna repair limits, and rescue pressure.', 'Separate physical rescue timing from suspicion and communications outcomes.', 'Medium'],
+  ['Finale mission choice', 'Late scenes frame the route around distress signal versus warning, Andromeda safety, Earth contamination, and mission truth.', 'Log crew state, evidence state, and message choice before ending cleanup.', 'High'],
+  ['Cycle truth reveal', 'The late reveal connects copied memories, synthetic bodies, repeat missions, Corinth, Earth knowledge, and Oracle protocols.', 'Move detailed interpretation to Cycle 13 and all-endings pages.', 'High'],
+];
+
 const navigatorEpisodes = knownEpisodes.map((episode, index) => ({
   id: episode.id,
   title: episode.title,
@@ -240,7 +249,7 @@ export default function WalkthroughPage() {
             'Directive 8020 walkthrough with episode route notes, QTE and stealth tips, scanner use, collectibles, Turning Points, Destinies, endings prep, and spoiler-safe first-run advice.',
           url: '/directive-8020-walkthrough',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-13',
+          dateModified: '2026-05-15',
           imageUrl: '/d8020-screenshot-07.jpg',
         })}
       />
@@ -344,6 +353,40 @@ export default function WalkthroughPage() {
             extraction because every step has a condition and a reason.
           </p>
           <ActionTable rows={firstRunActions} />
+
+          <h2>Video Transcript Route Notes</h2>
+          <p>
+            A full-game no-commentary video transcript was used as a private
+            route evidence source for this update. Because automatic subtitles
+            can misspell names and places, the notes below are paraphrased and
+            treated as route context, not copied dialogue.
+          </p>
+        </div>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Scene</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">What happens</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player action</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Spoiler level</th>
+              </tr>
+            </thead>
+            <tbody>
+              {transcriptRouteNotes.map(([scene, whatHappens, playerAction, spoilerLevel]) => (
+                <tr key={scene} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{scene}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{whatHappens}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{playerAction}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{spoilerLevel}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="prose-game">
 
           <ArticleImage
             src="/d8020-screenshot-01.jpg"
