@@ -127,6 +127,31 @@ const trendingSearches = [
     href: '/directive-8020-cast-actors',
   },
   {
+    query: 'directive 8020 gameplay',
+    answer: 'Use the walkthrough, stealth guide, and official video center for gameplay, Story Tree, QTE, and route notes.',
+    href: '/directive-8020-walkthrough',
+  },
+  {
+    query: 'directive 8020 trailer',
+    answer: 'Watch the official trailer first, then use gameplay clips for Turning Points, stealth, and mimic context.',
+    href: '#video-center',
+  },
+  {
+    query: 'directive 8020 price',
+    answer: 'Check the Deluxe Edition page before buying; exact prices must be verified on Steam, PlayStation, or Xbox by region.',
+    href: '/directive-8020-deluxe-edition',
+  },
+  {
+    query: 'directive 8020 ps5 / xbox',
+    answer: 'PS5 and Xbox Series X|S are official platforms; PS5 Pro notes and Xbox status are covered in platform pages.',
+    href: '/directive-8020-review',
+  },
+  {
+    query: 'directive 8020 online co op',
+    answer: 'Movie Night couch co-op is available; online multiplayer is a post-launch feature to verify before a remote group run.',
+    href: '/directive-8020-movie-night-multiplayer',
+  },
+  {
     query: 'directive 8020 how many endings',
     answer: 'Launch review coverage reports 5 substantial endings; route names still need Story Tree capture.',
     href: '/directive-8020-all-endings',
@@ -513,7 +538,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+      <section id="video-center" className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="mb-6 flex items-center gap-3">
           <div className="h-1 w-8 rounded-full bg-d8020" />
           <div>

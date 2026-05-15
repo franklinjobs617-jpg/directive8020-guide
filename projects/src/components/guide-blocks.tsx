@@ -35,6 +35,19 @@ interface RelatedGuidesProps {
   guides: RelatedGuide[];
 }
 
+interface SourceCheckRow {
+  claim: string;
+  source: string;
+  status: 'verified' | 'needs-check' | 'working';
+  href: string;
+  note: string;
+}
+
+interface SourceCheckTableProps {
+  title?: string;
+  rows: SourceCheckRow[];
+}
+
 const statusStyles = {
   verified: 'text-green-400 bg-green-400/10 border-green-400/30',
   'needs-check': 'text-yellow-300 bg-yellow-300/10 border-yellow-300/30',
@@ -119,6 +132,44 @@ export function RelatedGuides({ guides }: RelatedGuidesProps) {
             <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{guide.description}</p>
           </Link>
         ))}
+      </div>
+    </section>
+  );
+}
+
+export function SourceCheckTable({ title = 'Source Check', rows }: SourceCheckTableProps) {
+  return (
+    <section className="my-8">
+      <h2 className="mb-3 text-lg font-bold text-foreground">{title}</h2>
+      <div className="overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Claim</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Source</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Status</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Guide use</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row) => (
+              <tr key={row.claim} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{row.claim}</td>
+                <td className="px-4 py-3">
+                  <a href={row.href} target="_blank" rel="noreferrer" className="text-d8020 hover:underline">
+                    {row.source}
+                  </a>
+                </td>
+                <td className="px-4 py-3">
+                  <span className={`inline-flex rounded border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${statusStyles[row.status]}`}>
+                    {statusLabels[row.status]}
+                  </span>
+                </td>
+                <td className="px-4 py-3 text-muted-foreground">{row.note}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </section>
   );

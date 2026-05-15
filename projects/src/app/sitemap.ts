@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
-      lastModified: '2026-05-10',
+      lastModified: '2026-05-15',
       changeFrequency: 'daily',
       priority: 1.0,
     },
@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/directive-8020-overview`,
-      lastModified: '2026-05-10',
+      lastModified: '2026-05-15',
       changeFrequency: 'weekly',
       priority: 0.8,
     },
@@ -48,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/directive-8020-review`,
-      lastModified: '2026-05-12',
+      lastModified: '2026-05-15',
       changeFrequency: 'weekly',
       priority: 0.9,
     },
@@ -66,13 +66,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/directive-8020-movie-night-multiplayer`,
-      lastModified: '2026-05-12',
+      lastModified: '2026-05-15',
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/directive-8020-deluxe-edition`,
-      lastModified: '2026-05-12',
+      lastModified: '2026-05-15',
       changeFrequency: 'weekly',
       priority: 0.8,
     },
@@ -114,7 +114,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/directive-8020-crashing-fix`,
-      lastModified: '2026-05-12',
+      lastModified: '2026-05-15',
       changeFrequency: 'weekly',
       priority: 0.9,
     },

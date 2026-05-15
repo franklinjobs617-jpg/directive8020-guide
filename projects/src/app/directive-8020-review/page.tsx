@@ -4,7 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
+import { BlufBox, RelatedGuides, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Review 2026 - Is It Worth Buying?',
@@ -70,11 +70,50 @@ const faqs = [
 
 const mediaScores = [
   { outlet: 'Metacritic', score: '72 PS5 / 73 PC / 72 Xbox', note: 'Mixed or Average; platform pages checked May 13, 2026', href: 'https://www.metacritic.com/game/directive-8020/' },
-  { outlet: 'OpenCritic', score: '76 avg / ~62% recommended', note: 'Broadly positive but not unanimous consensus', href: 'https://opencritic.com/' },
-  { outlet: 'IGN', score: '8/10', note: 'Praised the stronger series direction and sci-fi setup', href: 'https://www.ign.com/' },
-  { outlet: 'PC Gamer', score: '85/100', note: 'One of the more positive review scores reported', href: 'https://www.pcgamer.com/' },
-  { outlet: 'GameSpot', score: '5/10 reported impression', note: 'More critical of execution and gameplay friction', href: 'https://www.gamespot.com/' },
-  { outlet: 'TheSixthAxis', score: '9/10', note: 'Very positive, framed as one of the stronger anthology entries', href: 'https://www.thesixthaxis.com/' },
+  { outlet: 'OpenCritic', score: '76 avg / ~62% recommended', note: 'Broadly positive but not unanimous consensus', href: 'https://opencritic.com/game/18697/directive-8020' },
+  { outlet: 'IGN', score: '8/10', note: 'Praised the stronger series direction and sci-fi setup', href: 'https://www.ign.com/articles/directive-8020-review' },
+  { outlet: 'PC Gamer', score: '85/100', note: 'One of the more positive review scores reported', href: 'https://www.pcgamer.com/games/horror/directive-8020-review-one-giant-leap-for-sci-fi-body-horror/' },
+  { outlet: 'GameSpot', score: '5/10', note: 'More critical of execution and gameplay friction', href: 'https://www.gamespot.com/reviews/the-dark-pictures-anthology-has-never-been-more-adrift-directive-8020-review/1900-6418488/' },
+  { outlet: 'GamesRadar', score: '3/5', note: 'Found the stealth implementation inconsistent despite a strong premise', href: 'https://www.gamesradar.com/games/horror/directive-8020-review/' },
+  { outlet: 'TechRadar', score: '4/5', note: 'Highlighted ambition, Turning Points, and a more forgiving structure', href: 'https://www.techradar.com/gaming/directive-8020-review' },
+];
+
+const sourceRows = [
+  {
+    claim: 'Directive 8020 is available on PS5, Xbox Series X|S, and PC.',
+    source: 'Supermassive launch post',
+    status: 'verified' as const,
+    href: 'https://www.supermassivegames.com/news/directive-8020-live',
+    note: 'Use for launch status and platform facts in buying advice.',
+  },
+  {
+    claim: 'Official PC specs and Steam features are storefront-backed.',
+    source: 'Steam store',
+    status: 'verified' as const,
+    href: 'https://store.steampowered.com/app/2255370/Directive_8020/',
+    note: 'Use for PC requirements, achievements, controller support, and Deluxe content.',
+  },
+  {
+    claim: 'PS5 Pro enhancements include PSSR and ray tracing features.',
+    source: 'PlayStation Blog',
+    status: 'verified' as const,
+    href: 'https://blog.playstation.com/2026/03/25/elevate-your-mission-in-directive-8020-with-playstation-5-pro-enhancements-out-may-12/',
+    note: 'Use for PS5 Pro platform notes, not for PC or Xbox performance claims.',
+  },
+  {
+    claim: 'Review scores are mixed-to-positive, not unanimous.',
+    source: 'Metacritic / OpenCritic',
+    status: 'verified' as const,
+    href: 'https://www.metacritic.com/game/directive-8020/',
+    note: 'Use aggregator pages as score snapshots and update dates when values move.',
+  },
+  {
+    claim: 'Player sentiment includes praise and frustration around the series shift.',
+    source: 'Reddit review discussion',
+    status: 'working' as const,
+    href: 'https://www.reddit.com/r/DarkPicturesAnthology/search/?q=Directive%208020%20review&restrict_sr=1',
+    note: 'Use Reddit as player feedback context, not as factual score verification.',
+  },
 ];
 
 const buyAdvice = [
@@ -123,7 +162,7 @@ export default function Directive8020ReviewPage() {
             'Directive 8020 review with media scores, pros and cons, Turning Points analysis, story, performance, replay value, and buying advice.',
           url: '/directive-8020-review',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-13',
+          dateModified: '2026-05-15',
           imageUrl: '/review/review-little-star.webp',
         })}
       />
@@ -178,6 +217,8 @@ export default function Directive8020ReviewPage() {
             systems, while lower reviews focus on stealth, pacing, or execution.
           </p>
         </div>
+
+        <SourceCheckTable title="Review Source Check" rows={sourceRows} />
 
         <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-8">
           <table className="w-full text-sm">

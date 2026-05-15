@@ -5,6 +5,7 @@ import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
 import { FixChecklist } from '@/components/tools/fix-checklist';
+import { SourceCheckTable } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Crashing, Black Screen & Performance Fix',
@@ -47,6 +48,44 @@ const quickFixes = [
   'Reboot after installing drivers or redistributables.',
 ];
 
+const reportedIssues = [
+  ['PS5 trophy or achievement display delays', 'Community-reported', 'Do not assume trophies are permanently broken. Reboot, sync trophies, check patches, and wait before deleting saves.'],
+  ['Steam Remote Play / online co-op confusion', 'Community demand signal', 'Online multiplayer is post-launch; do not treat remote workarounds as official co-op support.'],
+  ['Controller prompt or input timing complaints', 'Troubleshooting pattern', 'Test wired input, Steam Input on/off, and accessibility timing before a serious save-everyone run.'],
+  ['Startup crash, black screen, low FPS, stutter', 'General PC troubleshooting', 'Use official PC specs and reversible PC fixes before reinstalling.'],
+];
+
+const sourceRows = [
+  {
+    claim: 'Official minimum PC baseline is RTX 2060 / RX 5700, 16 GB RAM, and 40 GB storage.',
+    source: 'Steam store',
+    status: 'verified' as const,
+    href: 'https://store.steampowered.com/app/2255370/Directive_8020/',
+    note: 'Use this to separate under-spec PCs from real bugs.',
+  },
+  {
+    claim: 'PS5, Xbox Series X|S, and PC are official launch platforms.',
+    source: 'Supermassive launch post',
+    status: 'verified' as const,
+    href: 'https://www.supermassivegames.com/news/directive-8020-live',
+    note: 'Use this for platform-specific troubleshooting sections.',
+  },
+  {
+    claim: 'Some launch problems are community-reported, not officially confirmed.',
+    source: 'Reddit issue search',
+    status: 'working' as const,
+    href: 'https://www.reddit.com/r/DarkPicturesAnthology/search/?q=Directive%208020%20bug&restrict_sr=1',
+    note: 'Keep reported issues labeled until reproduced or acknowledged by a patch note.',
+  },
+  {
+    claim: 'Players should report reproducible issues through official support channels.',
+    source: 'Bandai Namco support',
+    status: 'verified' as const,
+    href: 'https://support.bandainamcoent.com/',
+    note: 'Use for real bug escalation instead of guessing fixes.',
+  },
+];
+
 export default function CrashingFixPage() {
   return (
     <>
@@ -57,7 +96,7 @@ export default function CrashingFixPage() {
             'Fix Directive 8020 crashing, black screen, stuttering, low FPS, audio issues, controller problems, and launch-day troubleshooting.',
           url: '/directive-8020-crashing-fix',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-15',
           imageUrl: '/d8020-screenshot-02.jpg',
         })}
       />
@@ -89,6 +128,38 @@ export default function CrashingFixPage() {
               <li key={fix}>{fix}</li>
             ))}
           </ul>
+        </div>
+
+        <div className="prose-game">
+          <h2>Confirmed vs Reported Issues</h2>
+          <p>
+            This page separates official technical requirements from
+            community-reported launch issues. A Reddit thread or comment can
+            reveal real player pain, but it should not be presented as a
+            confirmed game-wide bug until it is reproduced, patched, or listed
+            by an official support channel.
+          </p>
+        </div>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Issue players search for</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Evidence level</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">How to use this guide</th>
+              </tr>
+            </thead>
+            <tbody>
+              {reportedIssues.map(([issue, level, action]) => (
+                <tr key={issue} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{issue}</td>
+                  <td className="px-4 py-3 text-d8020 font-semibold">{level}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{action}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         <FixChecklist />
@@ -175,6 +246,8 @@ export default function CrashingFixPage() {
             <li>Reinstall only after patch checks and restarts fail.</li>
           </ul>
         </div>
+
+        <SourceCheckTable title="Bug and Fix Source Check" rows={sourceRows} />
 
         <FAQSection faqs={faqs} />
       </article>

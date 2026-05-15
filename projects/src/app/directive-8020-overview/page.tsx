@@ -4,6 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
+import { SourceCheckTable } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
   title: 'What is Directive 8020? - Story, Gameplay & New Mechanics',
@@ -53,6 +54,37 @@ const quickFacts = [
   ['Co-op', 'Movie Night couch co-op for up to five players'],
 ];
 
+const sourceRows = [
+  {
+    claim: 'Directive 8020 is a sci-fi horror Dark Pictures entry on PS5, Xbox Series X|S, and PC.',
+    source: 'Supermassive launch post',
+    status: 'verified' as const,
+    href: 'https://www.supermassivegames.com/news/directive-8020-live',
+    note: 'Use for release/platform overview and official premise.',
+  },
+  {
+    claim: 'Steam lists Movie Night, controller support, achievements, PC specs, and Deluxe content.',
+    source: 'Steam store',
+    status: 'verified' as const,
+    href: 'https://store.steampowered.com/app/2255370/Directive_8020/',
+    note: 'Use for player setup, co-op, PC requirements, and edition facts.',
+  },
+  {
+    claim: 'Online multiplayer is planned after launch.',
+    source: 'Official Directive 8020 site',
+    status: 'verified' as const,
+    href: 'https://www.directive8020.com/',
+    note: 'Use for co-op wording and avoid claiming launch-day online co-op.',
+  },
+  {
+    claim: 'Gameplay details from full-game subtitles are paraphrased guide evidence.',
+    source: 'Private transcript notes',
+    status: 'working' as const,
+    href: '/directive-8020-walkthrough',
+    note: 'Use as route context only; official names and storefront facts stay the source of truth.',
+  },
+];
+
 export default function OverviewPage() {
   return (
     <>
@@ -63,7 +95,7 @@ export default function OverviewPage() {
             'Everything we know about Directive 8020: story, gameplay mechanics, Turning Points, Story Tree, Movie Night co-op, and how it evolves The Dark Pictures Anthology.',
           url: '/directive-8020-overview',
           datePublished: '2026-05-10',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-15',
           imageUrl: '/d8020-screenshot-01.jpg',
         })}
       />
@@ -101,6 +133,8 @@ export default function OverviewPage() {
             </tbody>
           </table>
         </div>
+
+        <SourceCheckTable title="Overview Source Check" rows={sourceRows} />
 
         <div className="prose-game">
           <h2>The Premise: A Colony Mission Becomes a Trust Test</h2>

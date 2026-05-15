@@ -4,6 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
+import { SourceCheckTable } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Deluxe Edition - Bonus Mission, Outfits & Soundtrack',
@@ -60,6 +61,36 @@ const deluxeItems = [
   },
 ];
 
+const priceRows = [
+  ['Base game price', 'Check Steam, PlayStation Store, or Xbox Store before purchase.', 'Live storefront value can change by region, sale, or bundle.'],
+  ['Digital Deluxe upgrade', 'Treat as a store-specific add-on price, not a fixed global price.', 'Only quote exact numbers after checking the active storefront locale.'],
+  ['Best value threshold', 'Better for replay-focused players than one-route story players.', 'Bonus mission, cosmetics, filters, artbook, and soundtrack matter most if you plan multiple runs.'],
+];
+
+const sourceRows = [
+  {
+    claim: 'Digital Deluxe includes outfits, bonus mission, filters, artbook, and soundtrack.',
+    source: 'Steam store',
+    status: 'verified' as const,
+    href: 'https://store.steampowered.com/app/2255370/Directive_8020/',
+    note: 'Use Steam for item names and store feature confirmation.',
+  },
+  {
+    claim: 'Directive 8020 is officially live on PS5, Xbox Series X|S, and PC.',
+    source: 'Supermassive launch post',
+    status: 'verified' as const,
+    href: 'https://www.supermassivegames.com/news/directive-8020-live',
+    note: 'Use this for platform availability and launch status.',
+  },
+  {
+    claim: 'Exact price depends on storefront, edition, region, and current discount.',
+    source: 'Storefront check required',
+    status: 'needs-check' as const,
+    href: 'https://store.steampowered.com/app/2255370/Directive_8020/',
+    note: 'Do not hard-code a global price without rechecking the target store.',
+  },
+];
+
 export default function DeluxeEditionPage() {
   return (
     <>
@@ -70,7 +101,7 @@ export default function DeluxeEditionPage() {
             'Directive 8020 Deluxe Edition guide covering Digital Deluxe content, Heirlooms Retrieval, outfits, filters, artbook, soundtrack, and value.',
           url: '/directive-8020-deluxe-edition',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-13',
+          dateModified: '2026-05-15',
           imageUrl: '/d8020-screenshot-08.jpg',
         })}
       />
@@ -139,6 +170,39 @@ export default function DeluxeEditionPage() {
             collector extras.
           </p>
         </div>
+
+        <div className="prose-game">
+          <h2>Directive 8020 Price and Edition Check</h2>
+          <p>
+            Price searches are high-risk because store pages can change by
+            region, launch discount, platform sale, or bundle. Use this page as
+            a buying framework, then confirm the live price on your own
+            storefront before purchase.
+          </p>
+        </div>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Price intent</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">What to check</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it matters</th>
+              </tr>
+            </thead>
+            <tbody>
+              {priceRows.map(([intent, check, reason]) => (
+                <tr key={intent} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{intent}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{check}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{reason}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <SourceCheckTable title="Price and Deluxe Source Check" rows={sourceRows} />
 
         <div className="prose-game">
           <h2>Who Should Get Deluxe?</h2>

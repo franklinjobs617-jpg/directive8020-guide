@@ -4,6 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
+import { SourceCheckTable } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
   title: 'Directive 8020 Movie Night Multiplayer & Co-op Guide',
@@ -52,6 +53,30 @@ const multiplayerStatus = [
   ['Shared Story replacement', 'Not the same at launch', 'Remote groups should wait for the online Movie Night update or check current patch notes.'],
 ];
 
+const sourceRows = [
+  {
+    claim: 'Movie Night couch co-op supports up to five players.',
+    source: 'Steam store',
+    status: 'verified' as const,
+    href: 'https://store.steampowered.com/app/2255370/Directive_8020/',
+    note: 'Use this for launch-day local co-op setup and character assignment advice.',
+  },
+  {
+    claim: 'Online multiplayer is planned after launch as a free update.',
+    source: 'Official Directive 8020 site',
+    status: 'verified' as const,
+    href: 'https://www.directive8020.com/',
+    note: 'Keep remote-group advice cautious until the patch is live on the player platform.',
+  },
+  {
+    claim: 'Players are searching for online co-op and remote play workarounds.',
+    source: 'Reddit demand signals',
+    status: 'working' as const,
+    href: 'https://www.reddit.com/r/DarkPicturesAnthology/search/?q=Directive%208020%20online%20co-op&restrict_sr=1',
+    note: 'Treat Reddit as demand and troubleshooting signal, not as official feature confirmation.',
+  },
+];
+
 export default function MovieNightPage() {
   return (
     <>
@@ -62,7 +87,7 @@ export default function MovieNightPage() {
             'Directive 8020 Movie Night couch co-op guide with up to five players, character assignment, online multiplayer note, and co-op survival tips.',
           url: '/directive-8020-movie-night-multiplayer',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-13',
+          dateModified: '2026-05-15',
           imageUrl: '/d8020-screenshot-01.jpg',
         })}
       />
@@ -159,6 +184,14 @@ export default function MovieNightPage() {
             storefront details first.
           </p>
 
+          <h2>Remote Group Checklist</h2>
+          <ul>
+            <li><strong>Before buying for a remote group:</strong> verify the current online multiplayer patch status on your storefront.</li>
+            <li><strong>If online co-op is not live:</strong> use local Movie Night or wait for the official update instead of assuming Steam Remote Play support.</li>
+            <li><strong>If a patch arrives:</strong> check whether all players need the same platform, account link, save owner, and game version.</li>
+            <li><strong>For guide use:</strong> keep one player responsible for Story Tree notes so a co-op run can still recover deaths and endings later.</li>
+          </ul>
+
           <h2>Best Co-op Roles</h2>
           <ul>
             <li><strong>The observer:</strong> watches for mimic clues, contradictions, and suspicious returns.</li>
@@ -167,6 +200,8 @@ export default function MovieNightPage() {
             <li><strong>The mediator:</strong> forces the group to slow down before accusations or sacrifices.</li>
           </ul>
         </div>
+
+        <SourceCheckTable title="Co-op Source Check" rows={sourceRows} />
 
         <FAQSection faqs={faqs} />
       </article>
