@@ -4,7 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
-import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, RelatedGuides, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { SurvivalEndingTracker } from '@/components/tools/survival-ending-tracker';
 import { EndingIndex } from '@/components/tools/ending-index';
 
@@ -76,6 +76,30 @@ const transcriptEndingRows = [
   ['Oracle protocols', 'Oracle is tied to mission truth, distress management, and late-story protocol options.', 'Track whether Oracle data was accessed, trusted, resisted, or used as evidence.', 'Medium'],
 ];
 
+const sourceRows = [
+  {
+    claim: 'Directive 8020 has 5 reported substantial endings.',
+    source: 'Destructoid / review coverage',
+    status: 'verified' as const,
+    href: 'https://www.destructoid.com/reviews/directive-8020-review/',
+    note: 'Use as the CTR answer for how many endings; exact names still need Story Tree capture.',
+  },
+  {
+    claim: 'Death spiral is a special ending concept, not a normal all-deaths checklist item.',
+    source: 'PSU preview + death-route discussion',
+    status: 'working' as const,
+    href: 'https://www.psu.com/news/directive-8020-hands-on-preview/',
+    note: 'Mention for "directive 8020 death spiral" searches, but keep trigger conditions as needs verification.',
+  },
+  {
+    claim: 'Distress call or warning is a finale decision search term.',
+    source: 'Full-game transcript route notes',
+    status: 'working' as const,
+    href: '/directive-8020-choices-consequences',
+    note: 'Use as a finale condition category until exact ending outcomes are confirmed.',
+  },
+];
+
 const endingRouteRows = [
   { step: 'Best ending base', doThis: 'Keep all core crew alive, preserve evidence, and avoid unverified trust choices.', why: 'Best endings in this genre usually require survivor count plus correct finale conditions.' },
   { step: 'Bad ending test', doThis: 'Branch from late Turning Points and alter only one major survivor or mission choice.', why: 'This identifies which condition changes the ending without replay noise.' },
@@ -93,7 +117,7 @@ export default function AllEndingsPage() {
             'Directive 8020 all endings guide with reported ending count, Story Tree tracking, Turning Points strategy, best ending principles, and route checklist.',
           url: '/directive-8020-all-endings',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-15',
+          dateModified: '2026-05-18',
           imageUrl: '/d8020-screenshot-06.jpg',
         })}
       />
@@ -107,10 +131,11 @@ export default function AllEndingsPage() {
           Directive 8020 All Endings Guide
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          This is a post-launch endings guide built around Directive 8020&apos;s
-          actual structure: survival routes, mimic trust checks, Turning Points,
-          and the Story Tree. It avoids inventing unverified ending names while
-          giving you a useful route map from your first playthrough.
+          Directive 8020 has <strong className="text-foreground">5 reported
+          substantial endings</strong>. This all-endings guide maps the
+          confirmed search intent first, then keeps exact ending names, death
+          spiral triggers, and distress-call outcomes marked until Story Tree
+          route capture verifies them.
         </p>
 
         <BlufBox>
@@ -143,6 +168,8 @@ export default function AllEndingsPage() {
             the choices that trigger each finale outcome.
           </p>
         </div>
+
+        <SourceCheckTable title="All Endings Source Check" rows={sourceRows} />
 
         <SurvivalEndingTracker />
         <EndingIndex />

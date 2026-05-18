@@ -4,7 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema, generateHowToSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
-import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, RelatedGuides, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { TrophyProgressTracker } from '@/components/tools/trophy-progress-tracker';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
@@ -86,6 +86,30 @@ const platformIssues = [
   ['Collectible trophies', 'Use the 65-collectible structure: 50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets.'],
 ];
 
+const sourceRows = [
+  {
+    claim: 'Steam lists Directive 8020 achievements as a platform feature.',
+    source: 'Steam store',
+    status: 'verified' as const,
+    href: 'https://store.steampowered.com/app/2255370/Directive_8020/',
+    note: 'Use for achievement availability, not exact trophy names.',
+  },
+  {
+    claim: 'PS5 trophy visibility may lag behind local console or network data.',
+    source: 'Community-reported issue',
+    status: 'working' as const,
+    href: 'https://www.reddit.com/r/DarkPicturesAnthology/search/?q=Directive%208020%20trophy&restrict_sr=1',
+    note: 'Keep this as troubleshooting context until platform databases are stable.',
+  },
+  {
+    claim: 'All Possible Futures and exact hidden trophy routes require platform capture.',
+    source: 'GSC query + route verification pending',
+    status: 'needs-check' as const,
+    href: '/directive-8020-trophy-list',
+    note: 'Do not publish exact unlock conditions without platform proof or recorded route evidence.',
+  },
+];
+
 export default function TrophyGuidePage() {
   return (
     <>
@@ -96,7 +120,7 @@ export default function TrophyGuidePage() {
             'Directive 8020 trophy guide covering achievement categories, missable planning, Turning Points cleanup, collectibles, endings, and 100% strategy.',
           url: '/directive-8020-trophy-guide',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-13',
+          dateModified: '2026-05-18',
           imageUrl: '/d8020-screenshot-06.jpg',
         })}
       />
@@ -136,10 +160,11 @@ export default function TrophyGuidePage() {
           Directive 8020 Trophy &amp; Achievement Guide
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          Directive 8020 supports Steam achievements and is built around
-          branching routes, deaths, endings, collectibles, and Turning Points.
-          This guide gives you a 100% strategy that avoids wasted full replays
-          while the exact public trophy names are being verified.
+          Directive 8020 trophy guide short answer: build one clean route first,
+          then use Turning Points for Platinum cleanup, all endings, all deaths,
+          collectibles, Movie Night, and hidden achievement checks. Steam
+          achievements are source checked; exact PS5 trophy names and hidden
+          unlocks still need platform verification.
         </p>
 
         <BlufBox>
@@ -152,6 +177,8 @@ export default function TrophyGuidePage() {
             8020 trophy list</a>.
           </p>
         </BlufBox>
+
+        <SourceCheckTable title="Trophy and Platinum Source Check" rows={sourceRows} />
 
         <StatusPanel
           items={[

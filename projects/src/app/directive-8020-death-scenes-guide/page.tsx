@@ -4,7 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, RelatedGuides, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { DeathSceneTracker } from '@/components/tools/death-scene-tracker';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
@@ -51,6 +51,30 @@ const deathCaptureRows = [
   { step: 'Document avoid method', doThis: 'Every death entry must include how to prevent it.', why: 'The page serves both all-deaths viewers and save-everyone players.' },
 ];
 
+const sourceRows = [
+  {
+    claim: 'Launch coverage reports 44 death scenes.',
+    source: 'GamesRadar / preview coverage',
+    status: 'verified' as const,
+    href: 'https://www.gamesradar.com/games/horror/directive-8020-save-everyone/',
+    note: 'Use this as the headline count until the full in-game checklist is fully captured.',
+  },
+  {
+    claim: 'A special "death spiral" ending is discussed in preview interviews.',
+    source: 'PSU preview',
+    status: 'verified' as const,
+    href: 'https://www.psu.com/news/directive-8020-hands-on-preview/',
+    note: 'Treat this as a special ending-state concept, not a normal death scene category.',
+  },
+  {
+    claim: 'Community discussion is still unsure about the full death structure.',
+    source: 'Reddit death-structure thread',
+    status: 'working' as const,
+    href: 'https://www.reddit.com/r/DarkPicturesAnthology/comments/1tg5q9y/directive_8020_death_structure_for_those_who_want/',
+    note: 'Use Reddit as a demand and pattern signal, not as final canon.',
+  },
+];
+
 export default function DeathScenesPage() {
   return (
     <>
@@ -61,7 +85,7 @@ export default function DeathScenesPage() {
             'Directive 8020 death scenes guide with 44 deaths checklist, triggers, chapters, victims, avoid methods, Turning Points recovery, and trophy cleanup.',
           url: '/directive-8020-death-scenes-guide',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-18',
           imageUrl: '/d8020-screenshot-11.jpg',
         })}
       />
@@ -124,6 +148,8 @@ export default function DeathScenesPage() {
           <h2>Death Capture Plan</h2>
           <ActionTable rows={deathCaptureRows} />
         </div>
+
+        <SourceCheckTable title="Death Spiral Source Check" rows={sourceRows} />
 
         <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
           <table className="w-full text-sm">

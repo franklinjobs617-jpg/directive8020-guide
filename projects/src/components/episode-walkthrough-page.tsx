@@ -16,6 +16,13 @@ interface EpisodeChecklistRow {
   why: string;
 }
 
+interface EpisodeEvidenceRow {
+  claim: string;
+  source: string;
+  status: 'verified' | 'needs-check' | 'working';
+  note: string;
+}
+
 interface EpisodeWalkthroughData {
   slug: string;
   title: string;
@@ -34,6 +41,7 @@ interface EpisodeWalkthroughData {
   spoilerNote: string;
   facts: EpisodeFact[];
   checklist: EpisodeChecklistRow[];
+  evidenceRows?: EpisodeEvidenceRow[];
   collectibles: string[];
   routeWarnings: string[];
   faqs: { question: string; answer: string }[];
@@ -54,7 +62,7 @@ export function EpisodeWalkthroughPage({ data }: { data: EpisodeWalkthroughData 
           description: data.description,
           url: `/${data.slug}`,
           datePublished: '2026-05-13',
-          dateModified: '2026-05-15',
+          dateModified: '2026-05-18',
           imageUrl: data.heroImage,
         })}
       />
@@ -133,6 +141,48 @@ export function EpisodeWalkthroughPage({ data }: { data: EpisodeWalkthroughData 
             alt={`${data.episodeName} Directive 8020 walkthrough scene`}
             caption={`${data.episodeName} should be tracked by objective, survivor state, collectibles, QTEs, Turning Points, and any route condition that carries into later episodes.`}
           />
+
+          {data.evidenceRows ? (
+            <>
+              <h2>Source-Checked Route Notes</h2>
+              <p>
+                These rows separate verified searchable details from route notes
+                that still need in-game confirmation. Use them as a quick answer
+                surface for chapter-specific searches, not as copied transcript
+                text.
+              </p>
+            </>
+          ) : null}
+        </div>
+
+        {data.evidenceRows ? (
+          <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-border/50 bg-card/50">
+                  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Claim</th>
+                  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Source</th>
+                  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Status</th>
+                  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Guide use</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.evidenceRows.map((row) => (
+                  <tr key={row.claim} className="border-b border-border/30 last:border-0">
+                    <td className="px-4 py-3 font-semibold text-foreground">{row.claim}</td>
+                    <td className="px-4 py-3 text-d8020">{row.source}</td>
+                    <td className="px-4 py-3 text-muted-foreground">
+                      {row.status === 'verified' ? 'Source checked' : row.status === 'needs-check' ? 'Needs verification' : 'Working route'}
+                    </td>
+                    <td className="px-4 py-3 text-muted-foreground">{row.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : null}
+
+        <div className="prose-game">
 
           <h2>Collectibles and Search Notes</h2>
           <p>

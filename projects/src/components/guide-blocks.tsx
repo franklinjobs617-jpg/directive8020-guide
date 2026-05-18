@@ -55,9 +55,9 @@ const statusStyles = {
 };
 
 const statusLabels = {
-  verified: 'Verified',
-  'needs-check': 'Needs capture',
-  working: 'Working guide',
+  verified: 'Source checked',
+  'needs-check': 'Needs verification',
+  working: 'Working route',
 };
 
 export function BlufBox({ title = 'BLUF', children }: BlufBoxProps) {

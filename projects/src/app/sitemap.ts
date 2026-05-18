@@ -60,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/directive-8020-turning-points-story-tree`,
-      lastModified: '2026-05-12',
+      lastModified: '2026-05-18',
       changeFrequency: 'weekly',
       priority: 0.9,
     },
@@ -90,7 +90,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/directive-8020-death-scenes-guide`,
-      lastModified: '2026-05-12',
+      lastModified: '2026-05-18',
       changeFrequency: 'weekly',
       priority: 0.9,
     },
@@ -102,7 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/directive-8020-collectibles-heirlooms`,
-      lastModified: '2026-05-13',
+      lastModified: '2026-05-18',
       changeFrequency: 'weekly',
       priority: 0.85,
     },
@@ -120,7 +120,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/directive-8020-all-endings`,
-      lastModified: '2026-05-13',
+      lastModified: '2026-05-18',
       changeFrequency: 'weekly',
       priority: 0.9,
     },
@@ -144,7 +144,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/directive-8020-choices-consequences`,
-      lastModified: '2026-05-13',
+      lastModified: '2026-05-18',
       changeFrequency: 'weekly',
       priority: 0.8,
     },
@@ -156,7 +156,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/directive-8020-trophy-guide`,
-      lastModified: '2026-05-13',
+      lastModified: '2026-05-18',
       changeFrequency: 'weekly',
       priority: 0.8,
     },
@@ -186,7 +186,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/directive-8020-the-sample-walkthrough`,
-      lastModified: '2026-05-13',
+      lastModified: '2026-05-18',
       changeFrequency: 'weekly',
       priority: 0.82,
     },

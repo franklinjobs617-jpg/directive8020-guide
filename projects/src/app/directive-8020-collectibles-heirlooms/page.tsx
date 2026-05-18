@@ -4,7 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, RelatedGuides, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { CollectibleChecklist } from '@/components/tools/collectible-checklist';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
@@ -62,6 +62,30 @@ const collectibleRows = [
   { step: 'For Heirlooms', doThis: 'Track Deluxe mission items separately from main-story clues.', why: 'Bonus mission relics may have different trophy or lore logic.' },
 ];
 
+const sourceRows = [
+  {
+    claim: 'Current collectible coverage lists 65 total collectibles.',
+    source: '100% Guides collectible guide',
+    status: 'verified' as const,
+    href: 'https://www.100pguides.com/guides/directive-8020-all-collectibles',
+    note: 'Use for the 50 Secrets, 10 Simms Recordings, and 5 O Death Secrets structure.',
+  },
+  {
+    claim: 'Dark Pictures Heirlooms Retrieval is Deluxe content with dolls and relics.',
+    source: 'Steam store',
+    status: 'verified' as const,
+    href: 'https://store.steampowered.com/app/2255370/Directive_8020/',
+    note: 'Use for Dark Pictures dolls, outfit pack, and Deluxe bundle intent.',
+  },
+  {
+    claim: 'Episode 3 Food Storage / Dark Picture Doll route uses code 0402.',
+    source: 'GamesRadar + Radio Times + Nerdschalk',
+    status: 'verified' as const,
+    href: 'https://www.gamesradar.com/games/horror/directive-8020-key-code-solutions/',
+    note: 'Answer doll-location searches here and link users to Episode 3 for the code route.',
+  },
+];
+
 export default function CollectiblesPage() {
   return (
     <>
@@ -72,7 +96,7 @@ export default function CollectiblesPage() {
             'Directive 8020 collectibles guide covering secrets, clues, premonitions, Heirlooms Retrieval, Dark Pictures relics, chapter tracking, and trophies.',
           url: '/directive-8020-collectibles-heirlooms',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-13',
+          dateModified: '2026-05-18',
           imageUrl: '/d8020-screenshot-09.jpg',
         })}
       />
@@ -205,6 +229,8 @@ export default function CollectiblesPage() {
             instead of mixing them with main-story evidence.
           </p>
         </div>
+
+        <SourceCheckTable title="Dark Pictures Dolls and Heirlooms Source Check" rows={sourceRows} />
 
         <RelatedGuides
           guides={[

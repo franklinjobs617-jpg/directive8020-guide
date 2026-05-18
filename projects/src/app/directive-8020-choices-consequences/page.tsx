@@ -4,7 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox, RelatedGuides } from '@/components/guide-blocks';
+import { BlufBox, RelatedGuides, SourceCheckTable } from '@/components/guide-blocks';
 import { MimicDetector } from '@/components/tools/mimic-detector';
 import { ChoiceImpactFilter } from '@/components/tools/choice-impact-filter';
 
@@ -88,6 +88,30 @@ const transcriptChoiceExamples = [
   ['Send distress or send warning', 'Finale message decision', 'This is a mission-priority choice: crew survival, Andromeda risk, and Earth contamination are different variables.', 'Ending choice'],
 ];
 
+const sourceRows = [
+  {
+    claim: 'Distress signal vs warning is a finale route variable.',
+    source: 'Full-game transcript route notes',
+    status: 'working' as const,
+    href: '/directive-8020-all-endings',
+    note: 'Use for ending-choice grouping; exact outcomes need Story Tree confirmation.',
+  },
+  {
+    claim: 'Shoot or stand down is a high-intent choice search, but the exact route result is not cross-verified enough here.',
+    source: 'GSC query + pending route capture',
+    status: 'needs-check' as const,
+    href: '/directive-8020-walkthrough',
+    note: 'Mention the intent, but do not publish a fixed outcome until a video route or in-game capture confirms it.',
+  },
+  {
+    claim: 'Destinies and relationship states should be tracked separately from flavor dialogue.',
+    source: 'Story Tree / route testing method',
+    status: 'verified' as const,
+    href: '/directive-8020-turning-points-story-tree',
+    note: 'Use this as the canonical choice-mapping method for all choices, paths, and consequences.',
+  },
+];
+
 export default function ChoicesConsequencesPage() {
   return (
     <>
@@ -98,7 +122,7 @@ export default function ChoicesConsequencesPage() {
             'Directive 8020 choices and consequences guide with mimic trust checks, relationship logic, Story Tree branches, and Turning Points strategy.',
           url: '/directive-8020-choices-consequences',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-15',
+          dateModified: '2026-05-18',
           imageUrl: '/d8020-screenshot-04.jpg',
         })}
       />
@@ -153,6 +177,8 @@ export default function ChoicesConsequencesPage() {
             </tbody>
           </table>
         </div>
+
+        <SourceCheckTable title="High-Intent Choice Source Check" rows={sourceRows} />
 
         <div className="prose-game">
           <h2>Concrete Choice Examples from the Full-Game Transcript</h2>

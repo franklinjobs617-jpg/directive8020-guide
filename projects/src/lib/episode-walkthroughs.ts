@@ -100,7 +100,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     title: 'Directive 8020 The Sample Walkthrough',
     metaTitle: 'Directive 8020 The Sample Walkthrough - Episode 3 Guide',
     description:
-      'Directive 8020 The Sample walkthrough for Episode 3: lab evidence, specimen choices, mimic suspicion, collectibles, QTE tracking, and Story Tree cleanup.',
+      'Directive 8020 The Sample walkthrough for Episode 3: Food Storage code 0402, lab evidence, specimen choices, mimic suspicion, collectibles, QTE tracking, and Story Tree cleanup.',
     h1: 'Directive 8020 Episode 3: The Sample Walkthrough',
     episodeNumber: 'Episode 3',
     episodeName: 'The Sample',
@@ -117,23 +117,47 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     facts: [
       { label: 'Episode position', value: 'Episode 3 of 8.' },
       { label: 'Primary purpose', value: 'Build evidence around the sample and the threat.' },
+      { label: 'Source-checked code', value: 'Multiple guide sources list the Episode 3 Food Storage / Dark Picture Doll route code as 0402.' },
       { label: 'Best first-run goal', value: 'Collect clues before irreversible lab or mission prompts.' },
       { label: 'Replay priority', value: 'Test evidence choices before changing QTE results.' },
     ],
     checklist: [
       { step: 'Lab search', doThis: 'Inspect terminals, equipment, bodies, sample containers, and side rooms.', why: 'Lab evidence can clarify later trust and accusation choices.' },
+      { step: 'Episode 3 code', doThis: 'If you reach the Food Storage keypad / Dark Picture Doll search route, test code 0402.', why: 'GamesRadar, Radio Times, and Nerdschalk all report 0402 for this Episode 3 code, but keep a save note in case patch routing differs.' },
       { step: 'Specimen decisions', doThis: 'Record who wants containment, destruction, secrecy, or faster action.', why: 'Character positions may return in later mission conflicts.' },
       { step: 'QTEs', doThis: 'Keep action outcomes clean on the first route.', why: 'Mechanical failures can hide the real effect of a choice.' },
       { step: 'Post-episode', doThis: 'Mark any new evidence branch in the Story Tree.', why: 'Episode 3 can become a foundation for later mimic reasoning.' },
     ],
+    evidenceRows: [
+      {
+        claim: 'Episode 3 Food Storage / Dark Picture Doll code: 0402.',
+        source: 'GamesRadar + Radio Times + Nerdschalk',
+        status: 'verified',
+        note: 'Use for the GSC query "directive 8020 episode 3 codes walkthrough"; do not create a separate code page yet.',
+      },
+      {
+        claim: 'The code is tied to a locked-door / collectible route, not a full ending route by itself.',
+        source: 'Guide cross-check',
+        status: 'working',
+        note: 'Treat as collectible and chapter-help intent until route captures prove a larger consequence.',
+      },
+      {
+        claim: 'Patch changes or alternate routes could alter access timing.',
+        source: 'In-game verification pending',
+        status: 'needs-check',
+        note: 'Keep player-facing wording cautious and ask readers to report platform or patch differences.',
+      },
+    ],
     collectibles: [
       'Prioritize labs, medical spaces, and technical terminals.',
+      'Check the Episode 3 Food Storage / Dark Picture Doll route if you are cleaning up dolls or collectibles.',
       'Record whether a collectible appears before or after a specimen-related choice.',
       'Separate evidence that affects decisions from background lore.',
     ],
     routeWarnings: commonWarnings,
     faqs: [
       { question: 'What episode is The Sample?', answer: 'The Sample is Episode 3 of Directive 8020.' },
+      { question: 'What is the Directive 8020 Episode 3 Food Storage code?', answer: 'Multiple guide sources list 0402 as the Episode 3 Food Storage / Dark Picture Doll route code. Verify it on your current patch before treating it as final.' },
       { question: 'What should I search in The Sample?', answer: 'Search labs, terminals, sample areas, and medical or technical spaces before objective exits.' },
       { question: 'Does The Sample affect endings?', answer: 'It can affect route understanding through evidence and trust context, but exact ending impact should be verified through the Story Tree.' },
     ],
