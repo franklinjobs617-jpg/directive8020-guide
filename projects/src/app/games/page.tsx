@@ -7,7 +7,7 @@ import { projectMistImages } from "@/lib/project-mist";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
-  "Browse Enjoy4Game game guide hubs, including the existing Directive 8020 guide cluster and new Project: Mist Early Access coverage.";
+  "Browse Enjoy4Game guide hubs for horror, survival, and story-driven games, including Directive 8020 and Project: Mist.";
 
 export const metadata: Metadata = {
   title,
@@ -21,15 +21,15 @@ const gameCards = [
   {
     title: "Directive 8020",
     href: "/",
-    label: "Current main hub",
-    body: "Existing walkthroughs, endings, choices, trophies, crash fixes, and route tools remain on their original flat URLs.",
+    label: "Story horror",
+    body: "Walkthroughs, endings, choices, trophies, survival routes, collectibles, cast notes, and PC troubleshooting.",
     image: "/hero-banner.jpg",
   },
   {
     title: "Project: Mist",
     href: "/games/project-mist",
-    label: "New Early Access cluster",
-    body: "Release date, Steam facts, system requirements, co-op, beginner route, and Early Access troubleshooting.",
+    label: "Open-world survival",
+    body: "Early Access facts, demo route notes, system requirements, co-op, Gravity Gun, train base, and first-day survival help.",
     image: projectMistImages.hero,
   },
 ];
@@ -64,15 +64,15 @@ export default function GamesPage() {
           <div className="absolute inset-0 flex items-end">
             <div className="max-w-3xl p-6 sm:p-8">
               <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-emerald-300">
-                Public game index
+                Game guide directory
               </p>
               <h1 className="text-3xl font-black leading-tight text-foreground sm:text-5xl">
                 Game Guide Hubs
               </h1>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                A shared entry point for game-specific guide clusters. Directive
-                8020 keeps its current URLs; new games can start inside a clean
-                `/games/[game]` structure.
+                Pick a game and jump into practical guides: release facts,
+                beginner routes, choices, endings, co-op setup, PC specs, and
+                troubleshooting.
               </p>
             </div>
           </div>
@@ -91,8 +91,8 @@ export default function GamesPage() {
                 />
               </div>
               <figcaption className="px-4 py-3 text-xs leading-relaxed text-muted-foreground">
-                New game clusters use directory paths, while existing Directive
-                8020 URLs remain untouched.
+                Project: Mist coverage focuses on what new players need first:
+                the demo route, survival basics, PC requirements, and co-op.
               </figcaption>
             </figure>
             <div>
@@ -100,10 +100,10 @@ export default function GamesPage() {
                 Current Hubs
               </h2>
               <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
-                This page prevents new games from becoming isolated while
-                keeping the current Directive 8020 traffic pattern stable. It
-                gives Google and users one broad collection page without forcing
-                a migration of pages that already have clicks.
+                Start with the game you are playing, then move to the guide that
+                matches your next question. Each hub keeps the most useful
+                articles close together so you do not have to search the site
+                page by page.
               </p>
               <div className="grid gap-4 sm:grid-cols-2">
                 {gameCards.map((game) => (
@@ -142,19 +142,19 @@ export default function GamesPage() {
 
         <section className="grid gap-5 lg:grid-cols-[1fr_360px]">
           <div className="prose-game">
-            <h2>How New Game Clusters Work</h2>
+            <h2>How to Use This Page</h2>
             <p>
-              New games should start with a game hub, then child guide pages
-              under that game. Project: Mist uses this model immediately, so its
-              release-date, specs, multiplayer, beginner, and crash-fix pages
-              reinforce one cluster instead of scattering across unrelated
-              paths.
+              If you are playing Directive 8020, start with the walkthrough,
+              endings, choices, or trophy guides. If you are trying Project:
+              Mist, start with the Early Access hub, then check the beginner,
+              system requirements, multiplayer, or crash-fix pages depending on
+              what you need next.
             </p>
             <ul>
-              <li>Public index: `/games`</li>
-              <li>Game hub: `/games/project-mist`</li>
-              <li>Guide pages: `/games/project-mist/[guide]`</li>
-              <li>Legacy Directive 8020 pages: unchanged flat URLs</li>
+              <li>Use a game hub when you are not sure which guide comes first.</li>
+              <li>Use beginner pages before reading route-heavy or spoiler-heavy content.</li>
+              <li>Use system and crash-fix pages before blaming a save or reinstalling.</li>
+              <li>Use co-op pages before starting a shared session with friends.</li>
             </ul>
           </div>
           <figure className="overflow-hidden rounded-lg border border-border/50 bg-card/30">
@@ -168,8 +168,8 @@ export default function GamesPage() {
               />
             </div>
             <figcaption className="px-4 py-3 text-xs leading-relaxed text-muted-foreground">
-              Each game cluster links internally through its own hub, while the
-              `/games` page provides a public bridge between clusters.
+              Guide hubs are built for fast decisions: what to play, what to
+              check first, and what to avoid wasting time on.
             </figcaption>
           </figure>
         </section>

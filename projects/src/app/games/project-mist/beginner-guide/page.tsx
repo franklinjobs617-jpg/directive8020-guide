@@ -50,7 +50,7 @@ const firstDayRows = [
     step: "1. Test controls",
     doThis:
       "Save, open the starter chest, test flashlight, inventory, crafting, quick slots, and objective tracking before leaving the safe room.",
-    why: "The gameplay subtitles show the opening teaches survival UI before the first real route decision.",
+    why: "The opening teaches survival UI before the first real route decision.",
   },
   {
     step: "2. Secure basics",
@@ -109,12 +109,13 @@ export default function ProjectMistBeginnerGuidePage() {
         <ArticleImage
           src={projectMistImages.firstSteps}
           alt="Project: Mist demo route first steps image"
-          caption="The subtitle-reviewed route gives beginners a clean order: starter supplies, train, mech part, greenhouse, then facility progress."
+          caption="The demo route gives beginners a clean order: starter supplies, train, mech part, greenhouse, then facility progress."
         />
         <p>
-          The YouTube subtitles make the opening route clearer than a generic
-          survival checklist. Treat this as demo-observed guidance: useful for a
-          first session, but still subject to Early Access changes.
+          The opening route is clearer than a generic survival checklist: get
+          supplied, reach the train, find the mech part, then enter the
+          greenhouse with enough resources to survive the facility. Treat this
+          as demo guidance because Early Access routes can change.
         </p>
       </section>
 

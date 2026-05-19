@@ -67,10 +67,10 @@ export default function ProjectMistHubPage() {
     >
       <BlufBox title="Early Access Snapshot">
         <p>
-          <strong>Project: Mist is now a distinct guide cluster under `/games`.</strong>{' '}
-          Steam confirms the PC Early Access listing, solo play, online co-op,
-          Gravity Gun, moving train base, abandoned facilities, giant creatures,
-          crafting, hunting, Steam Achievements, Steam Cloud, and an official demo.
+          <strong>Project: Mist is a PC Early Access survival horror game.</strong>{' '}
+          Steam confirms solo play, online co-op, Gravity Gun, moving train
+          base, abandoned facilities, giant creatures, crafting, hunting, Steam
+          Achievements, Steam Cloud, and an official demo.
         </p>
       </BlufBox>
 
@@ -87,7 +87,7 @@ export default function ProjectMistHubPage() {
         <ArticleImage
           src={projectMistImages.feature}
           alt="Project: Mist guide hub feature image"
-          caption="The first Project: Mist cluster targets launch-window intent: release status, PC specs, multiplayer, beginner routing, and troubleshooting."
+          caption="Start with the guide that matches your problem: release status, PC specs, multiplayer, first-day survival, or troubleshooting."
         />
         <div className="grid gap-4 sm:grid-cols-2">
           {projectMist.guideLinks.map((guide) => (
@@ -141,7 +141,7 @@ export default function ProjectMistHubPage() {
           describes a hostile island, abandoned facilities, boss-scale threats,
           critter catching, gear upgrades, and a train base that moves with your
           run. That means the strongest early pages are practical: what is
-          confirmed, what your PC needs, how co-op works, and how to avoid bad
+          confirmed, what your PC needs, how co-op works, and how to avoid rough
           first-session mistakes.
         </p>
 
@@ -149,7 +149,7 @@ export default function ProjectMistHubPage() {
         <ArticleImage
           src={projectMistImages.demo}
           alt="Project: Mist demo and player-count guide image"
-          caption="Steam Community and trailer coverage point to a launch-window focus on demo access, multiplayer testing, feedback, and Early Access expectations."
+          caption="Steam Community and video coverage point to the same early questions: demo access, co-op, performance, Gravity Gun, and train-base progression."
         />
         <p>
           Steam Community launch news adds useful context beyond the store page:
@@ -160,19 +160,18 @@ export default function ProjectMistHubPage() {
           the mobile train base.
         </p>
 
-        <h2>Gameplay Subtitle Findings</h2>
+        <h2>Demo Gameplay Takeaways</h2>
         <ArticleImage
           src={projectMistImages.firstSteps}
           alt="Project: Mist first-hour gameplay findings image"
-          caption="User-provided YouTube subtitles add practical demo-route signals: starter room, train objective, mech part, greenhouse, facility hazards, and boss preparation."
+          caption="The demo footage gives practical route signals: starter room, train objective, mech part, greenhouse, facility hazards, and boss preparation."
         />
         <p>
-          The gameplay subtitles are useful because they show where a new player
+          Early gameplay footage is useful because it shows where a new player
           actually hesitates: how to start, when the train objective opens, why
           the greenhouse matters, what facility loot is worth checking, and when
-          a creature encounter becomes too expensive. These are not official
-          balance facts, so they belong as demo-observed guidance rather than
-          final route claims.
+          a creature encounter becomes too expensive. Treat those notes as demo
+          guidance because Early Access balance can still change.
         </p>
       </section>
 
@@ -181,7 +180,7 @@ export default function ProjectMistHubPage() {
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">Demo segment</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">User-focused takeaway</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">What to do</th>
             </tr>
           </thead>
           <tbody>
@@ -196,7 +195,7 @@ export default function ProjectMistHubPage() {
       </div>
 
       <section className="prose-game">
-        <h2>What the Demo Suggests Players Should Track</h2>
+        <h2>What to Track During the Demo</h2>
         <ArticleImage
           src={projectMistImages.crafting}
           alt="Project: Mist demo loot and upgrade findings image"
@@ -209,7 +208,7 @@ export default function ProjectMistHubPage() {
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">Observed item or system</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it helps the guide</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it matters</th>
             </tr>
           </thead>
           <tbody>
@@ -224,17 +223,17 @@ export default function ProjectMistHubPage() {
       </div>
 
       <section className="prose-game">
-        <h2>What Stays Unverified for Now</h2>
+        <h2>What Can Change in Early Access</h2>
         <ArticleImage
           src={projectMistImages.creatures}
           alt="Project: Mist creature guide image"
-          caption="Creature weaknesses, map routes, exact crafting costs, and best upgrades should be tested after the live Early Access build stabilizes."
+          caption="Creature weaknesses, map routes, exact crafting costs, and best upgrades can change as Early Access patches arrive."
         />
         <p>
-          Early Access pages should not invent a full bestiary, final map route,
-          or perfect build order. Those pages can be added later once there is
-          hands-on capture. The first cluster focuses on facts that are already
-          visible from Steam, public news, and gameplay coverage.
+          Do not lock your whole run around a single early build. Boss behavior,
+          map routes, recipes, damage values, movement feel, and upgrade costs
+          may shift as Chicken Launcher updates the game. Use this hub for safe
+          first decisions, then check back before a long co-op run.
         </p>
       </section>
 
@@ -243,7 +242,7 @@ export default function ProjectMistHubPage() {
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">Risk signal</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">How to present it responsibly</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Safer player habit</th>
             </tr>
           </thead>
           <tbody>

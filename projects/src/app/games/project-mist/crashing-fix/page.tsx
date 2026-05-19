@@ -113,15 +113,13 @@ export default function ProjectMistCrashingFixPage() {
         <ArticleImage
           src={projectMistImages.firstSteps}
           alt="Project: Mist movement and comfort troubleshooting image"
-          caption="Gameplay subtitles include player comments about slow or clunky movement; treat that as a comfort/settings check before labeling it a technical fault."
+          caption="If movement feels slow or heavy, check stamina, gear weight, upgrades, input settings, and frame pacing before treating it as a bug."
         />
         <p>
-          One gameplay subtitle set includes a creator reaction that movement
-          felt slow or heavy in the demo. That is useful for users, but it should
-          not be framed as a confirmed bug. Check stamina upgrades, equipment
-          weight, input method, frame pacing, FOV or camera options, and whether
-          the Early Access build has changed movement before writing it off as a
-          broken install.
+          If the character feels slow or heavy, that may be game feel rather
+          than a broken install. Check stamina upgrades, equipment weight, input
+          method, frame pacing, FOV or camera options, and patch notes before
+          reinstalling.
         </p>
 
         <h2>Fix Online Co-op Problems</h2>

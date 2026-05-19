@@ -33,19 +33,19 @@ export const projectMistDemoRouteRows = [
 ];
 
 export const projectMistDemoLootRows = [
-  ['Crafting bench', 'The gameplay transcript shows a bench inside the facility, so facilities are likely upgrade stops, not just enemy rooms.'],
+  ['Crafting bench', 'A bench appears inside the facility, so facilities are likely upgrade stops, not just enemy rooms.'],
   ['Distiller / filtered water', 'Water utility appears in the demo route; track it as survival support rather than flavor loot.'],
   ['Frag grenade blueprint', 'Blueprints appear to matter for progression and combat options.'],
   ['Gear upgrades', 'Observed items include better boots, helmets, chest armor, energy shields, and capacity or health upgrades.'],
-  ['Crates and side rooms', 'The player repeatedly finds useful items behind crates or optional side paths, so clearing rooms has value.'],
+  ['Crates and side rooms', 'Useful items can appear behind crates or optional side paths, so careful room clearing has value.'],
 ];
 
 export const projectMistDemoRiskRows = [
   ['Power whale / VH2', 'The intro warns not to provoke it; treat giant creatures as hazards until their role is verified.'],
   ['Acid or corrosive floors', 'The greenhouse route includes traversal hazards that punish careless movement.'],
   ['Low ammo pressure', 'The demo route can leave players short on bullets before major fights, so craft and loot before pushing deeper.'],
-  ['Chomper boss', 'The spoken hint says to aim for the blood tanks on its back; mark this as demo-observed, not a universal boss rule.'],
-  ['Slow movement feel', 'One gameplay creator called movement slow or clunky, so comfort settings and stamina upgrades are worth checking after launch.'],
+  ['Chomper boss', 'A demo hint points to the blood tanks on its back; use that for this fight, not as a rule for every boss.'],
+  ['Slow movement feel', 'If movement feels heavy, check stamina, gear, upgrades, input settings, and frame pacing before reinstalling.'],
 ];
 
 export const projectMistRelatedGuides: GameGuideLink[] = [
@@ -108,7 +108,7 @@ export const projectMistSourceRows = [
     note: 'Use for video-driven search questions, then verify factual claims against Steam.',
   },
   {
-    claim: 'Reviewed gameplay subtitles show a demo route through starter supplies, train repair, a mech part, greenhouse access, facility crafting, and a boss weak-point hint.',
+    claim: 'Reviewed gameplay footage shows a demo route through starter supplies, train repair, a mech part, greenhouse access, facility crafting, and a boss weak-point hint.',
     source: 'ENFANT TERRIBLE gameplay',
     status: 'working' as const,
     href: 'https://www.enfant-terrible.media/',

@@ -84,7 +84,7 @@ export function ProjectMistArticle({
             <ArticleImage
               src={projectMistImages.screenshot1}
               alt="Project: Mist source-check image"
-              caption="Project: Mist pages separate Steam facts, community signals, and video coverage so Early Access claims stay traceable."
+              caption="Project: Mist is in Early Access, so the guide separates official Steam facts from hands-on demo notes and community reports."
             />
             <SourceCheckTable title="Project: Mist Source Check" rows={projectMistSourceRows} />
           </>
@@ -92,13 +92,13 @@ export function ProjectMistArticle({
         <ArticleImage
           src={projectMistImages.screenshot2}
           alt="Project: Mist related guide image"
-          caption="Use the Project: Mist hub and child guides as one connected cluster rather than isolated pages."
+          caption="Use the related guides to move from release facts to specs, co-op, first-day survival, and troubleshooting."
         />
         <RelatedGuides guides={getProjectMistRelated(canonical)} />
         <ArticleImage
           src={projectMistImages.screenshot3}
           alt="Project: Mist FAQ image"
-          caption="FAQ answers stay short and source-aligned so searchers can extract the main launch facts quickly."
+          caption="The FAQ answers focus on quick launch facts players usually need before buying or starting a run."
         />
         <FAQSection faqs={faqs} />
       </article>
