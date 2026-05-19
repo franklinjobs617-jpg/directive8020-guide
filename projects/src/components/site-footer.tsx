@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import Link from "next/link";
+import { MessageSquare } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -35,6 +36,7 @@ export function SiteFooter() {
                   All Endings Guide
                 </Link>
               </li>
+
               <li>
                 <Link
                   href="/directive-8020-how-to-save-everyone"
@@ -109,9 +111,7 @@ export function SiteFooter() {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-foreground mb-3">
-              Site
-            </h3>
+            <h3 className="text-sm font-semibold text-foreground mb-3">Site</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -145,14 +145,23 @@ export function SiteFooter() {
                   Copyright Infringement
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="https://www.reddit.com/r/enjoy4game/"
+                  className="inline-flex items-center gap-2 text-sm"
+                >
+                  <MessageSquare className="h-4 w-4" />
+                  Join our community: r/enjoy4game
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
         <div className="mt-8 pt-6 border-t border-border/30 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            Not affiliated with Supermassive Games or Bandai Namco. Fan-made guide.
+            Not affiliated with Supermassive Games or Bandai Namco. Fan-made
+            guide.
           </p>
-      
         </div>
       </div>
     </footer>
