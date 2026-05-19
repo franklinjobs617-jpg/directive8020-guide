@@ -63,7 +63,7 @@ const statusLabels = {
 export function BlufBox({ title = 'BLUF', children }: BlufBoxProps) {
   return (
     <section className="my-8 rounded-lg border border-d8020/35 bg-d8020/10 p-5">
-      <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-d8020">{title}</p>
+      <h2 className="mb-2 text-xs font-semibold uppercase tracking-wider text-d8020">{title}</h2>
       <div className="text-sm leading-relaxed text-muted-foreground [&_strong]:text-foreground">
         {children}
       </div>
@@ -148,7 +148,7 @@ export function SourceCheckTable({ title = 'Source Check', rows }: SourceCheckTa
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">Claim</th>
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">Source</th>
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">Status</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Guide use</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it matters</th>
             </tr>
           </thead>
           <tbody>

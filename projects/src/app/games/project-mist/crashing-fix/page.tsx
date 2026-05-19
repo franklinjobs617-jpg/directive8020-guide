@@ -1,21 +1,19 @@
-import type { Metadata } from 'next';
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
-import { projectMistImages } from '@/lib/project-mist';
+import { createProjectMistMetadata, projectMistImages } from '@/lib/project-mist';
 
 const title = 'Project: Mist Crashing, Black Screen, Low FPS & Co-op Fix';
 const description =
   'Project: Mist crashing and performance fix guide for Early Access: startup crashes, black screen, low FPS, stutter, online co-op issues, Steam files, and drivers.';
 const canonical = '/games/project-mist/crashing-fix';
 
-export const metadata: Metadata = {
+export const metadata = createProjectMistMetadata({
   title,
   description,
-  alternates: {
-    canonical,
-  },
-};
+  canonical,
+  image: projectMistImages.screenshot6,
+});
 
 const faqs = [
   {

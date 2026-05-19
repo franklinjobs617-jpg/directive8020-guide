@@ -1,16 +1,17 @@
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ProjectMistArticle } from '@/components/project-mist-article';
-import { ArticleImage } from '@/components/article-media';
+import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { BlufBox, StatusPanel } from '@/components/guide-blocks';
 import { projectMist } from '@/lib/games';
 import {
   projectMistDemoLootRows,
   projectMistDemoRiskRows,
   projectMistDemoRouteRows,
+  createProjectMistMetadata,
   projectMistImages,
   projectMistQuickFacts,
+  projectMistVideos,
 } from '@/lib/project-mist';
 
 const title = 'Project: Mist Guide Hub - Early Access, Co-op, Gravity Gun & Train Base';
@@ -18,18 +19,12 @@ const description =
   'Project: Mist guide hub for Steam Early Access facts, co-op, Gravity Gun, moving train base, system requirements, beginner tips, and crash fixes.';
 const canonical = '/games/project-mist';
 
-export const metadata: Metadata = {
+export const metadata = createProjectMistMetadata({
   title,
   description,
-  openGraph: {
-    title,
-    description,
-    images: [projectMistImages.hero],
-  },
-  alternates: {
-    canonical,
-  },
-};
+  canonical,
+  image: projectMistImages.hero,
+});
 
 const faqs = [
   {
@@ -144,7 +139,32 @@ export default function ProjectMistHubPage() {
           confirmed, what your PC needs, how co-op works, and how to avoid rough
           first-session mistakes.
         </p>
+      </section>
 
+      <section className="my-10">
+        <h2 className="mb-4 text-xl font-bold text-foreground">Video References</h2>
+        <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
+          Watch these before a first run if you want to see the tone, tools, and
+          creature scale without reading a full walkthrough.
+        </p>
+        <VideoEmbed
+          videoId={projectMistVideos[0].id}
+          title={projectMistVideos[0].title}
+          caption={projectMistVideos[0].caption}
+        />
+        <div className="grid gap-4 md:grid-cols-2">
+          {projectMistVideos.slice(1).map((video) => (
+            <VideoEmbed
+              key={video.id}
+              videoId={video.id}
+              title={video.title}
+              caption={video.caption}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className="prose-game">
         <h2>Community and Video Signals</h2>
         <ArticleImage
           src={projectMistImages.demo}

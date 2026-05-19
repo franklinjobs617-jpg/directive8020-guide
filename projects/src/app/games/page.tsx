@@ -10,10 +10,34 @@ const description =
   "Browse Enjoy4Game guide hubs for horror, survival, and story-driven games, including Directive 8020 and Project: Mist.";
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    absolute: title,
+  },
   description,
+  keywords: [
+    "game guide hubs",
+    "survival game guides",
+    "horror game guides",
+    "Directive 8020 guide",
+    "Project Mist guide",
+  ],
+  authors: [{ name: "Enjoy4Game Guides" }],
   alternates: {
     canonical: "/games",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "/games",
+    images: [projectMistImages.feature],
+    type: "website",
+    siteName: "Enjoy4Game Guides",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [projectMistImages.feature],
   },
 };
 
@@ -161,7 +185,7 @@ export default function GamesPage() {
             <div className="relative aspect-[4/3]">
               <Image
                 src={projectMistImages.facilities}
-                alt="Project: Mist facility image for guide cluster structure"
+                alt="Project: Mist facility image for survival guide planning"
                 fill
                 className="object-cover"
                 sizes="360px"

@@ -1,21 +1,19 @@
-import type { Metadata } from 'next';
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
-import { projectMistImages, projectMistMinimumSpecs } from '@/lib/project-mist';
+import { createProjectMistMetadata, projectMistImages, projectMistMinimumSpecs } from '@/lib/project-mist';
 
 const title = 'Project: Mist System Requirements - Official Minimum PC Specs';
 const description =
   'Official Project: Mist PC system requirements from Steam: Windows 10/11, 8 GB RAM, GTX 750 / Radeon HD 7770, DirectX 11, storage, and low-end PC notes.';
 const canonical = '/games/project-mist/system-requirements';
 
-export const metadata: Metadata = {
+export const metadata = createProjectMistMetadata({
   title,
   description,
-  alternates: {
-    canonical,
-  },
-};
+  canonical,
+  image: projectMistImages.facilities,
+});
 
 const faqs = [
   {
@@ -71,10 +69,16 @@ export default function ProjectMistSystemRequirementsPage() {
 
       <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
         <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Component</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Official minimum requirement</th>
+            </tr>
+          </thead>
           <tbody>
             {projectMistMinimumSpecs.map(([label, value]) => (
               <tr key={label} className="border-b border-border/30 last:border-0">
-                <td className="w-40 px-4 py-3 font-medium text-muted-foreground">{label}</td>
+                <th scope="row" className="w-40 px-4 py-3 text-left font-medium text-muted-foreground">{label}</th>
                 <td className="px-4 py-3 text-foreground">{value}</td>
               </tr>
             ))}
@@ -124,4 +128,3 @@ export default function ProjectMistSystemRequirementsPage() {
     </ProjectMistArticle>
   );
 }
-

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { projectMist, type GameGuideLink } from '@/lib/games';
 
 export const projectMistLastModified = '2026-05-19';
@@ -63,63 +64,63 @@ export const projectMistSourceRows = [
     source: 'Steam store',
     status: 'verified' as const,
     href: projectMistSteamUrl,
-    note: 'Use this for release date, Early Access, platform, and store feature status.',
+    note: 'Confirms release date, Early Access, platform, and store feature status.',
   },
   {
     claim: 'Steam page copy describes solo play and seamless 1-4 player co-op.',
     source: 'Steam store',
     status: 'verified' as const,
     href: projectMistSteamUrl,
-    note: 'Use this for multiplayer and co-op coverage without claiming cross-play.',
+    note: 'Confirms multiplayer and co-op support without implying cross-play.',
   },
   {
     claim: 'Steam lists Windows 10/11 64-bit, 8 GB RAM, GTX 750 / Radeon HD 7770, DirectX 11, and 20 GB storage as minimum specs.',
     source: 'Steam store',
     status: 'verified' as const,
     href: projectMistSteamUrl,
-    note: 'Use this as the PC requirements baseline until recommended specs appear.',
+    note: 'Sets the PC requirements baseline until recommended specs appear.',
   },
   {
     claim: 'Steam community launch news highlights a refreshed demo, multiplayer testing, a feedback form, and a large wishlist milestone.',
     source: 'Steam Community',
     status: 'verified' as const,
     href: projectMistSteamNewsUrl,
-    note: 'Use this for launch-window demo and community feedback context.',
+    note: 'Adds launch-window demo and community feedback context.',
   },
   {
     claim: 'Early Access coverage says the full version is expected after roughly six months with more bosses, enemies, skills, items, structures, and systems.',
     source: 'TheSixthAxis',
     status: 'working' as const,
     href: 'https://www.thesixthaxis.com/2026/05/05/project-mist-launches-into-early-access-in-two-weeks/',
-    note: 'Use as secondary coverage, not as a replacement for Steam facts.',
+    note: 'Secondary coverage; Steam remains the primary source for store facts.',
   },
   {
     claim: 'Reddit discussion around launch frames Project: Mist around Early Access, Gravity Gun, and physics-based survival interest.',
     source: 'Reddit discussion',
     status: 'working' as const,
     href: 'https://www.reddit.com/r/Gameoneer/comments/1th0njw/project_mist_arrives_in_early_access_with_a/',
-    note: 'Use as community-demand signal only; do not treat comments as official facts.',
+    note: 'Shows community interest, but comments are not treated as official facts.',
   },
   {
     claim: 'YouTube release and gameplay coverage surfaces player interest around demo timing, co-op, Gravity Gun, and train-base systems.',
     source: 'YouTube coverage',
     status: 'working' as const,
     href: 'https://www.youtube.com/watch?v=sNE_ACSlxhs',
-    note: 'Use for video-driven search questions, then verify factual claims against Steam.',
+    note: 'Helps identify common player questions; factual claims are checked against Steam.',
   },
   {
     claim: 'Reviewed gameplay footage shows a demo route through starter supplies, train repair, a mech part, greenhouse access, facility crafting, and a boss weak-point hint.',
     source: 'ENFANT TERRIBLE gameplay',
     status: 'working' as const,
     href: 'https://www.enfant-terrible.media/',
-    note: 'Use as hands-on gameplay signal only; rewrite into user guidance and avoid quoting captions.',
+    note: 'Demo-route context; Early Access patches may change route details.',
   },
   {
     claim: 'Chicken Launcher is listed as the developer and publisher.',
     source: 'Gematsu company page',
     status: 'verified' as const,
     href: chickenLauncherUrl,
-    note: 'Use this to support the studio attribution beyond Steam metadata.',
+    note: 'Supports studio attribution beyond the Steam listing.',
   },
 ];
 
@@ -150,3 +151,75 @@ export const projectMistImages = {
   screenshot7: '/games/project-mist/screenshots/project-mist-screenshot-7.webp',
   screenshot8: '/games/project-mist/screenshots/project-mist-screenshot-8.webp',
 };
+
+export const projectMistVideos = [
+  {
+    id: 'sNE_ACSlxhs',
+    title: 'Project: Mist Early Access Release Date Trailer',
+    caption:
+      'Best first watch for release timing, demo context, and the core Early Access pitch.',
+  },
+  {
+    id: 'cyIdyWG1k3c',
+    title: 'Project: Mist Gravity Gun, Train Base, and Creatures Preview',
+    caption:
+      'Useful for understanding the systems players ask about first: Gravity Gun control, mobile base planning, and giant creature pressure.',
+  },
+  {
+    id: 'KY7uwbiopIg',
+    title: 'Project: Mist Open-World Survival Gameplay Preview',
+    caption:
+      'Good for general gameplay context before reading route or troubleshooting advice.',
+  },
+];
+
+const projectMistKeywords = [
+  'Project Mist',
+  'Project Mist guide',
+  'Project Mist release date',
+  'Project Mist system requirements',
+  'Project Mist multiplayer',
+  'Project Mist co-op',
+  'Project Mist beginner guide',
+  'Project Mist crashing fix',
+  'Project Mist Gravity Gun',
+  'Project Mist train base',
+];
+
+export function createProjectMistMetadata({
+  title,
+  description,
+  canonical,
+  image = projectMistImages.hero,
+}: {
+  title: string;
+  description: string;
+  canonical: string;
+  image?: string;
+}): Metadata {
+  return {
+    title: {
+      absolute: title,
+    },
+    description,
+    keywords: projectMistKeywords,
+    authors: [{ name: 'Enjoy4Game Guides' }],
+    alternates: {
+      canonical,
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      images: [image],
+      type: 'article',
+      siteName: 'Enjoy4Game Guides',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
+    },
+  };
+}

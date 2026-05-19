@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
 import { ProjectMistArticle } from "@/components/project-mist-article";
 import { ArticleImage } from "@/components/article-media";
 import { BlufBox, ActionTable } from "@/components/guide-blocks";
 import {
+  createProjectMistMetadata,
   projectMistDemoLootRows,
   projectMistDemoRiskRows,
   projectMistDemoRouteRows,
@@ -14,13 +14,12 @@ const description =
   "Project: Mist beginner guide for Early Access: first-day priorities, Gravity Gun use, train base upgrades, resources, crafting, hunting, and co-op roles.";
 const canonical = "/games/project-mist/beginner-guide";
 
-export const metadata: Metadata = {
+export const metadata = createProjectMistMetadata({
   title,
   description,
-  alternates: {
-    canonical,
-  },
-};
+  canonical,
+  image: projectMistImages.beginner,
+});
 
 const faqs = [
   {
@@ -62,7 +61,7 @@ const firstDayRows = [
     step: "3. Mark retreat paths",
     doThis:
       "Reach the train, handle the mech-part objective, then treat the greenhouse as a planned facility run.",
-    why: "The transcript route ties train progress to the mech part and greenhouse access card objective.",
+    why: "Early gameplay footage ties train progress to the mech part and greenhouse access card objective.",
   },
   {
     step: "4. Learn creature behavior",

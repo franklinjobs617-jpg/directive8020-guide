@@ -1,21 +1,19 @@
-import type { Metadata } from 'next';
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
-import { projectMistImages } from '@/lib/project-mist';
+import { createProjectMistMetadata, projectMistImages } from '@/lib/project-mist';
 
 const title = 'Project: Mist Release Date, Early Access, Demo & Price Notes';
 const description =
   'Project: Mist release date guide covering Steam Early Access, demo status, price notes, PC platform status, and what to check before launch.';
 const canonical = '/games/project-mist/release-date';
 
-export const metadata: Metadata = {
+export const metadata = createProjectMistMetadata({
   title,
   description,
-  alternates: {
-    canonical,
-  },
-};
+  canonical,
+  image: projectMistImages.release,
+});
 
 const faqs = [
   {
@@ -123,4 +121,3 @@ export default function ProjectMistReleaseDatePage() {
     </ProjectMistArticle>
   );
 }
-

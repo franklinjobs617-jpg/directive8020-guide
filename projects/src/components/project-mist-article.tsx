@@ -83,10 +83,10 @@ export function ProjectMistArticle({
           <>
             <ArticleImage
               src={projectMistImages.screenshot1}
-              alt="Project: Mist source-check image"
+              alt="Project: Mist sources and verification image"
               caption="Project: Mist is in Early Access, so the guide separates official Steam facts from hands-on demo notes and community reports."
             />
-            <SourceCheckTable title="Project: Mist Source Check" rows={projectMistSourceRows} />
+            <SourceCheckTable title="Project: Mist Sources and Verification" rows={projectMistSourceRows} />
           </>
         )}
         <ArticleImage

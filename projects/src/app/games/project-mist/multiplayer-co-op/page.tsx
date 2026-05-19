@@ -1,21 +1,19 @@
-import type { Metadata } from 'next';
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
-import { projectMistImages } from '@/lib/project-mist';
+import { createProjectMistMetadata, projectMistImages } from '@/lib/project-mist';
 
 const title = 'Project: Mist Multiplayer & Co-op - How Many Players?';
 const description =
   'Project: Mist multiplayer and co-op guide: 1-4 player online co-op, solo play, group roles, Steam features, and what is not confirmed yet.';
 const canonical = '/games/project-mist/multiplayer-co-op';
 
-export const metadata: Metadata = {
+export const metadata = createProjectMistMetadata({
   title,
   description,
-  alternates: {
-    canonical,
-  },
-};
+  canonical,
+  image: projectMistImages.multiplayer,
+});
 
 const faqs = [
   {
@@ -124,4 +122,3 @@ export default function ProjectMistMultiplayerPage() {
     </ProjectMistArticle>
   );
 }
-
