@@ -68,6 +68,11 @@ export function SiteHeader() {
         >
           Cast
         </Link>
+        <Link href="https://www.reddit.com/r/enjoy4game/">
+          <button className="text-xs font-medium px-3 py-1.5 rounded-md bg-blue-600/15 text-blue-600 border border-blue-600/30 hover:bg-blue-600/25 transition-colors">
+            Join our Reddit
+          </button>
+        </Link>
       </div>
     </header>
   );
