@@ -145,19 +145,20 @@ export function SiteFooter() {
                   Copyright Infringement
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="https://www.reddit.com/r/enjoy4game/"
-                  className="inline-flex items-center gap-2 text-sm"
-                >
-                  <MessageSquare className="h-4 w-4" />
-                  Join our community: r/enjoy4game
-                </Link>
-              </li>
+              <li className="text-sm"></li>
             </ul>
           </div>
         </div>
         <div className="mt-8 pt-6 border-t border-border/30 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-muted-foreground">
+          <Link
+            href="https://www.reddit.com/r/enjoy4game/"
+            className="inline-flex items-center gap-2 text-sm"
+          >
+            <MessageSquare className="h-4 w-4" />
+            Join our community: r/enjoy4game
+          </Link>
+          </p>
           <p className="text-xs text-muted-foreground">
             Not affiliated with Supermassive Games or Bandai Namco. Fan-made
             guide.
