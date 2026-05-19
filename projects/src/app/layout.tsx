@@ -3,7 +3,6 @@ import Script from "next/script";
 import { Inspector } from "react-dev-inspector";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { JsonLd, generateVideoGameSchema } from "@/components/json-ld";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -65,7 +64,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased min-h-screen flex flex-col">
-        <JsonLd data={generateVideoGameSchema()} />
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3383070348689557"

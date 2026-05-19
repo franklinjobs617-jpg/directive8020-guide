@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { JsonLd, generateFAQSchema } from '@/components/json-ld';
+import { JsonLd, generateFAQSchema, generateVideoGameSchema } from '@/components/json-ld';
 import { VideoEmbed } from '@/components/article-media';
 
 export const metadata: Metadata = {
@@ -432,9 +432,31 @@ const homeFaqs = [
   },
 ];
 
+const newGameCoverage = [
+  {
+    title: 'Project: Mist Guide Hub',
+    body: 'Open-world survival horror basics, Early Access status, Gravity Gun, train base, co-op, and first-day route planning.',
+    href: '/games/project-mist',
+    image: '/games/project-mist/hero.webp',
+  },
+  {
+    title: 'Project: Mist System Requirements',
+    body: 'Official minimum PC specs from Steam, missing recommended specs, and practical low-end PC notes.',
+    href: '/games/project-mist/system-requirements',
+    image: '/games/project-mist/homepage/map-facilities-guide.webp',
+  },
+  {
+    title: 'Project: Mist Multiplayer',
+    body: '1-4 player online co-op status, solo play, group roles, and what is not confirmed yet.',
+    href: '/games/project-mist/multiplayer-co-op',
+    image: '/games/project-mist/homepage/multiplayer-coop-guide.webp',
+  },
+];
+
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={generateVideoGameSchema()} />
       <JsonLd data={generateFAQSchema(homeFaqs)} />
 
       <section className="relative overflow-hidden border-b border-border/40">
@@ -587,6 +609,37 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="mb-6 flex items-end justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="h-1 w-8 rounded-full bg-emerald-400" />
+            <div>
+              <h2 className="text-xl font-bold text-foreground">New Survival Game Coverage</h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                A small new guide cluster for Project: Mist, while Directive 8020 remains the main site focus.
+              </p>
+            </div>
+          </div>
+          <Link href="/games" className="text-sm font-semibold text-emerald-300 hover:underline">
+            All game hubs
+          </Link>
+        </div>
+        <div className="grid gap-4 md:grid-cols-3">
+          {newGameCoverage.map((item) => (
+            <Link key={item.href} href={item.href} className="group overflow-hidden rounded-lg border border-border/50 bg-card/30 transition-colors hover:border-emerald-400/40">
+              <div className="relative aspect-video">
+                <Image src={item.image} alt={item.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+              </div>
+              <div className="p-5">
+                <h3 className="text-base font-bold text-foreground group-hover:text-emerald-300">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 

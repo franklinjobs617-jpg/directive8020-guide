@@ -44,6 +44,12 @@ export function SiteHeader() {
             Guides
           </Link>
           <Link
+            href="/games"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Games
+          </Link>
+          <Link
             href="/directive-8020-beginner-tips"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
@@ -131,6 +137,13 @@ export function SiteHeader() {
               className="text-sm text-muted-foreground hover:text-foreground hover:bg-muted px-3 py-2 rounded-md transition-colors"
             >
               Guides
+            </Link>
+            <Link
+              href="/games"
+              onClick={closeMobileMenu}
+              className="text-sm text-muted-foreground hover:text-foreground hover:bg-muted px-3 py-2 rounded-md transition-colors"
+            >
+              Games
             </Link>
             <Link
               href="/directive-8020-beginner-tips"

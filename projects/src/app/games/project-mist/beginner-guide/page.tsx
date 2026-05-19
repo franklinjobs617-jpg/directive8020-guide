@@ -1,0 +1,236 @@
+import type { Metadata } from "next";
+import { ProjectMistArticle } from "@/components/project-mist-article";
+import { ArticleImage } from "@/components/article-media";
+import { BlufBox, ActionTable } from "@/components/guide-blocks";
+import {
+  projectMistDemoLootRows,
+  projectMistDemoRiskRows,
+  projectMistDemoRouteRows,
+  projectMistImages,
+} from "@/lib/project-mist";
+
+const title = "Project: Mist Beginner Guide - First Day Survival Tips";
+const description =
+  "Project: Mist beginner guide for Early Access: first-day priorities, Gravity Gun use, train base upgrades, resources, crafting, hunting, and co-op roles.";
+const canonical = "/games/project-mist/beginner-guide";
+
+export const metadata: Metadata = {
+  title,
+  description,
+  alternates: {
+    canonical,
+  },
+};
+
+const faqs = [
+  {
+    question: "What should beginners do first in Project: Mist?",
+    answer:
+      "Beginners should test controls, gather basic resources, return to the moving train base early, and avoid deep facility runs before food, tools, and retreat routes are stable.",
+  },
+  {
+    question: "How important is the Gravity Gun in Project: Mist?",
+    answer:
+      "The Gravity Gun is a core system because Steam highlights using physics to move objects, control space, and turn the environment into a weapon.",
+  },
+  {
+    question: "Should beginners play Project: Mist solo or co-op?",
+    answer:
+      "Both are supported. Solo is slower and easier to control, while co-op helps divide scouting, defense, crafting, and combat if the group communicates.",
+  },
+  {
+    question: "Is this beginner guide final?",
+    answer:
+      "No. Project: Mist is an Early Access game, so route and balance advice should be treated as launch-window guidance until patches stabilize.",
+  },
+];
+
+const firstDayRows = [
+  {
+    step: "1. Test controls",
+    doThis:
+      "Save, open the starter chest, test flashlight, inventory, crafting, quick slots, and objective tracking before leaving the safe room.",
+    why: "The gameplay subtitles show the opening teaches survival UI before the first real route decision.",
+  },
+  {
+    step: "2. Secure basics",
+    doThis:
+      "Gather food, water, bandages, ammo, bear traps, and crafting materials before committing to the greenhouse route.",
+    why: "The demo route can create ammo and health pressure before the boss, so entering light is risky.",
+  },
+  {
+    step: "3. Mark retreat paths",
+    doThis:
+      "Reach the train, handle the mech-part objective, then treat the greenhouse as a planned facility run.",
+    why: "The transcript route ties train progress to the mech part and greenhouse access card objective.",
+  },
+  {
+    step: "4. Learn creature behavior",
+    doThis:
+      "Avoid the power whale, study facility enemies, and save explosives for encounters with clear weak-point hints.",
+    why: "Demo dialogue explicitly warns against provoking the whale and gives a boss weak-point clue later.",
+  },
+];
+
+export default function ProjectMistBeginnerGuidePage() {
+  return (
+    <ProjectMistArticle
+      title={title}
+      description={description}
+      canonical={canonical}
+      label="Beginner Guide"
+      heroImage={projectMistImages.beginner}
+      heroAlt="Project: Mist beginner survival guide image"
+      faqs={faqs}
+    >
+      <BlufBox title="First-Day Rule">
+        <p>
+          <strong>
+            Play the first session like a systems test, not a full clear.
+          </strong>{" "}
+          Learn the Gravity Gun, secure basic resources, return to the moving
+          train base early, and treat every deep facility trip as optional until
+          you understand enemy pressure.
+        </p>
+      </BlufBox>
+
+      <section className="prose-game">
+        <h2>First Day Priorities</h2>
+        <ArticleImage
+          src={projectMistImages.beginner}
+          alt="Project: Mist first day beginner guide visual"
+          caption="A strong first save should produce information: controls, safe routes, resource loops, and return paths."
+        />
+      </section>
+      <ActionTable rows={firstDayRows} />
+
+      <section className="prose-game">
+        <h2>Demo Route: What to Do in Order</h2>
+        <ArticleImage
+          src={projectMistImages.firstSteps}
+          alt="Project: Mist demo route first steps image"
+          caption="The subtitle-reviewed route gives beginners a clean order: starter supplies, train, mech part, greenhouse, then facility progress."
+        />
+        <p>
+          The YouTube subtitles make the opening route clearer than a generic
+          survival checklist. Treat this as demo-observed guidance: useful for a
+          first session, but still subject to Early Access changes.
+        </p>
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Step</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Beginner takeaway</th>
+            </tr>
+          </thead>
+          <tbody>
+            {projectMistDemoRouteRows.map(([step, takeaway]) => (
+              <tr key={step} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{step}</td>
+                <td className="px-4 py-3 text-muted-foreground">{takeaway}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
+        <h2>Use the Gravity Gun as a Survival Tool</h2>
+        <ArticleImage
+          src={projectMistImages.gravityGun}
+          alt="Project: Mist Gravity Gun beginner guide image"
+          caption="Use the Gravity Gun to block paths, move debris, interrupt pressure, and solve movement problems before spending scarce resources."
+        />
+        <p>
+          Steam describes the Gravity Gun as a way to move objects, manipulate
+          enemies or debris, control space, and turn the environment into a
+          weapon. That makes it a utility tool first and a damage tool second.
+        </p>
+
+        <h2>Train Base Priorities</h2>
+        <ArticleImage
+          src={projectMistImages.trainBase}
+          alt="Project: Mist train base beginner guide image"
+          caption="The train base should reduce friction: store resources, support repairs, create safety, and make the next run easier."
+        />
+        <ul>
+          <li>
+            <strong>Storage first:</strong> Keep materials organized so crafting
+            and repairs do not stall during co-op sessions.
+          </li>
+          <li>
+            <strong>Defense second:</strong> Upgrade defenses before pushing
+            into more dangerous areas.
+          </li>
+          <li>
+            <strong>Utility third:</strong> Add upgrades that support longer
+            trips, safer returns, and better resource conversion.
+          </li>
+        </ul>
+
+        <h2>Facility Runs and Early Danger</h2>
+        <ArticleImage
+          src={projectMistImages.facilities}
+          alt="Project: Mist facility beginner route image"
+          caption="Facilities are likely progression hotspots. Enter them only after you know your exit route and have enough supplies to recover."
+        />
+        <p>
+          Public gameplay coverage points to facility routes, traversal hazards,
+          and utility loot. That means beginners should avoid treating every
+          building like a quick loot room. Check visibility, retreat options,
+          and resource pressure before committing.
+        </p>
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Facility finding</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Beginner use</th>
+            </tr>
+          </thead>
+          <tbody>
+            {projectMistDemoLootRows.map(([finding, use]) => (
+              <tr key={finding} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{finding}</td>
+                <td className="px-4 py-3 text-muted-foreground">{use}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
+        <h2>Beginner Mistakes to Avoid</h2>
+        <ArticleImage
+          src={projectMistImages.creatures}
+          alt="Project: Mist beginner danger and creature image"
+          caption="The safest beginner mindset is to observe large threats first, then spend ammo or explosives only after the game gives a clear reason."
+        />
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Risk</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Safer habit</th>
+            </tr>
+          </thead>
+          <tbody>
+            {projectMistDemoRiskRows.map(([risk, habit]) => (
+              <tr key={risk} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{risk}</td>
+                <td className="px-4 py-3 text-muted-foreground">{habit}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </ProjectMistArticle>
+  );
+}

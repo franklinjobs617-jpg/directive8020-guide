@@ -5,7 +5,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border/50 bg-background/50">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-12">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
           <div>
             <h3 className="text-sm font-semibold text-foreground mb-3">
               Directive 8020 Guides
@@ -106,6 +106,37 @@ export function SiteFooter() {
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Cast & Actors
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-foreground mb-3">
+              More Survival Games
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/games/project-mist"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Project: Mist Guide
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/games/project-mist/system-requirements"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Project: Mist Specs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/games/project-mist/multiplayer-co-op"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Project: Mist Co-op
                 </Link>
               </li>
             </ul>

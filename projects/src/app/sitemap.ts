@@ -17,6 +17,48 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/games`,
+      lastModified: '2026-05-19',
+      changeFrequency: 'weekly',
+      priority: 0.64,
+    },
+    {
+      url: `${BASE_URL}/games/project-mist`,
+      lastModified: '2026-05-19',
+      changeFrequency: 'daily',
+      priority: 0.72,
+    },
+    {
+      url: `${BASE_URL}/games/project-mist/release-date`,
+      lastModified: '2026-05-19',
+      changeFrequency: 'daily',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/games/project-mist/system-requirements`,
+      lastModified: '2026-05-19',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/project-mist/multiplayer-co-op`,
+      lastModified: '2026-05-19',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/project-mist/beginner-guide`,
+      lastModified: '2026-05-19',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/project-mist/crashing-fix`,
+      lastModified: '2026-05-19',
+      changeFrequency: 'weekly',
+      priority: 0.66,
+    },
+    {
       url: `${BASE_URL}/directive-8020-overview`,
       lastModified: '2026-05-15',
       changeFrequency: 'weekly',

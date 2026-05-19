@@ -1,0 +1,127 @@
+import type { Metadata } from 'next';
+import { ProjectMistArticle } from '@/components/project-mist-article';
+import { ArticleImage } from '@/components/article-media';
+import { BlufBox } from '@/components/guide-blocks';
+import { projectMistImages } from '@/lib/project-mist';
+
+const title = 'Project: Mist Multiplayer & Co-op - How Many Players?';
+const description =
+  'Project: Mist multiplayer and co-op guide: 1-4 player online co-op, solo play, group roles, Steam features, and what is not confirmed yet.';
+const canonical = '/games/project-mist/multiplayer-co-op';
+
+export const metadata: Metadata = {
+  title,
+  description,
+  alternates: {
+    canonical,
+  },
+};
+
+const faqs = [
+  {
+    question: 'How many players can play Project: Mist co-op?',
+    answer:
+      'Steam page copy describes Project: Mist as seamless 1-4 player co-op.',
+  },
+  {
+    question: 'Can Project: Mist be played solo?',
+    answer:
+      'Yes. Steam lists single-player, and the page copy says players can take on the story-driven campaign alone or with friends.',
+  },
+  {
+    question: 'Does Project: Mist have online co-op?',
+    answer:
+      'Yes. Steam lists co-op and online co-op for Project: Mist.',
+  },
+  {
+    question: 'Does Project: Mist have cross-play?',
+    answer:
+      'Cross-play is not confirmed by the current Steam listing. Do not assume cross-platform multiplayer unless Chicken Launcher announces it.',
+  },
+];
+
+const coOpRoles = [
+  ['Scout', 'Marks threats, abandoned facilities, resource routes, and safe retreat paths.'],
+  ['Builder', 'Upgrades the moving train base, places defenses, and manages storage priorities.'],
+  ['Controller', 'Uses Gravity Gun positioning, debris, and terrain to slow danger before it reaches the group.'],
+  ['Quartermaster', 'Tracks food, crafted tools, ammunition, healing, and repair needs between trips.'],
+];
+
+export default function ProjectMistMultiplayerPage() {
+  return (
+    <ProjectMistArticle
+      title={title}
+      description={description}
+      canonical={canonical}
+      label="Multiplayer & Co-op"
+      heroImage={projectMistImages.multiplayer}
+      heroAlt="Project: Mist multiplayer and co-op guide image"
+      faqs={faqs}
+    >
+      <BlufBox title="Co-op Answer">
+        <p>
+          <strong>Project: Mist supports solo play and online co-op.</strong>{' '}
+          Steam lists single-player, multi-player, co-op, and online co-op, and
+          the page copy describes seamless <strong>1-4 player co-op</strong>.
+        </p>
+      </BlufBox>
+
+      <section className="prose-game">
+        <h2>Multiplayer Status</h2>
+        <ArticleImage
+          src={projectMistImages.multiplayer}
+          alt="Project: Mist multiplayer guide visual"
+          caption="Project: Mist should be treated as an online co-op survival game, not a confirmed local split-screen or cross-play title."
+        />
+        <p>
+          The current Steam listing confirms enough for a player-facing answer:
+          Project: Mist supports solo play and online co-op. What is not
+          confirmed from the current listing is local split-screen, cross-play,
+          dedicated servers, console multiplayer, and save transfer rules.
+        </p>
+
+        <h2>Suggested Co-op Roles</h2>
+        <ArticleImage
+          src={projectMistImages.trainBase}
+          alt="Project: Mist train base co-op role image"
+          caption="Co-op should orbit the moving train base: scouting and fighting are useful only if the group returns with resources and upgrade progress."
+        />
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Role</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Job</th>
+            </tr>
+          </thead>
+          <tbody>
+            {coOpRoles.map(([role, job]) => (
+              <tr key={role} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{role}</td>
+                <td className="px-4 py-3 text-muted-foreground">{job}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
+        <h2>What to Verify After Launch</h2>
+        <ArticleImage
+          src={projectMistImages.screenshot5}
+          alt="Project: Mist multiplayer verification screenshot"
+          caption="Early Access multiplayer pages should update once host saves, difficulty scaling, disconnect behavior, and inventory sharing are tested."
+        />
+        <ul>
+          <li>Whether hosts and clients share story progress in the same way.</li>
+          <li>Whether a demo save interacts with Early Access saves.</li>
+          <li>Whether difficulty scales with player count.</li>
+          <li>Whether disconnects preserve inventory and base changes.</li>
+        </ul>
+      </section>
+    </ProjectMistArticle>
+  );
+}
+

@@ -1,3 +1,5 @@
+import { directive8020, type GameSchemaConfig } from '@/lib/games';
+
 interface JsonLdProps {
   data: Record<string, unknown>;
 }
@@ -18,6 +20,7 @@ export function generateArticleSchema({
   datePublished,
   dateModified,
   imageUrl,
+  game = directive8020,
 }: {
   title: string;
   description: string;
@@ -25,6 +28,7 @@ export function generateArticleSchema({
   datePublished: string;
   dateModified?: string;
   imageUrl?: string;
+  game?: GameSchemaConfig;
 }) {
   return {
     '@context': 'https://schema.org',
@@ -36,26 +40,26 @@ export function generateArticleSchema({
     dateModified: dateModified || datePublished,
     author: {
       '@type': 'Organization',
-      name: 'Directive 8020 Guide Hub',
+      name: game.guidePublisher,
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Directive 8020 Guide Hub',
+      name: game.guidePublisher,
     },
     about: {
       '@type': 'VideoGame',
-      name: 'Directive 8020',
-      gamePlatform: ['PlayStation 5', 'Xbox Series X|S', 'PC'],
-      genre: ['Survival Horror', 'Interactive Drama', 'Adventure'],
+      name: game.name,
+      gamePlatform: game.platforms,
+      genre: game.genres,
       developer: {
         '@type': 'Organization',
-        name: 'Supermassive Games',
+        name: game.developer,
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Supermassive Games',
+        name: game.publisher,
       },
-      datePublished: '2026-05-12',
+      datePublished: game.releaseDate,
     },
     ...(imageUrl && {
       image: {
@@ -126,10 +130,12 @@ export function generateWebPageSchema({
   title,
   description,
   url,
+  siteName = 'Directive 8020 Guide Hub',
 }: {
   title: string;
   description: string;
   url: string;
+  siteName?: string;
 }) {
   return {
     '@context': 'https://schema.org',
@@ -139,41 +145,40 @@ export function generateWebPageSchema({
     url,
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Directive 8020 Guide Hub',
+      name: siteName,
       url: 'https://enjoy4game.com',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Directive 8020 Guide Hub',
+      name: siteName,
     },
   };
 }
 
-export function generateVideoGameSchema() {
+export function generateVideoGameSchema(game: GameSchemaConfig = directive8020) {
   return {
     '@context': 'https://schema.org',
     '@type': 'VideoGame',
-    name: 'Directive 8020',
-    description:
-      'A cinematic sci-fi survival horror adventure from Supermassive Games. When a colony ship reaches a distant planet, the crew discovers a deadly alien threat that can perfectly mimic its prey.',
-    gamePlatform: ['PlayStation 5', 'Xbox Series X|S', 'PC'],
-    genre: ['Survival Horror', 'Interactive Drama', 'Adventure'],
+    name: game.name,
+    description: game.description,
+    gamePlatform: game.platforms,
+    genre: game.genres,
     applicationCategory: 'Game',
-    operatingSystem: 'Windows, PlayStation 5, Xbox Series X|S',
+    operatingSystem: game.operatingSystem,
     developer: {
       '@type': 'Organization',
-      name: 'Supermassive Games',
+      name: game.developer,
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Supermassive Games',
+      name: game.publisher,
     },
-    datePublished: '2026-05-12',
-    url: 'https://store.steampowered.com/app/2255370/Directive_8020/',
+    datePublished: game.releaseDate,
+    url: game.url,
     offers: {
       '@type': 'Offer',
       priceCurrency: 'USD',
-      availability: 'https://schema.org/PreOrder',
+      availability: game.availability ?? 'https://schema.org/InStock',
     },
   };
 }
