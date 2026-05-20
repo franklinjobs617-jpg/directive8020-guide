@@ -1,11 +1,11 @@
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
-import { createProjectMistMetadata, projectMistImages } from '@/lib/project-mist';
+import { createProjectMistMetadata, projectMistImages, projectMistLaunchSnapshotRows } from '@/lib/project-mist';
 
 const title = 'Project: Mist Release Date, Early Access, Demo & Price Notes';
 const description =
-  'Project: Mist release date guide covering Steam Early Access, demo status, price notes, PC platform status, and what to check before launch.';
+  'Project: Mist release date guide updated for Early Access launch: Steam live status, price snapshot, demo notes, PC platform status, and roadmap timing.';
 const canonical = '/games/project-mist/release-date';
 
 export const metadata = createProjectMistMetadata({
@@ -19,7 +19,7 @@ const faqs = [
   {
     question: 'What is the Project: Mist release date?',
     answer:
-      'Steam lists Project: Mist with a 19 May, 2026 release date and Early Access status.',
+      'Project: Mist released into Steam Early Access on 19 May, 2026.',
   },
   {
     question: 'Is Project: Mist Early Access?',
@@ -29,7 +29,7 @@ const faqs = [
   {
     question: 'Does Project: Mist have a demo?',
     answer:
-      'Steam shows a Project: Mist demo option on the store page, so players can test the game before buying if the demo remains available in their region.',
+      'Steam app data still references a Project: Mist demo app, but launch-window discussions include demo and save issues, so check the current store button before relying on it.',
   },
   {
     question: 'Will Project: Mist price change after Early Access?',
@@ -39,10 +39,10 @@ const faqs = [
 ];
 
 const launchChecks = [
-  ['Steam status', 'Check whether the store button says Coming Soon, Early Access, or Play Now in your region.'],
-  ['Demo access', 'Use the demo to test performance, controls, and co-op expectations before buying.'],
+  ['Steam status', 'Project: Mist is live in Early Access; check the current store button in your region before buying.'],
+  ['Demo access', 'Check whether the demo is still available for your account and whether demo saves behave correctly.'],
   ['Build version', 'Read the latest Steam news before a group run because demo and Early Access builds can differ.'],
-  ['Price', 'Check your local Steam currency because Early Access pricing can vary by region.'],
+  ['Price', 'The US store snapshot was $22.49 on 20 May, 2026; check your local Steam currency before purchase.'],
   ['Save data', 'Do not assume demo saves transfer unless Chicken Launcher confirms it.'],
 ];
 
@@ -59,9 +59,10 @@ export default function ProjectMistReleaseDatePage() {
     >
       <BlufBox title="Release Answer">
         <p>
-          <strong>Steam lists Project: Mist for 19 May, 2026 in Early Access.</strong>{' '}
-          The safest launch-day answer is to treat Steam as the source of truth,
-          then use Steam news for demo and feedback updates.
+          <strong>Project: Mist is live in Steam Early Access as of 19 May, 2026.</strong>{' '}
+          Treat Steam as the source of truth for availability and local price,
+          then use Steam news and discussions for launch-window demo, save, and
+          roadmap updates.
         </p>
       </BlufBox>
 
@@ -75,9 +76,39 @@ export default function ProjectMistReleaseDatePage() {
         <p>
           The current Steam listing gives the key facts: Project: Mist is a PC
           game from Chicken Launcher with a listed release date of{' '}
-          <strong>19 May, 2026</strong>. The platform data points to Windows
+          <strong>19 May, 2026</strong>. It is now live in Early Access. The
+          platform data points to Windows
           10/11 64-bit, not macOS, Linux, PlayStation, or Xbox.
         </p>
+
+        <h2>Price, Reviews, and Roadmap Snapshot</h2>
+        <ArticleImage
+          src={projectMistImages.screenshot4}
+          alt="Project: Mist price and review snapshot image"
+          caption="Price and review counts change quickly after launch, so this page keeps those facts dated instead of treating them as permanent."
+        />
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Item</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Verified snapshot</th>
+            </tr>
+          </thead>
+          <tbody>
+            {projectMistLaunchSnapshotRows.map(([item, value]) => (
+              <tr key={item} className="border-b border-border/30 last:border-0">
+                <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{item}</th>
+                <td className="px-4 py-3 text-muted-foreground">{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
 
         <h2>Demo and Early Access Context</h2>
         <ArticleImage
@@ -87,9 +118,10 @@ export default function ProjectMistReleaseDatePage() {
         />
         <p>
           Steam shows a demo option, and Steam Community launch messaging points
-          players toward testing and feedback. Use the demo as a practical
-          filter: if your PC struggles there, wait for patches or lower settings
-          before buying into a longer co-op run.
+          players toward testing and feedback. Because players are already
+          discussing demo-save issues, use the demo as a practical filter but
+          do not assume demo progress will carry cleanly into the Early Access
+          build.
         </p>
 
         <h2>Launch Checklist</h2>

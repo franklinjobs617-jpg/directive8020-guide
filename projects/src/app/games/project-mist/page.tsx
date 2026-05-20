@@ -10,13 +10,15 @@ import {
   projectMistDemoRouteRows,
   createProjectMistMetadata,
   projectMistImages,
+  projectMistLaunchQuestionRows,
+  projectMistLaunchSnapshotRows,
   projectMistQuickFacts,
   projectMistVideos,
 } from '@/lib/project-mist';
 
-const title = 'Project: Mist Guide Hub - Early Access, Co-op, Gravity Gun & Train Base';
+const title = 'Project: Mist Guide Hub - Early Access, Co-op, Lockpick & Train Base';
 const description =
-  'Project: Mist guide hub for Steam Early Access facts, co-op, Gravity Gun, moving train base, system requirements, beginner tips, and crash fixes.';
+  'Project: Mist guide hub updated for Steam Early Access: launch facts, price snapshot, co-op, lockpicking, train door key, saves, building, and fixes.';
 const canonical = '/games/project-mist';
 
 export const metadata = createProjectMistMetadata({
@@ -35,7 +37,7 @@ const faqs = [
   {
     question: 'When does Project: Mist release?',
     answer:
-      'Steam lists Project: Mist with a 19 May, 2026 release date and Early Access status.',
+      'Project: Mist released into Steam Early Access on 19 May, 2026.',
   },
   {
     question: 'Does Project: Mist have multiplayer?',
@@ -45,7 +47,7 @@ const faqs = [
   {
     question: 'What should I read first?',
     answer:
-      'Start with release date, system requirements, multiplayer, and beginner guide pages before treating any route or creature advice as final.',
+      'Start with release date, beginner guide, lockpick, train door key, save, and crash-fix pages before treating any route advice as final.',
   },
 ];
 
@@ -62,10 +64,12 @@ export default function ProjectMistHubPage() {
     >
       <BlufBox title="Early Access Snapshot">
         <p>
-          <strong>Project: Mist is a PC Early Access survival horror game.</strong>{' '}
+          <strong>Project: Mist is live in Steam Early Access.</strong>{' '}
           Steam confirms solo play, online co-op, Gravity Gun, moving train
           base, abandoned facilities, giant creatures, crafting, hunting, Steam
-          Achievements, Steam Cloud, and an official demo.
+          Achievements, Steam Cloud, and a demo listing. Launch-window player
+          questions now focus on lockpicking, train door keys, saves, building,
+          price, performance, and co-op stability.
         </p>
       </BlufBox>
 
@@ -141,6 +145,40 @@ export default function ProjectMistHubPage() {
         </p>
       </section>
 
+      <section className="prose-game">
+        <h2>Launch Snapshot</h2>
+        <ArticleImage
+          src={projectMistImages.release}
+          alt="Project: Mist launch snapshot guide image"
+          caption="Project: Mist is now live in Early Access, so dated price, review, demo, and roadmap facts should be checked before buying."
+        />
+        <p>
+          The most important change since the first page draft is launch state:
+          Project: Mist is no longer just upcoming. Steam API data shows it is
+          live in Early Access, and Steam launch news says the team is collecting
+          feedback before sharing a roadmap after roughly 2-3 weeks.
+        </p>
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Launch fact</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current reading</th>
+            </tr>
+          </thead>
+          <tbody>
+            {projectMistLaunchSnapshotRows.map(([fact, value]) => (
+              <tr key={fact} className="border-b border-border/30 last:border-0">
+                <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{fact}</th>
+                <td className="px-4 py-3 text-muted-foreground">{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
       <section className="my-10">
         <h2 className="mb-4 text-xl font-bold text-foreground">Video References</h2>
         <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
@@ -179,7 +217,37 @@ export default function ProjectMistHubPage() {
           availability, Early Access timing, Gravity Gun combat, creatures, and
           the mobile train base.
         </p>
+      </section>
 
+      <section className="prose-game">
+        <h2>Known Launch Questions</h2>
+        <ArticleImage
+          src={projectMistImages.screenshot5}
+          alt="Project: Mist launch questions guide image"
+          caption="Steam discussions now show practical questions from real players: lockpicks, chests, train door keys, demo saves, building limits, and buying risk."
+        />
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player question</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it needs a guide</th>
+            </tr>
+          </thead>
+          <tbody>
+            {projectMistLaunchQuestionRows.map(([question, reason]) => (
+              <tr key={question} className="border-b border-border/30 last:border-0">
+                <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{question}</th>
+                <td className="px-4 py-3 text-muted-foreground">{reason}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
         <h2>Demo Gameplay Takeaways</h2>
         <ArticleImage
           src={projectMistImages.firstSteps}

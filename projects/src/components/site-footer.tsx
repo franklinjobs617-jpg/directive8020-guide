@@ -190,10 +190,26 @@ export function SiteFooter() {
             Join our community: r/enjoy4game
           </Link>
           </p>
-          <p className="text-xs text-muted-foreground">
-            Not affiliated with Supermassive Games or Bandai Namco. Fan-made
-            guide.
-          </p>
+          <div className="flex items-center gap-4">
+            <p className="text-xs text-muted-foreground">
+              Not affiliated with Supermassive Games or Bandai Namco. Fan-made
+              guide.
+            </p>
+            <a
+              href="https://www.foundrlist.com/product/directive8020?utm_source=badge&amp;utm_medium=embed"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex shrink-0"
+            >
+              <img
+                src="https://www.foundrlist.com/api/badge/directive8020"
+                alt="Featured on FoundrList"
+                width={75}
+                height={24}
+                className="h-6 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

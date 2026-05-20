@@ -77,7 +77,7 @@ export const projectMist: GameConfig = {
   releaseDate: '2026-05-19',
   operatingSystem: 'Windows 10/11 64-bit',
   url: 'https://store.steampowered.com/app/2383130/Project_Mist/',
-  availability: 'https://schema.org/PreOrder',
+  availability: 'https://schema.org/InStock',
   heroImage: '/games/project-mist/hero.webp',
   guideLinks: [
     {
@@ -104,6 +104,31 @@ export const projectMist: GameConfig = {
       title: 'Crashing & Performance Fix',
       href: '/games/project-mist/crashing-fix',
       description: 'Early Access startup crashes, black screen, low FPS, and online troubleshooting.',
+    },
+    {
+      title: 'Lockpick & Chests',
+      href: '/games/project-mist/lockpick-chests',
+      description: 'How lockpicking works, how to open chests, and what to do if the minigame feels unclear.',
+    },
+    {
+      title: 'Train Door Key',
+      href: '/games/project-mist/train-door-key',
+      description: 'Train door key route notes, boss-gate checks, and launch-window missing-key troubleshooting.',
+    },
+    {
+      title: 'Demo Saves & Transfer',
+      href: '/games/project-mist/save-demo-transfer',
+      description: 'Demo save behavior, infinite loading reports, Steam Cloud checks, and safe save handling.',
+    },
+    {
+      title: 'Train Base Building',
+      href: '/games/project-mist/building-train-base',
+      description: 'Moving train base priorities, storage, defenses, building limits, and what is still being patched.',
+    },
+    {
+      title: 'Is Project: Mist Worth It?',
+      href: '/games/project-mist/is-it-worth-it',
+      description: 'Launch-window buying advice using price, reviews, Early Access risk, co-op, demo, and content fit.',
     },
   ],
 };
