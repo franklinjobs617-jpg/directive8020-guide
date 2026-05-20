@@ -190,26 +190,10 @@ export function SiteFooter() {
             Join our community: r/enjoy4game
           </Link>
           </p>
-          <div className="flex items-center gap-4">
-            <p className="text-xs text-muted-foreground">
-              Not affiliated with Supermassive Games or Bandai Namco. Fan-made
-              guide.
-            </p>
-            <a
-              href="https://launchigniter.com/product/free-online-game-guide?ref=badge-free-online-game-guide"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex shrink-0"
-            >
-              <img
-                src="https://launchigniter.com/api/badge/free-online-game-guide?theme=light"
-                alt="Featured on LaunchIgniter"
-                width={106}
-                height={28}
-                className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity"
-              />
-            </a>
-          </div>
+          <p className="text-xs text-muted-foreground">
+            Not affiliated with Supermassive Games or Bandai Namco. Fan-made
+            guide.
+          </p>
         </div>
       </div>
     </footer>
