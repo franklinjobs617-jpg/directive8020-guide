@@ -45,6 +45,15 @@ const coOpRoles = [
   ['Quartermaster', 'Tracks food, crafted tools, ammunition, healing, and repair needs between trips.'],
 ];
 
+const steamFeatureRows = [
+  ['Single-player', 'Listed on Steam.'],
+  ['Multi-player', 'Listed on Steam.'],
+  ['Co-op / online co-op', 'Listed on Steam, with page copy describing 1-4 player co-op.'],
+  ['Steam Cloud', 'Listed on Steam; useful for saves but not a guarantee against save bugs.'],
+  ['Family Sharing', 'Listed on Steam.'],
+  ['Cross-play', 'Not confirmed by the current Steam listing.'],
+];
+
 export default function ProjectMistMultiplayerPage() {
   return (
     <ProjectMistArticle
@@ -77,7 +86,37 @@ export default function ProjectMistMultiplayerPage() {
           confirmed from the current listing is local split-screen, cross-play,
           dedicated servers, console multiplayer, and save transfer rules.
         </p>
+      </section>
 
+      <section className="prose-game">
+        <h2>Steam Feature Checklist</h2>
+        <ArticleImage
+          src={projectMistImages.screenshot4}
+          alt="Project: Mist Steam multiplayer feature checklist image"
+          caption="Use confirmed Steam feature labels for co-op expectations, and avoid assuming cross-play or local split-screen."
+        />
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Feature</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {steamFeatureRows.map(([feature, status]) => (
+              <tr key={feature} className="border-b border-border/30 last:border-0">
+                <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{feature}</th>
+                <td className="px-4 py-3 text-muted-foreground">{status}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
         <h2>Suggested Co-op Roles</h2>
         <ArticleImage
           src={projectMistImages.trainBase}

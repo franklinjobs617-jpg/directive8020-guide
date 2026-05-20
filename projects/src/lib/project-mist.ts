@@ -4,9 +4,9 @@ import { projectMist, type GameGuideLink } from '@/lib/games';
 export const projectMistLastModified = '2026-05-20';
 export const projectMistSteamUrl = 'https://store.steampowered.com/app/2383130/Project_Mist/';
 export const projectMistSteamNewsUrl =
-  'https://store.steampowered.com/news/app/2383130/view/654853378125334404';
+  'https://store.steampowered.com/news/app/2383130';
 export const projectMistEarlyAccessLiveNewsUrl =
-  'https://store.steampowered.com/news/app/2383130/view/654853378125334404';
+  'https://store.steampowered.com/news/app/2383130';
 export const projectMistReviewsApiUrl =
   'https://store.steampowered.com/appreviews/2383130?json=1&language=all&purchase_type=all&num_per_page=0';
 export const projectMistDiscussionsUrl = 'https://steamcommunity.com/app/2383130/discussions/';

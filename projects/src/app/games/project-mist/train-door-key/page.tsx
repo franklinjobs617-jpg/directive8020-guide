@@ -32,7 +32,7 @@ const faqs = [
       'Yes, early route footage ties train progress to the busted mech part before the greenhouse and later access-card steps.',
   },
   {
-    question: 'Is this a confirmed final route?',
+    question: 'Is this route final?',
     answer:
       'No. This is launch-window Early Access guidance based on Steam discussion signals and early gameplay footage.',
   },

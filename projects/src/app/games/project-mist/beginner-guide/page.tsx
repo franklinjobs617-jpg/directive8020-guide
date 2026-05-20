@@ -7,6 +7,7 @@ import {
   projectMistDemoRiskRows,
   projectMistDemoRouteRows,
   projectMistImages,
+  projectMistLockpickRows,
 } from "@/lib/project-mist";
 
 const title = "Project: Mist Beginner Guide - First Day Survival Tips";
@@ -41,6 +42,11 @@ const faqs = [
     question: "Is this beginner guide final?",
     answer:
       "No. Project: Mist is an Early Access game, so route and balance advice should be treated as launch-window guidance until patches stabilize.",
+  },
+  {
+    question: "Should beginners learn lockpicking early?",
+    answer:
+      "Yes. Locked chests can hold useful resources, and Steam discussions show lockpicking is a common launch-window confusion point.",
   },
 ];
 
@@ -149,6 +155,37 @@ export default function ProjectMistBeginnerGuidePage() {
           enemies or debris, control space, and turn the environment into a
           weapon. That makes it a utility tool first and a damage tool second.
         </p>
+      </section>
+
+      <section className="prose-game">
+        <h2>Learn Lockpicking Before Deep Facility Runs</h2>
+        <ArticleImage
+          src={projectMistImages.crafting}
+          alt="Project: Mist beginner lockpick and chest image"
+          caption="Lockpicking is worth learning early because locked chests and side rooms can support ammo, healing, crafting, and upgrades."
+        />
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Lockpick step</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Beginner habit</th>
+            </tr>
+          </thead>
+          <tbody>
+            {projectMistLockpickRows.slice(0, 4).map(([step, habit]) => (
+              <tr key={step} className="border-b border-border/30 last:border-0">
+                <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{step}</th>
+                <td className="px-4 py-3 text-muted-foreground">{habit}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
 
         <h2>Train Base Priorities</h2>
         <ArticleImage

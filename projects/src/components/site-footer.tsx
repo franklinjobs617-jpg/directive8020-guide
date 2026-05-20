@@ -125,18 +125,18 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="/games/project-mist/system-requirements"
+                  href="/games/project-mist/is-it-worth-it"
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Project: Mist Specs
+                  Project: Mist Worth It
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/games/project-mist/multiplayer-co-op"
+                  href="/games/project-mist/lockpick-chests"
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Project: Mist Co-op
+                  Project: Mist Lockpick
                 </Link>
               </li>
             </ul>

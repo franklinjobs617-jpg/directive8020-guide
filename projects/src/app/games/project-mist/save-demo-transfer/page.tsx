@@ -51,7 +51,7 @@ export default function ProjectMistSaveDemoTransferPage() {
     >
       <BlufBox title="Save Safety Answer">
         <p>
-          <strong>Do not treat demo saves as guaranteed Early Access saves.</strong>{' '}
+          <strong>Do not treat demo saves as safe Early Access saves by default.</strong>{' '}
           Steam lists Steam Cloud, but launch-window discussions include
           demo-save loading questions. Back up before deleting anything, then
           test whether a fresh Early Access save loads normally.

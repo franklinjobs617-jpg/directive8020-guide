@@ -53,7 +53,7 @@ const gameCards = [
     title: "Project: Mist",
     href: "/games/project-mist",
     label: "Open-world survival",
-    body: "Early Access facts, demo route notes, system requirements, co-op, Gravity Gun, train base, and first-day survival help.",
+    body: "Early Access launch facts, co-op, lockpicking, train door key, demo saves, building, PC requirements, and crash fixes.",
     image: projectMistImages.hero,
   },
 ];
@@ -116,7 +116,8 @@ export default function GamesPage() {
               </div>
               <figcaption className="px-4 py-3 text-xs leading-relaxed text-muted-foreground">
                 Project: Mist coverage focuses on what new players need first:
-                the demo route, survival basics, PC requirements, and co-op.
+                launch facts, survival basics, saves, building, PC requirements,
+                and co-op.
               </figcaption>
             </figure>
             <div>
@@ -171,8 +172,8 @@ export default function GamesPage() {
               If you are playing Directive 8020, start with the walkthrough,
               endings, choices, or trophy guides. If you are trying Project:
               Mist, start with the Early Access hub, then check the beginner,
-              system requirements, multiplayer, or crash-fix pages depending on
-              what you need next.
+              lockpick, train door key, save, multiplayer, system requirements,
+              or crash-fix pages depending on what you need next.
             </p>
             <ul>
               <li>Use a game hub when you are not sure which guide comes first.</li>

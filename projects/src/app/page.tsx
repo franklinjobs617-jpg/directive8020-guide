@@ -619,7 +619,7 @@ export default function HomePage() {
             <div>
               <h2 className="text-xl font-bold text-foreground">New Survival Game Coverage</h2>
               <p className="mt-1 text-sm text-muted-foreground">
-                A small new guide cluster for Project: Mist, while Directive 8020 remains the main site focus.
+                New Project: Mist coverage for players who need launch facts, co-op, PC specs, saves, and first-run help.
               </p>
             </div>
           </div>

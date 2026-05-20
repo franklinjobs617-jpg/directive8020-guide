@@ -51,6 +51,18 @@ const faqs = [
   },
 ];
 
+function getProjectMistGuideImage(href: string) {
+  if (href.includes('system')) return projectMistImages.facilities;
+  if (href.includes('multiplayer')) return projectMistImages.multiplayer;
+  if (href.includes('beginner')) return projectMistImages.beginner;
+  if (href.includes('crashing')) return projectMistImages.screenshot6;
+  if (href.includes('lockpick')) return projectMistImages.crafting;
+  if (href.includes('train-door') || href.includes('building')) return projectMistImages.trainBase;
+  if (href.includes('save-demo')) return projectMistImages.demo;
+  if (href.includes('worth')) return projectMistImages.creatures;
+  return projectMistImages.release;
+}
+
 export default function ProjectMistHubPage() {
   return (
     <ProjectMistArticle
@@ -86,7 +98,7 @@ export default function ProjectMistHubPage() {
         <ArticleImage
           src={projectMistImages.feature}
           alt="Project: Mist guide hub feature image"
-          caption="Start with the guide that matches your problem: release status, PC specs, multiplayer, first-day survival, or troubleshooting."
+          caption="Start with the guide that matches your problem: launch status, buying risk, PC specs, co-op, lockpicking, saves, building, or troubleshooting."
         />
         <div className="grid gap-4 sm:grid-cols-2">
           {projectMist.guideLinks.map((guide) => (
@@ -97,17 +109,7 @@ export default function ProjectMistHubPage() {
             >
               <div className="relative aspect-video">
                 <Image
-                  src={
-                    guide.href.includes('system')
-                      ? projectMistImages.facilities
-                      : guide.href.includes('multiplayer')
-                        ? projectMistImages.multiplayer
-                        : guide.href.includes('beginner')
-                          ? projectMistImages.beginner
-                          : guide.href.includes('crashing')
-                            ? projectMistImages.screenshot6
-                            : projectMistImages.release
-                  }
+                  src={getProjectMistGuideImage(guide.href)}
                   alt={guide.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"

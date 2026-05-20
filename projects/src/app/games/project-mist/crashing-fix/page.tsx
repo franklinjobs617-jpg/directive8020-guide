@@ -1,7 +1,7 @@
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
-import { createProjectMistMetadata, projectMistImages } from '@/lib/project-mist';
+import { createProjectMistMetadata, projectMistImages, projectMistSaveRows } from '@/lib/project-mist';
 
 const title = 'Project: Mist Crashing, Black Screen, Low FPS & Co-op Fix';
 const description =
@@ -35,6 +35,11 @@ const faqs = [
     question: 'How do I fix Project: Mist co-op connection issues?',
     answer:
       'Check Steam status, restart Steam, verify both players are on the same build, test firewall permissions, and try a fresh host session.',
+  },
+  {
+    question: 'Can demo saves cause loading issues?',
+    answer:
+      'Launch-window Steam discussions include demo-save loading reports, so test a fresh Early Access save before deleting old save data.',
   },
 ];
 
@@ -119,7 +124,37 @@ export default function ProjectMistCrashingFixPage() {
           method, frame pacing, FOV or camera options, and patch notes before
           reinstalling.
         </p>
+      </section>
 
+      <section className="prose-game">
+        <h2>Demo Save and Infinite Loading Checks</h2>
+        <ArticleImage
+          src={projectMistImages.demo}
+          alt="Project: Mist demo save troubleshooting image"
+          caption="Player reports around demo saves and loading loops should be handled carefully because deleting saves can remove useful debugging data."
+        />
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Save check</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Safer action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {projectMistSaveRows.map(([check, action]) => (
+              <tr key={check} className="border-b border-border/30 last:border-0">
+                <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{check}</th>
+                <td className="px-4 py-3 text-muted-foreground">{action}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
         <h2>Fix Online Co-op Problems</h2>
         <ArticleImage
           src={projectMistImages.multiplayer}
