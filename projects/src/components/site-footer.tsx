@@ -139,6 +139,22 @@ export function SiteFooter() {
                   Thick As Thieves Release
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/games/mina-the-hollower"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Mina the Hollower Guide
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/games/mina-the-hollower/steam-deck"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Mina Steam Deck
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

@@ -446,16 +446,16 @@ const newGameCoverage = [
     image: '/games/thick-as-thieves/hero.webp',
   },
   {
-    title: 'Thick As Thieves Release Date',
-    body: 'May 20, 2026 Steam unlock status, PC platform, launch price guidance, controller support, and co-op checks.',
-    href: '/games/thick-as-thieves/release-date',
-    image: '/games/thick-as-thieves/homepage/release-date-platforms-guide.webp',
+    title: 'Mina the Hollower Guide Hub',
+    body: 'Gothic action-adventure launch coverage: release timing, platforms, Steam Deck status, specs, beginner tips, and buyer advice.',
+    href: '/games/mina-the-hollower',
+    image: '/games/mina-the-hollower/hero.jpg',
   },
   {
-    title: 'Is Thick As Thieves Worth It?',
-    body: 'Launch-day buying advice for the $4.99 stealth heist: short campaign scope, solo/co-op, replayability, and who should wait.',
-    href: '/games/thick-as-thieves/is-it-worth-it',
-    image: '/games/thick-as-thieves/homepage-feature.webp',
+    title: 'Mina the Hollower Steam Deck',
+    body: 'Steam Deck readiness, controller support, Steam Cloud, handheld checks, and what to verify again on launch week.',
+    href: '/games/mina-the-hollower/steam-deck',
+    image: '/games/mina-the-hollower/screenshots/mina-the-hollower-screenshot-3.jpg',
   },
 ];
 
@@ -623,9 +623,9 @@ export default function HomePage() {
           <div className="flex items-center gap-3">
             <div className="h-1 w-8 rounded-full bg-emerald-400" />
             <div>
-              <h2 className="text-xl font-bold text-foreground">New Survival Game Coverage</h2>
+              <h2 className="text-xl font-bold text-foreground">New Game Coverage</h2>
               <p className="mt-1 text-sm text-muted-foreground">
-                New Project: Mist coverage for players who need launch facts, co-op, PC specs, saves, and first-run help.
+                New guide hubs for players who need launch facts, platforms, PC specs, handheld checks, and first-run help.
               </p>
             </div>
           </div>

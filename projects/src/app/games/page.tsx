@@ -5,10 +5,11 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import { JsonLd, generateWebPageSchema } from "@/components/json-ld";
 import { projectMistImages } from "@/lib/project-mist";
 import { thickAsThievesImages } from "@/lib/thick-as-thieves";
+import { minaImages } from "@/lib/mina-the-hollower";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
-  "Browse Enjoy4Game guide hubs for horror, survival, stealth, and story-driven games, including Directive 8020, Project: Mist, and Thick As Thieves.";
+  "Browse Enjoy4Game guide hubs for horror, survival, stealth, gothic action-adventure, and story-driven games, including Directive 8020, Project: Mist, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
   title: {
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
     "Directive 8020 guide",
     "Project Mist guide",
     "Thick As Thieves guide",
+    "Mina the Hollower guide",
   ],
   authors: [{ name: "Enjoy4Game Guides" }],
   alternates: {
@@ -64,6 +66,13 @@ const gameCards = [
     label: "Stealth heist",
     body: "Steam unlock facts, $4.99 launch value, solo and co-op, beginner stealth, contracts, PC specs, gear, roadmap, and console expectations.",
     image: thickAsThievesImages.hero,
+  },
+  {
+    title: "Mina the Hollower",
+    href: "/games/mina-the-hollower",
+    label: "Gothic action-adventure",
+    body: "Release timing, platforms, Steam Deck status, PC/Mac/Linux specs, spoiler-light beginner tips, and launch buying advice.",
+    image: minaImages.hero,
   },
 ];
 
@@ -183,7 +192,9 @@ export default function GamesPage() {
               Mist, start with the Early Access hub. If you are trying Thick As
               Thieves, start with the release and co-op pages, then check
               beginner stealth, contracts, system requirements, gear, or roadmap
-              pages depending on what you need next.
+              pages depending on what you need next. If you are waiting for
+              Mina the Hollower, start with release timing, specs, Steam Deck,
+              beginner tips, or buying advice.
             </p>
             <ul>
               <li>

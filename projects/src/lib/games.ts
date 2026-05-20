@@ -194,3 +194,49 @@ export const thickAsThieves: GameConfig = {
     },
   ],
 };
+
+export const minaTheHollower: GameConfig = {
+  id: 'mina-the-hollower',
+  slugPrefix: 'mina-the-hollower',
+  hubPath: '/games/mina-the-hollower',
+  name: 'Mina the Hollower',
+  guidePublisher: 'Enjoy4Game Guides',
+  description:
+    'A gothic action-adventure game from Yacht Club Games where Mina burrows beneath hazards, whips enemies with Nightstar, uses sidearms and trinkets, and explores a dark interconnected pixel-art world.',
+  platforms: ['PC', 'Mac', 'Linux', 'PlayStation 5', 'Xbox Series X|S', 'Nintendo Switch', 'Nintendo Switch 2'],
+  genres: ['Action', 'Adventure', 'Gothic', 'Pixel Art'],
+  developer: 'Yacht Club Games',
+  publisher: 'Yacht Club Games',
+  releaseDate: '2026-05-29',
+  operatingSystem: 'Windows 8 or later, macOS 11 or later, Linux',
+  url: 'https://store.steampowered.com/app/1875580/Mina_the_Hollower/',
+  availability: 'https://schema.org/PreOrder',
+  heroImage: '/games/mina-the-hollower/hero.jpg',
+  guideLinks: [
+    {
+      title: 'Release Date & Platforms',
+      href: '/games/mina-the-hollower/release-date',
+      description: 'Steam date, announced console date, supported platforms, demo status, and launch-window checks.',
+    },
+    {
+      title: 'System Requirements',
+      href: '/games/mina-the-hollower/system-requirements',
+      description: 'Official Windows, macOS, and Linux minimum specs, storage, controller support, and PC setup notes.',
+    },
+    {
+      title: 'Steam Deck Guide',
+      href: '/games/mina-the-hollower/steam-deck',
+      description: 'Steam Deck Verified status, controls, cloud saves, display expectations, and pre-launch checks.',
+    },
+    {
+      title: 'Beginner Guide',
+      href: '/games/mina-the-hollower/beginner-guide',
+      description: 'Spoiler-light first-session advice for burrowing, whip combat, sidearms, trinkets, and exploration.',
+    },
+    {
+      title: 'Is Mina the Hollower Worth It?',
+      href: '/games/mina-the-hollower/is-it-worth-it',
+      description: 'Buyer-focused guidance using developer track record, genre fit, platform support, specs, and launch timing.',
+    },
+  ],
+};

@@ -49,6 +49,8 @@ const LABEL_PATHS: Record<string, string> = {
   'Gear & Loadouts': '/games/thick-as-thieves/gear-loadouts',
   'Roadmap & Console': '/games/thick-as-thieves/roadmap-console',
   'Is It Worth It?': '/games/thick-as-thieves/is-it-worth-it',
+  'Mina the Hollower': '/games/mina-the-hollower',
+  'Steam Deck': '/games/mina-the-hollower/steam-deck',
   About: '/about',
   'Copyright Infringement': '/copyright-infringement',
   'Privacy Policy': '/privacy-policy',

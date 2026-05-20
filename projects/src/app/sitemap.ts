@@ -143,6 +143,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.68,
     },
     {
+      url: `${BASE_URL}/games/mina-the-hollower`,
+      lastModified: '2026-05-20',
+      changeFrequency: 'daily',
+      priority: 0.72,
+    },
+    {
+      url: `${BASE_URL}/games/mina-the-hollower/release-date`,
+      lastModified: '2026-05-20',
+      changeFrequency: 'daily',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/games/mina-the-hollower/system-requirements`,
+      lastModified: '2026-05-20',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/mina-the-hollower/steam-deck`,
+      lastModified: '2026-05-20',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/mina-the-hollower/beginner-guide`,
+      lastModified: '2026-05-20',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/mina-the-hollower/is-it-worth-it`,
+      lastModified: '2026-05-20',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
       url: `${BASE_URL}/directive-8020-overview`,
       lastModified: '2026-05-15',
       changeFrequency: 'weekly',
