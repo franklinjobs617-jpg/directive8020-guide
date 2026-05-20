@@ -440,16 +440,22 @@ const newGameCoverage = [
     image: '/games/project-mist/hero.webp',
   },
   {
-    title: 'Project: Mist System Requirements',
-    body: 'Official minimum PC specs from Steam, missing recommended specs, and practical low-end PC notes.',
-    href: '/games/project-mist/system-requirements',
-    image: '/games/project-mist/homepage/map-facilities-guide.webp',
+    title: 'Thick As Thieves Guide Hub',
+    body: 'Today’s stealth-heist launch coverage: release facts, solo/co-op, beginner stealth, contracts, PC specs, gear, and roadmap expectations.',
+    href: '/games/thick-as-thieves',
+    image: '/games/thick-as-thieves/hero.webp',
   },
   {
-    title: 'Project: Mist Multiplayer',
-    body: '1-4 player online co-op status, solo play, group roles, and what is not confirmed yet.',
-    href: '/games/project-mist/multiplayer-co-op',
-    image: '/games/project-mist/homepage/multiplayer-coop-guide.webp',
+    title: 'Thick As Thieves Release Date',
+    body: 'May 20, 2026 Steam unlock status, PC platform, launch price guidance, controller support, and co-op checks.',
+    href: '/games/thick-as-thieves/release-date',
+    image: '/games/thick-as-thieves/homepage/release-date-platforms-guide.webp',
+  },
+  {
+    title: 'Is Thick As Thieves Worth It?',
+    body: 'Launch-day buying advice for the $4.99 stealth heist: short campaign scope, solo/co-op, replayability, and who should wait.',
+    href: '/games/thick-as-thieves/is-it-worth-it',
+    image: '/games/thick-as-thieves/homepage-feature.webp',
   },
 ];
 

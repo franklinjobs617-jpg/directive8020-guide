@@ -112,7 +112,7 @@ export function SiteFooter() {
           </div>
           <div>
             <h3 className="text-sm font-semibold text-foreground mb-3">
-              More Survival Games
+              More Game Guides
             </h3>
             <ul className="space-y-2">
               <li>
@@ -125,18 +125,18 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="/games/project-mist/is-it-worth-it"
+                  href="/games/thick-as-thieves"
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Project: Mist Worth It
+                  Thick As Thieves Guide
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/games/project-mist/lockpick-chests"
+                  href="/games/thick-as-thieves/release-date"
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Project: Mist Lockpick
+                  Thick As Thieves Release
                 </Link>
               </li>
             </ul>

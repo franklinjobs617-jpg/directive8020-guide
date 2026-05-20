@@ -4,10 +4,11 @@ import Link from "next/link";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { JsonLd, generateWebPageSchema } from "@/components/json-ld";
 import { projectMistImages } from "@/lib/project-mist";
+import { thickAsThievesImages } from "@/lib/thick-as-thieves";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
-  "Browse Enjoy4Game guide hubs for horror, survival, and story-driven games, including Directive 8020 and Project: Mist.";
+  "Browse Enjoy4Game guide hubs for horror, survival, stealth, and story-driven games, including Directive 8020, Project: Mist, and Thick As Thieves.";
 
 export const metadata: Metadata = {
   title: {
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
     "horror game guides",
     "Directive 8020 guide",
     "Project Mist guide",
+    "Thick As Thieves guide",
   ],
   authors: [{ name: "Enjoy4Game Guides" }],
   alternates: {
@@ -55,6 +57,13 @@ const gameCards = [
     label: "Open-world survival",
     body: "Early Access launch facts, co-op, lockpicking, train door key, demo saves, building, PC requirements, and crash fixes.",
     image: projectMistImages.hero,
+  },
+  {
+    title: "Thick As Thieves",
+    href: "/games/thick-as-thieves",
+    label: "Stealth heist",
+    body: "Steam unlock facts, $4.99 launch value, solo and co-op, beginner stealth, contracts, PC specs, gear, roadmap, and console expectations.",
+    image: thickAsThievesImages.hero,
   },
 ];
 
@@ -115,9 +124,9 @@ export default function GamesPage() {
                 />
               </div>
               <figcaption className="px-4 py-3 text-xs leading-relaxed text-muted-foreground">
-                Project: Mist coverage focuses on what new players need first:
-                launch facts, survival basics, saves, building, PC requirements,
-                and co-op.
+                New game coverage focuses on what players need first: launch
+                facts, co-op, survival or stealth basics, saves, contracts, PC
+                requirements, and buying expectations.
               </figcaption>
             </figure>
             <div>
@@ -171,15 +180,26 @@ export default function GamesPage() {
             <p>
               If you are playing Directive 8020, start with the walkthrough,
               endings, choices, or trophy guides. If you are trying Project:
-              Mist, start with the Early Access hub, then check the beginner,
-              lockpick, train door key, save, multiplayer, system requirements,
-              or crash-fix pages depending on what you need next.
+              Mist, start with the Early Access hub. If you are trying Thick As
+              Thieves, start with the release and co-op pages, then check
+              beginner stealth, contracts, system requirements, gear, or roadmap
+              pages depending on what you need next.
             </p>
             <ul>
-              <li>Use a game hub when you are not sure which guide comes first.</li>
-              <li>Use beginner pages before reading route-heavy or spoiler-heavy content.</li>
-              <li>Use system and crash-fix pages before blaming a save or reinstalling.</li>
-              <li>Use co-op pages before starting a shared session with friends.</li>
+              <li>
+                Use a game hub when you are not sure which guide comes first.
+              </li>
+              <li>
+                Use beginner pages before reading route-heavy or spoiler-heavy
+                content.
+              </li>
+              <li>
+                Use system and crash-fix pages before blaming a save or
+                reinstalling.
+              </li>
+              <li>
+                Use co-op pages before starting a shared session with friends.
+              </li>
             </ul>
           </div>
           <figure className="overflow-hidden rounded-lg border border-border/50 bg-card/30">

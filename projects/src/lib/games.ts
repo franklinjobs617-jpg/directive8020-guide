@@ -5,6 +5,7 @@ export interface GameGuideLink {
 }
 
 export interface GameSchemaConfig {
+  id?: string;
   name: string;
   guidePublisher: string;
   description: string;
@@ -129,6 +130,67 @@ export const projectMist: GameConfig = {
       title: 'Is Project: Mist Worth It?',
       href: '/games/project-mist/is-it-worth-it',
       description: 'Launch-window buying advice using price, reviews, Early Access risk, co-op, demo, and content fit.',
+    },
+  ],
+};
+
+export const thickAsThieves: GameConfig = {
+  id: 'thick-as-thieves',
+  slugPrefix: 'thick-as-thieves',
+  hubPath: '/games/thick-as-thieves',
+  name: 'Thick As Thieves',
+  guidePublisher: 'Enjoy4Game Guides',
+  description:
+    'A first-person stealth-action heist game from OtherSide Entertainment and Megabit Publishing set in the gaslit city of Kilcairn, playable solo or in online co-op with one partner.',
+  platforms: ['PC'],
+  genres: ['Action', 'Indie', 'Simulation', 'Stealth', 'Heist'],
+  developer: 'OtherSide Entertainment',
+  publisher: 'Megabit Publishing',
+  releaseDate: '2026-05-20',
+  operatingSystem: 'Windows 10 / Windows 11',
+  url: 'https://store.steampowered.com/app/3341000/Thick_As_Thieves/',
+  availability: 'https://schema.org/PreOrder',
+  heroImage: '/games/thick-as-thieves/hero.webp',
+  guideLinks: [
+    {
+      title: 'Release Date & Unlock',
+      href: '/games/thick-as-thieves/release-date',
+      description: 'May 20, 2026 Steam release status, unlock checks, price notes, platform facts, and launch-day verification.',
+    },
+    {
+      title: 'Solo & Co-op',
+      href: '/games/thick-as-thieves/solo-coop',
+      description: 'Solo versus two-player online co-op, host checks, session planning, and what is not confirmed.',
+    },
+    {
+      title: 'Beginner Stealth Guide',
+      href: '/games/thick-as-thieves/beginner-stealth-guide',
+      description: 'First-run stealth habits for route planning, information gathering, clean exits, and partner coordination.',
+    },
+    {
+      title: 'Contracts, Maps & Replayability',
+      href: '/games/thick-as-thieves/contracts-maps',
+      description: 'Official 2-map, 16-mission, at least 4-hour introductory campaign scope and replay expectations.',
+    },
+    {
+      title: 'System Requirements',
+      href: '/games/thick-as-thieves/system-requirements',
+      description: 'Official minimum and recommended PC specs, SSD requirement, controller support, and Steam Cloud notes.',
+    },
+    {
+      title: 'Gear & Loadouts',
+      href: '/games/thick-as-thieves/gear-loadouts',
+      description: 'How to think about stealth gear, first loadouts, progression, and unverified launch details.',
+    },
+    {
+      title: 'Roadmap, Console & Live Service',
+      href: '/games/thick-as-thieves/roadmap-console',
+      description: 'What official FAQ says about live service status, post-launch content, console plans, and buyer expectations.',
+    },
+    {
+      title: 'Is Thick As Thieves Worth It?',
+      href: '/games/thick-as-thieves/is-it-worth-it',
+      description: 'Buyer-focused launch advice using price, short campaign scope, co-op, PC focus, PvPvE pivot, and wait-or-buy signals.',
     },
   ],
 };
