@@ -1,12 +1,15 @@
-import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
-import { ThickAsThievesArticle } from '@/components/thick-as-thieves-article';
-import { createThickAsThievesMetadata, thickAsThievesImages } from '@/lib/thick-as-thieves';
+import { ArticleImage } from "@/components/article-media";
+import { BlufBox } from "@/components/guide-blocks";
+import { ThickAsThievesArticle } from "@/components/thick-as-thieves-article";
+import {
+  createThickAsThievesMetadata,
+  thickAsThievesImages,
+} from "@/lib/thick-as-thieves";
 
-const title = 'Thick As Thieves Solo & Co-op Guide - How Many Players?';
+const title = "Thick As Thieves Solo & Co-op Guide - How Many Players?";
 const description =
-  'Thick As Thieves solo and co-op guide: partner co-op, Steam online co-op status, session planning, host checks, and what is not confirmed.';
-const canonical = '/games/thick-as-thieves/solo-coop';
+  "Thick As Thieves solo and co-op guide: partner co-op, Steam online co-op status, session planning, host checks, and what is not confirmed.";
+const canonical = "/games/thick-as-thieves/solo-coop";
 
 export const metadata = createThickAsThievesMetadata({
   title,
@@ -17,33 +20,45 @@ export const metadata = createThickAsThievesMetadata({
 
 const faqs = [
   {
-    question: 'Can Thick As Thieves be played solo?',
-    answer:
-      'Yes. The official FAQ says Thick As Thieves can be played solo.',
+    question: "Can Thick As Thieves be played solo?",
+    answer: "Yes. The official FAQ says Thick As Thieves can be played solo.",
   },
   {
-    question: 'How many players are in co-op?',
+    question: "How many players are in co-op?",
     answer:
-      'Current official wording says you can play with a partner in crime, so two-player co-op is the safest interpretation before live testing.',
+      "Current official wording says you can play with a partner in crime, so two-player co-op is the safest interpretation before live testing.",
   },
   {
-    question: 'Does Thick As Thieves have online co-op?',
-    answer:
-      'Yes. Steam lists co-op and online co-op for Thick As Thieves.',
+    question: "Does Thick As Thieves have online co-op?",
+    answer: "Yes. Steam lists co-op and online co-op for Thick As Thieves.",
   },
   {
-    question: 'Does Thick As Thieves have split-screen?',
-    answer:
-      'Split-screen is not confirmed in current public materials.',
+    question: "Does Thick As Thieves have split-screen?",
+    answer: "Split-screen is not confirmed in current public materials.",
   },
 ];
 
 const coOpRows = [
-  ['Solo learning', 'Best for understanding routes, alert states, and gear timing without another player adding noise.'],
-  ['Partner scouting', 'One player watches patrols, exits, and timing while the other commits to the objective.'],
-  ['Host test', 'Run one short contract first to verify invites, progress ownership, reconnects, and cloud sync.'],
-  ['Communication', 'Use short callouts for entry, wait, abort, and exit instead of narrating every movement.'],
-  ['Open questions', 'Public matchmaking, host migration, and cross-play are not confirmed.'],
+  [
+    "Solo learning",
+    "Best for understanding routes, alert states, and gear timing without another player adding noise.",
+  ],
+  [
+    "Partner scouting",
+    "One player watches patrols, exits, and timing while the other commits to the objective.",
+  ],
+  [
+    "Host test",
+    "Run one short contract first to verify invites, progress ownership, reconnects, and cloud sync.",
+  ],
+  [
+    "Communication",
+    "Use short callouts for entry, wait, abort, and exit instead of narrating every movement.",
+  ],
+  [
+    "Open questions",
+    "Public matchmaking, host migration, and cross-play are not confirmed.",
+  ],
 ];
 
 export default function ThickAsThievesSoloCoopPage() {
@@ -59,10 +74,11 @@ export default function ThickAsThievesSoloCoopPage() {
     >
       <BlufBox title="Co-op Answer">
         <p>
-          <strong>Thick As Thieves supports solo play and online co-op.</strong>{' '}
+          <strong>Thick As Thieves supports solo play and online co-op.</strong>{" "}
           Steam lists co-op and online co-op, while the official FAQ frames
-          co-op as playing with one partner in crime. Do not assume split-screen,
-          cross-play, or dedicated servers unless official materials add them.
+          co-op as playing with one partner in crime. Do not assume
+          split-screen, cross-play, or dedicated servers unless official
+          materials add them.
         </p>
       </BlufBox>
 
@@ -93,14 +109,26 @@ export default function ThickAsThievesSoloCoopPage() {
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Topic</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player guidance</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">
+                Topic
+              </th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">
+                Player guidance
+              </th>
             </tr>
           </thead>
           <tbody>
             {coOpRows.map(([topic, guidance]) => (
-              <tr key={topic} className="border-b border-border/30 last:border-0">
-                <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{topic}</th>
+              <tr
+                key={topic}
+                className="border-b border-border/30 last:border-0"
+              >
+                <th
+                  scope="row"
+                  className="px-4 py-3 text-left font-semibold text-foreground"
+                >
+                  {topic}
+                </th>
                 <td className="px-4 py-3 text-muted-foreground">{guidance}</td>
               </tr>
             ))}
