@@ -8,9 +8,9 @@ import { FixChecklist } from '@/components/tools/fix-checklist';
 import { SourceCheckTable } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 Crashing, Black Screen & Performance Fix',
+  title: 'Directive 8020 Crashing Fix - Black Screen, FPS & Startup',
   description:
-    'Fix Directive 8020 crashing, black screen, stuttering, low FPS, audio issues, controller problems, and launch-day PC/PS5/Xbox troubleshooting.',
+    'Directive 8020 crashing fix guide for startup crashes, black screen, stuttering, low FPS, shader issues, audio problems, controller input, PS5, Xbox, and PC troubleshooting.',
   alternates: {
     canonical: '/directive-8020-crashing-fix',
   },
@@ -93,10 +93,10 @@ export default function CrashingFixPage() {
         data={generateArticleSchema({
           title: 'Directive 8020 Crashing, Black Screen & Performance Fix',
           description:
-            'Fix Directive 8020 crashing, black screen, stuttering, low FPS, audio issues, controller problems, and launch-day troubleshooting.',
+            'Directive 8020 crashing fix guide for startup crashes, black screen, stuttering, low FPS, audio issues, controller problems, and launch-day troubleshooting.',
           url: '/directive-8020-crashing-fix',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-15',
+          dateModified: '2026-05-21',
           imageUrl: '/d8020-screenshot-02.jpg',
         })}
       />
@@ -107,13 +107,14 @@ export default function CrashingFixPage() {
         <PageHero src="/d8020-screenshot-02.jpg" alt="Directive 8020 official dark corridor performance fix guide" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020: Crashing, Black Screen &amp; Performance Fix
+          Directive 8020 Crashing Fix: Black Screen, FPS and Startup
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          Launch-day technical issues are easiest to solve when you isolate one
-          variable at a time. This guide covers startup crashes, black screens,
-          stuttering, low FPS, audio problems, controller issues, and console
-          troubleshooting.
+          If Directive 8020 is crashing on startup, showing a black screen, or
+          stuttering during play, start with the reversible fixes below: update
+          GPU drivers, verify files, disable overlays, check the official specs,
+          reset display mode, and test controller/input settings before
+          reinstalling.
         </p>
 
         <div className="prose-game">

@@ -3,9 +3,9 @@ import { ArticleImage } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
 import { createProjectMistMetadata, projectMistImages, projectMistLaunchSnapshotRows } from '@/lib/project-mist';
 
-const title = 'Project: Mist Release Date, Early Access, Demo & Price Notes';
+const title = 'Project: Mist Release Date - Early Access, PC, Demo & Console Status';
 const description =
-  'Project: Mist release date guide updated for Early Access launch: Steam live status, price snapshot, demo notes, PC platform status, and roadmap timing.';
+  'Project: Mist release date guide: live in Steam Early Access since May 19, 2026, PC status, demo notes, price snapshot, roadmap timing, and Xbox or PlayStation caution.';
 const canonical = '/games/project-mist/release-date';
 
 export const metadata = createProjectMistMetadata({
@@ -19,7 +19,7 @@ const faqs = [
   {
     question: 'What is the Project: Mist release date?',
     answer:
-      'Project: Mist released into Steam Early Access on 19 May, 2026.',
+      'Project: Mist released into Steam Early Access on 19 May, 2026, for PC via Steam.',
   },
   {
     question: 'Is Project: Mist Early Access?',
@@ -30,6 +30,11 @@ const faqs = [
     question: 'Does Project: Mist have a demo?',
     answer:
       'Steam app data still references a Project: Mist demo app, but launch-window discussions include demo and save issues, so check the current store button before relying on it.',
+  },
+  {
+    question: 'Is Project: Mist on Xbox or PlayStation?',
+    answer:
+      'No console release is confirmed by the current Steam listing. Treat Project: Mist as a PC Steam Early Access release until Chicken Launcher announces Xbox or PlayStation plans.',
   },
   {
     question: 'Will Project: Mist price change after Early Access?',
@@ -46,6 +51,14 @@ const launchChecks = [
   ['Save data', 'Do not assume demo saves transfer unless Chicken Launcher confirms it.'],
 ];
 
+const platformRows = [
+  ['PC Steam', 'Confirmed by the live Steam listing.'],
+  ['Windows 10/11', 'Confirmed in the minimum system requirements.'],
+  ['Xbox', 'Not confirmed by the current Steam listing or page data.'],
+  ['PlayStation', 'Not confirmed by the current Steam listing or page data.'],
+  ['Cross-play', 'Not confirmed; do not assume cross-platform co-op.'],
+];
+
 export default function ProjectMistReleaseDatePage() {
   return (
     <ProjectMistArticle
@@ -59,10 +72,11 @@ export default function ProjectMistReleaseDatePage() {
     >
       <BlufBox title="Release Answer">
         <p>
-          <strong>Project: Mist is live in Steam Early Access as of 19 May, 2026.</strong>{' '}
-          Treat Steam as the source of truth for availability and local price,
-          then use Steam news and discussions for launch-window demo, save, and
-          roadmap updates.
+          <strong>Project: Mist is live in Steam Early Access on PC via Steam
+          as of 19 May, 2026.</strong> For GSC queries about Xbox, PlayStation,
+          or cross-play, the current answer is conservative: those platforms are
+          not confirmed, so players should treat Steam as the source of truth
+          before buying or planning a co-op run.
         </p>
       </BlufBox>
 
@@ -102,6 +116,34 @@ export default function ProjectMistReleaseDatePage() {
               <tr key={item} className="border-b border-border/30 last:border-0">
                 <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{item}</th>
                 <td className="px-4 py-3 text-muted-foreground">{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
+        <h2>Platform Status</h2>
+        <ArticleImage
+          src={projectMistImages.screenshot3}
+          alt="Project: Mist PC Steam platform status image"
+          caption="Platform intent needs a direct answer: PC Steam is confirmed, while console and cross-play claims should wait for official announcements."
+        />
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Platform or feature</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current answer</th>
+            </tr>
+          </thead>
+          <tbody>
+            {platformRows.map(([platform, status]) => (
+              <tr key={platform} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{platform}</td>
+                <td className="px-4 py-3 text-muted-foreground">{status}</td>
               </tr>
             ))}
           </tbody>

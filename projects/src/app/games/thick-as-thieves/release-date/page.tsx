@@ -8,9 +8,9 @@ import {
   thickAsThievesSteamFeatureRows,
 } from '@/lib/thick-as-thieves';
 
-const title = 'Thick As Thieves Release Date, Unlock Time, Price & Platforms';
+const title = 'Thick As Thieves Release Date - PC Launch, Price, PS5 & Co-op Status';
 const description =
-  'Thick As Thieves release guide for May 20, 2026: Steam unlock status, launch price, PC platform, co-op features, controller support, and launch-day checks.';
+  'Thick As Thieves release guide for the May 20, 2026 PC launch: price, Steam and Epic status, PS5 caution, online co-op, local co-op status, and launch checks.';
 const canonical = '/games/thick-as-thieves/release-date';
 
 export const metadata = createThickAsThievesMetadata({
@@ -24,7 +24,7 @@ const faqs = [
   {
     question: 'When does Thick As Thieves release?',
     answer:
-      'Steam lists Thick As Thieves for May 20, 2026, and before unlock Steam API still reports coming_soon=true.',
+      'Thick As Thieves launched on May 20, 2026 for PC storefronts. Check Steam or Epic Games Store in your region for the current buy button.',
   },
   {
     question: 'What is the Thick As Thieves launch price?',
@@ -34,7 +34,12 @@ const faqs = [
   {
     question: 'What platforms is Thick As Thieves on?',
     answer:
-      'The current public launch platform is PC via Steam; console launch details are not confirmed.',
+      'The current public launch focus is PC via Steam and Epic Games Store. PS5, Xbox, and console launch details are not confirmed.',
+  },
+  {
+    question: 'Does Thick As Thieves have local co-op?',
+    answer:
+      'Local co-op is not confirmed. Current public materials support solo play and online co-op with one partner.',
   },
   {
     question: 'Is Thick As Thieves Early Access?',
@@ -56,10 +61,10 @@ export default function ThickAsThievesReleaseDatePage() {
     >
       <BlufBox title="Release Answer">
         <p>
-          <strong>Steam lists Thick As Thieves for May 20, 2026.</strong>{' '}
-          Before unlock, Steam API still reports coming_soon=true, so the safest
-          launch-day action is to check the live Steam store button and local
-          price before planning a co-op session.
+          <strong>Thick As Thieves launched on May 20, 2026 for PC
+          storefronts.</strong> The safe platform answer is PC first: Steam and
+          Epic are the public launch targets, while PS5, Xbox, local co-op, and
+          cross-play are not confirmed in current public materials.
         </p>
       </BlufBox>
 
@@ -68,7 +73,7 @@ export default function ThickAsThievesReleaseDatePage() {
         <ArticleImage
           src={thickAsThievesImages.release}
           alt="Thick As Thieves release date and platform visual"
-          caption="Steam is the source of truth for today’s unlock state, while official FAQ pages set expectations for PC focus and launch pricing."
+          caption="Steam and Epic are the source of truth for current purchase state, while official FAQ pages set expectations for PC focus and launch pricing."
         />
         <p>
           Thick As Thieves is currently a PC Steam release from OtherSide

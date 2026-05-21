@@ -15,39 +15,46 @@ interface EndingCard {
 
 const endings: EndingCard[] = [
   {
-    id: 'best',
-    label: 'Best Ending',
-    intent: 'Keep the cleanest route for save-everyone and trophy cleanup.',
+    id: 'homeward-bound',
+    label: 'Homeward Bound',
+    intent: 'Best-route candidate for players trying to preserve the crew and mission outcome.',
     status: 'Route pending',
-    checklist: ['Preserve crew survival', 'Collect evidence before trust checks', 'Avoid panic finale choices'],
+    checklist: ['Preserve crew survival', 'Collect evidence before trust checks', 'Avoid reckless finale choices'],
   },
   {
-    id: 'good',
-    label: 'Good Ending',
-    intent: 'Useful for players who saved most conditions but missed one perfect-route flag.',
+    id: 'docked',
+    label: 'Docked',
+    intent: 'Booster Ring or Cassiopeia-state outcome that should be tested separately from survivor count.',
     status: 'Route pending',
-    checklist: ['Keep most survivors alive', 'Repair key relationships', 'Check Story Tree hidden paths'],
+    checklist: ['Track Booster Ring state', 'Record Cassiopeia condition', 'Change one finale variable'],
   },
   {
-    id: 'bad',
-    label: 'Bad Ending',
-    intent: 'Use this for controlled cleanup after your base route is safe.',
+    id: 'mask-off',
+    label: 'Mask Off',
+    intent: 'Mimic exposure or identity-reveal outcome that depends on evidence and trust handling.',
     status: 'Route pending',
-    checklist: ['Branch from late Turning Points', 'Change one finale variable', 'Record exact survivor state'],
+    checklist: ['Verify mimic clues', 'Use scanner/evidence notes', 'Avoid blind trust near finale'],
   },
   {
-    id: 'true',
-    label: 'True Ending',
-    intent: 'Treat as a spoiler search until confirmed by full route capture.',
+    id: 'hitchhiker',
+    label: 'Hitchhiker',
+    intent: 'Likely contamination or hidden-passenger outcome tied to what leaves the Cassiopeia.',
     status: 'Spoiler topic',
-    checklist: ['Verify ending name in-game', 'Check Cycle 13 context', 'Compare with secret ending route'],
+    checklist: ['Track rescue state', 'Record sample/body status', 'Check warning vs distress route'],
   },
   {
-    id: 'secret',
-    label: 'Secret Ending',
-    intent: 'Most likely tied to hidden route conditions, evidence, or collectibles.',
+    id: 'massacre',
+    label: 'Massacre / Horror',
+    intent: 'Worst-route and high-death outcomes for all-endings and death-route cleanup.',
     status: 'Spoiler topic',
-    checklist: ['Complete collectible categories', 'Explore hidden Story Tree paths', 'Log route prerequisites'],
+    checklist: ['Use copy branch only', 'Test late deaths', 'Do not overwrite clean route'],
+  },
+  {
+    id: 'not-alone',
+    label: 'Not Alone',
+    intent: 'Ambiguous continuation outcome that should be compared against rescue and warning routes.',
+    status: 'Spoiler topic',
+    checklist: ['Record Andromeda risk', 'Track unresolved mimic evidence', 'Compare crew and ship state'],
   },
 ];
 
@@ -71,11 +78,11 @@ export function EndingIndex() {
           </p>
         </div>
         <span className="rounded-md border border-border/50 px-3 py-2 text-xs text-muted-foreground">
-          5 substantial endings reported
+          5 major ending families reported
         </span>
       </div>
 
-      <div className="mb-4 grid gap-2 sm:grid-cols-5">
+      <div className="mb-4 grid gap-2 sm:grid-cols-3 lg:grid-cols-6">
         {endings.map((ending) => (
           <button
             key={ending.id}

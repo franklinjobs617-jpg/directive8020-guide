@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { thickAsThieves, type GameGuideLink } from '@/lib/games';
 
-export const thickAsThievesLastModified = '2026-05-20';
+export const thickAsThievesLastModified = '2026-05-21';
 export const thickAsThievesSteamUrl = 'https://store.steampowered.com/app/3341000/Thick_As_Thieves/';
 export const thickAsThievesOfficialUrl = 'https://megabit-publishing.com/games/thick-as-thieves';
 export const thickAsThievesFaqUrl = 'https://megabit-publishing.com/thick-as-thieves-faqs';
@@ -48,7 +48,7 @@ export const thickAsThievesVideos = [
 ];
 
 export const thickAsThievesQuickFacts = [
-  ['Release', 'Steam lists May 20, 2026 and still reports coming_soon=true before unlock.'],
+  ['Release', 'Launched on May 20, 2026 for PC storefronts; verify the live store button in your region.'],
   ['Developer', 'OtherSide Entertainment'],
   ['Publisher', 'Megabit Publishing'],
   ['Platform', 'PC via Steam and Epic Games Store; console date not announced.'],
@@ -77,14 +77,22 @@ export const thickAsThievesSteamFeatureRows = [
   ['Family Sharing', 'Listed on Steam.'],
   ['Cross-play', 'Not confirmed in current public materials.'],
   ['Console launch', 'Not announced; FAQ says PC launch is the current focus.'],
+  ['Local co-op / couch co-op', 'Not confirmed; official wording focuses on online co-op with a partner.'],
 ];
 
 export const thickAsThievesLaunchCheckRows = [
-  ['Unlock state', 'Steam still reports coming_soon=true before unlock; check the live store button today.'],
+  ['Unlock state', 'Check the live Steam or Epic Games Store button in your region before buying.'],
   ['Local price', 'Use official $4.99 / EUR4.99 / GBP4.99 as launch guidance, then verify local Steam currency.'],
   ['Co-op flow', 'Test invite, host progress, reconnect behavior, and whether public matchmaking exists.'],
   ['Controller feel', 'Steam lists full controller support, but sensitivity and prompt behavior need live testing.'],
   ['Steam Cloud', 'Steam lists cloud support; verify sync after the first completed contract.'],
+];
+
+export const thickAsThievesGscOpportunityRows = [
+  ['Thick As Thieves local co-op', 'Local or couch co-op is not confirmed; public materials focus on online co-op with one partner.', 'Solo & co-op page.'],
+  ['Thick As Thieves PS5', 'No PS5 launch is announced; current public focus is PC via Steam and Epic Games Store.', 'Release date and roadmap pages.'],
+  ['Thick As Thieves co-op', 'Solo play and online two-player co-op are the safest current answer from official FAQ wording.', 'Hub and solo/co-op page.'],
+  ['Thick As Thieves worth it', 'The value question depends on $4.99 launch pricing, compact scope, 2 maps, 16 missions, and at least 4 hours.', 'Worth-it and contracts pages.'],
 ];
 
 export const thickAsThievesWorthItRows = [
@@ -121,7 +129,7 @@ export const thickAsThievesGearRows = [
 
 export const thickAsThievesSourceRows = [
   {
-    claim: 'Steam lists Thick As Thieves for May 20, 2026 and reports coming_soon=true before unlock.',
+    claim: 'Thick As Thieves launched for PC storefronts on May 20, 2026; players should verify the live Steam or Epic store button in their region.',
     source: 'Steam store',
     status: 'verified' as const,
     href: thickAsThievesSteamUrl,

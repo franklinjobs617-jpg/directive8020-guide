@@ -8,6 +8,7 @@ import {
   createThickAsThievesMetadata,
   thickAsThievesBeginnerRows,
   thickAsThievesCampaignRows,
+  thickAsThievesGscOpportunityRows,
   thickAsThievesImages,
   thickAsThievesLaunchCheckRows,
   thickAsThievesQuickFacts,
@@ -16,7 +17,7 @@ import {
 
 const title = 'Thick As Thieves Guide Hub - Release, Co-op, Stealth & Contracts';
 const description =
-  'Thick As Thieves guide hub for today’s Steam unlock: release facts, solo and co-op, beginner stealth, contracts, PC specs, gear, roadmap, and console status.';
+  'Thick As Thieves guide hub for the live PC launch: release facts, solo and online co-op, local co-op status, PS5 caution, beginner stealth, contracts, PC specs, and roadmap.';
 const canonical = '/games/thick-as-thieves';
 
 export const metadata = createThickAsThievesMetadata({
@@ -30,12 +31,22 @@ const faqs = [
   {
     question: 'When does Thick As Thieves release?',
     answer:
-      'Steam lists Thick As Thieves for May 20, 2026, and before unlock Steam API still reports coming_soon=true.',
+      'Thick As Thieves launched on May 20, 2026 for PC storefronts. Check the live Steam or Epic Games Store button in your region before buying.',
   },
   {
     question: 'Can Thick As Thieves be played solo?',
     answer:
       'Yes. Official FAQ wording says Thick As Thieves can be played solo or with a partner in crime.',
+  },
+  {
+    question: 'Does Thick As Thieves have local co-op or couch co-op?',
+    answer:
+      'Local co-op or couch co-op is not confirmed in current public materials. The safe answer is solo play or online co-op with one partner.',
+  },
+  {
+    question: 'Is Thick As Thieves on PS5?',
+    answer:
+      'No PS5 launch is confirmed. Current public materials focus on PC, with console plans not announced.',
   },
   {
     question: 'How much content is in Thick As Thieves at launch?',
@@ -73,11 +84,11 @@ export default function ThickAsThievesHubPage() {
     >
       <BlufBox title="Launch-Day Snapshot">
         <p>
-          <strong>Thick As Thieves is listed for May 20, 2026 on Steam.</strong>{' '}
-          Before unlock, Steam API still reports the game as coming soon. The
-          safest player-facing answer is to check the live Steam button today,
-          then use the guides below for solo/co-op setup, stealth habits, PC
-          specs, campaign scope, gear, and roadmap expectations.
+          <strong>Thick As Thieves launched on May 20, 2026 for PC
+          storefronts.</strong> For GSC queries, the key first-screen answers
+          are: solo play is supported, online co-op is framed as playing with
+          one partner, local/couch co-op is not confirmed, and PS5 or Xbox
+          versions are not announced.
         </p>
       </BlufBox>
 
@@ -123,6 +134,35 @@ export default function ThickAsThievesHubPage() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="my-10">
+        <h2 className="mb-4 text-xl font-bold text-foreground">Search Questions This Hub Answers</h2>
+        <ArticleImage
+          src={thickAsThievesImages.soloCoop}
+          alt="Thick As Thieves local co-op PS5 and online co-op answer image"
+          caption="GSC impressions are already showing local co-op and PS5 queries, so the hub gives a direct answer instead of hiding it in a later FAQ."
+        />
+        <div className="overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Search intent</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Direct answer</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Where to continue</th>
+              </tr>
+            </thead>
+            <tbody>
+              {thickAsThievesGscOpportunityRows.map(([intent, answer, next]) => (
+                <tr key={intent} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{intent}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{next}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 

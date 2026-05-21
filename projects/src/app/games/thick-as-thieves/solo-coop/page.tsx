@@ -6,9 +6,9 @@ import {
   thickAsThievesImages,
 } from "@/lib/thick-as-thieves";
 
-const title = "Thick As Thieves Solo & Co-op Guide - How Many Players?";
+const title = "Thick As Thieves Co-op Guide - Online Partner, Solo & Local Co-op Status";
 const description =
-  "Thick As Thieves solo and co-op guide: partner co-op, Steam online co-op status, session planning, host checks, and what is not confirmed.";
+  "Thick As Thieves solo and co-op guide: online partner co-op, local co-op and couch co-op status, PS5 caution, session planning, host checks, and what is not confirmed.";
 const canonical = "/games/thick-as-thieves/solo-coop";
 
 export const metadata = createThickAsThievesMetadata({
@@ -34,7 +34,12 @@ const faqs = [
   },
   {
     question: "Does Thick As Thieves have split-screen?",
-    answer: "Split-screen is not confirmed in current public materials.",
+    answer: "Split-screen, couch co-op, and local co-op are not confirmed in current public materials.",
+  },
+  {
+    question: "Can I play Thick As Thieves co-op on PS5?",
+    answer:
+      "No PS5 version is confirmed in current public materials, so PS5 co-op is not a confirmed launch option.",
   },
 ];
 
@@ -57,7 +62,7 @@ const coOpRows = [
   ],
   [
     "Open questions",
-    "Public matchmaking, host migration, and cross-play are not confirmed.",
+    "Public matchmaking, host migration, local co-op, console co-op, and cross-play are not confirmed.",
   ],
 ];
 
@@ -77,8 +82,8 @@ export default function ThickAsThievesSoloCoopPage() {
           <strong>Thick As Thieves supports solo play and online co-op.</strong>{" "}
           Steam lists co-op and online co-op, while the official FAQ frames
           co-op as playing with one partner in crime. Do not assume
-          split-screen, cross-play, or dedicated servers unless official
-          materials add them.
+          local co-op, couch co-op, split-screen, PS5 co-op, cross-play, or
+          dedicated servers unless official materials add them.
         </p>
       </BlufBox>
 

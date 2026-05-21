@@ -9,9 +9,9 @@ import { CollectibleChecklist } from '@/components/tools/collectible-checklist';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 Collectibles & Heirlooms Guide',
+  title: 'Directive 8020 Collectibles - 65 Secrets, O Death & Heirlooms',
   description:
-    'Directive 8020 collectibles guide: secrets, clues, premonitions, Heirlooms Retrieval bonus mission, Dark Pictures relics, chapter tracking, and trophy cleanup.',
+    'Directive 8020 collectibles guide: 65 collectibles, 50 Secrets, 10 Simms Recordings, 5 O Death Secrets, Heirlooms Retrieval, Dark Pictures relics, chapter tracking, and trophy cleanup.',
   alternates: {
     canonical: '/directive-8020-collectibles-heirlooms',
   },
@@ -93,10 +93,10 @@ export default function CollectiblesPage() {
         data={generateArticleSchema({
           title: 'Directive 8020 Collectibles & Heirlooms Guide',
           description:
-            'Directive 8020 collectibles guide covering secrets, clues, premonitions, Heirlooms Retrieval, Dark Pictures relics, chapter tracking, and trophies.',
+            'Directive 8020 collectibles guide covering 65 collectibles, 50 Secrets, 10 Simms Recordings, 5 O Death Secrets, Heirlooms Retrieval, Dark Pictures relics, chapter tracking, and trophies.',
           url: '/directive-8020-collectibles-heirlooms',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-18',
+          dateModified: '2026-05-21',
           imageUrl: '/d8020-screenshot-09.jpg',
         })}
       />
@@ -107,13 +107,14 @@ export default function CollectiblesPage() {
         <PageHero src="/d8020-screenshot-09.jpg" alt="Directive 8020 collectibles and heirlooms guide screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 Collectibles &amp; Heirlooms Guide
+          Directive 8020 Collectibles: 65 Secrets, O Death and Heirlooms
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          Collectibles in Directive 8020 matter for more than completion. In a
-          mimic story, clues and environmental evidence can help you decide who
-          is human, which branch is safe, and what route to replay through
-          Turning Points.
+          Directive 8020 has <strong className="text-foreground">65 listed
+          collectibles</strong>: 50 normal Secrets, 10 Simms Recordings, and 5
+          O Death Secrets. This guide also separates Deluxe Heirlooms Retrieval
+          content so completion players can track main-story collectibles,
+          Curator cleanup, and Dark Pictures relics without mixing categories.
         </p>
 
         <BlufBox>

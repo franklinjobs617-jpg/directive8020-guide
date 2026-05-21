@@ -3,9 +3,9 @@ import { ArticleImage } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
 import { createProjectMistMetadata, projectMistImages } from '@/lib/project-mist';
 
-const title = 'Project: Mist Multiplayer & Co-op - How Many Players?';
+const title = 'Project: Mist Multiplayer Co-op - 1-4 Players, Solo & Crossplay Status';
 const description =
-  'Project: Mist multiplayer and co-op guide: 1-4 player online co-op, solo play, group roles, Steam features, and what is not confirmed yet.';
+  'Project: Mist multiplayer and co-op guide: Steam 1-4 player online co-op, solo play, host checks, crossplay status, console caution, and Early Access group roles.';
 const canonical = '/games/project-mist/multiplayer-co-op';
 
 export const metadata = createProjectMistMetadata({
@@ -36,6 +36,11 @@ const faqs = [
     answer:
       'Cross-play is not confirmed by the current Steam listing. Do not assume cross-platform multiplayer unless Chicken Launcher announces it.',
   },
+  {
+    question: 'Does Project: Mist have local co-op?',
+    answer:
+      'Local co-op or split-screen is not confirmed by the current Steam listing. The confirmed multiplayer mode is online co-op.',
+  },
 ];
 
 const coOpRoles = [
@@ -52,6 +57,8 @@ const steamFeatureRows = [
   ['Steam Cloud', 'Listed on Steam; useful for saves but not a guarantee against save bugs.'],
   ['Family Sharing', 'Listed on Steam.'],
   ['Cross-play', 'Not confirmed by the current Steam listing.'],
+  ['Local co-op / split-screen', 'Not confirmed; current Steam features point to online co-op.'],
+  ['Console co-op', 'Not confirmed because Xbox and PlayStation versions are not confirmed.'],
 ];
 
 export default function ProjectMistMultiplayerPage() {
@@ -70,6 +77,8 @@ export default function ProjectMistMultiplayerPage() {
           <strong>Project: Mist supports solo play and online co-op.</strong>{' '}
           Steam lists single-player, multi-player, co-op, and online co-op, and
           the page copy describes seamless <strong>1-4 player co-op</strong>.
+          Local split-screen, cross-play, Xbox co-op, and PlayStation co-op are
+          not confirmed by the current Steam listing.
         </p>
       </BlufBox>
 

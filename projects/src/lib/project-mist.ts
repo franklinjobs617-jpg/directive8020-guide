@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { projectMist, type GameGuideLink } from '@/lib/games';
 
-export const projectMistLastModified = '2026-05-20';
+export const projectMistLastModified = '2026-05-21';
 export const projectMistSteamUrl = 'https://store.steampowered.com/app/2383130/Project_Mist/';
 export const projectMistSteamNewsUrl =
   'https://store.steampowered.com/news/app/2383130';
@@ -23,6 +23,13 @@ export const projectMistQuickFacts = [
   ['Core tools', 'Gravity Gun and moving train base'],
   ['Price snapshot', '$22.49 launch discount in the US store on 20 May, 2026'],
   ['Review snapshot', 'Mixed from 31 Steam reviews on 20 May, 2026'],
+];
+
+export const projectMistGscOpportunityRows = [
+  ['Project Mist release date', 'Answer immediately: live in Steam Early Access since 19 May, 2026.', 'Release date page and hub first screen.'],
+  ['Project Mist multiplayer / co-op', 'State solo, multi-player, co-op, online co-op, and 1-4 player copy; separate cross-play as unconfirmed.', 'Hub and multiplayer page.'],
+  ['Project Mist Xbox / console', 'Say PC Steam is confirmed; Xbox, PlayStation, and cross-platform plans are not confirmed by Steam.', 'Release date FAQ and multiplayer page.'],
+  ['Project Mist beginner guide', 'Route the player to Gravity Gun, train base, lockpick, saves, and Early Access bug checks.', 'Hub guide map and beginner page.'],
 ];
 
 export const projectMistLaunchSnapshotRows = [

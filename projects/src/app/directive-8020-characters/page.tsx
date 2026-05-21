@@ -8,9 +8,9 @@ import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { crewPortraitHero, directiveCharacters } from '@/lib/directive-8020-characters';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 Characters - Cast, Crew & Survival Roles',
+  title: 'Directive 8020 Characters - Brianna Young & Cassiopeia Crew',
   description:
-    'Meet the Directive 8020 characters and Cassiopeia crew. Confirmed cast, Lashana Lynch as Young, crew roles, mimic threat, and survival-guide notes.',
+    'Directive 8020 characters guide: Brianna Young, Nolan Stafford, Laura Eisele, Samantha Cooper, Josef Cernan, Lashana Lynch cast details, mimic clues, and survival roles.',
   alternates: {
     canonical: '/directive-8020-characters',
   },
@@ -47,6 +47,14 @@ const suspicionChecklist = [
   'Two characters report conflicting versions of the same event.',
 ];
 
+const characterQuickRows = [
+  ['Brianna Young', 'Lashana Lynch', 'Pilot / co-pilot', 'Lead cast signal; track leadership, trust, and survival route pressure.'],
+  ['Nolan Stafford', 'Danny Sapani', 'Commander', 'Command decisions, mission pressure, and crew relationship consequences.'],
+  ['Laura Eisele', 'Actor to verify', 'Senior Mission Officer', 'Ship-system evidence, technical decisions, and Eisele Destiny searches.'],
+  ['Dr. Samantha Cooper', 'Actor to verify', 'Medical specialist', 'Injury, rescue, treatment, and support-route decisions.'],
+  ['Josef Cernan', 'Actor to verify', 'Technical engineer', 'Repairs, locked access, mechanical routes, and support choices.'],
+];
+
 export default function CharactersPage() {
   return (
     <>
@@ -54,10 +62,10 @@ export default function CharactersPage() {
         data={generateArticleSchema({
           title: 'Directive 8020 Characters - Cast, Crew & Survival Roles',
           description:
-            'Meet the Directive 8020 characters and Cassiopeia crew, including Lashana Lynch as Young, crew roles, mimic threat, and survival notes.',
+            'Directive 8020 characters guide with Brianna Young, Nolan Stafford, Laura Eisele, Samantha Cooper, Josef Cernan, cast details, mimic threat, and survival notes.',
           url: '/directive-8020-characters',
           datePublished: '2026-05-10',
-          dateModified: '2026-05-13',
+          dateModified: '2026-05-21',
           imageUrl: crewPortraitHero,
         })}
       />
@@ -68,14 +76,41 @@ export default function CharactersPage() {
         <PageHero src={crewPortraitHero} alt="Directive 8020 official playable Cassiopeia crew portraits" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 Characters
+          Directive 8020 Characters: Brianna Young and the Cassiopeia Crew
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          Directive 8020&apos;s cast matters because the central enemy can wear a
-          human face. This guide tracks confirmed character information,
-          survival roles, and the clues you should watch before trusting anyone
-          aboard the Cassiopeia.
+          Directive 8020 has five core playable Cassiopeia crew members to
+          track: <strong className="text-foreground">Brianna Young</strong>,
+          <strong className="text-foreground"> Nolan Stafford</strong>,
+          <strong className="text-foreground"> Laura Eisele</strong>,
+          <strong className="text-foreground"> Dr. Samantha Cooper</strong>,
+          and <strong className="text-foreground">Josef Cernan</strong>. This
+          guide gives the character list first, then explains cast status,
+          survival roles, Movie Night assignment, and mimic suspicion clues.
         </p>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Character</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Actor</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Crew role</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why players search them</th>
+              </tr>
+            </thead>
+            <tbody>
+              {characterQuickRows.map(([character, actor, role, note]) => (
+                <tr key={character} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{character}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{actor}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{role}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{note}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <VideoEmbed
           videoId="gaQkzfA14G4"

@@ -9,9 +9,9 @@ import { SurvivalEndingTracker } from '@/components/tools/survival-ending-tracke
 import { EndingIndex } from '@/components/tools/ending-index';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 All Endings Guide - How Many Endings & Routes',
+  title: 'Directive 8020 All Endings - How to Unlock Every Ending',
   description:
-    'Directive 8020 all endings guide: how many endings are reported, how to use Turning Points and the Story Tree, best ending principles, bad ending triggers, and route cleanup.',
+    'Directive 8020 all endings guide: how many endings, known finale names, Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, Horror, and best ending routes.',
   alternates: {
     canonical: '/directive-8020-all-endings',
   },
@@ -21,7 +21,7 @@ const faqs = [
   {
     question: 'How many endings does Directive 8020 have?',
     answer:
-      'Review coverage reports five substantial endings in Directive 8020. Exact ending names, route triggers, and minor variants should still be verified through the in-game Story Tree.',
+      'Directive 8020 has five major ending families reported by review coverage, with named finale outcomes and variations such as Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, and Horror.',
   },
   {
     question: 'What are Cycle 13 and the Booster Ring in Directive 8020?',
@@ -54,8 +54,19 @@ const endingFactors = [
   ['Turning Points explored', 'Whether hidden branches have been unlocked in the Story Tree.'],
 ];
 
+const namedEndingRows = [
+  ['Homeward Bound', 'Potentially best / crew survival route', 'Keep the strongest survivor state, protect mission evidence, and avoid reckless finale trust choices.', 'High'],
+  ['Docked', 'Cassiopeia / Booster Ring outcome', 'Track whether the ship reaches or uses the Booster Ring and whether the crew state supports docking.', 'High'],
+  ['Mask Off', 'Mimic reveal or exposure outcome', 'Prioritize mimic identification, evidence, scanner clues, and who is trusted near the finale.', 'High'],
+  ['Hitchhiker', 'Contamination or hidden passenger outcome', 'Watch for routes where a rescued crew, body, sample, or message may carry the threat onward.', 'High'],
+  ['Massacre', 'Worst / high-death outcome', 'Let survivor state collapse, fail key QTEs, or branch from late deaths after preserving a clean route.', 'High'],
+  ['Not Alone', 'Ambiguous survival or continuation outcome', 'Track rescue, warning, Andromeda risk, and whether the crew leaves with unresolved mimic evidence.', 'High'],
+  ['Horror', 'Bad finale variant', 'Use late Turning Points to test failed rescue, failed warning, or unresolved threat conditions.', 'High'],
+];
+
 const endingCountRows = [
-  ['Reported main endings', '5 substantial endings', 'Reported by launch review coverage; exact route names still need Story Tree capture.'],
+  ['Reported main ending families', '5 substantial endings', 'Reported by launch review coverage; named finale outcomes and variations should be mapped in the Story Tree.'],
+  ['Known named outcomes to test', '7+ named outcomes', 'Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, and Horror are the main CTR-facing names to include.'],
   ['Death scenes', '44 death scenes', 'Useful for endings because dead characters can close or change finale paths.'],
   ['Collectibles', '65 collectibles', '50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets can affect lore and cleanup routes.'],
   ['Episode structure', '8 episodes', 'Use episode boundaries to track survivor state, Turning Points, and ending conditions.'],
@@ -78,11 +89,11 @@ const transcriptEndingRows = [
 
 const sourceRows = [
   {
-    claim: 'Directive 8020 has 5 reported substantial endings.',
-    source: 'Destructoid / review coverage',
+    claim: 'Directive 8020 has 5 reported substantial ending families plus named finale outcomes and variations.',
+    source: 'Destructoid review and endings coverage',
     status: 'verified' as const,
-    href: 'https://www.destructoid.com/reviews/directive-8020-review/',
-    note: 'Use as the CTR answer for how many endings; exact names still need Story Tree capture.',
+    href: 'https://www.destructoid.com/directive-8020-endings-guide-all-destinies-choices-and-variations/',
+    note: 'Use as the CTR answer for how many endings and which ending names players are searching.',
   },
   {
     claim: 'Death spiral is a special ending concept, not a normal all-deaths checklist item.',
@@ -101,10 +112,10 @@ const sourceRows = [
 ];
 
 const endingRouteRows = [
-  { step: 'Best ending base', doThis: 'Keep all core crew alive, preserve evidence, and avoid unverified trust choices.', why: 'Best endings in this genre usually require survivor count plus correct finale conditions.' },
-  { step: 'Bad ending test', doThis: 'Branch from late Turning Points and alter only one major survivor or mission choice.', why: 'This identifies which condition changes the ending without replay noise.' },
-  { step: 'Worst ending test', doThis: 'Use a separate branch to test deaths, relationship failures, and failed finale actions.', why: 'Do not damage your clean route while collecting negative outcomes.' },
-  { step: 'Hidden ending test', doThis: 'Complete collectibles and evidence routes before final branch testing.', why: 'Hidden outcomes often depend on clues or optional objectives.' },
+  { step: 'Homeward Bound / best route base', doThis: 'Keep core crew alive, preserve evidence, verify mimic clues, and avoid sacrificing the crew or Andromeda without proof.', why: 'The best route needs survivor state plus correct finale logic, not only one final dialogue choice.' },
+  { step: 'Docked / Booster Ring test', doThis: 'Branch near the finale and test the ship, Booster Ring, rescue, and docking conditions separately.', why: 'Docking-style outcomes can depend on ship state as much as character survival.' },
+  { step: 'Mask Off / mimic exposure test', doThis: 'Replay routes where evidence, scanner use, or trust checks reveal the impostor before the finale.', why: 'Mimic identification appears to be a separate ending axis.' },
+  { step: 'Massacre / Horror test', doThis: 'Use a copy branch to fail survivor, QTE, or trust conditions after your clean route is saved.', why: 'Worst-ending cleanup should not damage the route you need for trophies and good outcomes.' },
 ];
 
 export default function AllEndingsPage() {
@@ -114,10 +125,10 @@ export default function AllEndingsPage() {
         data={generateArticleSchema({
           title: 'Directive 8020 All Endings Guide - How Many Endings & Routes',
           description:
-            'Directive 8020 all endings guide with reported ending count, Story Tree tracking, Turning Points strategy, best ending principles, and route checklist.',
+            'Directive 8020 all endings guide with reported ending count, known ending names, Story Tree tracking, Turning Points strategy, best ending principles, and route checklist.',
           url: '/directive-8020-all-endings',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-18',
+          dateModified: '2026-05-21',
           imageUrl: '/d8020-screenshot-06.jpg',
         })}
       />
@@ -132,28 +143,37 @@ export default function AllEndingsPage() {
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
           Directive 8020 has <strong className="text-foreground">5 reported
-          substantial endings</strong>. This all-endings guide maps the
-          confirmed search intent first, then keeps exact ending names, death
-          spiral triggers, and distress-call outcomes marked until Story Tree
-          route capture verifies them.
+          major ending families</strong>, with named finale outcomes players
+          search for including <strong className="text-foreground">Homeward
+          Bound</strong>, <strong className="text-foreground">Docked</strong>,
+          <strong className="text-foreground"> Mask Off</strong>,
+          <strong className="text-foreground"> Hitchhiker</strong>,
+          <strong className="text-foreground"> Massacre</strong>,
+          <strong className="text-foreground"> Not Alone</strong>, and
+          <strong className="text-foreground"> Horror</strong>. This guide
+          maps what each ending name appears to mean and how to test routes
+          through the Story Tree.
         </p>
 
         <BlufBox>
           <p>
             <strong>Short answer:</strong> launch review coverage reports
-            <strong> five substantial endings</strong> in Directive 8020. Start
-            from one clean completed route, then branch from late Turning Points
-            to test survivor count, mission choices, evidence, and mimic
-            identification one variable at a time.
+            <strong> five major ending families</strong> in Directive 8020,
+            while ending guides and player searches surface named outcomes such
+            as Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not
+            Alone, and Horror. Start from one clean completed route, then branch
+            from late Turning Points to test survivor count, mission choices,
+            evidence, Booster Ring state, and mimic identification one variable
+            at a time.
           </p>
         </BlufBox>
 
         <StatusPanel
           items={[
-            { label: 'Reported ending count', value: 'Review coverage reports 5 substantial endings.', status: 'verified' },
-            { label: 'Exact ending names', value: 'Needs in-game Story Tree capture before final naming.', status: 'needs-check' },
+            { label: 'Reported ending count', value: 'Review coverage reports 5 major ending families.', status: 'verified' },
+            { label: 'Ending names', value: 'Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, and Horror are the key named outcomes to test.', status: 'working' },
             { label: 'Ending method', value: 'Story Tree, Turning Points, survivor state, and evidence are confirmed guide pillars.', status: 'verified' },
-            { label: 'Route table', value: 'Best, bad, worst, and hidden routes should be filled from controlled branch testing.', status: 'working' },
+            { label: 'Route table', value: 'Best, bad, worst, hidden, Booster Ring, and mimic-exposure routes should be filled from controlled branch testing.', status: 'working' },
           ]}
         />
 
@@ -163,13 +183,48 @@ export default function AllEndingsPage() {
           </p>
           <p className="text-sm text-muted-foreground leading-relaxed">
             Directive 8020 is currently reported to have <strong className="text-foreground">5
-            substantial endings</strong>. Treat that as the main ending count,
-            then use the Story Tree to verify exact names, hidden variants, and
-            the choices that trigger each finale outcome.
+            major ending families</strong>. Treat Homeward Bound, Docked, Mask
+            Off, Hitchhiker, Massacre, Not Alone, and Horror as the named finale
+            outcomes to test, then use the Story Tree to verify hidden variants
+            and the choices that trigger each result.
           </p>
         </div>
 
         <SourceCheckTable title="All Endings Source Check" rows={sourceRows} />
+
+        <div className="prose-game">
+          <h2>All Known Ending Names and What to Test</h2>
+          <p>
+            The biggest GSC gap for this page is simple: players searching
+            “Directive 8020 endings” want ending names and unlock direction in
+            the first screen. Use this table as the route map. It separates
+            known named outcomes from exact branch triggers that still need
+            controlled Story Tree capture.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Ending name</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Likely intent</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Route condition to test</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Spoiler level</th>
+              </tr>
+            </thead>
+            <tbody>
+              {namedEndingRows.map(([name, intent, condition, spoiler]) => (
+                <tr key={name} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{name}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{intent}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{condition}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{spoiler}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <SurvivalEndingTracker />
         <EndingIndex />

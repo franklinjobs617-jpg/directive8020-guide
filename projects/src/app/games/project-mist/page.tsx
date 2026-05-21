@@ -12,13 +12,14 @@ import {
   projectMistImages,
   projectMistLaunchQuestionRows,
   projectMistLaunchSnapshotRows,
+  projectMistGscOpportunityRows,
   projectMistQuickFacts,
   projectMistVideos,
 } from '@/lib/project-mist';
 
-const title = 'Project: Mist Guide Hub - Early Access, Co-op, Lockpick & Train Base';
+const title = 'Project: Mist Guide - Early Access, Co-op, Release & Beginner Tips';
 const description =
-  'Project: Mist guide hub updated for Steam Early Access: launch facts, price snapshot, co-op, lockpicking, train door key, saves, building, and fixes.';
+  'Project: Mist guide hub for the live Steam Early Access release: release date, 1-4 player online co-op, PC platform, beginner tips, lockpick, train base, saves, and fixes.';
 const canonical = '/games/project-mist';
 
 export const metadata = createProjectMistMetadata({
@@ -37,12 +38,17 @@ const faqs = [
   {
     question: 'When does Project: Mist release?',
     answer:
-      'Project: Mist released into Steam Early Access on 19 May, 2026.',
+      'Project: Mist released into Steam Early Access on 19 May, 2026, on PC via Steam.',
   },
   {
     question: 'Does Project: Mist have multiplayer?',
     answer:
       'Yes. Steam lists multi-player, co-op, and online co-op, and Steam page copy describes seamless 1-4 player co-op.',
+  },
+  {
+    question: 'Is Project: Mist on Xbox or PlayStation?',
+    answer:
+      'The current confirmed release is PC via Steam. Xbox, PlayStation, cross-play, and console release timing are not confirmed by the Steam listing.',
   },
   {
     question: 'What should I read first?',
@@ -76,12 +82,12 @@ export default function ProjectMistHubPage() {
     >
       <BlufBox title="Early Access Snapshot">
         <p>
-          <strong>Project: Mist is live in Steam Early Access.</strong>{' '}
-          Steam confirms solo play, online co-op, Gravity Gun, moving train
-          base, abandoned facilities, giant creatures, crafting, hunting, Steam
-          Achievements, Steam Cloud, and a demo listing. Launch-window player
-          questions now focus on lockpicking, train door keys, saves, building,
-          price, performance, and co-op stability.
+          <strong>Project: Mist is live in Steam Early Access on PC via Steam
+          as of 19 May, 2026.</strong> The useful first answer is not just the
+          date: players also need to know that Steam lists solo play, online
+          co-op, 1-4 player copy, Gravity Gun, moving train base, Steam Cloud,
+          and Early Access risk. Xbox, PlayStation, and cross-play are not
+          confirmed by the current Steam listing.
         </p>
       </BlufBox>
 
@@ -127,6 +133,35 @@ export default function ProjectMistHubPage() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="my-10">
+        <h2 className="mb-4 text-xl font-bold text-foreground">Search Questions This Hub Answers</h2>
+        <ArticleImage
+          src={projectMistImages.multiplayer}
+          alt="Project: Mist release date multiplayer and platform answer image"
+          caption="GSC shows Project: Mist impressions clustering around release status, multiplayer, platform availability, and beginner tasks, so those answers belong near the top."
+        />
+        <div className="overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Search intent</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Direct answer</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Where to continue</th>
+              </tr>
+            </thead>
+            <tbody>
+              {projectMistGscOpportunityRows.map(([intent, answer, next]) => (
+                <tr key={intent} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{intent}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{next}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 

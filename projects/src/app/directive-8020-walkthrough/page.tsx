@@ -9,9 +9,9 @@ import { EpisodeNavigator } from '@/components/tools/episode-navigator';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 Walkthrough - Full Episode Guide & Routes',
+  title: 'Directive 8020 Walkthrough - All 8 Episodes & Choices',
   description:
-    'Directive 8020 walkthrough with episode route notes, QTE and stealth tips, scanner use, collectibles, Turning Points, Destinies, endings prep, and spoiler-safe first-run advice.',
+    'Directive 8020 walkthrough for all 8 episodes: Little Star, Best Laid Plans, The Sample, Dragnet, Mr. Williams, Hostile Takeover, Revelation, Come True, choices, QTEs, collectibles, and endings.',
   alternates: {
     canonical: '/directive-8020-walkthrough',
   },
@@ -244,12 +244,12 @@ export default function WalkthroughPage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 Walkthrough - Full Episode Guide & Routes',
+          title: 'Directive 8020 Walkthrough - All 8 Episodes & Choices',
           description:
-            'Directive 8020 walkthrough with episode route notes, QTE and stealth tips, scanner use, collectibles, Turning Points, Destinies, endings prep, and spoiler-safe first-run advice.',
+            'Directive 8020 walkthrough for all 8 episodes, route notes, QTE and stealth tips, scanner use, collectibles, Turning Points, Destinies, endings prep, and spoiler-safe first-run advice.',
           url: '/directive-8020-walkthrough',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-15',
+          dateModified: '2026-05-21',
           imageUrl: '/d8020-screenshot-07.jpg',
         })}
       />
@@ -260,14 +260,14 @@ export default function WalkthroughPage() {
         <PageHero src="/d8020-screenshot-07.jpg" alt="Directive 8020 corridor walkthrough screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 Walkthrough: Full Episode Guide
+          Directive 8020 Walkthrough: All 8 Episodes and Choices
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          This Directive 8020 walkthrough is built for post-launch play: a
-          spoiler-safe first run, then a structured cleanup route for Turning
-          Points, Destinies, stealth, QTEs, collectibles, deaths, and endings.
-          It uses official feature details plus current review and preview
-          coverage, with late episode titles marked for in-game verification.
+          This Directive 8020 walkthrough covers all eight episodes in order:
+          Little Star, Best Laid Plans, The Sample, Dragnet, Mr. Williams,
+          Hostile Takeover, Revelation, and Come True. Use it first as a
+          spoiler-safe route, then as a cleanup map for choices, Turning Points,
+          Destinies, stealth, QTEs, collectibles, deaths, and endings.
         </p>
 
         <BlufBox>

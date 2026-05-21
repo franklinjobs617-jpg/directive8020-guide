@@ -9,9 +9,9 @@ import { DeathSceneTracker } from '@/components/tools/death-scene-tracker';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 All 44 Death Scenes Checklist',
+  title: 'Directive 8020 All Deaths - 44 Death Scenes Checklist',
   description:
-    'Directive 8020 death scenes guide: all 44 deaths checklist, chapter triggers, victims, avoid methods, Turning Points recovery, mimic deaths, stealth deaths, and trophy cleanup.',
+    'Directive 8020 all deaths guide: 44 death scenes checklist, chapter triggers, victims, avoid methods, Turning Points recovery, mimic deaths, stealth deaths, death spiral, and trophy cleanup.',
   alternates: {
     canonical: '/directive-8020-death-scenes-guide',
   },
@@ -21,7 +21,7 @@ const faqs = [
   {
     question: 'How many death scenes are in Directive 8020?',
     answer:
-      'Pre-release preview coverage has described Directive 8020 as having 44 death scenes. Treat the exact in-game checklist as something to verify while mapping chapters and Turning Points.',
+      'Directive 8020 has 44 reported death scenes. Use Turning Points after one clean route to capture all deaths by victim, chapter, trigger, and avoid method.',
   },
   {
     question: 'Can deaths be undone with Turning Points?',
@@ -42,6 +42,13 @@ const deathCategories = [
   ['Relationship failure', 'A character refuses help because trust was damaged earlier.', 'Avoid needless blame and record relationship changes.'],
   ['Evidence failure', 'Missing a clue that unlocks safer later options.', 'Search labs, terminals, crew rooms, and objective-adjacent spaces.'],
   ['Finale branch', 'Late-game survivor combinations or mission choices.', 'Use late Story Tree nodes after one full ending.'],
+];
+
+const deathIntentRows = [
+  ['directive 8020 deaths', 'A broad all-deaths query; answer with 44 death scenes and a tracker immediately.'],
+  ['directive 8020 all deaths', 'Completion intent; emphasize checklist order, victims, triggers, and Turning Points.'],
+  ['directive 8020 death spiral', 'Special ending-state intent; explain separately from normal death-scene collection.'],
+  ['directive 8020 save everyone deaths', 'Survival intent; every death entry needs an avoid method.'],
 ];
 
 const deathCaptureRows = [
@@ -80,12 +87,12 @@ export default function DeathScenesPage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 All 44 Death Scenes Checklist',
+          title: 'Directive 8020 All Deaths - 44 Death Scenes Checklist',
           description:
-            'Directive 8020 death scenes guide with 44 deaths checklist, triggers, chapters, victims, avoid methods, Turning Points recovery, and trophy cleanup.',
+            'Directive 8020 all deaths guide with 44 death scenes checklist, triggers, chapters, victims, avoid methods, Turning Points recovery, death spiral, and trophy cleanup.',
           url: '/directive-8020-death-scenes-guide',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-18',
+          dateModified: '2026-05-21',
           imageUrl: '/d8020-screenshot-11.jpg',
         })}
       />
@@ -96,11 +103,12 @@ export default function DeathScenesPage() {
         <PageHero src="/d8020-screenshot-11.jpg" alt="Directive 8020 death scenes guide screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 All 44 Death Scenes Checklist
+          Directive 8020 All Deaths: 44 Death Scenes Checklist
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          This is the death-route tracker for Directive 8020. Use it after one
-          clean playthrough: map every death by chapter, victim, trigger, avoid
+          Directive 8020 has <strong className="text-foreground">44 reported
+          death scenes</strong>. Use this all-deaths tracker after one clean
+          playthrough: map every death by chapter, victim, trigger, avoid
           method, and nearest Turning Point instead of replaying blindly.
         </p>
 
@@ -121,6 +129,19 @@ export default function DeathScenesPage() {
             { label: 'Spoiler handling', value: 'Death categories are visible; exact late-game deaths should be spoiler-labeled after capture.', status: 'working' },
           ]}
         />
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <tbody>
+              {deathIntentRows.map(([query, answer]) => (
+                <tr key={query} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground w-56">{query}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <VideoEmbed
           videoId="oeiMw0KD7w0"

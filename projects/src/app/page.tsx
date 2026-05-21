@@ -153,7 +153,7 @@ const trendingSearches = [
   },
   {
     query: 'directive 8020 how many endings',
-    answer: 'Launch review coverage reports 5 substantial endings; route names still need Story Tree capture.',
+    answer: 'Review coverage reports 5 major ending families, with named outcomes including Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, and Horror.',
     href: '/directive-8020-all-endings',
   },
   {
