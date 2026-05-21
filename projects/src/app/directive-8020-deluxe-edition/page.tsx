@@ -4,12 +4,12 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { SourceCheckTable } from '@/components/guide-blocks';
+import { BlufBox, SourceCheckTable } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 Deluxe Edition - Bonus Mission, Outfits & Soundtrack',
+  title: 'Directive 8020 Deluxe Edition - Contents, Heirlooms & Is It Worth It',
   description:
-    'Directive 8020 Deluxe Edition guide: Digital Deluxe upgrade contents, Heirlooms Retrieval bonus mission, Dark Pictures Outfit Pack, filters, artbook, soundtrack, and whether it is worth it.',
+    'Directive 8020 Deluxe Edition guide: Digital Deluxe contents, Heirlooms Retrieval bonus mission, Dark Pictures Outfit Pack, filters, artbook, soundtrack, collectibles, price checks, and whether it is worth it.',
   alternates: {
     canonical: '/directive-8020-deluxe-edition',
   },
@@ -30,6 +30,11 @@ const faqs = [
     question: 'Are the Deluxe filters gameplay content?',
     answer:
       'The filters are visual customization items inspired by 60s, 70s, and 80s space-mission aesthetics. They change presentation rather than core story routes.',
+  },
+  {
+    question: 'Does Directive 8020 Deluxe Edition include story DLC?',
+    answer:
+      'The clearest gameplay item is the Heirlooms Retrieval bonus mission. Treat the rest of the bundle as cosmetics, filters, artbook, and soundtrack content unless your storefront lists additional story DLC.',
   },
   {
     question: 'Should I buy the Deluxe Edition?',
@@ -59,6 +64,14 @@ const deluxeItems = [
     name: 'Exclusive soundtrack',
     value: 'Music and soundscape content for players who want the full production package.',
   },
+];
+
+const valueRows = [
+  ['Collectors', 'Worth considering', 'Heirlooms Retrieval and anthology references are the strongest fit.'],
+  ['Trophy hunters', 'Check achievement impact first', 'Bonus mission or collectibles may matter only if platform achievements include them.'],
+  ['One-run story players', 'Base game is usually enough', 'Outfits, filters, artbook, and soundtrack do not change the core route.'],
+  ['Screenshot / replay players', 'More valuable', 'Filters and outfits add replay presentation value.'],
+  ['Price-sensitive buyers', 'Compare upgrade price live', 'Regional discounts and bundles can change the value quickly.'],
 ];
 
 const priceRows = [
@@ -96,12 +109,12 @@ export default function DeluxeEditionPage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 Deluxe Edition - Bonus Mission, Outfits & Soundtrack',
+          title: 'Directive 8020 Deluxe Edition - Contents, Heirlooms & Is It Worth It',
           description:
-            'Directive 8020 Deluxe Edition guide covering Digital Deluxe content, Heirlooms Retrieval, outfits, filters, artbook, soundtrack, and value.',
+            'Directive 8020 Deluxe Edition guide covering Digital Deluxe content, Heirlooms Retrieval, outfits, filters, artbook, soundtrack, price checks, and value.',
           url: '/directive-8020-deluxe-edition',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-15',
+          dateModified: '2026-05-21',
           imageUrl: '/d8020-screenshot-08.jpg',
         })}
       />
@@ -112,27 +125,23 @@ export default function DeluxeEditionPage() {
         <PageHero src="/d8020-screenshot-08.jpg" alt="Directive 8020 Deluxe Edition guide screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 Deluxe Edition Guide
+          Directive 8020 Deluxe Edition: Contents, Heirlooms and Is It Worth It
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          The Digital Deluxe content is not just a generic skin bundle. It adds
-          anthology outfits, a bonus mission, cinematic filters, an artbook, and
-          soundtrack content, which makes it relevant for collectible hunters
-          and Dark Pictures fans.
+          The Digital Deluxe Edition is mainly for Dark Pictures collectors and
+          replay-focused players. The key question is whether the Heirlooms
+          Retrieval bonus mission, outfits, filters, artbook, and soundtrack are
+          worth the live upgrade price on your storefront.
         </p>
 
-        <div className="rounded-lg border border-d8020/35 bg-d8020/10 p-5 mb-8">
-          <p className="text-xs font-semibold uppercase tracking-wider text-d8020 mb-2">
-            Quick Answer
+        <BlufBox title="Deluxe Answer">
+          <p>
+            The Deluxe Edition is worth considering if you want the{' '}
+            <strong>Heirlooms Retrieval</strong> bonus mission, Dark Pictures
+            outfits, cinematic filters, digital artbook, and soundtrack. If you
+            only want one blind main-story run, the base game is usually enough.
           </p>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            The Directive 8020 Deluxe Edition is worth considering if you want
-            the <strong className="text-foreground">Heirlooms Retrieval</strong>
-            bonus mission, Dark Pictures outfits, extra collectibles, cinematic
-            filters, digital artbook, and soundtrack. For one blind story run,
-            the base game is usually enough.
-          </p>
-        </div>
+        </BlufBox>
 
         <VideoEmbed
           videoId="gaQkzfA14G4"
@@ -157,6 +166,37 @@ export default function DeluxeEditionPage() {
               <p className="text-sm text-muted-foreground leading-relaxed">{item.value}</p>
             </section>
           ))}
+        </div>
+
+        <div className="prose-game">
+          <h2>Is Deluxe Worth It?</h2>
+          <p>
+            Use the table below instead of treating Deluxe as automatically good
+            or bad. The value depends on whether you care about anthology
+            collectibles and replay presentation, not just whether the bundle
+            has more items.
+          </p>
+        </div>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player type</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Recommendation</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              {valueRows.map(([player, verdict, reason]) => (
+                <tr key={player} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{player}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{verdict}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{reason}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         <div className="prose-game">

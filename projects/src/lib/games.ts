@@ -223,6 +223,57 @@ export const thickAsThieves: GameConfig = {
   ],
 };
 
+export const zeroParades: GameConfig = {
+  id: "zero-parades",
+  slugPrefix: "zero-parades",
+  hubPath: "/games/zero-parades",
+  name: "ZERO PARADES: For Dead Spies",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "An espionage RPG from ZA/UM about Hershel Wilk, alias CASCADE, a burnt-out operant recalled for one desperate assignment in a city of informants, adversaries, political factions, and psychic pressure.",
+  platforms: ["PC", "PlayStation 5"],
+  genres: ["RPG", "Indie", "Espionage", "Narrative RPG"],
+  developer: "ZA/UM",
+  publisher: "ZA/UM",
+  releaseDate: "2026-05-21",
+  operatingSystem: "Windows 10 / Windows 11",
+  url: "https://store.steampowered.com/app/2863680/ZERO_PARADES_For_Dead_Spies/",
+  availability: "https://schema.org/InStock",
+  heroImage: "/games/zero-parades/hero.jpg",
+  guideLinks: [
+    {
+      title: "Release Date & Platforms",
+      href: "/games/zero-parades/release-date",
+      description:
+        "PC launch status, Steam/Epic/GOG notes, PS5 timing, languages, price checks, and storefront cautions.",
+    },
+    {
+      title: "Beginner Guide",
+      href: "/games/zero-parades/beginner-guide",
+      description:
+        "Spoiler-light first-session advice for skills, Conditioning, Exertion, pressure, and dialogue choices.",
+    },
+    {
+      title: "System Requirements",
+      href: "/games/zero-parades/system-requirements",
+      description:
+        "Official minimum and recommended PC specs, GTX 1060 baseline, RAM, DirectX 11, and setup notes.",
+    },
+    {
+      title: "Steam Deck Guide",
+      href: "/games/zero-parades/steam-deck",
+      description:
+        "Steam Deck Verified context, controller support, text readability, saves, and handheld checks.",
+    },
+    {
+      title: "Is ZERO PARADES Worth It?",
+      href: "/games/zero-parades/is-it-worth-it",
+      description:
+        "Buying advice for Disco Elysium fans, narrative RPG players, PS5 users, and cautious launch buyers.",
+    },
+  ],
+};
+
 export const minaTheHollower: GameConfig = {
   id: "mina-the-hollower",
   slugPrefix: "mina-the-hollower",

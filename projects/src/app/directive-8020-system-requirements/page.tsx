@@ -4,11 +4,12 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
+import { BlufBox } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 System Requirements - Official PC Specs',
+  title: 'Directive 8020 PC Specs - Minimum, Recommended & Steam Deck',
   description:
-    'Official Directive 8020 PC system requirements from Steam: minimum and recommended CPU, GPU, RAM, storage, SSD advice, and launch-day performance settings.',
+    'Official Directive 8020 PC specs: minimum and recommended system requirements, RTX 2060 and RTX 3070 Ti GPU targets, 16 GB RAM, 40 GB storage, SSD advice, and Steam Deck caution.',
   alternates: {
     canonical: '/directive-8020-system-requirements',
   },
@@ -48,10 +49,23 @@ const faqs = [
       'Steam lists an SSD as recommended for the minimum configuration. Because Directive 8020 is a cinematic horror game with scene transitions, an SSD is the safer option even though the requirement line does not mark it as mandatory.',
   },
   {
+    question: 'Can Directive 8020 run on Steam Deck?',
+    answer:
+      'Directive 8020 is more demanding than typical Steam Deck targets. The official minimum GPU is RTX 2060 or RX 5700, so Steam Deck users should check current compatibility reports before buying for handheld play.',
+  },
+  {
     question: 'Is Directive 8020 available on low-end GPUs like GTX 1060?',
     answer:
       'The official minimum GPU is RTX 2060 or RX 5700, so a GTX 1060 is below the listed minimum. It may not provide a stable or supported experience.',
   },
+];
+
+const quickAnswerRows = [
+  ['Minimum GPU', 'RTX 2060 / RX 5700', 'Below this, expect unsupported or unstable performance.'],
+  ['Recommended GPU', 'RTX 3070 Ti / RX 6800', 'Best target for higher visual settings and steadier cinematic scenes.'],
+  ['RAM', '16 GB', 'Listed for both minimum and recommended specs.'],
+  ['Storage', '40 GB', 'Keep extra free space for patches, shader cache, and Steam unpacking.'],
+  ['Steam Deck', 'Not a safe assumption', 'Official minimum GPU is far above Deck-class hardware; verify current reports.'],
 ];
 
 function SpecTable({ rows }: { rows: string[][] }) {
@@ -76,12 +90,12 @@ export default function SystemRequirementsPage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 System Requirements - Official PC Specs',
+          title: 'Directive 8020 PC Specs - Minimum, Recommended & Steam Deck',
           description:
-            'Official Directive 8020 PC system requirements from Steam with minimum, recommended, storage, and performance advice.',
+            'Official Directive 8020 PC system requirements from Steam with minimum, recommended, storage, Steam Deck, and performance advice.',
           url: '/directive-8020-system-requirements',
           datePublished: '2026-05-10',
-          dateModified: '2026-05-12',
+          dateModified: '2026-05-21',
           imageUrl: '/d8020-screenshot-02.jpg',
         })}
       />
@@ -92,13 +106,44 @@ export default function SystemRequirementsPage() {
         <PageHero src="/d8020-screenshot-02.jpg" alt="Directive 8020 official corridor horror screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 System Requirements
+          Directive 8020 PC Specs: Minimum, Recommended and Steam Deck Notes
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          These are the official PC requirements listed on Steam, with practical
-          notes for launch-day settings, storage, and what to lower first if
-          the Cassiopeia is stuttering.
+          Directive 8020&apos;s official Steam specs start at an RTX 2060 or RX
+          5700 with 16 GB RAM and 40 GB storage. That makes low-end GPU and
+          Steam Deck searches risky: check the minimum before assuming the game
+          will run smoothly.
         </p>
+
+        <BlufBox title="PC Specs Answer">
+          <p>
+            <strong>Minimum:</strong> i5-8500 / Ryzen 5 3500, 16 GB RAM, RTX
+            2060 / RX 5700, 40 GB storage, SSD recommended. <strong>Recommended:</strong>{' '}
+            i5-12400F / Ryzen 5 5600X, 16 GB RAM, RTX 3070 Ti / RX 6800, and
+            40 GB storage.
+          </p>
+        </BlufBox>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Question</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Answer</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              {quickAnswerRows.map(([question, answer, impact]) => (
+                <tr key={question} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{question}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{impact}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <div className="prose-game">
           <h2>Minimum Requirements</h2>
@@ -169,6 +214,15 @@ export default function SystemRequirementsPage() {
             <li>Disable heavy overlays if crashes or black screens appear.</li>
             <li>Use headphones or a clean stereo/surround profile for dialogue and threat cues.</li>
           </ul>
+
+          <h2>Steam Deck and Below-Minimum Hardware</h2>
+          <p>
+            Steam Deck, GTX 1060, and older laptop GPU searches need a direct
+            warning. The listed minimum starts at RTX 2060 / RX 5700, which is
+            well above many handheld and older desktop targets. If you still
+            want to try it, verify recent Proton or player reports, use the
+            lowest preset first, cap FPS, and stay within Steam refund timing.
+          </p>
         </div>
 
         <FAQSection faqs={faqs} />

@@ -7,9 +7,9 @@ import { ArticleImage } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
-  title: 'How to Save Everyone in Directive 8020 - Full Survival Guide',
+  title: 'Directive 8020 Save Everyone Guide - Keep All Crew Alive',
   description:
-    'How to save everyone in Directive 8020: spoiler-safe survival rules, mimic trust checks, QTE and stealth advice, relationship management, and Turning Points recovery strategy.',
+    'Directive 8020 save everyone guide: how to keep Young, Stafford, Eisele, Cooper, and Cernan alive with mimic trust checks, QTEs, stealth, relationships, and Turning Points recovery.',
   alternates: {
     canonical: '/directive-8020-how-to-save-everyone',
   },
@@ -20,6 +20,11 @@ const faqs = [
     question: 'Is it possible to save everyone in Directive 8020?',
     answer:
       'Yes. Directive 8020 is built around variable survival outcomes, and Turning Points let you revisit deaths and repair a route through the Story Tree.',
+  },
+  {
+    question: 'Who do you need to keep alive in Directive 8020?',
+    answer:
+      'Track Young, Stafford, Eisele, Cooper, and Cernan as the main crew survival targets, then record supporting-character deaths separately.',
   },
   {
     question: 'Can NPC characters die in Directive 8020?',
@@ -52,6 +57,14 @@ const survivalRules = [
   'Use Turning Points to test one changed decision at a time.',
 ];
 
+const quickSaveRows = [
+  ['Young', 'Do not make reckless solo trust decisions; keep evidence before accusation scenes.', 'Central decision anchor.'],
+  ['Stafford', 'Avoid needless blame and track whether he refuses or helps in rescue scenes.', 'Relationship failures can become rescue failures.'],
+  ['Eisele', 'Keep witnesses and route evidence available before late suspicion checks.', 'Witness state can verify identity.'],
+  ['Cooper', 'Keep QTE and stealth outcomes clean; note every injury or separation.', 'Action failures can create delayed deaths.'],
+  ['Cernan', 'Do not isolate him after high-risk scenes until identity and location are verified.', 'Isolation is the main mimic-risk pattern.'],
+];
+
 const survivorRows = [
   { step: 'Young', doThis: 'Keep her informed, avoid reckless solo trust decisions, and preserve evidence before accusation scenes.', why: 'Young is a central route anchor; bad trust choices can cascade into later deaths.' },
   { step: 'Eisele', doThis: 'Track relationship state and whether she has witnessed suspicious behavior before major branch points.', why: 'Witnesses can verify identity and unlock safer group decisions.' },
@@ -74,12 +87,12 @@ export default function SaveEveryonePage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'How to Save Everyone in Directive 8020 - Full Survival Guide',
+          title: 'Directive 8020 Save Everyone Guide - Keep All Crew Alive',
           description:
-            'Spoiler-safe Directive 8020 survival guide covering mimic trust checks, QTEs, stealth, relationships, and Turning Points recovery.',
+            'Directive 8020 survival guide covering how to keep Young, Stafford, Eisele, Cooper, and Cernan alive with mimic trust checks, QTEs, stealth, relationships, and Turning Points recovery.',
           url: '/directive-8020-how-to-save-everyone',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-13',
+          dateModified: '2026-05-21',
           imageUrl: '/d8020-screenshot-05.jpg',
         })}
       />
@@ -90,13 +103,13 @@ export default function SaveEveryonePage() {
         <PageHero src="/d8020-screenshot-05.jpg" alt="Directive 8020 official mimic horror scene screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          How to Save Everyone in Directive 8020
+          Directive 8020 Save Everyone Guide
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          Directive 8020 is now out, and the everyone-lives route should be
-          approached through chapter milestones, survivor state, mimic
-          verification, group safety, relationship control, QTE discipline, and
-          Turning Points.
+          To save everyone in Directive 8020, track Young, Stafford, Eisele,
+          Cooper, and Cernan separately, then protect the route with mimic
+          verification, group safety, relationship control, clean QTEs, stealth
+          discipline, and careful Turning Points replay.
         </p>
 
         <BlufBox>
@@ -117,6 +130,36 @@ export default function SaveEveryonePage() {
             { label: 'NPC deaths', value: 'Supporting-character deaths should be tracked separately from the five playable survivor route.', status: 'working' },
           ]}
         />
+
+        <div className="prose-game">
+          <h2>Quick Crew Survival Table</h2>
+          <p>
+            GSC shows this page needs a clearer first answer. Start with the
+            crew checklist, then use the longer route sections below when a
+            death actually happens.
+          </p>
+        </div>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Crew member</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Save priority</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it matters</th>
+              </tr>
+            </thead>
+            <tbody>
+              {quickSaveRows.map(([crew, priority, reason]) => (
+                <tr key={crew} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{crew}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{priority}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{reason}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <div className="prose-game">
           <h2>Core Survival Rules</h2>

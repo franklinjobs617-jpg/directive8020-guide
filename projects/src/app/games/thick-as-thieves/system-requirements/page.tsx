@@ -1,17 +1,18 @@
-import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
-import { ThickAsThievesArticle } from '@/components/thick-as-thieves-article';
+import { ArticleImage } from "@/components/article-media";
+import { BlufBox } from "@/components/guide-blocks";
+import { ThickAsThievesArticle } from "@/components/thick-as-thieves-article";
 import {
   createThickAsThievesMetadata,
   thickAsThievesImages,
   thickAsThievesSpecs,
   thickAsThievesSteamFeatureRows,
-} from '@/lib/thick-as-thieves';
+} from "@/lib/thick-as-thieves";
 
-const title = 'Thick As Thieves System Requirements - PC Specs, SSD & Controller';
+const title =
+  "Thick As Thieves System Requirements - PC Specs, SSD & Controller";
 const description =
-  'Official Thick As Thieves PC system requirements: Windows 10/11, 12-16 GB RAM, GTX 1060 to RTX 2070, DirectX 12, SSD required, controller, and Steam Cloud.';
-const canonical = '/games/thick-as-thieves/system-requirements';
+  "Official Thick As Thieves PC system requirements: Windows 10/11, 12-16 GB RAM, GTX 1060 to RTX 2070, DirectX 12, SSD required, controller, and Steam Cloud.";
+const canonical = "/games/thick-as-thieves/system-requirements";
 
 export const metadata = createThickAsThievesMetadata({
   title,
@@ -22,24 +23,23 @@ export const metadata = createThickAsThievesMetadata({
 
 const faqs = [
   {
-    question: 'What are Thick As Thieves minimum PC specs?',
+    question: "What are Thick As Thieves minimum PC specs?",
     answer:
-      'Steam lists Windows 10, Intel Core i5-4570, 12 GB RAM, GTX 1060 6GB or equivalent, DirectX 12, broadband internet, 10 GB storage, and SSD required.',
+      "Steam lists Windows 10, Intel Core i5-4570, 12 GB RAM, GTX 1060 6GB or equivalent, DirectX 12, broadband internet, 10 GB storage, and SSD required.",
   },
   {
-    question: 'What are Thick As Thieves recommended specs?',
+    question: "What are Thick As Thieves recommended specs?",
     answer:
-      'Steam lists Windows 11, Intel Core i7-8700, 16 GB RAM, RTX 2070 8GB or equivalent, DirectX 12, broadband internet, 10 GB storage, and SSD required.',
+      "Steam lists Windows 11, Intel Core i7-8700, 16 GB RAM, RTX 2070 8GB or equivalent, DirectX 12, broadband internet, 10 GB storage, and SSD required.",
   },
   {
-    question: 'Does Thick As Thieves require SSD?',
+    question: "Does Thick As Thieves require SSD?",
     answer:
-      'Yes. Steam lists SSD required in both minimum and recommended requirements.',
+      "Yes. Steam lists SSD required in both minimum and recommended requirements.",
   },
   {
-    question: 'Does Thick As Thieves support controller?',
-    answer:
-      'Yes. Steam lists full controller support.',
+    question: "Does Thick As Thieves support controller?",
+    answer: "Yes. Steam lists full controller support.",
   },
 ];
 
@@ -56,7 +56,9 @@ export default function ThickAsThievesSystemRequirementsPage() {
     >
       <BlufBox title="Specs Answer">
         <p>
-          <strong>Thick As Thieves requires an SSD and DirectX 12 on PC.</strong>{' '}
+          <strong>
+            Thick As Thieves requires an SSD and DirectX 12 on PC.
+          </strong>{" "}
           The official Steam minimum is a Windows 10 PC with 12 GB RAM and a GTX
           1060 6GB-class GPU. The recommended tier moves to Windows 11, 16 GB
           RAM, and an RTX 2070 8GB-class GPU.
@@ -76,17 +78,33 @@ export default function ThickAsThievesSystemRequirementsPage() {
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Component</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Minimum</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Recommended</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">
+                Component
+              </th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">
+                Minimum
+              </th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">
+                Recommended
+              </th>
             </tr>
           </thead>
           <tbody>
             {thickAsThievesSpecs.map(([component, minimum, recommended]) => (
-              <tr key={component} className="border-b border-border/30 last:border-0">
-                <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{component}</th>
+              <tr
+                key={component}
+                className="border-b border-border/30 last:border-0"
+              >
+                <th
+                  scope="row"
+                  className="px-4 py-3 text-left font-semibold text-foreground"
+                >
+                  {component}
+                </th>
                 <td className="px-4 py-3 text-muted-foreground">{minimum}</td>
-                <td className="px-4 py-3 text-muted-foreground">{recommended}</td>
+                <td className="px-4 py-3 text-muted-foreground">
+                  {recommended}
+                </td>
               </tr>
             ))}
           </tbody>
@@ -106,17 +124,31 @@ export default function ThickAsThievesSystemRequirementsPage() {
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Feature</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Status</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">
+                Feature
+              </th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">
+                Status
+              </th>
             </tr>
           </thead>
           <tbody>
-            {thickAsThievesSteamFeatureRows.slice(2, 6).map(([feature, status]) => (
-              <tr key={feature} className="border-b border-border/30 last:border-0">
-                <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{feature}</th>
-                <td className="px-4 py-3 text-muted-foreground">{status}</td>
-              </tr>
-            ))}
+            {thickAsThievesSteamFeatureRows
+              .slice(2, 6)
+              .map(([feature, status]) => (
+                <tr
+                  key={feature}
+                  className="border-b border-border/30 last:border-0"
+                >
+                  <th
+                    scope="row"
+                    className="px-4 py-3 text-left font-semibold text-foreground"
+                  >
+                    {feature}
+                  </th>
+                  <td className="px-4 py-3 text-muted-foreground">{status}</td>
+                </tr>
+              ))}
           </tbody>
         </table>
       </div>
@@ -132,7 +164,10 @@ export default function ThickAsThievesSystemRequirementsPage() {
           <li>Install on SSD, not a hard drive.</li>
           <li>Update GPU drivers before first launch.</li>
           <li>Run one short contract to test controller and cloud sync.</li>
-          <li>For co-op, test host and reconnect behavior before committing a full evening.</li>
+          <li>
+            For co-op, test host and reconnect behavior before committing a full
+            evening.
+          </li>
         </ul>
       </section>
     </ThickAsThievesArticle>

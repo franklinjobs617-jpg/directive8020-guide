@@ -4,12 +4,12 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { SourceCheckTable } from '@/components/guide-blocks';
+import { BlufBox, SourceCheckTable } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 Movie Night Multiplayer & Co-op Guide',
+  title: 'Directive 8020 Movie Night Mode - Local Co-op & Online Multiplayer',
   description:
-    'Directive 8020 Movie Night multiplayer guide: couch co-op setup, up to five players, character assignment, decision rules, online multiplayer note, and co-op survival tips.',
+    'Directive 8020 Movie Night mode guide: local couch co-op for up to five players, online multiplayer update status, character assignment, Remote Play caution, and co-op rules.',
   alternates: {
     canonical: '/directive-8020-movie-night-multiplayer',
   },
@@ -19,7 +19,7 @@ const faqs = [
   {
     question: 'Does Directive 8020 have Movie Night multiplayer?',
     answer:
-      'Yes. Steam lists Movie Night couch co-op for up to five players, where players choose crew members to control and share the story locally.',
+      'Yes. Directive 8020 has Movie Night couch co-op for up to five local players, where players choose crew members to control and share the story on one screen.',
   },
   {
     question: 'Does Directive 8020 have online multiplayer?',
@@ -30,6 +30,16 @@ const faqs = [
     question: 'How many players can play Directive 8020 Movie Night?',
     answer:
       'Steam describes Movie Night as supporting up to five players, matching the anthology tradition of assigning characters to different local players.',
+  },
+  {
+    question: 'Can you play Directive 8020 Movie Night online right now?',
+    answer:
+      'Online availability depends on the current patch. The official launch wording says online multiplayer is a free post-launch update, so remote groups should check the latest storefront or patch notes before buying for online play.',
+  },
+  {
+    question: 'Does Steam Remote Play replace online multiplayer?',
+    answer:
+      'Do not treat Steam Remote Play as the official online mode. It may work for some local-style sessions, but the official remote multiplayer path is the post-launch online update.',
   },
   {
     question: 'How should we assign characters in Movie Night?',
@@ -49,8 +59,9 @@ const coOpRules = [
 const multiplayerStatus = [
   ['Single-player', 'Available at launch', 'One player controls the story route and every crew perspective.'],
   ['Movie Night couch co-op', 'Available at launch', 'Up to five local players share one screen and pass control between assigned crew members.'],
-  ['Online multiplayer', 'Post-launch update', 'Official site says five-player online multiplayer is coming later as a free update.'],
+  ['Online multiplayer', 'Check current patch', 'Official launch wording says five-player online multiplayer is a free post-launch update. Verify whether it is live before planning a remote run.'],
   ['Shared Story replacement', 'Not the same at launch', 'Remote groups should wait for the online Movie Night update or check current patch notes.'],
+  ['Steam Remote Play', 'Unofficial workaround', 'Treat it as a workaround only, not a confirmed replacement for the official online mode.'],
 ];
 
 const sourceRows = [
@@ -82,12 +93,12 @@ export default function MovieNightPage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 Movie Night Multiplayer & Co-op Guide',
+          title: 'Directive 8020 Movie Night Mode - Local Co-op & Online Multiplayer',
           description:
-            'Directive 8020 Movie Night couch co-op guide with up to five players, character assignment, online multiplayer note, and co-op survival tips.',
+            'Directive 8020 Movie Night couch co-op guide with up to five local players, online multiplayer update status, character assignment, and remote group cautions.',
           url: '/directive-8020-movie-night-multiplayer',
           datePublished: '2026-05-12',
-          dateModified: '2026-05-15',
+          dateModified: '2026-05-21',
           imageUrl: '/d8020-screenshot-01.jpg',
         })}
       />
@@ -98,14 +109,24 @@ export default function MovieNightPage() {
         <PageHero src="/d8020-screenshot-01.jpg" alt="Directive 8020 Movie Night crew co-op screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 Movie Night Multiplayer Guide
+          Directive 8020 Movie Night Mode: Local Co-op and Online Multiplayer
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          Directive 8020 keeps the anthology&apos;s social horror appeal through
-          Movie Night couch co-op. Up to five players can share the story,
-          assign crew members, argue over trust decisions, and watch the
-          Cassiopeia fall apart together.
+          Directive 8020 supports Movie Night as a local couch co-op mode for
+          up to five players. Online multiplayer is a separate patch-status
+          question, so remote groups should verify the current update before
+          buying copies for an online run.
         </p>
+
+        <BlufBox title="Multiplayer Answer">
+          <p>
+            <strong>Movie Night is local couch co-op for up to five players.</strong>{' '}
+            If you are searching for online co-op, check current patch notes:
+            official launch wording said five-player online multiplayer would
+            arrive later as a free update. Steam Remote Play should be treated
+            as a workaround, not the official online mode.
+          </p>
+        </BlufBox>
 
         <div className="prose-game">
           <h2>Is Directive 8020 Multiplayer?</h2>
