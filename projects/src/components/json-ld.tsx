@@ -179,6 +179,7 @@ export function generateVideoGameSchema(game: GameSchemaConfig = directive8020) 
       '@type': 'Offer',
       priceCurrency: 'USD',
       ...(game.id === 'thick-as-thieves' && { price: '4.99' }),
+      ...(game.id === 'zero-parades' && { price: '39.99' }),
       availability: game.availability ?? 'https://schema.org/InStock',
     },
   };

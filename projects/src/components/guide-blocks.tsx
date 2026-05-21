@@ -55,8 +55,8 @@ const statusStyles = {
 };
 
 const statusLabels = {
-  verified: 'Source checked',
-  'needs-check': 'Needs verification',
+  verified: 'Confirmed',
+  'needs-check': 'Pending update',
   working: 'Working route',
 };
 
@@ -74,7 +74,7 @@ export function BlufBox({ title = 'BLUF', children }: BlufBoxProps) {
 export function StatusPanel({ items }: StatusPanelProps) {
   return (
     <section className="my-8 rounded-lg border border-border/50 bg-card/30 p-5">
-      <h2 className="mb-4 text-lg font-bold text-foreground">Verification Status</h2>
+      <h2 className="mb-4 text-lg font-bold text-foreground">Key Facts</h2>
       <div className="grid gap-3 sm:grid-cols-2">
         {items.map((item) => (
           <div key={item.label} className="rounded-md border border-border/40 bg-background/30 p-3">

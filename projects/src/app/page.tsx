@@ -446,6 +446,12 @@ const newGameCoverage = [
     image: '/games/thick-as-thieves/hero.webp',
   },
   {
+    title: 'ZERO PARADES Guide Hub',
+    body: 'Launch-day espionage RPG coverage: PC release status, PS5 caution, skills, Conditioning, Exertion, specs, Steam Deck, and buying advice.',
+    href: '/games/zero-parades',
+    image: '/games/zero-parades/hero.jpg',
+  },
+  {
     title: 'Mina the Hollower Guide Hub',
     body: 'Gothic action-adventure launch coverage: release timing, platforms, Steam Deck status, specs, beginner tips, and buyer advice.',
     href: '/games/mina-the-hollower',

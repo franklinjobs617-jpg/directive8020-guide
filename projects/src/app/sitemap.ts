@@ -143,6 +143,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.68,
     },
     {
+      url: `${BASE_URL}/games/zero-parades`,
+      lastModified: '2026-05-21',
+      changeFrequency: 'daily',
+      priority: 0.72,
+    },
+    {
+      url: `${BASE_URL}/games/zero-parades/release-date`,
+      lastModified: '2026-05-21',
+      changeFrequency: 'daily',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/games/zero-parades/beginner-guide`,
+      lastModified: '2026-05-21',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/zero-parades/system-requirements`,
+      lastModified: '2026-05-21',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/zero-parades/steam-deck`,
+      lastModified: '2026-05-21',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/zero-parades/is-it-worth-it`,
+      lastModified: '2026-05-21',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
       url: `${BASE_URL}/games/mina-the-hollower`,
       lastModified: '2026-05-20',
       changeFrequency: 'daily',
