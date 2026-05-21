@@ -145,10 +145,10 @@ export function SourceCheckTable({ title = 'Source Check', rows }: SourceCheckTa
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Claim</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Source</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player question</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Official link</th>
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">Status</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it matters</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player note</th>
             </tr>
           </thead>
           <tbody>

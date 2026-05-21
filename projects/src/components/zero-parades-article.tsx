@@ -88,9 +88,9 @@ export function ZeroParadesArticle({
         <section className="prose-game">
           <h2>Official Videos to Watch First</h2>
           <p>
-            Start with the official gameplay and showcase videos if you want to
-            judge the tone, dialogue density, and system focus before reading
-            deeper guide pages.
+            The official gameplay and showcase videos are the quickest way to
+            judge ZERO PARADES' tone, dialogue density, interface, and
+            pressure-driven RPG systems.
           </p>
         </section>
         <VideoEmbed
@@ -103,11 +103,11 @@ export function ZeroParadesArticle({
           <>
             <ArticleImage
               src={zeroParadesImages.screenshot7}
-              alt="ZERO PARADES source notes image"
-              caption="Steam, ZA/UM launch notes, and PlayStation-facing coverage answer different questions: PC availability, storefront choice, and later PS5 timing."
+              alt="ZERO PARADES storefront and platform notes image"
+              caption="Steam covers the PC store page, ZA/UM covers official game details, and PlayStation-facing coverage covers later PS5 timing."
             />
             <SourceCheckTable
-              title="ZERO PARADES Sources"
+              title="Official Links and Store Pages"
               rows={zeroParadesSourceRows}
             />
           </>
@@ -115,13 +115,13 @@ export function ZeroParadesArticle({
         <ArticleImage
           src={zeroParadesImages.screenshot8}
           alt="ZERO PARADES related guide image"
-          caption="Related guides move from release facts to beginner choices, PC specs, Steam Deck setup, and buying advice."
+          caption="Use the next section when you need platform details, first-session advice, PC specs, Steam Deck setup, or buying guidance."
         />
         <RelatedGuides guides={getZeroParadesRelated(canonical)} />
         <ArticleImage
           src={zeroParadesImages.screenshot6}
           alt="ZERO PARADES FAQ image"
-          caption="The FAQ answers focus on launch-day questions: release status, PS5 timing, Steam Deck, specs, languages, and whether the game fits your tastes."
+          caption="Quick answers cover release status, PS5 timing, Steam Deck support, PC specs, languages, and whether ZERO PARADES fits your tastes."
         />
         <FAQSection faqs={faqs} />
       </article>

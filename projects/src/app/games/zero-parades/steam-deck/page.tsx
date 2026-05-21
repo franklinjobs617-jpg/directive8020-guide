@@ -23,7 +23,7 @@ const faqs = [
   {
     question: 'Is ZERO PARADES Steam Deck Verified?',
     answer:
-      'ZA/UM launch information says ZERO PARADES is Steam Deck Verified. Still test text size, controller prompts, and Steam Cloud sync before a long handheld session.',
+      'Yes, ZERO PARADES is listed as Steam Deck Verified. Still test text size, controller prompts, and Steam Cloud sync before a long handheld session.',
   },
   {
     question: 'Can ZERO PARADES work well on handheld?',
@@ -43,7 +43,7 @@ const faqs = [
 ];
 
 const deckRows = [
-  ['Verification', 'ZA/UM launch information says Steam Deck Verified.', 'Check the live badge on your own Steam account.'],
+  ['Steam Deck status', 'Steam Deck Verified.', 'Check the live badge on your own Steam account.'],
   ['Controls', 'Partial controller support is listed.', 'Test dialogue, menus, and skill screens.'],
   ['Text', 'Adjustable text size is listed.', 'Increase text size before a long handheld session.'],
   ['Saving', 'Save Anytime and Steam Cloud are listed.', 'Make one test save and confirm cloud sync.'],
@@ -63,7 +63,7 @@ export default function ZeroParadesSteamDeckPage() {
     >
       <BlufBox title="Steam Deck Answer">
         <p>
-          <strong>ZERO PARADES has an official Steam Deck Verified signal in launch copy.</strong>{' '}
+          <strong>ZERO PARADES is listed as Steam Deck Verified.</strong>{' '}
           The handheld-friendly features are Save Anytime, adjustable text size,
           Steam Cloud, and no timed-input requirement. Still test menu prompts,
           text size, and cloud sync before moving a long save between devices.
@@ -84,7 +84,7 @@ export default function ZeroParadesSteamDeckPage() {
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">Deck factor</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current signal</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current answer</th>
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">What to do</th>
             </tr>
           </thead>

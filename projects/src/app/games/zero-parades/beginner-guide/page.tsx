@@ -28,7 +28,7 @@ const faqs = [
   {
     question: 'Should I reload failed checks in ZERO PARADES?',
     answer:
-      'Not automatically. Steam copy says failure is expected, so treat failed checks as story information unless the outcome blocks the route you want.',
+      'Not automatically. Failure is part of the RPG structure, so treat failed checks as story information unless the outcome blocks the route you want.',
   },
   {
     question: 'What is Conditioning in ZERO PARADES?',

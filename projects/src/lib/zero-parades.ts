@@ -52,10 +52,10 @@ export const zeroParadesQuickFacts = [
   ['Genre', 'Single-player espionage RPG / narrative RPG.'],
   ['Main character', 'Hershel Wilk, alias CASCADE, a burnt-out operant.'],
   ['Core systems', '15 skills, Conditioning, split-second decisions, Exertion, Fatigue, Anxiety, and Delirium.'],
-  ['PC storefronts', 'Available through Steam, Epic Games Store, and GOG according to ZA/UM launch information.'],
-  ['Steam Deck', 'Steam Deck Verified according to ZA/UM launch information; text size and controller comfort are still worth checking during the first session.'],
+  ['PC storefronts', 'Available through Steam, Epic Games Store, and GOG.'],
+  ['Steam Deck', 'Steam Deck Verified; text size and controller comfort are still worth checking during the first session.'],
   ['PS5', 'PlayStation pages say 2026, but no exact PS5 date is confirmed.'],
-  ['Price', 'ZA/UM launch information lists $39.99; local storefront prices can differ by region.'],
+  ['Price', '$39.99 in the US; local storefront prices can differ by region.'],
   ['Languages', 'English audio; text support includes English, German, Russian, Simplified Chinese, and Spanish - Latin America.'],
   ['Later languages', 'French, Italian, Japanese, Korean, Polish, Portuguese (Brazilian), Traditional Chinese, and Turkish are planned as free updates later in 2026.'],
 ];
@@ -82,7 +82,7 @@ export const zeroParadesSpecs = [
 ];
 
 export const zeroParadesBeginnerRows = [
-  ['Do not chase perfect rolls', 'Steam copy says failure is expected. Treat failed checks as route information unless the consequence blocks your goal.'],
+  ['Do not chase perfect rolls', 'Failure is part of the RPG structure. Treat failed checks as route information unless the consequence blocks your goal.'],
   ['Build around 15 skills', 'Pick an espionage identity first, then invest in skills that support how you want Hershel to solve problems.'],
   ['Use Conditioning deliberately', 'Conditioning can change Hershel and the game rules, so avoid random swaps before you understand the cost.'],
   ['Spend Exertion carefully', 'Exertion can push dice rolls in your favor, but Fatigue, Anxiety, and Delirium create long-term pressure.'],
@@ -95,68 +95,68 @@ export const zeroParadesWorthItRows = [
   ['Wait if', 'You need the PS5 version, more player reviews, regional price confirmation, or proof that launch bugs are resolved.'],
   ['Best fit', 'Players who enjoy reading, investigation, internal character systems, and consequence-heavy dialogue.'],
   ['Poor fit', 'Players looking for action combat, co-op, loot grinding, or a short linear spy thriller.'],
-  ['Price check', 'ZA/UM launch information lists $39.99; check local Steam, Epic, or GOG pricing before buying.'],
+  ['Price check', 'The US price is $39.99; check local Steam, Epic, or GOG pricing before buying.'],
 ];
 
 export const zeroParadesLaunchCheckRows = [
   ['PC availability', 'May 21, 2026 PC launch is announced for Steam, Epic Games Store, and GOG; check the live buy button in your region.'],
   ['PS5 timing', 'PS5 is announced for 2026, but no exact PS5 launch date is public yet.'],
-  ['Price', 'ZA/UM launch information lists $39.99; local storefront prices can differ.'],
+  ['Price', 'The US price is $39.99; local storefront prices can differ.'],
   ['Language', 'English has full audio; launch text support includes German, Russian, Simplified Chinese, and Spanish - Latin America.'],
   ['Controller', 'Steam lists partial controller support, so test controls and UI readability early.'],
-  ['Steam Deck', 'Steam Deck Verified according to ZA/UM launch information; test text size, menus, and cloud saves before a long session.'],
+  ['Steam Deck', 'Steam Deck Verified; test text size, menus, and cloud saves before a long session.'],
   ['Later localization', 'French, Italian, Japanese, Korean, Polish, Portuguese (Brazilian), Traditional Chinese, and Turkish are planned as free updates later in 2026.'],
 ];
 
 export const zeroParadesSourceRows = [
   {
-    claim: 'Steam lists ZERO PARADES: For Dead Spies with a May 21, 2026 release date and Windows-only PC support.',
+    claim: 'When does the PC version release, and what does Steam list?',
     source: 'Steam store',
     status: 'verified' as const,
     href: zeroParadesSteamUrl,
-    note: 'Confirms PC release date, Windows support, Steam features, languages, system requirements, screenshots, and trailers.',
+    note: 'Check Steam for the buy button, Windows requirements, language list, features, screenshots, and trailers.',
   },
   {
-    claim: 'ZA/UM is the developer and publisher, and the official site is zeroparades.com.',
+    claim: 'Who made ZERO PARADES, and where is the official site?',
     source: 'Official site / Steam store',
     status: 'verified' as const,
     href: zeroParadesOfficialUrl,
-    note: 'Confirms the official site, developer, publisher, and brand entity.',
+    note: 'Use the official site when you want publisher links, press assets, and platform wording from ZA/UM.',
   },
   {
-    claim: 'Steam describes the game as an espionage RPG from the creators of Disco Elysium with 15 skills, Conditioning, Exertion, Fatigue, Anxiety, and Delirium.',
+    claim: 'What kind of RPG is ZERO PARADES?',
     source: 'Steam store',
     status: 'verified' as const,
     href: zeroParadesSteamUrl,
-    note: 'Confirms the public systems players can prepare for before deeper route testing.',
+    note: 'Useful before starting because it names the core RPG systems: skills, Conditioning, Exertion, and pressure states.',
   },
   {
-    claim: 'PS5 is announced for 2026 but exact PS5 launch timing needs a current official storefront or ZA/UM confirmation.',
+    claim: 'Is the PS5 version launching on the same day as PC?',
     source: 'Official PlayStation-facing coverage',
     status: 'verified' as const,
     href: zeroParadesOfficialUrl,
-    note: 'Useful for console players because the PC launch date and PS5 timing are separate.',
+    note: 'Useful for console players because the PC launch and PS5 release timing are separate.',
   },
   {
-    claim: 'ZA/UM launch information lists Steam, Epic Games Store, and GOG for the PC release, with a $39.99 US price signal and Steam Deck Verified support.',
+    claim: 'Where can PC players buy it, and what is the US price?',
     source: 'ZA/UM official Reddit launch post',
     status: 'verified' as const,
     href: zeroParadesRedditLaunchUrl,
-    note: 'Confirms PC storefronts, US price signal, Steam Deck Verified wording, and localization update plans.',
+    note: 'Useful for store choice, US price, Steam Deck support, and planned localization updates.',
   },
   {
-    claim: 'Epic Games Store and GOG pages are live for the PC release.',
+    claim: 'Are Epic Games Store and GOG options available?',
     source: 'Epic Games Store / GOG',
     status: 'verified' as const,
     href: zeroParadesGogUrl,
-    note: 'Useful for players choosing between Steam features, Epic library ownership, and GOG availability.',
+    note: 'Useful when choosing between Steam features, Epic library ownership, and GOG availability.',
   },
   {
-    claim: 'IGN, GamesRadar+, and Polygon review quotes appear on the Steam page.',
+    claim: 'What early critic blurbs are visible before broad player consensus?',
     source: 'Steam store review snippets',
     status: 'verified' as const,
     href: zeroParadesSteamUrl,
-    note: 'Shows early critical reception signals without implying review scores not shown on the store page.',
+    note: 'Read these as short critic blurbs, not as a full score roundup.',
   },
 ];
 

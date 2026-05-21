@@ -24,7 +24,7 @@ const faqs = [
   {
     question: 'What is the ZERO PARADES release date?',
     answer:
-      'ZERO PARADES: For Dead Spies is announced for May 21, 2026 on PC. ZA/UM launch information lists Steam, Epic Games Store, and GOG; check the live buy button and regional price before purchasing.',
+      'ZERO PARADES: For Dead Spies is announced for May 21, 2026 on PC. Steam, Epic Games Store, and GOG are the PC storefronts; check the live buy button and regional price before purchasing.',
   },
   {
     question: 'Is ZERO PARADES on PS5?',
@@ -34,7 +34,7 @@ const faqs = [
   {
     question: 'What platforms is ZERO PARADES on?',
     answer:
-      'PC is the launch platform, with Steam, Epic Games Store, and GOG listed by ZA/UM launch information. PS5 is announced for 2026. Steam does not list macOS, Linux, Xbox, or Switch support.',
+      'PC is the launch platform, with Steam, Epic Games Store, and GOG available. PS5 is announced for 2026. Steam does not list macOS, Linux, Xbox, or Switch support.',
   },
   {
     question: 'What languages does ZERO PARADES support?',
@@ -45,8 +45,8 @@ const faqs = [
 
 const platformRows = [
   ['PC / Steam', 'May 21, 2026 PC launch; check the live regional buy button.'],
-  ['Epic Games Store', 'Listed by ZA/UM launch information.'],
-  ['GOG', 'Listed by ZA/UM launch information.'],
+  ['Epic Games Store', 'Available for the PC release.'],
+  ['GOG', 'Available for the PC release.'],
   ['Windows', 'Confirmed by Steam platform and specs.'],
   ['PS5', 'Announced for 2026; exact date is not public yet.'],
   ['Xbox', 'No public launch listing found.'],
@@ -68,9 +68,9 @@ export default function ZeroParadesReleaseDatePage() {
       <BlufBox title="Release Answer">
         <p>
           <strong>ZERO PARADES: For Dead Spies is a May 21, 2026 PC launch.</strong>{' '}
-          ZA/UM launch information lists Steam, Epic Games Store, GOG, a
-          $39.99 US price, and Steam Deck Verified support. PS5 is announced for
-          2026, but no exact PS5 date is public yet.
+          Steam, Epic Games Store, and GOG are the PC storefronts. The US price
+          is $39.99, Steam Deck Verified support is listed, and PS5 is announced
+          for 2026 without an exact date yet.
         </p>
       </BlufBox>
 
@@ -107,7 +107,7 @@ export default function ZeroParadesReleaseDatePage() {
         <ArticleImage
           src={zeroParadesImages.screenshot2}
           alt="ZERO PARADES launch facts screenshot"
-          caption="Release pages should answer purchase blockers first: buy button, PS5 timing, price, language, controller, and Steam Deck."
+          caption="Before you buy, check the live buy button, PS5 timing, price, language support, controller support, and Steam Deck details."
         />
       </section>
 
@@ -116,7 +116,7 @@ export default function ZeroParadesReleaseDatePage() {
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">Fact</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current reading</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player answer</th>
             </tr>
           </thead>
           <tbody>

@@ -30,7 +30,7 @@ const faqs = [
   {
     question: 'Is ZERO PARADES: For Dead Spies out today?',
     answer:
-      'Yes. ZERO PARADES: For Dead Spies is announced for May 21, 2026 on PC, with Steam, Epic Games Store, and GOG listed by ZA/UM launch information. Check the live buy button and regional price before purchasing.',
+      'Yes. ZERO PARADES: For Dead Spies is announced for May 21, 2026 on PC, with Steam, Epic Games Store, and GOG available for the PC release. Check the live buy button and regional price before purchasing.',
   },
   {
     question: 'What type of game is ZERO PARADES?',
@@ -72,9 +72,9 @@ export default function ZeroParadesHubPage() {
       <BlufBox title="Launch Answer">
         <p>
           <strong>ZERO PARADES: For Dead Spies is a May 21, 2026 PC launch.</strong>{' '}
-          ZA/UM launch information lists Steam, Epic Games Store, GOG,
-          $39.99, and Steam Deck Verified support. PS5 is
-          announced for 2026, but no exact PS5 date is public yet.
+          Steam, Epic Games Store, and GOG are the PC storefronts. The US price
+          is $39.99, Steam Deck Verified support is listed, and PS5 is announced
+          for 2026 without an exact date yet.
         </p>
       </BlufBox>
 
@@ -87,11 +87,11 @@ export default function ZeroParadesHubPage() {
       />
 
       <section className="my-10">
-        <h2 className="mb-4 text-xl font-bold text-foreground">ZERO PARADES Guide Map</h2>
+        <h2 className="mb-4 text-xl font-bold text-foreground">Choose Your Next Step</h2>
         <ArticleImage
           src={zeroParadesImages.screenshot1}
           alt="ZERO PARADES guide hub screenshot"
-          caption="Start with release status if you are deciding whether to buy today, then use beginner, specs, Steam Deck, and worth-it pages based on your next question."
+          caption="Use this hub to check today's PC launch, then jump to beginner tips, PC specs, Steam Deck setup, or buying advice."
         />
         <div className="grid gap-4 sm:grid-cols-2">
           {zeroParades.guideLinks.map((guide) => (
@@ -128,7 +128,7 @@ export default function ZeroParadesHubPage() {
         <ArticleImage
           src={zeroParadesImages.screenshot2}
           alt="ZERO PARADES first things to know screenshot"
-          caption="ZERO PARADES is a reading, skill-check, and consequence RPG. The first useful habit is to understand your operant build before forcing every roll."
+          caption="ZERO PARADES is a reading, skill-check, and consequence RPG. Understand your operant build before forcing every roll."
         />
       </section>
 
@@ -137,7 +137,7 @@ export default function ZeroParadesHubPage() {
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">Feature</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current status</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">What it means</th>
             </tr>
           </thead>
           <tbody>
@@ -156,7 +156,7 @@ export default function ZeroParadesHubPage() {
         <ArticleImage
           src={zeroParadesImages.screenshot3}
           alt="ZERO PARADES launch-day player questions screenshot"
-          caption="The most useful launch-day answers are practical: PC availability, PS5 timing, price, languages, controller support, and Steam Deck setup."
+          caption="Check PC availability, PS5 timing, price, languages, controller support, and Steam Deck setup before you commit to a platform."
         />
       </section>
 
