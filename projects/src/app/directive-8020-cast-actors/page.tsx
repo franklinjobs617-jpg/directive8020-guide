@@ -71,7 +71,7 @@ const sourceChecks = [
 ];
 
 const updateLog = [
-  ['2026-05-12', 'Created cast and actors page from GSC demand for cast and actors queries.'],
+  ['2026-05-12', 'Added a cast and actors reference for playable crew, known performers, and role status.'],
   ['2026-05-12', 'Separated five playable crew members from supporting Cassiopeia crew and pending actor data.'],
   ['2026-05-12', 'Added verification rules so actor claims can be updated without overstating unconfirmed roles.'],
 ];
@@ -132,9 +132,10 @@ export default function CastActorsPage() {
         <div className="prose-game">
           <h2>Playable Cast and Character Table</h2>
           <p>
-            The table below is built for both players and AI retrieval. Each row
-            states the character, actor status, crew role, verification status,
-            and gameplay reason the character matters.
+            The table below helps you separate confirmed crew information from
+            roles that still need stronger actor confirmation. Each row covers
+            the character, current actor status, crew role, and gameplay reason
+            the character matters.
           </p>
         </div>
 

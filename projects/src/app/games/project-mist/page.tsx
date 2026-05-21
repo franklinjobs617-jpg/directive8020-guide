@@ -137,11 +137,11 @@ export default function ProjectMistHubPage() {
       </section>
 
       <section className="my-10">
-        <h2 className="mb-4 text-xl font-bold text-foreground">Search Questions This Hub Answers</h2>
+        <h2 className="mb-4 text-xl font-bold text-foreground">Common Launch Questions</h2>
         <ArticleImage
           src={projectMistImages.multiplayer}
           alt="Project: Mist release date multiplayer and platform answer image"
-          caption="GSC shows Project: Mist impressions clustering around release status, multiplayer, platform availability, and beginner tasks, so those answers belong near the top."
+          caption="Players usually need release status, multiplayer support, platform availability, and beginner tasks before choosing a first server."
         />
         <div className="overflow-hidden rounded-lg border border-border/50 bg-card/30">
           <table className="w-full text-sm">

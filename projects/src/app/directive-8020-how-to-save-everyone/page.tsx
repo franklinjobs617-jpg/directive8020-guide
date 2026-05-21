@@ -134,9 +134,10 @@ export default function SaveEveryonePage() {
         <div className="prose-game">
           <h2>Quick Crew Survival Table</h2>
           <p>
-            GSC shows this page needs a clearer first answer. Start with the
-            crew checklist, then use the longer route sections below when a
-            death actually happens.
+            Start with the crew checklist, then use the longer route sections
+            below when a death actually happens. The fastest way to recover a
+            save-everyone route is to identify whose risk changed and replay
+            from the earliest relevant Turning Point.
           </p>
         </div>
 

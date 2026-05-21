@@ -84,7 +84,7 @@ export default function ZeroParadesSteamDeckPage() {
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">Deck factor</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current answer</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Answer</th>
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">What to do</th>
             </tr>
           </thead>
@@ -105,7 +105,7 @@ export default function ZeroParadesSteamDeckPage() {
         <ArticleImage
           src={zeroParadesImages.screenshot5}
           alt="ZERO PARADES handheld feature screenshot"
-          caption="Save Anytime, Steam Cloud, adjustable text size, and no timed-input requirement are the most useful handheld signals."
+          caption="Save Anytime, Steam Cloud, adjustable text size, and no timed-input requirement all make handheld play easier to test."
         />
       </section>
 

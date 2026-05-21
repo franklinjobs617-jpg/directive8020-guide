@@ -19,12 +19,12 @@ const faqs = [
   {
     question: 'How many players can play Project: Mist co-op?',
     answer:
-      'Steam page copy describes Project: Mist as seamless 1-4 player co-op.',
+      'Steam describes Project: Mist as seamless 1-4 player co-op.',
   },
   {
     question: 'Can Project: Mist be played solo?',
     answer:
-      'Yes. Steam lists single-player, and the page copy says players can take on the story-driven campaign alone or with friends.',
+      'Yes. Steam lists single-player, and the store description says players can take on the story-driven campaign alone or with friends.',
   },
   {
     question: 'Does Project: Mist have online co-op?',

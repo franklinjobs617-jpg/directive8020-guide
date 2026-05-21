@@ -133,7 +133,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
         claim: 'Episode 3 Food Storage / Dark Picture Doll code: 0402.',
         source: 'GamesRadar + Radio Times + Nerdschalk',
         status: 'verified',
-        note: 'Use for the GSC query "directive 8020 episode 3 codes walkthrough"; do not create a separate code page yet.',
+        note: 'Use this when you need the Episode 3 keypad answer during a collectible or locked-door route.',
       },
       {
         claim: 'The code is tied to a locked-door / collectible route, not a full ending route by itself.',

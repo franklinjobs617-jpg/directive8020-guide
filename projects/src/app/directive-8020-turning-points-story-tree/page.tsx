@@ -107,14 +107,14 @@ const sourceRows = [
     source: 'In-game Story Tree verification',
     status: 'needs-check' as const,
     href: '/directive-8020-walkthrough',
-    note: 'Do not publish exact node names from guesses; add them after screenshot or video confirmation.',
+    note: 'Treat exact node names as provisional until screenshot or video confirmation is available.',
   },
   {
     claim: 'Choice examples from transcript are useful but not final canon by themselves.',
     source: 'Private transcript notes',
     status: 'working' as const,
     href: '/directive-8020-choices-consequences',
-    note: 'Use transcript notes as evidence prompts, then confirm in the Story Tree.',
+    note: 'Use transcript notes as early route clues, then confirm them in the Story Tree.',
   },
 ];
 

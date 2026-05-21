@@ -121,7 +121,7 @@ export function ZeroParadesArticle({
         <ArticleImage
           src={zeroParadesImages.screenshot6}
           alt="ZERO PARADES FAQ image"
-          caption="Quick answers cover release status, PS5 timing, Steam Deck support, PC specs, languages, and whether ZERO PARADES fits your tastes."
+          caption="Check release status, PS5 timing, Steam Deck support, PC specs, languages, and whether ZERO PARADES fits your tastes."
         />
         <FAQSection faqs={faqs} />
       </article>

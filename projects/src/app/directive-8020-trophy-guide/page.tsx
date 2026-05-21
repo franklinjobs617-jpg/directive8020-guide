@@ -103,10 +103,10 @@ const sourceRows = [
   },
   {
     claim: 'All Possible Futures and exact hidden trophy routes require platform capture.',
-    source: 'GSC query + route verification pending',
+    source: 'Platform list and route testing pending',
     status: 'needs-check' as const,
     href: '/directive-8020-trophy-list',
-    note: 'Do not publish exact unlock conditions without platform proof or recorded route evidence.',
+    note: 'Wait for platform proof or recorded route evidence before treating exact unlock conditions as final.',
   },
 ];
 
@@ -164,7 +164,7 @@ export default function TrophyGuidePage() {
           then use Turning Points for Platinum cleanup, all endings, all deaths,
           collectibles, Movie Night, and hidden achievement checks. Steam
           achievements are source checked; exact PS5 trophy names and hidden
-          unlocks still need platform verification.
+          unlocks still need platform confirmation.
         </p>
 
         <BlufBox>

@@ -384,7 +384,7 @@ export default function Directive8020ReviewPage() {
           <ArticleImage
             src="/review/review-endings-comparison-flowchart.webp"
             alt="Directive 8020 endings comparison flowchart for best ending bad ending and survivor routes"
-            caption="Endings are the real long-tail value. A strong review page should help readers understand why one playthrough is only the start."
+            caption="Endings are the real long-tail value because one playthrough only shows part of the route structure."
           />
 
           <ArticleImage

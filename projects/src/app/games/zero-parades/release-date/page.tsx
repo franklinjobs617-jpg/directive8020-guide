@@ -88,7 +88,7 @@ export default function ZeroParadesReleaseDatePage() {
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">Platform</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current answer</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Answer</th>
             </tr>
           </thead>
           <tbody>

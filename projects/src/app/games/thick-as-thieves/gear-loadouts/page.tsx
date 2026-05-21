@@ -103,7 +103,7 @@ export default function ThickAsThievesGearPage() {
         <ArticleImage
           src={thickAsThievesImages.screenshot7}
           alt="Thick As Thieves live gear testing image"
-          caption="Once the game unlocks, this page should update with exact gear names, unlock order, cooldowns, costs, and contract-specific examples."
+          caption="Track exact gear names, unlock order, cooldowns, costs, and contract-specific examples as you test more heist routes."
         />
         <ul>
           <li>Exact gear names and descriptions.</li>

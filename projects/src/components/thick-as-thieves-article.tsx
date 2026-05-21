@@ -85,10 +85,10 @@ export function ThickAsThievesArticle({
           <>
             <ArticleImage
               src={thickAsThievesImages.screenshot1}
-              alt="Thick As Thieves sources and verification image"
-              caption="This guide separates Steam-listed facts, official FAQ answers, Reddit expectation signals, and trailer-observed details."
+              alt="Thick As Thieves official links and launch notes image"
+              caption="Steam details, official FAQ answers, community expectations, and trailer-observed details help set realistic launch-day expectations."
             />
-            <SourceCheckTable title="Thick As Thieves Sources and Verification" rows={thickAsThievesSourceRows} />
+            <SourceCheckTable title="Thick As Thieves Official Links and References" rows={thickAsThievesSourceRows} />
           </>
         )}
         <ArticleImage
@@ -100,7 +100,7 @@ export function ThickAsThievesArticle({
         <ArticleImage
           src={thickAsThievesImages.screenshot3}
           alt="Thick As Thieves FAQ image"
-          caption="The FAQ answers focus on launch-day decisions players usually need before buying or starting a first heist."
+          caption="Check release status, platform support, co-op limits, price guidance, and first-heist expectations before buying."
         />
         <FAQSection faqs={faqs} />
       </article>

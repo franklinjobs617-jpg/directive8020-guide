@@ -51,7 +51,7 @@ const platformRows = [
 ];
 
 const verificationRows = [
-  ['Exact trophy name', 'Wait for platform list capture', 'Do not publish a Bronze, Silver, Gold, Platinum, or achievement name from guesses.'],
+  ['Exact trophy name', 'Wait for platform list capture', 'Avoid treating a Bronze, Silver, Gold, Platinum, or achievement name as final without platform data.'],
   ['Unlock condition', 'Use in-game or platform evidence', 'Write the exact action only when the condition is visible in platform data or verified play.'],
   ['Missable status', 'Verify by route testing', 'A trophy is missable only when a Story Tree branch, death, relationship, or collectible state can block it.'],
   ['Platinum time', 'Estimate after list capture', 'Avoid hour estimates until the final trophy count, collectibles, and replay requirements are known.'],
@@ -100,7 +100,7 @@ const sources = [
 ];
 
 const updateLog = [
-  ['2026-05-12', 'Created platform-status trophy list page from GSC demand for trophies, trophy list, achievements, PS5 trophies, and Platinum queries.'],
+  ['2026-05-12', 'Added a trophy and achievement hub for Steam, PS5, Xbox, and Platinum planning.'],
   ['2026-05-13', 'Updated collectible signal to 65 total collectibles: 50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets.'],
   ['2026-05-12', 'Added verified completion signals: 5 substantial endings, 44 death scenes, and 8 episodes.'],
   ['2026-05-12', 'Marked exact PS5 trophy names, Xbox achievement values, and Platinum name as pending platform capture.'],

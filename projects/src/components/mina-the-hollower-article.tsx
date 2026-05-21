@@ -85,10 +85,10 @@ export function MinaArticle({
           <>
             <ArticleImage
               src={minaImages.screenshot9}
-              alt="Mina the Hollower verification and source image"
-              caption="This guide separates Steam-listed facts, official Yacht Club Games details, platform reporting, and community question signals."
+              alt="Mina the Hollower official links and platform notes image"
+              caption="Steam details, official Yacht Club Games updates, platform reporting, and community questions help clarify what to expect at launch."
             />
-            <SourceCheckTable title="Mina the Hollower Sources and Verification" rows={minaSourceRows} />
+            <SourceCheckTable title="Mina the Hollower Official Links and References" rows={minaSourceRows} />
           </>
         )}
         <ArticleImage
@@ -100,7 +100,7 @@ export function MinaArticle({
         <ArticleImage
           src={minaImages.screenshot8}
           alt="Mina the Hollower FAQ image"
-          caption="The FAQ answers focus on what players need before launch: date, platforms, specs, Steam Deck, and whether to buy on day one."
+          caption="Check the date, platforms, PC specs, Steam Deck outlook, and day-one buying fit before launch."
         />
         <FAQSection faqs={faqs} />
       </article>

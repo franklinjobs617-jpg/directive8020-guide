@@ -85,10 +85,9 @@ export default function ThickAsThievesHubPage() {
       <BlufBox title="Launch-Day Snapshot">
         <p>
           <strong>Thick As Thieves launched on May 20, 2026 for PC
-          storefronts.</strong> For GSC queries, the key first-screen answers
-          are: solo play is supported, online co-op is framed as playing with
-          one partner, local/couch co-op is not confirmed, and PS5 or Xbox
-          versions are not announced.
+          storefronts.</strong> Solo play is supported, online co-op is framed
+          as playing with one partner, local or couch co-op is not confirmed,
+          and PS5 or Xbox versions are not announced.
         </p>
       </BlufBox>
 
@@ -138,11 +137,11 @@ export default function ThickAsThievesHubPage() {
       </section>
 
       <section className="my-10">
-        <h2 className="mb-4 text-xl font-bold text-foreground">Search Questions This Hub Answers</h2>
+        <h2 className="mb-4 text-xl font-bold text-foreground">Common Launch Questions</h2>
         <ArticleImage
           src={thickAsThievesImages.soloCoop}
           alt="Thick As Thieves local co-op PS5 and online co-op answer image"
-          caption="GSC impressions are already showing local co-op and PS5 queries, so the hub gives a direct answer instead of hiding it in a later FAQ."
+          caption="Players often ask about local co-op, PS5, Xbox, solo play, and online co-op before deciding where to buy."
         />
         <div className="overflow-hidden rounded-lg border border-border/50 bg-card/30">
           <table className="w-full text-sm">
@@ -171,7 +170,7 @@ export default function ThickAsThievesHubPage() {
         <ArticleImage
           src={thickAsThievesImages.release}
           alt="Thick As Thieves release and platform image"
-          caption="The launch page should stay precise: Steam date, PC focus, official price guidance, compact campaign scope, and what still needs live testing."
+          caption="Start with the Steam date, PC focus, official price guidance, compact campaign scope, and the features that need hands-on testing."
         />
         <p>
           Thick As Thieves is being positioned as a compact first-person stealth

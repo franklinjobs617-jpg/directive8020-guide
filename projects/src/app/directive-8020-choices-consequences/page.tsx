@@ -98,10 +98,10 @@ const sourceRows = [
   },
   {
     claim: 'Shoot or stand down is a high-intent choice search, but the exact route result is not cross-verified enough here.',
-    source: 'GSC query + pending route capture',
+    source: 'Route testing in progress',
     status: 'needs-check' as const,
     href: '/directive-8020-walkthrough',
-    note: 'Mention the intent, but do not publish a fixed outcome until a video route or in-game capture confirms it.',
+    note: 'Treat this as a risky finale branch until recorded route evidence confirms the exact outcome.',
   },
   {
     claim: 'Destinies and relationship states should be tracked separately from flavor dialogue.',

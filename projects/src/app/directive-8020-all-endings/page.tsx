@@ -93,14 +93,14 @@ const sourceRows = [
     source: 'Destructoid review and endings coverage',
     status: 'verified' as const,
     href: 'https://www.destructoid.com/directive-8020-endings-guide-all-destinies-choices-and-variations/',
-    note: 'Use as the CTR answer for how many endings and which ending names players are searching.',
+    note: 'Use this row when you need the reported ending count and the most common named finale outcomes.',
   },
   {
     claim: 'Death spiral is a special ending concept, not a normal all-deaths checklist item.',
     source: 'PSU preview + death-route discussion',
     status: 'working' as const,
     href: 'https://www.psu.com/news/directive-8020-hands-on-preview/',
-    note: 'Mention for "directive 8020 death spiral" searches, but keep trigger conditions as needs verification.',
+    note: 'Treat death spiral as a special route concept until controlled route tests confirm the trigger conditions.',
   },
   {
     claim: 'Distress call or warning is a finale decision search term.',
@@ -195,11 +195,11 @@ export default function AllEndingsPage() {
         <div className="prose-game">
           <h2>All Known Ending Names and What to Test</h2>
           <p>
-            The biggest GSC gap for this page is simple: players searching
-            “Directive 8020 endings” want ending names and unlock direction in
-            the first screen. Use this table as the route map. It separates
-            known named outcomes from exact branch triggers that still need
-            controlled Story Tree capture.
+            Players searching for Directive 8020 endings usually need ending
+            names, route direction, and a clear warning about unconfirmed
+            triggers. Use this table as the route map: it separates known named
+            outcomes from exact branch triggers that still need controlled
+            Story Tree capture.
           </p>
         </div>
 

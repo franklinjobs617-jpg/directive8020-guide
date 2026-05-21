@@ -73,10 +73,9 @@ export default function ProjectMistReleaseDatePage() {
       <BlufBox title="Release Answer">
         <p>
           <strong>Project: Mist is live in Steam Early Access on PC via Steam
-          as of 19 May, 2026.</strong> For GSC queries about Xbox, PlayStation,
-          or cross-play, the current answer is conservative: those platforms are
-          not confirmed, so players should treat Steam as the source of truth
-          before buying or planning a co-op run.
+          as of 19 May, 2026.</strong> Xbox, PlayStation, and cross-play are not
+          confirmed, so players should treat Steam as the source of truth before
+          buying or planning a co-op run.
         </p>
       </BlufBox>
 

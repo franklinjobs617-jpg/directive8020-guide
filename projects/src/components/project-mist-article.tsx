@@ -83,10 +83,10 @@ export function ProjectMistArticle({
           <>
             <ArticleImage
               src={projectMistImages.screenshot1}
-              alt="Project: Mist sources and verification image"
-              caption="Project: Mist is in Early Access, so the guide separates official Steam facts from hands-on demo notes and community reports."
+              alt="Project: Mist official links and Early Access notes image"
+              caption="Project: Mist is in Early Access, so check Steam details, demo notes, and recent player reports before starting a long run."
             />
-            <SourceCheckTable title="Project: Mist Sources and Verification" rows={projectMistSourceRows} />
+            <SourceCheckTable title="Project: Mist Official Links and References" rows={projectMistSourceRows} />
           </>
         )}
         <ArticleImage
@@ -98,7 +98,7 @@ export function ProjectMistArticle({
         <ArticleImage
           src={projectMistImages.screenshot3}
           alt="Project: Mist FAQ image"
-          caption="The FAQ answers focus on quick launch facts players usually need before buying or starting a run."
+          caption="Check release status, platforms, co-op support, specs, and early survival tips before buying or starting a run."
         />
         <FAQSection faqs={faqs} />
       </article>

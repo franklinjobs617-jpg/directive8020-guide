@@ -105,7 +105,7 @@ export default function ThickAsThievesContractsPage() {
         <ArticleImage
           src={thickAsThievesImages.screenshot8}
           alt="Thick As Thieves contract testing image"
-          caption="After unlock, the guide should verify whether missions meaningfully remix map routes or only repeat the same safe path."
+          caption="As you replay contracts, compare whether missions meaningfully remix map routes or repeat the same safe path."
         />
         <ul>
           <li>Whether mission goals change route planning.</li>
