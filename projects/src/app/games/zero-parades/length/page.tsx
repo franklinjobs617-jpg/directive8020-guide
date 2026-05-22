@@ -1,4 +1,4 @@
-import { ArticleImage } from '@/components/article-media';
+import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
 import { ZeroParadesArticle } from '@/components/zero-parades-article';
 import {
@@ -103,6 +103,15 @@ export default function ZeroParadesLengthPage() {
           </tbody>
         </table>
       </div>
+
+      <section className="my-10">
+        <h2 className="mb-4 text-xl font-bold text-foreground">Video References</h2>
+        <VideoEmbed
+          videoId="LimxCkN-Mgc"
+          title="Zero Parades: For Dead Spies Review - An RPG Masterclass"
+          caption="GamingBolt review discussing game depth, playtime expectations, and replay value across multiple playthroughs."
+        />
+      </section>
 
       <section className="prose-game">
         <h2>What Extends Playtime</h2>

@@ -1,4 +1,4 @@
-import { ArticleImage } from '@/components/article-media';
+import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
 import { ZeroParadesArticle } from '@/components/zero-parades-article';
 import {
@@ -117,6 +117,20 @@ export default function ZeroParadesWalkthroughPage() {
           </tbody>
         </table>
       </div>
+
+      <section className="my-10">
+        <h2 className="mb-4 text-xl font-bold text-foreground">Walkthrough Videos</h2>
+        <VideoEmbed
+          videoId="1iYsSKBOhl8"
+          title="Zero Parades: For Dead Spies 100% Walkthrough Guide Part 1 Day 1"
+          caption="VGS walkthrough covering the opening assignment, key decisions, and skill check routing."
+        />
+        <VideoEmbed
+          videoId="NToUPZjUiGk"
+          title="Zero Parades For Dead Spies Full Gameplay Walkthrough Part 1"
+          caption="Full gameplay walkthrough with no commentary for players who want to see routes without spoilers from narration."
+        />
+      </section>
 
       <section className="prose-game">
         <h2>Assignment Structure</h2>

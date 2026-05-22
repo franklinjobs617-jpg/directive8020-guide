@@ -1,4 +1,4 @@
-import { ArticleImage } from '@/components/article-media';
+import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
 import { ZeroParadesArticle } from '@/components/zero-parades-article';
 import {
@@ -134,6 +134,15 @@ export default function ZeroParadesControllerSupportPage() {
             extended reading sessions.
           </li>
         </ul>
+      </section>
+
+      <section className="my-10">
+        <h2 className="mb-4 text-xl font-bold text-foreground">Controller & Steam Deck Videos</h2>
+        <VideoEmbed
+          videoId="3dQwbCEEln8"
+          title="Zero Parades: For Dead Spies - Steam Deck Review"
+          caption="Steam Flow covers Steam Deck performance, controls, text readability, and battery life."
+        />
       </section>
 
       <section className="prose-game">

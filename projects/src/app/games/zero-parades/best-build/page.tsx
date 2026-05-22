@@ -1,4 +1,4 @@
-import { ArticleImage } from '@/components/article-media';
+import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
 import { ZeroParadesArticle } from '@/components/zero-parades-article';
 import {
@@ -119,6 +119,20 @@ export default function ZeroParadesBestBuildPage() {
           </tbody>
         </table>
       </div>
+
+      <section className="my-10">
+        <h2 className="mb-4 text-xl font-bold text-foreground">Build Video Guides</h2>
+        <VideoEmbed
+          videoId="rwGTqEpPQUI"
+          title="Zero Parades For Dead Spies Gameplay Preview - Honest First Impressions"
+          caption="Fextralife covers first impressions, skill systems, and early build direction for new players."
+        />
+        <VideoEmbed
+          videoId="LimxCkN-Mgc"
+          title="Zero Parades: For Dead Spies Review - An RPG Masterclass"
+          caption="GamingBolt review covering skill depth, build variety, and RPG systems."
+        />
+      </section>
 
       <section className="prose-game">
         <h2>Four Build Archetypes</h2>
