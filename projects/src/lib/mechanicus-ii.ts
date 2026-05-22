@@ -14,12 +14,14 @@ export const mechanicusIIPlayStationUrl =
   'https://store.playstation.com/en-us/concept/10008848';
 
 export const mechanicusIIImages = {
-  hero: '/games/mechanicus-ii/hero.jpg',
-  capsule: '/games/mechanicus-ii/capsule.jpg',
-  screenshot1: '/games/mechanicus-ii/screenshot-1.avif',
-  screenshot2: '/games/mechanicus-ii/screenshot-2.avif',
-  screenshot3: '/games/mechanicus-ii/screenshot-3.avif',
-  screenshot4: '/games/mechanicus-ii/screenshot-4.avif',
+  hero: '/games/mechanicus-ii/hero.webp',
+  capsule: '/games/mechanicus-ii/capsule.webp',
+  screenshot1: '/games/mechanicus-ii/tech-priest-bridge.webp',
+  screenshot2: '/games/mechanicus-ii/necron-tomb.webp',
+  screenshot3: '/games/mechanicus-ii/tactical-combat.webp',
+  screenshot4: '/games/mechanicus-ii/environment-destruction.webp',
+  screenshot5: '/games/mechanicus-ii/character-customization.webp',
+  buyer: '/games/mechanicus-ii/buyer-art.webp',
 };
 
 export const mechanicusIIVideos = [

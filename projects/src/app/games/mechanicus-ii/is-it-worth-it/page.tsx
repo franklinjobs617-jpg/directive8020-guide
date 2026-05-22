@@ -16,7 +16,7 @@ export const metadata = createMechanicusIIMetadata({
   title,
   description,
   canonical,
-  image: mechanicusIIImages.screenshot4,
+  image: mechanicusIIImages.buyer,
 });
 
 const faqs = [
@@ -54,7 +54,7 @@ export default function MechanicusIIWorthItPage() {
       description={description}
       canonical={canonical}
       label="Is It Worth It"
-      heroImage={mechanicusIIImages.screenshot4}
+      heroImage={mechanicusIIImages.buyer}
       heroAlt="Warhammer 40,000 Mechanicus II buying guide image"
       faqs={faqs}
     >
@@ -71,7 +71,7 @@ export default function MechanicusIIWorthItPage() {
       <section className="prose-game">
         <h2>Fast Buyer Verdict</h2>
         <ArticleImage
-          src={mechanicusIIImages.screenshot1}
+          src={mechanicusIIImages.screenshot5}
           alt="Warhammer 40,000 Mechanicus II worth it buyer guide image"
           caption="The buying decision depends on your appetite for turn-based Warhammer tactics and your tolerance for launch-week review uncertainty."
         />

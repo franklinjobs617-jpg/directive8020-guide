@@ -89,7 +89,7 @@ export function MechanicusIIArticle({
         {showSources && (
           <>
             <ArticleImage
-              src={mechanicusIIImages.screenshot3}
+              src={mechanicusIIImages.screenshot5}
               alt="Warhammer 40,000 Mechanicus II official source check image"
               caption="Use official store pages for release status, platform support, features, system requirements, and current review signals."
             />
@@ -100,7 +100,7 @@ export function MechanicusIIArticle({
           </>
         )}
         <ArticleImage
-          src={mechanicusIIImages.screenshot4}
+          src={mechanicusIIImages.screenshot3}
           alt="Warhammer 40,000 Mechanicus II related guide image"
           caption="Use the related guides to move from release facts to beginner tactics, factions, PC specs, and buying guidance."
         />

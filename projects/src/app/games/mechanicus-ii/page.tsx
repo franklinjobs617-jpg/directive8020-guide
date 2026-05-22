@@ -62,7 +62,7 @@ function getGuideImage(href: string) {
   if (href.includes('factions')) return mechanicusIIImages.screenshot2;
   if (href.includes('system')) return mechanicusIIImages.screenshot3;
   if (href.includes('steam-deck')) return mechanicusIIImages.screenshot3;
-  if (href.includes('worth')) return mechanicusIIImages.screenshot4;
+  if (href.includes('worth')) return mechanicusIIImages.buyer;
   return mechanicusIIImages.capsule;
 }
 
