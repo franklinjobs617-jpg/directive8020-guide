@@ -318,6 +318,12 @@ export const mechanicusII: GameConfig = {
         "Official minimum and recommended PC specs, 12 GB RAM baseline, GTX 1660 / RX 5600 XT minimum, RTX 2070 / RX 6600 XT recommended, and performance cautions.",
     },
     {
+      title: "Steam Deck & Performance",
+      href: "/games/mechanicus-ii/steam-deck-performance",
+      description:
+        "Steam Deck unsupported status, PC performance checks, controller cautions, UI readability, cloud saves, and buyer advice.",
+    },
+    {
       title: "Is Mechanicus II Worth It?",
       href: "/games/mechanicus-ii/is-it-worth-it",
       description:

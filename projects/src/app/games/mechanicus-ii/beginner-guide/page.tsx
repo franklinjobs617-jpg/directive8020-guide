@@ -9,7 +9,7 @@ import {
 
 const title = 'Warhammer 40,000: Mechanicus II Beginner Guide';
 const description =
-  'Spoiler-light Mechanicus II beginner guide for choosing a first campaign, using cover, reading terrain, protecting key units, managing resources, and avoiding launch-week traps.';
+  'Spoiler-light Mechanicus II beginner guide for choosing a first campaign, using cover, reading terrain, managing Cognition or Dominion, turn order, and launch-week traps.';
 const canonical = '/games/mechanicus-ii/beginner-guide';
 
 export const metadata = createMechanicusIIMetadata({
@@ -33,7 +33,7 @@ const faqs = [
   {
     question: 'What should beginners focus on first?',
     answer:
-      'Use cover, check terrain, protect specialists, and learn one faction economy before chasing advanced builds.',
+      'Use cover, check terrain, watch turn order, protect specialists, and learn your faction resource before chasing advanced builds.',
   },
   {
     question: 'Can I ignore the campaign layer?',
@@ -76,6 +76,9 @@ export default function MechanicusIIBeginnerGuidePage() {
           territory, and resources. That means a good opening run should build
           habits: check cover, read terrain, identify safe attack angles, and
           spend resources only after the campaign layer starts to make sense.
+          Public descriptions and previews also point to destructible cover,
+          environmental hazards, and turn-order manipulation, so a safe tile can
+          become unsafe after the battlefield changes.
         </p>
       </section>
 
@@ -88,6 +91,16 @@ export default function MechanicusIIBeginnerGuidePage() {
       />
 
       <section className="prose-game">
+        <h2>Cognition, Dominion, and Turn Order</h2>
+        <p>
+          Treat faction resources as part of survival. Adeptus Mechanicus runs
+          should pay attention to Cognition decisions, while Necron runs should
+          watch Dominion pressure. Do not spend these systems only for immediate
+          damage if the next enemy turn will leave a key unit exposed. In early
+          battles, a defensive turn that protects a specialist can be more
+          valuable than a greedy attack.
+        </p>
+
         <h2>What to Avoid in the First Hours</h2>
         <p>
           Avoid treating early tier lists as final. Launch-week tactics games

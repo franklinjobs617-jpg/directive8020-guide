@@ -40,6 +40,11 @@ const faqs = [
     answer:
       'It is too early to call a final best faction. Choose by campaign fantasy and tactical preference until more completed runs and patches settle the meta.',
   },
+  {
+    question: 'Are the Leagues of Votann playable in Mechanicus II?',
+    answer:
+      'Current store descriptions focus playable campaigns on Adeptus Mechanicus and Necrons. Preview coverage says the Leagues of Votann appear in the story, but not as a playable third campaign faction.',
+  },
 ];
 
 export default function MechanicusIIFactionsPage() {
@@ -76,7 +81,8 @@ export default function MechanicusIIFactionsPage() {
           Magos Dominus Faustinius, while the Necron campaign follows Vargard
           Nefershah. For players, this means the first decision is about
           perspective, tactical identity, and how much they want to learn at
-          once.
+          once. Adeptus Mechanicus players should expect Cognition decisions,
+          while Necron players should expect Dominion decisions.
         </p>
       </section>
 
@@ -100,6 +106,15 @@ export default function MechanicusIIFactionsPage() {
       </div>
 
       <section className="prose-game">
+        <h2>Are the Leagues of Votann Playable?</h2>
+        <p>
+          The safest current answer is no: the confirmed playable campaign
+          structure is Adeptus Mechanicus and Necrons. Public preview coverage
+          says the Leagues of Votann appear in the story, which makes them
+          important for lore and mission context, but current store descriptions
+          do not present them as a third playable campaign faction.
+        </p>
+
         <h2>How to Choose a First Campaign</h2>
         <p>
           Choose Adeptus Mechanicus first if you want the sequel to feel closer

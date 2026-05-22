@@ -14,7 +14,7 @@ import {
 
 const title = 'Warhammer 40,000: Mechanicus II Guide Hub - Release, Factions & Beginner Tips';
 const description =
-  'Warhammer 40,000: Mechanicus II guide hub for the May 21 launch: release date, PS5, Xbox, Steam, Adeptus Mechanicus, Necrons, beginner tactics, PC specs, and buying advice.';
+  'Warhammer 40,000: Mechanicus II guide hub for the May 21 launch: release date, PS5, Xbox, Steam, Steam Deck, Adeptus Mechanicus, Necrons, beginner tactics, PC specs, and buying advice.';
 const canonical = '/games/mechanicus-ii';
 
 export const metadata = createMechanicusIIMetadata({
@@ -50,12 +50,18 @@ const faqs = [
     answer:
       'Steam currently lists single-player features, not multiplayer or co-op.',
   },
+  {
+    question: 'Is Mechanicus II supported on Steam Deck?',
+    answer:
+      'No. The official Steam FAQ and Steam Deck compatibility data list Mechanicus II as unsupported on Steam Deck at launch.',
+  },
 ];
 
 function getGuideImage(href: string) {
   if (href.includes('beginner')) return mechanicusIIImages.screenshot1;
   if (href.includes('factions')) return mechanicusIIImages.screenshot2;
   if (href.includes('system')) return mechanicusIIImages.screenshot3;
+  if (href.includes('steam-deck')) return mechanicusIIImages.screenshot3;
   if (href.includes('worth')) return mechanicusIIImages.screenshot4;
   return mechanicusIIImages.capsule;
 }
@@ -78,7 +84,8 @@ export default function MechanicusIIHubPage() {
           turn-based tactics sequel built around two campaign perspectives:
           the Adeptus Mechanicus and the Necrons. Steam currently shows Mixed
           user reviews, a 10% introductory offer ending May 28, 2026, 34
-          achievements, Steam Cloud, and Family Sharing.
+          achievements, Steam Cloud, and Family Sharing. Steam Deck is listed as
+          unsupported at launch.
         </p>
       </BlufBox>
 
@@ -133,8 +140,9 @@ export default function MechanicusIIHubPage() {
           Mechanicus II is not a generic Warhammer 40,000 page. It is a
           specific launch-week tactics game with specific user questions:
           which platform can play it, whether Necrons are playable, what PC
-          specs are required, whether the Mixed review signal should change a
-          buying decision, and which campaign is a better first fit.
+          specs are required, whether Steam Deck is a safe option, whether the
+          Mixed review signal should change a buying decision, and which
+          campaign is a better first fit.
         </p>
       </section>
 

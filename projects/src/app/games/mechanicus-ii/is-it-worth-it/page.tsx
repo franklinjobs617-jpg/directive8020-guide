@@ -9,7 +9,7 @@ import {
 
 const title = 'Is Warhammer 40,000: Mechanicus II Worth It?';
 const description =
-  'Mechanicus II buying guide for launch week: price, 10% Steam discount, Mixed reviews, Adeptus Mechanicus and Necron campaigns, platforms, PC specs, and who should wait.';
+  'Mechanicus II buying guide for launch week: price, Steam discount, Mixed reviews, Steam Deck unsupported status, Adeptus Mechanicus and Necron campaigns, and who should wait.';
 const canonical = '/games/mechanicus-ii/is-it-worth-it';
 
 export const metadata = createMechanicusIIMetadata({
@@ -23,7 +23,7 @@ const faqs = [
   {
     question: 'Is Mechanicus II worth buying at launch?',
     answer:
-      'It is worth considering if you want a new Warhammer 40K tactics game with Adeptus Mechanicus and Necron campaigns. Wait if Mixed reviews, performance uncertainty, or launch-week balance risk matters to you.',
+      'It is worth considering if you want a new Warhammer 40K tactics game with Adeptus Mechanicus and Necron campaigns. Wait if Mixed reviews, Steam Deck unsupported status, performance uncertainty, or launch-week balance risk matters to you.',
   },
   {
     question: 'Should I buy Mechanicus II on PC or console?',
@@ -39,6 +39,11 @@ const faqs = [
     question: 'Should I wait for reviews?',
     answer:
       'Waiting is reasonable if you need stable user consensus. Steam currently shows Mixed user reviews at the latest check.',
+  },
+  {
+    question: 'Should I buy Mechanicus II for Steam Deck?',
+    answer:
+      'Steam Deck-first buyers should wait. The official Steam FAQ and compatibility data list Mechanicus II as unsupported on Deck at launch.',
   },
 ];
 
@@ -58,8 +63,8 @@ export default function MechanicusIIWorthItPage() {
           <strong>Buy Mechanicus II now if you specifically want a new
           Warhammer 40K turn-based tactics game with Adeptus Mechanicus and
           Necron campaigns.</strong> Try more research first if Mixed Steam
-          reviews, launch-week balance, or platform-specific performance would
-          strongly affect your decision.
+          reviews, Steam Deck unsupported status, launch-week balance, or
+          platform-specific performance would strongly affect your decision.
         </p>
       </BlufBox>
 
@@ -105,10 +110,10 @@ export default function MechanicusIIWorthItPage() {
         <h2>Who Should Wait</h2>
         <p>
           Wait if you need a settled best-unit meta, polished late-campaign
-          balance, console-specific performance reports, or a broad review
-          consensus. The current pages should help with facts and first-session
-          direction, but they should not pretend the full campaign has already
-          been solved.
+          balance, Steam Deck support, console-specific performance reports, or
+          a broad review consensus. The current pages should help with facts and
+          first-session direction, but they should not pretend the full campaign
+          has already been solved.
         </p>
       </section>
     </MechanicusIIArticle>

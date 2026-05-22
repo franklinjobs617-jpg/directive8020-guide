@@ -3,6 +3,7 @@ import { BlufBox, StatusPanel } from '@/components/guide-blocks';
 import { MechanicusIIArticle } from '@/components/mechanicus-ii-article';
 import {
   createMechanicusIIMetadata,
+  mechanicusIIEditionRows,
   mechanicusIIImages,
   mechanicusIIQuickFacts,
 } from '@/lib/mechanicus-ii';
@@ -39,6 +40,11 @@ const faqs = [
   {
     question: 'Does Mechanicus II have Steam achievements?',
     answer: 'Yes. Steam currently lists 34 achievements.',
+  },
+  {
+    question: 'What is in the Mechanicus II Omnissiah Edition?',
+    answer:
+      'The official FAQ describes the Omnissiah Edition as the base game plus a digital artbook, complete original soundtrack, and in-game legacy soundtrack.',
   },
 ];
 
@@ -109,11 +115,41 @@ export default function MechanicusIIReleaseDatePage() {
               ['Launch discount', '10% introductory offer ending May 28, 2026', 'Steam-listed'],
               ['Review signal', 'Mixed Steam user reviews, 59% positive across 208 purchaser reviews at latest check', 'Steam-listed'],
               ['Achievements', '34 Steam achievements', 'Steam-listed'],
+              ['Steam Deck', 'Unsupported at launch according to official FAQ and compatibility data', 'FAQ-listed'],
             ].map(([question, answer, status]) => (
               <tr key={question} className="border-b border-border/30 last:border-0">
                 <td className="px-4 py-3 font-semibold text-foreground">{question}</td>
                 <td className="px-4 py-3 text-muted-foreground">{answer}</td>
                 <td className="px-4 py-3 text-muted-foreground">{status}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
+        <h2>Standard Edition, Omnissiah Edition, and Upgrade DLC</h2>
+        <p>
+          Mechanicus II has more than one buying route on Steam. Players who
+          only want the campaigns can start with the Standard Edition. Players
+          who want soundtrack and artbook extras should compare the Omnissiah
+          Edition or the upgrade DLC before buying.
+        </p>
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Edition question</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player answer</th>
+            </tr>
+          </thead>
+          <tbody>
+            {mechanicusIIEditionRows.map(([question, answer]) => (
+              <tr key={question} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{question}</td>
+                <td className="px-4 py-3 text-muted-foreground">{answer}</td>
               </tr>
             ))}
           </tbody>

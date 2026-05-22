@@ -209,6 +209,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.68,
     },
     {
+      url: `${BASE_URL}/games/mechanicus-ii/steam-deck-performance`,
+      lastModified: '2026-05-22',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
       url: `${BASE_URL}/games/mechanicus-ii/is-it-worth-it`,
       lastModified: '2026-05-22',
       changeFrequency: 'weekly',

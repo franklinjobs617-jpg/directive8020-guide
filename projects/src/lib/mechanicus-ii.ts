@@ -43,6 +43,7 @@ export const mechanicusIIQuickFacts = [
   ['Developer / Publisher', 'Bulwark Studios / Kasedo Games.'],
   ['Genre', 'Fast-paced turn-based tactics, strategy, RPG, and action strategy.'],
   ['Main factions', 'Adeptus Mechanicus and Necrons, with distinct campaigns.'],
+  ['Steam Deck', 'Unsupported at launch according to the official Steam FAQ and Steam Deck compatibility data.'],
   ['Steam price', '$39.99 US base price, with a $35.99 introductory Steam price at the latest check.'],
   ['Launch discount', 'Steam currently shows a 10% introductory offer ending May 28, 2026.'],
   ['Steam reviews', 'Mixed Steam user reviews at the latest check, with 59% positive across 208 Steam purchaser reviews.'],
@@ -56,13 +57,18 @@ export const mechanicusIIFeatureRows = [
   ['Battlefield layer', 'Turn-based tactical battles with cover, terrain, and faction-specific capabilities.'],
   ['Strategic layer', 'Territory control and resource management sit above individual battles.'],
   ['Leaders', 'Magos Dominus Faustinius and Vargard Nefershah are named as central commanders.'],
+  ['Faction resource pressure', 'Official descriptions point to Cognition for the Adeptus Mechanicus and Dominion for the Necrons as key faction systems.'],
+  ['Battlefield readability', 'Public previews highlight cover, destructible cover, environmental hazards, and turn-order manipulation as important tactical questions.'],
   ['Replay reason', 'Two factions mean the first decision is not only aesthetic; it changes campaign perspective and combat priorities.'],
 ];
 
 export const mechanicusIIBeginnerRows = [
   ['Pick a campaign for learning', 'Choose the faction whose turn rhythm sounds clearer to you; do not swap campaigns every few missions before learning the basics.'],
   ['Use cover every turn', 'Treat cover and line of sight as core resources, not optional decoration.'],
+  ['Check whether cover can be broken', 'Do not assume every defensive position is permanent; public previews describe destructible cover and battlefield objects.'],
+  ['Watch turn order before spending actions', 'Turn-order changes can matter as much as raw damage when a unit is exposed.'],
   ['Read terrain before moving', 'Steam highlights terrain as a tactical factor, so check angles, elevation, and exposure before committing a unit.'],
+  ['Learn your faction resource', 'Mechanicus players should watch Cognition flow, while Necron players should pay attention to Dominion pressure.'],
   ['Protect key units', 'Losing a specialist at the wrong time can cost more than a single bad attack roll.'],
   ['Track resources', 'The campaign layer includes resource management, so avoid spending upgrades without knowing what your faction needs next.'],
   ['Wait for tested builds', 'Do not trust best-unit lists until players have finished more campaign runs and patch notes settle.'],
@@ -71,6 +77,8 @@ export const mechanicusIIBeginnerRows = [
 export const mechanicusIIFactionRows = [
   ['Adeptus Mechanicus', 'Best first fit for players who want tech-priest flavor, battlefield control, and a more methodical Imperial campaign perspective.'],
   ['Necrons', 'Best first fit for players who want ancient machine-legion fantasy, awakening tomb-world pressure, and a campaign from the other side of the war.'],
+  ['Leagues of Votann', 'Public preview coverage says the Leagues of Votann appear in the story, but they are not presented as a playable third campaign faction.'],
+  ['Resource identity', 'Adeptus Mechanicus players should expect Cognition decisions; Necron players should expect Dominion decisions.'],
   ['Not yet safe to claim', 'Final best units, optimal army compositions, and hardest-mission counters still need hands-on campaign verification.'],
 ];
 
@@ -85,10 +93,35 @@ export const mechanicusIISpecRows = [
 
 export const mechanicusIIWorthRows = [
   ['Buy now if', 'You want a new Warhammer 40K turn-based tactics game, like dual campaigns, and are comfortable with early Mixed Steam reviews.'],
-  ['Try more research first if', 'You need broad player consensus, deep performance reports, or proof that the campaign balance works across both factions.'],
+  ['Try more research first if', 'You need broad player consensus, deep performance reports, Steam Deck support, or proof that the campaign balance works across both factions.'],
   ['Best fit', 'Players who like tactical positioning, faction asymmetry, campaign layers, and Warhammer 40K lore.'],
   ['Poor fit', 'Players looking for real-time action, co-op, PvP, or a fully solved best-build meta on launch week.'],
+  ['Steam Deck note', 'The game is listed as unsupported on Steam Deck at launch, so handheld-first buyers should wait for clearer reports or compatibility changes.'],
   ['Console note', 'PS5 and Xbox Series X|S versions are part of the launch platform set, but console-specific performance should still be checked by platform.'],
+];
+
+export const mechanicusIISteamDeckRows = [
+  ['Current Deck status', 'Unsupported at launch based on official FAQ language and Steam Deck compatibility data.'],
+  ['Can it still open?', 'Unsupported does not always mean impossible to launch, but it does mean the game is not a recommended Deck purchase without fresh player reports.'],
+  ['Likely friction points', 'Graphics-setting fit, UI scale, controller button labels, text readability, and tactical camera comfort should be checked before a Deck-first purchase.'],
+  ['Best buyer action', 'Use a desktop PC or console if you want the most straightforward launch-week experience; wait if Steam Deck is your main platform.'],
+  ['Do not rely on', 'Unverified best settings, isolated early clips, or one mission running well as proof that the full campaign is comfortable on Deck.'],
+];
+
+export const mechanicusIIPerformanceCheckRows = [
+  ['Before buying on PC', 'Compare your CPU, GPU, RAM, DirectX 12 support, and 25 GB storage against the official Steam requirements.'],
+  ['First 30 minutes', 'Check menu responsiveness, text readability, battle camera movement, shader or asset stutter, and load times before refund windows become tight.'],
+  ['During tactical battles', 'Watch frame pacing when cover breaks, enemies cluster, environmental hazards trigger, or large effects fire.'],
+  ['Campaign layer', 'Check whether late-map navigation, territory screens, and resource menus remain readable and responsive.'],
+  ['Cloud saves', 'Steam lists Steam Cloud, but players should still confirm saves sync correctly before switching machines.'],
+  ['Controller use', 'Steam lists Xbox controller support, yet Deck users should specifically check button labels and menu navigation comfort.'],
+];
+
+export const mechanicusIIEditionRows = [
+  ['Standard Edition', 'Base game on supported storefronts. Use this if you only want the campaigns and core tactical game.'],
+  ['Omnissiah Edition', 'Official FAQ describes the base game plus a digital artbook, complete original soundtrack, and in-game legacy soundtrack.'],
+  ['Upgrade DLC', 'Official FAQ says owners of the Standard Edition can upgrade to Omnissiah Edition content through DLC.'],
+  ['Best choice', 'Choose Standard if you only care about gameplay; choose Omnissiah Edition if artbook and soundtrack content matter to you.'],
 ];
 
 export const mechanicusIISourceRows = [
@@ -134,6 +167,20 @@ export const mechanicusIISourceRows = [
     href: mechanicusIISteamUrl,
     note: 'Steam describes distinct campaigns and faction-specific tactical capabilities.',
   },
+  {
+    claim: 'Is Mechanicus II supported on Steam Deck at launch?',
+    source: 'Steam Community FAQ',
+    status: 'verified' as const,
+    href: 'https://steamcommunity.com/app/2532480/discussions/0/695376132937213076/',
+    note: 'The official FAQ says Steam Deck is unsupported at launch and explains the compatibility concern.',
+  },
+  {
+    claim: 'Are the Leagues of Votann playable?',
+    source: 'Epic Games Store preview',
+    status: 'working' as const,
+    href: 'https://store.epicgames.com/en-US/blog/warhammer-40000-mechanicus-2-preview-leagues-of-votann',
+    note: 'Preview coverage says the Leagues of Votann appear in the story, but current store descriptions focus playable campaigns on Adeptus Mechanicus and Necrons.',
+  },
 ];
 
 export const mechanicusIIRelatedGuides: GameGuideLink[] = [
@@ -157,6 +204,8 @@ const mechanicusIIKeywords = [
   'Mechanicus II beginner guide',
   'Mechanicus II factions',
   'Mechanicus II system requirements',
+  'Mechanicus II Steam Deck',
+  'Mechanicus II performance',
   'Mechanicus II worth it',
 ];
 

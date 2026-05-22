@@ -75,7 +75,7 @@ const gameCards = [
     title: "Warhammer 40,000: Mechanicus II",
     href: "/games/mechanicus-ii",
     label: "Turn-based tactics",
-    body: "Launch guide hub for release status, PC/PS5/Xbox platforms, Adeptus Mechanicus, Necrons, beginner tactics, PC specs, and buying advice.",
+    body: "Launch guide hub for release status, PC/PS5/Xbox platforms, Steam Deck status, Adeptus Mechanicus, Necrons, beginner tactics, and buying advice.",
     image: mechanicusIIImages.hero,
   },
   {
@@ -209,8 +209,9 @@ export default function GamesPage() {
               endings, choices, or trophy guides. If you are trying Project:
               Mist, start with the Early Access hub. If you are playing
               Mechanicus II, start with release status, factions, beginner
-              tactics, system requirements, or buying advice. If you are trying
-              ZERO PARADES, start with release status, beginner skills, system
+              tactics, system requirements, Steam Deck performance, or buying
+              advice. If you are trying ZERO PARADES, start with release status,
+              beginner skills, system
               requirements, Steam Deck, or buying advice. If you are trying
               Thick As Thieves, start with the release and co-op pages, then check
               beginner stealth, contracts, system requirements, gear, or roadmap
