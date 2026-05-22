@@ -71,8 +71,8 @@ export default function MechanicusIIWorthItPage() {
       <section className="prose-game">
         <h2>Fast Buyer Verdict</h2>
         <ArticleImage
-          src={mechanicusIIImages.screenshot5}
-          alt="Warhammer 40,000 Mechanicus II worth it buyer guide image"
+          src={mechanicusIIImages.worthItBanner}
+          alt="Warhammer 40,000 Mechanicus II is it worth it banner"
           caption="The buying decision depends on your appetite for turn-based Warhammer tactics and your tolerance for launch-week review uncertainty."
         />
       </section>

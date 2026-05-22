@@ -22,6 +22,7 @@ export const mechanicusIIImages = {
   screenshot4: '/games/mechanicus-ii/environment-destruction.webp',
   screenshot5: '/games/mechanicus-ii/character-customization.webp',
   buyer: '/games/mechanicus-ii/buyer-art.webp',
+  worthItBanner: '/games/mechanicus-ii/worth-it-banner.webp',
 };
 
 export const mechanicusIIVideos = [
