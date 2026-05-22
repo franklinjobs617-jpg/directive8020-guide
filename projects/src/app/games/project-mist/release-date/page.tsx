@@ -3,9 +3,9 @@ import { ArticleImage } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
 import { createProjectMistMetadata, projectMistImages, projectMistLaunchSnapshotRows } from '@/lib/project-mist';
 
-const title = 'Project: Mist Release Date: Xbox, PS5, Early Access & PC Status';
+const title = 'Project: Mist Release Date 2026: Xbox Status, Early Access & PC';
 const description =
-  'Project: Mist release date guide: live in Steam Early Access since May 19, 2026, PC status, demo notes, price snapshot, roadmap timing, and Xbox or PlayStation caution.';
+  'Project: Mist released May 19, 2026 in Steam Early Access. Xbox and PS5 not confirmed. Check release status, demo, price, and platform details.';
 const canonical = '/games/project-mist/release-date';
 
 export const metadata = createProjectMistMetadata({

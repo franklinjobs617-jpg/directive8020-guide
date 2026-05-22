@@ -17,9 +17,9 @@ import {
   projectMistVideos,
 } from '@/lib/project-mist';
 
-const title = 'Project: Mist Guide: Xbox Status, Release Date, Co-op & Beginner Tips';
+const title = 'Project: Mist Guide 2026: Xbox, Release Date, Co-op & Beginner Tips';
 const description =
-  'Project: Mist guide: release date, Xbox status, 1-4 player online co-op, PC Steam Early Access, beginner tips, Gravity Gun, train base, lockpick, and first-hour survival.';
+  'Project: Mist is live in Steam Early Access since May 19, 2026. Xbox not confirmed. Find release date, co-op, beginner tips, Gravity Gun, and train base guide.';
 const canonical = '/games/project-mist';
 
 export const metadata = createProjectMistMetadata({

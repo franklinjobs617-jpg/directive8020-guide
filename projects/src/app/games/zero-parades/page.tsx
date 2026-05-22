@@ -14,9 +14,9 @@ import {
   zeroParadesWorthItRows,
 } from '@/lib/zero-parades';
 
-const title = 'ZERO PARADES Guide: GOG, PS5, Controller Support, Builds & Specs';
+const title = 'ZERO PARADES Guide 2026: GOG, PS5, Controller, Best Builds & Specs';
 const description =
-  'ZERO PARADES guide: GOG, Steam, Epic Games Store, PS5 status, controller support, Steam Deck, system requirements, best build tips, length, and beginner advice for the ZA/UM espionage RPG.';
+  'ZERO PARADES launched May 21, 2026 on PC. Check GOG availability, PS5 status, controller support, best builds, system requirements, game length, and beginner tips.';
 const canonical = '/games/zero-parades';
 
 export const metadata = createZeroParadesMetadata({
@@ -43,6 +43,11 @@ const faqs = [
       'Steam lists partial controller support. Test controller prompts, UI readability, and input mapping before committing to a controller-only playthrough.',
   },
   {
+    question: 'What are the system requirements for ZERO PARADES?',
+    answer:
+      'Minimum: Windows 10, i5 6500, 16 GB RAM, GTX 1060 6GB. Recommended: Windows 11, i5-10400, 16 GB RAM, RTX 2070. DirectX 11, 64-bit required.',
+  },
+  {
     question: 'Is ZERO PARADES on PS5?',
     answer:
       'PS5 is announced for 2026, but no exact PS5 launch date is public yet. Treat the PS5 version as confirmed for 2026 without a locked release window.',
@@ -56,6 +61,11 @@ const faqs = [
     question: 'What is the best build in ZERO PARADES?',
     answer:
       'There is no single best build at launch. The safest early approach is to pick an espionage identity that matches how you want to play: careful investigator, forceful operative, social manipulator, or unstable wildcard, then invest in 3-5 core skills that support that role.',
+  },
+  {
+    question: 'Does ZERO PARADES have a walkthrough?',
+    answer:
+      'This guide hub covers beginner tips, system requirements, Steam Deck setup, and buying advice. For route-specific guidance, use the beginner tips page for first-session priorities and the worth-it page for purchase decisions.',
   },
   {
     question: 'What type of game is ZERO PARADES?',
@@ -127,10 +137,11 @@ export default function ZeroParadesHubPage() {
               ['Is it on GOG?', 'Yes. Available on GOG, Steam, and Epic Games Store for PC.'],
               ['Is it on PS5?', 'PS5 is confirmed for 2026, but no exact launch date is public yet.'],
               ['Controller support?', 'Steam lists partial controller support. Test prompts before a full run.'],
-              ['Steam Deck?', 'Steam Deck Verified. Test text size and battery before long sessions.'],
               ['System requirements?', 'Minimum: GTX 1060 6GB, 16 GB RAM, i5 6500. Recommended: RTX 2070, i5-10400.'],
               ['Best build?', 'No single best build. Pick an espionage identity and invest in 3-5 core skills.'],
               ['How long?', '20-30 hours per playthrough; 40+ hours for completionist runs.'],
+              ['Walkthrough?', 'Use beginner tips for first-session priorities. No full route walkthrough yet.'],
+              ['Steam Deck?', 'Steam Deck Verified. Test text size and battery before long sessions.'],
             ].map(([question, answer]) => (
               <tr key={question} className="border-b border-border/30 last:border-0">
                 <td className="px-4 py-3 font-semibold text-foreground">{question}</td>

@@ -177,6 +177,7 @@ export function getZeroParadesRelated(excludeHref: string) {
 const zeroParadesKeywords = [
   'ZERO PARADES For Dead Spies',
   'ZERO PARADES guide',
+  'ZERO PARADES walkthrough',
   'ZERO PARADES GOG',
   'ZERO PARADES PS5',
   'ZERO PARADES controller support',
@@ -188,6 +189,7 @@ const zeroParadesKeywords = [
   'ZERO PARADES beginner guide',
   'ZERO PARADES Disco Elysium',
   'ZERO PARADES worth it',
+  'ZERO PARADES price',
 ];
 
 export function createZeroParadesMetadata({
