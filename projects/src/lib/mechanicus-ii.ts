@@ -14,24 +14,18 @@ export const mechanicusIIPlayStationUrl =
   'https://store.playstation.com/en-us/concept/10008848';
 
 export const mechanicusIIImages = {
-  hero:
-    'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2532480/4b9ea5b45f304a841fc68520cc729307629fa9bd/header.jpg?t=1779383649',
-  capsule:
-    'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2532480/capsule_616x353.jpg?t=1779383649',
-  screenshot1:
-    'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2532480/ss_7a8c07e7508ae07ad5be6feb4fb6dca719c39e64.1920x1080.jpg?t=1779383649',
-  screenshot2:
-    'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2532480/ss_503b032ec1052626e03e765c7d2be61a398a08dc.1920x1080.jpg?t=1779383649',
-  screenshot3:
-    'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2532480/ss_7e6c1a4ed82924fda829d5cddc0765c2157b7c22.1920x1080.jpg?t=1779383649',
-  screenshot4:
-    'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2532480/ss_9e5e9a7dc28a1b0376ed490b3c2d1d58445a13dd.1920x1080.jpg?t=1779383649',
+  hero: '/games/mechanicus-ii/hero.jpg',
+  capsule: '/games/mechanicus-ii/capsule.jpg',
+  screenshot1: '/games/mechanicus-ii/screenshot-1.avif',
+  screenshot2: '/games/mechanicus-ii/screenshot-2.avif',
+  screenshot3: '/games/mechanicus-ii/screenshot-3.avif',
+  screenshot4: '/games/mechanicus-ii/screenshot-4.avif',
 };
 
 export const mechanicusIIVideos = [
   {
-    id: 'XgN37iXFSGY',
-    title: 'Warhammer 40,000: Mechanicus II - Release Date Trailer',
+    id: 'jYyGB6wFFxE',
+    title: 'Warhammer 40,000: Mechanicus II - Official Launch Trailer',
     caption:
       'Official trailer for release timing, faction tone, and the Adeptus Mechanicus versus Necron setup.',
   },

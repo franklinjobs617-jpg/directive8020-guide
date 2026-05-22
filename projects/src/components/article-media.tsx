@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface ArticleImageProps {
   src: string;
@@ -47,7 +48,15 @@ export function VideoEmbed({ videoId, title, caption }: VideoEmbedProps) {
       </div>
       {caption && (
         <figcaption className="px-4 py-3 text-xs leading-relaxed text-muted-foreground">
-          {caption}
+          {caption}{' '}
+          <Link
+            href={`https://www.youtube.com/watch?v=${videoId}`}
+            target="_blank"
+            rel="noreferrer"
+            className="text-d8020 hover:underline"
+          >
+            Watch on YouTube
+          </Link>
         </figcaption>
       )}
     </figure>

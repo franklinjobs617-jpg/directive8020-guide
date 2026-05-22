@@ -290,8 +290,7 @@ export const mechanicusII: GameConfig = {
   operatingSystem: "Windows 10 64-bit",
   url: "https://store.steampowered.com/app/2532480/Warhammer_40000_Mechanicus_II/",
   availability: "https://schema.org/InStock",
-  heroImage:
-    "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2532480/4b9ea5b45f304a841fc68520cc729307629fa9bd/header.jpg?t=1779383649",
+  heroImage: "/games/mechanicus-ii/hero.jpg",
   guideLinks: [
     {
       title: "Release Date & Platforms",
