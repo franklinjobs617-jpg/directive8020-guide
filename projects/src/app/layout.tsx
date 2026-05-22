@@ -63,24 +63,48 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
-      <Script id="ezoic-analytics-init" strategy="beforeInteractive">
-        {`window.ezstandalone = window.ezstandalone || {}; ezstandalone.cmd =
-        ezstandalone.cmd || [];`}
-      </Script>
-      <script src="//ezoicanalytics.com/analytics.js"></script>
-      <body className="antialiased min-h-screen flex flex-col">
+      <head>
+        {/* ========================================================= */}
+        {/* 1. Ezoic 隐私合规脚本 (在 sa.min.js 之前加载以确保合规性) */}
+        {/* ========================================================= */}
         <Script
-          async
+          id="ezoic-cmp-1"
           src="https://cmp.gatekeeperconsent.com/min.js"
+          strategy="beforeInteractive"
           data-cfasync="false"
         />
         <Script
-          async
+          id="ezoic-cmp-2"
           src="https://the.gatekeeperconsent.com/cmp.min.js"
+          strategy="beforeInteractive"
           data-cfasync="false"
         />
 
+        {/* ========================================================= */}
+        {/* 2. Ezoic 核心初始化脚本 */}
+        {/* ========================================================= */}
+        <Script
+          id="ezoic-sa"
+          src="https://www.ezojs.com/ezoic/sa.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script id="ezoic-analytics-init" strategy="beforeInteractive">
+          {`
+            window.ezstandalone = window.ezstandalone || {};
+            ezstandalone.cmd = ezstandalone.cmd || [];
+          `}
+        </Script>
+        <Script
+          id="ezoic-analytics"
+          src="https://ezoicanalytics.com/analytics.js"
+          strategy="beforeInteractive"
+        />
+      </head>
+
+      <body className="antialiased min-h-screen flex flex-col">
+        {/* ========================================================= */}
+        {/* 3. 其他非阻塞、次要第三方脚本 (页面加载后延迟执行)          */}
+        {/* ========================================================= */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3383070348689557"
