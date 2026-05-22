@@ -6,6 +6,7 @@ import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import {
   JsonLd,
   generateArticleSchema,
+  generateFAQSchema,
   generateVideoGameSchema,
 } from '@/components/json-ld';
 import { RelatedGuides, SourceCheckTable } from '@/components/guide-blocks';
@@ -72,6 +73,7 @@ export function ZeroParadesArticle({
           game: zeroParades,
         })}
       />
+      <JsonLd data={generateFAQSchema(faqs)} />
 
       <article className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
         <Breadcrumb items={breadcrumbItems} />
@@ -89,7 +91,7 @@ export function ZeroParadesArticle({
           <h2>Official Videos to Watch First</h2>
           <p>
             The official gameplay and showcase videos are the quickest way to
-            judge ZERO PARADES' tone, dialogue density, interface, and
+            judge ZERO PARADES&apos; tone, dialogue density, interface, and
             pressure-driven RPG systems.
           </p>
         </section>

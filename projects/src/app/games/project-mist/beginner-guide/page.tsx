@@ -10,9 +10,9 @@ import {
   projectMistLockpickRows,
 } from "@/lib/project-mist";
 
-const title = "Project: Mist Beginner Guide - First Day Survival Tips";
+const title = "Project: Mist Beginner Guide: First Hour, Train Base, Gravity Gun & Co-op Survival";
 const description =
-  "Project: Mist beginner guide for Early Access: first-day priorities, Gravity Gun use, train base upgrades, resources, crafting, hunting, and co-op roles.";
+  "Project: Mist beginner guide: first-hour priorities, Gravity Gun tips, train base upgrades, lockpicking, co-op roles, facility runs, and what to avoid on your first Early Access session.";
 const canonical = "/games/project-mist/beginner-guide";
 
 export const metadata = createProjectMistMetadata({
@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "What should beginners do first in Project: Mist?",
     answer:
-      "Beginners should test controls, gather basic resources, return to the moving train base early, and avoid deep facility runs before food, tools, and retreat routes are stable.",
+      "Test controls, gather food and bandages, reach the train base early, learn lockpicking, and avoid deep facility runs before you understand creature pressure and retreat routes.",
   },
   {
     question: "How important is the Gravity Gun in Project: Mist?",
@@ -37,6 +37,11 @@ const faqs = [
     question: "Should beginners play Project: Mist solo or co-op?",
     answer:
       "Both are supported. Solo is slower and easier to control, while co-op helps divide scouting, defense, crafting, and combat if the group communicates.",
+  },
+  {
+    question: "Does Project: Mist have co-op?",
+    answer:
+      "Yes. Steam lists single-player, multi-player, co-op, and online co-op. Steam page copy describes seamless 1-4 player co-op.",
   },
   {
     question: "Is this beginner guide final?",

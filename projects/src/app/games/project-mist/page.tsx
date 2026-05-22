@@ -17,9 +17,9 @@ import {
   projectMistVideos,
 } from '@/lib/project-mist';
 
-const title = 'Project: Mist Guide - Early Access, Co-op, Release & Beginner Tips';
+const title = 'Project: Mist Guide: Xbox Status, Release Date, Co-op & Beginner Tips';
 const description =
-  'Project: Mist guide hub for the live Steam Early Access release: release date, 1-4 player online co-op, PC platform, beginner tips, lockpick, train base, saves, and fixes.';
+  'Project: Mist guide: release date, Xbox status, 1-4 player online co-op, PC Steam Early Access, beginner tips, Gravity Gun, train base, lockpick, and first-hour survival.';
 const canonical = '/games/project-mist';
 
 export const metadata = createProjectMistMetadata({
@@ -31,9 +31,24 @@ export const metadata = createProjectMistMetadata({
 
 const faqs = [
   {
-    question: 'What is Project: Mist?',
+    question: 'Is Project: Mist on Xbox?',
     answer:
-      'Project: Mist is an open-world survival horror game from Chicken Launcher about surviving a hostile island with mysterious facilities, giant creatures, crafting, a Gravity Gun, and a moving train base.',
+      'No. Xbox is not confirmed by the current Steam listing or any official store data. Treat Project: Mist as a PC Steam Early Access release until Chicken Launcher announces Xbox plans.',
+  },
+  {
+    question: 'Is Project: Mist out now?',
+    answer:
+      'Yes. Project: Mist released into Steam Early Access on 19 May, 2026 on PC via Steam.',
+  },
+  {
+    question: 'What should beginners do first in Project: Mist?',
+    answer:
+      'Test controls, gather food and bandages, reach the train base early, learn lockpicking, and avoid deep facility runs before you understand creature pressure and retreat routes.',
+  },
+  {
+    question: 'Does Project: Mist support co-op?',
+    answer:
+      'Yes. Steam lists single-player, multi-player, co-op, and online co-op. Steam page copy describes seamless 1-4 player co-op.',
   },
   {
     question: 'When does Project: Mist release?',
@@ -41,19 +56,14 @@ const faqs = [
       'Project: Mist released into Steam Early Access on 19 May, 2026, on PC via Steam.',
   },
   {
-    question: 'Does Project: Mist have multiplayer?',
+    question: 'Is Project: Mist on PlayStation?',
     answer:
-      'Yes. Steam lists multi-player, co-op, and online co-op, and Steam page copy describes seamless 1-4 player co-op.',
+      'No. PlayStation is not confirmed by the current Steam listing. Treat PC Steam as the only confirmed platform.',
   },
   {
-    question: 'Is Project: Mist on Xbox or PlayStation?',
+    question: 'What is Project: Mist?',
     answer:
-      'The current confirmed release is PC via Steam. Xbox, PlayStation, cross-play, and console release timing are not confirmed by the Steam listing.',
-  },
-  {
-    question: 'What should I read first?',
-    answer:
-      'Start with release date, beginner guide, lockpick, train door key, save, and crash-fix pages before treating any route advice as final.',
+      'Project: Mist is an open-world survival horror game from Chicken Launcher about surviving a hostile island with mysterious facilities, giant creatures, crafting, a Gravity Gun, and a moving train base.',
   },
 ];
 

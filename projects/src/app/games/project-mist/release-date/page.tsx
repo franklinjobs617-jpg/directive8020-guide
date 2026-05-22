@@ -3,7 +3,7 @@ import { ArticleImage } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
 import { createProjectMistMetadata, projectMistImages, projectMistLaunchSnapshotRows } from '@/lib/project-mist';
 
-const title = 'Project: Mist Release Date - Early Access, PC, Demo & Console Status';
+const title = 'Project: Mist Release Date: Xbox, PS5, Early Access & PC Status';
 const description =
   'Project: Mist release date guide: live in Steam Early Access since May 19, 2026, PC status, demo notes, price snapshot, roadmap timing, and Xbox or PlayStation caution.';
 const canonical = '/games/project-mist/release-date';
@@ -17,6 +17,16 @@ export const metadata = createProjectMistMetadata({
 
 const faqs = [
   {
+    question: 'Is Project: Mist on Xbox?',
+    answer:
+      'No. Xbox is not confirmed by the current Steam listing or any official store data. Treat Project: Mist as a PC Steam Early Access release until Chicken Launcher announces Xbox plans.',
+  },
+  {
+    question: 'Is Project: Mist out now?',
+    answer:
+      'Yes. Project: Mist released into Steam Early Access on 19 May, 2026, for PC via Steam.',
+  },
+  {
     question: 'What is the Project: Mist release date?',
     answer:
       'Project: Mist released into Steam Early Access on 19 May, 2026, for PC via Steam.',
@@ -27,14 +37,14 @@ const faqs = [
       'Yes. The Steam page currently presents Project: Mist as an Early Access release.',
   },
   {
+    question: 'Is Project: Mist on PlayStation?',
+    answer:
+      'No. PlayStation is not confirmed by the current Steam listing. Treat PC Steam as the only confirmed platform until Chicken Launcher announces PlayStation plans.',
+  },
+  {
     question: 'Does Project: Mist have a demo?',
     answer:
       'Steam app data still references a Project: Mist demo app, but launch-window discussions include demo and save issues, so check the current store button before relying on it.',
-  },
-  {
-    question: 'Is Project: Mist on Xbox or PlayStation?',
-    answer:
-      'No console release is confirmed by the current Steam listing. Treat Project: Mist as a PC Steam Early Access release until Chicken Launcher announces Xbox or PlayStation plans.',
   },
   {
     question: 'Will Project: Mist price change after Early Access?',
@@ -73,11 +83,36 @@ export default function ProjectMistReleaseDatePage() {
       <BlufBox title="Release Answer">
         <p>
           <strong>Project: Mist is live in Steam Early Access on PC via Steam
-          as of 19 May, 2026.</strong> Xbox, PlayStation, and cross-play are not
-          confirmed, so players should treat Steam as the source of truth before
-          buying or planning a co-op run.
+          as of 19 May, 2026.</strong> Xbox is not confirmed by the current
+          Steam listing or official store data. PlayStation and cross-play are
+          also not confirmed. Treat PC Steam as the only confirmed platform.
         </p>
       </BlufBox>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Question</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Direct answer</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Is it out now?', 'Yes. Released into Steam Early Access on 19 May, 2026.'],
+              ['Is it on Xbox?', 'No. Xbox is not confirmed by the current Steam listing or official store data.'],
+              ['Is it on PlayStation?', 'No. PlayStation is not confirmed. PC Steam is the only confirmed platform.'],
+              ['Is there a demo?', 'Steam references a demo app, but players report save issues. Check the store button.'],
+              ['Will the price change?', 'Coverage indicates the price is planned to increase when the full version releases.'],
+            ].map(([question, answer]) => (
+              <tr key={question} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{question}</td>
+                <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <section className="prose-game">
         <h2>Release Date and Platform</h2>

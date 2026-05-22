@@ -177,11 +177,15 @@ export function getZeroParadesRelated(excludeHref: string) {
 const zeroParadesKeywords = [
   'ZERO PARADES For Dead Spies',
   'ZERO PARADES guide',
-  'ZERO PARADES release date',
-  'ZERO PARADES beginner guide',
+  'ZERO PARADES GOG',
+  'ZERO PARADES PS5',
+  'ZERO PARADES controller support',
+  'ZERO PARADES best build',
+  'ZERO PARADES length',
   'ZERO PARADES system requirements',
   'ZERO PARADES Steam Deck',
-  'ZERO PARADES PS5',
+  'ZERO PARADES release date',
+  'ZERO PARADES beginner guide',
   'ZERO PARADES Disco Elysium',
   'ZERO PARADES worth it',
 ];

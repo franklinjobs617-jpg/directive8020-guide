@@ -271,6 +271,8 @@ const projectMistKeywords = [
   'Project Mist',
   'Project Mist guide',
   'Project Mist release date',
+  'Project Mist Xbox',
+  'Project Mist PlayStation',
   'Project Mist system requirements',
   'Project Mist multiplayer',
   'Project Mist co-op',

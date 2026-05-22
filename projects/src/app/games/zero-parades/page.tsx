@@ -14,9 +14,9 @@ import {
   zeroParadesWorthItRows,
 } from '@/lib/zero-parades';
 
-const title = 'ZERO PARADES Guide - Release Date, Beginner Tips, Specs & PS5';
+const title = 'ZERO PARADES Guide: GOG, PS5, Controller Support, Builds & Specs';
 const description =
-  'ZERO PARADES: For Dead Spies guide hub for launch day: Steam release date, PC and PS5 status, beginner tips, skills, Conditioning, Exertion, system requirements, Steam Deck, and buying advice.';
+  'ZERO PARADES guide: GOG, Steam, Epic Games Store, PS5 status, controller support, Steam Deck, system requirements, best build tips, length, and beginner advice for the ZA/UM espionage RPG.';
 const canonical = '/games/zero-parades';
 
 export const metadata = createZeroParadesMetadata({
@@ -30,17 +30,37 @@ const faqs = [
   {
     question: 'Is ZERO PARADES: For Dead Spies out today?',
     answer:
-      'Yes. ZERO PARADES: For Dead Spies is announced for May 21, 2026 on PC, with Steam, Epic Games Store, and GOG available for the PC release. Check the live buy button and regional price before purchasing.',
+      'Yes. ZERO PARADES: For Dead Spies launched on May 21, 2026 on PC, with Steam, Epic Games Store, and GOG available for the PC release. Check the live buy button and regional price before purchasing.',
+  },
+  {
+    question: 'Is ZERO PARADES on GOG?',
+    answer:
+      'Yes. ZERO PARADES is available on GOG, Steam, and Epic Games Store for PC. GOG offers a DRM-free option.',
+  },
+  {
+    question: 'Does ZERO PARADES support controllers?',
+    answer:
+      'Steam lists partial controller support. Test controller prompts, UI readability, and input mapping before committing to a controller-only playthrough.',
+  },
+  {
+    question: 'Is ZERO PARADES on PS5?',
+    answer:
+      'PS5 is announced for 2026, but no exact PS5 launch date is public yet. Treat the PS5 version as confirmed for 2026 without a locked release window.',
+  },
+  {
+    question: 'How long is ZERO PARADES?',
+    answer:
+      'A single playthrough is estimated at 20-30 hours depending on dialogue depth and exploration. Completionist runs with multiple endings and skill-check reroutes can take 40+ hours.',
+  },
+  {
+    question: 'What is the best build in ZERO PARADES?',
+    answer:
+      'There is no single best build at launch. The safest early approach is to pick an espionage identity that matches how you want to play: careful investigator, forceful operative, social manipulator, or unstable wildcard, then invest in 3-5 core skills that support that role.',
   },
   {
     question: 'What type of game is ZERO PARADES?',
     answer:
       'ZERO PARADES is a single-player espionage RPG from ZA/UM, built around skills, dialogue, Conditioning, pressure, dice checks, and consequences.',
-  },
-  {
-    question: 'Is ZERO PARADES on PS5?',
-    answer:
-      'PS5 is announced for 2026, but no exact PS5 launch date is public yet.',
   },
   {
     question: 'Is ZERO PARADES like Disco Elysium?',
@@ -87,12 +107,39 @@ export default function ZeroParadesHubPage() {
     >
       <BlufBox title="Launch Answer">
         <p>
-          <strong>ZERO PARADES: For Dead Spies is a May 21, 2026 PC launch.</strong>{' '}
-          Steam, Epic Games Store, and GOG are the PC storefronts. The US price
-          is $39.99, Steam Deck Verified support is listed, and PS5 is announced
-          for 2026 without an exact date yet.
+          <strong>ZERO PARADES: For Dead Spies launched May 21, 2026 on PC.</strong>{' '}
+          Available on Steam, Epic Games Store, and GOG. PS5 is announced for 2026
+          without an exact date. Steam Deck Verified, partial controller support,
+          $39.99 US price, and roughly 20-30 hours per playthrough.
         </p>
       </BlufBox>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Question</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Direct answer</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Is it on GOG?', 'Yes. Available on GOG, Steam, and Epic Games Store for PC.'],
+              ['Is it on PS5?', 'PS5 is confirmed for 2026, but no exact launch date is public yet.'],
+              ['Controller support?', 'Steam lists partial controller support. Test prompts before a full run.'],
+              ['Steam Deck?', 'Steam Deck Verified. Test text size and battery before long sessions.'],
+              ['System requirements?', 'Minimum: GTX 1060 6GB, 16 GB RAM, i5 6500. Recommended: RTX 2070, i5-10400.'],
+              ['Best build?', 'No single best build. Pick an espionage identity and invest in 3-5 core skills.'],
+              ['How long?', '20-30 hours per playthrough; 40+ hours for completionist runs.'],
+            ].map(([question, answer]) => (
+              <tr key={question} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{question}</td>
+                <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <StatusPanel
         items={zeroParadesQuickFacts.slice(0, 8).map(([label, value]) => ({
