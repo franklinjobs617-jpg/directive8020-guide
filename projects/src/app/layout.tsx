@@ -63,7 +63,24 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+      <Script id="ezoic-analytics-init" strategy="beforeInteractive">
+        {`window.ezstandalone = window.ezstandalone || {}; ezstandalone.cmd =
+        ezstandalone.cmd || [];`}
+      </Script>
+      <script src="//ezoicanalytics.com/analytics.js"></script>
       <body className="antialiased min-h-screen flex flex-col">
+        <Script
+          async
+          src="https://cmp.gatekeeperconsent.com/min.js"
+          data-cfasync="false"
+        />
+        <Script
+          async
+          src="https://the.gatekeeperconsent.com/cmp.min.js"
+          data-cfasync="false"
+        />
+
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3383070348689557"
