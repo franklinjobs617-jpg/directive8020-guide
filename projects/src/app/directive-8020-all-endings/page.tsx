@@ -72,6 +72,14 @@ const endingCountRows = [
   ['Episode structure', '8 episodes', 'Use episode boundaries to track survivor state, Turning Points, and ending conditions.'],
 ];
 
+const endingIntentRows = [
+  ['How many endings?', 'Five major ending families are currently reported, with several named finale outcomes and variations.'],
+  ['Best ending', 'Build a clean survivor route first, preserve evidence, verify mimic clues, and avoid sacrifice choices until the finale logic is clear.'],
+  ['Good ending', 'Treat a good ending as a stable crew-and-mission outcome, not simply the last dialogue option. Survivor state and evidence matter.'],
+  ['Secret ending', 'Use hidden or ambiguous routes such as Cycle 13, Booster Ring, mimic exposure, and unresolved contamination as the main secret-ending checks.'],
+  ['Ending explained', 'Read the finale through message choice, Andromeda risk, Oracle data, survivor state, and the cycle reveal.'],
+];
+
 const spoilerTopics = [
   ['Cycle 13', 'A high-intent ending search term tied to finale interpretation. Keep it in spoiler-marked sections and connect it to the all-endings route.'],
   ['Booster Ring', 'A late-story objective and ending-context term. Mention it where players expect ending explanation, not in spoiler-free beginner pages.'],
@@ -188,6 +196,25 @@ export default function AllEndingsPage() {
             outcomes to test, then use the Story Tree to verify hidden variants
             and the choices that trigger each result.
           </p>
+        </div>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player question</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Direct answer</th>
+              </tr>
+            </thead>
+            <tbody>
+              {endingIntentRows.map(([question, answer]) => (
+                <tr key={question} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{question}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         <SourceCheckTable title="All Endings Source Check" rows={sourceRows} />

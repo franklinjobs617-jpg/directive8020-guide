@@ -50,6 +50,14 @@ const coOpRoles = [
   ['Quartermaster', 'Tracks food, crafted tools, ammunition, healing, and repair needs between trips.'],
 ];
 
+const multiplayerQuestionRows = [
+  ['How many players?', 'Project: Mist is described as 1-4 player online co-op.'],
+  ['Is solo supported?', 'Yes. Steam lists single-player, so you can play without a group.'],
+  ['Is it local co-op?', 'Local co-op and split-screen are not confirmed by the current Steam feature list.'],
+  ['Is cross-play confirmed?', 'No. Cross-play is not confirmed, and console versions are not currently confirmed.'],
+  ['Can Xbox or PlayStation players join?', 'No confirmed Xbox or PlayStation version is listed, so console co-op should not be assumed.'],
+];
+
 const steamFeatureRows = [
   ['Single-player', 'Listed on Steam.'],
   ['Multi-player', 'Listed on Steam.'],
@@ -81,6 +89,25 @@ export default function ProjectMistMultiplayerPage() {
           not confirmed by the current Steam listing.
         </p>
       </BlufBox>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player question</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Direct answer</th>
+            </tr>
+          </thead>
+          <tbody>
+            {multiplayerQuestionRows.map(([question, answer]) => (
+              <tr key={question} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{question}</td>
+                <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <section className="prose-game">
         <h2>Multiplayer Status</h2>

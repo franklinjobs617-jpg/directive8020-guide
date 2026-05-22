@@ -52,6 +52,14 @@ const fixes = [
   'For co-op issues, make sure every player is on the same Steam build before troubleshooting network settings.',
 ];
 
+const diagnosisRows = [
+  ['Crashes before main menu', 'Update GPU drivers, verify Steam files, disable overlays, and repair Visual C++ Redistributables.'],
+  ['Black screen', 'Try Alt+Enter, remove launch options, disconnect extra monitors, and reset graphics settings.'],
+  ['Low FPS or stutter', 'Start on low settings, cap FPS, close background apps, and lower shadows or effects first.'],
+  ['Co-op disconnects', 'Restart Steam, check both players are on the same build, allow firewall access, and test a new host session.'],
+  ['Infinite loading after demo', 'Test a fresh Early Access save before deleting old data, then check Steam Cloud behavior.'],
+];
+
 export default function ProjectMistCrashingFixPage() {
   return (
     <ProjectMistArticle
@@ -71,6 +79,25 @@ export default function ProjectMistCrashingFixPage() {
           saves or deleting local data.
         </p>
       </BlufBox>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Problem</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">First fix to try</th>
+            </tr>
+          </thead>
+          <tbody>
+            {diagnosisRows.map(([problem, fix]) => (
+              <tr key={problem} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{problem}</td>
+                <td className="px-4 py-3 text-muted-foreground">{fix}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <section className="prose-game">
         <h2>Quick Fixes to Try First</h2>

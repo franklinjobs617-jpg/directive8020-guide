@@ -57,6 +57,21 @@ const faqs = [
   },
 ];
 
+const projectMistDecisionRows = [
+  ['Need the release answer', 'Project: Mist is live in Steam Early Access on PC via Steam. Start with the release page if you only need platform and timing facts.'],
+  ['Need multiplayer facts', 'Steam lists single-player, multi-player, co-op, and online co-op. Use the co-op page before planning a 1-4 player session.'],
+  ['Need console status', 'Xbox, PlayStation, and cross-play are not confirmed by the current Steam listing. Treat PC as the confirmed platform.'],
+  ['Need first-hour help', 'Use the beginner guide for Gravity Gun habits, train base priorities, lockpicking, and facility-risk checks.'],
+  ['Need buying advice', 'Use the worth-it page if your decision depends on launch price, Mixed reviews, demo saves, or Early Access risk.'],
+];
+
+const projectMistSessionRows = [
+  ['Solo player', 'Move slower, return to the train base often, and avoid spending all ammo before you understand creature behavior.'],
+  ['Two-player group', 'Split roles between scout and crafter, but regroup before facilities, bosses, and locked-object puzzles.'],
+  ['Four-player group', 'Assign one player to resources, one to navigation, one to defense, and one to objective tracking so the session does not become chaotic.'],
+  ['Returning demo player', 'Check save behavior, changed routes, and patch notes before assuming demo habits still work in the live Early Access build.'],
+];
+
 function getProjectMistGuideImage(href: string) {
   if (href.includes('system')) return projectMistImages.facilities;
   if (href.includes('multiplayer')) return projectMistImages.multiplayer;
@@ -182,6 +197,25 @@ export default function ProjectMistHubPage() {
         </p>
       </section>
 
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player need</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Best next step</th>
+            </tr>
+          </thead>
+          <tbody>
+            {projectMistDecisionRows.map(([need, nextStep]) => (
+              <tr key={need} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{need}</td>
+                <td className="px-4 py-3 text-muted-foreground">{nextStep}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
       <section className="prose-game">
         <h2>Launch Snapshot</h2>
         <ArticleImage
@@ -210,6 +244,41 @@ export default function ProjectMistHubPage() {
               <tr key={fact} className="border-b border-border/30 last:border-0">
                 <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{fact}</th>
                 <td className="px-4 py-3 text-muted-foreground">{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
+        <h2>Solo and Co-op Session Planning</h2>
+        <ArticleImage
+          src={projectMistImages.multiplayer}
+          alt="Project: Mist solo and co-op planning image"
+          caption="Plan the first session around role clarity: resource gathering, navigation, combat pressure, and train-base returns."
+        />
+        <p>
+          Project: Mist can be played alone or with a group, but the safest
+          first-session plan changes by player count. Solo players need cleaner
+          retreat habits because every mistake costs time. Co-op groups need
+          communication because a scattered team can waste supplies, miss key
+          items, or trigger danger before the train base is ready.
+        </p>
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player setup</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Safer first-session habit</th>
+            </tr>
+          </thead>
+          <tbody>
+            {projectMistSessionRows.map(([setup, habit]) => (
+              <tr key={setup} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{setup}</td>
+                <td className="px-4 py-3 text-muted-foreground">{habit}</td>
               </tr>
             ))}
           </tbody>

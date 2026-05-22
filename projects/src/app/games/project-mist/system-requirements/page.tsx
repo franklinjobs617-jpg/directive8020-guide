@@ -38,6 +38,14 @@ const faqs = [
   },
 ];
 
+const specDecisionRows = [
+  ['8 GB RAM PC', 'Meets the official minimum, but close browsers, Discord streams, capture tools, and extra launchers before playing.'],
+  ['GTX 750 / Radeon HD 7770 class GPU', 'Meets the listed GPU floor. Start on low settings and prioritize stable frame pacing.'],
+  ['No recommended specs listed', 'Do not assume high settings are safe. Use the minimum as a launch baseline and leave extra headroom for co-op.'],
+  ['20 GB storage', 'Keep more than 20 GB free so Steam can patch and unpack files without running out of space.'],
+  ['Co-op performance', 'Test solo first. If solo is unstable, co-op will be harder to troubleshoot because network and host load add more variables.'],
+];
+
 export default function ProjectMistSystemRequirementsPage() {
   return (
     <ProjectMistArticle
@@ -57,6 +65,25 @@ export default function ProjectMistSystemRequirementsPage() {
           not listed yet.
         </p>
       </BlufBox>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">PC situation</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">What to do</th>
+            </tr>
+          </thead>
+          <tbody>
+            {specDecisionRows.map(([situation, guidance]) => (
+              <tr key={situation} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{situation}</td>
+                <td className="px-4 py-3 text-muted-foreground">{guidance}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <section className="prose-game">
         <h2>Minimum Requirements</h2>

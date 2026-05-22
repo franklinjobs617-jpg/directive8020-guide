@@ -58,6 +58,21 @@ const deathCaptureRows = [
   { step: 'Document avoid method', doThis: 'Every death entry must include how to prevent it.', why: 'The page serves both all-deaths viewers and save-everyone players.' },
 ];
 
+const victimTrackingRows = [
+  ['Young', 'Track leadership choices, risky solo actions, finale-message decisions, and moments where trusting another crew member changes her route.'],
+  ['Stafford', 'Track command pressure, rescue timing, blame choices, and whether earlier crew trust affects later survival.'],
+  ['Eisele', 'Track ship-system decisions, Destiny changes, technical evidence, and routes where information access changes the outcome.'],
+  ['Cooper', 'Track medical scenes, injury treatment, rescue decisions, and whether helping another character creates a later risk.'],
+  ['Cernan', 'Track repair routes, locked access, engineering tasks, and scenes where separation or timing exposes him to danger.'],
+];
+
+const deathRouteRows = [
+  ['First-run survival', 'Avoid intentional deaths. Record every near miss, separated character, and Turning Point so the save-everyone route stays repairable.'],
+  ['All-deaths cleanup', 'Branch from a finished route and trigger one death type at a time: QTE, stealth, trust, evidence, relationship, then finale.'],
+  ['Trophy cleanup', 'Keep separate notes for deaths that may connect to hidden achievements, all-deaths trophies, or ending variants.'],
+  ['Ending testing', 'Use deaths to test whether an ending depends on survivor count, mimic exposure, final message choice, or ship state.'],
+];
+
 const sourceRows = [
   {
     claim: 'Launch coverage reports 44 death scenes.',
@@ -170,6 +185,35 @@ export default function DeathScenesPage() {
           <ActionTable rows={deathCaptureRows} />
         </div>
 
+        <div className="prose-game">
+          <h2>Victim Tracking Priorities</h2>
+          <p>
+            A useful all-deaths checklist needs more than a total count. Track
+            each core crew member separately, because the same system failure
+            can affect different characters in different chapters. This also
+            helps save-everyone players identify whose route broke first.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left text-muted-foreground font-medium">Victim route</th>
+                <th className="px-4 py-3 text-left text-muted-foreground font-medium">What to track</th>
+              </tr>
+            </thead>
+            <tbody>
+              {victimTrackingRows.map(([victim, notes]) => (
+                <tr key={victim} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 text-foreground font-medium">{victim}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{notes}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
         <SourceCheckTable title="Death Spiral Source Check" rows={sourceRows} />
 
         <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
@@ -213,6 +257,33 @@ export default function DeathScenesPage() {
             alt="Directive 8020 death scene stealth risk"
             caption="Many deaths in Directive 8020 should be mapped by system: stealth failure, QTE failure, trust failure, or missing evidence."
           />
+
+          <h2>Which Route Should You Use?</h2>
+          <p>
+            The right death route depends on your goal. A first-run player wants
+            prevention, a trophy hunter wants controlled cleanup, and an endings
+            player wants to know whether a death changes the finale. Use a
+            separate save or Story Tree branch before testing fatal choices.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left text-muted-foreground font-medium">Goal</th>
+                <th className="px-4 py-3 text-left text-muted-foreground font-medium">Best death-route method</th>
+              </tr>
+            </thead>
+            <tbody>
+              {deathRouteRows.map(([goal, method]) => (
+                <tr key={goal} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 text-foreground font-medium">{goal}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{method}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         <RelatedGuides

@@ -56,6 +56,14 @@ const coOpRules = [
   'Assign one person to keep notes on isolated characters and contradictions.',
 ];
 
+const coOpQuestionRows = [
+  ['Is Movie Night local co-op?', 'Yes. Movie Night is local couch co-op for up to five players.'],
+  ['Is online multiplayer live?', 'Check the current patch notes before planning a remote run; launch wording described online multiplayer as a free post-launch update.'],
+  ['Can Steam Remote Play replace it?', 'Treat Steam Remote Play as an unofficial workaround, not the official online multiplayer mode.'],
+  ['How many players?', 'Movie Night supports up to five local players, matching the five core playable crew structure.'],
+  ['Best group setup', 'Assign one player to track Story Tree notes and one player to watch mimic suspicion while assigned players make character choices.'],
+];
+
 const multiplayerStatus = [
   ['Single-player', 'Available at launch', 'One player controls the story route and every crew perspective.'],
   ['Movie Night couch co-op', 'Available at launch', 'Up to five local players share one screen and pass control between assigned crew members.'],
@@ -127,6 +135,25 @@ export default function MovieNightPage() {
             as a workaround, not the official online mode.
           </p>
         </BlufBox>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player question</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Direct answer</th>
+              </tr>
+            </thead>
+            <tbody>
+              {coOpQuestionRows.map(([question, answer]) => (
+                <tr key={question} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{question}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <div className="prose-game">
           <h2>Is Directive 8020 Multiplayer?</h2>

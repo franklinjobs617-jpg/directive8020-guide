@@ -49,6 +49,22 @@ const faqs = [
   },
 ];
 
+const zeroParadesDecisionRows = [
+  ['Want to play now', 'Use PC storefronts first: Steam, Epic Games Store, or GOG. Check the live buy button, regional price, and refund policy before purchase.'],
+  ['Waiting for PS5', 'PS5 is announced for 2026, but no exact PlayStation launch date is public yet. Do not buy on PC if you only want the console version.'],
+  ['Playing on Steam Deck', 'Steam Deck Verified support is listed, but text-heavy RPGs still deserve a readability and battery check before a long session.'],
+  ['Comparing to Disco Elysium', 'Expect dense writing, skills, checks, failure states, and political pressure, not a combat-first action RPG.'],
+  ['Unsure about price', 'The US price is $39.99. Regional prices can differ, so check the storefront you actually plan to use.'],
+];
+
+const zeroParadesFirstHourRows = [
+  ['Read the case setup carefully', 'Names, factions, and job titles are likely to matter. Do not skip early briefings just to reach the next check faster.'],
+  ['Pick a build you can role-play', 'A spy RPG is easier to read when your skills support the kind of operative you want to be: careful, forceful, social, or unstable.'],
+  ['Do not force every check', 'Failure can be part of the route. Save before major conversations, but let some consequences reveal how the game reacts.'],
+  ['Track pressure systems', 'Conditioning and Exertion are not just flavor terms. Watch how stress, effort, and recovery shape your next choices.'],
+  ['Keep platform comfort in mind', 'If you play handheld, test font size, controller prompts, and save behavior before committing to a long reading session.'],
+];
+
 function getGuideImage(href: string) {
   if (href.includes('release')) return zeroParadesImages.screenshot1;
   if (href.includes('beginner')) return zeroParadesImages.screenshot2;
@@ -130,6 +146,13 @@ export default function ZeroParadesHubPage() {
           alt="ZERO PARADES first things to know screenshot"
           caption="ZERO PARADES is a reading, skill-check, and consequence RPG. Understand your operant build before forcing every roll."
         />
+        <p>
+          ZERO PARADES is now a live PC launch, so the most useful first answer
+          is practical: where you can play, whether PS5 is ready, what kind of
+          RPG it is, and whether your platform is comfortable for a long
+          text-heavy session. Treat the game as an espionage role-playing case,
+          not a checklist of perfect outcomes.
+        </p>
       </section>
 
       <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
@@ -145,6 +168,25 @@ export default function ZeroParadesHubPage() {
               <tr key={feature} className="border-b border-border/30 last:border-0">
                 <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{feature}</th>
                 <td className="px-4 py-3 text-muted-foreground">{status}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player situation</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Direct guidance</th>
+            </tr>
+          </thead>
+          <tbody>
+            {zeroParadesDecisionRows.map(([situation, guidance]) => (
+              <tr key={situation} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{situation}</td>
+                <td className="px-4 py-3 text-muted-foreground">{guidance}</td>
               </tr>
             ))}
           </tbody>
@@ -186,6 +228,13 @@ export default function ZeroParadesHubPage() {
           alt="ZERO PARADES beginner priorities screenshot"
           caption="Your first run should focus on reading motives, managing pressure, testing skills, and saving before high-stakes conversations."
         />
+        <p>
+          The first hour should teach you how the game wants to be read. Move
+          slowly through the setup, pay attention to who benefits from each
+          instruction, and treat a failed check as information instead of an
+          automatic reload. If the route starts to feel unstable, write down
+          which pressure system, skill, or conversation choice pushed it there.
+        </p>
       </section>
 
       <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
@@ -201,6 +250,25 @@ export default function ZeroParadesHubPage() {
               <tr key={priority} className="border-b border-border/30 last:border-0">
                 <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{priority}</th>
                 <td className="px-4 py-3 text-muted-foreground">{habit}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">First-hour habit</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it helps</th>
+            </tr>
+          </thead>
+          <tbody>
+            {zeroParadesFirstHourRows.map(([habit, reason]) => (
+              <tr key={habit} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{habit}</td>
+                <td className="px-4 py-3 text-muted-foreground">{reason}</td>
               </tr>
             ))}
           </tbody>

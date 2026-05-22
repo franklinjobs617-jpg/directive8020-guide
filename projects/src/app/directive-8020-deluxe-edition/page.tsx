@@ -74,6 +74,14 @@ const valueRows = [
   ['Price-sensitive buyers', 'Compare upgrade price live', 'Regional discounts and bundles can change the value quickly.'],
 ];
 
+const deluxeQuestionRows = [
+  ['Outfit Pack', 'The Dark Pictures Outfit Pack is cosmetic. It is best for fans who want anthology callbacks during replay.'],
+  ['Heirlooms Retrieval', 'This is the most gameplay-relevant Deluxe item because it adds a bonus mission around hidden dolls and relics.'],
+  ['Filters', 'The cinematic filters change presentation, not route logic or survival outcomes.'],
+  ['Artbook and soundtrack', 'These are collector extras and do not affect gameplay routes.'],
+  ['Best buyer fit', 'Deluxe is strongest for collectors, completionists, and repeat players, not for one blind story run.'],
+];
+
 const priceRows = [
   ['Base game price', 'Check Steam, PlayStation Store, or Xbox Store before purchase.', 'Live storefront value can change by region, sale, or bundle.'],
   ['Digital Deluxe upgrade', 'Treat as a store-specific add-on price, not a fixed global price.', 'Only quote exact numbers after checking the active storefront locale.'],
@@ -142,6 +150,25 @@ export default function DeluxeEditionPage() {
             only want one blind main-story run, the base game is usually enough.
           </p>
         </BlufBox>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Deluxe item</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">What players should know</th>
+              </tr>
+            </thead>
+            <tbody>
+              {deluxeQuestionRows.map(([item, answer]) => (
+                <tr key={item} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{item}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <VideoEmbed
           videoId="gaQkzfA14G4"

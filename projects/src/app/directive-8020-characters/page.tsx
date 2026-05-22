@@ -55,6 +55,21 @@ const characterQuickRows = [
   ['Josef Cernan', 'Actor to verify', 'Technical engineer', 'Repairs, locked access, mechanical routes, and support choices.'],
 ];
 
+const characterSearchRows = [
+  ['Main character', 'Brianna Young is the clearest lead signal because Lashana Lynch is the confirmed headline performer and Young anchors much of the official story framing.'],
+  ['Playable characters', 'The core playable Cassiopeia crew is Young, Stafford, Eisele, Cooper, and Cernan. Movie Night supports assigning crew members to different players.'],
+  ['Samantha Cooper actress', 'Treat Samantha Cooper actor information as pending unless a platform page, credits capture, or trusted cast source clearly names the performer.'],
+  ['Face models', 'Use official portraits and credited cast sources only. Do not assume a face model from visual similarity.'],
+  ['Who can die?', 'Any survival route should track the five core crew members first, then supporting characters separately. Deaths can depend on QTEs, trust, relationships, and evidence.'],
+];
+
+const movieNightRows = [
+  ['Action-focused player', 'Assign to the crew member most likely to handle chases, QTEs, stealth pressure, or urgent rescue decisions.'],
+  ['Investigation-focused player', 'Assign to a character who often reads evidence, checks terminals, or makes trust decisions.'],
+  ['Group leader', 'Give this player Stafford or Young if your group wants one person to coordinate chapter notes and Turning Point checks.'],
+  ['Careful note-taker', 'Have this player track mimic suspicion, separated characters, and who returns with unverifiable information.'],
+];
+
 export default function CharactersPage() {
   return (
     <>
@@ -117,6 +132,35 @@ export default function CharactersPage() {
           title="Directive 8020 official character and story trailer"
           caption="The official trailer is useful for reading character tone: watch how the crew reacts under pressure, who appears isolated, and how the game frames trust before the mimic reveal."
         />
+
+        <div className="prose-game">
+          <h2>Quick Answers for Character Searches</h2>
+          <p>
+            Most character searches are not looking for lore first. Players
+            usually want to know who the main character is, which crew members
+            are playable, whether an actor is confirmed, and how each character
+            matters in a survival route.
+          </p>
+        </div>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Search need</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player-facing answer</th>
+              </tr>
+            </thead>
+            <tbody>
+              {characterSearchRows.map(([need, answer]) => (
+                <tr key={need} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{need}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <div className="prose-game">
           <h2>Confirmed Cast and Character Information</h2>
@@ -224,6 +268,28 @@ export default function CharactersPage() {
             with QTEs, and give major decision makers to players who like
             tracking clues and relationships.
           </p>
+        </div>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player type</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Best assignment habit</th>
+              </tr>
+            </thead>
+            <tbody>
+              {movieNightRows.map(([player, habit]) => (
+                <tr key={player} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{player}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{habit}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="prose-game">
           <ul>
             <li>Assign one person to keep a suspicion log for mimic behavior.</li>
             <li>Do not let one loud player override every trust decision.</li>
