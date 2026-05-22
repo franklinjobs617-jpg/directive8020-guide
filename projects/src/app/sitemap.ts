@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/games`,
-      lastModified: '2026-05-20',
+      lastModified: '2026-05-22',
       changeFrequency: 'weekly',
       priority: 0.64,
     },
@@ -175,6 +175,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${BASE_URL}/games/zero-parades/is-it-worth-it`,
       lastModified: '2026-05-21',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/mechanicus-ii`,
+      lastModified: '2026-05-22',
+      changeFrequency: 'daily',
+      priority: 0.72,
+    },
+    {
+      url: `${BASE_URL}/games/mechanicus-ii/release-date`,
+      lastModified: '2026-05-22',
+      changeFrequency: 'daily',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/games/mechanicus-ii/beginner-guide`,
+      lastModified: '2026-05-22',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/mechanicus-ii/factions`,
+      lastModified: '2026-05-22',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/mechanicus-ii/system-requirements`,
+      lastModified: '2026-05-22',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/mechanicus-ii/is-it-worth-it`,
+      lastModified: '2026-05-22',
       changeFrequency: 'weekly',
       priority: 0.68,
     },

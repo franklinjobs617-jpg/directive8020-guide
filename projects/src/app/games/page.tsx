@@ -7,10 +7,11 @@ import { projectMistImages } from "@/lib/project-mist";
 import { thickAsThievesImages } from "@/lib/thick-as-thieves";
 import { minaImages } from "@/lib/mina-the-hollower";
 import { zeroParadesImages } from "@/lib/zero-parades";
+import { mechanicusIIImages } from "@/lib/mechanicus-ii";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
-  "Browse Enjoy4Game guide hubs for horror, survival, stealth, espionage RPG, gothic action-adventure, and story-driven games, including Directive 8020, Project: Mist, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, espionage RPG, gothic action-adventure, and story-driven games, including Directive 8020, Project: Mist, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
   title: {
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
     "Directive 8020 guide",
     "Project Mist guide",
     "ZERO PARADES guide",
+    "Warhammer 40,000 Mechanicus II guide",
     "Thick As Thieves guide",
     "Mina the Hollower guide",
   ],
@@ -68,6 +70,13 @@ const gameCards = [
     label: "Espionage RPG",
     body: "Launch-day guide hub for release status, PC/PS5 notes, beginner skills, Conditioning, Exertion, PC specs, Steam Deck, and buying advice.",
     image: zeroParadesImages.hero,
+  },
+  {
+    title: "Warhammer 40,000: Mechanicus II",
+    href: "/games/mechanicus-ii",
+    label: "Turn-based tactics",
+    body: "Launch guide hub for release status, PC/PS5/Xbox platforms, Adeptus Mechanicus, Necrons, beginner tactics, PC specs, and buying advice.",
+    image: mechanicusIIImages.hero,
   },
   {
     title: "Thick As Thieves",
@@ -198,8 +207,10 @@ export default function GamesPage() {
             <p>
               If you are playing Directive 8020, start with the walkthrough,
               endings, choices, or trophy guides. If you are trying Project:
-              Mist, start with the Early Access hub. If you are trying ZERO
-              PARADES, start with release status, beginner skills, system
+              Mist, start with the Early Access hub. If you are playing
+              Mechanicus II, start with release status, factions, beginner
+              tactics, system requirements, or buying advice. If you are trying
+              ZERO PARADES, start with release status, beginner skills, system
               requirements, Steam Deck, or buying advice. If you are trying
               Thick As Thieves, start with the release and co-op pages, then check
               beginner stealth, contracts, system requirements, gear, or roadmap

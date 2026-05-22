@@ -274,6 +274,58 @@ export const zeroParades: GameConfig = {
   ],
 };
 
+export const mechanicusII: GameConfig = {
+  id: "mechanicus-ii",
+  slugPrefix: "mechanicus-ii",
+  hubPath: "/games/mechanicus-ii",
+  name: "Warhammer 40,000: Mechanicus II",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "A fast-paced turn-based tactics and strategy sequel from Bulwark Studios and Kasedo Games where players command either the Adeptus Mechanicus or Necron legions across linked campaigns, tactical battles, territory control, and resource management.",
+  platforms: ["PC", "PlayStation 5", "Xbox Series X|S"],
+  genres: ["Strategy", "Action", "RPG", "Turn-Based Tactics", "Warhammer 40K"],
+  developer: "Bulwark Studios",
+  publisher: "Kasedo Games",
+  releaseDate: "2026-05-21",
+  operatingSystem: "Windows 10 64-bit",
+  url: "https://store.steampowered.com/app/2532480/Warhammer_40000_Mechanicus_II/",
+  availability: "https://schema.org/InStock",
+  heroImage:
+    "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2532480/4b9ea5b45f304a841fc68520cc729307629fa9bd/header.jpg?t=1779383649",
+  guideLinks: [
+    {
+      title: "Release Date & Platforms",
+      href: "/games/mechanicus-ii/release-date",
+      description:
+        "May 21 launch status, Steam price, PS5 and Xbox availability, review signal, languages, achievements, and edition notes.",
+    },
+    {
+      title: "Beginner Guide",
+      href: "/games/mechanicus-ii/beginner-guide",
+      description:
+        "Spoiler-light first-session advice for campaign choice, cover, terrain, resources, leaders, and early tactical habits.",
+    },
+    {
+      title: "Factions Guide",
+      href: "/games/mechanicus-ii/factions",
+      description:
+        "Adeptus Mechanicus versus Necrons, campaign identity, battlefield strengths, leaders, and what still needs testing.",
+    },
+    {
+      title: "System Requirements",
+      href: "/games/mechanicus-ii/system-requirements",
+      description:
+        "Official minimum and recommended PC specs, 12 GB RAM baseline, GTX 1660 / RX 5600 XT minimum, RTX 2070 / RX 6600 XT recommended, and performance cautions.",
+    },
+    {
+      title: "Is Mechanicus II Worth It?",
+      href: "/games/mechanicus-ii/is-it-worth-it",
+      description:
+        "Buyer-focused guidance using price, Mixed Steam reviews, faction campaigns, platforms, performance risk, and Warhammer fit.",
+    },
+  ],
+};
+
 export const minaTheHollower: GameConfig = {
   id: "mina-the-hollower",
   slugPrefix: "mina-the-hollower",
