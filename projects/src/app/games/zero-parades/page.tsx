@@ -40,7 +40,7 @@ const faqs = [
   {
     question: 'Does ZERO PARADES support controllers?',
     answer:
-      'Steam lists partial controller support. Test controller prompts, UI readability, and input mapping before committing to a controller-only playthrough.',
+      'Steam lists partial controller support. Basic movement and dialogue work, but some UI elements may require mouse precision. See the controller support guide for a full breakdown of what works and what does not.',
   },
   {
     question: 'What are the system requirements for ZERO PARADES?',
@@ -55,17 +55,17 @@ const faqs = [
   {
     question: 'How long is ZERO PARADES?',
     answer:
-      'A single playthrough is estimated at 20-30 hours depending on dialogue depth and exploration. Completionist runs with multiple endings and skill-check reroutes can take 40+ hours.',
+      'A single playthrough is estimated at 20-30 hours depending on dialogue depth and exploration. Completionist runs with multiple endings and skill-check reroutes can take 40+ hours. See the game length guide for breakdown by playstyle and time-sensitive mechanics.',
   },
   {
     question: 'What is the best build in ZERO PARADES?',
     answer:
-      'There is no single best build at launch. The safest early approach is to pick an espionage identity that matches how you want to play: careful investigator, forceful operative, social manipulator, or unstable wildcard, then invest in 3-5 core skills that support that role.',
+      'There is no single best build. The safest first-playthrough approach is the Careful Investigator: invest in Deduction, Observation, Perception, and Composure. See the best build guide for all four archetypes, specific skill picks, and Conditioning tips.',
   },
   {
     question: 'Does ZERO PARADES have a walkthrough?',
     answer:
-      'This guide hub covers beginner tips, system requirements, Steam Deck setup, and buying advice. For route-specific guidance, use the beginner tips page for first-session priorities and the worth-it page for purchase decisions.',
+      'Yes. The walkthrough covers assignment progression, key decision points, skill checks, missable content, and time-sensitive events. It is updated as more playthrough data becomes available.',
   },
   {
     question: 'What type of game is ZERO PARADES?',
@@ -156,11 +156,11 @@ export default function ZeroParadesHubPage() {
             {[
               ['Is it on GOG?', 'Yes. Available on GOG, Steam, and Epic Games Store for PC.'],
               ['Is it on PS5?', 'PS5 is confirmed for 2026, but no exact launch date is public yet.'],
-              ['Controller support?', 'Steam lists partial controller support. Test prompts before a full run.'],
+              ['Controller support?', 'Partial. Movement and dialogue work; some UI needs mouse. See controller guide.'],
               ['System requirements?', 'Minimum: GTX 1060 6GB, 16 GB RAM, i5 6500. Recommended: RTX 2070, i5-10400.'],
-              ['Best build?', 'No single best build. Pick an espionage identity and invest in 3-5 core skills.'],
-              ['How long?', '20-30 hours per playthrough; 40+ hours for completionist runs.'],
-              ['Walkthrough?', 'Use beginner tips for first-session priorities. No full route walkthrough yet.'],
+              ['Best build?', 'Careful Investigator is safest for first run. See best build guide for all archetypes.'],
+              ['How long?', '20-30 hours per playthrough; 40+ hours for completionist. See length guide.'],
+              ['Walkthrough?', 'Yes. Covers assignments, decisions, skill checks, and missable content.'],
               ['Time limit?', 'Some quests are time-sensitive. Save before major conversations and watch for case urgency.'],
               ['Bugs?', 'Launch-day reports include crashes and UI glitches. Check Steam Community for patch notes.'],
               ['Steam Deck?', 'Steam Deck Verified. Test text size and battery before long sessions.'],

@@ -271,6 +271,30 @@ export const zeroParades: GameConfig = {
       description:
         "Buying advice for Disco Elysium fans, narrative RPG players, PS5 users, and cautious launch buyers.",
     },
+    {
+      title: "Best Build Guide",
+      href: "/games/zero-parades/best-build",
+      description:
+        "Four build archetypes, specific skill picks, Conditioning tips, and first-playthrough advice for Hershel Wilk.",
+    },
+    {
+      title: "Walkthrough",
+      href: "/games/zero-parades/walkthrough",
+      description:
+        "Assignment progression, key decision points, skill checks, missable content, and route guidance.",
+    },
+    {
+      title: "Controller Support",
+      href: "/games/zero-parades/controller-support",
+      description:
+        "Partial controller support explained, keyboard vs controller comparison, and Steam Deck controller tips.",
+    },
+    {
+      title: "Game Length & Time Limits",
+      href: "/games/zero-parades/length",
+      description:
+        "How long to beat, time-sensitive mechanics, missable content, multiple endings, and completionist hours.",
+    },
   ],
 };
 

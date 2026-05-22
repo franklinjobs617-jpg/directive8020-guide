@@ -256,10 +256,91 @@
 
 ---
 
+## 2026-05-22 - SEO Skills 深度分析 & 新页面创建
+
+### 分析方法
+- 使用 4 个并行 SEO sub-agent 分析：
+  1. Hub 页面深度分析（内容 vs 搜索意图匹配）
+  2. Best Build 内容简报
+  3. Walkthrough 内容简报
+  4. Bugs/Length 评估
+
+### 关键发现
+
+**Hub 页面 FAQ 存在 3 个"死胡同"回答：**
+- "best build" FAQ 只有 42 字，没列出任何具体技能名
+- "walkthrough" FAQ 是转去其他页面的重定向，不是答案
+- "controller support" FAQ 说了 3 遍 "partial" 但没解释含义
+
+**Title/Description 过度承诺：**
+- Title 写了 "Best Builds" 但没有 build guide 页面
+- Description 写了 "game length" 但没有 length 页面
+
+### 新创建的 4 个页面
+
+| 页面 | URL | 目标关键词 | GSC 数据 | 优先级 |
+|------|-----|-----------|---------|--------|
+| Best Build | `/games/zero-parades/best-build` | zero parades best build | pos 4.67, 6 imp, 0% CTR | 1 |
+| Walkthrough | `/games/zero-parades/walkthrough` | zero parades walkthrough | pos 7, 5 imp, 0% CTR | 2 |
+| Controller Support | `/games/zero-parades/controller-support` | zero parades controller support | pos 7.71, 7 imp, 0% CTR | 3 |
+| Game Length | `/games/zero-parades/length` | zero parades length | pos 7.67, 3 imp, 0% CTR | 4 |
+
+### 不创建的页面（SEO 分析否决）
+
+| 页面 | 原因 |
+|------|------|
+| Bugs/Crashing | Reddit 信号太弱（3 条模糊帖子），没有独立问题分类，hub FAQ 已覆盖 |
+| System Requirements | 页面已存在，问题是排名不是内容 |
+
+### 修改内容
+
+**新页面（4 个）：**
+- `src/app/games/zero-parades/best-build/page.tsx` — 4 个 build archetype、15 个技能详解、Conditioning/Exertion 建议
+- `src/app/games/zero-parades/walkthrough/page.tsx` — 进度结构、任务框架、可错过内容、决策框架
+- `src/app/games/zero-parades/controller-support/page.tsx` — partial support 解释、键鼠对比、Steam Deck 提示
+- `src/app/games/zero-parades/length/page.tsx` — 游戏时长分解、时间敏感机制、多结局
+
+**Hub 页面更新：**
+- FAQ "best build" 回答更新：从 42 字泛泛回答改为具体 archetype + 技能推荐
+- FAQ "walkthrough" 回答更新：从重定向改为直接回答
+- FAQ "controller" 回答更新：补充 partial support 含义
+- FAQ "length" 回答更新：补充时间敏感机制
+- 快速回答表 4 行更新：指向新页面
+
+**数据文件更新：**
+- `src/lib/zero-parades.ts` — 新增 6 个数据表（buildArchetypeRows, skillRows, lengthRows, timeLimitRows, controllerRows）
+- `src/lib/games.ts` — 新增 4 个 guideLinks
+
+---
+
+## 修改文件清单（最终）
+
+| 文件路径 | 修改类型 |
+|----------|----------|
+| `src/app/games/zero-parades/page.tsx` | Title, Description, FAQ（更新 4 个回答）, 快速回答表（更新 4 行）, Keywords |
+| `src/app/games/zero-parades/best-build/page.tsx` | **新页面** |
+| `src/app/games/zero-parades/walkthrough/page.tsx` | **新页面** |
+| `src/app/games/zero-parades/controller-support/page.tsx` | **新页面** |
+| `src/app/games/zero-parades/length/page.tsx` | **新页面** |
+| `src/app/games/project-mist/page.tsx` | Title, Description, FAQ（+2 new）, Keywords |
+| `src/app/games/project-mist/release-date/page.tsx` | Title, Description, FAQ, 首屏快速回答表 |
+| `src/app/games/project-mist/beginner-guide/page.tsx` | Title, Description, FAQ |
+| `src/app/games/thick-as-thieves/solo-coop/page.tsx` | Title, Description, FAQ, 首屏表格, Keywords |
+| `src/components/zero-parades-article.tsx` | 添加 FAQPage Schema 输出 |
+| `src/lib/zero-parades.ts` | Keywords, beginner rows, launch check rows, **6 个新数据表** |
+| `src/lib/games.ts` | **4 个新 guideLinks** |
+| `src/lib/project-mist.ts` | Keywords 更新 |
+| `src/lib/thick-as-thieves.ts` | Keywords 更新 |
+
+---
+
 ## 下一步监控
 
 - [ ] 24-48 小时后检查 GSC CTR 变化
 - [ ] 确认 FAQPage Schema 被 Google 识别
-- [ ] 监控 `project mist xbox` 查询的 CTR（目标：从 6.25% 提升到 10%+）
 - [ ] 监控 `zero parades best build` 查询的 CTR（目标：从 0% 提升到 5%+）
-- [ ] 监控 `gog zero parades` 查询的 CTR（目标：从 0% 提升到 5%+）
+- [ ] 监控 `zero parades walkthrough` 查询的 CTR（目标：从 0% 提升到 5%+）
+- [ ] 监控 `zero parades controller support` 查询的 CTR（目标：从 0% 提升到 5%+）
+- [ ] 监控 `zero parades length` 查询的 CTR（目标：从 0% 提升到 5%+）
+- [ ] 监控 `project mist xbox` 查询的 CTR（目标：从 6.25% 提升到 10%+）
+- [ ] 确认新页面被 Google 索引

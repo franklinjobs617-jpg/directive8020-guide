@@ -110,6 +110,54 @@ export const zeroParadesLaunchCheckRows = [
   ['Later localization', 'French, Italian, Japanese, Korean, Polish, Portuguese (Brazilian), Traditional Chinese, and Turkish are planned as free updates later in 2026.'],
 ];
 
+export const zeroParadesBuildArchetypeRows = [
+  ['Careful Investigator', 'Deduction, observation, patience', 'Dialogue-heavy routes, evidence gathering, reading motives', 'Low Exertion use; lets some checks fail to learn from consequences'],
+  ['Forceful Operative', 'Intimidation, physical presence, coercion', 'Direct confrontation, leverage, forcing compliance', 'Moderate Exertion; accepts higher Fatigue for mission-critical checks'],
+  ['Social Manipulator', 'Persuasion, deception, reading people', 'Faction navigation, cover stories, turning informants', 'Low-moderate Exertion; invests in social skills to reduce physical pressure'],
+  ['Unstable Wildcard', 'High-risk, Delirium-leaning, experimental', 'Unconventional routes, Conditioning experiments, edge cases', 'High Exertion; embraces pressure states as a cost of power'],
+];
+
+export const zeroParadesSkillRows = [
+  ['Deduction', 'Analyzing evidence, connecting clues, reading situations', 'Investigator'],
+  ['Observation', 'Noticing details, watching patterns, environmental awareness', 'Investigator'],
+  ['Intimidation', 'Applying pressure through presence, threats, or reputation', 'Operative'],
+  ['Coercion', 'Forcing compliance through leverage or physical dominance', 'Operative'],
+  ['Persuasion', 'Convincing others through charm, logic, or emotional appeal', 'Social'],
+  ['Deception', 'Lying, misdirection, cover stories, false identities', 'Social'],
+  ['Reflexes', 'Quick reactions, dodge, initiative in split-second moments', 'Operative / Wildcard'],
+  ['Endurance', 'Physical resilience, resisting pressure, sustaining effort', 'Operative'],
+  ['Subterfuge', 'Stealth, misdirection, working behind the scenes', 'Social / Investigator'],
+  ['Rhetoric', 'Argumentation, debate, ideological confrontation', 'Social'],
+  ['Perception', 'Reading body language, detecting lies, sensing danger', 'Investigator'],
+  ['Volatile', 'Unpredictable actions, embracing chaos, Delirium-tied choices', 'Wildcard'],
+  ['Suggestion', 'Planting ideas, subtle influence, psychological manipulation', 'Social / Wildcard'],
+  ['Composure', 'Maintaining cover, staying calm under pressure, poise', 'Investigator / Social'],
+  ['Savoir Faire', 'Style, improvisation, creative problem-solving under duress', 'Wildcard / Social'],
+];
+
+export const zeroParadesLengthRows = [
+  ['Main story', '20-30 hours', 'Single playthrough with moderate dialogue exploration'],
+  ['Thorough playthrough', '30-40 hours', 'Reading all dialogue, exploring side content, testing skill checks'],
+  ['Completionist', '40+ hours', 'Multiple endings, rerouted assignments, full Conditioning experiments'],
+  ['Speed run', 'Under 15 hours', 'Skipping dialogue, minimal exploration, direct route through assignments'],
+];
+
+export const zeroParadesTimeLimitRows = [
+  ['Resting', 'Some events advance when Hershel rests; save before sleeping', 'Community reports'],
+  ['Area transitions', 'Moving between zones can trigger time-sensitive events', 'Community reports'],
+  ['Assignment urgency', 'Main cases may have implicit deadlines expressed through dialogue', 'Steam description'],
+  ['Dialogue consequences', 'Certain conversations lock out options if not completed in sequence', 'Community reports'],
+];
+
+export const zeroParadesControllerRows = [
+  ['Movement', 'Works with controller; standard stick movement', 'Verified'],
+  ['Dialogue navigation', 'Controller can navigate dialogue trees; test responsiveness', 'Community reports'],
+  ['Skill menus', 'Partial support; some UI elements may require mouse precision', 'Steam listing'],
+  ['Inventory / Journal', 'May feel less precise than mouse; test before committing', 'Community reports'],
+  ['Combat / encounters', 'Controller works for basic interactions; complex checks may favor mouse', 'Steam listing'],
+  ['Text readability', 'Adjustable text size listed on Steam; important for controller on TV', 'Steam listing'],
+];
+
 export const zeroParadesSourceRows = [
   {
     claim: 'When does the PC version release, and what does Steam list?',
