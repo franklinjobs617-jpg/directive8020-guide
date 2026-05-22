@@ -88,6 +88,7 @@ export const zeroParadesBeginnerRows = [
   ['Spend Exertion carefully', 'Exertion can push dice rolls in your favor, but Fatigue, Anxiety, and Delirium create long-term pressure.'],
   ['Read agendas before acting', 'Informants, rivals, bankers, techno-fascists, doppelgangers, and strange locals all have motives. Dialogue is investigation.'],
   ['Save before risky conversations', 'Steam lists Save Anytime, so use manual saves before high-pressure checks or irreversible assignment choices.'],
+  ['Watch for time-sensitive events', 'Some assignments and conversations advance when you rest or move between areas. Save often so you can reload if a timer triggers unexpectedly.'],
 ];
 
 export const zeroParadesWorthItRows = [
@@ -102,6 +103,7 @@ export const zeroParadesLaunchCheckRows = [
   ['PC availability', 'May 21, 2026 PC launch is announced for Steam, Epic Games Store, and GOG; check the live buy button in your region.'],
   ['PS5 timing', 'PS5 is announced for 2026, but no exact PS5 launch date is public yet.'],
   ['Price', 'The US price is $39.99; local storefront prices can differ.'],
+  ['Known issues', 'Launch-day reports include crashes, progression blockers, and UI glitches. Check Steam Community and recent patch notes before a long session.'],
   ['Language', 'English has full audio; launch text support includes German, Russian, Simplified Chinese, and Spanish - Latin America.'],
   ['Controller', 'Steam lists partial controller support, so test controls and UI readability early.'],
   ['Steam Deck', 'Steam Deck Verified; test text size, menus, and cloud saves before a long session.'],
@@ -190,6 +192,11 @@ const zeroParadesKeywords = [
   'ZERO PARADES Disco Elysium',
   'ZERO PARADES worth it',
   'ZERO PARADES price',
+  'ZERO PARADES time limit',
+  'ZERO PARADES bugs',
+  'ZERO PARADES crafting',
+  'ZERO PARADES GeForce Now',
+  'ZERO PARADES technical issues',
 ];
 
 export function createZeroParadesMetadata({

@@ -65,6 +65,16 @@ const faqs = [
     answer:
       'Project: Mist is an open-world survival horror game from Chicken Launcher about surviving a hostile island with mysterious facilities, giant creatures, crafting, a Gravity Gun, and a moving train base.',
   },
+  {
+    question: 'What does the Gravity Gun do in Project: Mist?',
+    answer:
+      'The Gravity Gun lets you pick up, throw, and manipulate objects and debris. It is the main tool for physics-based combat, puzzle solving, and environmental interaction. YouTube gameplay shows it used against creatures and for clearing paths in facilities.',
+  },
+  {
+    question: 'How does the train base work in Project: Mist?',
+    answer:
+      'The train base moves with your run and serves as a mobile hub for crafting, storage, and upgrades. You return to it between facility runs to resupply, heal, and plan your next move. It can be upgraded as you progress.',
+  },
 ];
 
 const projectMistDecisionRows = [

@@ -77,6 +77,26 @@ const faqs = [
     answer:
       'Steam describes it as an espionage RPG from the creators of Disco Elysium, so the useful comparison is dense writing, skill checks, internal character systems, and failure-driven consequences rather than action combat.',
   },
+  {
+    question: 'Does ZERO PARADES have a time limit?',
+    answer:
+      'Some quests and assignments use time-sensitive mechanics. The game does not always make these limits explicit, so save before major conversations and pay attention to case urgency in the dialogue. Community reports suggest certain events advance when you rest or move between areas.',
+  },
+  {
+    question: 'Are there bugs in ZERO PARADES?',
+    answer:
+      'Launch-day player reports mention technical issues including crashes, progression blockers, and UI glitches. ZA/UM is likely to patch these during the post-launch window. Check the Steam Community hub and recent patch notes before starting a long session.',
+  },
+  {
+    question: 'How does crafting work in ZERO PARADES?',
+    answer:
+      'Crafting is not a traditional system. ZERO PARADES focuses on dialogue, skill checks, and investigation rather than item crafting. If you are looking for item creation or resource management, the game does not emphasize those mechanics.',
+  },
+  {
+    question: 'Can I play ZERO PARADES on GeForce Now?',
+    answer:
+      'GeForce Now support has not been officially confirmed by ZA/UM. Some players report attempting to stream via GeForce Now with mixed results. Check the GeForce Now library and Steam Community for the latest compatibility reports.',
+  },
 ];
 
 const zeroParadesDecisionRows = [
@@ -141,6 +161,8 @@ export default function ZeroParadesHubPage() {
               ['Best build?', 'No single best build. Pick an espionage identity and invest in 3-5 core skills.'],
               ['How long?', '20-30 hours per playthrough; 40+ hours for completionist runs.'],
               ['Walkthrough?', 'Use beginner tips for first-session priorities. No full route walkthrough yet.'],
+              ['Time limit?', 'Some quests are time-sensitive. Save before major conversations and watch for case urgency.'],
+              ['Bugs?', 'Launch-day reports include crashes and UI glitches. Check Steam Community for patch notes.'],
               ['Steam Deck?', 'Steam Deck Verified. Test text size and battery before long sessions.'],
             ].map(([question, answer]) => (
               <tr key={question} className="border-b border-border/30 last:border-0">
