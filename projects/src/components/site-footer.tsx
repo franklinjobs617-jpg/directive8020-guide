@@ -192,7 +192,16 @@ export function SiteFooter() {
                   Copyright Infringement
                 </Link>
               </li>
-              <li className="text-sm"></li>
+              <li>
+                <a
+                  href="https://ipooket.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Romestead
+                </a>
+              </li>
             </ul>
           </div>
         </div>
