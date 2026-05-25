@@ -75,7 +75,7 @@ const faqs = [
   {
     question: 'Is ZERO PARADES like Disco Elysium?',
     answer:
-      'Steam describes it as an espionage RPG from the creators of Disco Elysium, so the useful comparison is dense writing, skill checks, internal character systems, and failure-driven consequences rather than action combat.',
+      'Steam describes it as an espionage RPG from the creators of Disco Elysium, so the useful comparison is dense writing, skill checks, character pressure systems, and failure-driven consequences rather than action combat.',
   },
   {
     question: 'Does ZERO PARADES have a time limit?',
@@ -107,12 +107,20 @@ const zeroParadesDecisionRows = [
   ['Unsure about price', 'The US price is $39.99. Regional prices can differ, so check the storefront you actually plan to use.'],
 ];
 
+const zeroParadesFastAnswerRows = [
+  ['Is it on GOG?', 'Yes. ZERO PARADES is available on GOG, Steam, and Epic Games Store for PC.', 'Release Date & Platforms'],
+  ['Does it support controllers?', 'Steam lists partial controller support, so test UI navigation and mouse-heavy menus before a long session.', 'Controller Support'],
+  ['What is the best build?', 'Do not treat one build as final. Careful Investigator is the safest first-run guidance while launch balance settles.', 'Best Build'],
+  ['How long is it?', 'Expect about 20-30 hours for one playthrough and 40+ hours for completionist reroutes.', 'Game Length & Time Limits'],
+  ['Is it on PS5?', 'PS5 is announced for 2026, but no exact PlayStation launch date is public yet.', 'Release Date & Platforms'],
+];
+
 const zeroParadesFirstHourRows = [
   ['Read the case setup carefully', 'Names, factions, and job titles are likely to matter. Do not skip early briefings just to reach the next check faster.'],
   ['Pick a build you can role-play', 'A spy RPG is easier to read when your skills support the kind of operative you want to be: careful, forceful, social, or unstable.'],
   ['Do not force every check', 'Failure can be part of the route. Save before major conversations, but let some consequences reveal how the game reacts.'],
   ['Track pressure systems', 'Conditioning and Exertion are not just flavor terms. Watch how stress, effort, and recovery shape your next choices.'],
-  ['Keep platform comfort in mind', 'If you play handheld, test font size, controller prompts, and save behavior before committing to a long reading session.'],
+  ['Keep platform comfort in mind', 'If you play handheld, test font size, controller labels, and save behavior before committing to a long reading session.'],
 ];
 
 function getGuideImage(href: string) {
@@ -138,9 +146,11 @@ export default function ZeroParadesHubPage() {
       <BlufBox title="Launch Answer">
         <p>
           <strong>ZERO PARADES: For Dead Spies launched May 21, 2026 on PC.</strong>{' '}
-          Available on Steam, Epic Games Store, and GOG. PS5 is announced for 2026
-          without an exact date. Steam Deck Verified, partial controller support,
-          $39.99 US price, and roughly 20-30 hours per playthrough.
+          For quick decisions: it is available on GOG, Steam, and Epic Games
+          Store; PS5 is announced for 2026 without an exact date; Steam lists
+          partial controller support; and the safest launch-window build advice
+          is to choose a role-playable skill direction instead of chasing a
+          final best build.
         </p>
       </BlufBox>
 
@@ -149,25 +159,16 @@ export default function ZeroParadesHubPage() {
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">Question</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Direct answer</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Answer</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Best next guide</th>
             </tr>
           </thead>
           <tbody>
-            {[
-              ['Is it on GOG?', 'Yes. Available on GOG, Steam, and Epic Games Store for PC.'],
-              ['Is it on PS5?', 'PS5 is confirmed for 2026, but no exact launch date is public yet.'],
-              ['Controller support?', 'Partial. Movement and dialogue work; some UI needs mouse. See controller guide.'],
-              ['System requirements?', 'Minimum: GTX 1060 6GB, 16 GB RAM, i5 6500. Recommended: RTX 2070, i5-10400.'],
-              ['Best build?', 'Careful Investigator is safest for first run. See best build guide for all archetypes.'],
-              ['How long?', '20-30 hours per playthrough; 40+ hours for completionist. See length guide.'],
-              ['Walkthrough?', 'Yes. Covers assignments, decisions, skill checks, and missable content.'],
-              ['Time limit?', 'Some quests are time-sensitive. Save before major conversations and watch for case urgency.'],
-              ['Bugs?', 'Launch-day reports include crashes and UI glitches. Check Steam Community for patch notes.'],
-              ['Steam Deck?', 'Steam Deck Verified. Test text size and battery before long sessions.'],
-            ].map(([question, answer]) => (
+            {zeroParadesFastAnswerRows.map(([question, answer, nextGuide]) => (
               <tr key={question} className="border-b border-border/30 last:border-0">
                 <td className="px-4 py-3 font-semibold text-foreground">{question}</td>
                 <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                <td className="px-4 py-3 text-muted-foreground">{nextGuide}</td>
               </tr>
             ))}
           </tbody>
@@ -360,7 +361,7 @@ export default function ZeroParadesHubPage() {
         <ArticleImage
           src={zeroParadesImages.screenshot5}
           alt="ZERO PARADES buying advice screenshot"
-          caption="The strongest fit is players who want an espionage RPG with dense writing, skill checks, weird politics, failure states, and internal character systems."
+          caption="The strongest fit is players who want an espionage RPG with dense writing, skill checks, weird politics, failure states, and character pressure systems."
         />
       </section>
 

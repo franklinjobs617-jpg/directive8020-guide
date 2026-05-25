@@ -12,7 +12,7 @@ import {
   projectMistImages,
   projectMistLaunchQuestionRows,
   projectMistLaunchSnapshotRows,
-  projectMistGscOpportunityRows,
+  projectMistLaunchIntentRows,
   projectMistQuickFacts,
   projectMistVideos,
 } from '@/lib/project-mist';
@@ -117,12 +117,12 @@ export default function ProjectMistHubPage() {
     >
       <BlufBox title="Early Access Snapshot">
         <p>
-          <strong>Project: Mist is live in Steam Early Access on PC via Steam
-          as of 19 May, 2026.</strong> The useful first answer is not just the
-          date: players also need to know that Steam lists solo play, online
-          co-op, 1-4 player copy, Gravity Gun, moving train base, Steam Cloud,
-          and Early Access risk. Xbox, PlayStation, and cross-play are not
-          confirmed by the current Steam listing.
+          <strong>Project: Mist is live on PC via Steam Early Access as of
+          19 May, 2026.</strong> Xbox, PS5, and console versions are not
+          confirmed by the current Steam listing or official store data.
+          Players should also know that Steam lists solo play, online co-op,
+          1-4 player copy, Gravity Gun, moving train base, Steam Cloud, and
+          Early Access risk.
         </p>
       </BlufBox>
 
@@ -188,7 +188,7 @@ export default function ProjectMistHubPage() {
               </tr>
             </thead>
             <tbody>
-              {projectMistGscOpportunityRows.map(([intent, answer, next]) => (
+              {projectMistLaunchIntentRows.map(([intent, answer, next]) => (
                 <tr key={intent} className="border-b border-border/30 last:border-0">
                   <td className="px-4 py-3 font-semibold text-foreground">{intent}</td>
                   <td className="px-4 py-3 text-muted-foreground">{answer}</td>

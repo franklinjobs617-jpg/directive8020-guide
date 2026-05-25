@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArticleImage, VideoEmbed } from '@/components/article-media';
+import { ArticleImage } from '@/components/article-media';
 import { BlufBox, StatusPanel } from '@/components/guide-blocks';
 import { RomesteadArticle } from '@/components/romestead-article';
 import { romestead } from '@/lib/games';
@@ -8,7 +8,6 @@ import {
   createRomesteadMetadata,
   romesteadImages,
   romesteadQuickFacts,
-  romesteadVideos,
 } from '@/lib/romestead';
 
 const title = 'Romestead Guide Hub: Release Date, Co-op, Early Access & Beginner Tips';
@@ -187,20 +186,6 @@ export default function RomesteadHubPage() {
           for planning the layout idea; official screenshots should be used for
           exact in-game visuals.
         </p>
-      </section>
-
-      <section className="my-10">
-        <h2 className="mb-4 text-xl font-bold text-foreground">Official Video Reference</h2>
-        <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
-          Use the official trailer for the tone and feature framing. Do not use
-          trailer footage as proof of final balance, best builds, late-game
-          stability, or exact dungeon routes.
-        </p>
-        <VideoEmbed
-          videoId={romesteadVideos[0].id}
-          title={romesteadVideos[0].title}
-          caption={romesteadVideos[0].caption}
-        />
       </section>
     </RomesteadArticle>
   );

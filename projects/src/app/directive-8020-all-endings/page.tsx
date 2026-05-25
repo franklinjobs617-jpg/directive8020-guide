@@ -9,9 +9,9 @@ import { SurvivalEndingTracker } from '@/components/tools/survival-ending-tracke
 import { EndingIndex } from '@/components/tools/ending-index';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 All Endings - How to Unlock Every Ending',
+  title: 'Directive 8020 Endings: Best, Secret & Death Spiral',
   description:
-    'Directive 8020 all endings guide: how many endings, known finale names, Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, Horror, and best ending routes.',
+    'Directive 8020 endings guide: how many endings there are, best ending route, secret ending checks, Death Spiral, ending explained, and known finale outcomes.',
   alternates: {
     canonical: '/directive-8020-all-endings',
   },
@@ -24,25 +24,34 @@ const faqs = [
       'Directive 8020 has five major ending families reported by review coverage, with named finale outcomes and variations such as Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, and Horror.',
   },
   {
-    question: 'What are Cycle 13 and the Booster Ring in Directive 8020?',
-    answer:
-      'Cycle 13 and the Booster Ring are late-story ending topics players search after finishing Directive 8020. They should be handled as spoiler content because they connect to finale interpretation and route cleanup.',
-  },
-  {
     question: 'What is the best ending in Directive 8020?',
     answer:
-      'The safest best-ending assumption is to keep the crew alive, verify the mimic before trusting isolated characters, preserve useful relationships, and avoid choices that sacrifice Earth or the Cassiopeia crew without proof.',
+      'The safest best-ending route is to keep the crew alive, verify the mimic before trusting isolated characters, preserve useful relationships, collect evidence, and avoid choices that sacrifice Earth or the Cassiopeia crew without proof.',
   },
   {
-    question: 'Can I see every ending without replaying the full game?',
+    question: 'Is there a secret ending in Directive 8020?',
     answer:
-      'Directive 8020 introduces the Turning Points story tree, which is designed to help players revisit key decisions, unlock hidden paths, and save crew members from previous deaths without always starting from the beginning.',
+      'Players should treat Cycle 13, the Booster Ring, mimic exposure, and unresolved contamination as the main secret-ending checks until exact hidden-ending triggers are verified through controlled Story Tree testing.',
   },
   {
-    question: 'Should I use an endings guide on my first playthrough?',
+    question: 'What is Death Spiral in Directive 8020?',
     answer:
-      'If you care about story impact, play blind first and use this page as a spoiler-safe tracking framework. If you care about trophies or the best ending, start logging Turning Points and deaths from chapter one.',
+      'Death Spiral is best treated as a special route concept tied to severe failure or collapse conditions, not a normal all-deaths checklist item. Exact trigger conditions should remain marked as working until verified in multiple runs.',
   },
+  {
+    question: 'What does the Directive 8020 ending mean?',
+    answer:
+      'Read the ending through survivor state, message choice, Andromeda risk, Oracle data, mimic evidence, and the cycle reveal. The final result is not only about who lives; it is also about what threat may leave the Cassiopeia.',
+  },
+];
+
+const fastAnswerRows = [
+  ['How many endings?', 'Five major ending families are currently reported, with several named finale outcomes and variations.', 'Low'],
+  ['Best ending', 'Keep the crew alive, preserve evidence, verify mimic clues, and avoid reckless sacrifice choices.', 'Medium'],
+  ['Good ending', 'Aim for a stable crew-and-mission outcome where survivor state and evidence support the finale decision.', 'Medium'],
+  ['Secret ending', 'Check Cycle 13, Booster Ring, mimic exposure, and unresolved contamination routes.', 'High'],
+  ['Death Spiral', 'Treat it as a special collapse route until the exact trigger is verified through repeated branch testing.', 'High'],
+  ['Ending explained', 'Interpret the finale through Andromeda risk, Oracle data, crew state, message choice, and cycle truth.', 'High'],
 ];
 
 const endingFactors = [
@@ -66,7 +75,7 @@ const namedEndingRows = [
 
 const endingCountRows = [
   ['Reported main ending families', '5 substantial endings', 'Reported by launch review coverage; named finale outcomes and variations should be mapped in the Story Tree.'],
-  ['Known named outcomes to test', '7+ named outcomes', 'Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, and Horror are the main CTR-facing names to include.'],
+  ['Known named outcomes to test', '7+ named outcomes', 'Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, and Horror are the main named outcomes to track.'],
   ['Death scenes', '44 death scenes', 'Useful for endings because dead characters can close or change finale paths.'],
   ['Collectibles', '65 collectibles', '50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets can affect lore and cleanup routes.'],
   ['Episode structure', '8 episodes', 'Use episode boundaries to track survivor state, Turning Points, and ending conditions.'],
@@ -77,6 +86,7 @@ const endingIntentRows = [
   ['Best ending', 'Build a clean survivor route first, preserve evidence, verify mimic clues, and avoid sacrifice choices until the finale logic is clear.'],
   ['Good ending', 'Treat a good ending as a stable crew-and-mission outcome, not simply the last dialogue option. Survivor state and evidence matter.'],
   ['Secret ending', 'Use hidden or ambiguous routes such as Cycle 13, Booster Ring, mimic exposure, and unresolved contamination as the main secret-ending checks.'],
+  ['Death Spiral', 'Treat Death Spiral as a special collapse route, not a normal all-deaths checklist, until the exact trigger conditions are verified.'],
   ['Ending explained', 'Read the finale through message choice, Andromeda risk, Oracle data, survivor state, and the cycle reveal.'],
 ];
 
@@ -131,9 +141,9 @@ export default function AllEndingsPage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 All Endings Guide - How Many Endings & Routes',
+          title: 'Directive 8020 Endings: Best, Secret & Death Spiral',
           description:
-            'Directive 8020 all endings guide with reported ending count, known ending names, Story Tree tracking, Turning Points strategy, best ending principles, and route checklist.',
+            'Directive 8020 endings guide with reported ending count, best ending route, secret ending checks, Death Spiral, ending explained, Story Tree tracking, and route checklist.',
           url: '/directive-8020-all-endings',
           datePublished: '2026-05-12',
           dateModified: '2026-05-21',
@@ -147,7 +157,7 @@ export default function AllEndingsPage() {
         <PageHero src="/d8020-screenshot-06.jpg" alt="Directive 8020 official Story Tree screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 All Endings Guide
+          Directive 8020 Endings: Best, Secret and Death Spiral
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
           Directive 8020 has <strong className="text-foreground">5 reported
@@ -175,6 +185,30 @@ export default function AllEndingsPage() {
             at a time.
           </p>
         </BlufBox>
+
+        <section className="my-8">
+          <h2 className="mb-3 text-xl font-bold text-foreground">Fast Answer</h2>
+          <div className="overflow-hidden rounded-lg border border-border/50 bg-card/30">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-border/50 bg-card/50">
+                  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Question</th>
+                  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Direct answer</th>
+                  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Spoiler level</th>
+                </tr>
+              </thead>
+              <tbody>
+                {fastAnswerRows.map(([question, answer, spoiler]) => (
+                  <tr key={question} className="border-b border-border/30 last:border-0">
+                    <td className="px-4 py-3 font-semibold text-foreground">{question}</td>
+                    <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                    <td className="px-4 py-3 text-muted-foreground">{spoiler}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
 
         <StatusPanel
           items={[
@@ -269,7 +303,7 @@ export default function AllEndingsPage() {
           <h2>Ending Count and Completion Facts</h2>
           <p>
             The key completion numbers help players understand the scale of the
-            ending hunt. They also keep AI answers precise: five reported main
+            ending hunt. They also keep quick references precise: five reported main
             endings, forty-four death scenes, sixty-five collectibles, and eight
             episodes to track.
           </p>

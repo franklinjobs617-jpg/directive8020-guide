@@ -133,7 +133,7 @@ export default function RomesteadWorthItPage() {
         <h2>What to Check Before Keeping the Game</h2>
         <ArticleImage
           src={romesteadImages.planningVillageMarket}
-          alt="Romestead launch-window checklist screenshot"
+          alt="Romestead-style settlement market planning illustration"
           caption="Planning illustration for settlement growth and production value. Use the first session to test the parts that matter to your purchase: performance, controls, building, co-op, saves, and whether the survival loop feels good."
         />
         <ul>

@@ -3,9 +3,9 @@ import { ArticleImage } from '@/components/article-media';
 import { BlufBox } from '@/components/guide-blocks';
 import { createProjectMistMetadata, projectMistImages, projectMistLaunchSnapshotRows } from '@/lib/project-mist';
 
-const title = 'Project: Mist Release Date 2026: Xbox Status, Early Access & PC';
+const title = 'Project Mist Release Date: Xbox, PS5, Console & Early Access';
 const description =
-  'Project: Mist released May 19, 2026 in Steam Early Access. Xbox and PS5 not confirmed. Check release status, demo, price, and platform details.';
+  'Project: Mist released May 19, 2026 in Steam Early Access on PC. Xbox, PS5, and console versions are not confirmed. Check demo, price, and platform details.';
 const canonical = '/games/project-mist/release-date';
 
 export const metadata = createProjectMistMetadata({
@@ -17,11 +17,6 @@ export const metadata = createProjectMistMetadata({
 
 const faqs = [
   {
-    question: 'Is Project: Mist on Xbox?',
-    answer:
-      'No. Xbox is not confirmed by the current Steam listing or any official store data. Treat Project: Mist as a PC Steam Early Access release until Chicken Launcher announces Xbox plans.',
-  },
-  {
     question: 'Is Project: Mist out now?',
     answer:
       'Yes. Project: Mist released into Steam Early Access on 19 May, 2026, for PC via Steam.',
@@ -32,14 +27,19 @@ const faqs = [
       'Project: Mist released into Steam Early Access on 19 May, 2026, for PC via Steam.',
   },
   {
+    question: 'Is Project: Mist on Xbox?',
+    answer:
+      'No. Xbox is not confirmed by the current Steam listing or any official store data. Treat Project: Mist as a PC Steam Early Access release until Chicken Launcher announces Xbox plans.',
+  },
+  {
+    question: 'Is Project: Mist on PS5 or console?',
+    answer:
+      'No PS5 or console version is confirmed by current official store data. PC via Steam is the only confirmed platform at this check.',
+  },
+  {
     question: 'Is Project: Mist Early Access?',
     answer:
       'Yes. The Steam page currently presents Project: Mist as an Early Access release.',
-  },
-  {
-    question: 'Is Project: Mist on PlayStation?',
-    answer:
-      'No. PlayStation is not confirmed by the current Steam listing. Treat PC Steam as the only confirmed platform until Chicken Launcher announces PlayStation plans.',
   },
   {
     question: 'Does Project: Mist have a demo?',
@@ -62,11 +62,12 @@ const launchChecks = [
 ];
 
 const platformRows = [
-  ['PC Steam', 'Confirmed by the live Steam listing.'],
-  ['Windows 10/11', 'Confirmed in the minimum system requirements.'],
-  ['Xbox', 'Not confirmed by the current Steam listing or page data.'],
-  ['PlayStation', 'Not confirmed by the current Steam listing or page data.'],
-  ['Cross-play', 'Not confirmed; do not assume cross-platform co-op.'],
+  ['PC Steam', 'Confirmed by the live Steam listing.', 'Use Steam for purchase status, price, reviews, demo button, and patch notes.'],
+  ['Windows 10/11', 'Confirmed in the minimum system requirements.', 'Check your CPU, RAM, GPU, and storage against the system requirements page.'],
+  ['Xbox', 'Not confirmed by the current Steam listing or official store data.', 'Do not wait on an Xbox version unless Chicken Launcher announces one.'],
+  ['PS5 / PlayStation', 'Not confirmed by the current Steam listing or official store data.', 'Treat PS5 and PlayStation as unannounced until an official store page appears.'],
+  ['Console version', 'Not confirmed.', 'Use PC Steam as the only verified platform for now.'],
+  ['Cross-play', 'Not confirmed; do not assume cross-platform co-op.', 'Plan co-op only around Steam PC players until cross-platform support is announced.'],
 ];
 
 export default function ProjectMistReleaseDatePage() {
@@ -82,10 +83,10 @@ export default function ProjectMistReleaseDatePage() {
     >
       <BlufBox title="Release Answer">
         <p>
-          <strong>Project: Mist is live in Steam Early Access on PC via Steam
-          as of 19 May, 2026.</strong> Xbox is not confirmed by the current
-          Steam listing or official store data. PlayStation and cross-play are
-          also not confirmed. Treat PC Steam as the only confirmed platform.
+          <strong>Project: Mist is live on PC via Steam Early Access as of
+          19 May, 2026.</strong> Xbox, PS5, and console versions are not
+          confirmed by the current Steam listing or official store data.
+          Treat PC Steam as the only confirmed platform.
         </p>
       </BlufBox>
 
@@ -170,14 +171,16 @@ export default function ProjectMistReleaseDatePage() {
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
               <th className="px-4 py-3 text-left font-medium text-muted-foreground">Platform or feature</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current answer</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current status</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">What players should do</th>
             </tr>
           </thead>
           <tbody>
-            {platformRows.map(([platform, status]) => (
+            {platformRows.map(([platform, status, action]) => (
               <tr key={platform} className="border-b border-border/30 last:border-0">
                 <td className="px-4 py-3 font-semibold text-foreground">{platform}</td>
                 <td className="px-4 py-3 text-muted-foreground">{status}</td>
+                <td className="px-4 py-3 text-muted-foreground">{action}</td>
               </tr>
             ))}
           </tbody>

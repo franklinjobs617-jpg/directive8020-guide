@@ -47,6 +47,14 @@ const faqs = [
   },
 ];
 
+const mechanicusIIUnitRows = [
+  ['Adeptus Mechanicus core', 'Use early Mechanicus units to learn cover, Cognition flow, safe firing lanes, and specialist protection before chasing advanced combinations.'],
+  ['Necron core', 'Use early Necron units to understand Dominion pressure, durability, and how the campaign wants you to trade position for long-term control.'],
+  ['Leaders', 'Magos Dominus Faustinius and Vargard Nefershah are the confirmed campaign leaders to track first.'],
+  ['Build caution', 'Do not treat launch-week unit lists as final best builds until more complete campaign runs and balance patches are available.'],
+  ['What to record', 'Track unit survival, action economy, terrain value, faction resource cost, and whether a unit solves a recurring mission problem.'],
+];
+
 export default function MechanicusIIFactionsPage() {
   return (
     <MechanicusIIArticle
@@ -99,6 +107,40 @@ export default function MechanicusIIFactionsPage() {
               <tr key={choice} className="border-b border-border/30 last:border-0">
                 <td className="px-4 py-3 font-semibold text-foreground">{choice}</td>
                 <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
+        <h2>Units and Build Guidance</h2>
+        <ArticleImage
+          src={mechanicusIIImages.screenshot3}
+          alt="Warhammer 40,000 Mechanicus II units and builds image"
+          caption="Early unit value should be judged by battlefield role, faction resource pressure, and campaign consistency, not only launch-week damage numbers."
+        />
+        <p>
+          Unit and build searches are already appearing, but final best-unit
+          claims are still risky during the launch window. Use the table below
+          to evaluate units by role and repeatable value while more complete
+          campaign data develops.
+        </p>
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Unit or build topic</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current guidance</th>
+            </tr>
+          </thead>
+          <tbody>
+            {mechanicusIIUnitRows.map(([topic, guidance]) => (
+              <tr key={topic} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{topic}</td>
+                <td className="px-4 py-3 text-muted-foreground">{guidance}</td>
               </tr>
             ))}
           </tbody>

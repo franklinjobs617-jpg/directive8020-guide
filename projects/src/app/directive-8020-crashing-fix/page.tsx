@@ -8,15 +8,20 @@ import { FixChecklist } from '@/components/tools/fix-checklist';
 import { SourceCheckTable } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 Crashing Fix - Black Screen, FPS & Startup',
+  title: 'Directive 8020 Fatal Error, Crash & Black Screen Fix',
   description:
-    'Directive 8020 crashing fix guide for startup crashes, black screen, stuttering, low FPS, shader issues, audio problems, controller input, PS5, Xbox, and PC troubleshooting.',
+    'Directive 8020 fatal error and crashing fix guide for startup crashes, black screen, stuttering, low FPS, shader issues, controller input, PS5, Xbox, and PC troubleshooting.',
   alternates: {
     canonical: '/directive-8020-crashing-fix',
   },
 };
 
 const faqs = [
+  {
+    question: 'How do I fix Directive 8020 fatal error?',
+    answer:
+      'Start with the reversible fixes: update GPU drivers, verify game files, disable overlays, reboot, repair Visual C++ Redistributables, and confirm your PC meets the official minimum spec before reinstalling.',
+  },
   {
     question: 'Why does Directive 8020 crash on startup?',
     answer:
@@ -48,10 +53,18 @@ const quickFixes = [
   'Reboot after installing drivers or redistributables.',
 ];
 
+const fatalErrorRows = [
+  ['Fatal error on startup', 'Update GPU drivers, reboot, then verify Steam files.', 'If it still fails before the menu, disable overlays and repair Visual C++ Redistributables.'],
+  ['Black screen with audio', 'Press Alt+Enter, disable HDR, disconnect extra monitors, and reset display mode.', 'If audio continues but video never appears, remove graphics overrides and test windowed mode.'],
+  ['Crash after patching', 'Verify installed files and clear launch options.', 'If the same chapter keeps crashing, test a different save or report the exact scene to support.'],
+  ['Stutter or low FPS', 'Move the game to SSD, cap FPS, and lower shadows, reflections, volumetrics, and post-processing.', 'If frame time is still unstable, close overlays and background capture tools.'],
+  ['Controller input problem', 'Test Steam Input on and off, use a wired controller, and disconnect extra input devices.', 'If QTE timing feels wrong, check accessibility timing before a serious route.'],
+];
+
 const reportedIssues = [
   ['PS5 trophy or achievement display delays', 'Community-reported', 'Do not assume trophies are permanently broken. Reboot, sync trophies, check patches, and wait before deleting saves.'],
   ['Steam Remote Play / online co-op confusion', 'Community demand signal', 'Online multiplayer is post-launch; do not treat remote workarounds as official co-op support.'],
-  ['Controller prompt or input timing complaints', 'Troubleshooting pattern', 'Test wired input, Steam Input on/off, and accessibility timing before a serious save-everyone run.'],
+  ['Controller labels or input timing complaints', 'Troubleshooting pattern', 'Test wired input, Steam Input on/off, and accessibility timing before a serious save-everyone run.'],
   ['Startup crash, black screen, low FPS, stutter', 'General PC troubleshooting', 'Use official PC specs and reversible PC fixes before reinstalling.'],
 ];
 
@@ -91,9 +104,9 @@ export default function CrashingFixPage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 Crashing, Black Screen & Performance Fix',
+          title: 'Directive 8020 Fatal Error, Crash & Black Screen Fix',
           description:
-            'Directive 8020 crashing fix guide for startup crashes, black screen, stuttering, low FPS, audio issues, controller problems, and launch-day troubleshooting.',
+            'Directive 8020 fatal error and crashing fix guide for startup crashes, black screen, stuttering, low FPS, audio issues, controller problems, and launch-day troubleshooting.',
           url: '/directive-8020-crashing-fix',
           datePublished: '2026-05-12',
           dateModified: '2026-05-21',
@@ -107,15 +120,36 @@ export default function CrashingFixPage() {
         <PageHero src="/d8020-screenshot-02.jpg" alt="Directive 8020 official dark corridor performance fix guide" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 Crashing Fix: Black Screen, FPS and Startup
+          Directive 8020 Fatal Error, Crash and Black Screen Fix
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          If Directive 8020 is crashing on startup, showing a black screen, or
-          stuttering during play, start with the reversible fixes below: update
-          GPU drivers, verify files, disable overlays, check the official specs,
-          reset display mode, and test controller/input settings before
-          reinstalling.
+          If Directive 8020 shows a fatal error, crashes on startup, opens to a
+          black screen, or stutters during play, start with the reversible fixes
+          below: update GPU drivers, verify files, disable overlays, check the
+          official specs, reset display mode, and test controller/input settings
+          before reinstalling.
         </p>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Problem</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">First fix</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">When to try next step</th>
+              </tr>
+            </thead>
+            <tbody>
+              {fatalErrorRows.map(([problem, firstFix, nextStep]) => (
+                <tr key={problem} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{problem}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{firstFix}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{nextStep}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <div className="prose-game">
           <h2>Quick Fixes to Try First</h2>
@@ -235,14 +269,14 @@ export default function CrashingFixPage() {
             <li>Enable or disable Steam Input for the game and test both states.</li>
             <li>Disconnect extra controllers, wheels, flight sticks, or virtual input devices.</li>
             <li>Use a wired connection for QTE-heavy sections if wireless input feels delayed.</li>
-            <li>Check button prompts before starting a serious save-everyone run.</li>
+            <li>Check button labels before starting a serious save-everyone run.</li>
           </ul>
 
           <h2>Console Troubleshooting: PS5 and Xbox Series X|S</h2>
           <ul>
             <li>Restart the console fully instead of using rest mode or quick resume.</li>
             <li>Install the latest system update and game patch.</li>
-            <li>Move the game to internal storage if running from external storage.</li>
+            <li>Move the game to built-in console storage if running from external storage.</li>
             <li>Clear cache with a full power cycle.</li>
             <li>Reinstall only after patch checks and restarts fail.</li>
           </ul>

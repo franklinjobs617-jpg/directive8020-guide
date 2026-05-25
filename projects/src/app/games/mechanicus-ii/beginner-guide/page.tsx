@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ArticleImage } from '@/components/article-media';
 import { ActionTable, BlufBox } from '@/components/guide-blocks';
 import { MechanicusIIArticle } from '@/components/mechanicus-ii-article';
@@ -42,6 +43,13 @@ const faqs = [
   },
 ];
 
+const firstCampaignRows = [
+  ['Adeptus Mechanicus first', 'Best if you want a methodical start with tech-priest identity, Cognition decisions, and a closer link to the original Mechanicus fantasy.'],
+  ['Necrons first', 'Best if the new playable perspective is your main reason to play and you want to learn Dominion pressure from the start.'],
+  ['Beginner build direction', 'Protect specialists, value cover, avoid greedy damage trades, and build around the faction resource before chasing advanced unit combos.'],
+  ['Steam Deck check', 'Mechanicus II is listed as unsupported on Steam Deck at launch, so handheld-first players should read the Steam Deck guide before buying or committing a campaign.'],
+];
+
 export default function MechanicusIIBeginnerGuidePage() {
   return (
     <MechanicusIIArticle
@@ -59,9 +67,32 @@ export default function MechanicusIIBeginnerGuidePage() {
           tactics lesson, not a race to find the best build.</strong> Pick one
           faction, learn how cover and terrain affect survival, protect key
           units, and watch how territory control and resource spending affect
-          the next battle.
+          the next battle. If you mainly play handheld, check the{' '}
+          <Link href="/games/mechanicus-ii/steam-deck-performance" className="text-d8020 hover:underline">
+            Mechanicus II Steam Deck guide
+          </Link>{' '}
+          before treating it as a safe Deck-first campaign.
         </p>
       </BlufBox>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Beginner decision</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Recommended guidance</th>
+            </tr>
+          </thead>
+          <tbody>
+            {firstCampaignRows.map(([decision, guidance]) => (
+              <tr key={decision} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{decision}</td>
+                <td className="px-4 py-3 text-muted-foreground">{guidance}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <section className="prose-game">
         <h2>Beginner Priorities</h2>

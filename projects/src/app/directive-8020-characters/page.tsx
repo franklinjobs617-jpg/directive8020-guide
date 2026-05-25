@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Breadcrumb } from '@/components/breadcrumb';
 import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
@@ -8,9 +9,9 @@ import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { crewPortraitHero, directiveCharacters } from '@/lib/directive-8020-characters';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 Characters - Brianna Young & Cassiopeia Crew',
+  title: 'Directive 8020 Characters, Cast, Actors & Playable Crew',
   description:
-    'Directive 8020 characters guide: Brianna Young, Nolan Stafford, Laura Eisele, Samantha Cooper, Josef Cernan, Lashana Lynch cast details, mimic clues, and survival roles.',
+    'Directive 8020 characters guide with playable crew, cast and actors, Brianna Young, Eisele actor status, face model cautions, mimic clues, and survival roles.',
   alternates: {
     canonical: '/directive-8020-characters',
   },
@@ -18,24 +19,24 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'Who is the lead actor in Directive 8020?',
+    question: 'Who are the playable characters in Directive 8020?',
+    answer:
+      'The core playable Cassiopeia crew tracked on this page is Brianna Young, Nolan Stafford, Laura Eisele, Dr. Samantha Cooper, and Josef Cernan.',
+  },
+  {
+    question: 'Who plays Brianna Young in Directive 8020?',
     answer:
       'Lashana Lynch is confirmed as Young, a major astronaut character in Directive 8020. Official store copy highlights her role in the game.',
   },
   {
-    question: 'How many players can join Movie Night in Directive 8020?',
+    question: 'Is the full Directive 8020 cast confirmed?',
     answer:
-      'The Steam page lists Movie Night couch co-op for up to five players, with players choosing which crew members to control.',
+      'No. Treat the full cast as partially confirmed unless a role is backed by official credits, store copy, a platform page, or another trusted role-level source.',
   },
   {
-    question: 'Can all characters die in Directive 8020?',
+    question: 'Are Directive 8020 face models confirmed?',
     answer:
-      'Directive 8020 follows The Dark Pictures Anthology structure, where character survival depends on choices, QTEs, relationships, and branching outcomes. The Turning Points story tree is designed to help players revisit deaths and hidden paths.',
-  },
-  {
-    question: 'Why are characters harder to trust in Directive 8020?',
-    answer:
-      'The main alien threat can mimic its prey, so a character who looks human may not actually be human. That makes behavior, timing, and memory details important survival clues.',
+      'Do not assume face models from visual similarity. Use official portraits and credited cast sources only, and keep unverified face model claims marked as pending.',
   },
 ];
 
@@ -48,11 +49,11 @@ const suspicionChecklist = [
 ];
 
 const characterQuickRows = [
-  ['Brianna Young', 'Lashana Lynch', 'Pilot / co-pilot', 'Lead cast signal; track leadership, trust, and survival route pressure.'],
-  ['Nolan Stafford', 'Danny Sapani', 'Commander', 'Command decisions, mission pressure, and crew relationship consequences.'],
-  ['Laura Eisele', 'Actor to verify', 'Senior Mission Officer', 'Ship-system evidence, technical decisions, and Eisele Destiny searches.'],
-  ['Dr. Samantha Cooper', 'Actor to verify', 'Medical specialist', 'Injury, rescue, treatment, and support-route decisions.'],
-  ['Josef Cernan', 'Actor to verify', 'Technical engineer', 'Repairs, locked access, mechanical routes, and support choices.'],
+  ['Brianna Young', 'Lashana Lynch confirmed', 'Yes', 'Pilot / co-pilot', 'Verified lead cast signal'],
+  ['Nolan Stafford', 'Danny Sapani reported', 'Yes', 'Commander', 'Working role-level source'],
+  ['Laura Eisele', 'Actor to verify', 'Yes', 'Senior Mission Officer', 'Pending actor confirmation'],
+  ['Dr. Samantha Cooper', 'Actor to verify', 'Yes', 'Medical specialist', 'Pending actor confirmation'],
+  ['Josef Cernan', 'Actor to verify', 'Yes', 'Technical engineer', 'Pending actor confirmation'],
 ];
 
 const characterSearchRows = [
@@ -91,7 +92,7 @@ export default function CharactersPage() {
         <PageHero src={crewPortraitHero} alt="Directive 8020 official playable Cassiopeia crew portraits" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 Characters: Brianna Young and the Cassiopeia Crew
+          Directive 8020 Characters, Cast, Actors and Playable Crew
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
           Directive 8020 has five core playable Cassiopeia crew members to
@@ -101,7 +102,8 @@ export default function CharactersPage() {
           <strong className="text-foreground"> Dr. Samantha Cooper</strong>,
           and <strong className="text-foreground">Josef Cernan</strong>. This
           guide gives the character list first, then explains cast status,
-          survival roles, Movie Night assignment, and mimic suspicion clues.
+          actor verification, face model cautions, survival roles, Movie Night
+          assignment, and mimic suspicion clues.
         </p>
 
         <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
@@ -109,18 +111,20 @@ export default function CharactersPage() {
             <thead>
               <tr className="border-b border-border/50 bg-card/50">
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">Character</th>
-                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Actor</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Actor status</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Playable?</th>
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">Crew role</th>
-                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why players search them</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Verification</th>
               </tr>
             </thead>
             <tbody>
-              {characterQuickRows.map(([character, actor, role, note]) => (
+              {characterQuickRows.map(([character, actor, playable, role, verification]) => (
                 <tr key={character} className="border-b border-border/30 last:border-0">
                   <td className="px-4 py-3 font-semibold text-foreground">{character}</td>
                   <td className="px-4 py-3 text-muted-foreground">{actor}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{playable}</td>
                   <td className="px-4 py-3 text-muted-foreground">{role}</td>
-                  <td className="px-4 py-3 text-muted-foreground">{note}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{verification}</td>
                 </tr>
               ))}
             </tbody>
@@ -139,7 +143,12 @@ export default function CharactersPage() {
             Most character searches are not looking for lore first. Players
             usually want to know who the main character is, which crew members
             are playable, whether an actor is confirmed, and how each character
-            matters in a survival route.
+            matters in a survival route. For a deeper role-by-role source check,
+            use the{' '}
+            <Link href="/directive-8020-cast-actors" className="text-d8020 hover:underline">
+              Directive 8020 cast and actors
+            </Link>{' '}
+            page.
           </p>
         </div>
 

@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { Breadcrumb } from '@/components/breadcrumb';
 import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
-import { ArticleImage } from '@/components/article-media';
+import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import {
   JsonLd,
   generateArticleSchema,
@@ -16,6 +16,7 @@ import {
   romesteadImages,
   romesteadLastModified,
   romesteadSourceRows,
+  romesteadVideos,
 } from '@/lib/romestead';
 
 interface FAQItem {
@@ -85,6 +86,15 @@ export function RomesteadArticle({
         </p>
 
         {children}
+
+        <section className="my-10">
+          <h2 className="mb-4 text-xl font-bold text-foreground">Official Video Reference</h2>
+          <VideoEmbed
+            videoId={romesteadVideos[0].id}
+            title={romesteadVideos[0].title}
+            caption={romesteadVideos[0].caption}
+          />
+        </section>
 
         {showSources && (
           <>

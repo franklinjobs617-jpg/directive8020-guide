@@ -25,11 +25,11 @@ export const projectMistQuickFacts = [
   ['Review snapshot', 'Mixed from 31 Steam reviews on 20 May, 2026'],
 ];
 
-export const projectMistGscOpportunityRows = [
-  ['Project Mist release date', 'Answer immediately: live in Steam Early Access since 19 May, 2026.', 'Release date page and hub first screen.'],
-  ['Project Mist multiplayer / co-op', 'State solo, multi-player, co-op, online co-op, and 1-4 player copy; separate cross-play as unconfirmed.', 'Hub and multiplayer page.'],
-  ['Project Mist Xbox / console', 'Say PC Steam is confirmed; Xbox, PlayStation, and cross-platform plans are not confirmed by Steam.', 'Release date FAQ and multiplayer page.'],
-  ['Project Mist beginner guide', 'Route the player to Gravity Gun, train base, lockpick, saves, and Early Access bug checks.', 'Hub guide map and beginner page.'],
+export const projectMistLaunchIntentRows = [
+  ['Project Mist release date', 'Project: Mist is live in Steam Early Access since 19 May, 2026.', 'Release Date & Early Access'],
+  ['Project Mist multiplayer / co-op', 'Steam lists solo play, multi-player, co-op, online co-op, and 1-4 player support; cross-play is not confirmed.', 'Multiplayer & Co-op'],
+  ['Project Mist Xbox / console', 'PC Steam is confirmed. Xbox, PlayStation, console, and cross-platform plans are not confirmed by current official store data.', 'Release Date & Early Access'],
+  ['Project Mist beginner guide', 'Start with Gravity Gun, train base, lockpicking, saves, and Early Access risk checks.', 'Beginner Guide'],
 ];
 
 export const projectMistLaunchSnapshotRows = [

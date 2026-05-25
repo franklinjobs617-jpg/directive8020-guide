@@ -70,10 +70,10 @@ const sourceChecks = [
   ['IMDb title page', 'Useful as a secondary cast database signal, but role-level claims still need stronger confirmation.', 'https://www.imdb.com/title/tt33211363/'],
 ];
 
-const updateLog = [
-  ['2026-05-12', 'Added a cast and actors reference for playable crew, known performers, and role status.'],
-  ['2026-05-12', 'Separated five playable crew members from supporting Cassiopeia crew and pending actor data.'],
-  ['2026-05-12', 'Added verification rules so actor claims can be updated without overstating unconfirmed roles.'],
+const castStatusRows = [
+  ['Playable crew', 'Five Cassiopeia crew members are treated as playable because current platform copy lists them together.'],
+  ['Confirmed lead', 'Lashana Lynch as Brianna Young is the strongest role-level cast confirmation.'],
+  ['Pending roles', 'Remaining actor rows stay cautious until official credits, platform pages, or trusted coverage confirm the role.'],
 ];
 
 export default function CastActorsPage() {
@@ -289,11 +289,11 @@ export default function CastActorsPage() {
         </div>
 
         <div className="prose-game">
-          <h2>Update Log</h2>
+          <h2>Cast Status Summary</h2>
           <p>
-            Cast information should be revised whenever official pages, credits,
-            or trusted reviews confirm a role. Pending actor rows should remain
-            pending until role-level evidence is available.
+            Cast information changes as official pages, credits, and trusted
+            coverage publish role-level details. Use this summary to separate
+            confirmed performers from names that still need stronger evidence.
           </p>
         </div>
 
@@ -301,15 +301,15 @@ export default function CastActorsPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border/50 bg-card/50">
-                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Date</th>
-                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Update</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Cast area</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current status</th>
               </tr>
             </thead>
             <tbody>
-              {updateLog.map(([date, update]) => (
-                <tr key={update} className="border-b border-border/30 last:border-0">
-                  <td className="px-4 py-3 font-semibold text-foreground">{date}</td>
-                  <td className="px-4 py-3 text-muted-foreground">{update}</td>
+              {castStatusRows.map(([area, status]) => (
+                <tr key={area} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{area}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{status}</td>
                 </tr>
               ))}
             </tbody>

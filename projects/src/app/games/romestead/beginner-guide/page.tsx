@@ -96,7 +96,7 @@ export default function RomesteadBeginnerGuidePage() {
         <h2>Base Layout That Survives the Launch Window</h2>
         <ArticleImage
           src={romesteadImages.planningAnimalFarm}
-          alt="Romestead defensive settlement layout screenshot"
+          alt="Romestead-style defensive settlement layout planning illustration"
           caption="Planning illustration for a compact farm-and-animal layout. Use it as layout guidance, not as a claim about exact final Romestead UI or building placement."
         />
         <p>
@@ -113,7 +113,7 @@ export default function RomesteadBeginnerGuidePage() {
         <h2>Survivors, Exploration, and God Blessings</h2>
         <ArticleImage
           src={romesteadImages.planningCropHarvesting}
-          alt="Romestead exploration and character progression screenshot"
+          alt="Romestead-style crop flow and food planning illustration"
           caption="Planning illustration for food and crop flow. Use survivors and blessings to solve the problem you actually have: gathering speed, defense, food pressure, crafting bottlenecks, or safer exploration."
         />
         <p>
