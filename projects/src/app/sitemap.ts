@@ -221,6 +221,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.68,
     },
     {
+      url: `${BASE_URL}/games/romestead`,
+      lastModified: '2026-05-25',
+      changeFrequency: 'daily',
+      priority: 0.72,
+    },
+    {
+      url: `${BASE_URL}/games/romestead/release-date`,
+      lastModified: '2026-05-25',
+      changeFrequency: 'daily',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/games/romestead/beginner-guide`,
+      lastModified: '2026-05-25',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/romestead/multiplayer-coop`,
+      lastModified: '2026-05-25',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/romestead/system-requirements`,
+      lastModified: '2026-05-25',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/romestead/is-it-worth-it`,
+      lastModified: '2026-05-25',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
       url: `${BASE_URL}/games/mina-the-hollower`,
       lastModified: '2026-05-20',
       changeFrequency: 'daily',

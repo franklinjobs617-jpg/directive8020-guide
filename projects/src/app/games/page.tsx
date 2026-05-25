@@ -8,10 +8,11 @@ import { thickAsThievesImages } from "@/lib/thick-as-thieves";
 import { minaImages } from "@/lib/mina-the-hollower";
 import { zeroParadesImages } from "@/lib/zero-parades";
 import { mechanicusIIImages } from "@/lib/mechanicus-ii";
+import { romesteadImages } from "@/lib/romestead";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
-  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, espionage RPG, gothic action-adventure, and story-driven games, including Directive 8020, Project: Mist, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, espionage RPG, gothic action-adventure, Roman survival town building, and story-driven games, including Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
   title: {
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
     "Directive 8020 guide",
     "Project Mist guide",
     "ZERO PARADES guide",
+    "Romestead guide",
     "Warhammer 40,000 Mechanicus II guide",
     "Thick As Thieves guide",
     "Mina the Hollower guide",
@@ -70,6 +72,13 @@ const gameCards = [
     label: "Espionage RPG",
     body: "Launch-day guide hub for release status, PC/PS5 notes, beginner skills, Conditioning, Exertion, PC specs, Steam Deck, and buying advice.",
     image: zeroParadesImages.hero,
+  },
+  {
+    title: "Romestead",
+    href: "/games/romestead",
+    label: "Roman survival town builder",
+    body: "Steam Early Access launch timing, 1-8 player co-op, beginner settlement priorities, PC specs, Steam Deck cautions, and buying advice.",
+    image: romesteadImages.hero,
   },
   {
     title: "Warhammer 40,000: Mechanicus II",

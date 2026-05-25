@@ -355,6 +355,64 @@ export const mechanicusII: GameConfig = {
   ],
 };
 
+export const romestead: GameConfig = {
+  id: "romestead",
+  slugPrefix: "romestead",
+  hubPath: "/games/romestead",
+  name: "Romestead",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "A Roman-inspired survival crafting and town-building game from Beartwigs and Three Friends where players build a settlement, recruit survivors, gather resources, fight undead at night, explore dungeons, and play solo or in co-op.",
+  platforms: ["PC"],
+  genres: [
+    "Survival Crafting",
+    "Town Building",
+    "Open-World Survival",
+    "Action RPG",
+    "Colony Sim",
+    "Early Access",
+  ],
+  developer: "Beartwigs",
+  publisher: "Three Friends",
+  releaseDate: "2026-05-25",
+  operatingSystem: "Windows 10",
+  url: "https://store.steampowered.com/app/1805320/Romestead/",
+  availability: "https://schema.org/PreOrder",
+  heroImage: "/games/romestead/hero.webp",
+  guideLinks: [
+    {
+      title: "Release Date & Early Access",
+      href: "/games/romestead/release-date",
+      description:
+        "Steam date, SteamDB unlock timing, Early Access status, platform facts, demo checks, and launch-window cautions.",
+    },
+    {
+      title: "Beginner Guide",
+      href: "/games/romestead/beginner-guide",
+      description:
+        "First-day priorities for resources, workstations, settlement layout, survivors, night defense, exploration, and god blessings.",
+    },
+    {
+      title: "Multiplayer & Co-op",
+      href: "/games/romestead/multiplayer-coop",
+      description:
+        "1-8 player support, online co-op, LAN co-op, group roles, host-save questions, and what is not confirmed.",
+    },
+    {
+      title: "System Requirements",
+      href: "/games/romestead/system-requirements",
+      description:
+        "Official minimum and recommended PC specs, Windows 10, RAM, DirectX 11, storage, Steam Deck cautions, and setup checks.",
+    },
+    {
+      title: "Is Romestead Worth It?",
+      href: "/games/romestead/is-it-worth-it",
+      description:
+        "Early Access buying advice for solo players, co-op groups, town-builder fans, Steam Deck users, and players waiting for 1.0.",
+    },
+  ],
+};
+
 export const minaTheHollower: GameConfig = {
   id: "mina-the-hollower",
   slugPrefix: "mina-the-hollower",

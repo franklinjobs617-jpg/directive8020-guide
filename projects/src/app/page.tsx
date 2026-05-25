@@ -434,6 +434,12 @@ const homeFaqs = [
 
 const newGameCoverage = [
   {
+    title: 'Romestead Guide Hub',
+    body: 'Steam Early Access coverage: release timing, 1-8 player co-op, first settlement priorities, PC specs, Steam Deck cautions, and buy-or-wait guidance.',
+    href: '/games/romestead',
+    image: '/games/romestead/hero.webp',
+  },
+  {
     title: 'Project: Mist Guide Hub',
     body: 'Open-world survival horror basics, Early Access status, Gravity Gun, train base, co-op, and first-day route planning.',
     href: '/games/project-mist',
