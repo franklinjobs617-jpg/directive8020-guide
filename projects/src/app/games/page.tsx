@@ -9,10 +9,11 @@ import { minaImages } from "@/lib/mina-the-hollower";
 import { zeroParadesImages } from "@/lib/zero-parades";
 import { mechanicusIIImages } from "@/lib/mechanicus-ii";
 import { romesteadImages } from "@/lib/romestead";
+import { firstLightImages } from "@/lib/007-first-light";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
-  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, espionage RPG, gothic action-adventure, Roman survival town building, and story-driven games, including Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, James Bond action-adventure, espionage RPG, gothic action-adventure, Roman survival town building, and story-driven games, including 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
   title: {
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
     "ZERO PARADES guide",
     "Romestead guide",
     "Warhammer 40,000 Mechanicus II guide",
+    "007 First Light guide",
     "Thick As Thieves guide",
     "Mina the Hollower guide",
   ],
@@ -58,6 +60,13 @@ const gameCards = [
     label: "Story horror",
     body: "Walkthroughs, endings, choices, trophies, survival routes, collectibles, cast notes, and PC troubleshooting.",
     image: "/hero-banner.jpg",
+  },
+  {
+    title: "007 First Light",
+    href: "/games/007-first-light",
+    label: "James Bond action-adventure",
+    body: "Release date, 24-hour early access, preload checks, review embargo, PS5 status, PC specs, and spoiler-light beginner tips.",
+    image: firstLightImages.hero,
   },
   {
     title: "Project: Mist",

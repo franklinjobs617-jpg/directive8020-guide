@@ -101,6 +101,12 @@ export default function MechanicusIISystemRequirementsPage() {
           tactics games because readable UI and stable camera movement matter
           more than peak frame rate alone.
         </p>
+        <p>
+          If you are close to the minimum GPU or RAM tier, treat the first
+          mission as a refund-window test: watch camera movement, outdoor
+          effects, turn processing, text size, and load times before assuming
+          the full campaign will feel the same.
+        </p>
       </section>
     </MechanicusIIArticle>
   );

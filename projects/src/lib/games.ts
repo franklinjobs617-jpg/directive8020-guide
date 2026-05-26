@@ -74,7 +74,7 @@ export const projectMist: GameConfig = {
   guidePublisher: "Enjoy4Game Guides",
   description:
     "An open-world survival horror game from Chicken Launcher with solo play, online co-op, a Gravity Gun, a moving train base, giant creatures, crafting, hunting, and mysterious island facilities.",
-  platforms: ["PC"],
+  platforms: ["PC", "PlayStation 5"],
   genres: [
     "Action",
     "Adventure",
@@ -329,6 +329,12 @@ export const mechanicusII: GameConfig = {
         "Spoiler-light first-session advice for campaign choice, cover, terrain, resources, leaders, and early tactical habits.",
     },
     {
+      title: "Walkthrough",
+      href: "/games/mechanicus-ii/walkthrough",
+      description:
+        "Spoiler-light mission flow, green console checks, leader safety, objective reading, and campaign progression notes.",
+    },
+    {
       title: "Factions Guide",
       href: "/games/mechanicus-ii/factions",
       description:
@@ -468,6 +474,51 @@ export const minaTheHollower: GameConfig = {
       href: "/games/mina-the-hollower/is-it-worth-it",
       description:
         "Buyer-focused guidance using developer track record, genre fit, platform support, specs, and launch timing.",
+    },
+  ],
+};
+
+export const firstLight007: GameConfig = {
+  id: "007-first-light",
+  slugPrefix: "007-first-light",
+  hubPath: "/games/007-first-light",
+  name: "007 First Light",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "A single-player James Bond origin story from IO Interactive where a young MI6 recruit uses stealth, gadgets, driving, dialogue, and action to earn the 007 number.",
+  platforms: ["PC"],
+  genres: ["Action", "Adventure", "Stealth", "Third-Person Shooter"],
+  developer: "IO Interactive A/S",
+  publisher: "IO Interactive A/S",
+  releaseDate: "2026-05-27",
+  operatingSystem: "Windows 10/11 64-bit",
+  url: "https://store.steampowered.com/app/3768760/007_First_Light/",
+  availability: "https://schema.org/PreOrder",
+  heroImage: "/games/007-first-light/hero.webp",
+  guideLinks: [
+    {
+      title: "Early Access, Release Time & Preload",
+      href: "/games/007-first-light/early-access-release-time",
+      description:
+        "May 27 release date, 24-hour early access, pre-order bonus, preload cautions, review timing, and Australia time-zone notes.",
+    },
+    {
+      title: "Review Embargo & Worth It",
+      href: "/games/007-first-light/review-embargo",
+      description:
+        "Review status, embargo cautions, Steam user review timing, Denuvo concerns, and who should buy early or wait.",
+    },
+    {
+      title: "System Requirements",
+      href: "/games/007-first-light/system-requirements",
+      description:
+        "Official minimum and recommended PC specs, 80 GB SSD requirement, DLSS notes, and performance checks.",
+    },
+    {
+      title: "Beginner Guide",
+      href: "/games/007-first-light/beginner-guide",
+      description:
+        "Spoiler-light first-session advice for stealth, gadgets, firefights, driving, mission replay, and opening spoilers.",
     },
   ],
 };

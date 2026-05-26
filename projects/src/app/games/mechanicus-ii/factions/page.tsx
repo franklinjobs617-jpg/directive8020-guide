@@ -3,6 +3,7 @@ import { BlufBox } from '@/components/guide-blocks';
 import { MechanicusIIArticle } from '@/components/mechanicus-ii-article';
 import {
   createMechanicusIIMetadata,
+  mechanicusIIFactionComparisonRows,
   mechanicusIIFactionRows,
   mechanicusIIImages,
 } from '@/lib/mechanicus-ii';
@@ -39,6 +40,11 @@ const faqs = [
     question: 'Which faction is best in Mechanicus II?',
     answer:
       'It is too early to call a final best faction. Choose by campaign fantasy and tactical preference until more completed runs and patches settle the meta.',
+  },
+  {
+    question: 'Which Mechanicus II faction should I play first?',
+    answer:
+      'Choose Adeptus Mechanicus first if you want the more familiar tech-priest campaign; choose Necrons first if the new playable perspective is the main appeal.',
   },
   {
     question: 'Are the Leagues of Votann playable in Mechanicus II?',
@@ -107,6 +113,37 @@ export default function MechanicusIIFactionsPage() {
               <tr key={choice} className="border-b border-border/30 last:border-0">
                 <td className="px-4 py-3 font-semibold text-foreground">{choice}</td>
                 <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
+        <h2>Faction Comparison for New Players</h2>
+        <p>
+          The practical choice is not only lore. It changes which resource you
+          learn first, which leader you protect, and whether you want the sequel
+          to feel closer to the original Mechanicus or to start from the new
+          Necron perspective.
+        </p>
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Faction or force</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">What it means</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Best use</th>
+            </tr>
+          </thead>
+          <tbody>
+            {mechanicusIIFactionComparisonRows.map(([force, meaning, use]) => (
+              <tr key={force} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{force}</td>
+                <td className="px-4 py-3 text-muted-foreground">{meaning}</td>
+                <td className="px-4 py-3 text-muted-foreground">{use}</td>
               </tr>
             ))}
           </tbody>

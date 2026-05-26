@@ -5,6 +5,7 @@ import {
   createMechanicusIIMetadata,
   mechanicusIIImages,
   mechanicusIIPerformanceCheckRows,
+  mechanicusIIPerformanceTriageRows,
   mechanicusIISpecRows,
   mechanicusIISteamDeckRows,
 } from '@/lib/mechanicus-ii';
@@ -118,6 +119,25 @@ export default function MechanicusIISteamDeckPerformancePage() {
           missions.
         </p>
       </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">If this feels wrong</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Try first</th>
+            </tr>
+          </thead>
+          <tbody>
+            {mechanicusIIPerformanceTriageRows.map(([problem, fix]) => (
+              <tr key={problem} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{problem}</td>
+                <td className="px-4 py-3 text-muted-foreground">{fix}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
         <table className="w-full text-sm">

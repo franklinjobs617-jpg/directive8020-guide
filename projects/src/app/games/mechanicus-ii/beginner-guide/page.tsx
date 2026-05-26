@@ -5,6 +5,7 @@ import { MechanicusIIArticle } from '@/components/mechanicus-ii-article';
 import {
   createMechanicusIIMetadata,
   mechanicusIIBeginnerRows,
+  mechanicusIIFirstHourRows,
   mechanicusIIImages,
 } from '@/lib/mechanicus-ii';
 
@@ -34,7 +35,12 @@ const faqs = [
   {
     question: 'What should beginners focus on first?',
     answer:
-      'Use cover, check terrain, watch turn order, protect specialists, and learn your faction resource before chasing advanced builds.',
+      'Use cover, check terrain, watch turn order, protect specialists and named leaders, inspect objectives, and learn your faction resource before chasing advanced builds.',
+  },
+  {
+    question: 'Why did my Mechanicus II mission fail so fast?',
+    answer:
+      'Early failures usually come from exposing a leader, missing an interactable objective, overextending out of cover, or spending resources before checking the next enemy turn.',
   },
   {
     question: 'Can I ignore the campaign layer?',
@@ -88,6 +94,34 @@ export default function MechanicusIIBeginnerGuidePage() {
               <tr key={decision} className="border-b border-border/30 last:border-0">
                 <td className="px-4 py-3 font-semibold text-foreground">{decision}</td>
                 <td className="px-4 py-3 text-muted-foreground">{guidance}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
+        <h2>First Hour Checklist</h2>
+        <ArticleImage
+          src={mechanicusIIImages.screenshot4}
+          alt="Warhammer 40,000 Mechanicus II first hour checklist battlefield image"
+          caption="The safest early progress comes from reading objectives, protecting leaders, and treating cover as temporary."
+        />
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">First-hour habit</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it matters</th>
+            </tr>
+          </thead>
+          <tbody>
+            {mechanicusIIFirstHourRows.map(([habit, reason]) => (
+              <tr key={habit} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{habit}</td>
+                <td className="px-4 py-3 text-muted-foreground">{reason}</td>
               </tr>
             ))}
           </tbody>

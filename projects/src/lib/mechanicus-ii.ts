@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { mechanicusII, type GameGuideLink } from '@/lib/games';
 
-export const mechanicusIILastModified = '2026-05-22';
+export const mechanicusIILastModified = '2026-05-26';
 export const mechanicusIISteamUrl =
   'https://store.steampowered.com/app/2532480/Warhammer_40000_Mechanicus_II/';
 export const mechanicusIIEpicUrl =
@@ -36,14 +36,14 @@ export const mechanicusIIVideos = [
 
 export const mechanicusIIQuickFacts = [
   ['Release date', 'May 21, 2026.'],
-  ['Platforms', 'PC via Steam, PlayStation 5, and Xbox Series X|S. Epic also has a store page, but it shows Coming Soon at the latest check.'],
+  ['Platforms', 'PC via Steam, PlayStation 5, and Xbox Series X|S. Epic has a product page; check the current regional store state before buying there.'],
   ['Developer / Publisher', 'Bulwark Studios / Kasedo Games.'],
   ['Genre', 'Fast-paced turn-based tactics, strategy, RPG, and action strategy.'],
   ['Main factions', 'Adeptus Mechanicus and Necrons, with distinct campaigns.'],
   ['Steam Deck', 'Unsupported at launch according to the official Steam FAQ and Steam Deck compatibility data.'],
   ['Steam price', '$39.99 US base price, with a $35.99 introductory Steam price at the latest check.'],
   ['Launch discount', 'Steam currently shows a 10% introductory offer ending May 28, 2026.'],
-  ['Steam reviews', 'Mixed Steam user reviews at the latest check, with 59% positive across 208 Steam purchaser reviews.'],
+  ['Steam reviews', 'Mixed Steam user reviews at the latest check; read recent review text for performance, campaign-structure, and sequel-comparison concerns.'],
   ['Steam features', 'Single-player, Steam Achievements, Steam Cloud, and Family Sharing.'],
   ['Achievements', '34 Steam achievements.'],
   ['Languages', 'English audio with text support including English, French, Italian, German, Spanish, Polish, Russian, Simplified Chinese, and more.'],
@@ -59,6 +59,16 @@ export const mechanicusIIFeatureRows = [
   ['Replay reason', 'Two factions mean the first decision is not only aesthetic; it changes campaign perspective and combat priorities.'],
 ];
 
+export const mechanicusIIPlayerQuestionRows = [
+  ['I just bought it. Where do I start?', 'Use the beginner guide for first campaign choice, leader safety, cover, terrain, and early resource habits.', '/games/mechanicus-ii/beginner-guide'],
+  ['Is it better than Mechanicus 1?', 'Use the buyer guide: the sequel adds defined leaders, dual campaigns, cover, and voiced presentation, but some returning players prefer the first game structure.', '/games/mechanicus-ii/is-it-worth-it'],
+  ['Which faction first?', 'Use the factions guide: Adeptus Mechanicus is safer if you want continuity from the first game; Necrons are the new playable perspective.', '/games/mechanicus-ii/factions'],
+  ['How do I progress missions?', 'Use the walkthrough page for spoiler-light campaign routing, green console checks, leader safety, and replayability expectations.', '/games/mechanicus-ii/walkthrough'],
+  ['What units or builds should I use?', 'Use the factions guide for role-based unit evaluation while final best-build claims are still settling.', '/games/mechanicus-ii/factions'],
+  ['Is performance okay?', 'Use the Steam Deck and performance guide first if you are on handheld, near minimum specs, or worried about GPU load.', '/games/mechanicus-ii/steam-deck-performance'],
+  ['Can I play Votann?', 'Use the factions guide: current public descriptions present Votann as part of the story, not as a third playable campaign faction.', '/games/mechanicus-ii/factions'],
+];
+
 export const mechanicusIIBeginnerRows = [
   ['Pick a campaign for learning', 'Choose the faction whose turn rhythm sounds clearer to you; do not swap campaigns every few missions before learning the basics.'],
   ['Use cover every turn', 'Treat cover and line of sight as core resources, not optional decoration.'],
@@ -71,12 +81,37 @@ export const mechanicusIIBeginnerRows = [
   ['Wait for tested builds', 'Do not trust best-unit lists until players have finished more campaign runs and patch notes settle.'],
 ];
 
+export const mechanicusIIFirstHourRows = [
+  ['Pick one side and stay there for a few missions', 'Swapping constantly makes resource rules harder to learn. Give one campaign enough time for its rhythm to become readable.'],
+  ['Protect the named leader', 'Treat the leader as mission-critical until you know that mission rules. Losing a key leader can cost more than a normal unit loss.'],
+  ['Inspect ability tooltips twice', 'Several early questions come from unclear ability expectations. Read the ability, then inspect the applied status on the target after using it.'],
+  ['Use cover, then assume it may break', 'Cover matters, but battlefield objects and hazards can change the safe tile you planned around.'],
+  ['Avoid greedy damage trades', 'A smaller hit from a safe position is often better than exposing a specialist for one bigger attack.'],
+  ['Check green tiles and consoles', 'If a map highlights a green tile or console, treat it as an objective or interaction clue before ending the turn.'],
+];
+
+export const mechanicusIIWalkthroughRows = [
+  ['Before entering a mission', 'Check faction resource state, leader role, available units, objective wording, and whether the mission is story-gated.'],
+  ['Opening turn', 'Identify cover, hazards, enemy firing lanes, interactable tiles, and which unit can safely trigger the first objective.'],
+  ['Mid-mission', 'Protect the leader, avoid splitting specialists too far apart, and keep one action plan for the next enemy activation.'],
+  ['Green console or tile', 'Move a suitable unit close enough to test interaction range before assuming the object is decorative.'],
+  ['Failed attempt', 'Record whether the loss came from leader exposure, resource spending, turn order, objective misunderstanding, or enemy reinforcements.'],
+  ['Replayability expectation', 'Expect story-driven missions and gated campaign steps rather than a fully random conquest layer.'],
+];
+
 export const mechanicusIIFactionRows = [
   ['Adeptus Mechanicus', 'Best first fit for players who want tech-priest flavor, battlefield control, and a more methodical Imperial campaign perspective.'],
   ['Necrons', 'Best first fit for players who want ancient machine-legion fantasy, awakening tomb-world pressure, and a campaign from the other side of the war.'],
   ['Leagues of Votann', 'Public preview coverage says the Leagues of Votann appear in the story, but they are not presented as a playable third campaign faction.'],
   ['Resource identity', 'Adeptus Mechanicus players should expect Cognition decisions; Necron players should expect Dominion decisions.'],
   ['Not yet safe to claim', 'Final best units, optimal army compositions, and hardest-mission counters still need hands-on campaign verification.'],
+];
+
+export const mechanicusIIFactionComparisonRows = [
+  ['Adeptus Mechanicus', 'Defined tech-priest leaders, Cognition decisions, specialist protection, and a closer connection to the first game.', 'Best first if you want the more familiar Imperial campaign.'],
+  ['Necrons', 'Dominion pressure, tomb-world fantasy, durable machine-legion identity, and the biggest new playable perspective.', 'Best first if the sequel hook is playing the other side.'],
+  ['Leagues of Votann', 'Present in the story and battlefield context according to previews, but not presented as a playable third campaign faction.', 'Track them as story content, not a campaign choice.'],
+  ['Space Marine allies', 'Preview coverage shows Space Marine allies appearing in battle context.', 'Do not treat them as a full playable campaign unless official store copy says so.'],
 ];
 
 export const mechanicusIISpecRows = [
@@ -97,6 +132,14 @@ export const mechanicusIIWorthRows = [
   ['Console note', 'PS5 and Xbox Series X|S versions are part of the launch platform set, but console-specific performance should still be checked by platform.'],
 ];
 
+export const mechanicusIIReviewConcernRows = [
+  ['Performance or optimization', 'Check the performance page if your PC is near minimum specs, you use handheld, or you are sensitive to frame pacing.'],
+  ['Comparison with Mechanicus 1', 'The sequel has clearer leaders, dual campaigns, and new presentation, but not every returning player wants those changes.'],
+  ['Customization depth', 'If cohort customization was your favorite part of the first game, read reviews carefully before buying.'],
+  ['Mission structure', 'Expect story-driven tactical missions and campaign choices rather than a fully open, endlessly random strategy layer.'],
+  ['Build certainty', 'Wait if you need solved best units, final tier lists, and proven late-campaign balance.'],
+];
+
 export const mechanicusIISteamDeckRows = [
   ['Current Deck status', 'Unsupported at launch based on official FAQ language and Steam Deck compatibility data.'],
   ['Can it still open?', 'Unsupported does not always mean impossible to launch, but it does mean the game is not a recommended Deck purchase without fresh player reports.'],
@@ -112,6 +155,14 @@ export const mechanicusIIPerformanceCheckRows = [
   ['Campaign layer', 'Check whether late-map navigation, territory screens, and resource menus remain readable and responsive.'],
   ['Cloud saves', 'Steam lists Steam Cloud, but players should still confirm saves sync correctly before switching machines.'],
   ['Controller use', 'Steam lists Xbox controller support, yet Deck users should specifically check button labels and menu navigation comfort.'],
+];
+
+export const mechanicusIIPerformanceTriageRows = [
+  ['Outdoor battles or heavy effects feel slow', 'Lower shadows, effects, fog or volumetric-style settings first, then retest the same turn.'],
+  ['Camera or UI feels uncomfortable', 'Reduce visual clutter, check resolution scaling, and avoid committing to a long campaign until tactical menus remain readable.'],
+  ['Controller labels feel wrong', 'Test keyboard/mouse and controller before QTE-free assumptions; tactics games still need fast menu confidence.'],
+  ['Laptop heat or fan spikes', 'Cap FPS, lower effects, and test on AC power before judging long-session comfort.'],
+  ['Cloud save uncertainty', 'Confirm Steam Cloud sync on a short test save before switching machines.'],
 ];
 
 export const mechanicusIIEditionRows = [
@@ -141,7 +192,7 @@ export const mechanicusIISourceRows = [
     source: 'Epic Games Store',
     status: 'needs-check' as const,
     href: mechanicusIIEpicUrl,
-    note: 'Epic has a product page, but it shows Coming Soon at the latest check, so use Steam for confirmed PC purchase status.',
+    note: 'Epic has a product page, but regional store state can change. Check the current page directly before treating it as the best PC purchase route.',
   },
   {
     claim: 'Is Mechanicus II on Xbox Series X|S?',
@@ -177,6 +228,20 @@ export const mechanicusIISourceRows = [
     status: 'working' as const,
     href: 'https://store.epicgames.com/en-US/blog/warhammer-40000-mechanicus-2-preview-leagues-of-votann',
     note: 'Preview coverage says the Leagues of Votann appear in the story, but current store descriptions focus playable campaigns on Adeptus Mechanicus and Necrons.',
+  },
+  {
+    claim: 'What are players struggling with after launch?',
+    source: 'Reddit community discussions',
+    status: 'working' as const,
+    href: 'https://www.reddit.com/search/?q=Warhammer%2040%2C000%3A%20Mechanicus%20II%20performance%20units%20builds',
+    note: 'Use community posts for demand patterns such as performance, mission objectives, units, replayability, and sequel comparisons, not as final canon.',
+  },
+  {
+    claim: 'What does official video footage confirm?',
+    source: 'Official launch trailer on YouTube',
+    status: 'verified' as const,
+    href: 'https://www.youtube.com/watch?v=jYyGB6wFFxE',
+    note: 'Use trailer footage for tone, factions, and presentation, not for final unit tier lists or full mission routes.',
   },
 ];
 

@@ -4,6 +4,7 @@ import { MechanicusIIArticle } from '@/components/mechanicus-ii-article';
 import {
   createMechanicusIIMetadata,
   mechanicusIIImages,
+  mechanicusIIReviewConcernRows,
   mechanicusIIWorthRows,
 } from '@/lib/mechanicus-ii';
 
@@ -106,7 +107,28 @@ export default function MechanicusIIWorthItPage() {
           first game. Read the review text before reducing the whole decision
           to a single label.
         </p>
+      </section>
 
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Review concern</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">How to judge it</th>
+            </tr>
+          </thead>
+          <tbody>
+            {mechanicusIIReviewConcernRows.map(([concern, advice]) => (
+              <tr key={concern} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{concern}</td>
+                <td className="px-4 py-3 text-muted-foreground">{advice}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
         <h2>Who Should Wait</h2>
         <p>
           Wait if you need a settled best-unit meta, polished late-campaign

@@ -10,7 +10,7 @@ import {
 
 const title = 'Warhammer 40,000: Mechanicus II Release Date, Platforms and Price';
 const description =
-  'Warhammer 40,000: Mechanicus II released May 21, 2026. Check PC, PS5, Xbox Series X|S, Steam price, launch discount, reviews, achievements, and Epic store status.';
+  'Warhammer 40,000: Mechanicus II released May 21, 2026. Check PC, PS5, Xbox Series X|S, Steam price, launch discount, reviews, achievements, editions, and Epic store status.';
 const canonical = '/games/mechanicus-ii/release-date';
 
 export const metadata = createMechanicusIIMetadata({
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     question: 'Is Mechanicus II on Steam?',
-    answer: 'Yes. Mechanicus II is available on Steam. Epic also has a product page, but it shows Coming Soon at the latest check.',
+    answer: 'Yes. Mechanicus II is available on Steam. Epic also has a product page, but players should check its current regional store state directly before buying there.',
   },
   {
     question: 'How much does Mechanicus II cost?',
@@ -63,8 +63,8 @@ export default function MechanicusIIReleaseDatePage() {
         <p>
           <strong>Warhammer 40,000: Mechanicus II released on May 21,
           2026.</strong> The current confirmed platform set is PC via Steam,
-          PlayStation 5, and Xbox Series X|S. Epic also has a store page, but
-          it shows Coming Soon at the latest check. Steam lists the US
+          PlayStation 5, and Xbox Series X|S. Epic also has a store page, so
+          check its current regional store state before buying there. Steam lists the US
           base price at $39.99, a $35.99 introductory Steam price at the
           latest check, a 10% offer ending May 28, 2026, Mixed user reviews,
           34 achievements, Steam Cloud, and Family Sharing.
@@ -109,11 +109,11 @@ export default function MechanicusIIReleaseDatePage() {
           <tbody>
             {[
               ['Release date', 'May 21, 2026', 'Store-listed'],
-              ['PC storefronts', 'Steam is live; Epic page shows Coming Soon at latest check', 'Store-checked'],
+              ['PC storefronts', 'Steam is live; Epic has a product page that should be checked directly in your region', 'Store-checked'],
               ['Console platforms', 'PS5 and Xbox Series X|S', 'Store-listed'],
               ['US Steam price', '$39.99 base price; $35.99 introductory price at latest check', 'Steam-listed'],
               ['Launch discount', '10% introductory offer ending May 28, 2026', 'Steam-listed'],
-              ['Review signal', 'Mixed Steam user reviews, 59% positive across 208 purchaser reviews at latest check', 'Steam-listed'],
+              ['Review signal', 'Mixed Steam user reviews at latest check; read recent reviews for performance and campaign-structure concerns', 'Steam-listed'],
               ['Achievements', '34 Steam achievements', 'Steam-listed'],
               ['Steam Deck', 'Unsupported at launch according to official FAQ and compatibility data', 'FAQ-listed'],
             ].map(([question, answer, status]) => (

@@ -8,6 +8,7 @@ import {
   createMechanicusIIMetadata,
   mechanicusIIFeatureRows,
   mechanicusIIImages,
+  mechanicusIIPlayerQuestionRows,
   mechanicusIIQuickFacts,
   mechanicusIIVideos,
 } from '@/lib/mechanicus-ii';
@@ -38,7 +39,7 @@ const faqs = [
   {
     question: 'What platforms is Mechanicus II on?',
     answer:
-      'The current confirmed live platform set is PC via Steam, PlayStation 5, and Xbox Series X|S. Epic has a product page, but it shows Coming Soon at the latest check.',
+      'The current confirmed platform set is PC via Steam, PlayStation 5, and Xbox Series X|S. Epic has a product page, so check its current regional store state before buying there.',
   },
   {
     question: 'Can you play as Necrons in Mechanicus II?',
@@ -59,6 +60,7 @@ const faqs = [
 
 function getGuideImage(href: string) {
   if (href.includes('beginner')) return mechanicusIIImages.screenshot1;
+  if (href.includes('walkthrough')) return mechanicusIIImages.screenshot4;
   if (href.includes('factions')) return mechanicusIIImages.screenshot2;
   if (href.includes('system')) return mechanicusIIImages.screenshot3;
   if (href.includes('steam-deck')) return mechanicusIIImages.screenshot3;
@@ -145,6 +147,31 @@ export default function MechanicusIIHubPage() {
           campaign is a better first fit.
         </p>
       </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player question</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Best answer</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Continue</th>
+            </tr>
+          </thead>
+          <tbody>
+            {mechanicusIIPlayerQuestionRows.map(([question, answer, href]) => (
+              <tr key={question} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{question}</td>
+                <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                <td className="px-4 py-3 text-muted-foreground">
+                  <Link href={href} className="text-emerald-300 hover:underline">
+                    Open guide
+                  </Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
         <table className="w-full text-sm">
