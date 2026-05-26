@@ -69,6 +69,14 @@ export const mechanicusIIPlayerQuestionRows = [
   ['Can I play Votann?', 'Use the factions guide: current public descriptions present Votann as part of the story, not as a third playable campaign faction.', '/games/mechanicus-ii/factions'],
 ];
 
+export const mechanicusIIIntentRows = [
+  ['Release, price, and platforms', 'Mechanicus II is out now on Steam PC, PS5, and Xbox Series X|S; use the release page for current store facts.', '/games/mechanicus-ii/release-date'],
+  ['Walkthrough and stuck objectives', 'Use the walkthrough for green console checks, marked tile logic, leader safety, and mission-flow troubleshooting.', '/games/mechanicus-ii/walkthrough'],
+  ['Units, factions, and builds', 'Use the factions page for role-based unit guidance and launch-window build rules without pretending the meta is solved.', '/games/mechanicus-ii/factions'],
+  ['Steam Deck and performance', 'Use the performance page before a Deck-first purchase because Steam Deck is unsupported at launch.', '/games/mechanicus-ii/steam-deck-performance'],
+  ['Buy now or wait', 'Use the worth-it page if Mixed Steam reviews, platform performance, or comparison with Mechanicus 1 affect your decision.', '/games/mechanicus-ii/is-it-worth-it'],
+];
+
 export const mechanicusIIBeginnerRows = [
   ['Pick a campaign for learning', 'Choose the faction whose turn rhythm sounds clearer to you; do not swap campaigns every few missions before learning the basics.'],
   ['Use cover every turn', 'Treat cover and line of sight as core resources, not optional decoration.'],
@@ -99,6 +107,14 @@ export const mechanicusIIWalkthroughRows = [
   ['Replayability expectation', 'Expect story-driven missions and gated campaign steps rather than a fully random conquest layer.'],
 ];
 
+export const mechanicusIIWalkthroughProblemRows = [
+  ['The objective will not advance', 'Re-read the objective, move a unit near any green tile or console, and check whether a living leader or specialist is required.'],
+  ['The squad is wiped quickly', 'Stop trading damage from open ground; use cover first, then spend faction resources after checking enemy activation order.'],
+  ['A mission feels bugged', 'Before restarting, test interactable range, line of sight, camera angle, remaining enemies, and whether the map expects a specific unit.'],
+  ['The campaign route feels unclear', 'Stay on one faction long enough to learn its resource loop, then use mission failure notes to identify the real bottleneck.'],
+  ['A build guide conflicts with your run', 'Trust repeatable role value over launch-window tier claims until completed campaign data is more stable.'],
+];
+
 export const mechanicusIIFactionRows = [
   ['Adeptus Mechanicus', 'Best first fit for players who want tech-priest flavor, battlefield control, and a more methodical Imperial campaign perspective.'],
   ['Necrons', 'Best first fit for players who want ancient machine-legion fantasy, awakening tomb-world pressure, and a campaign from the other side of the war.'],
@@ -112,6 +128,22 @@ export const mechanicusIIFactionComparisonRows = [
   ['Necrons', 'Dominion pressure, tomb-world fantasy, durable machine-legion identity, and the biggest new playable perspective.', 'Best first if the sequel hook is playing the other side.'],
   ['Leagues of Votann', 'Present in the story and battlefield context according to previews, but not presented as a playable third campaign faction.', 'Track them as story content, not a campaign choice.'],
   ['Space Marine allies', 'Preview coverage shows Space Marine allies appearing in battle context.', 'Do not treat them as a full playable campaign unless official store copy says so.'],
+];
+
+export const mechanicusIIUnitRoleRows = [
+  ['Leader', 'Mission routing and survival anchor', 'Keep protected until the mission proves leader exposure is safe.'],
+  ['Frontline body', 'Absorb pressure and hold angles', 'Judge by durability, cover access, and whether it keeps specialists alive.'],
+  ['Ranged specialist', 'Remove priority threats or trigger safe trades', 'Avoid exposing it for one large hit if the next enemy turn can punish it.'],
+  ['Objective runner', 'Interact with consoles, marked tiles, or mission triggers', 'Keep at least one mobile unit free before ending a turn near objectives.'],
+  ['Resource enabler', 'Support Cognition or Dominion flow', 'Value repeatable resource stability over flashy damage while learning a campaign.'],
+];
+
+export const mechanicusIIBuildDirectionRows = [
+  ['Safe first build', 'Leader protection, cover discipline, one reliable ranged threat, and resource stability.', 'Best for learning missions without resetting constantly.'],
+  ['Aggressive build', 'More damage and faster objective pressure, but only after you understand turn order and enemy threat ranges.', 'Use when you can predict the next enemy activation.'],
+  ['Control build', 'Terrain use, objective timing, debuffs, and delaying bad enemy turns.', 'Best when missions punish direct damage races.'],
+  ['Campaign economy build', 'Upgrades and units chosen around the resource bottleneck you repeatedly feel.', 'Best after several missions reveal what your faction lacks.'],
+  ['Not recommended yet', 'Copying a final best-build list without knowing patch version, difficulty, or campaign side.', 'Too easy to follow advice that does not match your run.'],
 ];
 
 export const mechanicusIISpecRows = [

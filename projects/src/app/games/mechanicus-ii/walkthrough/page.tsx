@@ -5,12 +5,13 @@ import { MechanicusIIArticle } from '@/components/mechanicus-ii-article';
 import {
   createMechanicusIIMetadata,
   mechanicusIIImages,
+  mechanicusIIWalkthroughProblemRows,
   mechanicusIIWalkthroughRows,
 } from '@/lib/mechanicus-ii';
 
-const title = 'Warhammer 40,000: Mechanicus II Walkthrough';
+const title = 'Warhammer 40,000: Mechanicus II Walkthrough: Missions, Consoles & Route Help';
 const description =
-  'Spoiler-light Mechanicus II walkthrough for first campaign flow, mission objectives, green consoles, leader safety, resources, replayability, and early progression problems.';
+  'Spoiler-light Mechanicus II walkthrough for mission flow, green consoles, marked tiles, leader safety, faction resources, route help, and early progression problems.';
 const canonical = '/games/mechanicus-ii/walkthrough';
 
 export const metadata = createMechanicusIIMetadata({
@@ -30,6 +31,11 @@ const faqs = [
     question: 'What should I check first when stuck in a Mechanicus II mission?',
     answer:
       'Check the objective text, highlighted green tiles or consoles, leader position, interactable range, turn order, and whether a specialist is required to trigger the next step.',
+  },
+  {
+    question: 'What do green consoles or marked tiles mean in Mechanicus II?',
+    answer:
+      'Treat them as objective clues first. Move a suitable unit close enough to test interaction range before assuming the object is decorative or the mission is bugged.',
   },
   {
     question: 'Can I replay missions in Mechanicus II?',
@@ -108,7 +114,28 @@ export default function MechanicusIIWalkthroughPage() {
           verify line of sight, action points, and whether the leader or
           specialist is still alive.
         </p>
+      </section>
 
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Problem</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">First fix</th>
+            </tr>
+          </thead>
+          <tbody>
+            {mechanicusIIWalkthroughProblemRows.map(([problem, fix]) => (
+              <tr key={problem} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{problem}</td>
+                <td className="px-4 py-3 text-muted-foreground">{fix}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
         <h2>Leader Safety Comes Before Damage</h2>
         <p>
           Some missions are built around named leaders and story roles. Until a

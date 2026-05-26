@@ -8,14 +8,15 @@ import {
   createMechanicusIIMetadata,
   mechanicusIIFeatureRows,
   mechanicusIIImages,
+  mechanicusIIIntentRows,
   mechanicusIIPlayerQuestionRows,
   mechanicusIIQuickFacts,
   mechanicusIIVideos,
 } from '@/lib/mechanicus-ii';
 
-const title = 'Warhammer 40,000: Mechanicus II Guide Hub - Release, Factions & Beginner Tips';
+const title = 'Warhammer 40,000: Mechanicus II Guide: Walkthrough, Units & Builds';
 const description =
-  'Warhammer 40,000: Mechanicus II guide hub for the May 21 launch: release date, PS5, Xbox, Steam, Steam Deck, Adeptus Mechanicus, Necrons, beginner tactics, PC specs, and buying advice.';
+  'Warhammer 40,000: Mechanicus II guide hub for walkthrough help, units, builds, factions, Steam Deck status, release date, PS5, Xbox, PC specs, and buying advice.';
 const canonical = '/games/mechanicus-ii';
 
 export const metadata = createMechanicusIIMetadata({
@@ -45,6 +46,11 @@ const faqs = [
     question: 'Can you play as Necrons in Mechanicus II?',
     answer:
       'Yes. Steam describes distinct campaigns for both the Adeptus Mechanicus and the Necrons.',
+  },
+  {
+    question: 'Where should I start for Mechanicus II units and builds?',
+    answer:
+      'Start with the factions guide. It gives role-based unit and build guidance while final best-build claims still need completed campaign verification.',
   },
   {
     question: 'Is Mechanicus II multiplayer?',
@@ -147,6 +153,31 @@ export default function MechanicusIIHubPage() {
           campaign is a better first fit.
         </p>
       </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Search intent</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Direct answer</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Best page</th>
+            </tr>
+          </thead>
+          <tbody>
+            {mechanicusIIIntentRows.map(([intent, answer, href]) => (
+              <tr key={intent} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{intent}</td>
+                <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                <td className="px-4 py-3 text-muted-foreground">
+                  <Link href={href} className="text-emerald-300 hover:underline">
+                    Open guide
+                  </Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
         <table className="w-full text-sm">

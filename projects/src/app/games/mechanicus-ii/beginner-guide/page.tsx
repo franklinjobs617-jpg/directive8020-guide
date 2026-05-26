@@ -5,13 +5,14 @@ import { MechanicusIIArticle } from '@/components/mechanicus-ii-article';
 import {
   createMechanicusIIMetadata,
   mechanicusIIBeginnerRows,
+  mechanicusIIBuildDirectionRows,
   mechanicusIIFirstHourRows,
   mechanicusIIImages,
 } from '@/lib/mechanicus-ii';
 
-const title = 'Warhammer 40,000: Mechanicus II Beginner Guide';
+const title = 'Warhammer 40,000: Mechanicus II Beginner Guide: First Campaign & Builds';
 const description =
-  'Spoiler-light Mechanicus II beginner guide for choosing a first campaign, using cover, reading terrain, managing Cognition or Dominion, turn order, and launch-week traps.';
+  'Spoiler-light Mechanicus II beginner guide for first campaign choice, safe builds, cover, terrain, Cognition, Dominion, turn order, and early mission mistakes.';
 const canonical = '/games/mechanicus-ii/beginner-guide';
 
 export const metadata = createMechanicusIIMetadata({
@@ -36,6 +37,11 @@ const faqs = [
     question: 'What should beginners focus on first?',
     answer:
       'Use cover, check terrain, watch turn order, protect specialists and named leaders, inspect objectives, and learn your faction resource before chasing advanced builds.',
+  },
+  {
+    question: 'What is the best beginner build in Mechanicus II?',
+    answer:
+      'Use a safe role-based build first: protect the leader, keep one reliable ranged threat, preserve resource flow, and avoid final tier-list claims until the campaign meta is tested.',
   },
   {
     question: 'Why did my Mechanicus II mission fail so fast?',
@@ -154,6 +160,37 @@ export default function MechanicusIIBeginnerGuidePage() {
           why: 'This keeps the first campaign readable while launch-week meta advice is still unproven.',
         }))}
       />
+
+      <section className="prose-game">
+        <h2>Beginner Build Direction</h2>
+        <p>
+          A useful beginner build is less about one perfect unit and more about
+          repeatable roles. Keep the leader safe, bring enough ranged pressure
+          to remove threats without overextending, and choose upgrades that
+          make your faction resource easier to manage.
+        </p>
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Build direction</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">What it means</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">When to use it</th>
+            </tr>
+          </thead>
+          <tbody>
+            {mechanicusIIBuildDirectionRows.map(([direction, meaning, use]) => (
+              <tr key={direction} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{direction}</td>
+                <td className="px-4 py-3 text-muted-foreground">{meaning}</td>
+                <td className="px-4 py-3 text-muted-foreground">{use}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <section className="prose-game">
         <h2>Cognition, Dominion, and Turn Order</h2>

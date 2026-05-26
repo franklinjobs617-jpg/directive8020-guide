@@ -8,7 +8,7 @@ import {
   mechanicusIIQuickFacts,
 } from '@/lib/mechanicus-ii';
 
-const title = 'Warhammer 40,000: Mechanicus II Release Date, Platforms and Price';
+const title = 'Warhammer 40,000: Mechanicus II Release Date: Steam, PS5, Xbox & Price';
 const description =
   'Warhammer 40,000: Mechanicus II released May 21, 2026. Check PC, PS5, Xbox Series X|S, Steam price, launch discount, reviews, achievements, editions, and Epic store status.';
 const canonical = '/games/mechanicus-ii/release-date';

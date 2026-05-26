@@ -36,6 +36,7 @@ export const firstLightVideos = [
 
 export const firstLightQuickFacts = [
   ['Release date', 'May 27, 2026 on Steam.'],
+  ['Verified platforms here', 'PC via Steam and PlayStation 5 via PlayStation Store. Check your regional storefront for local price and unlock timing.'],
   ['Early access', 'Pre-order bonus includes a free Deluxe Edition upgrade with 24-hour early access.'],
   ['Developer / Publisher', 'IO Interactive A/S.'],
   ['Genre', 'Single-player espionage action-adventure with stealth, shooting, driving, gadgets, and cinematic missions.'],
@@ -58,7 +59,7 @@ export const firstLightReleaseRows = [
   ['Standard release', 'May 27, 2026 on Steam.'],
   ['24-hour early access', 'Included with the free Deluxe Edition upgrade for pre-orders, according to Steam store and Steam news copy.'],
   ['Pre-order bonus', 'Deluxe Edition upgrade with four outfits, Agent’s Mark weapon skin, and four Gleaming gadget skins.'],
-  ['Preload', 'Not universally confirmed in Steam page copy; check Steam, PS5, or Xbox library status after purchase.'],
+  ['Preload', 'Not universally confirmed in Steam page copy; check your Steam or PS5 library status after purchase.'],
   ['Review timing', 'No Steam user reviews before full release; critic review timing should be checked when embargo coverage appears.'],
   ['Australia / time zones', 'Use the platform countdown rather than only the calendar date, because local storefront timing can differ by region.'],
 ];

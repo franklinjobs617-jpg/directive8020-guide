@@ -37,6 +37,11 @@ const faqs = [
       'The strongest new hook is the dual-campaign structure with playable Adeptus Mechanicus and Necron perspectives.',
   },
   {
+    question: 'Should I wait for walkthroughs and build guides?',
+    answer:
+      'Wait if you need solved late-campaign routes, final best units, and settled balance advice. Buy sooner if role-based tactics guidance is enough for your first run.',
+  },
+  {
     question: 'Should I wait for reviews?',
     answer:
       'Waiting is reasonable if you need stable user consensus. Steam currently shows Mixed user reviews at the latest check.',
@@ -136,6 +141,14 @@ export default function MechanicusIIWorthItPage() {
           a broad review consensus. The current pages should help with facts and
           first-session direction, but they should not pretend the full campaign
           has already been solved.
+        </p>
+        <p>
+          Buy sooner if the value is the experience itself: learning the
+          Adeptus Mechanicus and Necron campaigns, comparing the sequel with
+          the first Mechanicus, and solving tactical missions without needing a
+          completed wiki beside you. Wait if your purchase depends on exact
+          mission routes, confirmed late-game builds, or broad platform
+          performance consensus.
         </p>
       </section>
     </MechanicusIIArticle>

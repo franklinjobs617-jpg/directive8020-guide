@@ -3,14 +3,16 @@ import { BlufBox } from '@/components/guide-blocks';
 import { MechanicusIIArticle } from '@/components/mechanicus-ii-article';
 import {
   createMechanicusIIMetadata,
+  mechanicusIIBuildDirectionRows,
   mechanicusIIFactionComparisonRows,
   mechanicusIIFactionRows,
   mechanicusIIImages,
+  mechanicusIIUnitRoleRows,
 } from '@/lib/mechanicus-ii';
 
-const title = 'Warhammer 40,000: Mechanicus II Factions Guide';
+const title = 'Warhammer 40,000: Mechanicus II Factions, Units & Builds Guide';
 const description =
-  'Mechanicus II factions guide covering the Adeptus Mechanicus, Necrons, dual campaigns, leaders, battlefield identity, and what still needs hands-on testing.';
+  'Mechanicus II factions, units, and builds guide covering Adeptus Mechanicus, Necrons, campaign leaders, role-based unit value, and launch-window build cautions.';
 const canonical = '/games/mechanicus-ii/factions';
 
 export const metadata = createMechanicusIIMetadata({
@@ -47,18 +49,15 @@ const faqs = [
       'Choose Adeptus Mechanicus first if you want the more familiar tech-priest campaign; choose Necrons first if the new playable perspective is the main appeal.',
   },
   {
+    question: 'What are the best units and builds in Mechanicus II?',
+    answer:
+      'Final best-unit claims are not safe yet. Judge units by leader safety, objective interaction, resource flow, durability, and repeatable mission value.',
+  },
+  {
     question: 'Are the Leagues of Votann playable in Mechanicus II?',
     answer:
       'Current store descriptions focus playable campaigns on Adeptus Mechanicus and Necrons. Preview coverage says the Leagues of Votann appear in the story, but not as a playable third campaign faction.',
   },
-];
-
-const mechanicusIIUnitRows = [
-  ['Adeptus Mechanicus core', 'Use early Mechanicus units to learn cover, Cognition flow, safe firing lanes, and specialist protection before chasing advanced combinations.'],
-  ['Necron core', 'Use early Necron units to understand Dominion pressure, durability, and how the campaign wants you to trade position for long-term control.'],
-  ['Leaders', 'Magos Dominus Faustinius and Vargard Nefershah are the confirmed campaign leaders to track first.'],
-  ['Build caution', 'Do not treat launch-week unit lists as final best builds until more complete campaign runs and balance patches are available.'],
-  ['What to record', 'Track unit survival, action economy, terrain value, faction resource cost, and whether a unit solves a recurring mission problem.'],
 ];
 
 export default function MechanicusIIFactionsPage() {
@@ -169,15 +168,38 @@ export default function MechanicusIIFactionsPage() {
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Unit or build topic</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current guidance</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Unit role</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">What it solves</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">How to judge it</th>
             </tr>
           </thead>
           <tbody>
-            {mechanicusIIUnitRows.map(([topic, guidance]) => (
-              <tr key={topic} className="border-b border-border/30 last:border-0">
-                <td className="px-4 py-3 font-semibold text-foreground">{topic}</td>
-                <td className="px-4 py-3 text-muted-foreground">{guidance}</td>
+            {mechanicusIIUnitRoleRows.map(([role, solves, judge]) => (
+              <tr key={role} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{role}</td>
+                <td className="px-4 py-3 text-muted-foreground">{solves}</td>
+                <td className="px-4 py-3 text-muted-foreground">{judge}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Build direction</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">What it means</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">When it helps</th>
+            </tr>
+          </thead>
+          <tbody>
+            {mechanicusIIBuildDirectionRows.map(([direction, meaning, use]) => (
+              <tr key={direction} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{direction}</td>
+                <td className="px-4 py-3 text-muted-foreground">{meaning}</td>
+                <td className="px-4 py-3 text-muted-foreground">{use}</td>
               </tr>
             ))}
           </tbody>

@@ -10,9 +10,9 @@ import {
   mechanicusIISteamDeckRows,
 } from '@/lib/mechanicus-ii';
 
-const title = 'Warhammer 40,000: Mechanicus II Steam Deck and Performance Guide';
+const title = 'Warhammer 40,000: Mechanicus II Steam Deck Unsupported & Performance Guide';
 const description =
-  'Mechanicus II Steam Deck and performance guide covering unsupported Deck status, PC requirements, controller cautions, UI readability, save checks, and launch-week buyer advice.';
+  'Mechanicus II Steam Deck unsupported status and performance guide covering PC requirements, controller cautions, UI readability, save checks, and launch-week buyer advice.';
 const canonical = '/games/mechanicus-ii/steam-deck-performance';
 
 export const metadata = createMechanicusIIMetadata({
