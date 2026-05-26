@@ -162,7 +162,7 @@ export default function ProjectMistReleaseDatePage() {
         <ArticleImage
           src={projectMistImages.screenshot3}
           alt="Project: Mist PC Steam platform status image"
-          caption="Platform intent needs a direct answer: PC Steam is confirmed, while console and cross-play claims should wait for official announcements."
+          caption="Platform questions need a direct answer: PC Steam is confirmed, while console and cross-play claims should wait for official announcements."
         />
       </section>
 

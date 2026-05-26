@@ -9,9 +9,9 @@ import { DeathSceneTracker } from '@/components/tools/death-scene-tracker';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 All Deaths - 44 Death Scenes Checklist',
+  title: 'Directive 8020 All Deaths, Death Spiral & Death Scenes',
   description:
-    'Directive 8020 all deaths guide: 44 death scenes checklist, chapter triggers, victims, avoid methods, Turning Points recovery, mimic deaths, stealth deaths, death spiral, and trophy cleanup.',
+    'Directive 8020 all deaths guide covering 44 reported death scenes, Death Spiral, chapter triggers, victims, avoid methods, Turning Points recovery, and trophy cleanup.',
   alternates: {
     canonical: '/directive-8020-death-scenes-guide',
   },
@@ -22,6 +22,11 @@ const faqs = [
     question: 'How many death scenes are in Directive 8020?',
     answer:
       'Directive 8020 has 44 reported death scenes. Use Turning Points after one clean route to capture all deaths by victim, chapter, trigger, and avoid method.',
+  },
+  {
+    question: 'What is Death Spiral in Directive 8020?',
+    answer:
+      'Death Spiral is best treated as a special failure-state or ending concept, not a normal numbered death scene. Track it alongside endings first, then connect it to death cleanup only after its exact requirements are verified in-game.',
   },
   {
     question: 'Can deaths be undone with Turning Points?',
@@ -45,10 +50,10 @@ const deathCategories = [
 ];
 
 const deathIntentRows = [
-  ['directive 8020 deaths', 'A broad all-deaths query; answer with 44 death scenes and a tracker immediately.'],
-  ['directive 8020 all deaths', 'Completion intent; emphasize checklist order, victims, triggers, and Turning Points.'],
-  ['directive 8020 death spiral', 'Special ending-state intent; explain separately from normal death-scene collection.'],
-  ['directive 8020 save everyone deaths', 'Survival intent; every death entry needs an avoid method.'],
+  ['How many deaths are there?', '44 death scenes have been reported by preview coverage; the final entry-by-entry checklist should be confirmed in-game.'],
+  ['What is Death Spiral?', 'A special failure-state or ending concept. Do not treat it as a normal death-scene entry until its exact route conditions are verified.'],
+  ['How should I collect all deaths?', 'Finish one clean route first, then branch from Turning Points and test one fatal choice at a time.'],
+  ['How do I avoid deaths?', 'Record the safer choice, required evidence, relationship condition, or earlier Turning Point for every confirmed death.'],
 ];
 
 const deathCaptureRows = [
@@ -93,7 +98,7 @@ const sourceRows = [
     source: 'Reddit death-structure thread',
     status: 'working' as const,
     href: 'https://www.reddit.com/r/DarkPicturesAnthology/comments/1tg5q9y/directive_8020_death_structure_for_those_who_want/',
-    note: 'Use Reddit as a demand and pattern signal, not as final canon.',
+    note: 'Use community discussion as a route-checking clue, not as final canon.',
   },
 ];
 
@@ -102,9 +107,9 @@ export default function DeathScenesPage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 All Deaths - 44 Death Scenes Checklist',
+          title: 'Directive 8020 All Deaths, Death Spiral & Death Scenes',
           description:
-            'Directive 8020 all deaths guide with 44 death scenes checklist, triggers, chapters, victims, avoid methods, Turning Points recovery, death spiral, and trophy cleanup.',
+            'Directive 8020 all deaths guide with 44 reported death scenes, Death Spiral, triggers, chapters, victims, avoid methods, Turning Points recovery, and trophy cleanup.',
           url: '/directive-8020-death-scenes-guide',
           datePublished: '2026-05-12',
           dateModified: '2026-05-21',
@@ -118,13 +123,16 @@ export default function DeathScenesPage() {
         <PageHero src="/d8020-screenshot-11.jpg" alt="Directive 8020 death scenes guide screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 All Deaths: 44 Death Scenes Checklist
+          Directive 8020 All Deaths, Death Spiral and Death Scenes
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
           Directive 8020 has <strong className="text-foreground">44 reported
           death scenes</strong>. Use this all-deaths tracker after one clean
           playthrough: map every death by chapter, victim, trigger, avoid
           method, and nearest Turning Point instead of replaying blindly.
+          Treat <strong className="text-foreground">Death Spiral</strong> as a
+          special ending-state concept until its exact route requirements are
+          fully verified.
         </p>
 
         <BlufBox>
@@ -132,7 +140,9 @@ export default function DeathScenesPage() {
             <strong>Use deaths as a controlled checklist, not a first-run goal.</strong>
             Preview coverage cites 44 death scenes. Capture them from a clean
             completed route by branching through Turning Points, and always log
-            the avoid method alongside the trigger.
+            the avoid method alongside the trigger. If you are checking Death
+            Spiral, read it as an ending-state route first, then connect it to
+            death cleanup only after the trigger path is confirmed.
           </p>
         </BlufBox>
 
@@ -147,10 +157,16 @@ export default function DeathScenesPage() {
 
         <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
           <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left text-muted-foreground font-medium">Question</th>
+                <th className="px-4 py-3 text-left text-muted-foreground font-medium">Direct answer</th>
+              </tr>
+            </thead>
             <tbody>
-              {deathIntentRows.map(([query, answer]) => (
-                <tr key={query} className="border-b border-border/30 last:border-0">
-                  <td className="px-4 py-3 font-semibold text-foreground w-56">{query}</td>
+              {deathIntentRows.map(([question, answer]) => (
+                <tr key={question} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground w-56">{question}</td>
                   <td className="px-4 py-3 text-muted-foreground">{answer}</td>
                 </tr>
               ))}
@@ -241,7 +257,7 @@ export default function DeathScenesPage() {
           <h2>Death Entry Template</h2>
           <p>
             Each confirmed death should eventually use the same format. This
-            makes the page useful both for “all deaths” searches and for players
+            makes the page useful both for all-deaths cleanup and for players
             trying to prevent a specific death.
           </p>
           <ul>
@@ -288,6 +304,11 @@ export default function DeathScenesPage() {
 
         <RelatedGuides
           guides={[
+            {
+              href: '/directive-8020-all-endings',
+              title: 'All Endings Guide',
+              description: 'Use this alongside Death Spiral and other ending-state checks.',
+            },
             {
               href: '/directive-8020-walkthrough',
               title: 'Full Walkthrough',

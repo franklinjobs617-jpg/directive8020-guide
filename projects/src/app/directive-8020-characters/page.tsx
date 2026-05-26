@@ -9,9 +9,9 @@ import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { crewPortraitHero, directiveCharacters } from '@/lib/directive-8020-characters';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 Characters, Cast, Actors & Playable Crew',
+  title: 'Directive 8020 Characters, Cast, Actors & Face Models',
   description:
-    'Directive 8020 characters guide with playable crew, cast and actors, Brianna Young, Eisele actor status, face model cautions, mimic clues, and survival roles.',
+    'Directive 8020 characters guide with playable crew, cast, actors, face model status, Brianna Young, Eisele actor verification, mimic clues, and survival roles.',
   alternates: {
     canonical: '/directive-8020-characters',
   },
@@ -49,11 +49,11 @@ const suspicionChecklist = [
 ];
 
 const characterQuickRows = [
-  ['Brianna Young', 'Lashana Lynch confirmed', 'Yes', 'Pilot / co-pilot', 'Verified lead cast signal'],
-  ['Nolan Stafford', 'Danny Sapani reported', 'Yes', 'Commander', 'Working role-level source'],
-  ['Laura Eisele', 'Actor to verify', 'Yes', 'Senior Mission Officer', 'Pending actor confirmation'],
-  ['Dr. Samantha Cooper', 'Actor to verify', 'Yes', 'Medical specialist', 'Pending actor confirmation'],
-  ['Josef Cernan', 'Actor to verify', 'Yes', 'Technical engineer', 'Pending actor confirmation'],
+  ['Brianna Young', 'Lashana Lynch confirmed', 'Yes', 'Pilot / co-pilot', 'Use credited cast and official portraits only', 'Verified lead cast signal'],
+  ['Nolan Stafford', 'Danny Sapani reported', 'Yes', 'Commander', 'Do not infer a separate face model without credits', 'Working role-level source'],
+  ['Laura Eisele', 'Actor to verify', 'Yes', 'Senior Mission Officer', 'Not confirmed', 'Pending actor confirmation'],
+  ['Dr. Samantha Cooper', 'Actor to verify', 'Yes', 'Medical specialist', 'Not confirmed', 'Pending actor confirmation'],
+  ['Josef Cernan', 'Actor to verify', 'Yes', 'Technical engineer', 'Not confirmed', 'Pending actor confirmation'],
 ];
 
 const characterSearchRows = [
@@ -76,9 +76,9 @@ export default function CharactersPage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 Characters - Cast, Crew & Survival Roles',
+          title: 'Directive 8020 Characters, Cast, Actors & Face Models',
           description:
-            'Directive 8020 characters guide with Brianna Young, Nolan Stafford, Laura Eisele, Samantha Cooper, Josef Cernan, cast details, mimic threat, and survival notes.',
+            'Directive 8020 characters guide with playable crew, cast details, actor verification, face model cautions, mimic threat, and survival notes.',
           url: '/directive-8020-characters',
           datePublished: '2026-05-10',
           dateModified: '2026-05-21',
@@ -92,7 +92,7 @@ export default function CharactersPage() {
         <PageHero src={crewPortraitHero} alt="Directive 8020 official playable Cassiopeia crew portraits" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 Characters, Cast, Actors and Playable Crew
+          Directive 8020 Characters, Cast, Actors and Face Models
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
           Directive 8020 has five core playable Cassiopeia crew members to
@@ -114,16 +114,18 @@ export default function CharactersPage() {
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">Actor status</th>
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">Playable?</th>
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">Crew role</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Face model status</th>
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">Verification</th>
               </tr>
             </thead>
             <tbody>
-              {characterQuickRows.map(([character, actor, playable, role, verification]) => (
+              {characterQuickRows.map(([character, actor, playable, role, faceModel, verification]) => (
                 <tr key={character} className="border-b border-border/30 last:border-0">
                   <td className="px-4 py-3 font-semibold text-foreground">{character}</td>
                   <td className="px-4 py-3 text-muted-foreground">{actor}</td>
                   <td className="px-4 py-3 text-muted-foreground">{playable}</td>
                   <td className="px-4 py-3 text-muted-foreground">{role}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{faceModel}</td>
                   <td className="px-4 py-3 text-muted-foreground">{verification}</td>
                 </tr>
               ))}
@@ -138,12 +140,12 @@ export default function CharactersPage() {
         />
 
         <div className="prose-game">
-          <h2>Quick Answers for Character Searches</h2>
+          <h2>Quick Character Answers</h2>
           <p>
-            Most character searches are not looking for lore first. Players
-            usually want to know who the main character is, which crew members
-            are playable, whether an actor is confirmed, and how each character
-            matters in a survival route. For a deeper role-by-role source check,
+            Start with the practical facts: who the main character is, which
+            crew members are playable, whether an actor is confirmed, whether
+            face model information is credited, and how each character matters
+            in a survival route. For a deeper role-by-role source check,
             use the{' '}
             <Link href="/directive-8020-cast-actors" className="text-d8020 hover:underline">
               Directive 8020 cast and actors
@@ -156,7 +158,7 @@ export default function CharactersPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border/50 bg-card/50">
-                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Search need</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player question</th>
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player-facing answer</th>
               </tr>
             </thead>

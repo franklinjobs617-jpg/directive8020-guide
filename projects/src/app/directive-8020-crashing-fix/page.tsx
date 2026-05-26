@@ -38,6 +38,11 @@ const faqs = [
       'Stuttering can come from shader compilation, HDD loading, VRAM pressure, overlays, background apps, or unstable frame caps. Use an SSD, cap FPS, lower shadows and reflections, and close background programs.',
   },
   {
+    question: 'How do I fix Directive 8020 online issues?',
+    answer:
+      'First separate official online features from Remote Play workarounds. Then restart the game and platform client, disable VPNs, check patch notes, test a direct invite, and confirm whether the mode you are trying to use is currently supported.',
+  },
+  {
     question: 'What are the official PC minimum specs?',
     answer:
       'Steam lists Windows 10/11 64-bit, Intel Core i5-8500 or Ryzen 5 3500, 16 GB RAM, RTX 2060 or RX 5700, and 40 GB storage, with SSD recommended.',
@@ -61,9 +66,16 @@ const fatalErrorRows = [
   ['Controller input problem', 'Test Steam Input on and off, use a wired controller, and disconnect extra input devices.', 'If QTE timing feels wrong, check accessibility timing before a serious route.'],
 ];
 
+const onlineFixRows = [
+  ['Online co-op availability', 'Confirm the current official mode support before troubleshooting.', 'Do not treat a Remote Play workaround as the same thing as native online co-op.'],
+  ['Invite or session failure', 'Restart the game, restart Steam or console services, then send a fresh invite.', 'If invites still fail, check patch notes and support channels before changing router settings.'],
+  ['Remote Play confusion', 'Use it only as a workaround if it is stable for your group.', 'Input delay can make QTE-heavy scenes harder, so test before a serious route.'],
+  ['Desync or input delay', 'Use wired controllers, close overlays, avoid VPNs, and reduce background streaming tools.', 'If timing still feels wrong, switch to solo for survival-critical scenes.'],
+];
+
 const reportedIssues = [
   ['PS5 trophy or achievement display delays', 'Community-reported', 'Do not assume trophies are permanently broken. Reboot, sync trophies, check patches, and wait before deleting saves.'],
-  ['Steam Remote Play / online co-op confusion', 'Community demand signal', 'Online multiplayer is post-launch; do not treat remote workarounds as official co-op support.'],
+  ['Steam Remote Play / online co-op confusion', 'Player-reported issue', 'Online multiplayer is post-launch; do not treat remote workarounds as official co-op support.'],
   ['Controller labels or input timing complaints', 'Troubleshooting pattern', 'Test wired input, Steam Input on/off, and accessibility timing before a serious save-everyone run.'],
   ['Startup crash, black screen, low FPS, stutter', 'General PC troubleshooting', 'Use official PC specs and reversible PC fixes before reinstalling.'],
 ];
@@ -163,6 +175,37 @@ export default function CrashingFixPage() {
               <li key={fix}>{fix}</li>
             ))}
           </ul>
+        </div>
+
+        <div className="prose-game">
+          <h2>Online Fix: Co-op, Remote Play, and Invite Issues</h2>
+          <p>
+            Before changing network settings, separate three different cases:
+            official online multiplayer, Remote Play-style workarounds, and
+            local controller sharing. A workaround can help some groups, but it
+            should not be treated as native online co-op support.
+          </p>
+        </div>
+
+        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Online problem</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">First check</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Important note</th>
+              </tr>
+            </thead>
+            <tbody>
+              {onlineFixRows.map(([problem, firstCheck, note]) => (
+                <tr key={problem} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{problem}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{firstCheck}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{note}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         <div className="prose-game">

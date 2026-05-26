@@ -91,7 +91,7 @@ const endingIntentRows = [
 ];
 
 const spoilerTopics = [
-  ['Cycle 13', 'A high-intent ending search term tied to finale interpretation. Keep it in spoiler-marked sections and connect it to the all-endings route.'],
+  ['Cycle 13', 'A spoiler-heavy finale topic tied to ending interpretation. Keep it in spoiler-marked sections and connect it to the all-endings route.'],
   ['Booster Ring', 'A late-story objective and ending-context term. Mention it where players expect ending explanation, not in spoiler-free beginner pages.'],
   ['Cassiopeia outcome', 'The ship and mission state should be tracked alongside survivor count because ending value is not only who lives.'],
   ['Eisele Destiny', 'A character-specific route flag that can affect how players understand finale outcomes and best-ending cleanup.'],
@@ -121,7 +121,7 @@ const sourceRows = [
     note: 'Treat death spiral as a special route concept until controlled route tests confirm the trigger conditions.',
   },
   {
-    claim: 'Distress call or warning is a finale decision search term.',
+    claim: 'Distress call or warning is a finale decision topic.',
     source: 'Full-game transcript route notes',
     status: 'working' as const,
     href: '/directive-8020-choices-consequences',
@@ -177,7 +177,7 @@ export default function AllEndingsPage() {
           <p>
             <strong>Short answer:</strong> launch review coverage reports
             <strong> five major ending families</strong> in Directive 8020,
-            while ending guides and player searches surface named outcomes such
+            while ending guides and player discussions surface named outcomes such
             as Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not
             Alone, and Horror. Start from one clean completed route, then branch
             from late Turning Points to test survivor count, mission choices,
@@ -269,7 +269,7 @@ export default function AllEndingsPage() {
             <thead>
               <tr className="border-b border-border/50 bg-card/50">
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">Ending name</th>
-                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Likely intent</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">What it usually means</th>
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">Route condition to test</th>
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">Spoiler level</th>
               </tr>

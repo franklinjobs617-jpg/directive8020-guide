@@ -121,7 +121,7 @@ export default function MechanicusIIFactionsPage() {
           caption="Early unit value should be judged by battlefield role, faction resource pressure, and campaign consistency, not only launch-week damage numbers."
         />
         <p>
-          Unit and build searches are already appearing, but final best-unit
+          Unit and build questions are already common, but final best-unit
           claims are still risky during the launch window. Use the table below
           to evaluate units by role and repeatable value while more complete
           campaign data develops.

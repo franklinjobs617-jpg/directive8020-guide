@@ -182,7 +182,7 @@ export default function ProjectMistHubPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border/50 bg-card/50">
-                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Search intent</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player question</th>
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">Direct answer</th>
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">Where to continue</th>
               </tr>
@@ -245,9 +245,9 @@ export default function ProjectMistHubPage() {
         />
         <p>
           The most important change since the first page draft is launch state:
-          Project: Mist is no longer just upcoming. Steam API data shows it is
-          live in Early Access, and Steam launch news says the team is collecting
-          feedback before sharing a roadmap after roughly 2-3 weeks.
+          Project: Mist is no longer just upcoming. The Steam store now lists
+          it as live in Early Access, and Steam launch news says the team is
+          collecting feedback before sharing a roadmap after roughly 2-3 weeks.
         </p>
       </section>
 
