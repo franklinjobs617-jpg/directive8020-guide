@@ -10,10 +10,12 @@ import { zeroParadesImages } from "@/lib/zero-parades";
 import { mechanicusIIImages } from "@/lib/mechanicus-ii";
 import { romesteadImages } from "@/lib/romestead";
 import { firstLightImages } from "@/lib/007-first-light";
+import { jumpKingQuestImages } from "@/lib/jump-king-quest";
+import { paralivesImages } from "@/lib/paralives";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
-  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, James Bond action-adventure, espionage RPG, gothic action-adventure, Roman survival town building, and story-driven games, including 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, Roman survival town building, and story-driven games, including Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
   title: {
@@ -29,9 +31,11 @@ export const metadata: Metadata = {
     "ZERO PARADES guide",
     "Romestead guide",
     "Warhammer 40,000 Mechanicus II guide",
+    "JUMP KING QUEST guide",
     "007 First Light guide",
     "Thick As Thieves guide",
     "Mina the Hollower guide",
+    "Paralives guide",
   ],
   authors: [{ name: "Enjoy4Game Guides" }],
   alternates: {
@@ -55,6 +59,13 @@ export const metadata: Metadata = {
 
 const gameCards = [
   {
+    title: "Paralives",
+    href: "/games/paralives",
+    label: "Life simulation",
+    body: "Early Access status, Paramaker character creation, grid-less build mode, Mac support, Steam Deck cautions, mods, CC, pets, babies, and Sims 4 or inZOI comparisons.",
+    image: paralivesImages.hero,
+  },
+  {
     title: "Directive 8020",
     href: "/",
     label: "Story horror",
@@ -67,6 +78,13 @@ const gameCards = [
     label: "James Bond action-adventure",
     body: "Release date, 24-hour early access, preload checks, review embargo, PS5 status, PC specs, and spoiler-light beginner tips.",
     image: firstLightImages.hero,
+  },
+  {
+    title: "JUMP KING QUEST",
+    href: "/games/jump-king-quest",
+    label: "Punishment platformer",
+    body: "1.0 Phantom Update coverage: release status, Steam PC facts, beginner tips, online co-op, online PvP, controller notes, reviews, and buying advice.",
+    image: jumpKingQuestImages.hero,
   },
   {
     title: "Project: Mist",
@@ -170,8 +188,9 @@ export default function GamesPage() {
               </div>
               <figcaption className="px-4 py-3 text-xs leading-relaxed text-muted-foreground">
                 New game coverage focuses on what players need first: launch
-                facts, co-op, survival or stealth basics, saves, contracts, PC
-                requirements, and buying expectations.
+                facts, life-sim features, co-op, survival or stealth basics,
+                saves, contracts, PC requirements, platform checks, and buying
+                expectations.
               </figcaption>
             </figure>
             <div>
@@ -225,7 +244,13 @@ export default function GamesPage() {
             <p>
               If you are playing Directive 8020, start with the walkthrough,
               endings, choices, or trophy guides. If you are trying Project:
-              Mist, start with the Early Access hub. If you are playing
+              Mist, start with the Early Access hub. If you are playing JUMP
+              KING QUEST, start with the 1.0 release hub, then check beginner
+              tips, online co-op, online PvP, controller notes, or buying
+              advice depending on your first question. If you are playing
+              Paralives, start with Early Access, Paramaker, build mode, Mac,
+              Steam Deck, mods, or comparison pages depending on whether you
+              are buying now or planning a first household. If you are playing
               Mechanicus II, start with release status, factions, beginner
               tactics, system requirements, Steam Deck performance, or buying
               advice. If you are trying ZERO PARADES, start with release status,

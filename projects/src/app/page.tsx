@@ -434,6 +434,12 @@ const homeFaqs = [
 
 const newGameCoverage = [
   {
+    title: 'JUMP KING QUEST Guide Hub',
+    body: '1.0 Phantom Update coverage: release status, Steam PC facts, beginner tips, online co-op, online PvP, controller notes, and buy-or-wait guidance.',
+    href: '/games/jump-king-quest',
+    image: '/games/jump-king-quest/hero.webp',
+  },
+  {
     title: 'Romestead Guide Hub',
     body: 'Steam Early Access coverage: release timing, 1-8 player co-op, first settlement priorities, PC specs, Steam Deck cautions, and buy-or-wait guidance.',
     href: '/games/romestead',
@@ -447,7 +453,7 @@ const newGameCoverage = [
   },
   {
     title: 'Thick As Thieves Guide Hub',
-    body: 'Today’s stealth-heist launch coverage: release facts, solo/co-op, beginner stealth, contracts, PC specs, gear, and roadmap expectations.',
+    body: "Today's stealth-heist launch coverage: release facts, solo/co-op, beginner stealth, contracts, PC specs, gear, and roadmap expectations.",
     href: '/games/thick-as-thieves',
     image: '/games/thick-as-thieves/hero.webp',
   },

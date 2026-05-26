@@ -419,6 +419,69 @@ export const romestead: GameConfig = {
   ],
 };
 
+export const paralives: GameConfig = {
+  id: "paralives",
+  slugPrefix: "paralives",
+  hubPath: "/games/paralives",
+  name: "Paralives",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "A sandbox life simulation game from Paralives Studio about building homes, creating Parafolks, exploring an open-world town, telling family stories, and sharing mods, houses, and characters through Steam Workshop.",
+  platforms: ["PC", "Mac"],
+  genres: ["Simulation", "Life Simulation", "Sandbox", "Early Access"],
+  developer: "Paralives Studio",
+  publisher: "Paralives Studio",
+  releaseDate: "2026-05-25",
+  operatingSystem: "Windows 10/11, macOS Big Sur 11 or newer on Apple silicon",
+  url: "https://store.steampowered.com/app/1118520/Paralives/",
+  availability: "https://schema.org/InStock",
+  heroImage: "/games/paralives/hero.jpg",
+  guideLinks: [
+    {
+      title: "Early Access Guide",
+      href: "/games/paralives/early-access",
+      description:
+        "Release status, Early Access scope, free update pledge, missing roadmap features, reviews, price checks, and launch expectations.",
+    },
+    {
+      title: "Character Creation",
+      href: "/games/paralives/character-creation",
+      description:
+        "Paramaker basics for height, face and body details, outfits, personalities, family setup, and first Parafolk planning.",
+    },
+    {
+      title: "Build Mode Guide",
+      href: "/games/paralives/build-mode",
+      description:
+        "Grid-less building, curved walls, split-level floors, object resizing, recoloring, stacking, and early house planning.",
+    },
+    {
+      title: "Steam Deck Guide",
+      href: "/games/paralives/steam-deck",
+      description:
+        "Steam Deck compatibility cautions, control checks, graphics settings, cloud saves, and handheld buying advice.",
+    },
+    {
+      title: "Mac Guide",
+      href: "/games/paralives/mac",
+      description:
+        "Official Mac support, Apple silicon requirements, M2 and M3 targets, memory, settings, and what Intel Mac users should know.",
+    },
+    {
+      title: "Mods & CC Guide",
+      href: "/games/paralives/mods-cc",
+      description:
+        "In-game modding interface, Steam Workshop support, houses, Parafolks, custom content expectations, and safe launch checks.",
+    },
+    {
+      title: "Paralives vs Sims 4 vs inZOI",
+      href: "/games/paralives/paralives-vs-sims-4-inzoi",
+      description:
+        "Which life sim fits you: Paralives customization and Early Access, The Sims 4 content depth, or inZOI realism.",
+    },
+  ],
+};
+
 export const minaTheHollower: GameConfig = {
   id: "mina-the-hollower",
   slugPrefix: "mina-the-hollower",
@@ -519,6 +582,57 @@ export const firstLight007: GameConfig = {
       href: "/games/007-first-light/beginner-guide",
       description:
         "Spoiler-light first-session advice for stealth, gadgets, firefights, driving, mission replay, and opening spoilers.",
+    },
+  ],
+};
+
+export const jumpKingQuest: GameConfig = {
+  id: "jump-king-quest",
+  slugPrefix: "jump-king-quest",
+  hubPath: "/games/jump-king-quest",
+  name: "JUMP KING QUEST",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "A punishment platforming action-adventure from Nexile where players climb, fight, explore, customize a Redfin, and tackle The Heights solo or through online co-op and PvP.",
+  platforms: ["PC via Steam"],
+  genres: [
+    "Precision Platformer",
+    "Action-Adventure",
+    "Souls-like",
+    "Metroidvania",
+    "Multiplayer",
+  ],
+  developer: "Nexile",
+  publisher: "Nexile",
+  releaseDate: "2026-05-25",
+  operatingSystem: "Windows",
+  url: "https://store.steampowered.com/app/2317640/JUMP_KING_QUEST/",
+  availability: "https://schema.org/InStock",
+  heroImage: "/games/jump-king-quest/hero.webp",
+  guideLinks: [
+    {
+      title: "Release Date & Phantom Update",
+      href: "/games/jump-king-quest/release-date-and-phantom-update",
+      description:
+        "Full release date, Early Access history, 1.0 Phantom Update status, Steam features, launch discount, and review signal.",
+    },
+    {
+      title: "Beginner Guide",
+      href: "/games/jump-king-quest/beginner-guide",
+      description:
+        "Spoiler-light first-hour guidance for climbing, combat, exploration, solo play, co-op starts, and players coming from Jump King.",
+    },
+    {
+      title: "Multiplayer & Controller",
+      href: "/games/jump-king-quest/multiplayer-controller",
+      description:
+        "Steam-listed single-player, online co-op, online PvP, controller support, party setup cautions, and what still needs player-side checks.",
+    },
+    {
+      title: "Is JUMP KING QUEST Worth It?",
+      href: "/games/jump-king-quest/is-it-worth-it",
+      description:
+        "Launch-window buying advice using Steam reviews, 1.0 timing, multiplayer focus, difficulty, Jump King 1 expectations, and community concerns.",
     },
   ],
 };
