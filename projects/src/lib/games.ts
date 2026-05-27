@@ -642,3 +642,78 @@ export const jumpKingQuest: GameConfig = {
     },
   ],
 };
+
+export const starminer: GameConfig = {
+  id: "starminer",
+  slugPrefix: "starminer",
+  hubPath: "/games/starminer",
+  name: "Starminer",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "A PC Early Access interstellar mining sandbox from CoolAndGoodGames about modular ship and station construction, asteroid mining, production chains, heat pressure, pirates, alien attacks, and real-time fleet defense.",
+  platforms: ["PC via Steam"],
+  genres: ["Action", "Indie", "RPG", "Simulation", "Strategy", "Early Access"],
+  developer: "CoolAndGoodGames",
+  publisher: "CoolAndGoodGames",
+  releaseDate: "2026-05-27",
+  operatingSystem: "Windows 10 32-bit or newer",
+  url: "https://store.steampowered.com/app/1116050/Starminer/",
+  availability: "https://schema.org/PreOrder",
+  heroImage: "/games/starminer/hero.webp",
+  guideLinks: [
+    {
+      title: "Release Date & Early Access",
+      href: "/games/starminer/release-date",
+      description:
+        "Steam date, SteamDB unlock timing, Early Access status, Epic listing, language, platform, and live store checks.",
+    },
+    {
+      title: "Beginner Guide",
+      href: "/games/starminer/beginner-guide",
+      description:
+        "First-hour planning for Campaign, Sandbox, starter stations, power, heat, mass, mining, storage, and defenses.",
+    },
+    {
+      title: "System Requirements",
+      href: "/games/starminer/system-requirements",
+      description:
+        "Official minimum PC specs, missing recommended specs, low-end setup cautions, DirectX 11, storage, and Steam Deck unknowns.",
+    },
+    {
+      title: "Game Modes",
+      href: "/games/starminer/game-modes",
+      description:
+        "Campaign, Sandbox, and Survival explained with first-run recommendations, replay value, and Early Access caveats.",
+    },
+    {
+      title: "Ship Building",
+      href: "/games/starminer/ship-building",
+      description:
+        "Modular construction, mass, thrust, power, tonnage, station size, mining ships, warships, and blueprint planning.",
+    },
+    {
+      title: "Mining & Logistics",
+      href: "/games/starminer/mining-logistics",
+      description:
+        "Asteroid extraction, refining, production chains, automated logistics, research, link gates, profit, and maintenance.",
+    },
+    {
+      title: "Heat, Aliens & Defense",
+      href: "/games/starminer/heat-aliens-defense",
+      description:
+        "Heat signature pressure, alien detection, pirate attacks, weapon placement, power distribution, and survival defense.",
+    },
+    {
+      title: "Multiplayer, Mods & Blueprints",
+      href: "/games/starminer/multiplayer-mods-blueprints",
+      description:
+        "Confirmed blueprint save and recall, plus planned multiplayer, modding, and community sharing without overstating launch features.",
+    },
+    {
+      title: "Is Starminer Worth It?",
+      href: "/games/starminer/is-it-worth-it",
+      description:
+        "Buyer-focused Early Access guidance for builders, logistics players, space sim fans, Steam Deck users, and cautious players.",
+    },
+  ],
+};

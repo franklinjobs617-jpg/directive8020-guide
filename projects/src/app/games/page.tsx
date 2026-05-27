@@ -12,10 +12,11 @@ import { romesteadImages } from "@/lib/romestead";
 import { firstLightImages } from "@/lib/007-first-light";
 import { jumpKingQuestImages } from "@/lib/jump-king-quest";
 import { paralivesImages } from "@/lib/paralives";
+import { starminerImages } from "@/lib/starminer";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
-  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, Roman survival town building, and story-driven games, including Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, Roman survival town building, and story-driven games, including Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
   title: {
@@ -36,6 +37,7 @@ export const metadata: Metadata = {
     "Thick As Thieves guide",
     "Mina the Hollower guide",
     "Paralives guide",
+    "Starminer guide",
   ],
   authors: [{ name: "Enjoy4Game Guides" }],
   alternates: {
@@ -58,6 +60,13 @@ export const metadata: Metadata = {
 };
 
 const gameCards = [
+  {
+    title: "Starminer",
+    href: "/games/starminer",
+    label: "Space mining sandbox",
+    body: "Early Access release checks, Campaign, Sandbox, Survival, beginner route, ship building, mining logistics, heat, aliens, blueprints, PC specs, and buying advice.",
+    image: starminerImages.hero,
+  },
   {
     title: "Paralives",
     href: "/games/paralives",
