@@ -50,6 +50,7 @@ const faqs = [
 function getGuideImage(href: string) {
   if (href.includes('early')) return firstLightImages.deluxe;
   if (href.includes('review')) return firstLightImages.background;
+  if (href.includes('mission')) return firstLightImages.missionBriefing;
   if (href.includes('system')) return firstLightImages.header;
   if (href.includes('beginner')) return firstLightImages.hero;
   return firstLightImages.card;

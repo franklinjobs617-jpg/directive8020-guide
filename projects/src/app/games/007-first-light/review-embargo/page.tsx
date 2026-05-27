@@ -6,6 +6,7 @@ import {
   firstLightImages,
   firstLightPlayerConcernRows,
   firstLightReviewRows,
+  firstLightReviewSourceRows,
 } from '@/lib/007-first-light';
 
 const title = '007 First Light Review Embargo Lifted? Reviews, Denuvo & Worth It';
@@ -72,7 +73,7 @@ export default function FirstLightReviewEmbargoPage() {
       <section className="prose-game">
         <h2>Review Embargo and Buying Checklist</h2>
         <ArticleImage
-          src={firstLightImages.hero}
+          src={firstLightImages.reviewCombat}
           alt="007 First Light agent close-up review and buying decision image"
           caption="The useful buying question is not whether the trailer looks good; it is whether current reviews, Steam user reports, performance, DRM, and platform timing match your risk tolerance."
         />
@@ -98,6 +99,35 @@ export default function FirstLightReviewEmbargoPage() {
       </div>
 
       <section className="prose-game">
+        <h2>Where to Check Review Scores</h2>
+        <p>
+          Players searching for Metacritic, OpenCritic, IGN, and Steam reviews
+          are usually trying to separate one outlet&apos;s opinion from the
+          wider launch-window consensus. Use the sources below as different
+          signals instead of treating any single score as the complete answer.
+        </p>
+      </section>
+
+      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Review source</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">How to use it</th>
+            </tr>
+          </thead>
+          <tbody>
+            {firstLightReviewSourceRows.map(([source, use]) => (
+              <tr key={source} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{source}</td>
+                <td className="px-4 py-3 text-muted-foreground">{use}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
         <h2>What to Check in Reviews First</h2>
         <p>
           For this game, the most useful review details will be mission freedom,
@@ -110,7 +140,7 @@ export default function FirstLightReviewEmbargoPage() {
       <section className="prose-game">
         <h2>What Players Are Checking After Launch</h2>
         <ArticleImage
-          src={firstLightImages.header}
+          src={firstLightImages.reviewStealth}
           alt="007 First Light city stealth image for post-launch player concerns"
           caption="Post-launch player questions are clustering around review status, preload limits, Denuvo, PC performance, Steam Deck, and PS5 or PS5 Pro performance."
         />

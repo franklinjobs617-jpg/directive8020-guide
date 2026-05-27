@@ -25,6 +25,12 @@ export const firstLightImages = {
   background: '/games/007-first-light/action-scene.webp',
   card: '/games/007-first-light/card.webp',
   deluxe: '/games/007-first-light/casino.webp',
+  missionBriefing: '/games/007-first-light/guide/mission-briefing.webp',
+  missionRoute: '/games/007-first-light/guide/mission-route.webp',
+  missionReplay: '/games/007-first-light/guide/mission-replay.webp',
+  missionPlanning: '/games/007-first-light/guide/mission-planning.webp',
+  reviewCombat: '/games/007-first-light/guide/review-combat.webp',
+  reviewStealth: '/games/007-first-light/guide/review-stealth.webp',
 };
 
 export const firstLightVideos = [
@@ -63,6 +69,7 @@ export const firstLightTrendRows = [
   ['007 First Light Steam Deck', 'Treat Steam Deck support as unverified unless Steam or strong player reports confirm the handheld experience.'],
   ['007 First Light Denuvo', 'Steam lists Denuvo Anti-Tamper and a third-party EULA, so PC buyers should factor DRM into the purchase decision.'],
   ['007 First Light PS5', 'The PlayStation Store lists 007 First Light for PS5; check your region for price and local unlock timing.'],
+  ['007 First Light mission list', 'Use the mission list and length guide for spoiler-light chapter planning, replay modifiers, collectibles caution, and time-to-beat checks.'],
   ['007 First Light Australia', 'Australian players should check the local storefront countdown because time zones can shift the visible date or unlock hour.'],
 ];
 
@@ -140,6 +147,14 @@ export const firstLightReviewRows = [
   ['Poor fit', 'Players looking for co-op, multiplayer, a pure Hitman-style sandbox, or a fully reviewed post-launch consensus on day one.'],
 ];
 
+export const firstLightReviewSourceRows = [
+  ['Metacritic', 'Use it for critic-score aggregation once enough critic reviews are indexed. Do not treat an empty or partial listing as the final consensus.'],
+  ['OpenCritic', 'Use it as a second critic aggregator, especially when you want to compare outlet spread rather than one headline review.'],
+  ['IGN review', 'Use it for one outlet perspective on story, mission design, stealth, action, and pacing. It should not replace broader review checks.'],
+  ['Steam user reviews', 'Use it for PC-specific player reaction, Denuvo concerns, performance reports, refund-risk checks, and review-volume changes after launch.'],
+  ['YouTube gameplay', 'Use official gameplay video to verify mission tone and opening structure, but avoid opening spoilers if you want a blind first run.'],
+];
+
 export const firstLightPlayerConcernRows = [
   ['Review embargo / reviews', 'Check whether current critic reviews and Steam user reviews are live before using older embargo countdown posts.'],
   ['No preload', 'Community discussion is focused on Steam and Xbox preload limits, while PlayStation preload appears to be the safer platform path.'],
@@ -147,6 +162,36 @@ export const firstLightPlayerConcernRows = [
   ['PC performance', 'Early benchmark and player-report demand is about frame pacing, DLSS/FSR behavior, CPU limits, and whether the listed specs match real play.'],
   ['Steam Deck', 'Early handheld reports are promising but settings-dependent, so Deck players should wait for settings guidance or test within refund limits.'],
   ['PS5 / PS5 Pro', 'Console players are comparing base PS5 image quality, performance mode, and PS5 Pro sharpness rather than only asking whether PS5 exists.'],
+];
+
+export const firstLightMissionFastRows = [
+  ['How many chapters?', 'Use current walkthrough and mission-list sources carefully, because chapter counts can be spoiler-heavy and may be updated after launch.', 'Low if you only need planning; high if you read full mission names.'],
+  ['Is there a mission list?', 'Yes, players are already searching for mission-list structure. This page keeps the route spoiler-light and points completionists toward trophies later.', 'Medium.'],
+  ['How long to beat?', 'Early public estimates cluster around a campaign-length action-adventure rather than a short demo. Check current time-to-beat sources and your playstyle.', 'Low.'],
+  ['Is it replayable?', 'Steam describes replaying favorite missions with additional modifiers, so mission replay is part of the expected structure.', 'Low.'],
+  ['Are collectibles tied to missions?', 'Treat collectibles and trophies as mission cleanup until a fully verified collectible route is available.', 'Medium to high.'],
+];
+
+export const firstLightMissionPlanningRows = [
+  ['Opening mission', 'Learn stealth, movement, gadget timing, and when the game shifts into action. Skip detailed videos if you want a blind start.', 'Opening spoilers only.'],
+  ['Main mission route', 'Track objectives, optional paths, disguising or bluffing moments, combat spikes, and driving sections as separate route notes.', 'Moderate.'],
+  ['Replay modifiers', 'After clearing a mission, replay with one goal at a time: cleaner stealth, fewer alarms, faster route, gadget route, or louder combat route.', 'Low.'],
+  ['Collectible cleanup', 'Do not chase every collectible during a first story run unless you enjoy pausing often. Mark missed areas and return through replay when possible.', 'Moderate.'],
+  ['Trophy cleanup', 'Keep separate notes for difficulty, mission-specific challenges, and replay requirements before committing to a platinum route.', 'Moderate to high.'],
+];
+
+export const firstLightLengthRows = [
+  ['Story-focused run', 'Best for players who follow objectives, accept messy encounters, and do not replay every room for a perfect stealth route.'],
+  ['Explorer run', 'Best for players who search alternate routes, test gadgets, watch patrols, and replay mission sections to understand systems.'],
+  ['Completionist run', 'Best for players who want collectibles, trophies, mission modifiers, and cleaner replay routes. Wait for verified full checklists before treating this as solved.'],
+  ['Review-risk check', 'If length matters to your purchase, compare current critic reviews, Steam user reports, and time-to-beat coverage before buying.'],
+];
+
+export const firstLightReplayRows = [
+  ['Replay favorite missions', 'Steam describes replaying favorite missions, which is the cleanest confirmed reason to keep mission notes.'],
+  ['Additional modifiers', 'Modifiers make it useful to remember how a first route worked, where detection happened, and which tools solved each scene.'],
+  ['Approach variety', 'Stealth, gadgets, bluffing, firearms, driving, and route reading can change the feel of a second attempt.'],
+  ['Completion cleanup', 'Trophy and collectible routes should be treated as post-story cleanup unless you have a verified checklist beside you.'],
 ];
 
 export const firstLightSourceRows = [

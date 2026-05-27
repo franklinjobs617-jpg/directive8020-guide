@@ -119,14 +119,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.72,
     },
     {
+      url: `${BASE_URL}/games/007-first-light/mission-list-chapters-length`,
+      lastModified: '2026-05-27',
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/games/007-first-light/system-requirements`,
-      lastModified: '2026-05-26',
+      lastModified: '2026-05-27',
       changeFrequency: 'weekly',
       priority: 0.68,
     },
     {
       url: `${BASE_URL}/games/007-first-light/beginner-guide`,
-      lastModified: '2026-05-26',
+      lastModified: '2026-05-27',
       changeFrequency: 'weekly',
       priority: 0.68,
     },

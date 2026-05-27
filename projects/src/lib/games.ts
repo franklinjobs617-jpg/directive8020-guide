@@ -572,6 +572,12 @@ export const firstLight007: GameConfig = {
         "Review embargo status, current review checks, Steam user review timing, Denuvo concerns, Steam Deck caution, and who should buy or wait.",
     },
     {
+      title: "Mission List, Chapters & Length",
+      href: "/games/007-first-light/mission-list-chapters-length",
+      description:
+        "Spoiler-light mission list planning, chapter cautions, time-to-beat checks, replay modifiers, collectibles, and trophy cleanup notes.",
+    },
+    {
       title: "System Requirements",
       href: "/games/007-first-light/system-requirements",
       description:
