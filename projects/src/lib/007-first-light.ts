@@ -93,6 +93,42 @@ export const firstLightBeginnerRows = [
   ['Avoid opening spoilers', 'The official first 13 minutes video is useful, but it shows the opening mission. Skip it if you want a blind start.'],
 ];
 
+export const firstLightFirstMissionRows = [
+  ['Before entering a restricted space', 'Look for cameras, guards, doors, climbable paths, and distractions before using a gadget or weapon.'],
+  ['When stealth starts to fail', 'Use movement, cover, gadgets, or a takedown to regain control before choosing gunfire.'],
+  ['When enemies are armed', 'Expect combat to escalate faster. Use cover, gadgets, and repositioning instead of standing in the open.'],
+  ['When a route feels linear', 'Treat it as a cinematic mission with optional approach choices, not a pure open sandbox map.'],
+  ['After finishing a mission', 'Write down which approach worked, then use replay and modifiers to test a cleaner route later.'],
+];
+
+export const firstLightFirstHourRouteRows = [
+  ['1. Set expectations', 'Play the opening as a cinematic Bond mission with choices, not as a pure open sandbox. Your job is to learn the mission language first.'],
+  ['2. Read the first room', 'Before touching a gadget, identify the objective marker, guard routes, cameras, cover, exits, and any obvious alternate path.'],
+  ['3. Try the quiet route first', 'Move slowly, stay out of sightlines, and use bluffing or non-lethal options before creating noise.'],
+  ['4. Use one gadget at a time', 'Use gadgets to solve access, distraction, or camera problems. Do not burn every tool just because a room looks dangerous.'],
+  ['5. Escalate in layers', 'If stealth breaks, reposition first, then use melee or gadgets, and only commit to gunfire when the scene is already loud.'],
+  ['6. Learn the driving shift', 'When the game moves into a vehicle section, stop thinking like a stealth player and focus on route reading, timing, and recovery.'],
+  ['7. Finish once without chasing perfection', 'Complete the mission even if the route gets messy. A finished first run teaches more than restarting every mistake.'],
+  ['8. Review your route', 'After the mission, note where detection happened, which gadget solved a problem, and which scene is worth replaying with modifiers.'],
+];
+
+export const firstLightRecoveryRows = [
+  ['You were spotted', 'Break line of sight, move to cover, and use the next tool to regain control instead of standing still and trading shots.'],
+  ['A gadget did not solve the room', 'Look for a second access point or a timing window. Gadgets are route tools, not automatic win buttons.'],
+  ['Combat feels punishing', 'Use cover, spacing, and short engagements. Treat open firefights as a fallback, not the default plan.'],
+  ['The mission feels too linear', 'Look for approach choices inside the scene: quiet entry, gadget timing, bluffing, melee, firearm escalation, or replay modifiers.'],
+  ['You want a cleaner run', 'Finish the current attempt, then replay with one specific goal such as no loud combat, better gadget timing, or a faster route.'],
+];
+
+export const firstLightApproachRows = [
+  ['Stealth-first', 'Best when guards are unaware, cameras can be bypassed, and a gadget can open a safer route.'],
+  ['Gadget-first', 'Best when a room has cameras, sightlines, locked access, or a fight that can be controlled before it starts.'],
+  ['Bluff or social route', 'Best when the mission gives you dialogue, disguise-like access, or a chance to move without immediate violence.'],
+  ['Melee escalation', 'Best when close-range pressure starts but firearms are not the right first answer.'],
+  ['Loud combat', 'Best when the scene has already escalated, enemies are armed, or the objective pushes you into action.'],
+  ['Driving focus', 'Best when the mission shifts into vehicle pressure; treat it as a separate skill from stealth movement.'],
+];
+
 export const firstLightReviewRows = [
   ['Review embargo', 'Treat the embargo question as time-sensitive. After reviews publish, use current critic reviews and Steam user reviews instead of older countdown wording.'],
   ['Buy now if', 'You want an IO Interactive Bond origin story and current reviews confirm the mission design, stealth, driving, and PC performance match your expectations.'],
