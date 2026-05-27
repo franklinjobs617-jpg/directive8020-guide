@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Inspector } from "react-dev-inspector";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { NanoBananasBanner } from "@/components/nano-bananas-banner";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -135,6 +136,7 @@ export default function RootLayout({
 
         {isDev && <Inspector />}
         <SiteHeader />
+        <NanoBananasBanner />
         <main className="flex-1">{children}</main>
         <SiteFooter />
       </body>
