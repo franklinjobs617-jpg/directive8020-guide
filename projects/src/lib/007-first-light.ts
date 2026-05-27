@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { firstLight007, type GameGuideLink } from '@/lib/games';
 
-export const firstLightLastModified = '2026-05-26';
+export const firstLightLastModified = '2026-05-27';
 export const firstLightSteamUrl = 'https://store.steampowered.com/app/3768760/007_First_Light/';
 export const firstLightOfficialUrl = 'https://www.ioi.dk/007-first-light';
 export const firstLightPlayStationUrl =
@@ -10,6 +10,14 @@ export const firstLightSupportUrl =
   'https://007firstlight-support.zendesk.com/hc/en-us/articles/36274996432797-007-First-Light-Global-Launch-Times';
 export const firstLightLaunchTrailerUrl = 'https://www.youtube.com/watch?v=7wp3CkognPI';
 export const firstLightGameplayUrl = 'https://www.youtube.com/watch?v=yEZjDyj_REQ';
+export const firstLightRedditReviewUrl =
+  'https://www.reddit.com/r/pcgaming/comments/1to4vju/007_first_light_review_thread/';
+export const firstLightRedditPreloadUrl =
+  'https://www.reddit.com/r/Games/comments/1tncd3e/007_first_light_will_not_have_a_preload_on_steam/';
+export const firstLightSteamDeckHQUrl =
+  'https://steamdeckhq.com/news/007-first-light-steam-deck-first-impressions/';
+export const firstLightTechPowerUpUrl =
+  'https://www.techpowerup.com/review/007-first-light-performance-benchmark/';
 
 export const firstLightImages = {
   hero: '/games/007-first-light/agent-closeup.webp',
@@ -37,30 +45,33 @@ export const firstLightVideos = [
 export const firstLightQuickFacts = [
   ['Release date', 'May 27, 2026 on Steam.'],
   ['Verified platforms here', 'PC via Steam and PlayStation 5 via PlayStation Store. Check your regional storefront for local price and unlock timing.'],
-  ['Early access', 'Pre-order bonus includes a free Deluxe Edition upgrade with 24-hour early access.'],
+  ['Early access', 'Pre-order access was listed as a 24-hour Deluxe Edition upgrade before standard launch.'],
   ['Developer / Publisher', 'IO Interactive A/S.'],
   ['Genre', 'Single-player espionage action-adventure with stealth, shooting, driving, gadgets, and cinematic missions.'],
   ['Steam features', 'Single-player and Family Sharing. Steam also lists Denuvo Anti-Tamper and a third-party EULA.'],
-  ['Reviews', 'No Steam user reviews are shown before the full release window.'],
+  ['Reviews', 'Review coverage should now be checked directly on current critic pages and Steam.'],
   ['Preload', 'Steam page copy does not confirm a universal preload; check your purchased platform library close to unlock.'],
+  ['Steam Deck', 'No Steam Deck Verified label is confirmed in this guide. Treat handheld performance as player-report dependent.'],
   ['PC storage', '80 GB available space, SSD required.'],
 ];
 
 export const firstLightTrendRows = [
-  ['007 First Light early access', 'Pre-order includes 24-hour early access through the free Deluxe Edition upgrade.'],
+  ['007 First Light review embargo', 'Review intent is the strongest current search signal. Check the review page first for embargo, reviews, Denuvo, Steam reviews, and buy-or-wait guidance.'],
+  ['007 First Light early access', 'Pre-order access was tied to the 24-hour Deluxe Edition upgrade; standard launch is May 27, 2026.'],
   ['007 First Light release time', 'Use the official global launch-time post or your platform countdown for the exact local unlock.'],
   ['007 First Light preload', 'Do not assume preload until the platform library offers it; Steam store copy confirms the release and early-access offer, not a universal preload.'],
-  ['007 First Light review embargo', 'Treat embargo timing as separate from user reviews. Wait for published reviews before using scores to decide.'],
-  ['007 First Light PS5', 'The PlayStation Store lists 007 First Light as a PS5 pre-order; check your region for local price and unlock timing.'],
+  ['007 First Light Steam Deck', 'Treat Steam Deck support as unverified unless Steam or strong player reports confirm the handheld experience.'],
+  ['007 First Light Denuvo', 'Steam lists Denuvo Anti-Tamper and a third-party EULA, so PC buyers should factor DRM into the purchase decision.'],
+  ['007 First Light PS5', 'The PlayStation Store lists 007 First Light for PS5; check your region for price and local unlock timing.'],
   ['007 First Light Australia', 'Australian players should check the local storefront countdown because time zones can shift the visible date or unlock hour.'],
 ];
 
 export const firstLightReleaseRows = [
   ['Standard release', 'May 27, 2026 on Steam.'],
-  ['24-hour early access', 'Included with the free Deluxe Edition upgrade for pre-orders, according to Steam store and Steam news copy.'],
-  ['Pre-order bonus', 'Deluxe Edition upgrade with four outfits, Agent’s Mark weapon skin, and four Gleaming gadget skins.'],
+  ['24-hour early access', 'Listed as part of the free Deluxe Edition upgrade for pre-orders before standard launch.'],
+  ['Deluxe bonus', "Four outfits, Agent's Mark weapon skin, and four Gleaming gadget skins."],
   ['Preload', 'Not universally confirmed in Steam page copy; check your Steam or PS5 library status after purchase.'],
-  ['Review timing', 'No Steam user reviews before full release; critic review timing should be checked when embargo coverage appears.'],
+  ['Review timing', 'Review coverage should be checked on current critic pages and Steam after the May 27 launch window.'],
   ['Australia / time zones', 'Use the platform countdown rather than only the calendar date, because local storefront timing can differ by region.'],
 ];
 
@@ -83,12 +94,23 @@ export const firstLightBeginnerRows = [
 ];
 
 export const firstLightReviewRows = [
-  ['Buy early if', 'You want an IO Interactive Bond origin story and are comfortable playing before full user-review consensus.'],
-  ['Wait if', 'You need critic reviews, Steam user reviews, PC performance proof, Denuvo comfort, or console-specific reports.'],
-  ['Review embargo', 'Use published critic reviews only after they appear. Do not treat trailer footage or early-access access as a review score.'],
-  ['Steam user reviews', 'Steam showed no user reviews before the full release window; check again after standard launch access opens.'],
+  ['Review embargo', 'Treat the embargo question as time-sensitive. After reviews publish, use current critic reviews and Steam user reviews instead of older countdown wording.'],
+  ['Buy now if', 'You want an IO Interactive Bond origin story and current reviews confirm the mission design, stealth, driving, and PC performance match your expectations.'],
+  ['Wait if', 'You need broader Steam user reviews, console-specific reports, Steam Deck proof, PC performance proof, or more comfort with Denuvo.'],
+  ['Steam user reviews', 'Check Steam after launch access opens because user review volume can change quickly during the first 24-72 hours.'],
+  ['Steam Deck', 'Wait for a Steam Deck rating or strong player reports before treating handheld play as safe.'],
+  ['Denuvo', 'Steam lists Denuvo Anti-Tamper and a third-party EULA, which matters for PC buyers who avoid DRM.'],
   ['Best fit', 'Players who like cinematic stealth-action, mission replay, gadgets, disguising or bluffing routes, driving, and third-person action.'],
   ['Poor fit', 'Players looking for co-op, multiplayer, a pure Hitman-style sandbox, or a fully reviewed post-launch consensus on day one.'],
+];
+
+export const firstLightPlayerConcernRows = [
+  ['Review embargo / reviews', 'Check whether current critic reviews and Steam user reviews are live before using older embargo countdown posts.'],
+  ['No preload', 'Community discussion is focused on Steam and Xbox preload limits, while PlayStation preload appears to be the safer platform path.'],
+  ['Denuvo', 'Steam lists Denuvo Anti-Tamper, and PC players are asking whether DRM affects performance, offline comfort, or Steam Deck use.'],
+  ['PC performance', 'Early benchmark and player-report demand is about frame pacing, DLSS/FSR behavior, CPU limits, and whether the listed specs match real play.'],
+  ['Steam Deck', 'Early handheld reports are promising but settings-dependent, so Deck players should wait for settings guidance or test within refund limits.'],
+  ['PS5 / PS5 Pro', 'Console players are comparing base PS5 image quality, performance mode, and PS5 Pro sharpness rather than only asking whether PS5 exists.'],
 ];
 
 export const firstLightSourceRows = [
@@ -100,11 +122,11 @@ export const firstLightSourceRows = [
     note: 'Use for release date, Steam feature labels, system requirements, Denuvo, EULA, language support, and PC purchase state.',
   },
   {
-    claim: 'Pre-orders include a free Deluxe Edition upgrade with 24-hour early access.',
+    claim: 'Pre-orders included a free Deluxe Edition upgrade with 24-hour early access before standard launch.',
     source: 'Steam store and Steam news copy',
     status: 'verified' as const,
     href: firstLightSteamUrl,
-    note: 'Use for early access and pre-order bonus wording. Do not expand it into unsupported platform-specific claims.',
+    note: 'Use for early access and Deluxe bonus wording. Do not expand it into unsupported platform-specific claims.',
   },
   {
     claim: 'Global launch times are handled by the official support page.',
@@ -114,7 +136,7 @@ export const firstLightSourceRows = [
     note: 'Use for exact local unlock timing when accessible; otherwise tell players to check their platform countdown.',
   },
   {
-    claim: 'The PlayStation Store lists 007 First Light as a PS5 pre-order.',
+    claim: 'The PlayStation Store lists 007 First Light for PS5.',
     source: 'PlayStation Store',
     status: 'verified' as const,
     href: firstLightPlayStationUrl,
@@ -133,6 +155,34 @@ export const firstLightSourceRows = [
     status: 'verified' as const,
     href: firstLightGameplayUrl,
     note: 'Use for opening gameplay context while warning players who want a blind start.',
+  },
+  {
+    claim: 'Players are discussing review scores, PC performance, Denuvo, and Steam user-review timing after launch.',
+    source: 'Reddit review thread',
+    status: 'working' as const,
+    href: firstLightRedditReviewUrl,
+    note: 'Use as a demand signal for what players are checking, not as final proof of quality or performance.',
+  },
+  {
+    claim: 'Players are asking about no preload on Steam and Xbox, and how that affects early access value.',
+    source: 'Reddit preload discussion',
+    status: 'working' as const,
+    href: firstLightRedditPreloadUrl,
+    note: 'Use as a community concern. For final preload status, players should still check their platform library.',
+  },
+  {
+    claim: 'Steam Deck interest is active, with early reports depending heavily on low settings and upscaling.',
+    source: 'Steam Deck HQ first impressions',
+    status: 'working' as const,
+    href: firstLightSteamDeckHQUrl,
+    note: 'Use for player-facing handheld caution until Steam shows a rating or broader settings reports settle.',
+  },
+  {
+    claim: 'PC players are looking for benchmark evidence beyond the official requirement table.',
+    source: 'TechPowerUp benchmark review',
+    status: 'working' as const,
+    href: firstLightTechPowerUpUrl,
+    note: 'Use as a performance reference, while keeping hardware-specific claims tied to the benchmark source.',
   },
 ];
 

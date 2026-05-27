@@ -12,9 +12,9 @@ import {
   firstLightVideos,
 } from '@/lib/007-first-light';
 
-const title = '007 First Light Guide Hub: Early Access, Release Time & Reviews';
+const title = '007 First Light Guide Hub: Reviews, Release Time, Denuvo & PC Specs';
 const description =
-  '007 First Light guide hub for early access, release date, release time, preload, review embargo, PS5, PC specs, pre-order bonus, and spoiler-light beginner tips.';
+  '007 First Light guide hub for reviews, review embargo status, release date, release time, preload, PS5, Steam Deck caution, Denuvo, PC specs, and spoiler-light beginner tips.';
 const canonical = '/games/007-first-light';
 
 export const metadata = createFirstLightMetadata({
@@ -28,17 +28,17 @@ const faqs = [
   {
     question: 'When does 007 First Light release?',
     answer:
-      'Steam lists 007 First Light for May 27, 2026. Pre-orders include 24-hour early access through the free Deluxe Edition upgrade.',
+      'Steam lists 007 First Light for May 27, 2026. Check your platform countdown for the exact local unlock time.',
   },
   {
     question: 'Does 007 First Light have early access?',
     answer:
-      'Yes. Steam store and news copy say pre-orders receive a free Deluxe Edition upgrade that includes 24-hour early access.',
+      'Yes. Steam store and news copy listed a free Deluxe Edition upgrade with 24-hour early access for pre-orders before standard launch.',
   },
   {
     question: 'Is 007 First Light on PS5?',
     answer:
-      'Yes. The PlayStation Store lists 007 First Light as a PS5 pre-order. Check your region for price and local unlock timing.',
+      'Yes. The PlayStation Store lists 007 First Light for PS5. Check your region for price and local unlock timing.',
   },
   {
     question: 'Is 007 First Light single-player?',
@@ -68,10 +68,10 @@ export default function FirstLightHubPage() {
     >
       <BlufBox title="Launch Answer">
         <p>
-          <strong>007 First Light releases on May 27, 2026, with 24-hour early
-          access for pre-orders through the free Deluxe Edition upgrade.</strong>
-          The most useful launch questions right now are release time, preload,
-          review embargo, PS5 status, PC requirements, and whether to start
+          <strong>007 First Light is a May 27, 2026 release, and the strongest
+          current player demand is reviews and review embargo status.</strong>
+          The next most useful checks are Denuvo, Steam user reviews, Steam Deck
+          reports, preload, PS5 status, PC requirements, and whether to start
           stealth-first or loud.
         </p>
       </BlufBox>
@@ -125,7 +125,8 @@ export default function FirstLightHubPage() {
         <h2>Fast Answers From Current Player Questions</h2>
         <p>
           Most launch searches are practical: when early access starts, whether
-          preload is available, when reviews can be trusted, whether PS5 is
+          preload is available, whether the review embargo has lifted, whether
+          Denuvo or Steam Deck changes the buying decision, whether PS5 is
           listed, and what the PC version needs. Use the table below to jump to
           the right guide instead of digging through every page.
         </p>

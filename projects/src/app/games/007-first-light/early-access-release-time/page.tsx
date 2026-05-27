@@ -7,9 +7,9 @@ import {
   firstLightReleaseRows,
 } from '@/lib/007-first-light';
 
-const title = '007 First Light Early Access, Release Time & Preload';
+const title = '007 First Light Release Time, Early Access, Preload & Australia';
 const description =
-  '007 First Light release date and early access guide: May 27 launch, 24-hour early access, pre-order Deluxe upgrade, preload status, Australia timing, and review timing.';
+  '007 First Light release time guide for the May 27 launch, 24-hour early access, Deluxe bonus, preload status, Australia timing, and where to check local unlocks.';
 const canonical = '/games/007-first-light/early-access-release-time';
 
 export const metadata = createFirstLightMetadata({
@@ -27,7 +27,7 @@ const faqs = [
   {
     question: 'When does 007 First Light early access start?',
     answer:
-      'Pre-orders include 24-hour early access through the free Deluxe Edition upgrade. For the exact local hour, use the official launch-time post or your platform countdown.',
+      'Steam store and news copy listed 24-hour early access through the free Deluxe Edition upgrade for pre-orders. For the exact local hour, use the official launch-time post or your platform countdown.',
   },
   {
     question: 'Does 007 First Light have preload?',
@@ -54,11 +54,11 @@ export default function FirstLightEarlyAccessPage() {
     >
       <BlufBox title="Direct Answer">
         <p>
-          <strong>007 First Light launches May 27, 2026, and pre-orders include
-          24-hour early access through a free Deluxe Edition upgrade.</strong>
-          Use the platform countdown for the exact local unlock time, especially
-          if you are in Australia or another region where the calendar date can
-          look different.
+          <strong>007 First Light launches May 27, 2026, with pre-order early
+          access listed as a 24-hour Deluxe Edition upgrade before standard
+          launch.</strong> Use the platform countdown for the exact local unlock
+          time, especially if you are in Australia or another region where the
+          calendar date can look different.
         </p>
       </BlufBox>
 
@@ -91,9 +91,9 @@ export default function FirstLightEarlyAccessPage() {
       </div>
 
       <section className="prose-game">
-        <h2>What Comes With the Free Deluxe Upgrade?</h2>
+        <h2>What Came With the Free Deluxe Upgrade?</h2>
         <p>
-          Steam lists the pre-order upgrade as four outfits, the Agent&apos;s
+          Steam listed the pre-order upgrade as four outfits, the Agent&apos;s
           Mark weapon skin, and four Gleaming gadget skins: Lighter, Earphones,
           Dart Gun, and Pen. Treat these as bonus cosmetics and early access
           access, not as proof of extra story missions.

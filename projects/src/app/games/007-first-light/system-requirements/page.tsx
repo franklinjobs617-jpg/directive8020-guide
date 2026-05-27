@@ -9,7 +9,7 @@ import {
 
 const title = '007 First Light System Requirements and PC Specs';
 const description =
-  'Official 007 First Light PC requirements: Windows 10/11, 16 GB RAM, GTX 1660 or RX 5700 minimum, RTX 3060 Ti or RX 6700 XT recommended, 80 GB SSD, and DLSS notes.';
+  'Official 007 First Light PC requirements and launch performance checks: Windows 10/11, 16 GB RAM, GTX 1660 or RX 5700 minimum, RTX 3060 Ti or RX 6700 XT recommended, 80 GB SSD, DLSS notes, Steam Deck caution, and Denuvo.';
 const canonical = '/games/007-first-light/system-requirements';
 
 export const metadata = createFirstLightMetadata({
@@ -37,6 +37,16 @@ const faqs = [
   {
     question: 'How much storage does 007 First Light need?',
     answer: 'Steam lists 80 GB of available storage.',
+  },
+  {
+    question: 'Is 007 First Light Steam Deck verified?',
+    answer:
+      'No Steam Deck Verified label is confirmed in this guide. Treat handheld performance as settings-dependent until Steam or broad player reports settle.',
+  },
+  {
+    question: 'Does Denuvo affect 007 First Light PC performance?',
+    answer:
+      'Steam lists Denuvo Anti-Tamper, but performance impact should be judged from benchmarks and your own setup rather than assumed from the DRM label alone.',
   },
 ];
 
@@ -98,6 +108,16 @@ export default function FirstLightSystemRequirementsPage() {
           sections, dense stealth areas, cutscene transitions, controller
           response, and whether your SSD has enough free space beyond the 80 GB
           install requirement.
+        </p>
+
+        <h2>Steam Deck, Denuvo, and Benchmark Signals</h2>
+        <p>
+          Player questions outside Google are focused on handheld play, DRM,
+          and real benchmark behavior. Treat Steam Deck as unverified unless a
+          Steam rating or strong player settings reports fit your tolerance.
+          For PC, compare your GPU and CPU against current benchmarks, then test
+          cutscenes, driving, dense stealth areas, DLSS or FSR behavior, and
+          frame pacing before committing past the refund window.
         </p>
 
         <h2>DLSS, Path Tracing, and Future Updates</h2>

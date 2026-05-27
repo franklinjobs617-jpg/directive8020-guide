@@ -563,13 +563,13 @@ export const firstLight007: GameConfig = {
       title: "Early Access, Release Time & Preload",
       href: "/games/007-first-light/early-access-release-time",
       description:
-        "May 27 release date, 24-hour early access, pre-order bonus, preload cautions, review timing, and Australia time-zone notes.",
+        "May 27 release date, 24-hour early access history, preload cautions, local unlock timing, and Australia time-zone notes.",
     },
     {
-      title: "Review Embargo & Worth It",
+      title: "Reviews, Denuvo & Worth It",
       href: "/games/007-first-light/review-embargo",
       description:
-        "Review status, embargo cautions, Steam user review timing, Denuvo concerns, and who should buy early or wait.",
+        "Review embargo status, current review checks, Steam user review timing, Denuvo concerns, Steam Deck caution, and who should buy or wait.",
     },
     {
       title: "System Requirements",

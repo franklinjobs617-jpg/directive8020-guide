@@ -100,7 +100,7 @@ export function FirstLightArticle({
         <ArticleImage
           src={firstLightImages.deluxe}
           alt="007 First Light FAQ and launch planning image"
-          caption="Check early access, pre-order bonuses, platform timing, reviews, and PC requirements before planning a launch session."
+          caption="Check reviews, Denuvo, Steam Deck reports, platform timing, early access history, and PC requirements before planning a launch session."
         />
         <FAQSection faqs={faqs} />
       </article>

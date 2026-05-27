@@ -76,7 +76,7 @@ const gameCards = [
     title: "007 First Light",
     href: "/games/007-first-light",
     label: "James Bond action-adventure",
-    body: "Release date, 24-hour early access, preload checks, review embargo, PS5 status, PC specs, and spoiler-light beginner tips.",
+    body: "Reviews, review embargo status, Denuvo, Steam Deck caution, release time, preload checks, PS5 status, PC specs, and spoiler-light beginner tips.",
     image: firstLightImages.hero,
   },
   {

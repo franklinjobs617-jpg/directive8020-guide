@@ -102,21 +102,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/games/007-first-light`,
-      lastModified: '2026-05-26',
+      lastModified: '2026-05-27',
       changeFrequency: 'daily',
       priority: 0.72,
     },
     {
       url: `${BASE_URL}/games/007-first-light/early-access-release-time`,
-      lastModified: '2026-05-26',
+      lastModified: '2026-05-27',
       changeFrequency: 'daily',
       priority: 0.7,
     },
     {
       url: `${BASE_URL}/games/007-first-light/review-embargo`,
-      lastModified: '2026-05-26',
+      lastModified: '2026-05-27',
       changeFrequency: 'daily',
-      priority: 0.68,
+      priority: 0.72,
     },
     {
       url: `${BASE_URL}/games/007-first-light/system-requirements`,
