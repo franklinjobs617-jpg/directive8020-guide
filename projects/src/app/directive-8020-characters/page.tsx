@@ -156,7 +156,7 @@ export default function CharactersPage() {
           jumpLinks={jumpLinks}
         />
 
-        <div id="character-table" className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <div id="character-table" className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border/50 bg-card/50">
@@ -204,7 +204,7 @@ export default function CharactersPage() {
           </p>
         </div>
 
-        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border/50 bg-card/50">
@@ -252,7 +252,7 @@ export default function CharactersPage() {
           {directiveCharacters.map((char) => (
             <section
               key={char.id}
-              className="overflow-hidden rounded-lg border border-border/50 bg-card/30"
+              className="overflow-x-auto rounded-lg border border-border/50 bg-card/30"
             >
               <div className="grid sm:grid-cols-[140px_1fr]">
                 <div className="relative min-h-40 bg-black">
@@ -331,7 +331,7 @@ export default function CharactersPage() {
           </p>
         </div>
 
-        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border/50 bg-card/50">

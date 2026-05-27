@@ -214,7 +214,7 @@ export default function DeathScenesPage() {
           />
         </div>
 
-        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border/50 bg-card/50">

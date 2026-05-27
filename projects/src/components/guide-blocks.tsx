@@ -169,7 +169,7 @@ export function StatusPanel({ items }: StatusPanelProps) {
 
 export function ActionTable({ rows }: ActionTableProps) {
   return (
-    <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+    <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b border-border/50 bg-card/50">
@@ -216,7 +216,7 @@ export function SourceCheckTable({ title = 'Source Check', rows }: SourceCheckTa
   return (
     <section className="my-8">
       <h2 className="mb-3 text-lg font-bold text-foreground">{title}</h2>
-      <div className="overflow-hidden rounded-lg border border-border/50 bg-card/30">
+      <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
