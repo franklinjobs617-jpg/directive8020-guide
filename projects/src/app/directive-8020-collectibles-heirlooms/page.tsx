@@ -4,7 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { ActionTable, BlufBox, RelatedGuides, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, RelatedGuides, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { CollectibleChecklist } from '@/components/tools/collectible-checklist';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
@@ -86,6 +86,55 @@ const sourceRows = [
   },
 ];
 
+const dollRows = [
+  ['Dark Picture Doll searches', 'These usually refer to the Deluxe Heirlooms Retrieval content and anthology relics, not the main 65-item collectible count.'],
+  ['Episode 3 Food Storage doll route', 'Use the currently reported 0402 code route as a source-checked clue, then confirm it against your own Story Tree state.'],
+  ['O Death collectibles', 'Track the 5 O Death Secrets separately from normal Secrets because they support Curator-style cleanup intent.'],
+  ['Main story evidence', 'Do not mix lore evidence with Deluxe relics when planning trophies or ending-route notes.'],
+];
+
+const searchIntentRows = [
+  {
+    query: 'How many collectibles are there?',
+    answer: 'Current guides list 65 total collectibles: 50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets.',
+    href: '#collectible-count',
+    label: 'Quick answer',
+  },
+  {
+    query: 'All collectibles',
+    answer: 'Track each item by episode, room, route condition, impact, and whether it persists after Turning Points.',
+    href: '#cleanup-plan',
+    label: 'Checklist',
+  },
+  {
+    query: 'Dolls or Dark Picture dolls',
+    answer: 'Doll searches usually point to Deluxe Heirlooms Retrieval and the Episode 3 Food Storage doll/code route.',
+    href: '#dolls',
+    label: 'Dolls',
+  },
+  {
+    query: 'O Death Secrets',
+    answer: 'There are 5 O Death Secrets in the current collectible structure; keep them separate from normal Secrets.',
+    href: '#collectible-count',
+    label: 'Curator route',
+  },
+  {
+    query: 'Do collectibles affect endings?',
+    answer: 'Treat evidence as route context until item-by-item ending impact is verified through choices and Story Tree testing.',
+    href: '#what-to-track',
+    label: 'Caveat',
+  },
+];
+
+const jumpLinks = [
+  { href: '#collectible-count', label: '65 collectibles' },
+  { href: '#cleanup-plan', label: 'Cleanup plan' },
+  { href: '#what-to-track', label: 'What to track' },
+  { href: '#dolls', label: 'Dolls' },
+  { href: '/directive-8020-trophy-guide', label: 'Trophies' },
+  { href: '/directive-8020-walkthrough', label: 'Walkthrough' },
+];
+
 export default function CollectiblesPage() {
   return (
     <>
@@ -116,6 +165,13 @@ export default function CollectiblesPage() {
           content so completion players can track main-story collectibles,
           Curator cleanup, and Dark Pictures relics without mixing categories.
         </p>
+
+        <SearchAnswerPanel
+          title="How many Directive 8020 collectibles are there?"
+          answer="Current collectible coverage lists 65 items: 50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets. Keep Deluxe Heirlooms Retrieval dolls and anthology relics in a separate checklist so completion cleanup stays readable."
+          intentRows={searchIntentRows}
+          jumpLinks={jumpLinks}
+        />
 
         <BlufBox>
           <p>
@@ -155,7 +211,7 @@ export default function CollectiblesPage() {
             confirmed counts with unverified room names.
           </p>
 
-          <h2>What to Track</h2>
+          <h2 id="what-to-track">What to Track</h2>
           <p>
             Every item should be logged with its chapter, room, route condition,
             and whether it affects story, trophies, Curator cleanup, or mimic
@@ -163,7 +219,7 @@ export default function CollectiblesPage() {
             completion route stays clear.
           </p>
 
-          <h2>Collectible Count Breakdown</h2>
+          <h2 id="collectible-count">Collectible Count Breakdown</h2>
         </div>
 
         <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
@@ -188,7 +244,7 @@ export default function CollectiblesPage() {
         </div>
 
         <div className="prose-game">
-          <h2>Collectible Cleanup Plan</h2>
+          <h2 id="cleanup-plan">Collectible Cleanup Plan</h2>
           <ActionTable rows={collectibleRows} />
         </div>
 
@@ -221,7 +277,7 @@ export default function CollectiblesPage() {
             caption="If a collectible is route-locked, record the Turning Point that opens the path. That makes trophy cleanup much faster."
           />
 
-          <h2>Heirlooms Retrieval Notes</h2>
+          <h2 id="dolls">Dark Pictures Dolls and Heirlooms Notes</h2>
           <p>
             The Digital Deluxe upgrade includes The Dark Pictures Heirlooms
             Retrieval, a bonus mission tied to dolls and relics from earlier
@@ -229,6 +285,19 @@ export default function CollectiblesPage() {
             content for series fans, so keep a separate checklist for heirlooms
             instead of mixing them with main-story evidence.
           </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <tbody>
+              {dollRows.map(([need, answer]) => (
+                <tr key={need} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 text-foreground font-medium w-48">{need}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         <SourceCheckTable title="Dark Pictures Dolls and Heirlooms Source Check" rows={sourceRows} />

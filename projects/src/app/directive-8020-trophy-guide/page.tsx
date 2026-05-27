@@ -4,7 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema, generateHowToSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
-import { ActionTable, BlufBox, RelatedGuides, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, RelatedGuides, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { TrophyProgressTracker } from '@/components/tools/trophy-progress-tracker';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
@@ -110,6 +110,48 @@ const sourceRows = [
   },
 ];
 
+const searchIntentRows = [
+  {
+    query: 'Directive 8020 trophy guide',
+    answer: 'Finish one clean route first, then use Turning Points for endings, deaths, collectibles, Movie Night, and final platform trophy checks.',
+    href: '#platinum-roadmap',
+    label: 'Roadmap',
+  },
+  {
+    query: 'Directive 8020 platinum',
+    answer: 'Build a save-everyone base before destructive cleanup. Do not chase all deaths or bad endings on your first serious trophy save.',
+    href: '#platinum-roadmap',
+    label: 'Platinum',
+  },
+  {
+    query: 'Missable trophies',
+    answer: 'Expect missables around survival, deaths, endings, collectibles, hidden choices, and route-specific Story Tree branches.',
+    href: '#missable-cleanup',
+    label: 'Missable',
+  },
+  {
+    query: 'Trophy list status',
+    answer: 'Steam confirms achievements as a feature; exact public trophy names should be checked against live platform lists.',
+    href: '#platform-status',
+    label: 'Verified caveat',
+  },
+  {
+    query: 'Achievement cleanup order',
+    answer: 'Clean route, save-everyone base, endings, deaths, collectibles, then mode or platform-specific cleanup.',
+    href: '#cleanup-order',
+    label: 'Checklist',
+  },
+];
+
+const jumpLinks = [
+  { href: '#platinum-roadmap', label: 'Platinum roadmap' },
+  { href: '#platform-status', label: 'Platform status' },
+  { href: '#missable-cleanup', label: 'Missables' },
+  { href: '#cleanup-order', label: 'Cleanup order' },
+  { href: '/directive-8020-all-endings', label: 'Endings' },
+  { href: '/directive-8020-death-scenes-guide', label: 'Deaths' },
+];
+
 export default function TrophyGuidePage() {
   return (
     <>
@@ -167,6 +209,13 @@ export default function TrophyGuidePage() {
           unlocks still need platform confirmation.
         </p>
 
+        <SearchAnswerPanel
+          title="What is the fastest Directive 8020 trophy route?"
+          answer="The safest 100% route is clean playthrough first, save-everyone base second, then focused Turning Point cleanup for endings, deaths, collectibles, Movie Night, and platform-specific trophies once the live list is verified."
+          intentRows={searchIntentRows}
+          jumpLinks={jumpLinks}
+        />
+
         <BlufBox>
           <p>
             <strong>Do not trophy hunt randomly.</strong> Finish one route,
@@ -178,7 +227,9 @@ export default function TrophyGuidePage() {
           </p>
         </BlufBox>
 
-        <SourceCheckTable title="Trophy and Platinum Source Check" rows={sourceRows} />
+        <div id="platform-status">
+          <SourceCheckTable title="Trophy and Platinum Source Check" rows={sourceRows} />
+        </div>
 
         <StatusPanel
           items={[
@@ -228,7 +279,7 @@ export default function TrophyGuidePage() {
             <li>Only chase specific hidden achievements once the Story Tree is mostly mapped.</li>
           </ol>
 
-          <h2>Recommended Platinum Route</h2>
+          <h2 id="platinum-roadmap">Recommended Platinum Route</h2>
           <ActionTable rows={platinumRows} />
 
           <h2>Platform Trophy Issues Players Are Searching</h2>
@@ -266,7 +317,7 @@ export default function TrophyGuidePage() {
         </div>
 
         <div className="prose-game">
-          <h2>Missable Trophy Planning</h2>
+          <h2 id="missable-cleanup">Missable Trophy Planning</h2>
           <p>
             The most expensive trophies in this genre are not the automatic
             chapter trophies. They are the route-specific trophies that require
@@ -303,7 +354,7 @@ export default function TrophyGuidePage() {
             <li>Check whether collectibles persist after rewinding with Turning Points.</li>
           </ul>
 
-          <h2>Turning Points Cleanup Strategy</h2>
+          <h2 id="cleanup-order">Turning Points Cleanup Strategy</h2>
           <p>
             Turning Points are the main tool for reducing replay time. The
             correct method is controlled branching: change one decision, observe

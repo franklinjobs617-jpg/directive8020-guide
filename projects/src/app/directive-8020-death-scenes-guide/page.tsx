@@ -4,7 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { ActionTable, BlufBox, RelatedGuides, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, RelatedGuides, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { DeathSceneTracker } from '@/components/tools/death-scene-tracker';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
@@ -102,6 +102,56 @@ const sourceRows = [
   },
 ];
 
+const avoidMethodRows = [
+  ['QTE death', 'Replay the same scene with stable input timing and keep other choices unchanged.', 'Usually immediate'],
+  ['Stealth death', 'Use cover, avoid sprinting, and map the hiding route before scanning or moving.', 'Usually immediate'],
+  ['Trust death', 'Verify isolated characters through evidence, witnesses, memory, or scanner context.', 'Often earlier than the death scene'],
+  ['Relationship death', 'Repair trust before rescue scenes and avoid needless blame without proof.', 'Earlier chapter or scene'],
+  ['Finale death', 'Branch from a late Turning Point and change only survivor state, mission choice, or mimic evidence.', 'Late-game route branch'],
+];
+
+const searchIntentRows = [
+  {
+    query: 'How many deaths are in Directive 8020?',
+    answer: 'Launch coverage reports 44 death scenes. Use this page to track victims, chapters, triggers, avoid methods, and Turning Points.',
+    href: '#death-count',
+    label: 'Quick answer',
+  },
+  {
+    query: 'What is Death Spiral?',
+    answer: 'Treat Death Spiral as a special collapse or ending-state concept until exact trigger conditions are verified.',
+    href: '#death-spiral',
+    label: 'Spoiler',
+  },
+  {
+    query: 'All deaths cleanup order',
+    answer: 'Finish one clean route, test late deaths, then branch into QTE, stealth, trust, evidence, relationship, and finale deaths.',
+    href: '#death-cleanup',
+    label: 'Checklist',
+  },
+  {
+    query: 'How do I avoid deaths?',
+    answer: 'Every death should be logged with a prevention method, not only a trigger, so survival and trophy players can both use the guide.',
+    href: '#avoid-methods',
+    label: 'Survival',
+  },
+  {
+    query: 'Death trophies',
+    answer: 'Branch for death-related trophies after preserving your save-everyone base route.',
+    href: '/directive-8020-trophy-guide',
+    label: 'Trophy route',
+  },
+];
+
+const jumpLinks = [
+  { href: '#death-count', label: '44 deaths' },
+  { href: '#death-spiral', label: 'Death Spiral' },
+  { href: '#death-cleanup', label: 'Cleanup order' },
+  { href: '#avoid-methods', label: 'Avoid methods' },
+  { href: '/directive-8020-how-to-save-everyone', label: 'Save everyone' },
+  { href: '/directive-8020-all-endings', label: 'Endings' },
+];
+
 export default function DeathScenesPage() {
   return (
     <>
@@ -135,6 +185,13 @@ export default function DeathScenesPage() {
           fully verified.
         </p>
 
+        <SearchAnswerPanel
+          title="How many Directive 8020 death scenes are there?"
+          answer="Directive 8020 has 44 reported death scenes. The useful route is not to trigger them randomly: finish one clean route, then use Turning Points to test each death by victim, chapter, trigger, avoid method, and trophy relevance."
+          intentRows={searchIntentRows}
+          jumpLinks={jumpLinks}
+        />
+
         <BlufBox>
           <p>
             <strong>Use deaths as a controlled checklist, not a first-run goal.</strong>
@@ -146,14 +203,16 @@ export default function DeathScenesPage() {
           </p>
         </BlufBox>
 
-        <StatusPanel
+        <div id="death-count">
+          <StatusPanel
           items={[
             { label: 'Death count', value: '44 deaths reported by preview coverage; final in-game checklist still needs capture.', status: 'working' },
             { label: 'Exact death list', value: 'Needs episode-by-episode recording and screenshots.', status: 'needs-check' },
             { label: 'Capture method', value: 'Turning Point branching and one-variable testing are ready to use.', status: 'verified' },
             { label: 'Spoiler handling', value: 'Death categories are visible; exact late-game deaths should be spoiler-labeled after capture.', status: 'working' },
           ]}
-        />
+          />
+        </div>
 
         <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
           <table className="w-full text-sm">
@@ -197,7 +256,7 @@ export default function DeathScenesPage() {
             <li>Record the avoid method so the death guide also helps survival players.</li>
           </ol>
 
-          <h2>Death Capture Plan</h2>
+          <h2 id="death-cleanup">Death Capture Plan</h2>
           <ActionTable rows={deathCaptureRows} />
         </div>
 
@@ -230,7 +289,40 @@ export default function DeathScenesPage() {
           </table>
         </div>
 
-        <SourceCheckTable title="Death Spiral Source Check" rows={sourceRows} />
+        <div id="death-spiral">
+          <SourceCheckTable title="Death Spiral Source Check" rows={sourceRows} />
+        </div>
+
+        <div className="prose-game">
+          <h2 id="avoid-methods">Avoid Method Table</h2>
+          <p>
+            The strongest all-deaths guide also helps players avoid the same
+            deaths. For every confirmed fatal branch, record the prevention
+            method and whether the fix is immediate or requires an earlier
+            Turning Point.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left text-muted-foreground font-medium">Death type</th>
+                <th className="px-4 py-3 text-left text-muted-foreground font-medium">Avoid method</th>
+                <th className="px-4 py-3 text-left text-muted-foreground font-medium">Rewind depth</th>
+              </tr>
+            </thead>
+            <tbody>
+              {avoidMethodRows.map(([type, method, rewind]) => (
+                <tr key={type} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{type}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{method}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{rewind}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
           <table className="w-full text-sm">

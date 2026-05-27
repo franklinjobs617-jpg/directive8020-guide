@@ -48,6 +48,25 @@ interface SourceCheckTableProps {
   rows: SourceCheckRow[];
 }
 
+interface SearchIntentRow {
+  query: string;
+  answer: string;
+  href: string;
+  label?: string;
+}
+
+interface JumpLink {
+  href: string;
+  label: string;
+}
+
+interface SearchAnswerPanelProps {
+  title: string;
+  answer: string;
+  intentRows: SearchIntentRow[];
+  jumpLinks: JumpLink[];
+}
+
 const statusStyles = {
   verified: 'text-green-400 bg-green-400/10 border-green-400/30',
   'needs-check': 'text-yellow-300 bg-yellow-300/10 border-yellow-300/30',
@@ -66,6 +85,62 @@ export function BlufBox({ title = 'BLUF', children }: BlufBoxProps) {
       <h2 className="mb-2 text-xs font-semibold uppercase tracking-wider text-d8020">{title}</h2>
       <div className="text-sm leading-relaxed text-muted-foreground [&_strong]:text-foreground">
         {children}
+      </div>
+    </section>
+  );
+}
+
+export function SearchAnswerPanel({ title, answer, intentRows, jumpLinks }: SearchAnswerPanelProps) {
+  return (
+    <section className="my-8 overflow-hidden rounded-lg border border-d8020/40 bg-gradient-to-b from-d8020/15 to-card/35">
+      <div className="border-b border-d8020/20 p-5">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-d8020">Search Answer</p>
+        <h2 className="text-xl font-black leading-tight text-foreground">{title}</h2>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+          {answer}
+        </p>
+      </div>
+
+      <div className="grid gap-4 p-5 lg:grid-cols-[1fr_220px]">
+        <div>
+          <h3 className="mb-3 text-sm font-bold text-foreground">What you probably searched for</h3>
+          <div className="grid gap-2">
+            {intentRows.map((row) => (
+              <Link
+                key={row.query}
+                href={row.href}
+                className="group rounded-md border border-border/45 bg-background/35 p-3 transition-colors hover:border-d8020/45"
+              >
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                  <p className="text-sm font-semibold text-foreground">{row.query}</p>
+                  {row.label ? (
+                    <span className="w-fit rounded border border-d8020/30 bg-d8020/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-d8020">
+                      {row.label}
+                    </span>
+                  ) : null}
+                </div>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground group-hover:text-foreground">
+                  {row.answer}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <nav aria-label="Page jump links" className="rounded-md border border-border/45 bg-background/35 p-3">
+          <h3 className="mb-3 text-sm font-bold text-foreground">Jump to</h3>
+          <div className="flex flex-wrap gap-2 lg:flex-col">
+            {jumpLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="rounded border border-border/40 bg-card/40 px-3 py-2 text-xs font-semibold text-muted-foreground transition-colors hover:border-d8020/40 hover:text-foreground"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </nav>
       </div>
     </section>
   );

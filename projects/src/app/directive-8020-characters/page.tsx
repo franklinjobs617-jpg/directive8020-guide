@@ -6,6 +6,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
+import { RelatedGuides, SearchAnswerPanel } from '@/components/guide-blocks';
 import { crewPortraitHero, directiveCharacters } from '@/lib/directive-8020-characters';
 
 export const metadata: Metadata = {
@@ -71,6 +72,48 @@ const movieNightRows = [
   ['Careful note-taker', 'Have this player track mimic suspicion, separated characters, and who returns with unverifiable information.'],
 ];
 
+const searchIntentRows = [
+  {
+    query: 'Who are the playable characters?',
+    answer: 'The core playable Cassiopeia crew tracked here is Brianna Young, Nolan Stafford, Laura Eisele, Dr. Samantha Cooper, and Josef Cernan.',
+    href: '#character-table',
+    label: 'Quick answer',
+  },
+  {
+    query: 'Who plays Brianna Young?',
+    answer: 'Lashana Lynch is the confirmed headline performer for Brianna Young.',
+    href: '#cast-status',
+    label: 'Confirmed',
+  },
+  {
+    query: 'Who are the actors and cast?',
+    answer: 'Use credited cast sources only; some role-level actor information remains pending until platform credits or trusted cast pages confirm it.',
+    href: '/directive-8020-cast-actors',
+    label: 'Cast page',
+  },
+  {
+    query: 'Are face models confirmed?',
+    answer: 'Do not infer face models from visual similarity. Treat face model claims as unconfirmed unless an official credit backs them.',
+    href: '#character-table',
+    label: 'Caution',
+  },
+  {
+    query: 'Can these characters die?',
+    answer: 'Track the five core crew first; deaths can depend on QTEs, trust, relationships, evidence, and mimic suspicion.',
+    href: '/directive-8020-death-scenes-guide',
+    label: 'Deaths',
+  },
+];
+
+const jumpLinks = [
+  { href: '#character-table', label: 'Character table' },
+  { href: '#cast-status', label: 'Cast status' },
+  { href: '#mimic-roles', label: 'Mimic clues' },
+  { href: '#survival-roles', label: 'Survival roles' },
+  { href: '#movie-night', label: 'Movie Night' },
+  { href: '/directive-8020-cast-actors', label: 'Actors' },
+];
+
 export default function CharactersPage() {
   return (
     <>
@@ -106,7 +149,14 @@ export default function CharactersPage() {
           assignment, and mimic suspicion clues.
         </p>
 
-        <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <SearchAnswerPanel
+          title="Who are the main Directive 8020 characters?"
+          answer="Directive 8020 centers on five playable Cassiopeia crew members: Brianna Young, Nolan Stafford, Laura Eisele, Dr. Samantha Cooper, and Josef Cernan. Actor and face model claims are separated by verification status so players do not confuse confirmed credits with visual guesses."
+          intentRows={searchIntentRows}
+          jumpLinks={jumpLinks}
+        />
+
+        <div id="character-table" className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border/50 bg-card/50">
@@ -174,7 +224,7 @@ export default function CharactersPage() {
         </div>
 
         <div className="prose-game">
-          <h2>Confirmed Cast and Character Information</h2>
+          <h2 id="cast-status">Confirmed Cast and Character Information</h2>
           <p>
             The most clearly confirmed cast detail is <strong>Lashana Lynch as
             Brianna Young</strong>. Official Steam copy describes Young as a
@@ -234,7 +284,7 @@ export default function CharactersPage() {
         </div>
 
         <section className="my-8 rounded-lg border border-d8020/40 bg-d8020/10 p-5">
-          <h2 className="text-lg font-bold text-foreground">The Mimic</h2>
+          <h2 id="mimic-roles" className="text-lg font-bold text-foreground">The Mimic</h2>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
             Treat the mimic like a route variable, not a normal enemy entry.
             Every trust choice should record what the suspect knew, where they
@@ -244,7 +294,7 @@ export default function CharactersPage() {
         </section>
 
         <div className="prose-game">
-          <h2>How Character Survival Works</h2>
+          <h2 id="survival-roles">How Character Survival Works</h2>
           <p>
             The Dark Pictures formula usually treats survival as a chain, not a
             single choice. A death can come from an obvious failed QTE, but it
@@ -271,7 +321,7 @@ export default function CharactersPage() {
             ))}
           </ul>
 
-          <h2>Movie Night Character Assignment Tips</h2>
+          <h2 id="movie-night">Movie Night Character Assignment Tips</h2>
           <p>
             Since Steam lists Movie Night couch co-op for up to five players,
             character assignment can affect how your group experiences the
@@ -308,6 +358,36 @@ export default function CharactersPage() {
             <li>Use Turning Points later if a co-op disagreement causes a major death.</li>
           </ul>
         </div>
+
+        <RelatedGuides
+          guides={[
+            {
+              href: '/directive-8020-cast-actors',
+              title: 'Cast & Actors',
+              description: 'Check role-level actor status, credited performers, and pending cast details.',
+            },
+            {
+              href: '/directive-8020-death-scenes-guide',
+              title: 'All Death Scenes',
+              description: 'Track which character routes can fail and how to avoid deaths.',
+            },
+            {
+              href: '/directive-8020-how-to-save-everyone',
+              title: 'How to Save Everyone',
+              description: 'Use character survival rules to build a clean best-ending base.',
+            },
+            {
+              href: '/directive-8020-mimic-detection-survival-guide',
+              title: 'Mimic Detection',
+              description: 'Use suspicion clues before trusting returned or isolated crew.',
+            },
+            {
+              href: '/directive-8020-movie-night-multiplayer',
+              title: 'Movie Night',
+              description: 'Assign characters to players without losing route control.',
+            },
+          ]}
+        />
 
         <FAQSection faqs={faqs} />
       </article>

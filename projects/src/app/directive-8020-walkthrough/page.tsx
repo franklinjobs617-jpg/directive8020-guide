@@ -4,7 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, RelatedGuides, SearchAnswerPanel, StatusPanel } from '@/components/guide-blocks';
 import { EpisodeNavigator } from '@/components/tools/episode-navigator';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
@@ -239,6 +239,48 @@ const navigatorEpisodes = knownEpisodes.map((episode, index) => ({
         : 'Route mapping',
 }));
 
+const searchIntentRows = [
+  {
+    query: 'Directive 8020 walkthrough',
+    answer: 'Play all eight episodes in order, record Turning Points after each chapter, and save destructive branches for cleanup.',
+    href: '#episode-index',
+    label: 'Full route',
+  },
+  {
+    query: 'How many chapters or episodes?',
+    answer: 'There are eight episodes: Little Star, Best Laid Plans, The Sample, Dragnet, Mr. Williams, Hostile Takeover, Revelation, and Come True.',
+    href: '#episode-index',
+    label: 'Quick answer',
+  },
+  {
+    query: 'Spoiler-safe first run',
+    answer: 'Search rooms, keep the crew together, verify separated characters, pass QTEs, and log evidence without reading ending routes yet.',
+    href: '#first-run-plan',
+    label: 'Low spoiler',
+  },
+  {
+    query: '100% walkthrough route',
+    answer: 'Finish one clean route, then branch for endings, deaths, collectibles, trophies, and Movie Night variants from Turning Points.',
+    href: '#route-priorities',
+    label: 'Completion',
+  },
+  {
+    query: 'Chapter checklist',
+    answer: 'Track playable character, objective, mimic clues, QTEs, stealth, collectibles, deaths, relationships, and Story Tree branches.',
+    href: '#chapter-template',
+    label: 'Checklist',
+  },
+];
+
+const jumpLinks = [
+  { href: '#episode-index', label: '8 episodes' },
+  { href: '#first-run-plan', label: 'First run' },
+  { href: '#route-priorities', label: '100% route' },
+  { href: '#chapter-template', label: 'Chapter checklist' },
+  { href: '/directive-8020-choices-consequences', label: 'Choices' },
+  { href: '/directive-8020-all-endings', label: 'Endings' },
+];
+
 export default function WalkthroughPage() {
   return (
     <>
@@ -269,6 +311,13 @@ export default function WalkthroughPage() {
           spoiler-safe route, then as a cleanup map for choices, Turning Points,
           Destinies, stealth, QTEs, collectibles, deaths, and endings.
         </p>
+
+        <SearchAnswerPanel
+          title="What is the correct Directive 8020 walkthrough order?"
+          answer="Directive 8020 has eight episodes. For a useful first run, play them in order, record every Story Tree Turning Point, and avoid changing multiple route variables at once. For 100%, branch later for endings, deaths, collectibles, and trophies."
+          intentRows={searchIntentRows}
+          jumpLinks={jumpLinks}
+        />
 
         <BlufBox>
           <p>
@@ -346,20 +395,19 @@ export default function WalkthroughPage() {
             <li><strong>Completion run:</strong> target collectibles, death scenes, endings, trophies, and Movie Night variants.</li>
           </ul>
 
-          <h2>First-Run Action Plan</h2>
+          <h2 id="first-run-plan">First-Run Action Plan</h2>
           <p>
             Follow this table if you only want practical advice while playing.
-            It keeps the page useful for both normal players and AI answer
-            extraction because every step has a condition and a reason.
+            Every step includes the action to take and the reason it matters,
+            so you can make safer choices without reading every spoiler.
           </p>
           <ActionTable rows={firstRunActions} />
 
           <h2>Video Transcript Route Notes</h2>
           <p>
-            A full-game no-commentary video transcript was used as a private
-            route evidence source for this update. Because automatic subtitles
-            can misspell names and places, the notes below are paraphrased and
-            treated as route context, not copied dialogue.
+            Route notes should be treated as paraphrased context, not copied
+            dialogue. If names, locations, or late-game choices look different
+            in your save, trust the in-game Story Tree and record the branch.
           </p>
         </div>
 
@@ -394,7 +442,7 @@ export default function WalkthroughPage() {
             caption="The walkthrough starts with crew state: who is alive, who is separated, who has evidence, and who may be unsafe to trust."
           />
 
-          <h2>Episode Walkthrough Index</h2>
+          <h2 id="episode-index">Episode Walkthrough Index</h2>
           <p>
             Known public episode titles are listed where available. Later
             episodes are intentionally labeled as capture slots so the page can
@@ -440,7 +488,7 @@ export default function WalkthroughPage() {
             caption="Stealth notes should include cover, sound risk, scanner timing, QTEs, deaths, and whether a failure changes the Story Tree."
           />
 
-          <h2>Route Priorities by Player Goal</h2>
+          <h2 id="route-priorities">Route Priorities by Player Goal</h2>
           <p>
             Do not use the same route for every goal. A blind story run, a best
             ending route, and a trophy route all need different tolerance for
@@ -462,11 +510,11 @@ export default function WalkthroughPage() {
         </div>
 
         <div className="prose-game">
-          <h2>Chapter Tracking Template</h2>
+          <h2 id="chapter-template">Chapter Tracking Template</h2>
           <p>
-            Use this template for each episode. It is designed for human
-            players, search snippets, and generative engines because every row
-            is a clean knowledge unit.
+            Use this template for each episode. It keeps every chapter note
+            practical: who you controlled, what changed, what was missed, and
+            which branch should be tested next.
           </p>
         </div>
 
@@ -545,6 +593,21 @@ export default function WalkthroughPage() {
         <RelatedGuides
           guides={[
             {
+              href: '/directive-8020-choices-consequences',
+              title: 'All Choices & Consequences',
+              description: 'Check which decisions change trust, deaths, and endings.',
+            },
+            {
+              href: '/directive-8020-all-endings',
+              title: 'All Endings',
+              description: 'Branch late Turning Points for best, bad, and hidden endings.',
+            },
+            {
+              href: '/directive-8020-collectibles-heirlooms',
+              title: 'Collectibles & Heirlooms',
+              description: 'Track the 65 listed collectibles while moving chapter by chapter.',
+            },
+            {
               href: '/directive-8020-how-to-save-everyone',
               title: 'How to Save Everyone',
               description: 'Turn this walkthrough into a best-ending survival route.',
@@ -553,16 +616,6 @@ export default function WalkthroughPage() {
               href: '/directive-8020-turning-points-story-tree',
               title: 'Turning Points & Story Tree',
               description: 'Use rewinds correctly instead of replaying the full game.',
-            },
-            {
-              href: '/directive-8020-how-long-to-beat',
-              title: 'How Long to Beat',
-              description: 'Plan an 8-hour first route or a 30-hour completion cleanup.',
-            },
-            {
-              href: '/directive-8020-stealth-guide',
-              title: 'Stealth Guide',
-              description: 'Map scanner use, hiding, noise, and chase sections.',
             },
             {
               href: '/directive-8020-trophy-guide',

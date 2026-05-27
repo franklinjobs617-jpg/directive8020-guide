@@ -4,12 +4,12 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
-import { ActionTable, BlufBox, RelatedGuides, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, RelatedGuides, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { SurvivalEndingTracker } from '@/components/tools/survival-ending-tracker';
 import { EndingIndex } from '@/components/tools/ending-index';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 Endings: Best, Secret & Death Spiral',
+  title: 'Directive 8020 Endings Guide: How Many, Best Ending & Explained',
   description:
     'Directive 8020 endings guide: how many endings there are, best ending route, secret ending checks, Death Spiral, ending explained, and known finale outcomes.',
   alternates: {
@@ -136,6 +136,48 @@ const endingRouteRows = [
   { step: 'Massacre / Horror test', doThis: 'Use a copy branch to fail survivor, QTE, or trust conditions after your clean route is saved.', why: 'Worst-ending cleanup should not damage the route you need for trophies and good outcomes.' },
 ];
 
+const searchIntentRows = [
+  {
+    query: 'How many endings does Directive 8020 have?',
+    answer: 'Current launch coverage reports five major ending families, with several named finale outcomes and route variants.',
+    href: '#ending-count',
+    label: 'Low spoiler',
+  },
+  {
+    query: 'What is the best ending?',
+    answer: 'Build a save-everyone base, preserve evidence, verify mimic clues, and avoid finale choices made without proof.',
+    href: '#best-ending-route',
+    label: 'Route advice',
+  },
+  {
+    query: 'Is there a secret ending?',
+    answer: 'Treat Cycle 13, Booster Ring, mimic exposure, and unresolved contamination as the main hidden-ending checks until triggers are fully verified.',
+    href: '#spoiler-topics',
+    label: 'Spoilers',
+  },
+  {
+    query: 'What is Death Spiral?',
+    answer: 'Death Spiral is best tracked as a special collapse or failure-state route, not a normal all-deaths checklist item.',
+    href: '#spoiler-topics',
+    label: 'Spoilers',
+  },
+  {
+    query: 'What does the ending mean?',
+    answer: 'Read the finale through survivor state, message choice, Andromeda risk, Oracle data, mimic evidence, and the cycle reveal.',
+    href: '#ending-explained',
+    label: 'Full spoiler',
+  },
+];
+
+const jumpLinks = [
+  { href: '#ending-count', label: 'Ending count' },
+  { href: '#known-endings', label: 'Ending names' },
+  { href: '#best-ending-route', label: 'Best route' },
+  { href: '#ending-explained', label: 'Ending explained' },
+  { href: '#spoiler-topics', label: 'Secret topics' },
+  { href: '#route-test-plan', label: 'Route test plan' },
+];
+
 export default function AllEndingsPage() {
   return (
     <>
@@ -172,6 +214,13 @@ export default function AllEndingsPage() {
           maps what each ending name appears to mean and how to test routes
           through the Story Tree.
         </p>
+
+        <SearchAnswerPanel
+          title="How many Directive 8020 endings are there?"
+          answer="Directive 8020 is currently best described as having five major ending families. The practical path is to complete one clean survivor route, then branch late Turning Points for best ending, bad ending, secret-ending checks, Death Spiral, and ending-explained cleanup."
+          intentRows={searchIntentRows}
+          jumpLinks={jumpLinks}
+        />
 
         <BlufBox>
           <p>
@@ -254,7 +303,7 @@ export default function AllEndingsPage() {
         <SourceCheckTable title="All Endings Source Check" rows={sourceRows} />
 
         <div className="prose-game">
-          <h2>All Known Ending Names and What to Test</h2>
+          <h2 id="known-endings">All Known Ending Names and What to Test</h2>
           <p>
             Players searching for Directive 8020 endings usually need ending
             names, route direction, and a clear warning about unconfirmed
@@ -300,7 +349,7 @@ export default function AllEndingsPage() {
             unstable for your best-ending base save.
           </p>
 
-          <h2>Ending Count and Completion Facts</h2>
+          <h2 id="ending-count">Ending Count and Completion Facts</h2>
           <p>
             The key completion numbers help players understand the scale of the
             ending hunt. They also keep quick references precise: five reported main
@@ -331,7 +380,7 @@ export default function AllEndingsPage() {
         </div>
 
         <div className="prose-game">
-          <h2>Transcript-Based Finale Conditions</h2>
+          <h2 id="ending-explained">Transcript-Based Finale Conditions</h2>
           <p>
             The full-game transcript makes the finale easier to map because it
             separates the final outcome into message choice, survivor state,
@@ -365,7 +414,7 @@ export default function AllEndingsPage() {
         </div>
 
         <div className="prose-game">
-          <h2>Spoiler Topics Players Search After the Ending</h2>
+          <h2 id="spoiler-topics">Spoiler Topics Players Search After the Ending</h2>
           <p>
             Search demand after launch is moving toward explanation queries, not
             only route queries. Keep these topics visible on the endings page so
@@ -413,7 +462,7 @@ export default function AllEndingsPage() {
         </div>
 
         <div className="prose-game">
-          <h2>Best Ending Route: Safe Principles</h2>
+          <h2 id="best-ending-route">Best Ending Route: Safe Principles</h2>
           <p>
             A verified best-ending route requires full chapter testing, but the
             safest principles are clear from the game&apos;s systems. You want the
@@ -434,7 +483,7 @@ export default function AllEndingsPage() {
             <li><strong>Pass QTEs and stealth checks:</strong> mechanical failures can close ending routes immediately.</li>
           </ul>
 
-          <h2>Ending Route Test Plan</h2>
+          <h2 id="route-test-plan">Ending Route Test Plan</h2>
           <p>
             Use this sequence to turn one completed playthrough into a full
             endings guide. It keeps the route clean and prevents false
@@ -500,14 +549,19 @@ export default function AllEndingsPage() {
               description: 'Use choice maps to identify which branch changes each ending.',
             },
             {
+              href: '/directive-8020-walkthrough',
+              title: 'Full Walkthrough',
+              description: 'Use the episode route map before changing finale variables.',
+            },
+            {
               href: '/directive-8020-death-scenes-guide',
               title: 'All Death Scenes',
               description: 'Use death branches after you preserve one clean ending route.',
             },
             {
-              href: '/directive-8020-trophy-list',
-              title: 'Trophy List',
-              description: 'Check ending-related achievements, Platinum cleanup, and platform trophy status.',
+              href: '/directive-8020-cycle-13-explained',
+              title: 'Cycle 13 Explained',
+              description: 'Read the spoiler-heavy cycle reveal after finishing one ending.',
             },
             {
               href: '/directive-8020-collectibles-heirlooms',

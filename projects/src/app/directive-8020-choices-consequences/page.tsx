@@ -4,7 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox, RelatedGuides, SourceCheckTable } from '@/components/guide-blocks';
+import { BlufBox, RelatedGuides, SearchAnswerPanel, SourceCheckTable } from '@/components/guide-blocks';
 import { MimicDetector } from '@/components/tools/mimic-detector';
 import { ChoiceImpactFilter } from '@/components/tools/choice-impact-filter';
 
@@ -112,6 +112,55 @@ const sourceRows = [
   },
 ];
 
+const bestChoiceRows = [
+  ['Separated character returns', 'Verify identity before following, opening access, or isolating another survivor.', 'Mimic risk is highest when a character cannot prove where they were.'],
+  ['Evidence before accusation', 'Search the room, terminal, or body before blaming someone.', 'Accusations without proof can damage trust and remove safer later options.'],
+  ['Rescue under hazard', 'Help only when the route gives enough time, tools, or cover to do it safely.', 'Panic rescues can trade one survivor for another if the setup is bad.'],
+  ['Final message choice', 'Treat distress, warning, and silence as mission-risk choices, not simple good/bad buttons.', 'The finale depends on crew survival, Andromeda risk, contamination, and evidence.'],
+];
+
+const searchIntentRows = [
+  {
+    query: 'Do choices matter?',
+    answer: 'Yes, but prioritize Destinies, trust checks, separation, QTEs, stealth, evidence, and finale choices over small flavor dialogue.',
+    href: '#choice-logic',
+    label: 'Quick answer',
+  },
+  {
+    query: 'Best choices',
+    answer: 'Choose evidence, group visibility, identity verification, and calm relationship repair unless the scene is under immediate physical threat.',
+    href: '#best-choices',
+    label: 'Best route',
+  },
+  {
+    query: 'All choices and consequences',
+    answer: 'Map each major decision by scene, choice type, immediate result, long-term route effect, and nearest Turning Point.',
+    href: '#choice-examples',
+    label: 'Decision map',
+  },
+  {
+    query: 'Mimic trust decisions',
+    answer: 'Do not trust a returned or isolated character until memory, witness, scanner, or evidence context supports them.',
+    href: '#mimic-choice-logic',
+    label: 'Mimic',
+  },
+  {
+    query: 'Can I undo a choice?',
+    answer: 'Use Turning Points to revisit major branches, but change one variable at a time so the consequence is clear.',
+    href: '#choice-mapping',
+    label: 'Story Tree',
+  },
+];
+
+const jumpLinks = [
+  { href: '#choice-logic', label: 'Do choices matter?' },
+  { href: '#best-choices', label: 'Best choices' },
+  { href: '#choice-examples', label: 'Exact examples' },
+  { href: '#mimic-choice-logic', label: 'Mimic logic' },
+  { href: '#choice-mapping', label: 'Story Tree' },
+  { href: '/directive-8020-all-endings', label: 'Endings' },
+];
+
 export default function ChoicesConsequencesPage() {
   return (
     <>
@@ -142,6 +191,13 @@ export default function ChoicesConsequencesPage() {
           Tree to build a complete decision map.
         </p>
 
+        <SearchAnswerPanel
+          title="Do Directive 8020 choices really matter?"
+          answer="Yes. The choices worth tracking are not every line of dialogue; they are the decisions that affect trust, separation, evidence, QTEs, stealth, Destinies, deaths, and finale conditions."
+          intentRows={searchIntentRows}
+          jumpLinks={jumpLinks}
+        />
+
         <BlufBox>
           <p>
             <strong>Short answer:</strong> choices do matter in Directive 8020,
@@ -154,7 +210,7 @@ export default function ChoicesConsequencesPage() {
         <ChoiceImpactFilter />
 
         <div className="prose-game">
-          <h2>Do Choices Matter in Directive 8020?</h2>
+          <h2 id="choice-logic">Do Choices Matter in Directive 8020?</h2>
           <p>
             This is the biggest post-launch community question. The practical
             answer is yes, but with a caveat: Directive 8020 has both small
@@ -181,7 +237,7 @@ export default function ChoicesConsequencesPage() {
         <SourceCheckTable title="High-Intent Choice Source Check" rows={sourceRows} />
 
         <div className="prose-game">
-          <h2>Concrete Choice Examples from the Full-Game Transcript</h2>
+          <h2 id="choice-examples">Concrete Choice Examples from the Full-Game Transcript</h2>
           <p>
             The transcript gives useful route examples without needing to copy
             dialogue. Use these as categories when you decide whether a choice
@@ -207,6 +263,37 @@ export default function ChoicesConsequencesPage() {
                   <td className="px-4 py-3 text-muted-foreground">{whatHappens}</td>
                   <td className="px-4 py-3 text-muted-foreground">{action}</td>
                   <td className="px-4 py-3 text-muted-foreground">{type}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="prose-game">
+          <h2 id="best-choices">Best Choices for a Safer First Route</h2>
+          <p>
+            There is no universal good dialogue button, but the safest route
+            pattern is consistent: gather evidence, avoid needless isolation,
+            verify identities, and keep relationships functional before the
+            finale. Use these examples when the game asks for a fast decision.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border/50 bg-card/30 overflow-hidden my-6">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Decision type</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Best first-route habit</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it matters</th>
+              </tr>
+            </thead>
+            <tbody>
+              {bestChoiceRows.map(([decision, habit, reason]) => (
+                <tr key={decision} className="border-b border-border/30 last:border-0">
+                  <td className="px-4 py-3 font-semibold text-foreground">{decision}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{habit}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{reason}</td>
                 </tr>
               ))}
             </tbody>
@@ -247,7 +334,7 @@ export default function ChoicesConsequencesPage() {
         </div>
 
         <div className="prose-game">
-          <h2>The Mimic Changes Choice Logic</h2>
+          <h2 id="mimic-choice-logic">The Mimic Changes Choice Logic</h2>
           <p>
             In a normal branching drama, helping a frightened ally is usually a
             positive action. In Directive 8020, that same action can be a trap.
@@ -287,7 +374,7 @@ export default function ChoicesConsequencesPage() {
             <li><strong>Resource state:</strong> weapon, tool, access card, communication route, or ship system changed.</li>
           </ul>
 
-          <h2>Choice Mapping Method</h2>
+          <h2 id="choice-mapping">Choice Mapping Method</h2>
           <p>
             To build a real all-choices guide, do not replay randomly. Change
             one variable at a time. If you change a trust choice and also fail a
