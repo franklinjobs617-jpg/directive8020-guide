@@ -14,10 +14,11 @@ import { jumpKingQuestImages } from "@/lib/jump-king-quest";
 import { paralivesImages } from "@/lib/paralives";
 import { starminerImages } from "@/lib/starminer";
 import { lunaAbyssImages } from "@/lib/luna-abyss";
+import { fatekeeperImages } from "@/lib/fatekeeper";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
-  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, and story-driven games, including Luna Abyss, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, fantasy RPGs, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, and story-driven games, including Luna Abyss, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
   title: {
@@ -40,6 +41,7 @@ export const metadata: Metadata = {
     "Paralives guide",
     "Starminer guide",
     "Luna Abyss guide",
+    "Fatekeeper guide",
   ],
   authors: [{ name: "Enjoy4Game Guides" }],
   alternates: {
@@ -68,6 +70,13 @@ const gameCards = [
     label: "Sci-fi FPS",
     body: "Post-launch hub for Game Pass, Steam Deck settings, system requirements, achievements, walkthrough, ending explained, crash fixes, and buying advice.",
     image: lunaAbyssImages.hero,
+  },
+  {
+    title: "Fatekeeper",
+    href: "/games/fatekeeper",
+    label: "First-person fantasy RPG",
+    body: "Steam Early Access guide hub for release timing, first 30 minutes, safe builds, weapons, spells, relics, bosses, Steam Deck checks, and buyer advice.",
+    image: fatekeeperImages.siteHero,
   },
   {
     title: "Starminer",

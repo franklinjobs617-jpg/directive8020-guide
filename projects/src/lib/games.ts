@@ -760,6 +760,81 @@ export const starminer: GameConfig = {
   ],
 };
 
+export const fatekeeper: GameConfig = {
+  id: "fatekeeper",
+  slugPrefix: "fatekeeper",
+  hubPath: "/games/fatekeeper",
+  name: "Fatekeeper",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "A first-person fantasy action RPG from Paraglacial and THQ Nordic about sword-and-sorcery combat, relics, spells, meaningful builds, handcrafted ruins, hidden lore, and focused Early Access exploration.",
+  platforms: ["PC via Steam"],
+  genres: ["Action", "RPG", "First-Person RPG", "Fantasy", "Early Access"],
+  developer: "Paraglacial",
+  publisher: "THQ Nordic",
+  releaseDate: "2026-06-02",
+  operatingSystem: "Windows 10 or 11 x64",
+  url: "https://store.steampowered.com/app/2186990/Fatekeeper/",
+  availability: "https://schema.org/PreOrder",
+  heroImage: "/games/fatekeeper/hero.webp",
+  guideLinks: [
+    {
+      title: "Release Date & Early Access",
+      href: "/games/fatekeeper/release-date",
+      description:
+        "Steam date, Early Access scope, Windows platform status, console caveats, and launch-window checks.",
+    },
+    {
+      title: "Beginner Guide",
+      href: "/games/fatekeeper/beginner-guide",
+      description:
+        "First 30 minutes, combat basics, exploration rhythm, upgrades, relic habits, and beginner mistakes.",
+    },
+    {
+      title: "Best Builds",
+      href: "/games/fatekeeper/best-builds",
+      description:
+        "Safe beginner build, spellblade, heavy weapon, dagger-style agility, magic focus, and build caveats.",
+    },
+    {
+      title: "Weapons & Spells",
+      href: "/games/fatekeeper/weapons-spells",
+      description:
+        "How to choose early weapons, when to cast spells, upgrade priorities, loadout roles, and combat checks.",
+    },
+    {
+      title: "Relics & Upgrades",
+      href: "/games/fatekeeper/relics-upgrades",
+      description:
+        "Relic tracking, upgrade decisions, build synergy, inventory discipline, and safe Early Access assumptions.",
+    },
+    {
+      title: "Bosses & Enemies",
+      href: "/games/fatekeeper/bosses-enemies",
+      description:
+        "Enemy reading, boss preparation, pattern checks, first-boss habits, and no-spoiler route cautions.",
+    },
+    {
+      title: "Steam Deck & Controller",
+      href: "/games/fatekeeper/steam-deck-controller",
+      description:
+        "Steam Deck status, controller comfort, UI readability, performance checks, and refund-window testing.",
+    },
+    {
+      title: "Is Fatekeeper Worth It?",
+      href: "/games/fatekeeper/is-it-worth-it",
+      description:
+        "Buy-or-wait advice for Early Access scope, short launch content, RPG fit, PC specs, and cautious players.",
+    },
+    {
+      title: "World & Exploration",
+      href: "/games/fatekeeper/world-exploration",
+      description:
+        "Handcrafted world routing, hidden lore, relic checks, backtracking, caves, forests, and ruins.",
+    },
+  ],
+};
+
 export const lunaAbyss: GameConfig = {
   id: "luna-abyss",
   slugPrefix: "luna-abyss",
