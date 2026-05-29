@@ -96,6 +96,12 @@ const mistakeRows = [
   ['Trusting final tier lists too soon', 'Patch, faction, difficulty, and mission context matter.'],
 ];
 
+const firstHourActionRows = mechanicusIIFirstHourRows.map(([step, doThis]) => ({
+  step,
+  doThis,
+  why: 'This keeps early missions readable while you learn objectives, leaders, cover, and faction resource pressure.',
+}));
+
 export default function MechanicusIITipsAndTricksPage() {
   return (
     <MechanicusIIArticle
@@ -132,7 +138,7 @@ export default function MechanicusIITipsAndTricksPage() {
         />
       </section>
 
-      <ActionTable rows={mechanicusIIFirstHourRows} />
+      <ActionTable rows={firstHourActionRows} />
 
       <section className="prose-game">
         <h2 id="objective-clues">Green Consoles, Marked Tiles, and Objective Clues</h2>
