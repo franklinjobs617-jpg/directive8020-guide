@@ -8,9 +8,9 @@ import {
   romesteadImages,
 } from '@/lib/romestead';
 
-const title = 'Romestead Beginner Guide: First Day, Best Profession, Tips and Co-op';
+const title = 'Romestead Beginner Guide — Best Profession, Tips & First Day';
 const description =
-  'Romestead beginner guide for the first day: best profession and class choice, early resources, base building, survivor jobs, co-op roles, Steam Deck checks, and night defense.';
+  'Romestead beginner guide: pick the best profession, survive your first day, gather resources, build a base, assign survivor jobs, set up co-op roles, and prepare night defense.';
 const canonical = '/games/romestead/beginner-guide';
 
 export const metadata = createRomesteadMetadata({

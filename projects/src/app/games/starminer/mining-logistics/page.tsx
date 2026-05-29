@@ -8,9 +8,9 @@ import {
   starminerLogisticsRows,
 } from "@/lib/starminer";
 
-const title = "Starminer Mining & Logistics Guide: Asteroids, Production, Research & Link Gates";
+const title = "Starminer Mining Guide: Asteroid Extraction, Refining & Production Chains";
 const description =
-  "Starminer mining and logistics guide for asteroid extraction, refining, production chains, automated logistics, research, link gates, profit, maintenance, and expansion planning.";
+  "Starminer mining and logistics guide: asteroid extraction, refining, automated production chains, research, link gates, profit optimization, and expansion planning.";
 const canonical = "/games/starminer/mining-logistics";
 
 export const metadata = createStarminerMetadata({

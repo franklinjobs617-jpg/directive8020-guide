@@ -1,5 +1,5 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import { BlufBox, RelatedGuides } from '@/components/guide-blocks';
 import { MinaArticle } from '@/components/mina-the-hollower-article';
 import {
   createMinaMetadata,
@@ -152,6 +152,21 @@ export default function MinaBeginnerGuidePage() {
           </tbody>
         </table>
       </div>
+
+      <RelatedGuides
+        guides={[
+          {
+            href: '/games/mina-the-hollower/trophy-guide',
+            title: 'Trophy Guide & 100% Completion',
+            description: 'Steam achievements, missable checks, and safe cleanup order for 100% completion.',
+          },
+          {
+            href: '/games/mina-the-hollower/is-it-worth-it',
+            title: 'Is Mina the Hollower Worth It?',
+            description: 'Buyer-focused launch advice using developer track record, genre fit, and early reviews.',
+          },
+        ]}
+      />
     </MinaArticle>
   );
 }

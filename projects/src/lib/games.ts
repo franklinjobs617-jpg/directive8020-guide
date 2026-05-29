@@ -169,7 +169,7 @@ export const thickAsThieves: GameConfig = {
   releaseDate: "2026-05-20",
   operatingSystem: "Windows 10 / Windows 11",
   url: "https://store.steampowered.com/app/3341000/Thick_As_Thieves/",
-  availability: "https://schema.org/PreOrder",
+  availability: "https://schema.org/InStock",
   heroImage: "/games/thick-as-thieves/hero.webp",
   guideLinks: [
     {
@@ -401,7 +401,7 @@ export const romestead: GameConfig = {
   releaseDate: "2026-05-25",
   operatingSystem: "Windows 10",
   url: "https://store.steampowered.com/app/1805320/Romestead/",
-  availability: "https://schema.org/PreOrder",
+  availability: "https://schema.org/InStock",
   heroImage: "/games/romestead/hero.webp",
   guideLinks: [
     {
@@ -541,7 +541,7 @@ export const minaTheHollower: GameConfig = {
   releaseDate: "2026-05-29",
   operatingSystem: "Windows 8 or later, macOS 11 or later, Linux",
   url: "https://store.steampowered.com/app/1875580/Mina_the_Hollower/",
-  availability: "https://schema.org/PreOrder",
+  availability: "https://schema.org/InStock",
   heroImage: "/games/mina-the-hollower/hero.jpg",
   guideLinks: [
     {
@@ -598,7 +598,7 @@ export const firstLight007: GameConfig = {
   releaseDate: "2026-05-27",
   operatingSystem: "Windows 10/11 64-bit, PlayStation 5",
   url: "https://store.steampowered.com/app/3768760/007_First_Light/",
-  availability: "https://schema.org/PreOrder",
+  availability: "https://schema.org/InStock",
   heroImage: "/games/007-first-light/hero.webp",
   guideLinks: [
     {
@@ -700,7 +700,7 @@ export const starminer: GameConfig = {
   releaseDate: "2026-05-27",
   operatingSystem: "Windows 10 32-bit or newer",
   url: "https://store.steampowered.com/app/1116050/Starminer/",
-  availability: "https://schema.org/PreOrder",
+  availability: "https://schema.org/InStock",
   heroImage: "/games/starminer/hero.webp",
   guideLinks: [
     {

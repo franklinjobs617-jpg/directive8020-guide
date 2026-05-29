@@ -7,9 +7,9 @@ import {
   romesteadSpecRows,
 } from '@/lib/romestead';
 
-const title = 'Romestead System Requirements: PC Specs, Steam Deck and Performance';
+const title = 'Romestead Steam Deck & System Requirements — PC Specs and Performance';
 const description =
-  'Romestead system requirements guide with official minimum and recommended PC specs, Windows 10, RAM, DirectX 11, storage, internet needs, Steam Deck cautions, and launch performance checks.';
+  'Romestead Steam Deck compatibility, official minimum and recommended PC specs, Windows 10 requirements, performance test checklist, and co-op frame pacing notes.';
 const canonical = '/games/romestead/system-requirements';
 
 export const metadata = createRomesteadMetadata({

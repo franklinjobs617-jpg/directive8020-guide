@@ -13,9 +13,9 @@ import {
   starminerStartRows,
 } from "@/lib/starminer";
 
-const title = "Starminer Guide: Release Date, Beginner Tips, Ships, Mining & Defense";
+const title = "Starminer Guide Hub — Beginner Tips, Ships, Mining & Defense";
 const description =
-  "Starminer guide hub for release date, Early Access status, beginner route, Campaign, Sandbox, Survival, ship building, mining logistics, heat, aliens, and PC specs.";
+  "Starminer Early Access guide hub: beginner tips, Campaign, Sandbox, Survival, ship building, mining logistics, heat management, alien defense, and PC specs.";
 const canonical = "/games/starminer";
 
 export const metadata = createStarminerMetadata({
