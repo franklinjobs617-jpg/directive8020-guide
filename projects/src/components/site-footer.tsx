@@ -194,6 +194,16 @@ export function SiteFooter() {
               </li>
               <li>
                 <a
+                  href="https://minathehollower.base64pro.top/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Mina the Hollower
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://ipooket.com/"
                   target="_blank"
                   rel="noopener noreferrer"
