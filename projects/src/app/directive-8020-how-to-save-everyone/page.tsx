@@ -58,19 +58,19 @@ const survivalRules = [
 ];
 
 const quickSaveRows = [
-  ['Young', 'Do not make reckless solo trust decisions; keep evidence before accusation scenes.', 'Central decision anchor.'],
-  ['Stafford', 'Avoid needless blame and track whether he refuses or helps in rescue scenes.', 'Relationship failures can become rescue failures.'],
-  ['Eisele', 'Keep witnesses and route evidence available before late suspicion checks.', 'Witness state can verify identity.'],
-  ['Cooper', 'Keep QTE and stealth outcomes clean; note every injury or separation.', 'Action failures can create delayed deaths.'],
-  ['Cernan', 'Do not isolate him after high-risk scenes until identity and location are verified.', 'Isolation is the main mimic-risk pattern.'],
+  ['Young', 'Maintain high Loyal relationship; choose Help Stafford in Episode 8 and pass the final shuttle QTEs.', 'Primary protagonist and decision maker.'],
+  ['Stafford', 'In Episode 3 cabin crash, choose Stay Seated and Buckle In; choose Help Stafford in Episode 8 chase.', 'Will die instantly if standing during crash or left behind in Ep 8.'],
+  ['Eisele', 'In Episode 6 imposter scene, choose to Test Eisele and select the newcomer as the real one.', 'Imposter test failure results in immediate death.'],
+  ['Cooper', 'Pass all Episode 4 stealth sequences and locker breath QTEs; avoid early injuries.', 'Lethal injuries in chase scenes trigger delayed deaths.'],
+  ['Cernan', 'Ensure Young de-escalates the Episode 6 Williams standoff (choose Stand Down/Lower Weapon).', 'Williams survival is required to clear Cernan\'s route dependencies.'],
 ];
 
 const survivorRows = [
-  { step: 'Young', doThis: 'Keep her informed, avoid reckless solo trust decisions, and preserve evidence before accusation scenes.', why: 'Young is a central route anchor; bad trust choices can cascade into later deaths.' },
-  { step: 'Eisele', doThis: 'Track relationship state and whether she has witnessed suspicious behavior before major branch points.', why: 'Witnesses can verify identity and unlock safer group decisions.' },
-  { step: 'Cernan', doThis: 'Avoid isolating him after high-risk scenes until identity or location is verified.', why: 'Isolation is the main mimic-risk pattern to track.' },
-  { step: 'Stafford', doThis: 'Prevent unnecessary blame and record any refusal to help another crew member.', why: 'Relationship failures can become rescue failures later.' },
-  { step: 'Cooper', doThis: 'Keep QTE and stealth outcomes clean; mark injury or separation immediately.', why: 'Mechanical failures can create delayed survival problems.' },
+  { step: 'Young', doThis: 'Build Loyal trait; choose Help Stafford in Ep 8 and succeed in detonating the oxygen tank QTE.', why: 'Young is the main shuttle pilot; her final action determines crew escape success.' },
+  { step: 'Stafford', doThis: 'Must Buckle In during Ep 3 cabin depressurization. Young must choose Help Stafford in Ep 8.', why: 'Scripted cabin impact or abandonment in the final corridor triggers instant death.' },
+  { step: 'Eisele', doThis: 'In Ep 6 imposter standoff, choose Test instead of shooting, then select the newcomer.', why: 'Choosing the wrong clone or firing prematurely causes Eisele\'s instant death.' },
+  { step: 'Cooper', doThis: 'Pass all Ep 4 stealth corridors and lockers breath QTEs without alerting the hunter.', why: 'Stealth mistakes trigger high-difficulty chases that lead to lethal injuries.' },
+  { step: 'Cernan', doThis: 'De-escalate the Ep 6 standoff with Williams by choosing Stand Down / Lower Weapon.', why: 'Williams must survive to verify Cernan\'s bio-signals and secure group trust.' },
 ];
 
 const routeMilestones = [
@@ -179,9 +179,8 @@ export default function SaveEveryonePage() {
 
           <h2>Everyone Lives Route Table</h2>
           <p>
-            This table is the working survivor map. Replace each row with exact
-            chapter choices after full capture, but keep the same structure so
-            users can scan the page quickly.
+            Use this table to trace the exact choices and requirements for each survivor.
+            Replay from the nearest Turning Point if a character dies.
           </p>
           <ActionTable rows={survivorRows} />
 

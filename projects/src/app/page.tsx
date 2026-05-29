@@ -491,7 +491,7 @@ export default function HomePage() {
             fill
             className="object-cover"
             priority
-            quality={88}
+            quality={85}
           />
           <div
             className="absolute inset-0"
@@ -589,7 +589,7 @@ export default function HomePage() {
           <div className="h-1 w-8 rounded-full bg-d8020" />
           <div>
             <h2 className="text-xl font-bold text-foreground">Trending Search Answers</h2>
-            <p className="mt-1 text-sm text-muted-foreground">New search demand from trophy, cast, actor, and ending-count queries.</p>
+            <p className="mt-1 text-sm text-muted-foreground">Fast answers for trophies, cast, actors, endings, and other questions players ask first.</p>
           </div>
         </div>
         <div className="grid gap-3 md:grid-cols-2">

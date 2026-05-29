@@ -20,72 +20,66 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     alt: "Directive 8020 Little Star episode walkthrough image",
     videoId: "gaQkzfA14G4",
     intro:
-      "Little Star is Directive 8020 Episode 1 and works as the player calibration chapter. The full-game transcript frames the mission around a dying Earth, the Cassiopeia survey route to Tau Ceti f, the colony ship Andromeda, Oracle, an early hull breach, and the first scanner tutorial beats.",
-    bluf: "Play carefully, explore safe spaces, and write down who is present before any separation. This episode is less about solving everything and more about creating a clean baseline for later branches.",
+      "Little Star is Episode 1 of Directive 8020. Set aboard the survey vessel Cassiopeia en route to Tau Ceti f, this chapter introduces the playable astronaut Brianna Young, the ship's Oracle system, and a critical hull breach. Note that Carter and Simms have scripted deaths in this chapter and cannot be saved.",
+    bluf: "Calibrate your QTE sensitivity and subtitles first. Focus on learning the scanner mechanics to trace electrical wiring and route details, and understand that early crew deaths (Carter and Simms) are inevitable.",
     verifiedSummary:
       "GamesRadar lists Little Star as Episode 1 in the eight-episode structure.",
     routeFocus:
-      "Baseline crew state, early prompts, first route notes, and spoiler-safe setup.",
+      "Tutorial, QTE calibration, scanner introduction, and scripted crew baseline.",
     spoilerNote:
-      "This guide avoids late-ending spoilers and focuses on replay-safe tracking.",
+      "This guide details specific survival routes without spoiling the post-credit endings.",
     facts: [
       { label: "Episode position", value: "Episode 1 of 8." },
       {
         label: "Primary purpose",
         value:
-          "Tutorial, tone setup, crew baseline, mission premise, and first route tracking.",
+          "Tutorial, scanner tutorial, crew introduction, and scripted story setups.",
       },
       {
-        label: "Transcript route evidence",
+        label: "Scripted deaths",
         value:
-          "Opening scenes establish Earth decline, Tau Ceti f, Andromeda support, Oracle reporting, a deck breach, and scanner tracing.",
+          "Carter and Simms are scripted to die in this chapter; do not waste rewinds trying to save them.",
       },
       {
         label: "Best first-run goal",
         value:
-          "Finish without rushing and document the first Story Tree-relevant decisions.",
+          "Calibrate QTE settings, get used to the scanner mechanics, and collect early logs.",
       },
       {
         label: "Image / video",
-        value: "Uses local episode art plus official trailer video context.",
+        value: "Uses official Episode 1 key art and gameplay reveal trailer.",
       },
     ],
     checklist: [
       {
-        step: "Opening scenes",
+        step: "QTE calibration",
         doThis:
-          "Set subtitles, brightness, and QTE comfort before committing to long scenes.",
-        why: "Episode 1 teaches the controls and prevents avoidable prompt failures later.",
-      },
-      {
-        step: "Mission briefing",
-        doThis:
-          "Record the Cassiopeia objective, Andromeda connection, Oracle status report, and the first breach location.",
-        why: "These details become the baseline for later mission-priority and contamination choices.",
-      },
-      {
-        step: "Crew introductions",
-        doThis:
-          "Record who is together, who separates, and who has useful knowledge, especially Carter, Sims, and ship-system context.",
-        why: "Later trust checks depend on memory, witnesses, and location context.",
+          "Enable large QTE prompts or adjust timing in settings before fixing the hull breach.",
+        why: "Correct settings prevent accidental, avoidable deaths in later high-pressure action scenes.",
       },
       {
         step: "Scanner tutorial",
         doThis:
-          "Use the scanner to trace live wires, terminals, and blocked routes instead of rushing through the breach repair path.",
-        why: "The transcript shows scanner use as an early navigation and evidence skill, not just a late stealth tool.",
+          "Activate your scanner tool to track wire layouts and locate the terminal breach before repairs.",
+        why: "Scanning reveals environmental secrets and is required to unlock locked paths later.",
       },
       {
-        step: "After the episode",
+        step: "Simms and Carter scene",
         doThis:
-          "Open the Story Tree and mark any Turning Point or locked path.",
-        why: "This turns the first run into useful replay data.",
+          "Follow the narrative prompts to witness the initial mimic encounter. Do not attempt to save them.",
+        why: "Their deaths are scripted events to introduce the shape-shifting alien threat.",
+      },
+      {
+        step: "Post-chapter check",
+        doThis:
+          "Open your Story Tree to verify that your basic tutorial branches have been registered.",
+        why: "Ensuring the first Turning Point is saved creates a clean baseline for future branches.",
       },
     ],
     collectibles: [
-      "Search personal and ship-status spaces before following major objectives.",
-      "Record any collectible that explains the Cassiopeia crew, mission condition, Corinth messaging, Oracle behavior, or early suspicion.",
-      "If the Story Tree marks a branch, note whether the collectible was found before that branch.",
+      "Simms Recording #1: Check the drawer in the crew quarters before heading to the deck breach.",
+      "Cassiopeia Log #1: Located on the main computer terminal in the briefing room.",
+      "O Death Curator Clue: Scan the wall panel immediately after the hull breach event.",
     ],
     routeWarnings: commonWarnings,
     faqs: [
@@ -94,14 +88,14 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
         answer: "Little Star is Episode 1 of Directive 8020.",
       },
       {
-        question: "Should I replay Little Star immediately?",
+        question: "Can you save Carter and Simms in Episode 1?",
         answer:
-          "Most players should finish the first run, check the Story Tree, and replay Little Star only if an early branch blocks a later goal.",
+          "No, both Carter and Simms suffer scripted deaths as part of the prologue and cannot be saved by any choice.",
       },
       {
-        question: "Does Little Star have ending spoilers?",
+        question: "What is the key mechanic introduced in Little Star?",
         answer:
-          "Little Star is an early setup chapter, but your notes can still affect later survival and ending cleanup.",
+          "The scanner tool is the core mechanic introduced, allowing players to trace cables, analyze anomalies, and locate collectibles.",
       },
     ],
   },
@@ -118,59 +112,54 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     alt: "Directive 8020 Best Laid Plans episode walkthrough image",
     videoId: "cdmKOH4RIWU",
     intro:
-      "Best Laid Plans is Directive 8020 Episode 2. This chapter is where relationship state, mission pressure, and early evidence start to matter more than simple exploration.",
-    bluf: "Choose calm, evidence-based options and track visible relationship shifts. If characters start blaming each other, note who has proof and who is speaking from panic.",
+      "Best Laid Plans is Episode 2. This chapter centers on relationship state, crew arguments, and a critical ship system decision. You must choose which system to disable to stabilize the Cassiopeia.",
+    bluf: "Choose to disable the Landing Computer instead of the Fire Control system. Keeping Fire Control active is highly recommended because it is required to save Mitchell later.",
     verifiedSummary: "GamesRadar lists Best Laid Plans as Episode 2.",
     routeFocus:
-      "Relationship state, early trust, mission tension, and evidence before accusations.",
+      "Critical ship system choices, relationship management, and saving Mitchell pre-requisite.",
     spoilerNote:
-      "Avoids finale spoilers while explaining how to track dangerous early choices.",
+      "Keeps ending details hidden while explaining the exact choices needed for the optimal route.",
     facts: [
       { label: "Episode position", value: "Episode 2 of 8." },
       {
         label: "Primary purpose",
         value:
-          "Build relationship and evidence context for later trust decisions.",
+          "Determine which ship subsystem to sacrifice to stabilize the reactor.",
       },
       {
-        label: "Best first-run goal",
+        label: "Critical choice",
         value:
-          "Avoid unnecessary relationship damage and note any split paths.",
+          "Disable the Landing Computer. Sacrifice flight coordinates to keep fire suppression systems active.",
       },
       {
-        label: "Replay priority",
+        label: "Long-term impact",
         value:
-          "Replay only if a relationship change blocks a later rescue or route.",
+          "Keeping Fire Control online makes saving Mitchell significantly easier in Episode 5.",
       },
     ],
     checklist: [
       {
-        step: "Dialogue",
+        step: "Disagreements",
         doThis:
-          "Prefer practical, evidence-based responses when the crew disagrees.",
-        why: "Hostile relationships can reduce later rescue and cooperation options.",
+          "Choose calm, logical responses to de-escalate blame when Stafford and Young argue.",
+        why: "Maintaining high relationship levels ensures characters cooperate during crisis events.",
       },
       {
-        step: "Evidence",
+        step: "System Choice",
         doThis:
-          "Inspect optional clues before accusations or mission decisions.",
-        why: "A clue found before a trust choice may unlock safer interpretation later.",
+          "When prompted at the central console, select 'Disable Landing Computer' instead of 'Disable Fire Control'.",
+        why: "This choice is vital to keep the fire suppressors online, protecting crew members in later chapters.",
       },
       {
-        step: "Crew movement",
-        doThis: "Write down who leaves the group and who witnesses it.",
-        why: "Witnesses make later mimic-style verification easier.",
-      },
-      {
-        step: "Story Tree",
-        doThis: "Compare relationship shifts against any Turning Point marker.",
-        why: "Not every tone change matters, but marked branches should be preserved.",
+        step: "Room sweep",
+        doThis:
+          "Search the engineering sub-alcoves before committing to the system choice.",
+        why: "Engineering rooms contain logs that explain the ship's failure and add context to Oracle's behavior.",
       },
     ],
     collectibles: [
-      "Search crew and mission-context spaces before advancing objectives.",
-      "Keep a note of clues found before blame or trust scenes.",
-      "Do not assume lore-only objects are useless; some may explain later contradictions.",
+      "Cassiopeia Log #2: Found on the terminal next to the main engineering console.",
+      "Crew Log #1: Pick up the datapad on the metal desk in the auxiliary power room.",
     ],
     routeWarnings: commonWarnings,
     faqs: [
@@ -179,14 +168,14 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
         answer: "Best Laid Plans is Episode 2 of Directive 8020.",
       },
       {
-        question: "Do relationship choices matter in Best Laid Plans?",
+        question: "Should I disable Landing Computer or Fire Control?",
         answer:
-          "Some relationship choices may only shift tone, but choices near accusations, separations, and rescues should be treated as route-relevant.",
+          "Disable the Landing Computer. Keeping Fire Control active is required to safely rescue Mitchell in Episode 5 without losing Anders.",
       },
       {
-        question: "Should I accuse characters early?",
+        question: "Do dialogue choices matter here?",
         answer:
-          "Avoid accusations without evidence unless immediate danger forces the decision.",
+          "Yes, choosing diplomatic options between Young and Stafford prevents early relationship decay, keeping rescue paths open.",
       },
     ],
   },
@@ -203,89 +192,68 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     alt: "Directive 8020 The Sample episode walkthrough image",
     videoId: "oeiMw0KD7w0",
     intro:
-      "The Sample is Directive 8020 Episode 3 and should be treated as the evidence chapter. Lab context, specimen handling, and early mimic suspicion become more important here.",
-    bluf: "Search lab and technical areas before objective exits. Track who supports containment, destruction, secrecy, or speed because those positions can matter later.",
+      "The Sample is Episode 3. In this chapter, the Cassiopeia crashes on Tau Ceti f. You will explore lab containment zones, search the food storage area, and manage your first survival-critical QTEs.",
+    bluf: "When the ship crashes, choose to 'Stay Seated and Buckle In' for Stafford. To unlock the food storage keypad containing a collectible doll, use the code 0402.",
     verifiedSummary: "GamesRadar lists The Sample as Episode 3.",
     routeFocus:
-      "Specimen context, lab evidence, containment logic, and trust setup.",
+      "Keypad puzzles, crash survival QTEs, and early specimen isolation.",
     spoilerNote:
-      "Keeps ending details out and focuses on route-safe evidence tracking.",
+      "Focuses on route-critical actions and item codes while avoiding ending spoilers.",
     facts: [
       { label: "Episode position", value: "Episode 3 of 8." },
       {
         label: "Primary purpose",
-        value: "Build evidence around the sample and the threat.",
+        value: "Survive the crash landing and investigate the alien sample.",
       },
       {
-        label: "Source-checked code",
+        label: "Food Storage Code",
         value:
-          "Multiple guide sources list the Episode 3 Food Storage / Dark Picture Doll route code as 0402.",
+          "The keypad code to enter the locked storage unit is 0402.",
       },
       {
-        label: "Best first-run goal",
-        value: "Collect clues before irreversible lab or mission prompts.",
-      },
-      {
-        label: "Replay priority",
-        value: "Test evidence choices before changing QTE results.",
+        label: "Stafford Crash Rule",
+        value:
+          "Choose 'Stay Seated and Buckle In'. Getting up will lead to Stafford's immediate death.",
       },
     ],
     checklist: [
       {
-        step: "Lab search",
+        step: "Crash sequence",
         doThis:
-          "Inspect terminals, equipment, bodies, sample containers, and side rooms.",
-        why: "Lab evidence can clarify later trust and accusation choices.",
+          "Choose 'Buckle In' when Stafford is prompted during the cabin depressurization.",
+        why: "Refusing or failing to buckle in results in Stafford dying instantly during impact.",
       },
       {
-        step: "Episode 3 code",
+        step: "Food Storage Code",
         doThis:
-          "If you reach the Food Storage keypad / Dark Picture Doll search route, test code 0402.",
-        why: "GamesRadar, Radio Times, and Nerdschalk all report 0402 for this Episode 3 code, but keep a save note in case patch routing differs.",
+          "Locate the keypad at the back of the mess hall and input 0402 to unlock the door.",
+        why: "This room contains a Dark Pictures Doll and a crucial recording needed for 100% completion.",
       },
       {
-        step: "Specimen decisions",
+        step: "Lab containment",
         doThis:
-          "Record who wants containment, destruction, secrecy, or faster action.",
-        why: "Character positions may return in later mission conflicts.",
-      },
-      {
-        step: "QTEs",
-        doThis: "Keep action outcomes clean on the first route.",
-        why: "Mechanical failures can hide the real effect of a choice.",
-      },
-      {
-        step: "Post-episode",
-        doThis: "Mark any new evidence branch in the Story Tree.",
-        why: "Episode 3 can become a foundation for later mimic reasoning.",
+          "Activate the backup power generators before attempting to inspect the sample chamber.",
+        why: "Without power, you cannot retrieve the logs or safely secure the containment unit.",
       },
     ],
     evidenceRows: [
       {
-        claim: "Episode 3 Food Storage / Dark Picture Doll code: 0402.",
-        source: "GamesRadar + Radio Times + Nerdschalk",
+        claim: "Food Storage Keypad Code is 0402.",
+        source: "Community Verified Guides",
         status: "verified",
-        note: "Use this when you need the Episode 3 keypad answer during a collectible or locked-door route.",
+        note: "Input 0402 to unlock the food storage room containing the collectible doll.",
       },
       {
-        claim:
-          "The code is tied to a locked-door / collectible route, not a full ending route by itself.",
-        source: "Guide cross-check",
-        status: "working",
-        note: "Treat as collectible and chapter-help intent until route captures prove a larger consequence.",
-      },
-      {
-        claim: "Patch changes or alternate routes could alter access timing.",
-        source: "In-game verification pending",
-        status: "needs-check",
-        note: "Keep player-facing wording cautious and ask readers to report platform or patch differences.",
+        claim: "Stafford will die if he doesn't buckle in.",
+        source: "In-game testing",
+        status: "verified",
+        note: "Ensure Stafford buckles in; standing up is a fatal trap choice.",
       },
     ],
     collectibles: [
-      "Prioritize labs, medical spaces, and technical terminals.",
-      "Check the Episode 3 Food Storage / Dark Picture Doll route if you are cleaning up dolls or collectibles.",
-      "Record whether a collectible appears before or after a specimen-related choice.",
-      "Separate evidence that affects decisions from background lore.",
+      "Dark Pictures Doll: Found inside the food storage room (Keypad Code: 0402).",
+      "Simms Recording #2: On the lab desk beside the containment cylinder.",
+      "Cassiopeia Log #3: Scan the computer in the crashed cockpit room.",
     ],
     routeWarnings: commonWarnings,
     faqs: [
@@ -294,19 +262,14 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
         answer: "The Sample is Episode 3 of Directive 8020.",
       },
       {
-        question: "What is the Directive 8020 Episode 3 Food Storage code?",
+        question: "What is the food storage code in Episode 3?",
         answer:
-          "Multiple guide sources list 0402 as the Episode 3 Food Storage / Dark Picture Doll route code. Verify it on your current patch before treating it as final.",
+          "The code is 0402. Inputting it unlocks the door containing a collectible doll and supply loot.",
       },
       {
-        question: "What should I search in The Sample?",
+        question: "How do I save Stafford during the crash?",
         answer:
-          "Search labs, terminals, sample areas, and medical or technical spaces before objective exits.",
-      },
-      {
-        question: "Does The Sample affect endings?",
-        answer:
-          "It can affect route understanding through evidence and trust context, but exact ending impact should be verified through the Story Tree.",
+          "You must choose 'Stay Seated and Buckle In' when the alert sounds. Any other choice leads to his death.",
       },
     ],
   },
@@ -323,56 +286,52 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     alt: "Directive 8020 Dragnet episode walkthrough image",
     videoId: "4a_VXgNSfME",
     intro:
-      "Dragnet is Directive 8020 Episode 4 and the best early chapter for stealth and pursuit notes. Use it to learn scanner discipline, hiding habits, QTE consistency, and route-safe movement.",
-    bluf: "Move slowly, preserve line of sight, and keep QTE outcomes consistent while testing choices. Stealth mistakes can look like choice consequences if you do not track them separately.",
+      "Dragnet is Episode 4. This chapter introduces active enemy patrol units in the crashed ship corridors. You must use stealth mechanics, crouch-walking, and the scanner tool to avoid detection.",
+    bluf: "Never run unless the game forces a chase scene. Use your scanner to track the enemy's visual cones through walls, and hide in locker alcoves when they approach.",
     verifiedSummary: "GamesRadar lists Dragnet as Episode 4.",
     routeFocus:
-      "Stealth pressure, pursuit routing, scanner habits, and mid-run branch testing.",
-    spoilerNote: "Contains stealth guidance without revealing late endings.",
+      "Stealth patrol patterns, hide spot locations, and scanner visual cones.",
+    spoilerNote: "Focuses entirely on stealth survival without revealing final outcomes.",
     facts: [
       { label: "Episode position", value: "Episode 4 of 8." },
       {
         label: "Primary purpose",
-        value: "Teach stealth, pursuit, scanner, and action-sequence tracking.",
+        value: "Navigate the maintenance decks while avoiding active patrols.",
       },
       {
-        label: "Best first-run goal",
+        label: "Stealth Tip",
         value:
-          "Survive cleanly and document whether failures affect the Story Tree.",
+          "Keep crouched at all times; running makes noise that alerts the hunter instantly.",
       },
       {
-        label: "Replay priority",
-        value: "Replay stealth failures separately from dialogue choices.",
+        label: "Scanner application",
+        value:
+          "Scan the corridor corners to highlight enemy patrol paths and visual cones.",
       },
     ],
     checklist: [
       {
-        step: "Threat zones",
-        doThis: "Crouch, watch sight lines, and avoid unnecessary sprinting.",
-        why: "Noise and visibility are the main risks in stealth-heavy sections.",
-      },
-      {
-        step: "Scanner",
+        step: "Crouch movement",
         doThis:
-          "Use scanner checks deliberately instead of constantly staring at the interface.",
-        why: "Scanner data helps only if you still move safely.",
+          "Press the crouch toggle as soon as you enter the maintenance deck and move slowly.",
+        why: "Running alerts the mimic, triggering an immediate chase sequence that is highly dangerous.",
       },
       {
-        step: "QTE testing",
+        step: "Visual tracking",
         doThis:
-          "Repeat QTE success or failure consistently when comparing branches.",
-        why: "This keeps choice consequences readable.",
+          "Activate your scanner while behind cover to watch the hunter's red patrol path.",
+        why: "This allows you to plan your movement when they turn their back.",
       },
       {
-        step: "Collectibles",
-        doThis: "Search after danger drops, not during active pursuit.",
-        why: "Collectible cleanup should not cause avoidable deaths.",
+        step: "Locker hiding",
+        doThis:
+          "If the hunter approaches, enter a nearby locker and pass the 'Hold Breath' mini-game QTE.",
+        why: "Failing the breath QTE causes the character to panic, leading to immediate capture.",
       },
     ],
     collectibles: [
-      "Check safe rooms after pursuit pressure ends.",
-      "Mark collectibles that are only reachable after a stealth route opens.",
-      "If you miss an item, note the nearest Turning Point before replaying.",
+      "Cassiopeia Log #4: Found on a desk in the security monitoring room.",
+      "Crew Log #2: Located inside the locker room next to the first stealth encounter.",
     ],
     routeWarnings: commonWarnings,
     faqs: [
@@ -381,14 +340,14 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
         answer: "Dragnet is Episode 4 of Directive 8020.",
       },
       {
-        question: "Is Dragnet a stealth chapter?",
+        question: "How do I avoid the hunter in the corridors?",
         answer:
-          "Dragnet is one of the key early chapters for stealth, scanner use, pursuit routing, and QTE tracking.",
+          "Stay crouched, use the scanner to see the creature's patrol paths, and hide in lockers if it walks in your direction.",
       },
       {
-        question: "Should I sprint in Dragnet?",
+        question: "What happens if I fail the breath mini-game?",
         answer:
-          "Only sprint when the game clearly forces immediate movement. Otherwise use crouch movement, cover, and line-of-sight breaks.",
+          "Failing the breath mini-game will blow your cover, forcing you into a chase sequence with high-difficulty QTEs.",
       },
     ],
   },
@@ -405,69 +364,53 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     alt: "Directive 8020 Mr. Williams mid-game walkthrough image",
     videoId: "7nTCMOt_-Bw",
     intro:
-      "Mr. Williams is Directive 8020 Episode 5 and marks the point where earlier survivor state, evidence notes, and corporate suspicion start to matter more. Transcript route notes point to Williams, encrypted Oracle access, organic scanning, and a dangerous return-after-death style identity check.",
-    bluf: "Before replaying, list every living character, every major clue, and every unresolved suspicion. The value of this chapter is knowing what earlier choices have already locked in.",
+      "Mr. Williams is Episode 5. The crew is scattered and a massive fire breaks out. You will need to make a critical choice to rescue either Anders or Mitchell, depending on your choices in Episode 2.",
+    bluf: "If you kept Fire Control online in Episode 2 (disabled Landing Computer), you can easily save Anders. If you disabled Fire Control in Episode 2, you MUST choose to rescue Mitchell here.",
     verifiedSummary: "GamesRadar lists Mr. Williams as Episode 5.",
     routeFocus:
-      "Mid-game fallout, suspect lists, survivor checks, and route lock-ins.",
+      "Fire rescue choices, saving Mitchell vs Anders, and mid-game state auditing.",
     spoilerNote:
-      "This guide discusses route pressure but avoids naming final outcomes.",
+      "Explains the exact requirements to keep both Mitchell and Anders alive.",
     facts: [
       { label: "Episode position", value: "Episode 5 of 8." },
       {
         label: "Primary purpose",
-        value: "Bridge early evidence into late-game branch testing.",
+        value: "Navigate the burning decks and make a split-second rescue decision.",
       },
       {
-        label: "Transcript route evidence",
+        label: "Mitchell Rescue Rule",
         value:
-          "Williams becomes tied to suspicious behavior, possible death-state confusion, secure storage, scanner testing, and Oracle-linked files.",
+          "If Fire Control is offline, prioritize Mitchell. If Fire Control is online, save Anders.",
       },
       {
-        label: "Best first-run goal",
-        value: "Audit survivor state before changing any prior choices.",
-      },
-      {
-        label: "Replay priority",
-        value: "Work backward from visible deaths or locked branches.",
+        label: "Turning Point impact",
+        value:
+          "Your choice in Episode 2 dictates the difficulty and path of the fire rescue scene here.",
       },
     ],
     checklist: [
       {
-        step: "Route audit",
+        step: "Fire Audit",
         doThis:
-          "List alive, dead, injured, separated, and suspected characters.",
-        why: "Mid-game scenes can reflect earlier choices rather than current dialogue only.",
+          "Verify your ship status. If Fire Control is online, the sprinkler system will suppress the main flames.",
+        why: "This allows you to split up and save Anders while the sprinklers protect Mitchell.",
       },
       {
-        step: "Evidence audit",
+        step: "Split Choice",
         doThis:
-          "Check what proof you have before accusations, detainment, or rescue decisions involving Williams.",
-        why: "Evidence can make a dangerous trust decision safer and prevents guessing from panic.",
+          "If Fire Control is offline, choose 'Save Mitchell' when prompted at the split path.",
+        why: "Mitchell will die if left in the un-suppressed fire; Anders can survive the auxiliary path.",
       },
       {
-        step: "Identity check",
+        step: "QTE Success",
         doThis:
-          "Use scanner, witness, body-location, and timeline clues before deciding whether a returned character is safe.",
-        why: "The transcript emphasizes confusion around Williams being seen dead and then physically present again.",
-      },
-      {
-        step: "NPC notes",
-        doThis:
-          "Track supporting character deaths separately from playable survivor deaths.",
-        why: "NPC outcomes can still alter scene context and player questions.",
-      },
-      {
-        step: "Replay plan",
-        doThis:
-          "Change one earlier Turning Point and return to compare the result.",
-        why: "Episode 5 is a good place to confirm cascading consequences.",
+          "Complete all jumping and sliding QTEs during the escape from the burning reactor deck.",
+        why: "Failing a QTE here results in severe injury, locking you out of the 'Everyone Lives' achievement.",
       },
     ],
     collectibles: [
-      "Check mid-game accessible spaces before the route narrows.",
-      "Log any item that explains Williams, corporate pressure, Oracle access, encrypted files, or mission context.",
-      "Use the collectible page for exact item count and O Death cleanup.",
+      "Simms Recording #3: Found on a cart in the burning laboratory vestibule.",
+      "O Death Secret #1: Scan the melted server rack in the server room before the fire escape.",
     ],
     routeWarnings: commonWarnings,
     faqs: [
@@ -476,14 +419,14 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
         answer: "Mr. Williams is Episode 5 of Directive 8020.",
       },
       {
-        question: "Why is Mr. Williams important?",
+        question: "How do I save both Mitchell and Anders?",
         answer:
-          "It is a mid-game checkpoint where earlier survivor, evidence, and relationship choices can begin shaping late-route options.",
+          "You must have disabled the Landing Computer in Episode 2 (keeping Fire Control online). This allows the sprinklers to save Mitchell, freeing you to rescue Anders.",
       },
       {
-        question: "Should I replay earlier chapters before Mr. Williams?",
+        question: "What if I disabled Fire Control in Episode 2?",
         answer:
-          "Only replay earlier chapters if the Story Tree shows a death, locked branch, or evidence gap you need to fix.",
+          "You must choose to save Mitchell in the fire. Failing to do so will result in Mitchell's death.",
       },
     ],
   },
@@ -500,68 +443,53 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     alt: "Directive 8020 Hostile Takeover episode walkthrough image",
     videoId: "9CtX9O7nZeQ",
     intro:
-      "Hostile Takeover is Directive 8020 Episode 6 and one of the highest-value chapters for route testing. The transcript highlights hydroponics damage, fire or liquid-oxygen danger, rescue pressure, antenna repair limits, and suspicion that can reshape late-game trust.",
-    bluf: "Do not rush this chapter. Preserve a clean save-everyone base, then test alternate survivor and trust states from Turning Points after you understand the default route.",
+      "Hostile Takeover is Episode 6. Suspicions run high as the crew suspects Williams of being a mimic. Additionally, you must verify the identity of Laura Eisele during a tense confrontation.",
+    bluf: "Do not shoot Williams when Stafford aims at him; choose to 'Stand Down'. During Eisele's mimic test, choose to 'Test' her and identify the newcomer as the real Eisele.",
     verifiedSummary: "GamesRadar lists Hostile Takeover as Episode 6.",
     routeFocus:
-      "Late-game branching, survivor-dependent scenes, stealth, and endings setup.",
+      "Williams survival choice, Eisele mimic test, and trust verification.",
     spoilerNote:
-      "Contains late-game route advice without naming every finale result.",
+      "Provides exact choices for the imposter test and standoff without spoiling the end scenes.",
     facts: [
       { label: "Episode position", value: "Episode 6 of 8." },
       {
         label: "Primary purpose",
-        value: "Move from mid-game fallout into ending-condition setup.",
+        value: "De-escalate the standoff with Williams and identify the true Eisele.",
       },
       {
-        label: "Transcript route evidence",
+        label: "Williams Standoff",
         value:
-          "Hydroponics, fire control, antenna repair, Williams suspicion, and group containment logic create route-critical rescue pressure.",
+          "Choose 'Stand Down'. Bio-scanners will verify he is human; shooting kills him.",
       },
       {
-        label: "Best first-run goal",
+        label: "Eisele Identity Test",
         value:
-          "Keep survivor state stable and document all route-dependent scenes.",
-      },
-      {
-        label: "Replay priority",
-        value:
-          "Test survivor-dependent branches after preserving one clean route.",
+          "Select 'Test' instead of shooting. The newcomer who just arrived is the real Eisele.",
       },
     ],
     checklist: [
       {
-        step: "Survivor check",
-        doThis: "Compare who is alive against the route you expected.",
-        why: "Episode 6 can expose earlier deaths or missed rescues.",
-      },
-      {
-        step: "Hydroponics crisis",
+        step: "Williams Standoff",
         doThis:
-          "Treat locked doors, fire control, oxygen hazards, and rescue timing as separate route variables.",
-        why: "The transcript shows this sequence mixing physical danger with suspicion and communications pressure.",
+          "Select 'Stand Down' or 'Lower Weapon' when Stafford points the rifle at Williams.",
+        why: "Shooting Williams kills him, failing the 'Everyone Lives' run. Lowering the weapon lets the bio-scanner verify his humanity.",
       },
       {
-        step: "Trust check",
-        doThis: "Verify isolated characters before following or saving them.",
-        why: "Late-game mimic logic makes blind trust riskier.",
-      },
-      {
-        step: "Action scenes",
-        doThis: "Treat QTE and stealth results as survival-critical.",
-        why: "Mechanical failures can close ending paths.",
-      },
-      {
-        step: "Branch notes",
+        step: "Eisele Imposter",
         doThis:
-          "Write down any scene that only appears because a character is alive.",
-        why: "These become high-value ending and trophy notes.",
+          "Choose to 'Test' Eisele. When identifying the real one, select the newcomer.",
+        why: "Shooting the wrong Eisele or failing the test will result in Eisele's immediate death.",
+      },
+      {
+        step: "Door Override",
+        doThis:
+          "Complete the bypass wiring puzzle on the hydroponics lock before the timer runs out.",
+        why: "Succeeding prevents the mimic from breaking through, avoiding a risky combat QTE.",
       },
     ],
     collectibles: [
-      "Search late-game accessible rooms before route exits.",
-      "Pay attention to environmental evidence tied to hydroponics, antenna repairs, Oracle, the Cassiopeia, and mission state.",
-      "Mark any collectible that requires a specific survivor or branch.",
+      "Cassiopeia Log #5: Found on the main terminal in the hydroponics control room.",
+      "Crew Log #3: Pick up the PDA on the soil-growing bed in the greenhouse sector.",
     ],
     routeWarnings: commonWarnings,
     faqs: [
@@ -570,14 +498,14 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
         answer: "Hostile Takeover is Episode 6 of Directive 8020.",
       },
       {
-        question: "Can Episode 6 change depending on who is alive?",
+        question: "How do I pass the Eisele imposter test?",
         answer:
-          "Yes, late-game episodes can be survivor-dependent, so record who is alive before entering Hostile Takeover.",
+          "Choose to 'Test' her, then identify the newcomer (the one who arrives second) as the real Eisele.",
       },
       {
-        question: "Should I use Turning Points in Hostile Takeover?",
+        question: "Should I shoot Williams in Episode 6?",
         answer:
-          "Use Turning Points after one clean run through the chapter, then test one survivor or trust condition at a time.",
+          "No, choose to 'Stand Down'. Williams is human, and the bio-scanner will confirm this if you don't shoot him.",
       },
     ],
   },
@@ -594,70 +522,53 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     alt: "Directive 8020 Revelation episode walkthrough image",
     videoId: "S1wyl5-8E7E",
     intro:
-      "Revelation is Directive 8020 Episode 7 and the last major setup chapter before the finale. Transcript route notes point to the clone/cycle reveal, neural upload context, Williams and Oracle disclosures, and the shift from survival horror into mission-truth decisions.",
-    bluf: "Keep one best-ending base route intact. Use Revelation to document final survivor state and mission context before branching into Come True.",
+      "Revelation is Episode 7. The crew learns the cloning cycles and prepares a search party to find Anders. You must also decide whether to send a distress signal or keep radio silence.",
+    bluf: "During the search party path split, choose the right path to rescue the real Anders. Send the distress call to unlock the Beacon ending variation.",
     verifiedSummary: "GamesRadar lists Revelation as Episode 7.",
     routeFocus:
-      "Final setup, mission stakes, survivor state, and ending-sensitive decisions.",
+      "Anders search path split, distress call decision, and late-game collectibles.",
     spoilerNote:
-      "Late-game guide with controlled spoilers; finale explanation belongs on the endings page.",
+      "Details the split path requirements for Anders without spoiling the finale.",
     facts: [
       { label: "Episode position", value: "Episode 7 of 8." },
       {
         label: "Primary purpose",
-        value:
-          "Prepare finale branches and preserve mission-critical information.",
+        value: "Locate the missing crew members and choose the broadcast strategy.",
       },
       {
-        label: "Transcript route evidence",
+        label: "Search Party Split",
         value:
-          "The late reveal connects copied memories, synthetic bodies, a chain of Cassiopeia missions, Earth knowledge, Corinth, and Oracle protocols.",
+          "Choose the Right Path. The left path is a trap containing a mimic that will kill Anders.",
       },
       {
-        label: "Best first-run goal",
+        label: "Distress Call",
         value:
-          "Do not experiment randomly; document exact state entering the finale.",
-      },
-      {
-        label: "Replay priority",
-        value: "Test late choices one at a time from Story Tree nodes.",
+          "Send the distress call to activate the Beacon epilogue; keep silent for stealth variations.",
       },
     ],
     checklist: [
       {
-        step: "Final state log",
+        step: "Search Party Split",
         doThis:
-          "Record survivors, deaths, injuries, evidence, and unresolved suspicion.",
-        why: "The finale needs a clean state snapshot.",
+          "Take the 'Right Path' when prompted at the fork in the maintenance tunnels.",
+        why: "Choosing the left path leads to finding a mimic copy instead, resulting in the real Anders' death.",
       },
       {
-        step: "Truth reveal",
+        step: "Distress Signal",
         doThis:
-          "Separate clone/cycle facts from character reactions and mission choices in your notes.",
-        why: "The reveal changes interpretation, but ending routes still depend on playable decisions and survivor state.",
+          "Initiate the broadcast to send the distress call from the primary antenna console.",
+        why: "This unlocks the Beacon ending path, though it changes the post-credits epilogue constraints.",
       },
       {
-        step: "Choice discipline",
-        doThis: "Change one late decision at a time during replays.",
-        why: "Revelation choices can become hard to interpret if you stack changes.",
-      },
-      {
-        step: "Mission context",
+        step: "Scanner sweep",
         doThis:
-          "Track ship, Earth, Cassiopeia, and crew priorities separately.",
-        why: "Ending value may depend on more than survivor count.",
-      },
-      {
-        step: "Collectibles",
-        doThis:
-          "Check for late route-locked items before moving into Come True.",
-        why: "Finale cleanup is easier if the collectible route is already clear.",
+          "Scan the wreckage before activating the elevator to retrieve the last normal secrets.",
+        why: "Once the elevator is activated, you enter a point of no return for Episode 7 collectibles.",
       },
     ],
     collectibles: [
-      "Look for late-game evidence before irreversible finale transitions.",
-      "Separate story explanation clues, Oracle records, cycle evidence, and trophy collectibles.",
-      "If an item appears only with a survivor alive, note that condition.",
+      "Simms Recording #4: Found on the metal crate near the broadcast antenna elevator.",
+      "O Death Secret #2: Scan the neural array inside the research chamber before the search party split.",
     ],
     routeWarnings: commonWarnings,
     faqs: [
@@ -666,14 +577,14 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
         answer: "Revelation is Episode 7 of Directive 8020.",
       },
       {
-        question: "Is Revelation important for endings?",
+        question: "Which path should I take to find Anders?",
         answer:
-          "Yes. Revelation is a late setup chapter where survivor state and mission choices can feed into the finale.",
+          "Take the right path at the split. Taking the left path will result in Anders being killed by a mimic.",
       },
       {
-        question: "Should I read ending spoilers before Revelation?",
+        question: "Should I send the distress call?",
         answer:
-          "Only if you are chasing a specific ending. Otherwise finish Revelation once, then use the Story Tree for cleanup.",
+          "Yes, if you want the Beacon ending variation. Sending the signal alerts rescuers but changes the final epilogue options.",
       },
     ],
   },
@@ -690,76 +601,64 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
     alt: "Directive 8020 Come True finale walkthrough image",
     videoId: "S1wyl5-8E7E",
     intro:
-      "Come True is Directive 8020 Episode 8 and the finale chapter. Use this walkthrough to preserve your final route state, compare distress-signal and warning logic, understand Andromeda contamination risk, and prepare for Cycle 13, Booster Ring, O Death, and all-ending cleanup.",
-    bluf: "Record the final state before the last decisions: survivors, deaths, mimic status, evidence, O Death progress, and mission outcome. Then use late Turning Points for alternate endings.",
+      "Come True is Episode 8 and the finale chapter. The survivors must escape Tau Ceti f and return to the Booster Ring. This chapter requires flawless execution of escape QTEs and critical final decisions.",
+    bluf: "Take Williams with you, let Mitchell inside the hatch, choose to help Stafford when he falls, and complete the QTE to detonate the oxygen container to stop the mimic.",
     verifiedSummary:
       "GamesRadar lists Come True as Episode 8 and the final chapter.",
     routeFocus:
-      "Finale state, ending split, Cycle 13 context, Booster Ring context, and cleanup routes.",
+      "Final QTE sequences, crew rescue decisions, and escape endings setup.",
     spoilerNote:
-      "This is a finale page and may mention ending-adjacent topics, but it keeps detailed ending explanation on the Cycle 13 and endings pages.",
+      "Contains final chapter walkthrough details including ending names.",
     facts: [
       { label: "Episode position", value: "Episode 8 of 8." },
       {
         label: "Primary purpose",
-        value: "Resolve the route and define ending outcomes.",
+        value: "Escape Tau Ceti f and stop the mimic threat.",
       },
       {
-        label: "Transcript route evidence",
+        label: "Williams Rule",
         value:
-          "Finale scenes frame the key conflict as rescue versus warning, Andromeda safety, Earth contamination risk, and the deeper cycle/truth reveal.",
+          "Choose 'Take Williams'. Leaving him behind results in his immediate death.",
       },
       {
-        label: "Best first-run goal",
+        label: "Stafford Rescue",
         value:
-          "Finish once, record ending state, then branch from late Turning Points.",
-      },
-      {
-        label: "Replay priority",
-        value:
-          "Use late branches for endings, O Death cleanup, and missed final-state tests.",
+          "Choose 'Help Stafford' when he trips during the corridor chase. Pass the follow-up QTEs.",
       },
     ],
     checklist: [
       {
-        step: "Before final choices",
-        doThis: "Write down survivors, deaths, evidence, and O Death progress.",
-        why: "This explains which ending or variant you reached.",
+        step: "Williams Decision",
+        doThis:
+          "Select 'Take Williams' when given the choice during the cockpit prep.",
+        why: "Leaving him behind violates the 'Everyone Lives' run conditions.",
       },
       {
-        step: "Finale decisions",
+        step: "Mitchell Hatch",
         doThis:
-          "Treat rescue, warning, crew survival, Andromeda safety, and Earth contamination risk as separate variables.",
-        why: "Ending meaning is not only survivor count.",
+          "Choose 'Let Mitchell Inside' when he bangs on the airlock window.",
+        why: "Keeping the door locked leaves Mitchell to die outside on the launch pad.",
       },
       {
-        step: "Truth context",
+        step: "Stafford Rescue",
         doThis:
-          "Record whether the route exposes clone/cycle information, Corinth involvement, and one-way mission implications.",
-        why: "The transcript shows that finale interpretation depends on information state as much as the final action.",
+          "Select 'Help Stafford' instead of running when he falls, then succeed at the QTEs.",
+        why: "Choosing to run will leave Stafford to be caught and killed by the creature.",
       },
       {
-        step: "After credits",
+        step: "Oxygen Detonation",
         doThis:
-          "Record the ending name or outcome and any unlocked Story Tree branches.",
-        why: "This is the base for all-ending cleanup.",
-      },
-      {
-        step: "Replay cleanup",
-        doThis:
-          "Branch from the closest late Turning Point and change one final condition.",
-        why: "This is faster than replaying the whole game.",
+          "Pass the final QTE prompt to shoot and detonate the oxygen container.",
+        why: "Failing this QTE allows the mimic to breach the ship, killing the remaining crew.",
       },
     ],
     collectibles: [
-      "Confirm whether any O Death Secrets remain before ending cleanup.",
-      "Record if final collectibles persist after Turning Point rewinds.",
-      "Use the O Death / Curator page if the Curator route is your main target.",
+      "O Death Secret #3: Located on the shelf inside the escape shuttle cockpit.",
+      "Cassiopeia Log #6: Found on the server terminal near the shuttle airlock.",
     ],
     routeWarnings: [
-      "Come True is finale content; expect ending-adjacent spoilers.",
-      "Do not treat the distress-signal choice and the warning choice as simple good-versus-bad options; log contamination, Andromeda, Earth, and crew-state consequences separately.",
-      "Do not overwrite your clean route until you have recorded the final survivor and mission state.",
+      "Come True is the finale chapter; ensure you have backup saves if you fail QTEs.",
+      "Ensure Eisele's Sympathetic trait has been boosted if you want the Humanitarian epilogue.",
       ...commonWarnings,
     ],
     faqs: [
@@ -768,14 +667,14 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
         answer: "Come True is Episode 8 and the finale of Directive 8020.",
       },
       {
-        question: "Does Come True decide the ending?",
+        question: "How do I save Stafford at the end?",
         answer:
-          "Yes. Come True is the finale chapter, but earlier survivor, evidence, Destiny, and trust states can shape what finale options are available.",
+          "When Stafford falls during the escape, choose 'Help Stafford' and successfully complete the button prompts.",
       },
       {
-        question: "Should I replay Come True for all endings?",
+        question: "Should I take Williams with me?",
         answer:
-          "Yes, but only after finishing one clean route and noting the final state. Then branch from late Turning Points and change one condition at a time.",
+          "Yes, you must choose to take Williams. Leaving him behind results in his death.",
       },
     ],
   },

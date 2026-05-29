@@ -165,7 +165,7 @@ export const mechanicusIIWorthRows = [
 ];
 
 export const mechanicusIIReviewConcernRows = [
-  ['Performance or optimization', 'Check the performance page if your PC is near minimum specs, you use handheld, or you are sensitive to frame pacing.'],
+  ['Performance settings', 'Check the performance page if your PC is near minimum specs, you use handheld, or you are sensitive to frame pacing.'],
   ['Comparison with Mechanicus 1', 'The sequel has clearer leaders, dual campaigns, and new presentation, but not every returning player wants those changes.'],
   ['Customization depth', 'If cohort customization was your favorite part of the first game, read reviews carefully before buying.'],
   ['Mission structure', 'Expect story-driven tactical missions and campaign choices rather than a fully open, endlessly random strategy layer.'],

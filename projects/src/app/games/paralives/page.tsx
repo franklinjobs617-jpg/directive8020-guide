@@ -139,7 +139,7 @@ export default function ParalivesHubPage() {
         <ArticleImage
           src={paralivesImages.build}
           alt="Paralives build mode grid-less home building screenshot"
-          caption="Paralives search demand is centered on practical launch questions: build freedom, Paramaker tools, Mac support, Deck testing, Workshop content, and Early Access roadmap limits."
+          caption="Start with the practical launch questions: build freedom, Paramaker tools, Mac support, Deck testing, Workshop content, and Early Access roadmap limits."
         />
         <p>
           Paralives is strongest when you approach it as a customization-heavy

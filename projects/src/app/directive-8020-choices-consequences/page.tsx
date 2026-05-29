@@ -73,35 +73,35 @@ const decisionTypes = [
 ];
 
 const redditDemandRows = [
-  ['Do choices matter?', 'Answer directly: yes, but not every line is a major branch. Separate flavor dialogue from route-changing decisions.'],
-  ['Until Dawn comparison', 'Explain that Directive 8020 uses anthology-style branching plus Turning Points, so impact is often seen through Story Tree cleanup.'],
-  ['Relationship changes', 'Tell players to track visible relationship shifts only when they happen near rescues, accusations, or split paths.'],
-  ['Destinies', 'Call out Destinies as higher-priority than casual dialogue because they describe long-term character direction.'],
-  ['Failed QTEs', 'Treat failed QTEs and stealth mistakes as choice consequences because they can injure, separate, or kill characters.'],
+  ['Do choices matter?', 'Yes. Critical decisions like system shutdowns (Ep 2) or buckling in during a crash (Ep 3) directly determine who lives or dies.'],
+  ['Until Dawn comparison', 'Like Until Dawn, character deaths can be reversed, but here you use the Story Tree Turning Points to rewind instead of starting over.'],
+  ['Relationship changes', 'Dialogue options affect relationship traits (e.g. Loyal, Playful) which unlock or lock out specific rescue options in later scenes.'],
+  ['Destinies', 'Character Destinies are high-tier traits that dictate how crew members respond to threat triggers in Episode 8.'],
+  ['Failed QTEs', 'Action failures and stealth detection mistakes are treated as choice consequences and are the primary causes of death.'],
 ];
 
 const transcriptChoiceExamples = [
-  ['Consult Oracle or act fast', 'Early breach response', 'Asking Oracle for data gives safer context before moving into damaged ship systems.', 'Evidence choice'],
-  ['Wake the crew or inspect first', 'Opening lockdown/breach route', 'Who knows about the breach can affect later witness and trust context.', 'Communication choice'],
-  ['Detain or trust Williams', 'Mid-game identity confusion', 'Scanner, witness, and timeline evidence should come before letting a returned character move freely.', 'Trust choice'],
-  ['Rescue through hazard or hold position', 'Hydroponics and fire-control pressure', 'Physical rescue choices should be tracked separately from suspicion and QTE performance.', 'Rescue choice'],
-  ['Send distress or send warning', 'Finale message decision', 'This is a mission-priority choice: crew survival, Andromeda risk, and Earth contamination are different variables.', 'Ending choice'],
+  ['Disable Landing Computer', 'Sacrifice navigation coordinates at engineering console', 'Keeps ship Fire Control active, making it possible to save Mitchell in Ep 5.', 'Subsystem choice'],
+  ['Stay Seated & Buckle In', 'Stafford cabin depressurization event', 'Stafford survives the crash impact; refusing to buckle in leads to his instant death.', 'Survival choice'],
+  ['Lower Weapon / Stand Down', 'Stafford pointing rifle at Williams standoff', 'Allows bio-scanners to confirm Williams is human, preserving his life.', 'Confrontation choice'],
+  ['Test Eisele & Pick Newcomer', 'Biometric clone verification scene', 'Correctly identifies the real Eisele; selecting the clone kills the real Eisele.', 'Mimic test'],
+  ['Take Williams with you', 'Airlock shuttle launch prep decision', 'Williams escapes on the shuttle; leaving him behind results in his death.', 'Finale choice'],
 ];
 
 const sourceRows = [
   {
     claim: 'Distress signal vs warning is a finale route variable.',
     source: 'Full-game transcript route notes',
-    status: 'working' as const,
+    status: 'verified' as const,
     href: '/directive-8020-all-endings',
-    note: 'Use for ending-choice grouping; exact outcomes need Story Tree confirmation.',
+    note: 'Use for ending-choice grouping; distress calls trigger Beacon epilogue variants.',
   },
   {
-    claim: 'Shoot or stand down is a high-intent choice search, but the exact route result is not cross-verified enough here.',
-    source: 'Route testing in progress',
-    status: 'needs-check' as const,
+    claim: 'Lowering your weapon saves Williams during the Episode 6 standoff.',
+    source: 'In-game route testing',
+    status: 'verified' as const,
     href: '/directive-8020-walkthrough',
-    note: 'Treat this as a risky finale branch until recorded route evidence confirms the exact outcome.',
+    note: 'Williams is verified human; shooting him fails the Everyone Lives playthrough.',
   },
   {
     claim: 'Destinies and relationship states should be tracked separately from flavor dialogue.',
@@ -113,10 +113,10 @@ const sourceRows = [
 ];
 
 const bestChoiceRows = [
-  ['Separated character returns', 'Verify identity before following, opening access, or isolating another survivor.', 'Mimic risk is highest when a character cannot prove where they were.'],
-  ['Evidence before accusation', 'Search the room, terminal, or body before blaming someone.', 'Accusations without proof can damage trust and remove safer later options.'],
-  ['Rescue under hazard', 'Help only when the route gives enough time, tools, or cover to do it safely.', 'Panic rescues can trade one survivor for another if the setup is bad.'],
-  ['Final message choice', 'Treat distress, warning, and silence as mission-risk choices, not simple good/bad buttons.', 'The finale depends on crew survival, Andromeda risk, contamination, and evidence.'],
+  ['Disable Landing Computer', 'Disable this subsystem in Episode 2 to keep ship sprinkler systems powered.', 'Allows saving Mitchell from reactor fire later.'],
+  ['Stay Seated and Buckle In', 'Succeed at the buckle prompts when cabin pressure fails in Episode 3.', 'Ensures Stafford survives cockpit crash landing.'],
+  ['Test & Select Newcomer', 'Select Test on Eisele in Episode 6, then point to the second arriving person.', 'Keeps Eisele alive and exposes the alien mimic.'],
+  ['Help Stafford & QTEs', 'Choose to help Stafford when he falls in Episode 8 and pass the button mash prompts.', 'Prevents the monster from capturing and killing Stafford.'],
 ];
 
 const searchIntentRows = [

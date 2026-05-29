@@ -94,7 +94,7 @@ export function SearchAnswerPanel({ title, answer, intentRows, jumpLinks }: Sear
   return (
     <section className="my-8 overflow-hidden rounded-lg border border-d8020/40 bg-gradient-to-b from-d8020/15 to-card/35">
       <div className="border-b border-d8020/20 p-5">
-        <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-d8020">Search Answer</p>
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-d8020">Quick Answer</p>
         <h2 className="text-xl font-black leading-tight text-foreground">{title}</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           {answer}

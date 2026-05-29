@@ -416,10 +416,10 @@ export default function AllEndingsPage() {
         <div className="prose-game">
           <h2 id="spoiler-topics">Spoiler Topics Players Search After the Ending</h2>
           <p>
-            Search demand after launch is moving toward explanation queries, not
-            only route queries. Keep these topics visible on the endings page so
-            players who finished the game can find them, while keeping beginner
-            pages spoiler-safe.
+            After finishing a route, most players need more than a list of
+            outcomes. Use this section for spoiler-heavy questions about the
+            finale, Cycle 13, the Booster Ring, and how named ending families
+            connect to the choices you made earlier.
           </p>
         </div>
 
