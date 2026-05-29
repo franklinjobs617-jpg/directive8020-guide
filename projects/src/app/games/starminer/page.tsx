@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { StarminerArticle } from "@/components/starminer-article";
 import { ArticleImage } from "@/components/article-media";
-import { BlufBox, StatusPanel } from "@/components/guide-blocks";
+import { BlufBox, SearchAnswerPanel, StatusPanel } from "@/components/guide-blocks";
 import { starminer } from "@/lib/games";
 import {
   createStarminerMetadata,
@@ -51,6 +51,63 @@ const faqs = [
     answer:
       "The official minimum spec lists Windows 10 32-bit, i3-10100 or Ryzen 3 3100, 8 GB RAM, GTX 1050 or RX 560, DirectX 11, and 7 GB storage. Recommended specs are not listed yet.",
   },
+  {
+    question: "Is Starminer Steam Deck verified?",
+    answer:
+      "Steam Deck status is not a confirmed buying signal yet. Treat Deck play as unknown until the live compatibility badge and player reports are stable.",
+  },
+  {
+    question: "Does Starminer have a roadmap?",
+    answer:
+      "The official FAQ describes priorities such as multiplayer, modding, and blueprint sharing, but those should be treated as planned features rather than launch features.",
+  },
+  {
+    question: "Can you rename ships in Starminer?",
+    answer:
+      "Use the live build to confirm ship naming and management details. This hub focuses on confirmed systems and practical setup rather than unverified interface claims.",
+  },
+];
+
+const searchIntentRows = [
+  {
+    query: "What should I do first in Starminer?",
+    answer: "Start Campaign, build small, stabilize power and mining, watch heat, then add storage and defenses before expanding.",
+    href: "#first-session-route",
+    label: "First save",
+  },
+  {
+    query: "Is Starminer available now?",
+    answer: "Steam lists May 27, 2026; check the live Steam store button before buying or installing.",
+    href: "/games/starminer/release-date",
+    label: "Availability",
+  },
+  {
+    query: "Ship or station first?",
+    answer: "Build a compact starter station first, then add specialized mining, hauling, patrol, and warship designs.",
+    href: "/games/starminer/ship-building",
+    label: "Build order",
+  },
+  {
+    query: "How does mining automation work?",
+    answer: "Treat mining as a chain: asteroid extraction, refining, storage, production, research, repairs, then link gates.",
+    href: "/games/starminer/mining-logistics",
+    label: "Logistics",
+  },
+  {
+    query: "Why am I getting attacked?",
+    answer: "Expansion can raise heat and pressure, so defense needs power, weapons, patrols, and repair reserves.",
+    href: "/games/starminer/heat-aliens-defense",
+    label: "Defense",
+  },
+];
+
+const jumpLinks = [
+  { href: "#start-here", label: "Start here" },
+  { href: "#first-session-route", label: "First session" },
+  { href: "#modes", label: "Modes" },
+  { href: "#status-faq", label: "Status FAQ" },
+  { href: "/games/starminer/beginner-guide", label: "Beginner guide" },
+  { href: "/games/starminer/is-it-worth-it", label: "Worth it" },
 ];
 
 function getGuideImage(href: string) {
@@ -76,6 +133,13 @@ export default function StarminerHubPage() {
       heroAlt="Starminer official Steam key art"
       faqs={faqs}
     >
+      <SearchAnswerPanel
+        title="What is the best way to start Starminer?"
+        answer="Start in Campaign, build a compact station, stabilize power, mining, storage, and heat, then expand into specialized ships and automation only after the first production loop can defend and repair itself."
+        intentRows={searchIntentRows}
+        jumpLinks={jumpLinks}
+      />
+
       <BlufBox title="Quick Verdict">
         <p>
           <strong>
@@ -98,14 +162,14 @@ export default function StarminerHubPage() {
         }))}
       />
 
-      <section className="my-10">
+      <section id="start-here" className="my-10">
         <h2 className="mb-4 text-xl font-bold text-foreground">Start Here by Need</h2>
         <ArticleImage
           src={starminerImages.feature}
           alt="Starminer guide hub systems map image"
           caption="Use this hub as a route map: release checks, first-hour setup, mode choice, PC specs, ship design, mining, defense, feature status, and buying advice all connect."
         />
-        <div className="overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border/50 bg-card/50">
@@ -179,9 +243,9 @@ export default function StarminerHubPage() {
           a risk decision instead of a simple upgrade ladder.
         </p>
         <p>
-          That is why the first useful question is not “what is the biggest
-          thing I can build?” It is “what can this station support without
-          collapsing under logistics, power demand, or attacks?” Use the{" "}
+          That is why the first useful question is not "what is the biggest
+          thing I can build?" It is "what can this station support without
+          collapsing under logistics, power demand, or attacks?" Use the{" "}
           <Link href="/games/starminer/beginner-guide">Starminer beginner guide</Link>{" "}
           for the first save, then move to{" "}
           <Link href="/games/starminer/ship-building">ship building</Link>,{" "}
@@ -191,14 +255,14 @@ export default function StarminerHubPage() {
         </p>
       </section>
 
-      <section className="my-10">
+      <section id="modes" className="my-10">
         <h2 className="mb-4 text-xl font-bold text-foreground">Modes at a Glance</h2>
         <ArticleImage
           src={starminerImages.survival}
           alt="Starminer Campaign Sandbox and Survival mode comparison image"
           caption="Campaign teaches the systems, Sandbox supports self-directed building, and Survival stress-tests defense under enemy pressure."
         />
-        <div className="overflow-hidden rounded-lg border border-border/50 bg-card/30">
+        <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border/50 bg-card/50">
@@ -221,7 +285,7 @@ export default function StarminerHubPage() {
       </section>
 
       <section className="prose-game">
-        <h2>First Session Route</h2>
+        <h2 id="first-session-route">First Session Route</h2>
         <p>
           The cleanest first session is a learning loop: choose Campaign, build
           small, stabilize mining, avoid uncontrolled heat growth, and save a
@@ -230,7 +294,7 @@ export default function StarminerHubPage() {
         </p>
       </section>
 
-      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+      <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
@@ -250,6 +314,22 @@ export default function StarminerHubPage() {
           </tbody>
         </table>
       </div>
+
+      <section className="prose-game">
+        <h2 id="status-faq">Small Status Questions</h2>
+        <ArticleImage
+          src={starminerImages.fleet}
+          alt="Starminer roadmap Steam Deck and ship management status image"
+          caption="For status questions, check the live build and store labels before treating roadmap or interface details as final."
+        />
+        <p>
+          Steam Deck compatibility, roadmap timing, multiplayer, modding,
+          community blueprint sharing, and ship-management interface details
+          should be checked against the live build. For now, use this hub for
+          confirmed single-player setup, modular building, mining automation,
+          heat pressure, and defense planning.
+        </p>
+      </section>
     </StarminerArticle>
   );
 }

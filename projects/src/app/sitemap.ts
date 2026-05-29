@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/games/starminer`,
-      lastModified: '2026-05-27',
+      lastModified: '2026-05-29',
       changeFrequency: 'daily',
       priority: 0.74,
     },
@@ -54,13 +54,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/games/starminer/ship-building`,
-      lastModified: '2026-05-27',
+      lastModified: '2026-05-29',
       changeFrequency: 'weekly',
       priority: 0.68,
     },
     {
       url: `${BASE_URL}/games/starminer/mining-logistics`,
-      lastModified: '2026-05-27',
+      lastModified: '2026-05-29',
       changeFrequency: 'weekly',
       priority: 0.68,
     },
@@ -162,7 +162,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/games/paralives/build-mode`,
-      lastModified: '2026-05-26',
+      lastModified: '2026-05-29',
       changeFrequency: 'weekly',
       priority: 0.7,
     },
@@ -264,7 +264,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/games/project-mist/release-date`,
-      lastModified: '2026-05-20',
+      lastModified: '2026-05-29',
       changeFrequency: 'daily',
       priority: 0.7,
     },
@@ -437,6 +437,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.68,
     },
     {
+      url: `${BASE_URL}/games/mechanicus-ii/best-units-builds`,
+      lastModified: '2026-05-29',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/mechanicus-ii/tips-and-tricks`,
+      lastModified: '2026-05-29',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/mechanicus-ii/missions-walkthrough`,
+      lastModified: '2026-05-29',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
       url: `${BASE_URL}/games/mechanicus-ii/factions`,
       lastModified: '2026-05-22',
       changeFrequency: 'weekly',
@@ -474,7 +492,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/games/romestead/beginner-guide`,
-      lastModified: '2026-05-25',
+      lastModified: '2026-05-29',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/romestead/steam-deck-controller`,
+      lastModified: '2026-05-29',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/romestead/best-profession-class`,
+      lastModified: '2026-05-29',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/romestead/tips-and-tricks`,
+      lastModified: '2026-05-29',
       changeFrequency: 'weekly',
       priority: 0.68,
     },
@@ -523,6 +559,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${BASE_URL}/games/mina-the-hollower/beginner-guide`,
       lastModified: '2026-05-20',
+      changeFrequency: 'weekly',
+      priority: 0.68,
+    },
+    {
+      url: `${BASE_URL}/games/mina-the-hollower/trophy-guide`,
+      lastModified: '2026-05-29',
       changeFrequency: 'weekly',
       priority: 0.68,
     },

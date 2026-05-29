@@ -1,6 +1,6 @@
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import { BlufBox, SearchAnswerPanel } from '@/components/guide-blocks';
 import { createProjectMistMetadata, projectMistImages, projectMistLaunchSnapshotRows } from '@/lib/project-mist';
 
 const title = 'Project Mist Release Date: Xbox, PS5, Console & Early Access';
@@ -70,6 +70,42 @@ const platformRows = [
   ['Cross-play', 'Not confirmed; do not assume cross-platform co-op.', 'Plan co-op only around Steam PC players until cross-platform support is announced.'],
 ];
 
+const searchIntentRows = [
+  {
+    query: 'Project: Mist release date',
+    answer: 'Project: Mist released into Steam Early Access on 19 May, 2026 for PC.',
+    href: '#release-answer',
+    label: 'Date',
+  },
+  {
+    query: 'Project: Mist Xbox',
+    answer: 'Xbox is not confirmed by current official store data. Treat PC Steam as the verified platform.',
+    href: '#platform-status',
+    label: 'Console',
+  },
+  {
+    query: 'Project: Mist PS5',
+    answer: 'PS5 and PlayStation versions are not confirmed. Watch for an official store page before planning console play.',
+    href: '#platform-status',
+    label: 'Console',
+  },
+  {
+    query: 'Project: Mist Early Access',
+    answer: 'The game is live in Early Access, so price, reviews, demo behavior, and save issues should be checked on Steam.',
+    href: '#early-access',
+    label: 'EA',
+  },
+];
+
+const jumpLinks = [
+  { href: '#release-answer', label: 'Release answer' },
+  { href: '#platform-status', label: 'Platforms' },
+  { href: '#early-access', label: 'Early Access' },
+  { href: '#launch-checklist', label: 'Checklist' },
+  { href: '/games/project-mist/system-requirements', label: 'PC specs' },
+  { href: '/games/project-mist/multiplayer-co-op', label: 'Co-op' },
+];
+
 export default function ProjectMistReleaseDatePage() {
   return (
     <ProjectMistArticle
@@ -81,6 +117,13 @@ export default function ProjectMistReleaseDatePage() {
       heroAlt="Project: Mist release date and platform guide image"
       faqs={faqs}
     >
+      <SearchAnswerPanel
+        title="Is Project: Mist on Xbox, PS5, or console?"
+        answer="Project: Mist is live on PC via Steam Early Access as of 19 May, 2026. Xbox, PS5, and console versions are not confirmed by current official store data, so players should plan around PC Steam unless a console store page appears."
+        intentRows={searchIntentRows}
+        jumpLinks={jumpLinks}
+      />
+
       <BlufBox title="Release Answer">
         <p>
           <strong>Project: Mist is live on PC via Steam Early Access as of
@@ -90,7 +133,7 @@ export default function ProjectMistReleaseDatePage() {
         </p>
       </BlufBox>
 
-      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+      <div id="release-answer" className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
@@ -138,7 +181,7 @@ export default function ProjectMistReleaseDatePage() {
         />
       </section>
 
-      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+      <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
@@ -158,7 +201,7 @@ export default function ProjectMistReleaseDatePage() {
       </div>
 
       <section className="prose-game">
-        <h2>Platform Status</h2>
+        <h2 id="platform-status">Platform Status</h2>
         <ArticleImage
           src={projectMistImages.screenshot3}
           alt="Project: Mist PC Steam platform status image"
@@ -166,7 +209,7 @@ export default function ProjectMistReleaseDatePage() {
         />
       </section>
 
-      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+      <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
@@ -189,7 +232,7 @@ export default function ProjectMistReleaseDatePage() {
 
       <section className="prose-game">
 
-        <h2>Demo and Early Access Context</h2>
+        <h2 id="early-access">Demo and Early Access Context</h2>
         <ArticleImage
           src={projectMistImages.demo}
           alt="Project: Mist demo and pricing visual"
@@ -203,7 +246,7 @@ export default function ProjectMistReleaseDatePage() {
           build.
         </p>
 
-        <h2>Launch Checklist</h2>
+        <h2 id="launch-checklist">Launch Checklist</h2>
         <ArticleImage
           src={projectMistImages.screenshot2}
           alt="Project: Mist launch checklist screenshot"
@@ -211,7 +254,7 @@ export default function ProjectMistReleaseDatePage() {
         />
       </section>
 
-      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+      <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border/50 bg-card/50">

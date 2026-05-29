@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { StarminerArticle } from "@/components/starminer-article";
 import { ArticleImage } from "@/components/article-media";
-import { BlufBox } from "@/components/guide-blocks";
+import { BlufBox, SearchAnswerPanel } from "@/components/guide-blocks";
 import {
   createStarminerMetadata,
   starminerImages,
@@ -56,6 +56,58 @@ const bottleneckRows = [
   ["Repairs consume the network", "Reduce heat pressure and improve defense before scaling extraction."],
 ];
 
+const searchIntentRows = [
+  {
+    query: "Starminer mining",
+    answer: "Mine asteroids only as fast as refining, storage, production, repairs, and defense can absorb the output.",
+    href: "#first-chain",
+    label: "Mining",
+  },
+  {
+    query: "Starminer logistics",
+    answer: "Keep the chain readable: extraction, refining, storage, production, research, maintenance, and link gates.",
+    href: "#core-loop",
+    label: "Logistics",
+  },
+  {
+    query: "Production chain",
+    answer: "Start with one stable chain before adding new miners, ships, or link gates.",
+    href: "#first-chain",
+    label: "Production",
+  },
+  {
+    query: "Automation mistakes",
+    answer: "Most early problems come from mining faster than storage, refining, transport, or defense can support.",
+    href: "#automation-mistakes",
+    label: "Avoid",
+  },
+];
+
+const jumpLinks = [
+  { href: "#first-chain", label: "First chain" },
+  { href: "#core-loop", label: "Core loop" },
+  { href: "#profit-maintenance", label: "Profit vs maintenance" },
+  { href: "#automation-mistakes", label: "Mistakes" },
+  { href: "/games/starminer/ship-building", label: "Ship building" },
+  { href: "/games/starminer/heat-aliens-defense", label: "Defense" },
+];
+
+const firstChainRows = [
+  ["Extract", "Mine a nearby asteroid with a controlled starter setup.", "A nearby source is easier to protect and diagnose."],
+  ["Refine", "Turn raw inputs into usable materials before adding more miners.", "Raw stockpiles do not help if the refinery is the bottleneck."],
+  ["Store", "Keep enough storage near the production path.", "Overflow and long movement routes hide shortages."],
+  ["Produce", "Feed one useful module, ship part, or research need at a time.", "A single working chain is easier to scale than three broken chains."],
+  ["Reserve", "Hold material for repairs and defense before link gates.", "Expansion without reserves can collapse after the first attack."],
+];
+
+const automationMistakeRows = [
+  ["Too many miners", "Extraction outpaces refining and storage, so materials pile up without progress."],
+  ["No repair reserve", "Every attack drains the same materials needed for growth."],
+  ["Unprotected routes", "Mining ships and outer stations become easy targets once heat pressure rises."],
+  ["Link gates too early", "New sectors stretch logistics before the current sector can sustain itself."],
+  ["Research without a bottleneck", "New modules add complexity if the current chain is not stable."],
+];
+
 export default function StarminerMiningLogisticsPage() {
   return (
     <StarminerArticle
@@ -67,6 +119,13 @@ export default function StarminerMiningLogisticsPage() {
       heroAlt="Starminer mining and logistics asteroid extraction image"
       faqs={faqs}
     >
+      <SearchAnswerPanel
+        title="How should mining and logistics work in Starminer?"
+        answer="Build one stable production chain first: asteroid extraction, refining, nearby storage, useful production, research, repair reserve, then link gates. If any step stalls, pause expansion and fix that bottleneck before adding more ships."
+        intentRows={searchIntentRows}
+        jumpLinks={jumpLinks}
+      />
+
       <BlufBox title="Logistics Rule">
         <p>
           <strong>Do not expand past the weakest link in the chain.</strong>{" "}
@@ -79,7 +138,37 @@ export default function StarminerMiningLogisticsPage() {
       </BlufBox>
 
       <section className="prose-game">
-        <h2>The Core Resource Loop</h2>
+        <h2 id="first-chain">First Production Chain</h2>
+        <ArticleImage
+          src={starminerImages.logistics}
+          alt="Starminer first mining production chain and storage planning image"
+          caption="The first production chain should be short, readable, and easy to defend before link gates or larger fleets stretch the network."
+        />
+      </section>
+
+      <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Step</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Do this</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it matters</th>
+            </tr>
+          </thead>
+          <tbody>
+            {firstChainRows.map(([step, action, why]) => (
+              <tr key={step} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{step}</td>
+                <td className="px-4 py-3 text-muted-foreground">{action}</td>
+                <td className="px-4 py-3 text-muted-foreground">{why}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <section className="prose-game">
+        <h2 id="core-loop">The Core Resource Loop</h2>
         <ArticleImage
           src={starminerImages.mining}
           alt="Starminer asteroid mining and refining logistics guide image"
@@ -87,7 +176,7 @@ export default function StarminerMiningLogisticsPage() {
         />
       </section>
 
-      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+      <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
@@ -107,7 +196,7 @@ export default function StarminerMiningLogisticsPage() {
       </div>
 
       <section className="prose-game">
-        <h2>Profit Versus Maintenance</h2>
+        <h2 id="profit-maintenance">Profit Versus Maintenance</h2>
         <ArticleImage
           src={starminerImages.logistics}
           alt="Starminer production chains and maintenance planning image"
@@ -133,10 +222,10 @@ export default function StarminerMiningLogisticsPage() {
       </section>
 
       <section className="prose-game">
-        <h2>Diagnose the Bottleneck</h2>
+        <h2 id="automation-mistakes">Automation Mistakes and Bottlenecks</h2>
       </section>
 
-      <div className="my-6 overflow-hidden rounded-lg border border-border/50 bg-card/30">
+      <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border/50 bg-card/50">
@@ -149,6 +238,25 @@ export default function StarminerMiningLogisticsPage() {
               <tr key={problem} className="border-b border-border/30 last:border-0">
                 <td className="px-4 py-3 font-semibold text-foreground">{problem}</td>
                 <td className="px-4 py-3 text-muted-foreground">{fix}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border/50 bg-card/50">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Mistake</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it hurts</th>
+            </tr>
+          </thead>
+          <tbody>
+            {automationMistakeRows.map(([mistake, reason]) => (
+              <tr key={mistake} className="border-b border-border/30 last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{mistake}</td>
+                <td className="px-4 py-3 text-muted-foreground">{reason}</td>
               </tr>
             ))}
           </tbody>

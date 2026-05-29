@@ -335,6 +335,24 @@ export const mechanicusII: GameConfig = {
         "Spoiler-light mission flow, green console checks, leader safety, objective reading, and campaign progression notes.",
     },
     {
+      title: "Best Units & Builds",
+      href: "/games/mechanicus-ii/best-units-builds",
+      description:
+        "Role-based unit value, safe first builds, faction resource pressure, leader protection, and launch-window build cautions.",
+    },
+    {
+      title: "Tips and Tricks",
+      href: "/games/mechanicus-ii/tips-and-tricks",
+      description:
+        "Practical tactics for cover, turn order, green consoles, campaign resources, leader safety, and avoiding early resets.",
+    },
+    {
+      title: "Missions Walkthrough",
+      href: "/games/mechanicus-ii/missions-walkthrough",
+      description:
+        "Mission routing help for objectives, marked tiles, interactables, failure diagnosis, and spoiler-light campaign progression.",
+    },
+    {
       title: "Factions Guide",
       href: "/games/mechanicus-ii/factions",
       description:
@@ -397,6 +415,24 @@ export const romestead: GameConfig = {
       href: "/games/romestead/beginner-guide",
       description:
         "First-day priorities for resources, workstations, settlement layout, survivors, night defense, exploration, and god blessings.",
+    },
+    {
+      title: "Steam Deck & Controller",
+      href: "/games/romestead/steam-deck-controller",
+      description:
+        "Steam Deck status, controller checks, handheld setup, UI readability, co-op comfort, and launch-window cautions.",
+    },
+    {
+      title: "Best Profession & Class",
+      href: "/games/romestead/best-profession-class",
+      description:
+        "How to choose an early role by food, gathering, crafting, defense, exploration, co-op group needs, and settlement goals.",
+    },
+    {
+      title: "Tips and Tricks",
+      href: "/games/romestead/tips-and-tricks",
+      description:
+        "Beginner tips for first-day routing, early resources, compact bases, survivors, night defense, co-op, and safe expansion.",
     },
     {
       title: "Multiplayer & Co-op",
@@ -531,6 +567,12 @@ export const minaTheHollower: GameConfig = {
       href: "/games/mina-the-hollower/beginner-guide",
       description:
         "Spoiler-light first-session advice for burrowing, whip combat, sidearms, trinkets, and exploration.",
+    },
+    {
+      title: "Trophy Guide",
+      href: "/games/mina-the-hollower/trophy-guide",
+      description:
+        "Steam achievements, trophy-list cautions, 100% route planning, missable checks, and safe cleanup order.",
     },
     {
       title: "Is Mina the Hollower Worth It?",
