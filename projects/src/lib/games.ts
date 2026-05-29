@@ -717,3 +717,78 @@ export const starminer: GameConfig = {
     },
   ],
 };
+
+export const lunaAbyss: GameConfig = {
+  id: "luna-abyss",
+  slugPrefix: "luna-abyss",
+  hubPath: "/games/luna-abyss",
+  name: "Luna Abyss",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "A single-player story-driven action-adventure FPS from Kwalee Labs and Kwalee set beneath the surface of the mimic moon Luna, combining bullet-hell combat, first-person platforming, exploration, and a surreal sci-fi mystery.",
+  platforms: ["PC", "PlayStation 5", "Xbox Series X|S", "Xbox Cloud Gaming"],
+  genres: ["Action", "Adventure", "Indie", "First-Person Shooter", "Sci-Fi"],
+  developer: "Kwalee Labs",
+  publisher: "Kwalee",
+  releaseDate: "2026-05-21",
+  operatingSystem: "Windows 11 64-bit, PlayStation 5, Xbox Series X|S",
+  url: "https://store.steampowered.com/app/1933000/Luna_Abyss/",
+  availability: "https://schema.org/InStock",
+  heroImage: "/games/luna-abyss/hero.jpg",
+  guideLinks: [
+    {
+      title: "Game Pass, Release Date & Platforms",
+      href: "/games/luna-abyss/release-date-game-pass",
+      description:
+        "May 21 launch status, Game Pass, Xbox Cloud, Play Anywhere, Steam price checks, PS5, Xbox, and PC availability.",
+    },
+    {
+      title: "Review & Is It Worth It?",
+      href: "/games/luna-abyss/is-it-worth-it",
+      description:
+        "Buying advice using Steam review signal, Metacritic context, Game Pass value, platform fit, and wait-or-play reasons.",
+    },
+    {
+      title: "System Requirements",
+      href: "/games/luna-abyss/system-requirements",
+      description:
+        "Official minimum and recommended PC specs, GTX 1060 / RX 580 baseline, GTX 1660 / RX 590 recommendation, and setup checks.",
+    },
+    {
+      title: "Steam Deck Settings",
+      href: "/games/luna-abyss/steam-deck-settings",
+      description:
+        "Steam Deck setup, 30 FPS target, control checks, battery expectations, and reported handheld performance caveats.",
+    },
+    {
+      title: "Beginner Guide",
+      href: "/games/luna-abyss/beginner-guide",
+      description:
+        "Spoiler-light first-hour route for platforming, dash timing, bullet-hell combat, accessibility settings, and exploration.",
+    },
+    {
+      title: "Walkthrough",
+      href: "/games/luna-abyss/walkthrough",
+      description:
+        "Spoiler-light progression plan for Greymont, the Abyss, combat arenas, movement gates, secrets, and boss prep.",
+    },
+    {
+      title: "Achievements & Trophy Guide",
+      href: "/games/luna-abyss/achievements-trophy-guide",
+      description:
+        "45 Steam achievements, PS5 trophy cleanup cautions, missable-style route planning, secrets, combat, and completion tracking.",
+    },
+    {
+      title: "Ending Explained",
+      href: "/games/luna-abyss/ending-explained",
+      description:
+        "Spoiler-aware ending interpretation for Fawkes, Aylin, Greymont, the mimic moon, the Abyss, and unresolved mystery threads.",
+    },
+    {
+      title: "Crashing & Black Screen Fix",
+      href: "/games/luna-abyss/crashing-fix",
+      description:
+        "Startup crashes, black screen, low FPS, stutter, controller issues, Steam file checks, and Game Pass install triage.",
+    },
+  ],
+};

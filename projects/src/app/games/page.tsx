@@ -13,10 +13,11 @@ import { firstLightImages } from "@/lib/007-first-light";
 import { jumpKingQuestImages } from "@/lib/jump-king-quest";
 import { paralivesImages } from "@/lib/paralives";
 import { starminerImages } from "@/lib/starminer";
+import { lunaAbyssImages } from "@/lib/luna-abyss";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
-  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, Roman survival town building, and story-driven games, including Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, and story-driven games, including Luna Abyss, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
   title: {
@@ -38,6 +39,7 @@ export const metadata: Metadata = {
     "Mina the Hollower guide",
     "Paralives guide",
     "Starminer guide",
+    "Luna Abyss guide",
   ],
   authors: [{ name: "Enjoy4Game Guides" }],
   alternates: {
@@ -60,6 +62,13 @@ export const metadata: Metadata = {
 };
 
 const gameCards = [
+  {
+    title: "Luna Abyss",
+    href: "/games/luna-abyss",
+    label: "Sci-fi FPS",
+    body: "Post-launch hub for Game Pass, Steam Deck settings, system requirements, achievements, walkthrough, ending explained, crash fixes, and buying advice.",
+    image: lunaAbyssImages.hero,
+  },
   {
     title: "Starminer",
     href: "/games/starminer",
@@ -251,7 +260,10 @@ export default function GamesPage() {
           <div className="prose-game">
             <h2>How to Use This Page</h2>
             <p>
-              If you are playing Directive 8020, start with the walkthrough,
+              If you are playing Luna Abyss, start with Game Pass and platform
+              checks, then move to Steam Deck settings, achievements,
+              walkthrough, ending explained, or crash fixes. If you are playing
+              Directive 8020, start with the walkthrough,
               endings, choices, or trophy guides. If you are trying Project:
               Mist, start with the Early Access hub. If you are playing JUMP
               KING QUEST, start with the 1.0 release hub, then check beginner

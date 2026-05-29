@@ -202,6 +202,16 @@ export function SiteFooter() {
                   Romestead
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://fatekeeperguide.online/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Fate Keeper Guide
+                </a>
+              </li>
             </ul>
           </div>
         </div>
