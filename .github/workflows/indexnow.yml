@@ -1,0 +1,43 @@
+name: IndexNow Sitemap Push
+
+on:
+  # 🔥 push 到 main 分支时立即执行
+  push:
+    branches:
+      - main
+  # ⏰ 每天 UTC 3:00（北京时间 11:00）兜底执行
+  schedule:
+    - cron: '0 3 * * *'
+  # 🖐️ 也支持手动触发
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Push sitemaps to IndexNow
+        env:
+          KEY: e4g2025idx
+        run: |
+          SITES=(
+            "enjoy4game.com"
+            "fatekeeperguide.online"
+            "romesteadguide.top"
+            "minathehollower.base64pro.top"
+            "ipooket.com"
+          )
+
+          for site in "${SITES[@]}"; do
+            echo "📤 Pushing sitemap for $site..."
+            response=$(curl -s -o /dev/null -w "%{http_code}" \
+              "https://api.indexnow.org/indexnow?url=https://$site/sitemap.xml&key=$KEY")
+
+            if [ "$response" = "200" ] || [ "$response" = "202" ]; then
+              echo "  ✅ $site — 推送成功 (HTTP $response)"
+            else
+              echo "  ❌ $site — 失败 (HTTP $response)"
+            fi
+          done
+
+          echo ""
+          echo "🎉 全部推送完成！"
