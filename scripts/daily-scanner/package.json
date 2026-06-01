@@ -1,13 +1,15 @@
 {
   "name": "daily-scanner",
   "version": "1.0.0",
-  "description": "每日新词数据采集 — 10 个来源 → raw-data.json → AI 分析 → 日报",
+  "description": "每日新词数据采集 — 公开来源 → raw-data.json → burst-report.json",
   "type": "module",
   "scripts": {
     "scan": "node index.js",
+    "scan:full": "node index.js --full",
     "scan:dry": "node index.js --dry"
   },
   "dependencies": {
-    "cheerio": "^1.0.0"
+    "cheerio": "^1.0.0",
+    "undici": "^7.26.0"
   }
 }

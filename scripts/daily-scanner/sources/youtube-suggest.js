@@ -24,20 +24,23 @@ export async function collectYouTubeSuggest(gameNames, limit = 10) {
   const results = [];
 
   for (const name of gameNames) {
-    const keywords = [];
-
-    for (const prefix of PREFIXES) {
-      const query = `${name} ${prefix}`;
-      try {
-        const suggestions = await fetchSuggestions(query);
-        for (const s of suggestions) {
-          if (s.toLowerCase().trim() === name.toLowerCase().trim()) continue;
-          keywords.push(s);
+    const suggestionSets = await Promise.all(
+      PREFIXES.map(async (prefix) => {
+        try {
+          return await fetchSuggestions(`${name} ${prefix}`);
+        } catch {
+          return [];
         }
-      } catch {
-        // 单个查询失败不影响整体
-      }
+      })
+    );
 
+    const keywords = [];
+    for (const suggestions of suggestionSets) {
+      for (const s of suggestions) {
+        if (s.toLowerCase().trim() === name.toLowerCase().trim()) continue;
+        if (!isRelevantSuggestion(s, name)) continue;
+        keywords.push(s);
+      }
       if (keywords.length >= limit) break;
     }
 
@@ -54,11 +57,13 @@ export async function collectYouTubeSuggest(gameNames, limit = 10) {
 }
 
 async function fetchSuggestions(query) {
-  const url = `https://suggestqueries.google.com/complete/search?client=youtube&ds=yt&q=${encodeURIComponent(query)}&hl=en`;
-  const text = await fetchText(url);
+  // client=firefox returns plain JSON and is less brittle than the youtube callback wrapper.
+  const url = `https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=${encodeURIComponent(query)}&hl=en`;
+  const text = await fetchText(url, { timeout: 6000, retries: 0 });
+  return parseSuggestResponse(text);
+}
 
-  // YouTube Suggest 返回格式: window.google.ac.h([...])
-  // 去掉外层包裹
+function parseSuggestResponse(text) {
   let jsonText = text.trim();
   if (jsonText.startsWith("window.google.ac.h(")) {
     jsonText = jsonText.slice("window.google.ac.h(".length, -1);
@@ -67,15 +72,32 @@ async function fetchSuggestions(query) {
   }
 
   const json = JSON.parse(jsonText);
-
-  // 格式: ["query", [["suggestion1", 0, [3]], ["suggestion2", 0, [3]], ...]]
   const items = json[1];
   if (!Array.isArray(items)) return [];
 
   return items
     .map((item) => {
-      // 每个 item 可能是字符串（旧格式）或数组 [text, type, [...]]（新格式）
       return Array.isArray(item) ? item[0] : item;
     })
     .filter(Boolean);
+}
+
+function isRelevantSuggestion(suggestion, gameName) {
+  const text = normalizeText(suggestion);
+  const game = normalizeText(gameName);
+  if (text.includes(game)) return true;
+
+  const primaryTokens = game
+    .split(" ")
+    .filter((token) => token.length > 2 && !/^\d+$/.test(token))
+    .slice(0, 2);
+
+  return primaryTokens.length >= 2 && primaryTokens.every((token) => text.includes(token));
+}
+
+function normalizeText(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
 }

@@ -19,6 +19,7 @@ export const config = {
   },
   google: {
     apiKey: process.env.GOOGLE_API_KEY || "",           // Google Cloud 拿
+    cseId: process.env.GOOGLE_CSE_ID || "",
   },
   gsc: {
     // GSC 比较特殊，需要 OAuth 或服务账号 JSON
@@ -40,6 +41,26 @@ export const config = {
   // 每个游戏 Steam 社区最多保留几条帖子
   steamCommunityLimit: 5,
 
+  // Core games to scan even when Steam/IGDB discovery fails.
+  trackedGames: [
+    { name: "Directive 8020", appId: 2255370 },
+    { name: "007 First Light", appId: 3768760 },
+    { name: "Project: Mist", appId: 2383130 },
+    { name: "Thick As Thieves", appId: 3341000 },
+    { name: "ZERO PARADES: For Dead Spies", appId: 2863680 },
+    { name: "Warhammer 40,000: Mechanicus II", appId: 2532480 },
+    { name: "Romestead", appId: 1805320 },
+    { name: "Paralives", appId: 1118520 },
+    { name: "Mina the Hollower", appId: 1875580 },
+    { name: "JUMP KING QUEST", appId: 2317640 },
+    { name: "Starminer", appId: 1116050 },
+    { name: "Fatekeeper", appId: 2186990 },
+    { name: "Luna Abyss", appId: 1933000 },
+  ],
+
+  // More games means more public suggest requests and a slower daily run.
+  deepScanLimit: Number(process.env.DEEP_SCAN_LIMIT || 15),
+
   // SteamDB trending 取前多少名
   steamdbTrendingLimit: 30,
 
@@ -48,6 +69,14 @@ export const config = {
 
   // Google Trends 对比基准词
   trendsBaseline: "gpts",
+
+  // Burst keyword decision settings
+  historyLookbackDays: 14,
+  trendWindows: ["now 1-d", "now 7-d", "today 1-m"],
+  maxTrendKeywordChecks: Number(process.env.MAX_TREND_KEYWORD_CHECKS || 20),
+  serpResultLimit: Number(process.env.SERP_RESULT_LIMIT || 20),
+  burstThresholdRatio: 3,
+  minTrendAvg24h: 5,
 
   // ========== 输出 ==========
   outputDir: "./output",

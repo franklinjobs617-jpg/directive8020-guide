@@ -8,6 +8,7 @@
  *           真正的讨论数据靠 Reddit 覆盖
  */
 import { fetchText } from "../utils/fetch.js";
+import * as cheerio from "cheerio";
 
 let firstErrorLogged = false;
 
@@ -17,13 +18,17 @@ export async function collectSteamCommunity(steamAppIds, limit = 5) {
 
   for (const { appId, name } of steamAppIds.slice(0, 10)) {
     try {
-      const info = await fetchGameInfo(appId);
-      if (info) {
+      const [info, posts] = await Promise.all([
+        fetchGameInfo(appId).catch(() => null),
+        fetchDiscussionPosts(appId, limit).catch(() => []),
+      ]);
+      if (info || posts.length > 0) {
         results.push({
           game: name,
           appId,
           source: "steam_community",
-          ...info,
+          ...(info || {}),
+          posts,
         });
       }
     } catch (err) {
@@ -45,6 +50,7 @@ async function fetchGameInfo(appId) {
       "Cookie": "birthtime=0; lastagecheckage=1-January-1990; mature_content=1", // 绕过年龄验证
     },
     timeout: 15000,
+    retries: 0,
   });
 
   // 提取评测摘要
@@ -64,4 +70,35 @@ async function fetchGameInfo(appId) {
     reviewSummary,
     description: description?.slice(0, 200) || null,
   };
+}
+
+async function fetchDiscussionPosts(appId, limit) {
+  const html = await fetchText(`https://steamcommunity.com/app/${appId}/discussions/0/`, {
+    headers: {
+      Accept: "text/html",
+      "Accept-Language": "en-US,en;q=0.9",
+    },
+    timeout: 15000,
+    retries: 0,
+  });
+
+  const $ = cheerio.load(html);
+  const posts = [];
+
+  $(".forum_topic").each((_, el) => {
+    const title = $(el).find(".forum_topic_name").text().replace(/\s+/g, " ").trim();
+    const href = $(el).find("a.forum_topic_overlay").attr("href") || $(el).find("a").first().attr("href");
+    const replyText = $(el).find(".forum_topic_stats").text().replace(/\s+/g, " ").trim();
+    const latest = $(el).find(".forum_topic_lastpost").text().replace(/\s+/g, " ").trim();
+
+    if (!title) return;
+    posts.push({
+      title,
+      url: href?.startsWith("http") ? href : href ? `https://steamcommunity.com${href}` : null,
+      replyText,
+      latest,
+    });
+  });
+
+  return posts.slice(0, limit);
 }

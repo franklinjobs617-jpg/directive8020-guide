@@ -10,12 +10,7 @@
 import { fetchJSON } from "../utils/fetch.js";
 
 const SEARCH_QUERIES = [
-  "how to",
-  "stuck",
-  "where to find",
-  "help",
-  "beginner guide",
-  "best",
+  "",
 ];
 
 let firstErrorLogged = false;
@@ -29,7 +24,7 @@ export async function collectReddit(gameNames, limit = 5) {
 
     for (const q of SEARCH_QUERIES) {
       try {
-        const data = await fetchRedditPosts(name, q, 3);
+        const data = await fetchRedditPosts(name, q, limit);
         for (const post of data) {
           if (posts.find((p) => p.id === post.id)) continue;
           posts.push(post);
@@ -45,6 +40,14 @@ export async function collectReddit(gameNames, limit = 5) {
     }
 
     if (posts.length > 0) {
+      for (const post of posts.slice(0, limit)) {
+        try {
+          post.comments = post.fromFallback ? [] : await fetchTopComments(post.permalink, 3);
+        } catch {
+          post.comments = [];
+        }
+      }
+
       results.push({
         game: name,
         source: "reddit",
@@ -57,24 +60,110 @@ export async function collectReddit(gameNames, limit = 5) {
 }
 
 async function fetchRedditPosts(gameName, queryType, limit) {
-  // Reddit 搜索语法: 不加引号，让 Reddit 做模糊匹配
-  const query = `${gameName} ${queryType}`;
-  const url = `https://www.reddit.com/search.json?q=${encodeURIComponent(query)}&limit=${limit}&sort=new&restrict_sr=off&t=month`;
+  // Run one broad exact-name query first, then intent-specific queries.
+  const query = queryType ? `${gameName} ${queryType}` : `"${gameName}"`;
+  const sort = queryType ? "new" : "relevance";
+  const url = `https://www.reddit.com/search.json?q=${encodeURIComponent(query)}&limit=${limit}&sort=${sort}&restrict_sr=off&t=month&raw_json=1`;
 
+  let data;
+  try {
+    data = await fetchJSON(url, {
+      headers: {
+        // Reddit 要求的 User-Agent 格式
+        "User-Agent": "web:com.enjoy4game.daily-scanner:v1.0.0 (by /u/enjoy4game)",
+      },
+      timeout: 10000,
+      retries: 0,
+    });
+  } catch (err) {
+    if (err.message.includes("HTTP 403")) {
+      return fetchPullPushPosts(gameName, queryType, limit);
+    }
+    throw err;
+  }
+
+  return (data?.data?.children || [])
+    .map((c) => ({
+      id: c.data?.id,
+      title: c.data?.title,
+      subreddit: c.data?.subreddit_name_prefixed || c.data?.subreddit,
+      permalink: c.data?.permalink,
+      url: `https://reddit.com${c.data?.permalink}`,
+      score: c.data?.score,
+      numComments: c.data?.num_comments,
+      createdUtc: c.data?.created_utc,
+    }))
+    .filter((post) => isRelevantPost(post, gameName));
+}
+
+async function fetchPullPushPosts(gameName, queryType, limit) {
+  const query = queryType ? `${gameName} ${queryType}` : gameName;
+  const url = `https://api.pullpush.io/reddit/search/submission/?q=${encodeURIComponent(query)}&size=${limit}&sort=desc&sort_type=created_utc`;
+  const data = await fetchJSON(url, { timeout: 5000, retries: 0 });
+
+  return (data?.data || [])
+    .map((post) => ({
+      id: post.id,
+      title: post.title,
+      selftext: post.selftext || "",
+      subreddit: post.subreddit ? `r/${post.subreddit}` : null,
+      permalink: post.permalink || null,
+      url: post.full_link || (post.permalink ? `https://reddit.com${post.permalink}` : post.url),
+      score: post.score || 0,
+      numComments: post.num_comments || 0,
+      createdUtc: post.created_utc,
+      fromFallback: true,
+    }))
+    .filter((post) => isRelevantPost(post, gameName))
+    .map(({ selftext, ...post }) => post);
+}
+
+async function fetchTopComments(permalink, limit) {
+  if (!permalink) return [];
+  const url = `https://www.reddit.com${permalink}.json?limit=${limit}&sort=top&raw_json=1`;
   const data = await fetchJSON(url, {
     headers: {
-      // Reddit 要求的 User-Agent 格式
       "User-Agent": "web:com.enjoy4game.daily-scanner:v1.0.0 (by /u/enjoy4game)",
     },
+    timeout: 10000,
+    retries: 0,
   });
 
-  return (data?.data?.children || []).map((c) => ({
-    id: c.data?.id,
-    title: c.data?.title,
-    subreddit: c.data?.subreddit_name_prefixed || c.data?.subreddit,
-    url: `https://reddit.com${c.data?.permalink}`,
-    score: c.data?.score,
-    numComments: c.data?.num_comments,
-    createdUtc: c.data?.created_utc,
-  }));
+  const comments = data?.[1]?.data?.children || [];
+  return comments
+    .map((c) => ({
+      id: c.data?.id,
+      body: normalizeBody(c.data?.body),
+      score: c.data?.score || 0,
+    }))
+    .filter((c) => c.body && c.body !== "[deleted]" && c.body !== "[removed]")
+    .slice(0, limit);
+}
+
+function normalizeBody(body) {
+  return String(body || "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 300);
+}
+
+function isRelevantPost(post, gameName) {
+  const text = normalizeText(post.title || "");
+  const game = normalizeText(gameName);
+  if (text.includes(game)) return true;
+  const textTokens = new Set(text.split(" "));
+
+  const primaryTokens = game
+    .split(" ")
+    .filter((token) => token.length > 2 && !/^\d+$/.test(token))
+    .slice(0, 2);
+
+  return primaryTokens.length >= 2 && primaryTokens.every((token) => textTokens.has(token));
+}
+
+function normalizeText(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
 }

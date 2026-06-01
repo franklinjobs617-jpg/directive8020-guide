@@ -16,7 +16,7 @@ export async function collectSteamDB(limit = 30) {
   try {
     const data = await fetchJSON(
       "https://store.steampowered.com/api/featuredcategories?cc=us&l=en",
-      { timeout: 20000 }
+      { timeout: 15000, retries: 0 }
     );
 
     // 热销
@@ -65,7 +65,7 @@ export async function collectSteamDB(limit = 30) {
   try {
     const html = await fetchText(
       "https://store.steampowered.com/search/?filter=popularnew&sort_by=Released_DESC&category1=998&os=win",
-      { headers: { Accept: "text/html" }, timeout: 25000 }
+      { headers: { Accept: "text/html" }, timeout: 15000, retries: 0 }
     );
 
     // 用正则从搜索结果提取游戏信息
@@ -139,7 +139,7 @@ async function getPlayerCounts(appIds) {
     try {
       const data = await fetchJSON(
         `https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=${appId}`,
-        { timeout: 8000 }
+        { timeout: 5000, retries: 0 }
       );
       if (data?.response?.player_count !== undefined) {
         counts[appId] = data.response.player_count;

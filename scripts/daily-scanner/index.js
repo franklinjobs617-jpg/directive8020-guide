@@ -25,6 +25,12 @@ import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import { config } from "./config.js";
 import { mergeGameCandidates, mergeKeywords } from "./utils/merge.js";
+import {
+  loadKeywordHistory,
+  saveKeywordHistory,
+  updateKeywordHistory,
+} from "./utils/history.js";
+import { generateBurstReport, selectTrendKeywordItems } from "./utils/burst.js";
 
 // ===== 核心来源（中国可用，无需 Key）=====
 import { collectSteamDB } from "./sources/steamdb.js";
@@ -34,10 +40,11 @@ import { collectYouTubeSuggest } from "./sources/youtube-suggest.js";
 
 // ===== 增强来源（需 API Key 或海外网络）=====
 import { collectIGDB } from "./sources/igdb.js";
-import { collectGoogleTrends } from "./sources/google-trends.js";
+import { collectGoogleTrends, collectKeywordTrendWindows } from "./sources/google-trends.js";
 import { collectYouTubeGaming } from "./sources/youtube.js";
 import { collectReddit } from "./sources/reddit.js";
 import { collectGSC } from "./sources/gsc.js";
+import { collectGoogleSerp } from "./sources/google-serp.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DRY_RUN = process.argv.includes("--dry");
@@ -77,7 +84,16 @@ async function main() {
     console.log(`  ✅ IGDB: ${igdbGames.length} 个游戏`);
   }
 
+  const trackedGames = normalizeTrackedGames(config.trackedGames || []);
   const allCandidates = mergeGameCandidates([
+    {
+      source: "tracked",
+      games: trackedGames.map((game) => ({
+        name: game.name,
+        appId: game.appId,
+        platform: "PC",
+      })),
+    },
     {
       source: "steamdb",
       games: steamdbGames.map((g) => ({
@@ -110,10 +126,13 @@ async function main() {
     return;
   }
 
-  const gameNames = allCandidates.map((c) => c.name);
   const steamApps = steamdbGames
     .filter((g) => g.appId)
     .map((g) => ({ appId: g.appId, name: g.name }));
+  const trackedSteamApps = trackedGames
+    .filter((g) => g.appId)
+    .map((g) => ({ appId: g.appId, name: g.name }));
+  const allSteamApps = uniqueSteamApps([...steamApps, ...trackedSteamApps]);
 
   // ==========================================
   // 阶段 ②: 关键词扫描（核心，全部公开可用）
@@ -122,15 +141,15 @@ async function main() {
   console.log("🔤 阶段 ②: 关键词扫描");
   console.log("━".repeat(50));
 
-  // 取 Top 10 Steam 热度游戏做深度扫描
-  const topGames = allCandidates
+  const priorityGames = trackedGames.map((g) => g.name);
+  const rankedGames = allCandidates
     .sort((a, b) => {
       const aPeak = (a.rawData?.steamdb?.currentPlayers || 0);
       const bPeak = (b.rawData?.steamdb?.currentPlayers || 0);
       return bPeak - aPeak;
     })
-    .slice(0, 10)
     .map((c) => c.name);
+  const topGames = uniqueNames([...priorityGames, ...rankedGames]).slice(0, config.deepScanLimit || 10);
 
   console.log(`  目标游戏: ${topGames.join(", ")}`);
   console.log("");
@@ -144,7 +163,7 @@ async function main() {
   console.log(`  ✅ YouTube Suggest: ${youtubeSuggestData.length} 个游戏有关键词`);
 
   console.log("  [核心] 正在抓取 Steam 社区讨论...");
-  const topSteamApps = steamApps.filter((a) => topGames.includes(a.name));
+  const topSteamApps = allSteamApps.filter((a) => topGames.includes(a.name));
   const steamCommunityData = await collectSteamCommunity(topSteamApps, config.steamCommunityLimit);
   console.log(`  ✅ Steam Community: ${steamCommunityData.length} 个游戏有新帖`);
 
@@ -171,7 +190,7 @@ async function main() {
     console.log(`  ✅ YouTube Gaming: ${youtubeData.length} 个游戏有新视频`);
 
     console.log("  [增强] 正在查询 Reddit...");
-    redditData = await collectReddit(topGames.slice(0, 5), 3);
+    redditData = await collectReddit(topGames.slice(0, 5), config.redditLimit);
     console.log(`  ✅ Reddit: ${redditData.length} 个游戏有讨论`);
 
     console.log("  [增强] 正在查询 GSC...");
@@ -201,6 +220,7 @@ async function main() {
 
   const now = new Date();
   const dateStr = now.toISOString().slice(0, 10);
+  const outputRoot = join(__dirname, config.outputDir);
   const outputDir = join(__dirname, config.outputDir, dateStr);
   if (!existsSync(outputDir)) {
     mkdirSync(outputDir, { recursive: true });
@@ -209,14 +229,61 @@ async function main() {
   const outputPath = join(outputDir, config.outputFile);
   writeFileSync(outputPath, JSON.stringify(output, null, 2), "utf-8");
 
+  console.log("");
+  console.log("━".repeat(50));
+  console.log("📊 生成 burst-report.json");
+  console.log("━".repeat(50));
+
+  const history = loadKeywordHistory(outputRoot);
+  const keywordItems = selectTrendKeywordItems(output.candidates, config.maxTrendKeywordChecks);
+  let keywordTrendData = [];
+  let serpData = { available: false, reason: FULL_MODE ? "not_requested" : "full_mode_required", results: [] };
+
+  if (FULL_MODE && keywordItems.length > 0) {
+    console.log(`  [规则] 正在查询关键词 Trends: ${keywordItems.length} 个`);
+    keywordTrendData = await collectKeywordTrendWindows(
+      keywordItems,
+      config.trendWindows,
+      config.maxTrendKeywordChecks
+    );
+    console.log(`  ✅ Keyword Trends: ${keywordTrendData.filter((t) => t.available).length} 个词有数据`);
+
+    console.log(`  [规则] 正在查询 Google SERP 前 ${config.serpResultLimit} 名...`);
+    serpData = await collectGoogleSerp(keywordItems, config.serpResultLimit);
+    console.log(
+      `  ✅ Google SERP: ${
+        serpData.available ? serpData.results.filter((r) => r.available).length : 0
+      } 个词有数据${serpData.available ? "" : `（${serpData.reason}）`}`
+    );
+  }
+
+  const burstReport = generateBurstReport({
+    rawData: output,
+    history,
+    keywordTrends: keywordTrendData,
+    serpData,
+    dateStr,
+    config,
+  });
+  const burstReportPath = join(outputDir, "burst-report.json");
+  writeFileSync(burstReportPath, JSON.stringify(burstReport, null, 2), "utf-8");
+
+  const nextHistory = updateKeywordHistory(history, output.candidates, dateStr);
+  saveKeywordHistory(outputRoot, nextHistory);
+
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
   console.log(`✅ 输出: ${outputPath}`);
+  console.log(`✅ 决策报告: ${burstReportPath}`);
+  console.log(`✅ 历史词库: ${join(outputRoot, "keyword-history.json")}`);
   console.log(`   候选游戏: ${output.summary.totalCandidates} 个`);
   console.log(`   含关键词: ${output.summary.withKeywords} 个`);
+  console.log(
+    `   选题决策: build_now ${burstReport.summary.buildNow} / watch ${burstReport.summary.watch} / drop ${burstReport.summary.drop}`
+  );
   console.log(`   耗时: ${elapsed}s`);
   console.log("");
   console.log("🎉 数据采集完成！");
-  console.log("   下一步: 把 raw-data.json 交给 AI 分析生成日报。");
+  console.log("   下一步: 查看 burst-report.json 的 build_now / watch / drop。");
   if (!FULL_MODE) {
     console.log("   💡 提示: 用 --full 模式可启用增强来源（Google Trends / Reddit / YouTube / IGDB）");
   }
@@ -243,6 +310,13 @@ function buildOutput(data) {
     const extraKeywords = [];
     for (const p of reddit?.posts || []) {
       extraKeywords.push({ keyword: p.title, source: "reddit" });
+      for (const c of p.comments || []) {
+        const phrase = extractQuestionPhrase(c.body);
+        if (phrase) extraKeywords.push({ keyword: phrase, source: "reddit_comment" });
+      }
+    }
+    for (const p of steam?.posts || []) {
+      extraKeywords.push({ keyword: p.title, source: "steam_community" });
     }
 
     return {
@@ -265,6 +339,7 @@ function buildOutput(data) {
 
       keywords: [...mergeKeywords(name, allKeywordSources), ...extraKeywords],
       redditPosts: reddit?.posts || [],
+      steamPosts: steam?.posts || [],
       steamInfo: steam
         ? { tags: steam.tags, reviewSummary: steam.reviewSummary, description: steam.description }
         : null,
@@ -287,6 +362,7 @@ function buildOutput(data) {
     candidates,
     meta: {
       sources: {
+        tracked: (config.trackedGames || []).length > 0,
         steamdb: data.steamdbGames.length > 0,
         igdb: data.igdbGames.length > 0,
         googleTrends: data.trendsData.length > 0,
@@ -299,6 +375,54 @@ function buildOutput(data) {
       },
     },
   };
+}
+
+function uniqueNames(names) {
+  const seen = new Set();
+  const out = [];
+  for (const name of names) {
+    const key = name.toLowerCase().trim();
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    out.push(name);
+  }
+  return out;
+}
+
+function normalizeTrackedGames(games) {
+  return games
+    .map((game) => {
+      if (typeof game === "string") return { name: game };
+      return game;
+    })
+    .filter((game) => game?.name);
+}
+
+function uniqueSteamApps(apps) {
+  const seen = new Set();
+  const out = [];
+  for (const app of apps) {
+    if (!app?.appId || seen.has(app.appId)) continue;
+    seen.add(app.appId);
+    out.push(app);
+  }
+  return out;
+}
+
+function extractQuestionPhrase(text) {
+  if (!text) return null;
+  const clean = text
+    .replace(/https?:\/\/\S+/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!clean) return null;
+
+  const lower = clean.toLowerCase();
+  const hasSearchIntent =
+    clean.includes("?") ||
+    /\b(how|where|what|why|which|best|stuck|crash|fix|build|settings|unlock|find|beat)\b/.test(lower);
+
+  return hasSearchIntent ? clean.slice(0, 140) : null;
 }
 
 main().catch((err) => {

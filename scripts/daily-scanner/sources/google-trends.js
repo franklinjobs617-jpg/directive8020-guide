@@ -62,45 +62,105 @@ export async function collectGoogleTrends(gameNames, baseline = "gpts") {
   return results;
 }
 
-async function getTrendData(keyword) {
+export async function collectKeywordTrendWindows(keywordItems, windows, limit = 20) {
+  const results = [];
+  firstErrorLogged = false;
+
+  for (const item of keywordItems.slice(0, limit)) {
+    const windowData = {};
+    let hasData = false;
+
+    for (const window of windows) {
+      try {
+        const trend = await getTrendData(item.keyword, window);
+        await sleep(1200);
+        if (trend) {
+          windowData[window] = trend;
+          hasData = true;
+        }
+      } catch (err) {
+        if (!firstErrorLogged) {
+          console.warn(`  ⚠️ Keyword Trends 请求失败 (${item.keyword}): ${err.message}`);
+          firstErrorLogged = true;
+        }
+      }
+    }
+
+    results.push({
+      gameName: item.gameName,
+      keyword: item.keyword,
+      source: "google_trends",
+      available: hasData,
+      windows: windowData,
+    });
+  }
+
+  return results;
+}
+
+async function getTrendData(keyword, time = "today 1-m") {
   const reqBody = {
-    comparisonItem: [{ keyword, geo: "", time: "today 1-m" }],
+    comparisonItem: [{ keyword, geo: "", time }],
     category: 0,
     property: "",
   };
 
-  const url = `https://trends.google.com/trends/api/explore?hl=en-US&tz=0&req=${encodeURIComponent(JSON.stringify(reqBody))}&tz=0`;
+  const exploreUrl = `https://trends.google.com/trends/api/explore?hl=en-US&tz=0&req=${encodeURIComponent(
+    JSON.stringify(reqBody)
+  )}`;
 
-  const text = await fetchText(url, {
+  const exploreText = await fetchText(exploreUrl, {
     headers: {
       Accept: "application/json",
       "Accept-Language": "en-US,en;q=0.9",
     },
-    timeout: 15000,
+    timeout: 10000,
+    retries: 0,
   });
 
-  // Google Trends 返回前缀 ")]}'"
-  const cleanJson = text.replace(/^\)\]\}'\n?/, "");
-  const data = JSON.parse(cleanJson);
+  const exploreData = parseGoogleJson(exploreText);
+  const widget = exploreData?.widgets?.find(
+    (w) => w.id === "TIMESERIES" && w.token
+  );
+  if (!widget) return null;
 
-  // 提取时间线 widget
-  const widget = data?.widgets?.find((w) => w.token);
-  const bullets = widget?.tokens?.[0]?.bullets || [];
+  const timelineUrl = `https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=0&req=${encodeURIComponent(
+    JSON.stringify(widget.request)
+  )}&token=${encodeURIComponent(widget.token)}`;
+  const timelineText = await fetchText(timelineUrl, {
+    headers: {
+      Accept: "application/json",
+      "Accept-Language": "en-US,en;q=0.9",
+    },
+    timeout: 10000,
+    retries: 0,
+  });
 
-  if (bullets.length === 0) return null;
+  const timelineData = parseGoogleJson(timelineText);
+  const values = (timelineData?.default?.timelineData || [])
+    .map((p) => Number(p.value?.[0] || 0))
+    .filter((value) => Number.isFinite(value));
 
-  const values = bullets.map((p) => p.value || 0);
+  if (values.length === 0) return null;
   const avgValue = values.reduce((a, b) => a + b, 0) / values.length;
 
-  const half = Math.floor(values.length / 2);
+  const half = Math.max(1, Math.floor(values.length / 2));
   const recentAvg = values.slice(-half).reduce((a, b) => a + b, 0) / half;
   const olderAvg = values.slice(0, half).reduce((a, b) => a + b, 0) / half;
 
   const direction7d =
-    recentAvg > olderAvg * 1.1 ? "up" : recentAvg < olderAvg * 0.9 ? "down" : "stable";
+    recentAvg > olderAvg * 1.1
+      ? "up"
+      : recentAvg < olderAvg * 0.9
+      ? "down"
+      : "stable";
   const direction30d = recentAvg > olderAvg ? "up" : "down";
 
   return { avgValue, direction7d, direction30d };
+}
+
+function parseGoogleJson(text) {
+  return JSON.parse(text.replace(/^\)\]\}',?\n?/, ""));
 }
 
 function sleep(ms) {
