@@ -68,6 +68,7 @@ export default function RootLayout({
         {/* ========================================================= */}
         {/* 1. Ezoic 隐私合规脚本 (在 sa.min.js 之前加载以确保合规性) */}
         {/* ========================================================= */}
+        <meta name="msvalidate.01" content="AF7A71774B31B882258DD5FDB265DB04" />
         <Script
           id="ezoic-cmp-1"
           src="https://cmp.gatekeeperconsent.com/min.js"
