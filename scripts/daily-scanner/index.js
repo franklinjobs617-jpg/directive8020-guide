@@ -239,11 +239,8 @@ function buildOutput(data) {
     if (ys) allKeywordSources.push(ys);
     if (youtube) allKeywordSources.push({ source: "youtube", keywords: youtube.keywords || [] });
 
-    // 从 Reddit/Steam 帖子里提取问题作为关键词
+    // 从 Reddit 帖子里提取问题作为关键词
     const extraKeywords = [];
-    for (const p of steam?.posts || []) {
-      extraKeywords.push({ keyword: p.title, source: "steam_community" });
-    }
     for (const p of reddit?.posts || []) {
       extraKeywords.push({ keyword: p.title, source: "reddit" });
     }
@@ -268,7 +265,9 @@ function buildOutput(data) {
 
       keywords: [...mergeKeywords(name, allKeywordSources), ...extraKeywords],
       redditPosts: reddit?.posts || [],
-      steamPosts: steam?.posts || [],
+      steamInfo: steam
+        ? { tags: steam.tags, reviewSummary: steam.reviewSummary, description: steam.description }
+        : null,
     };
   });
 
