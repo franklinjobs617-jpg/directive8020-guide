@@ -31,6 +31,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Directive 8020 Guide Hub" }],
   other: {
     "google-adsense-account": "ca-pub-3383070348689557",
+    "msvalidate.01": "AF7A71774B31B882258DD5FDB265DB04",
   },
   openGraph: {
     title: "Directive 8020 Guide - All Endings, Choices & Walkthrough",
