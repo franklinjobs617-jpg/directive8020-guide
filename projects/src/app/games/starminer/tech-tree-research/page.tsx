@@ -15,7 +15,7 @@ export const metadata = createStarminerMetadata({
   title,
   description,
   canonical,
-  image: starminerImages.station,
+  image: starminerImages.officialBuild,
 });
 
 const faqs = [
@@ -86,7 +86,7 @@ export default function StarminerTechPage() {
       canonical={canonical}
       label="Tech Tree & Research"
       heroImage={starminerImages.station}
-      heroAlt="Starminer research station with modules and tech tree interface"
+      heroAlt="Starminer modular ship and station construction with build interface"
       faqs={faqs}
       showSources={false}
     >

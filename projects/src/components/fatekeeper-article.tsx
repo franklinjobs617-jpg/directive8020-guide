@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { PageHero } from "@/components/page-hero";
 import { FAQSection } from "@/components/faq-section";
+import { ArticleImage } from "@/components/article-media";
 import {
   JsonLd,
   generateArticleSchema,
@@ -11,6 +12,7 @@ import {
 import { RelatedGuides } from "@/components/guide-blocks";
 import { fatekeeper } from "@/lib/games";
 import {
+  fatekeeperImages,
   fatekeeperLastModified,
   getFatekeeperRelated,
 } from "@/lib/fatekeeper";
@@ -81,7 +83,17 @@ export function FatekeeperArticle({
 
         {children}
 
+        <ArticleImage
+          src={fatekeeperImages.exploration}
+          alt="Fatekeeper handcrafted world with ruins, caves, and forests to explore"
+          caption="Fatekeeper's world is fully handcrafted — no procedural generation. Explore side paths when you have enough resources to safely return."
+        />
         <RelatedGuides guides={getFatekeeperRelated(canonical)} />
+        <ArticleImage
+          src={fatekeeperImages.relics}
+          alt="Fatekeeper relics and inventory management interface"
+          caption="Every relic, weapon, and armor piece matters. Test loadout combinations before committing to a build direction."
+        />
         <FAQSection faqs={faqs} />
       </article>
     </>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleImage } from "@/components/article-media";
 import { ActionTable, BlufBox, SearchAnswerPanel, StatusPanel } from "@/components/guide-blocks";
 import { FatekeeperArticle } from "@/components/fatekeeper-article";
 import {
@@ -208,6 +209,12 @@ export default function FatekeeperAlchemyPage() {
           ))}
         </div>
       </section>
+
+      <ArticleImage
+        src={fatekeeperImages.combat}
+        alt="Fatekeeper environmental combat — kicking enemies into spike walls"
+        caption="Environmental kills are Fatekeeper's strongest combat tool. Use Telekinesis to pull enemies into spike walls, off ledges, or into each other for instant kills."
+      />
     </FatekeeperArticle>
   );
 }
