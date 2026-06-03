@@ -90,19 +90,16 @@ export default function ProjectMistWeaponsPage() {
       showSources={false}
     >
       <BlufBox title="BLUF">
-        <strong>Shotgun</strong> is the best early weapon (Greenhouse armory).
-        Pair with <strong>Rifle</strong> (Comm Tower) for medium range. Craft ammo
-        at workbench: <strong>gunpowder + scrap metal</strong>. Medkits:{" "}
-        <strong>cloth + alcohol + herb</strong>. Rush Gravity Gun to{" "}
-        <strong>Tier 2</strong> (thrown objects deal 3x pistol damage). Build
-        train base in this order: Storage → Workbench T2 → Armory → Turrets.
-        Scrap every duplicate weapon for metal. You cannot buy ammo — crafting is
-        mandatory for survival.
+        The Gravity Gun is your best tool — upgrade it with Blood Orbs as soon as
+        you can. The Steam page confirms crafting exists, and you can't buy ammo,
+        so learning recipes matters. Specific weapon locations and crafting
+        formulas below are from community reports and preview footage, not our
+        own testing yet. <strong>We'll verify and update.</strong>
       </BlufBox>
 
       <SearchAnswerPanel
         title="Project: Mist Weapons & Crafting"
-        answer="Shotgun (Greenhouse) and Rifle (Comm Tower) are the best early weapons. Craft ammo with gunpowder + scrap metal. Medkits: cloth + alcohol + herb. Upgrade Gravity Gun to Tier 2 ASAP."
+        answer="Gravity Gun with Blood Orb upgrades is your core tool. Crafting is confirmed but specific recipes need verification. Community reports are our current source — we're testing firsthand."
         intentRows={searchIntentRows}
         jumpLinks={jumpLinks}
       />

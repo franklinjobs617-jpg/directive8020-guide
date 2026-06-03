@@ -21,24 +21,24 @@ export const metadata = createStarminerMetadata({
 
 const faqs = [
   {
-    question: "What is the best starter ship in Starminer?",
+    question: "What's the best starter ship?",
     answer:
-      "A dedicated mining ship with 2x T1 Mining Lasers, 1x Basic Smelter, 2x Cargo modules, 4x Small Thrusters, 1x Small Reactor, and 1x Crew Quarters. Keep it under 6 hulk spheres long so it can dock at the mothership.",
+      "A mining ship. Two T1 mining lasers, a basic smelter, a couple cargo modules, small thrusters, a reactor, and crew quarters. Keep it short — 6 hulk spheres max, or it won't dock at the mothership. The full module counts are in the table below.",
   },
   {
-    question: "How do I save and reuse ship blueprints?",
+    question: "How do blueprints work?",
     answer:
-      "Once a ship design is stable, use the blueprint save function in the build menu. Saved blueprints can be placed and constructed at any construction socket. Multiple blueprints can be built simultaneously if you have the materials.",
+      "Build something that works, save it from the build menu, then reconstruct it at any construction socket. You can have multiple blueprints building at once. No limit on how many you save.",
   },
   {
-    question: "How big should my ship be?",
+    question: "How big can I build?",
     answer:
-      "Keep ships under 5-6 hulk spheres in length to ensure they can dock inside the mothership. Larger designs are possible for stations and capital ships, but early-game ships should be compact and specialized.",
+      "Stations and capital ships can get huge — the devs mention 150,000-ton warships. But your early ships need to stay under 6 hulk spheres long to dock. Bigger isn't always better. A compact ship maneuvers better, defends easier, and costs less to run.",
   },
   {
-    question: "Should I build one big ship or many small ones?",
+    question: "One big ship or many small ones?",
     answer:
-      "Many small, specialized ships are better than one multi-role vessel. Separate mining, hauling, patrol, and research functions so you can iterate on each design independently and replace losses without crippling your entire operation.",
+      "Many small ones. Separate your mining, hauling, and combat roles. If your one do-everything ship gets blown up, you're dead in the water. If you lose a hauler, the miners keep mining and you just build another.",
   },
 ];
 
@@ -91,17 +91,17 @@ export default function StarminerBlueprintsPage() {
       showSources={false}
     >
       <BlufBox title="BLUF">
-        Build specialized ships by role, not one multi-purpose vessel. Your first
-        ship should be a <strong>mining ship</strong> (2x T1 Mining Lasers + Basic
-        Smelter + 2x Cargo). Second: a <strong>hauler</strong> (4x Cargo, no mining
-        gear) to double throughput. Third: a <strong>patrol boat</strong> when heat
-        hits yellow (150+ kW). Keep all ships under <strong>6 hulk spheres</strong>{" "}
-        long to dock at the mothership. Save every working design as a blueprint.
+        One ship, one job. Start with a <strong>mining ship</strong> — mine and
+        refine in one pass, keep it under 6 hulk spheres so it docks. Once ore is
+        flowing, build a <strong>hauler</strong> to move it. When your heat
+        signature turns yellow, add a <strong>patrol boat</strong>. Save working
+        designs as blueprints. Exact module counts are our best guesses based on
+        the dev diary — test and tweak.
       </BlufBox>
 
       <SearchAnswerPanel
         title="Starminer Ship Blueprints & Starter Designs"
-        answer="5 role-specific designs: mining ship, hauler, patrol boat, research station, and defense platform. Each with complete module lists, build order, and when to build them."
+        answer="Five designs to get you through the first 10 hours. Starts with a mining ship, ends with a defense platform. Module counts are our recommendations — adjust based on what you're hauling and how much heat you're generating."
         intentRows={searchIntentRows}
         jumpLinks={jumpLinks}
       />

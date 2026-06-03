@@ -99,18 +99,17 @@ export default function FatekeeperLengthPage() {
       faqs={faqs}
     >
       <BlufBox title="BLUF">
-        Fatekeeper's Early Access launch contains about <strong>2 hours</strong> of
-        content. The full 1.0 release is targeting <strong>~15 hours</strong> on a
-        development timeline of approximately 18 months. At the current $7-10 price
-        point, you're buying early supporter access — the price will rise as content
-        grows. Save files are in{" "}
-        <strong>%USERPROFILE%\AppData\Local\Fatekeeper\Saved\SaveGames</strong>.
-        Back them up before major patches.
+        Two hours. That's what you get right now — enough to test the combat, try
+        a build, fight the first boss. The full game is aiming for 15 hours, about
+        18 months out. At $7-10, it's cheap. No autosaves — save manually, and
+        back up{" "}
+        <strong>%USERPROFILE%\AppData\Local\Fatekeeper\Saved\SaveGames</strong>{" "}
+        before patches hit.
       </BlufBox>
 
       <SearchAnswerPanel
         title="Fatekeeper Length & Save Data"
-        answer="The Early Access launch build has about 2 hours of content. The full release targets 15 hours. Save files are at %USERPROFILE%\\AppData\\Local\\Fatekeeper\\Saved\\SaveGames."
+        answer="About 2 hours in the current build, ~15 hours at full release. Manual saves only — no autosave. Back up your save folder before patches."
         intentRows={searchIntentRows}
         jumpLinks={jumpLinks}
       />
@@ -138,11 +137,9 @@ export default function FatekeeperLengthPage() {
             <strong>15 hours</strong> of content.
           </p>
           <p className="leading-relaxed text-muted-foreground">
-            As with all Early Access titles, these targets may shift based on
-            development progress, community feedback, and scope adjustments. Major
-            content updates are expected to land every few months during Early
-            Access. Check the Steam store page and official developer channels for
-            the latest roadmap updates.
+            Early Access timelines drift — that's normal. Paraglacial is a tiny
+            team (13 people). Major updates should land every few months. Keep an
+            eye on the Steam page for roadmap changes.
           </p>
         </div>
       </section>

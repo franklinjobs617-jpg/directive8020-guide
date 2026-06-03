@@ -85,18 +85,17 @@ export default function StarminerMoneyPage() {
       showSources={false}
     >
       <BlufBox title="BLUF">
-        The fastest way to make money in Starminer: sell{" "}
-        <strong>Cobalt (72 credits/unit)</strong> and{" "}
-        <strong>Thorium Chunks (360 credits/unit)</strong> at trade stations. Cobalt
-        is common in debris fields. Thorium is found in C-class asteroids. One
-        Thorium Chunk clears your starting debt. Build a T2 Metal Storage module
-        and set it to auto-sell surplus for passive income. Avoid selling Iron or
-        Silicone — at 12 credits/unit, they're worth more as construction materials.
+        Cobalt and Thorium. That's where the money is. Cobalt sells for 72 a unit
+        and piles up in debris fields. Thorium goes for 360 a chunk — two of them
+        clear your starting debt. Iron and Silicone are 12 each, barely worth
+        hauling to a station. Sell those only if you're desperate. Build a T2
+        Metal Storage and let it auto-sell while you focus on expansion. Prices
+        sourced from TheGameSlayer's guide — test and adjust.
       </BlufBox>
 
       <SearchAnswerPanel
         title="Starminer Money Making Guide"
-        answer="Sell Cobalt (72 cr/unit) and Thorium (360 cr/unit). Use T2 Metal Storage for auto-selling. Clear debt in first 2 hours. Complete missions for bonus income."
+        answer="Cobalt and Thorium are your cash crops. Build a T2 Metal Storage and let it auto-sell. Clear debt early — interest stacks up. Missions add income and XP on the side."
         intentRows={searchIntentRows}
         jumpLinks={jumpLinks}
       />

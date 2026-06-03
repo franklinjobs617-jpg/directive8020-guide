@@ -25,22 +25,22 @@ const faqs = [
   {
     question: "What spells are in Fatekeeper Early Access?",
     answer:
-      "Four spells confirmed: Telekinesis (pull enemies into hazards — reported as the most useful), Fireball (direct damage), Frost Bolt (slow + damage), and Wind Push (knockback/crowd control). The three damage spells reportedly deal low damage compared to Telekinesis, and mana is limited.",
+      "Four: Telekinesis, Fireball, Frost Bolt, and Wind Push. Telekinesis is the clear winner right now — environmental kills one-shot enemies. The damage spells are undertuned and mana runs out fast. This is based on Game8's June 2 review.",
   },
   {
     question: "Does Fatekeeper have a crafting or alchemy system?",
     answer:
-      "Yes. The Steam store page and developer descriptions mention alchemy and crafting systems. Specific recipes, ingredient names, and crafting station locations need verification through direct gameplay. The Game8 review confirms consumables exist but notes they have slow, uncancelable use animations.",
+      "Steam says yes. The store page and developer notes mention alchemy. But we haven't tested the recipes ourselves yet, so we're not going to list ingredient combinations we can't verify. Game8 confirms consumables are in the game — they just have slow, uncancelable animations that make them risky to use mid-fight.",
   },
   {
     question: "How do consumables work in Fatekeeper?",
     answer:
-      "Consumables exist but have slow use animations that cannot be canceled once started (reported by Game8 review). Plan consumable use before engaging enemies. This mechanic is expected to be balanced during Early Access.",
+      "Slowly. You can't cancel the animation once it starts, so popping a potion while an enemy is charging at you is a death sentence. Use them before fights, not during. This is a known rough edge — the devs have 18 months of Early Access to balance it.",
   },
   {
-    question: "Which spell is best in Fatekeeper?",
+    question: "Which spell should I use?",
     answer:
-      "Telekinesis is reported as the most useful spell because it can pull enemies into environmental hazards (spike walls, ledges) for instant kills. The three elemental damage spells (Fireball, Frost Bolt, Wind Push) reportedly deal negligible damage in the current Early Access build and mana feels too limited for frequent casting.",
+      "Telekinesis. The other three don't deal enough damage to justify the mana cost right now. Pull enemies into walls, off cliffs, into each other. The game gives you environmental hazards for a reason.",
   },
 ];
 
@@ -101,22 +101,20 @@ export default function FatekeeperAlchemyPage() {
       faqs={faqs}
     >
       <BlufBox title="BLUF">
-        Four spells confirmed in Fatekeeper Early Access:{" "}
-        <strong>Telekinesis</strong> (pull enemies into hazards — most useful),{" "}
-        <strong>Fireball</strong> (direct damage), <strong>Frost Bolt</strong>{" "}
-        (slow + damage), and <strong>Wind Push</strong> (knockback). Telekinesis
-        is the strongest because environmental kills (spike walls, ledges) can
-        one-shot enemies. An alchemy/crafting system exists but specific recipes
-        and ingredient locations are not yet verified from primary gameplay
-        sources. This page will be updated as we test and confirm.{" "}
-        <em>Sources: Game8 review, Steam store page, developer descriptions.</em>
+        Fatekeeper ships with four spells. <strong>Telekinesis</strong> is the
+        standout — yank an enemy into a spike wall or off a ledge and the fight's
+        over. The other three (Fireball, Frost Bolt, Wind Push) exist but don't
+        hit hard enough to matter right now. Mana runs dry fast. The alchemy
+        system is mentioned on Steam but we haven't dug into it yet — we'll update
+        this page once we've tested recipes firsthand.{" "}
+        <em>Spell data from Game8's June 2 review.</em>
       </BlufBox>
 
       <StatusPanel items={keyFacts} />
 
       <SearchAnswerPanel
         title="Fatekeeper Spells & Crafting"
-        answer="4 spells: Telekinesis, Fireball, Frost Bolt, Wind Push. Alchemy exists but specific recipes need verification. Consumables have slow, uncancelable animations — plan use before combat."
+        answer="Four spells in the current build. Telekinesis is the one you'll actually use — environmental kills end fights instantly. Alchemy exists but we're still testing recipes. Pop consumables before combat, not during."
         intentRows={searchIntentRows}
         jumpLinks={jumpLinks}
       />
@@ -131,23 +129,23 @@ export default function FatekeeperAlchemyPage() {
           {[
             {
               name: "Telekinesis",
-              rating: "Best (S-Tier)",
-              desc: "Pull enemies toward you or into environmental hazards. Can throw enemies off ledges, into spike walls, or into each other for gravity kills. Reported as the most useful spell by a wide margin.",
+              rating: "Pick this one",
+              desc: "Pull enemies into spike walls. Throw them off ledges. Slam them into each other. Instant kills if you position right — and positioning is the whole game. By far the most useful spell in the current build.",
             },
             {
               name: "Fireball",
-              rating: "Weak (C-Tier)",
-              desc: "Direct damage projectile. Reportedly deals negligible damage compared to melee attacks. May improve with gear scaling or balance patches.",
+              rating: "Skip it for now",
+              desc: "Looks cool. Doesn't kill things. Your melee attacks hit harder, cost no mana, and don't leave you standing still casting. Maybe gear scaling fixes this later.",
             },
             {
               name: "Frost Bolt",
-              rating: "Situational (B-Tier)",
-              desc: "Slows enemies and deals ice damage. The slow effect has utility for crowd control, but damage output is reportedly low.",
+              rating: "Maybe useful",
+              desc: "The slow effect can buy you breathing room against fast enemies. Damage is negligible, but crowd control has its moments. Worth testing if you're struggling with aggressive mobs.",
             },
             {
               name: "Wind Push",
-              rating: "Situational (B-Tier)",
-              desc: "Knockback and crowd control. Can push enemies into hazards or create breathing room. Damage is reportedly negligible.",
+              rating: "Situational",
+              desc: "Knocks enemies back. Handy near ledges or spike walls. Otherwise, you're spending mana to move an enemy two feet. Telekinesis does the same job better.",
             },
           ].map((spell) => (
             <div key={spell.name} className="rounded-lg border border-d8020/25 bg-d8020/5 p-5">

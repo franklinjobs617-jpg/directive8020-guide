@@ -22,37 +22,37 @@ const faqs = [
   {
     question: "How many bosses are in Project: Mist Early Access?",
     answer:
-      "Five major boss encounters: Chomper (first boss), Giant Stalker (forest facility), Swarm Mother (underground hive), Armored Behemoth (industrial zone), and Facility Warden (final EA boss). More bosses are planned during Early Access development.",
+      "The Steam store page mentions multiple giant creature encounters. We've seen references to about five major fights in community discussions, but we haven't confirmed the exact count or names ourselves yet. The developer plans to add more bosses during Early Access.",
   },
   {
-    question: "What is the best weapon for boss fights?",
+    question: "What's the best approach for boss fights?",
     answer:
-      "Shotgun for close-range burst damage and revealing invisible enemies. Rifle for sustained medium-range damage. EMP grenades for stunning armored bosses. Always carry at least 40 rounds of primary ammo and 3 medkits before entering a boss arena.",
+      "Bring more ammo and medkits than you think you'll need. The Gravity Gun is useful for throwing objects during fights. In co-op, split roles — one player draws attention while others deal damage. Beyond that, we're still testing and will update this page with specifics.",
   },
   {
-    question: "How do I beat the Chomper boss?",
+    question: "How do I beat the first boss?",
     answer:
-      "Target the blood tanks on its back — they glow red after the charge attack. Stay mobile and use cover to break line of sight. The Gravity Gun can pull explosive barrels into its path for bonus damage.",
+      "We're still working on confirming boss strategies through actual gameplay. In the meantime, the Steam Community Discussions have active threads where players share what's working for them. Check there for the latest.",
   },
 ];
 
 const searchIntentRows = [
   {
     query: "Project Mist boss guide",
-    answer: "5 bosses: Chomper (back tanks), Giant Stalker (shotgun reveal), Swarm Mother (kill sacs first), Armored Behemoth (flank), Facility Warden (multi-phase).",
+    answer: "We're documenting boss fights as we play through the game. The Steam store page confirms multiple giant creature encounters. Check back for updates.",
     href: "#boss-list",
     label: "Bosses",
   },
   {
-    query: "Project Mist how to beat Chomper",
-    answer: "Shoot the red blood tanks on its back. Use Gravity Gun to throw explosive barrels. Stay mobile during charge attacks.",
-    href: "#chomper",
-    label: "Chomper",
+    query: "Project Mist boss tips",
+    answer: "Stock up on ammo and medkits before boss areas. Use the Gravity Gun during fights. Co-op helps — split aggro and damage roles.",
+    href: "#boss-prep",
+    label: "Tips",
   },
   {
     query: "Project Mist giant creatures",
-    answer: "Each giant creature has a specific weakness. Stalkers are revealed by shotguns. Behemoths must be flanked. Swarm Mothers need sac destruction.",
-    href: "#creature-types",
+    answer: "Steam page mentions giant creatures as a core feature. We're working through these fights and testing strategies. Updates coming.",
+    href: "#boss-list",
     label: "Creatures",
   },
 ];
@@ -77,18 +77,15 @@ export default function ProjectMistBossesPage() {
       showSources={false}
     >
       <BlufBox title="BLUF">
-        Five major boss fights in the Project: Mist Early Access build. Every boss
-        has a specific weakness: <strong>Chomper</strong> — shoot the red blood
-        tanks on its back. <strong>Giant Stalker</strong> — shotgun blast reveals
-        it. <strong>Swarm Mother</strong> — destroy ceiling sacs first to stop
-        adds. <strong>Armored Behemoth</strong> — flank to hit rear legs.{" "}
-        <strong>Facility Warden</strong> — multi-phase: shoot power conduits, then
-        hit-and-run. Always bring 40+ rounds and 3 medkits per fight.
+        We haven't fought these bosses ourselves yet — the specific names and
+        strategies below come from Steam community reports and preview coverage,
+        not firsthand testing. Treat them as a starting point, not a guarantee.{" "}
+        <strong>We'll update this page after we've put in the hours.</strong>
       </BlufBox>
 
       <SearchAnswerPanel
         title="Project: Mist Boss & Creature Guide"
-        answer="Five bosses with unique weaknesses. Chomper: back tanks. Stalker: shotgun reveal. Swarm Mother: ceiling sacs. Behemoth: flank rear legs. Warden: shoot conduits then melee dodge."
+        answer="We're still documenting the boss fights. Check the Steam Community Discussions for the latest player-reported strategies, or join our Reddit to share what you've found."
         intentRows={searchIntentRows}
         jumpLinks={jumpLinks}
       />

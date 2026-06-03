@@ -91,18 +91,18 @@ export default function StarminerTechPage() {
       showSources={false}
     >
       <BlufBox title="BLUF">
-        Research in Starminer costs <strong>credits</strong>, not research points.
+        You pay for research with credits, not some separate research currency.
         Build a Research Lab (100 Iron, 50 Silicones, 10 Cobalt, 500 Energy),
-        assign a worker, and it generates research points passively. Spend credits
-        in the <strong>Operations Interface → Research tab</strong> to unlock
-        modules. Level up by completing missions for faster access to high-tier
-        tech. Optimal unlock order:{" "}
-        <strong>Mining → Energy → Industry → Weapons → Colonists → Fleet</strong>.
+        staff it, and it trickles in research points. The real unlock order that
+        works: <strong>Mining → Energy → Industry</strong>. Everything else waits.
+        Weapons? Only when aliens start showing up. Colonists and Fleet? Late
+        game — they eat resources without paying you back early on. Level up
+        through missions for faster access to higher-tier blueprints.
       </BlufBox>
 
       <SearchAnswerPanel
         title="Starminer Tech Tree & Research"
-        answer="Research uses credits, not research points. Build a Research Lab first. Prioritize Mining modules, then Energy, then Industry. Weapons only when heat becomes a problem. Level up via missions for faster unlocks."
+        answer="Research costs credits. Prioritize Mining, then Energy, then Industry. Hold off on Weapons until heat attracts aliens. Colonists and Fleet are late-game — they drain resources without early returns."
         intentRows={searchIntentRows}
         jumpLinks={jumpLinks}
       />
