@@ -271,6 +271,29 @@ export const projectMistBuildingRows = [
   ],
 ];
 
+// WARNING: Specific boss mechanics, weaknesses, and strategies below have NOT been
+// verified from primary gameplay sources. Boss counts and general creature types are
+// inferred from Steam store descriptions and game preview coverage. Exact attack
+// patterns, weak points, damage values, and arena mechanics need gameplay testing.
+// Source: Steam store page mentions "giant creatures" and "boss fights."
+// Source: Eneba preview mentions the Gravity Gun role in combat.
+export const projectMistBossRows = [
+  { step: "Boss encounters (unverified)", doThis: "Project: Mist features giant creature boss fights according to the Steam store page and preview coverage. Specific boss names, attack patterns, weak points, and strategies need verification through direct gameplay.", why: "Not yet verified from primary gameplay. This section will be updated after hands-on testing. Check Steam community discussions for player-reported strategies." },
+  { step: "General boss tips", doThis: "Craft extra ammo and medkits before boss arenas. Use the Gravity Gun to interact with environmental objects during fights. In co-op, assign roles: one player draws aggro, one deals damage, one supports.", why: "Source: Steam store page confirms Gravity Gun and co-op mechanics. These general survival-horror boss principles apply but specific encounters need testing." },
+];
+
+// VERIFIED: Gravity Gun with Blood Orb upgrades from Steam store page and Eneba preview
+// VERIFIED: Train base is upgradeable and serves as mobile base (Steam store)
+// VERIFIED: Crafting system exists (Steam store tags: "Crafting")
+// NEEDS VERIFICATION: Specific weapon locations, crafting recipes, material names
+// Source: Steam discussions reference lockpicking, crafting, and base building questions
+export const projectMistCraftingRows = [
+  { step: "Gravity Gun Upgrades", doThis: "The Gravity Gun can be upgraded via Blood Orbs in the perks system. Tier 2 reportedly allows throwing objects as projectiles. This is a core combat and puzzle-solving tool.", why: "Source: Steam store page and Eneba preview confirm Gravity Gun + Blood Orb upgrade system. Exact tier effects need gameplay verification." },
+  { step: "Weapons", doThis: "Multiple weapons are available including a starting pistol. Steam discussions and preview footage reference a shotgun and rifle. Exact weapon names, locations, and stats need verification.", why: "Source: Preview coverage and Steam community discussions. Specific weapons not yet verified from primary gameplay." },
+  { step: "Crafting Materials", doThis: "Crafting uses materials found in the world. Steam tags list 'Crafting' as a feature. Specific recipes, material names, and farming locations need verification through gameplay.", why: "Source: Steam store page confirms crafting system. No specific recipes verified from primary sources yet." },
+  { step: "Train Base Upgrades", doThis: "The moving train base can be upgraded and fortified according to the Steam store description. Build priorities and specific upgrade types need verification.", why: "Source: Steam store page: 'upgradeable, fortifiable, and always on the move.' Specific upgrade tree needs testing." },
+];
+
 export const projectMistWorthItRows = [
   [
     "Best fit",
@@ -470,6 +493,11 @@ const projectMistKeywords = [
   "Project Mist worth it",
   "Project Mist Gravity Gun",
   "Project Mist train base",
+  "Project Mist bosses",
+  "Project Mist giant creatures",
+  "Project Mist weapons",
+  "Project Mist crafting",
+  "Project Mist best gear",
 ];
 
 export function createProjectMistMetadata({

@@ -94,6 +94,53 @@ export const starminerStartRows = [
     "Use the worth-it page if your decision depends on Early Access risk, price, reviews, Steam Deck, or single-player scope.",
     "/games/starminer/is-it-worth-it",
   ],
+  [
+    "Need ship blueprints?",
+    "Use the blueprints page for 5 proven starter designs with module lists, build order, and role-specific tips.",
+    "/games/starminer/ship-blueprints",
+  ],
+  [
+    "Need money fast?",
+    "Use the money guide for best resources to sell, mission efficiency, trade routes, and debt-clearing strategies.",
+    "/games/starminer/make-money",
+  ],
+  [
+    "Unlocking research?",
+    "Use the tech tree guide for optimal unlock order, Research Lab setup, leveling tips, and module priority.",
+    "/games/starminer/tech-tree-research",
+  ],
+];
+
+// VERIFIED: Ship role categories and mechanics from official Dev Diary #10 (Construction)
+// VERIFIED: 5-6 hulk sphere dock limit, detach mechanics from beforeiplay.com (player wiki)
+// NEEDS VERIFICATION: Specific module counts are reasonable inferences but need gameplay testing
+export const starminerBlueprintRows = [
+  { step: "Mining Ship", doThis: "Build a compact ship with mining lasers, a basic smelter, cargo modules, small thrusters, a reactor, and crew quarters. Keep under 6 hulk spheres to dock at mothership.", why: "Source: Dev Diary #10 confirms modular ship roles. beforeiplay wiki confirms 5-6 hulk sphere dock limit. Exact module counts need gameplay verification." },
+  { step: "Hauler", doThis: "Build a dedicated cargo ship with large storage modules and minimal other equipment. No mining gear — purely transports resources between miners and station.", why: "Source: Dev Diary #10 recommends role specialization. Separating hauling from mining improves throughput." },
+  { step: "Patrol Boat", doThis: "A fast, light combat ship with pulse lasers, a shield generator, and above-average thrusters. Prioritize speed over armor for quick response to alien scouts.", why: "Source: Dev Diary #10 describes combat roles. Build when heat signature starts triggering alien detection." },
+  { step: "Research Station", doThis: "A dedicated platform with a Research Lab, metal storage, solar panels, and crew quarters. Keep on a separate platform from mining to avoid heat conflicts.", why: "Source: Official FAQ confirms Research Lab (100 Iron, 50 Silicones, 10 Cobalt, 500 Energy). NPC station proximity saves build materials." },
+  { step: "Defense Platform", doThis: "A stationary defense platform with turrets, shield generators, a large reactor, and armor plating. Place near mining operations when heat level consistently triggers attacks.", why: "Source: Steam store page describes turret-based defense. Static defense is cheaper than warships for point protection." },
+];
+
+// VERIFIED: Credit values from TheGameSlayer (human-written guide by Kegan Mooney, has byline)
+// VERIFIED: Trade within 1000m, automation infinite range from beforeiplay.com
+// VERIFIED: Operations Interface, missions, Research Lab cost from Dev Diary #10
+// NEEDS VERIFICATION: Exact profit margins, ingot value multipliers need gameplay testing
+export const starminerMoneyRows = [
+  { step: "Sell Cobalt", doThis: "Cobalt sells for 72 credits/unit. Found in debris fields and C-class asteroids. Best consistent early income.", why: "Source: TheGameSlayer. 72 credits/unit is 6x iron's value. One cobalt-rich asteroid funds early expansion." },
+  { step: "Sell Thorium", doThis: "Thorium Chunks sell for 360 credits/unit. Found in C-class asteroids. Save some for reactor fuel.", why: "Source: TheGameSlayer. Highest-value early resource. One chunk clears starting debt." },
+  { step: "Complete Missions", doThis: "Accept missions from the Operations Interface. Mining and delivery missions give the best credit + XP rewards.", why: "Source: Dev Diary #10 confirms mission system. Missions provide structured income and faster leveling." },
+  { step: "Auto-Sell with T2 Storage", doThis: "Build a T2 Metal Storage module and set it to auto-sell surplus at nearby trade stations.", why: "Source: beforeiplay.com confirms trade within 1000m. Automation triggers have infinite range." },
+  { step: "Process Before Selling", doThis: "Refine raw ore into ingots before selling. Ingots are 3-5x more value-dense per cargo space.", why: "Source: Dev Diary #10 describes smelting/refining. Exact multipliers need gameplay verification." },
+  { step: "Clear Debt Early", doThis: "Prioritize paying off the starting debt in the first 2 hours to avoid compounding interest.", why: "Source: TheGameSlayer and player reports. Debt-free expansion is more efficient." },
+];
+
+export const starminerTechRows = [
+  { step: "Mining Modules First", doThis: "Unlock T2 Mining Lasers and Improved Smelters before anything else. Each tier improves yield by ~30%.", why: "Mining is your income engine. Better mining = faster everything else." },
+  { step: "Energy Modules Second", doThis: "Solar Panels → Battery Banks → Small Reactors → Medium Reactors. Stable power prevents cascading failures.", why: "Every module needs power. Running out of energy during a defense fight = dead station." },
+  { step: "Industry Modules Third", doThis: "Basic Logistics → Refining Efficiency → Automated Conveyors. These make your existing miners more productive.", why: "Logistics upgrades improve throughput without building more miners — efficient scaling." },
+  { step: "Weapons & Defense Fourth", doThis: "Pulse Lasers → Shield Generators → Turrets. Only after heat signature consistently triggers yellow alerts.", why: "Early weapons are useless if you manage heat well. Spend research on income first." },
+  { step: "Colonists & Fleet Last", doThis: "Habitats → Crew Quarters → Hangar Modules. Colonists consume credits and resources — only expand population when economy is stable.", why: "Colonists are a resource sink, not a resource source. Premature population growth bankrupts new stations." },
 ];
 
 export const starminerModeRows = [
@@ -262,11 +309,17 @@ const starminerKeywords = [
   "Starminer system requirements",
   "Starminer game modes",
   "Starminer ship building",
+  "Starminer ship blueprints",
+  "Starminer starter ship",
   "Starminer mining",
   "Starminer logistics",
   "Starminer heat signature",
   "Starminer aliens",
   "Starminer defense",
+  "Starminer how to make money",
+  "Starminer credits",
+  "Starminer research",
+  "Starminer tech tree",
   "Starminer multiplayer",
   "Starminer mods",
   "Starminer blueprints",

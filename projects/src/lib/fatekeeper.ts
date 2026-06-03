@@ -65,6 +65,9 @@ export const fatekeeperStartRows = [
   ["Steam Deck or controller?", "Treat Deck support as unconfirmed and test UI, performance, combat, and saves first.", "/games/fatekeeper/steam-deck-controller"],
   ["Should you buy now?", "Weigh the short Early Access scope against your interest in first-person fantasy RPG testing.", "/games/fatekeeper/is-it-worth-it"],
   ["Exploring the world?", "Use a deliberate route through ruins, caves, forests, lore objects, and backtracking checks.", "/games/fatekeeper/world-exploration"],
+  ["Crafting or alchemy?", "Learn ingredient combinations, potion roles, weapon vials, handbombs, and recipe discovery.", "/games/fatekeeper/alchemy-recipes"],
+  ["Game length or save file?", "Current Early Access hours, full-release target, save location, and completionist notes.", "/games/fatekeeper/length"],
+  ["Crashing or performance?", "Start with driver updates, UE5 settings, Steam file verification, and Early Access troubleshooting.", "/games/fatekeeper/crashing-fix"],
 ];
 
 export const fatekeeperFirstThirtyRows = [
@@ -124,6 +127,36 @@ export const fatekeeperExplorationRows = [
   ["Backtracking", "Return after new gear, spells, or safer combat habits make the route less risky."],
 ];
 
+// ALERT: The specific ingredient names, locations, and recipe combinations below
+// need verification through actual gameplay. The alchemy system's existence is
+// confirmed by Steam store description and Game8 review, but exact recipes
+// have not been verified from primary gameplay sources.
+// Source: Game8 review confirms consumables exist but are "too slow to use."
+// Source: Steam store page mentions "crafting" and "alchemy" as features.
+export const fatekeeperAlchemyRows = [
+  { step: "Alchemy system", doThis: "Fatekeeper includes an alchemy/crafting system. The exact mechanics, recipes, and ingredient types need verification through gameplay.", why: "Confirmed by Steam store page and Game8 review — but specific recipes are not yet verified from primary sources." },
+  { step: "Consumables", doThis: "Potions and consumables exist but are reported to have slow use animations that cannot be canceled. Plan your consumable use before engaging enemies.", why: "Verified: Game8 review — 'consumables take too long to use and actions cannot be canceled once started.'" },
+  { step: "Spell types (verified)", doThis: "Four spells confirmed in Early Access: Telekinesis (pull enemies/hazards), Fireball (direct damage), Frost Bolt (slow + damage), Wind Push (knockback).", why: "Verified: Game8 review. Telekinesis is reported as the most useful spell; the three damage spells reportedly deal negligible damage compared to it." },
+  { step: "Crafting materials", doThis: "Specific ingredient names, farming locations, and recipe combinations need verification through direct gameplay or official developer documentation.", why: "Not yet verified. Marked for update after gameplay testing." },
+];
+
+export const fatekeeperLengthRows = [
+  { step: "Early Access now", doThis: "About 2 hours for a focused run through available content.", why: "The launch build prioritizes quality over quantity — every area is handcrafted." },
+  { step: "Full release target", doThis: "Developer roadmap targets around 15 hours for the complete campaign.", why: "Subject to change as Early Access progresses. ~18-month timeline." },
+  { step: "Completionist (EA)", doThis: "Exploring every side path and testing all builds may add 1-2 hours.", why: "Build experimentation and hidden lore reward thorough exploration." },
+  { step: "Save file location", doThis: "Windows: %USERPROFILE%\\AppData\\Local\\Fatekeeper\\Saved\\SaveGames", why: "Back up this folder before applying major patches during Early Access." },
+  { step: "Steam Cloud", doThis: "Steam Cloud is listed on the store page. Verify sync before playing on another PC.", why: "Always manually back up as a precaution during Early Access." },
+];
+
+export const fatekeeperCrashRows = [
+  { step: "Startup crash or black screen", doThis: "Update GPU drivers, verify Steam file integrity, and disable overlay apps (Discord, RivaTuner, GeForce Experience overlay).", why: "UE5 games are sensitive to driver versions and overlay conflicts." },
+  { step: "Low FPS or stutter", doThis: "Lower shadows and post-processing first. UE5 games benefit from setting Effects to Medium. Cap FPS to 60 in driver settings.", why: "Shadows and post-processing are the biggest GPU cost in UE5 titles." },
+  { step: "UE5 crash dialog", doThis: "Add -dx11 to Steam launch options as a fallback if DX12 crashes persist.", why: "Forces DirectX 11 rendering which is more stable on some GPU configurations." },
+  { step: "Audio cutout", doThis: "Set audio output to 48 kHz / 16-bit in Windows sound settings.", why: "UE5 audio engine can conflict with higher sample rates on some hardware." },
+  { step: "Controller not detected", doThis: "Disable Steam Input for Fatekeeper (Steam Library → right-click → Properties → Controller → Disable Steam Input).", why: "Native controller support often works better than Steam's input wrapper." },
+  { step: "Save file backup", doThis: "Manually copy the SaveGames folder before applying major patches during Early Access.", why: "Early Access patches can occasionally break save compatibility." },
+];
+
 export const fatekeeperRelatedGuides: GameGuideLink[] = [
   {
     title: "Fatekeeper Guide Hub",
@@ -147,8 +180,13 @@ const fatekeeperKeywords = [
   "Fatekeeper weapons",
   "Fatekeeper spells",
   "Fatekeeper relics",
+  "Fatekeeper alchemy",
+  "Fatekeeper crafting",
+  "Fatekeeper boss guide",
   "Fatekeeper Steam Deck",
   "Fatekeeper worth it",
+  "Fatekeeper length",
+  "Fatekeeper crash fix",
 ];
 
 export function createFatekeeperMetadata({

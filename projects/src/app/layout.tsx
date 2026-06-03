@@ -10,42 +10,42 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://enjoy4game.com"),
   title: {
     default:
-      "Directive 8020 Guide - All Endings, Choices, Trophies & Walkthrough",
-    template: "%s | Directive 8020 Guide",
+      "Enjoy4Game Guides - Game Walkthroughs, Builds, Tips & Strategy",
+    template: "%s | Enjoy4Game Guides",
   },
   description:
-    "Complete Directive 8020 guide: all endings, choices and consequences, character survival, trophy walkthrough, system requirements, and more. Survive the Cassiopeia.",
+    "Game guides for survival horror, RPG, life sim, strategy, and indie games. Walkthroughs, builds, tips, system requirements, Steam Deck checks, and buying advice.",
   keywords: [
-    "Directive 8020",
-    "Directive 8020 guide",
-    "Directive 8020 all endings",
-    "Directive 8020 how to save everyone",
-    "Directive 8020 trophy guide",
-    "Directive 8020 walkthrough",
-    "Directive 8020 choices",
-    "Directive 8020 system requirements",
-    "Directive 8020 release time",
-    "Dark Pictures Directive 8020",
-    "Supermassive Games",
+    "game guides",
+    "game walkthroughs",
+    "PC game guides",
+    "indie game guides",
+    "survival game guides",
+    "RPG game guides",
+    "Steam game guides",
+    "Early Access game guides",
+    "game tips and tricks",
+    "game system requirements",
+    "Steam Deck game guides",
   ],
-  authors: [{ name: "Directive 8020 Guide Hub" }],
+  authors: [{ name: "Enjoy4Game Guides" }],
   other: {
     "google-adsense-account": "ca-pub-3383070348689557",
     "msvalidate.01": "AF7A71774B31B882258DD5FDB265DB04",
   },
   openGraph: {
-    title: "Directive 8020 Guide - All Endings, Choices & Walkthrough",
+    title: "Enjoy4Game Guides - Game Walkthroughs, Builds, Tips & Strategy",
     description:
-      "Complete guide for Directive 8020. All endings, choices, character survival tips, trophy walkthrough, and more.",
+      "Game guides for survival horror, RPG, life sim, strategy, and indie games. Walkthroughs, builds, tips, system requirements, Steam Deck checks, and buying advice.",
     locale: "en_US",
     type: "website",
-    siteName: "Directive 8020 Guide",
+    siteName: "Enjoy4Game Guides",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Directive 8020 Guide - All Endings, Choices & Walkthrough",
+    title: "Enjoy4Game Guides - Game Walkthroughs, Builds, Tips & Strategy",
     description:
-      "Complete guide for Directive 8020. All endings, choices, character survival tips, trophy walkthrough, and more.",
+      "Game guides for survival horror, RPG, life sim, strategy, and indie games. Walkthroughs, builds, tips, system requirements, Steam Deck checks, and buying advice.",
   },
   robots: {
     index: true,
@@ -66,6 +66,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* ========================================================= */}
+        {/* 0. Resource hints for third-party origins */}
+        {/* ========================================================= */}
+        <link rel="preconnect" href="https://www.ezojs.com" />
+        <link rel="preconnect" href="https://cmp.gatekeeperconsent.com" />
+        <link rel="preconnect" href="https://the.gatekeeperconsent.com" />
+        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://cdn.pokiter.com" />
+        <link rel="dns-prefetch" href="https://ezoicanalytics.com" />
         {/* ========================================================= */}
         {/* 1. Ezoic 隐私合规脚本 (在 sa.min.js 之前加载以确保合规性) */}
         {/* ========================================================= */}

@@ -151,6 +151,18 @@ export const projectMist: GameConfig = {
       description:
         "Launch-window buying advice using price, reviews, Early Access risk, co-op, demo, and content fit.",
     },
+    {
+      title: "All Bosses & Giant Creatures Guide",
+      href: "/games/project-mist/all-bosses",
+      description:
+        "Every boss and giant creature fight: attack patterns, weaknesses, recommended gear, and survival strategies for solo and co-op.",
+    },
+    {
+      title: "Weapons, Crafting & Best Gear",
+      href: "/games/project-mist/weapons-crafting",
+      description:
+        "Complete weapons list, crafting recipes, best early gear, Gravity Gun unlocks, and material farming locations.",
+    },
   ],
 };
 
@@ -757,6 +769,24 @@ export const starminer: GameConfig = {
       description:
         "Buyer-focused Early Access guidance for builders, logistics players, space sim fans, Steam Deck users, and cautious players.",
     },
+    {
+      title: "Ship Blueprints & Starter Designs",
+      href: "/games/starminer/ship-blueprints",
+      description:
+        "5 proven starter ship designs: mining ship, hauler, patrol boat, research station, and defense platform — with module lists and build order.",
+    },
+    {
+      title: "How to Make Money Fast",
+      href: "/games/starminer/make-money",
+      description:
+        "Best resources to sell, mission efficiency, trade routes, debt clearing, and automated income strategies for early-game credits.",
+    },
+    {
+      title: "Tech Tree & Research Guide",
+      href: "/games/starminer/tech-tree-research",
+      description:
+        "How research works, optimal unlock order, Research Lab setup, leveling fast, and which modules to prioritize in each tech category.",
+    },
   ],
 };
 
@@ -831,6 +861,24 @@ export const fatekeeper: GameConfig = {
       href: "/games/fatekeeper/world-exploration",
       description:
         "Handcrafted world routing, hidden lore, relic checks, backtracking, caves, forests, and ruins.",
+    },
+    {
+      title: "Alchemy & Crafting Guide",
+      href: "/games/fatekeeper/alchemy-recipes",
+      description:
+        "How alchemy works, ingredient combinations, best early potions, weapon vials, handbombs, and recipe discovery.",
+    },
+    {
+      title: "How Long to Beat & Save File",
+      href: "/games/fatekeeper/length",
+      description:
+        "Current Early Access length, full-release target hours, save file location, and completionist notes.",
+    },
+    {
+      title: "Crashing, Black Screen & Performance Fix",
+      href: "/games/fatekeeper/crashing-fix",
+      description:
+        "Startup crashes, black screen, low FPS, UE5 settings, driver checks, and Early Access troubleshooting.",
     },
   ],
 };

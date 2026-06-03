@@ -184,3 +184,72 @@ export function generateVideoGameSchema(game: GameSchemaConfig = directive8020) 
     },
   };
 }
+
+export function generateOrganizationSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Enjoy4Game Guides',
+    url: 'https://enjoy4game.com',
+    email: 'stephen@enjoy4game.com',
+    description:
+      'Independent player-first game guides covering survival horror, RPG, life simulation, strategy, and indie games.',
+    sameAs: ['https://www.reddit.com/r/enjoy4game/'],
+    foundingDate: '2026-05-10',
+  };
+}
+
+export function generateReviewSchema({
+  name,
+  description,
+  url,
+  reviewBody,
+  ratingValue = 4,
+  author = 'Enjoy4Game Guides',
+  datePublished,
+  game,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  reviewBody: string;
+  ratingValue?: number;
+  author?: string;
+  datePublished: string;
+  game: GameSchemaConfig;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    name,
+    description,
+    url,
+    author: {
+      '@type': 'Organization',
+      name: author,
+    },
+    datePublished,
+    reviewBody,
+    itemReviewed: {
+      '@type': 'VideoGame',
+      name: game.name,
+      gamePlatform: game.platforms,
+      genre: game.genres,
+      developer: {
+        '@type': 'Organization',
+        name: game.developer,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: game.publisher,
+      },
+      datePublished: game.releaseDate,
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue,
+      bestRating: 5,
+      worstRating: 1,
+    },
+  };
+}
