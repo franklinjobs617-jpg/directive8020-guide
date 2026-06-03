@@ -155,6 +155,27 @@ export const mechanicusIISpecRows = [
   ['Storage', '25 GB available space', '25 GB available space'],
 ];
 
+// VERIFIED: Dominion economy, Reanimation Protocols, Canoptek Wraiths from Game Truth beginner guide
+// VERIFIED: Necron campaign identity from Steam store page and Game Truth
+// NEEDS VERIFICATION: Specific mission-by-mission strategy needs gameplay testing
+export const mechanicusIINecronRows = [
+  { step: "Dominion economy", doThis: "Necrons build Dominion by dealing damage. It resets between missions — you start from zero each fight. Engage fast, deal damage early, and snowball your ranks before the enemy stabilizes.", why: "Source: Game Truth beginner guide. Dominion rewards aggression. Waiting costs you — the longer a fight drags, the worse your position." },
+  { step: "Reanimation Protocols", doThis: "Every Necron unit except Canopteks can resurrect after dying. Finish off downed units or reposition to deal with them when they stand back up.", why: "Source: Game Truth. This is your Necron 'cover' — don't hide behind walls, rely on getting back up." },
+  { step: "Canoptek Wraith bodyguard", doThis: "Keep a Canoptek Wraith mid-line with your Vargard Nefershah. Wraiths can teleport to swap positions with endangered allies — use them as a mobile rescue tool, not frontline brawlers.", why: "Source: Game Truth. Hero death = instant mission failure. Wraiths are your insurance policy." },
+  { step: "Destroy cover, don't use it", doThis: "Necrons want to destroy enemy cover, not hide behind it. Several units can target terrain. Collapsing walls can damage enemies. Flood exposed positions with Warriors.", why: "Source: Game Truth and Steam store. Opposite of Mechanicus playstyle — don't try to play cover-based with Necrons." },
+  { step: "Mission strategy", doThis: "Aggress early to build Dominion ranks. Use Wraiths to protect Nefershah. Destroy enemy cover on turn 1. Push Warriors into exposed positions. Don't turtle — Necrons get weaker the longer you wait.", why: "Source: Game Truth. Specific mission-by-mission walkthrough details need gameplay verification." },
+];
+
+export const mechanicusIIUnitTierRows = [
+  { step: "S-Tier: Necron Warriors", doThis: "Core infantry. Consistent damage output, reliable Dominion builders. Cheap to field. Backbone of every Necron squad.", why: "Source: Game Truth. Warriors are your primary tool for building Dominion early. Don't skip them for flashier picks." },
+  { step: "S-Tier: Skitarii Rangers (Mechanicus)", doThis: "Generate Cognition by shooting from beyond minimum range. Keep them at the back. Primary damage dealers for Mechanicus.", why: "Source: Game Truth. Rangers are the Mechanicus equivalent of Warriors — essential, reliable, efficient." },
+  { step: "A-Tier: Canoptek Wraiths (Necron)", doThis: "Teleport bodyguards. Swap positions with endangered allies. High survivability. Keep mid-line near your leader.", why: "Source: Game Truth. Not optional — hero protection is critical and Wraiths are your best tool for it." },
+  { step: "A-Tier: Servitors (Mechanicus)", doThis: "Generate Cognition by taking damage. Park them in enemy faces as damage sponges. Feed your economy by getting hit.", why: "Source: Game Truth. Servitors are your Cognition battery — the more they get shot, the more you can spend." },
+  { step: "A-Tier: Immortals (Necron)", doThis: "Higher damage and range than Warriors. Better armor. Build less Dominion per hit but kill faster.", why: "Source: Game Truth. Upgrade pick — more damage per slot but slower Dominion ramp. Mix with Warriors, don't replace them." },
+  { step: "B-Tier: Tech-Priests (Mechanicus)", doThis: "Hero units that activate Canticles. Lexmechanic tree gives passive Cognition. Dominus tree boosts damage. Keep them behind cover — hero death fails the mission.", why: "Source: Game Truth. Powerful force multipliers but fragile. Protect them." },
+  { step: "B-Tier: Enginseer (Mechanicus)", doThis: "Healing and support. Keeps your frontline alive. Less flashy than damage dealers but prevents cascade failures.", why: "Source: Game Truth. Support units are undervalued by new players. One Enginseer can save a run." },
+];
+
 export const mechanicusIIWorthRows = [
   ['Buy now if', 'You want a new Warhammer 40K turn-based tactics game, like dual campaigns, and are comfortable with early Mixed Steam reviews.'],
   ['Try more research first if', 'You need broad player consensus, deep performance reports, Steam Deck support, or proof that the campaign balance works across both factions.'],
@@ -301,6 +322,12 @@ const mechanicusIIKeywords = [
   'Mechanicus II Steam Deck',
   'Mechanicus II performance',
   'Mechanicus II worth it',
+  'Mechanicus II Necron guide',
+  'Mechanicus II Dominion',
+  'Mechanicus II unit tier list',
+  'Mechanicus II best units',
+  'Mechanicus II Canoptek Wraith',
+  'Mechanicus II Reanimation Protocols',
 ];
 
 export function createMechanicusIIMetadata({

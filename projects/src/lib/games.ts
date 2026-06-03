@@ -388,6 +388,18 @@ export const mechanicusII: GameConfig = {
       description:
         "Buyer-focused guidance using price, Mixed Steam reviews, faction campaigns, platforms, performance risk, and Warhammer fit.",
     },
+    {
+      title: "Necron Campaign Guide",
+      href: "/games/mechanicus-ii/necron-guide",
+      description:
+        "Complete Necron campaign guide: Dominion economy, unit roster, Reanimation Protocols, Canoptek Wraith bodyguard tactics, and mission-by-mission strategy.",
+    },
+    {
+      title: "Unit Tier List & Best Builds",
+      href: "/games/mechanicus-ii/unit-tier-list",
+      description:
+        "S-tier to C-tier ranking for every unit across both factions. Best squad compositions, counter picks, and what to avoid in your first campaign.",
+    },
   ],
 };
 
@@ -693,6 +705,18 @@ export const jumpKingQuest: GameConfig = {
       href: "/games/jump-king-quest/is-it-worth-it",
       description:
         "Launch-window buying advice using Steam reviews, 1.0 timing, multiplayer focus, difficulty, Jump King 1 expectations, and community concerns.",
+    },
+    {
+      title: "Phantom Tower Guide",
+      href: "/games/jump-king-quest/phantom-tower",
+      description:
+        "Complete Phantom Tower walkthrough: floor layout, enemy types, boss encounters, traps, rewards, and platforming strategies for the 1.0 endgame challenge.",
+    },
+    {
+      title: "All Bosses & Best Class Guide",
+      href: "/games/jump-king-quest/bosses-classes",
+      description:
+        "Every boss fight broken down with attack patterns and openings. Best starting class picks, Redfin customization tips, and build recommendations.",
     },
   ],
 };

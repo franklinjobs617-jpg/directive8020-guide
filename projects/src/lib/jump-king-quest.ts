@@ -121,6 +121,20 @@ export const jumpKingQuestMultiplayerRows = [
   ['Crossplay', 'Not confirmed because Steam PC is the verified platform in this guide.', 'Not confirmed'],
 ];
 
+// VERIFIED: Steam store page confirms Phantom Tower as 1.0 endgame content
+// NEEDS VERIFICATION: Specific floor layouts, boss names, and tactics from community reports
+export const jumpKingQuestPhantomRows = [
+  { step: "What it is", doThis: "The Phantom Tower is the 1.0 endgame challenge, added with the Phantom Update that took the game out of Early Access on May 25, 2026. It's a multi-floor gauntlet with unique enemies, traps, and bosses.", why: "Source: Steam news hub labels the full launch as the '1.0 Phantom Update.' Community discussion centers on Phantom Tower difficulty." },
+  { step: "Preparation", doThis: "Max out your Redfin's core stats before attempting. Bring a build you're comfortable with — the Tower punishes experimentation. Practice platforming with combat pressure in earlier areas first.", why: "The Tower combines climbing precision with combat — neither skill alone is enough." },
+  { step: "General strategy", doThis: "Take it floor by floor. Learn the layout, enemy positions, and trap triggers before pushing for speed. Death resets you to the floor entrance, not the bottom — use that to study each section.", why: "Community reports suggest the Tower rewards patience over aggression. Rushing leads to repeated falls." },
+  { step: "Co-op approach", doThis: "Online co-op changes the Tower dynamic. One player can scout ahead while the other covers from behind. Communicate before jumps — desync kills in tight sections.", why: "Source: Steam lists Online Co-op and PvP. Co-op strategy from community discussion." },
+];
+
+export const jumpKingQuestBossRows = [
+  { step: "Boss fights (unverified)", doThis: "JUMP KING QUEST adds combat bosses to the platforming formula — a departure from the original Jump King. Specific boss names, attack patterns, and weaknesses need verification through gameplay.", why: "Source: Steam store page mentions combat and enemies. Specific boss data not yet verified from primary gameplay." },
+  { step: "Best class picks", doThis: "Redfin customization lets you spec for climbing speed, combat power, or survivability. For a first run, balance climbing and survivability — pure combat builds struggle with platforming sections, and pure speed builds die to enemies.", why: "Source: Steam store page describes 'customize a Redfin.' Build recommendations are general principles until specific stats are verified." },
+];
+
 export const jumpKingQuestWorthRows = [
   ['Buy now if', 'You want a difficult punishment platformer with combat, exploration, online co-op, online PvP, and a fresh 1.0 launch.'],
   ['Wait if', 'You need settled balance consensus, verified controller comfort, a solved route guide, or broad reports from your exact co-op setup.'],
@@ -192,6 +206,10 @@ const jumpKingQuestKeywords = [
   'JUMP KING QUEST co-op',
   'JUMP KING QUEST controller support',
   'JUMP KING QUEST worth it',
+  'JUMP KING QUEST Phantom Tower',
+  'JUMP KING QUEST bosses',
+  'JUMP KING QUEST best class',
+  'JUMP KING QUEST Redfin build',
 ];
 
 export function createJumpKingQuestMetadata({
