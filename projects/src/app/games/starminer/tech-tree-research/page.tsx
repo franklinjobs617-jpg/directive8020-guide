@@ -85,8 +85,8 @@ export default function StarminerTechPage() {
       description={description}
       canonical={canonical}
       label="Tech Tree & Research"
-      heroImage={starminerImages.station}
-      heroAlt="Starminer modular ship and station construction with build interface"
+      heroImage={starminerImages.officialBuild}
+      heroAlt="Starminer official construction screenshot showing modular ship building interface and socket placement"
       faqs={faqs}
       showSources={false}
     >
