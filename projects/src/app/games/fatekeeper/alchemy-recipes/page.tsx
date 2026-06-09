@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArticleImage } from "@/components/article-media";
 import { ActionTable, BlufBox, SearchAnswerPanel, StatusPanel } from "@/components/guide-blocks";
 import { FatekeeperArticle } from "@/components/fatekeeper-article";
@@ -6,12 +5,11 @@ import {
   createFatekeeperMetadata,
   fatekeeperAlchemyRows,
   fatekeeperImages,
-  fatekeeperVideos,
 } from "@/lib/fatekeeper";
 
 const title = "Fatekeeper Alchemy, Spells & Crafting Guide";
 const description =
-  "Fatekeeper spells and crafting overview: the four confirmed spells (Telekinesis, Fireball, Frost Bolt, Wind Push), consumable mechanics, and what we're still verifying through gameplay.";
+  "Fatekeeper spells, alchemy, crafting, consumable timing, and environmental combat guide for Early Access players who need verified facts and practical testing rules.";
 const canonical = "/games/fatekeeper/alchemy-recipes";
 
 export const metadata = createFatekeeperMetadata({
@@ -25,68 +23,71 @@ const faqs = [
   {
     question: "What spells are in Fatekeeper Early Access?",
     answer:
-      "Four: Telekinesis, Fireball, Frost Bolt, and Wind Push. Telekinesis is the clear winner right now — environmental kills one-shot enemies. The damage spells are undertuned and mana runs out fast. This is based on Game8's June 2 review.",
+      "Launch-window review coverage identifies Telekinesis, Fireball, Frost Bolt, and Wind Push. Treat exact damage, mana value, and balance rankings as patch-sensitive because Fatekeeper is still in Early Access.",
   },
   {
-    question: "Does Fatekeeper have a crafting or alchemy system?",
+    question: "Does Fatekeeper have alchemy or crafting?",
     answer:
-      "Steam says yes. The store page and developer notes mention alchemy. But we haven't tested the recipes ourselves yet, so we're not going to list ingredient combinations we can't verify. Game8 confirms consumables are in the game — they just have slow, uncancelable animations that make them risky to use mid-fight.",
+      "Yes, the store positioning and review coverage point to alchemy, crafting, and consumables. The exact recipe list, ingredient locations, and farming routes still need direct gameplay verification before they should be presented as final facts.",
   },
   {
-    question: "How do consumables work in Fatekeeper?",
+    question: "When should I use consumables?",
     answer:
-      "Slowly. You can't cancel the animation once it starts, so popping a potion while an enemy is charging at you is a death sentence. Use them before fights, not during. This is a known rough edge — the devs have 18 months of Early Access to balance it.",
+      "Use consumables before combat, after creating distance, or during a safe reset window. Do not start a potion animation while an enemy is already committed to a hit unless you have tested that timing in the current build.",
   },
   {
-    question: "Which spell should I use?",
+    question: "Which spell is best for a first run?",
     answer:
-      "Telekinesis. The other three don't deal enough damage to justify the mana cost right now. Pull enemies into walls, off cliffs, into each other. The game gives you environmental hazards for a reason.",
+      "Telekinesis is the safest first recommendation because it turns the environment into damage and control. Fireball, Frost Bolt, and Wind Push should be judged by what problem they solve in your route, not by raw damage alone.",
   },
 ];
 
 const searchIntentRows = [
   {
     query: "Fatekeeper spells list",
-    answer: "4 spells: Telekinesis, Fireball, Frost Bolt, Wind Push. Telekinesis is the most useful — pulls enemies into hazards.",
+    answer:
+      "Known launch-window spell names: Telekinesis, Fireball, Frost Bolt, and Wind Push. Exact balance can change during Early Access.",
     href: "#spells",
     label: "Spells",
   },
   {
     query: "Fatekeeper alchemy crafting",
-    answer: "Alchemy/crafting is confirmed by Steam but specific recipes need gameplay verification. Consumables have slow, uncancelable use animations.",
+    answer:
+      "Alchemy and crafting are part of Fatekeeper, but exact recipes and ingredient routes still need verified gameplay data.",
     href: "#alchemy",
     label: "Crafting",
   },
   {
     query: "Fatekeeper best spell",
-    answer: "Telekinesis — pull enemies into spike walls or off ledges for instant kills. Damage spells are reportedly weak in current build.",
+    answer:
+      "Telekinesis is the most reliable first pick because environmental kills and displacement solve fights without needing final damage numbers.",
     href: "#spells",
     label: "Best",
   },
   {
     query: "Fatekeeper consumable tips",
-    answer: "Use consumables BEFORE combat. Animations are slow and can't be canceled. This is a known Early Access issue.",
+    answer:
+      "Use consumables before combat or after creating space. Slow animations make panic-healing risky in close-range fights.",
     href: "#consumables",
     label: "Tips",
   },
 ];
 
 const jumpLinks = [
-  { href: "#spells", label: "Spells (verified)" },
-  { href: "#alchemy", label: "Alchemy (needs verification)" },
+  { href: "#spells", label: "Spells" },
+  { href: "#alchemy", label: "Alchemy" },
   { href: "#consumables", label: "Consumables" },
+  { href: "#environmental-kills", label: "Environment" },
   { href: "/games/fatekeeper/weapons-spells", label: "Weapons & Spells" },
-  { href: "/games/fatekeeper/best-builds", label: "Best Builds" },
 ];
 
-// Status panel: what we've verified vs what still needs checking
 const keyFacts = [
-  { label: "Spells confirmed (4)", value: "Telekinesis, Fireball, Frost Bolt, Wind Push", status: "verified" as const },
-  { label: "Alchemy system", value: "Exists per Steam store page, specific recipes unverified", status: "needs-check" as const },
-  { label: "Consumable mechanics", value: "Slow uncancelable animations, plan use before combat", status: "verified" as const },
-  { label: "Ingredient locations", value: "No specific locations verified from primary gameplay", status: "needs-check" as const },
-  { label: "Mana economy", value: "Reportedly too limited for frequent spellcasting", status: "needs-check" as const },
-  { label: "Environmental kills", value: "Kick off ledges, spike walls, gravity kills confirmed", status: "verified" as const },
+  { label: "Known spell names", value: "Telekinesis, Fireball, Frost Bolt, Wind Push", status: "verified" as const },
+  { label: "Alchemy system", value: "Confirmed as a feature, but recipe details are not final here", status: "needs-check" as const },
+  { label: "Consumable timing", value: "Plan use before combat or after creating distance", status: "working" as const },
+  { label: "Ingredient locations", value: "No complete verified route list yet", status: "needs-check" as const },
+  { label: "Best first spell", value: "Telekinesis because it uses hazards and positioning", status: "working" as const },
+  { label: "Patch risk", value: "Damage, mana, and recipe values can change during Early Access", status: "verified" as const },
 ];
 
 export default function FatekeeperAlchemyPage() {
@@ -101,55 +102,61 @@ export default function FatekeeperAlchemyPage() {
       faqs={faqs}
     >
       <BlufBox title="BLUF">
-        Fatekeeper ships with four spells. <strong>Telekinesis</strong> is the
-        standout — yank an enemy into a spike wall or off a ledge and the fight's
-        over. The other three (Fireball, Frost Bolt, Wind Push) exist but don't
-        hit hard enough to matter right now. Mana runs dry fast. The alchemy
-        system is mentioned on Steam but we haven't dug into it yet — we'll update
-        this page once we've tested recipes firsthand.{" "}
-        <em>Spell data from Game8's June 2 review.</em>
+        Fatekeeper spell and alchemy advice has one hard rule: do not treat
+        unverified recipes as facts. The useful first-run answer is simple.
+        Use Telekinesis to turn ledges, spike walls, and enemy spacing into
+        damage. Treat Fireball, Frost Bolt, and Wind Push as tools to test
+        against specific problems. Use consumables before a fight or after you
+        create distance. Exact ingredient routes, potion recipes, mana math, and
+        spell damage rankings need current-build testing before they deserve a
+        final recipe table.
       </BlufBox>
 
       <StatusPanel items={keyFacts} />
 
       <SearchAnswerPanel
         title="Fatekeeper Spells & Crafting"
-        answer="Four spells in the current build. Telekinesis is the one you'll actually use — environmental kills end fights instantly. Alchemy exists but we're still testing recipes. Pop consumables before combat, not during."
+        answer="Use Telekinesis first, test other spells by job, and treat recipe details as Early Access data that still needs verification. Consumables are safest before combat or after a spacing reset."
         intentRows={searchIntentRows}
         jumpLinks={jumpLinks}
       />
 
       <section id="spells">
-        <h2 className="mb-4 text-2xl font-bold text-foreground">Spells (Verified from Game8 Review)</h2>
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Spells and What They Are For</h2>
         <p className="mb-4 leading-relaxed text-muted-foreground">
-          These four spells are confirmed in the Early Access build. Source: Game8
-          review published June 2, 2026, based on direct gameplay.
+          The search intent behind "Fatekeeper spells" is not only a name list.
+          New players want to know what to equip first. Experienced players want
+          to know which spell changes a route, which one saves a mistake, and
+          which one is only worth using in a specific room. Because Fatekeeper is
+          still in Early Access, this page uses job-based advice instead of fake
+          precision. If a patch changes damage values, the job still tells you
+          what to test.
         </p>
         <div className="grid gap-4 sm:grid-cols-2">
           {[
             {
               name: "Telekinesis",
-              rating: "Pick this one",
-              desc: "Pull enemies into spike walls. Throw them off ledges. Slam them into each other. Instant kills if you position right — and positioning is the whole game. By far the most useful spell in the current build.",
+              rating: "Best first test",
+              desc: "Use it to pull enemies into hazards, off safe lines, or away from your recovery window. It is strong because the environment supplies the payoff.",
             },
             {
               name: "Fireball",
-              rating: "Skip it for now",
-              desc: "Looks cool. Doesn't kill things. Your melee attacks hit harder, cost no mana, and don't leave you standing still casting. Maybe gear scaling fixes this later.",
+              rating: "Damage check",
+              desc: "Test it when you need ranged pressure, oil or hazard interaction, or a safer opener. Drop it if melee does the same job with less risk.",
             },
             {
               name: "Frost Bolt",
-              rating: "Maybe useful",
-              desc: "The slow effect can buy you breathing room against fast enemies. Damage is negligible, but crowd control has its moments. Worth testing if you're struggling with aggressive mobs.",
+              rating: "Control check",
+              desc: "Use it when a fast enemy keeps breaking spacing. Even weak damage can matter if the slow effect gives you a clean punish window.",
             },
             {
               name: "Wind Push",
-              rating: "Situational",
-              desc: "Knocks enemies back. Handy near ledges or spike walls. Otherwise, you're spending mana to move an enemy two feet. Telekinesis does the same job better.",
+              rating: "Position check",
+              desc: "Best near ledges, traps, narrow bridges, or spike walls. In an open room, compare it directly against Telekinesis before spending mana.",
             },
           ].map((spell) => (
             <div key={spell.name} className="rounded-lg border border-d8020/25 bg-d8020/5 p-5">
-              <div className="flex items-center justify-between mb-2">
+              <div className="mb-2 flex items-center justify-between gap-3">
                 <h3 className="text-base font-bold text-foreground">{spell.name}</h3>
                 <span className="text-xs font-semibold text-d8020">{spell.rating}</span>
               </div>
@@ -159,59 +166,104 @@ export default function FatekeeperAlchemyPage() {
         </div>
       </section>
 
+      <ArticleImage
+        src={fatekeeperImages.magic}
+        alt="Fatekeeper magic casting and spell experiment route"
+        caption="Judge a spell by the problem it solves: hazard kills, spacing, ranged pressure, or crowd control."
+      />
+
       <section id="alchemy" className="mt-10">
-        <h2 className="mb-4 text-2xl font-bold text-foreground">Alchemy & Crafting (Needs Verification)</h2>
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Alchemy and Crafting Status</h2>
         <p className="mb-4 leading-relaxed text-muted-foreground">
-          Fatekeeper's Steam store page and developer descriptions mention alchemy
-          and crafting systems. However,{" "}
-          <strong>specific recipes, ingredient names, and farming locations have
-          not been verified from primary gameplay sources</strong>. The table below
-          summarizes what we know and what still needs testing.
+          This is where the old version of the page had a clear weakness: it
+          implied useful recipe coverage without actually having verified
+          recipes. That is not acceptable for a guide page. Until ingredient
+          names, locations, and combinations are checked in a current build, the
+          correct content is a verification table and a testing method. That
+          still helps users because it tells them what is safe to rely on now
+          and what they should record during their own run.
         </p>
         <ActionTable rows={fatekeeperAlchemyRows} />
       </section>
 
       <section id="consumables" className="mt-10">
-        <h2 className="mb-4 text-2xl font-bold text-foreground">Consumable Mechanics (Verified)</h2>
-        <div className="rounded-lg border border-yellow-400/30 bg-yellow-400/5 p-5">
-          <p className="text-sm leading-relaxed text-muted-foreground">
-            <strong className="text-yellow-300">Known issue (Game8 review):</strong>{" "}
-            Consumables in Fatekeeper have slow use animations that cannot be
-            canceled once started. This means you must plan consumable use{" "}
-            <strong>before</strong> engaging enemies. Using a potion mid-combat
-            leaves you vulnerable. This is expected to be balanced during Early
-            Access development. The developers (Paraglacial, team of 13) have an
-            ~18-month roadmap, so mechanics will evolve.
-          </p>
-        </div>
-      </section>
-
-      <section id="environmental-kills" className="mt-10">
-        <h2 className="mb-4 text-2xl font-bold text-foreground">Environmental Combat (Verified)</h2>
-        <p className="mb-4 leading-relaxed text-muted-foreground">
-          Environmental kills are a core combat mechanic. Confirmed from multiple
-          sources (Game8 review, Steam store page, official trailer):
-        </p>
-        <div className="grid gap-3">
-          {[
-            "Kick enemies off ledges for instant gravity kills.",
-            "Push enemies into spike walls using Telekinesis or Wind Push.",
-            "Use Telekinesis to throw enemies into each other.",
-            "Ignite environmental hazards (oil slicks) with fire spells.",
-            "Combine crowd control spells with melee positioning near hazards.",
-          ].map((tip, i) => (
-            <div key={i} className="flex gap-3 rounded-md border border-border/40 bg-background/30 p-3">
-              <span className="mt-0.5 text-xs font-bold text-d8020">0{i + 1}</span>
-              <p className="text-sm leading-relaxed text-muted-foreground">{tip}</p>
-            </div>
-          ))}
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Consumable Timing Table</h2>
+        <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Situation</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Use now?</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Reason</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["Before entering a room", "Yes", "Best window for healing, buffs, and route prep because no enemy is already swinging."],
+                ["After knocking an enemy away", "Maybe", "Safe only if distance, terrain, and animation time are all in your favor."],
+                ["While cornered", "No", "The animation can turn a recoverable mistake into a death."],
+                ["Before a boss-style attempt", "Yes", "Pre-buffing is cleaner than panic use after the arena starts."],
+                ["During exploration", "Maybe", "Use only if the resource cost does not block the next fight or backtrack route."],
+              ].map(([situation, useNow, reason]) => (
+                <tr key={situation} className="border-b border-border/30 last:border-0">
+                  <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{situation}</th>
+                  <td className="px-4 py-3 text-muted-foreground">{useNow}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{reason}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 
       <ArticleImage
         src={fatekeeperImages.combat}
-        alt="Fatekeeper environmental combat — kicking enemies into spike walls"
-        caption="Environmental kills are Fatekeeper's strongest combat tool. Use Telekinesis to pull enemies into spike walls, off ledges, or into each other for instant kills."
+        alt="Fatekeeper melee combat and spacing before using consumables"
+        caption="Consumables are strongest when used before commitment, not while an enemy is already inside melee range."
+      />
+
+      <section id="environmental-kills" className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Environmental Combat Plan</h2>
+        <p className="mb-4 leading-relaxed text-muted-foreground">
+          Telekinesis and Wind Push matter because Fatekeeper rooms can turn
+          space into damage. This gives both new and experienced players a
+          shared rule: before spending mana, look for a wall, ledge, trap, oil
+          surface, doorway, or narrow bridge. If the room has none of those, a
+          control spell may only buy time. If the room has one of those hazards,
+          displacement can outperform raw damage.
+        </p>
+        <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Room feature</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Best spell job</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["Ledge or drop", "Displacement", "Pull or push after baiting the enemy close enough."],
+                ["Spike wall", "Forced collision", "Angle the enemy into the wall instead of trading melee hits."],
+                ["Fast enemy", "Slow or spacing", "Use Frost Bolt or displacement to create a punish window."],
+                ["Clustered enemies", "Separation", "Move one enemy out of the group before committing to melee."],
+                ["Open room", "Mana discipline", "Save mana unless the spell creates a clear recovery or damage window."],
+              ].map(([feature, job, action]) => (
+                <tr key={feature} className="border-b border-border/30 last:border-0">
+                  <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{feature}</th>
+                  <td className="px-4 py-3 text-muted-foreground">{job}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{action}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <ArticleImage
+        src={fatekeeperImages.exploration}
+        alt="Fatekeeper exploration route for ingredient and recipe testing"
+        caption="For recipe discovery, record the room, ingredient, enemy type, and whether you can safely return after a fight."
       />
     </FatekeeperArticle>
   );

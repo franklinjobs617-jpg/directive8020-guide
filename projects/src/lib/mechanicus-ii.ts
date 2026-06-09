@@ -159,21 +159,21 @@ export const mechanicusIISpecRows = [
 // VERIFIED: Necron campaign identity from Steam store page and Game Truth
 // NEEDS VERIFICATION: Specific mission-by-mission strategy needs gameplay testing
 export const mechanicusIINecronRows = [
-  { step: "Dominion economy", doThis: "Necrons build Dominion by dealing damage. It resets between missions — you start from zero each fight. Engage fast, deal damage early, and snowball your ranks before the enemy stabilizes.", why: "Source: Game Truth beginner guide. Dominion rewards aggression. Waiting costs you — the longer a fight drags, the worse your position." },
-  { step: "Reanimation Protocols", doThis: "Every Necron unit except Canopteks can resurrect after dying. Finish off downed units or reposition to deal with them when they stand back up.", why: "Source: Game Truth. This is your Necron 'cover' — don't hide behind walls, rely on getting back up." },
-  { step: "Canoptek Wraith bodyguard", doThis: "Keep a Canoptek Wraith mid-line with your Vargard Nefershah. Wraiths can teleport to swap positions with endangered allies — use them as a mobile rescue tool, not frontline brawlers.", why: "Source: Game Truth. Hero death = instant mission failure. Wraiths are your insurance policy." },
-  { step: "Destroy cover, don't use it", doThis: "Necrons want to destroy enemy cover, not hide behind it. Several units can target terrain. Collapsing walls can damage enemies. Flood exposed positions with Warriors.", why: "Source: Game Truth and Steam store. Opposite of Mechanicus playstyle — don't try to play cover-based with Necrons." },
-  { step: "Mission strategy", doThis: "Aggress early to build Dominion ranks. Use Wraiths to protect Nefershah. Destroy enemy cover on turn 1. Push Warriors into exposed positions. Don't turtle — Necrons get weaker the longer you wait.", why: "Source: Game Truth. Specific mission-by-mission walkthrough details need gameplay verification." },
+  { step: "Dominion economy", doThis: "Treat Dominion as battle momentum, not a passive meter. Build it by creating damage turns early, then convert that advantage before the enemy stabilizes.", why: "Launch-window guides agree that Necrons reward forward pressure. Exact rank breakpoints should still be checked against your current patch." },
+  { step: "Reanimation Protocols", doThis: "Use reanimation as tempo insurance, not permission to feed units. A downed unit may return later, but the board can collapse while it is missing.", why: "The practical lesson is timing: you still need safe positions, target priority, and bodyguard spacing while the unit is unavailable." },
+  { step: "Canoptek Wraith bodyguard", doThis: "Keep Wraith-style mobility near Vargard Nefershah or whichever leader your mission cannot afford to lose. Use mobile units to rescue positions, screen angles, and stop surrounds.", why: "Leader exposure is the failure point that turns a winning damage race into a reset." },
+  { step: "Terrain pressure", doThis: "Break or bypass enemy cover when it creates cleaner shots next turn. Do not destroy scenery just because a unit can do it.", why: "The useful chain is cover pressure to enemy movement to cleaner damage to faster Dominion." },
+  { step: "Mission strategy", doThis: "Open by identifying your leader lane, two repeatable damage lanes, and one fallback position. Push after those are set, not before.", why: "This keeps the aggressive identity without pretending every map is solved by charging forward." },
 ];
 
 export const mechanicusIIUnitTierRows = [
-  { step: "S-Tier: Necron Warriors", doThis: "Core infantry. Consistent damage output, reliable Dominion builders. Cheap to field. Backbone of every Necron squad.", why: "Source: Game Truth. Warriors are your primary tool for building Dominion early. Don't skip them for flashier picks." },
-  { step: "S-Tier: Skitarii Rangers (Mechanicus)", doThis: "Generate Cognition by shooting from beyond minimum range. Keep them at the back. Primary damage dealers for Mechanicus.", why: "Source: Game Truth. Rangers are the Mechanicus equivalent of Warriors — essential, reliable, efficient." },
-  { step: "A-Tier: Canoptek Wraiths (Necron)", doThis: "Teleport bodyguards. Swap positions with endangered allies. High survivability. Keep mid-line near your leader.", why: "Source: Game Truth. Not optional — hero protection is critical and Wraiths are your best tool for it." },
-  { step: "A-Tier: Servitors (Mechanicus)", doThis: "Generate Cognition by taking damage. Park them in enemy faces as damage sponges. Feed your economy by getting hit.", why: "Source: Game Truth. Servitors are your Cognition battery — the more they get shot, the more you can spend." },
-  { step: "A-Tier: Immortals (Necron)", doThis: "Higher damage and range than Warriors. Better armor. Build less Dominion per hit but kill faster.", why: "Source: Game Truth. Upgrade pick — more damage per slot but slower Dominion ramp. Mix with Warriors, don't replace them." },
-  { step: "B-Tier: Tech-Priests (Mechanicus)", doThis: "Hero units that activate Canticles. Lexmechanic tree gives passive Cognition. Dominus tree boosts damage. Keep them behind cover — hero death fails the mission.", why: "Source: Game Truth. Powerful force multipliers but fragile. Protect them." },
-  { step: "B-Tier: Enginseer (Mechanicus)", doThis: "Healing and support. Keeps your frontline alive. Less flashy than damage dealers but prevents cascade failures.", why: "Source: Game Truth. Support units are undervalued by new players. One Enginseer can save a run." },
+  { step: "S role: Necron Warriors", doThis: "Core infantry for early Necron consistency. Use them to create repeatable damage turns and keep Dominion moving.", why: "They are valuable because they keep the faction engine active. Do not replace all core bodies with flashy specialists." },
+  { step: "S role: Skitarii Rangers", doThis: "Reliable backline pressure for Adeptus Mechanicus. Keep lanes clear and protect them from greedy exposure.", why: "Ranged stability is more important than one large hit while you are learning mission rules." },
+  { step: "A role: Canoptek Wraiths", doThis: "Mobile protection and angle correction. Keep them close enough to cover leader mistakes before the enemy punishes them.", why: "Mobility is strongest when it prevents a failed objective, not when it chases damage alone." },
+  { step: "A role: Servitors", doThis: "Disposable pressure and Cognition support. Use them to absorb enemy attention while important units stay productive.", why: "New players undervalue economy pieces because the damage number is not exciting." },
+  { step: "A role: Immortals", doThis: "Higher-threat Necron damage piece. Mix them with Warriors instead of turning the squad into only expensive attackers.", why: "A roster still needs bodies that can take space and keep momentum going." },
+  { step: "B role: Tech-Priests", doThis: "Force multipliers and mission anchors. Keep them protected, then build around the role you actually use most.", why: "They can decide a mission, but losing one through exposure is often worse than missing a damage window." },
+  { step: "B role: Enginseer", doThis: "Repair and support stabilizer. Add one when repeated losses come from attrition instead of objective confusion.", why: "Support is not glamorous, but it prevents cascade failures in longer fights." },
 ];
 
 export const mechanicusIIWorthRows = [
@@ -318,6 +318,9 @@ const mechanicusIIKeywords = [
   'Warhammer 40K Mechanicus 2 release date',
   'Mechanicus II beginner guide',
   'Mechanicus II factions',
+  'Mechanicus II leaders',
+  'Mechanicus II Faustinius',
+  'Mechanicus II Nefershah',
   'Mechanicus II system requirements',
   'Mechanicus II Steam Deck',
   'Mechanicus II performance',

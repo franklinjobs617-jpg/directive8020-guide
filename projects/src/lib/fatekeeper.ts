@@ -134,9 +134,9 @@ export const fatekeeperExplorationRows = [
 // Source: Game8 review confirms consumables exist but are "too slow to use."
 // Source: Steam store page mentions "crafting" and "alchemy" as features.
 export const fatekeeperAlchemyRows = [
-  { step: "Alchemy system", doThis: "Fatekeeper includes an alchemy/crafting system. The exact mechanics, recipes, and ingredient types need verification through gameplay.", why: "Confirmed by Steam store page and Game8 review — but specific recipes are not yet verified from primary sources." },
-  { step: "Consumables", doThis: "Potions and consumables exist but are reported to have slow use animations that cannot be canceled. Plan your consumable use before engaging enemies.", why: "Verified: Game8 review — 'consumables take too long to use and actions cannot be canceled once started.'" },
-  { step: "Spell types (verified)", doThis: "Four spells confirmed in Early Access: Telekinesis (pull enemies/hazards), Fireball (direct damage), Frost Bolt (slow + damage), Wind Push (knockback).", why: "Verified: Game8 review. Telekinesis is reported as the most useful spell; the three damage spells reportedly deal negligible damage compared to it." },
+  { step: "Alchemy system", doThis: "Fatekeeper includes an alchemy and crafting system. The exact mechanics, recipes, and ingredient types need verification through current-build gameplay.", why: "Feature existence is supported by store and review coverage, but specific recipes should not be published as final until tested." },
+  { step: "Consumables", doThis: "Potions and consumables exist, but use timing matters. Plan them before fights, after creating distance, or during a safe reset window.", why: "Launch-window coverage reports slow consumable use. Treat exact animation behavior as patch-sensitive." },
+  { step: "Spell types (verified)", doThis: "Four spells are reported in Early Access: Telekinesis for pulling enemies and hazards, Fireball for direct damage, Frost Bolt for slow pressure, and Wind Push for knockback.", why: "Launch-window review coverage supports the spell names, while exact balance and damage values should be checked after patches." },
   { step: "Crafting materials", doThis: "Specific ingredient names, farming locations, and recipe combinations need verification through direct gameplay or official developer documentation.", why: "Not yet verified. Marked for update after gameplay testing." },
 ];
 

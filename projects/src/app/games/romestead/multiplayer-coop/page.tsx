@@ -7,9 +7,9 @@ import {
   romesteadImages,
 } from '@/lib/romestead';
 
-const title = 'Romestead Co-op & Multiplayer Guide — 1–8 Players, Online, LAN';
+const title = 'Romestead Multiplayer: 1-8 Player Co-op, LAN & Split Screen';
 const description =
-  'Romestead co-op multiplayer guide: 1–8 players, online and LAN support, group roles, split-screen status, host-save tips, and launch-day testing notes.';
+  'Romestead multiplayer guide: 1-8 player online co-op, LAN co-op, split-screen status, crossplay, host saves, group roles, and launch testing notes.';
 const canonical = '/games/romestead/multiplayer-coop';
 
 export const metadata = createRomesteadMetadata({
@@ -39,6 +39,11 @@ const faqs = [
     question: 'Is Romestead split-screen or couch co-op?',
     answer:
       'Split-screen and couch co-op are not confirmed in current Steam feature labels.',
+  },
+  {
+    question: 'Is Romestead local co-op?',
+    answer:
+      'Romestead lists LAN Co-op, which means local-network co-op is confirmed. Couch co-op and split-screen are different features and are not confirmed.',
   },
   {
     question: 'Does Romestead have crossplay?',

@@ -10,9 +10,9 @@ import {
   romesteadQuickFacts,
 } from '@/lib/romestead';
 
-const title = 'Romestead Guide Hub: Release Date, Co-op, Early Access & Beginner Tips';
+const title = 'Romestead Guide: Multiplayer, Co-op, Release Date & Tips';
 const description =
-  'Romestead guide hub for Steam Early Access: release timing, 1-8 player co-op, PC requirements, beginner settlement priorities, Steam Deck cautions, and buy-or-wait advice.';
+  'Romestead guide for multiplayer, 1-8 player co-op, release date, Early Access, beginner settlement tips, PC specs, Steam Deck status, and buy-or-wait advice.';
 const canonical = '/games/romestead';
 
 export const metadata = createRomesteadMetadata({
@@ -44,6 +44,11 @@ const faqs = [
       'The official Steam description lists 1-8 players, and Steam feature labels include Online Co-op and LAN Co-op.',
   },
   {
+    question: 'Is Romestead split screen or local co-op?',
+    answer:
+      'Current official feature labels confirm Online Co-op and LAN Co-op, but split screen is not confirmed. Plan multiplayer around separate devices unless an official split-screen feature appears.',
+  },
+  {
     question: 'Is Romestead on Xbox, PlayStation, or Steam Deck?',
     answer:
       'PC via Steam is the verified platform right now. Xbox and PlayStation versions are not confirmed in current official store data, and Steam Deck support needs launch testing.',
@@ -57,6 +62,7 @@ const faqs = [
 
 function getGuideImage(href: string) {
   if (href.includes('beginner')) return romesteadImages.screenshot1;
+  if (href.includes('settlement')) return romesteadImages.screenshot2;
   if (href.includes('multiplayer')) return romesteadImages.screenshot3;
   if (href.includes('system')) return romesteadImages.screenshot4;
   if (href.includes('worth')) return romesteadImages.screenshot5;

@@ -9,9 +9,9 @@ import { SurvivalEndingTracker } from '@/components/tools/survival-ending-tracke
 import { EndingIndex } from '@/components/tools/ending-index';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 Endings Guide: How Many, Best Ending & Explained',
+  title: 'Directive 8020 All Endings: Best, Secret & Death Spiral',
   description:
-    'Directive 8020 endings guide: how many endings there are, best ending route, secret ending checks, Death Spiral, ending explained, and known finale outcomes.',
+    'Directive 8020 all endings guide: ending count, best ending route, secret ending checks, Death Spiral, Homeward Bound, Docked, Mask Off, and finale explained.',
   alternates: {
     canonical: '/directive-8020-all-endings',
   },
@@ -183,9 +183,9 @@ export default function AllEndingsPage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 Endings: Best, Secret & Death Spiral',
+          title: 'Directive 8020 All Endings: Best, Secret & Death Spiral',
           description:
-            'Directive 8020 endings guide with reported ending count, best ending route, secret ending checks, Death Spiral, ending explained, Story Tree tracking, and route checklist.',
+            'Directive 8020 all endings guide with reported ending count, best route, secret ending checks, Death Spiral, Homeward Bound, Docked, Mask Off, and route checklist.',
           url: '/directive-8020-all-endings',
           datePublished: '2026-05-12',
           dateModified: '2026-05-21',
@@ -199,7 +199,7 @@ export default function AllEndingsPage() {
         <PageHero src="/d8020-screenshot-06.jpg" alt="Directive 8020 official Story Tree screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 Endings: Best, Secret and Death Spiral
+          Directive 8020 All Endings: Best, Secret and Death Spiral
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
           Directive 8020 has <strong className="text-foreground">5 reported

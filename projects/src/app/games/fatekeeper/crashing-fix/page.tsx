@@ -6,9 +6,9 @@ import {
   fatekeeperImages,
 } from "@/lib/fatekeeper";
 
-const title = "Fatekeeper Crashing, Black Screen & Performance Fix Guide";
+const title = "Fatekeeper Crash Fix: Fatal Error, Black Screen & Low FPS";
 const description =
-  "Fatekeeper crashing on startup? Black screen, low FPS, stutter, or UE5 errors? Complete PC troubleshooting guide with driver checks, settings fixes, and Early Access workarounds.";
+  "Fatekeeper crash fix guide for fatal error, startup crash, black screen, low FPS, stutter, UE5 errors, driver checks, overlays, and -dx11 launch options.";
 const canonical = "/games/fatekeeper/crashing-fix";
 
 export const metadata = createFatekeeperMetadata({
@@ -19,6 +19,11 @@ export const metadata = createFatekeeperMetadata({
 });
 
 const faqs = [
+  {
+    question: "How do I fix Fatekeeper fatal error?",
+    answer:
+      "Update GPU drivers, verify Steam files, disable overlays, install the latest Visual C++ Redistributable, and try -dx11 in Steam launch options if the fatal error appears during startup.",
+  },
   {
     question: "Why does Fatekeeper crash on startup?",
     answer:
@@ -42,11 +47,17 @@ const faqs = [
   {
     question: "Controller not working in Fatekeeper?",
     answer:
-      "Disable Steam Input for Fatekeeper: Steam Library → right-click Fatekeeper → Properties → Controller → Disable Steam Input. Some controllers work better with native support than Steam's input wrapper.",
+      "Disable Steam Input for Fatekeeper from Steam Library, Properties, Controller, then Disable Steam Input. Some controllers work better with native support than Steam's input wrapper.",
   },
 ];
 
 const searchIntentRows = [
+  {
+    query: "Fatekeeper fatal error",
+    answer: "Update GPU drivers, verify Steam files, disable overlays, install Visual C++, and try -dx11.",
+    href: "#startup-crash",
+    label: "Fatal error",
+  },
   {
     query: "Fatekeeper crashing fix",
     answer: "Update GPU drivers, verify Steam files, disable overlays, and try -dx11 launch option.",
@@ -106,7 +117,7 @@ export default function FatekeeperCrashingPage() {
         caused by <strong>outdated GPU drivers</strong>,{" "}
         <strong>overlay conflicts</strong> (Discord, RivaTuner, GeForce Experience),
         or <strong>DX12 instability</strong>. The fastest fix for startup crashes:
-        update drivers → verify Steam files → disable overlays → add{" "}
+        update drivers, verify Steam files, disable overlays, then add{" "}
         <strong>-dx11</strong> to launch options as a fallback. Always install on an
         SSD. Back up your save folder before applying major patches.
       </BlufBox>
@@ -132,7 +143,7 @@ export default function FatekeeperCrashingPage() {
             },
             {
               step: "2. Verify Game Files",
-              desc: "Steam Library → right-click Fatekeeper → Properties → Installed Files → Verify integrity of game files.",
+              desc: "Open Fatekeeper in Steam Library, then Properties, Installed Files, and Verify integrity of game files.",
             },
             {
               step: "3. Disable Overlays",
@@ -176,8 +187,8 @@ export default function FatekeeperCrashingPage() {
           </li>
           <li>
             <strong>Corrupted shader cache.</strong> Clear your GPU shader cache:
-            NVIDIA Control Panel → Manage 3D Settings → Shader Cache Size → Disabled
-            → Apply → re-enable → Apply. Or use Disk Cleanup on Windows and check
+            NVIDIA Control Panel, Manage 3D Settings, Shader Cache Size, Disabled,
+            Apply, re-enable, then Apply. Or use Disk Cleanup on Windows and check
             "DirectX Shader Cache."
           </li>
         </ol>
@@ -196,7 +207,7 @@ export default function FatekeeperCrashingPage() {
           <div className="p-5">
             <code className="text-sm text-d8020">-dx11</code>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Right-click Fatekeeper in Steam Library → Properties → General → set
+              Right-click Fatekeeper in Steam Library, open Properties, then General, and set
               Launch Options to <strong>-dx11</strong>. This forces the game to use
               DirectX 11 instead of DirectX 12, which resolves black screen issues
               on some GPU configurations.
@@ -204,7 +215,7 @@ export default function FatekeeperCrashingPage() {
           </div>
         </div>
         <p className="mt-4 leading-relaxed text-muted-foreground">
-          Also try: lower your desktop resolution to 1920×1080 before launching,
+          Also try: lower your desktop resolution to 1920x1080 before launching,
           disable HDR in Windows display settings, and run the game in windowed mode
           by adding <strong>-windowed</strong> to launch options.
         </p>
@@ -218,21 +229,21 @@ export default function FatekeeperCrashingPage() {
         </p>
         <div className="space-y-3">
           {[
-            { setting: "Shadow Quality", recommendation: "Medium or Low", impact: "High — shadows are the biggest GPU cost in UE5" },
-            { setting: "Post-Processing", recommendation: "Medium", impact: "Medium — affects motion blur, bloom, and ambient occlusion" },
-            { setting: "Effects Quality", recommendation: "Medium", impact: "High — particle effects during combat hit FPS hard" },
+            { setting: "Shadow Quality", recommendation: "Medium or Low", impact: "High -- shadows are the biggest GPU cost in UE5" },
+            { setting: "Post-Processing", recommendation: "Medium", impact: "Medium -- affects motion blur, bloom, and ambient occlusion" },
+            { setting: "Effects Quality", recommendation: "Medium", impact: "High -- particle effects during combat hit FPS hard" },
             { setting: "Texture Quality", recommendation: "High (if 8GB+ VRAM)", impact: "Low performance impact, high visual impact" },
-            { setting: "Resolution", recommendation: "1920×1080", impact: "Highest — do not run at 1440p or 4K without an RTX 4080+" },
+            { setting: "Resolution", recommendation: "1920x1080", impact: "Highest -- do not run at 1440p or 4K without an RTX 4080+" },
             { setting: "FPS Cap", recommendation: "60 FPS in driver settings", impact: "Prevents spike-induced stutter" },
             { setting: "V-Sync", recommendation: "On (in-game)", impact: "Eliminates screen tearing; enable in-game not in driver" },
-            { setting: "DLSS / FSR", recommendation: "Check in-game — if available, set to Quality", impact: "Can boost FPS 20-40% on supported GPUs" },
+            { setting: "DLSS / FSR", recommendation: "Check in-game -- if available, set to Quality", impact: "Can boost FPS 20-40% on supported GPUs" },
           ].map((item) => (
             <div key={item.setting} className="flex flex-wrap items-center gap-4 rounded-md border border-border/40 bg-background/30 p-4">
               <div className="min-w-[140px]">
                 <p className="text-sm font-semibold text-foreground">{item.setting}</p>
               </div>
               <div className="flex-1">
-                <p className="text-sm text-d8020 font-medium">→ {item.recommendation}</p>
+                <p className="text-sm text-d8020 font-medium">Recommended: {item.recommendation}</p>
                 <p className="text-xs text-muted-foreground">{item.impact}</p>
               </div>
             </div>
@@ -243,11 +254,11 @@ export default function FatekeeperCrashingPage() {
       <section id="controller" className="mt-10">
         <h2 className="mb-4 text-2xl font-bold text-foreground">Controller Problems</h2>
         <p className="mb-4 leading-relaxed text-muted-foreground">
-          Fatekeeper is a first-person melee game — controller feel matters. If your
+          Fatekeeper is a first-person melee game -- controller feel matters. If your
           controller isn't detected or behaves oddly:
         </p>
         <ol className="list-decimal space-y-2 pl-5 text-sm leading-relaxed text-muted-foreground">
-          <li><strong>Disable Steam Input:</strong> Steam Library → right-click Fatekeeper → Properties → Controller → Override for Fatekeeper → Disable Steam Input.</li>
+          <li><strong>Disable Steam Input:</strong> Steam Library, right-click Fatekeeper, Properties, Controller, Override for Fatekeeper, Disable Steam Input.</li>
           <li><strong>Use a wired connection.</strong> Bluetooth latency can make melee timing feel off.</li>
           <li><strong>Xbox controllers</strong> have the best native support. PlayStation controllers may need DS4Windows as a bridge.</li>
           <li>If using a PlayStation controller with DS4Windows, enable "Hide DS4 Controller" in DS4Windows settings to prevent double-input.</li>

@@ -1,5 +1,6 @@
 import { ActionTable, BlufBox, SearchAnswerPanel } from "@/components/guide-blocks";
 import { StarminerArticle } from "@/components/starminer-article";
+import { ArticleImage } from "@/components/article-media";
 import {
   createStarminerMetadata,
   starminerMoneyRows,
@@ -72,6 +73,20 @@ const jumpLinks = [
   { href: "/games/starminer/mining-logistics", label: "Mining guide" },
 ];
 
+const playerRows = [
+  ["New player", "Clear debt with safe cobalt and mission income before building expensive ships.", "Debt interest quietly slows every later decision, so early stability beats flashy expansion."],
+  ["Builder", "Keep iron, silicone, copper, and power-chain materials before selling surplus.", "A builder who sells construction inputs has to buy progress back later."],
+  ["Trader", "Use storage thresholds and haulers to move only true surplus into trade.", "Automation should sell excess, not drain the materials needed for research and repairs."],
+  ["Optimizer", "Measure whether mining, refining, hauling, or trade distance is limiting credits.", "The best money route is the one that fixes the slowest link, not always more miners."],
+];
+
+const moneyProblemRows = [
+  ["Credits are low but storage is full", "Surplus is not reaching a buyer.", "Add trade routing, haulers, or auto-sell thresholds near a station."],
+  ["Debt will not go down", "Income is being reinvested before interest is controlled.", "Set a debt payment target before buying new modules."],
+  ["Research is blocked", "Too much cobalt or silicone-chain material was sold.", "Keep research reserves before selling high-value surplus."],
+  ["Ships keep delaying profit", "Repairs, fuel, or power costs are eating the route.", "Shrink the route or add defense before scaling income."],
+];
+
 export default function StarminerMoneyPage() {
   return (
     <StarminerArticle
@@ -102,6 +117,11 @@ export default function StarminerMoneyPage() {
 
       <section id="best-resources" className="mb-10">
         <h2 className="mb-4 text-2xl font-bold text-foreground">Best Resources to Sell</h2>
+        <ArticleImage
+          src={starminerImages.mining}
+          alt="Starminer mining resources for credit income"
+          caption="Fast money starts with knowing what is safe to sell and what must stay reserved for construction, power, research, and repairs."
+        />
         <ActionTable rows={starminerMoneyRows} />
       </section>
 
@@ -142,6 +162,11 @@ export default function StarminerMoneyPage() {
 
       <section id="automation" className="mt-10">
         <h2 className="mb-4 text-2xl font-bold text-foreground">Automated Income Setup</h2>
+        <ArticleImage
+          src={starminerImages.logistics}
+          alt="Starminer automated trade and logistics route"
+          caption="Automation is useful only after storage, refining, and trade distance are understood. Bad automation sells the materials your station still needs."
+        />
         <p className="mb-4 leading-relaxed text-muted-foreground">
           Once you have stable mining, automate your income to focus on expansion:
         </p>
@@ -156,6 +181,11 @@ export default function StarminerMoneyPage() {
 
       <section id="clear-debt" className="mt-10">
         <h2 className="mb-4 text-2xl font-bold text-foreground">Debt Clearing Priority</h2>
+        <ArticleImage
+          src={starminerImages.frontier}
+          alt="Starminer early expansion and debt clearing route"
+          caption="Debt clearing is not glamorous, but it keeps early expansion from bleeding credits into interest instead of ships, labs, and defenses."
+        />
         <div className="rounded-lg border border-yellow-400/30 bg-yellow-400/5 p-5">
           <p className="text-sm leading-relaxed text-yellow-300">
             <strong>Clear your starting debt in the first 2 hours.</strong> Interest
@@ -186,6 +216,60 @@ export default function StarminerMoneyPage() {
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{m.tip}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">New Player vs Optimizer Money Plan</h2>
+        <p className="mb-4 leading-relaxed text-muted-foreground">
+          Money advice changes by save state. Beginners need debt control and
+          safe income. Builders need to avoid selling construction inputs.
+          Traders need storage thresholds. Optimizers need to diagnose the slow
+          link in the chain before adding more miners.
+        </p>
+        <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player type</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Money plan</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              {playerRows.map(([type, plan, why]) => (
+                <tr key={type} className="border-b border-border/30 last:border-0">
+                  <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{type}</th>
+                  <td className="px-4 py-3 text-muted-foreground">{plan}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{why}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Money Problem Diagnosis</h2>
+        <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Problem</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Likely cause</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Fix</th>
+              </tr>
+            </thead>
+            <tbody>
+              {moneyProblemRows.map(([problem, cause, fix]) => (
+                <tr key={problem} className="border-b border-border/30 last:border-0">
+                  <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{problem}</th>
+                  <td className="px-4 py-3 text-muted-foreground">{cause}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{fix}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
     </StarminerArticle>

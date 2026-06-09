@@ -15,10 +15,11 @@ import { paralivesImages } from "@/lib/paralives";
 import { starminerImages } from "@/lib/starminer";
 import { lunaAbyssImages } from "@/lib/luna-abyss";
 import { fatekeeperImages } from "@/lib/fatekeeper";
+import { gateGuardImages } from "@/lib/gate-guard-simulator";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
-  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, fantasy RPGs, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, and story-driven games, including Luna Abyss, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, fantasy RPGs, inspection sims, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, and story-driven games, including Gate Guard Simulator, Luna Abyss, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
   title: {
@@ -42,6 +43,7 @@ export const metadata: Metadata = {
     "Starminer guide",
     "Luna Abyss guide",
     "Fatekeeper guide",
+    "Gate Guard Simulator guide",
   ],
   authors: [{ name: "Enjoy4Game Guides" }],
   alternates: {
@@ -64,6 +66,13 @@ export const metadata: Metadata = {
 };
 
 const gameCards = [
+  {
+    title: "Gate Guard Simulator",
+    href: "/games/gate-guard-simulator",
+    label: "Inspection sim",
+    body: "Pre-release hub for the 2026 Steam page, Playtest access, PC specs, Xbox and PS5 caveats, gameplay premise, and source-checked coverage scope.",
+    image: gateGuardImages.hero,
+  },
   {
     title: "Luna Abyss",
     href: "/games/luna-abyss",

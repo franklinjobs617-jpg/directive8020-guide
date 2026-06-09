@@ -74,7 +74,7 @@ export const projectMist: GameConfig = {
   guidePublisher: "Enjoy4Game Guides",
   description:
     "An open-world survival horror game from Chicken Launcher with solo play, online co-op, a Gravity Gun, a moving train base, giant creatures, crafting, hunting, and mysterious island facilities.",
-  platforms: ["PC", "PlayStation 5"],
+  platforms: ["PC"],
   genres: [
     "Action",
     "Adventure",
@@ -114,6 +114,12 @@ export const projectMist: GameConfig = {
       href: "/games/project-mist/beginner-guide",
       description:
         "Day-one survival priorities for Gravity Gun, train base, resources, and co-op.",
+    },
+    {
+      title: "Map & Facilities Guide",
+      href: "/games/project-mist/map-facilities",
+      description:
+        "Route planning for map markers, facilities, the train base, greenhouse, loot rooms, and safe returns.",
     },
     {
       title: "Crashing & Performance Fix",
@@ -371,6 +377,12 @@ export const mechanicusII: GameConfig = {
         "Adeptus Mechanicus versus Necrons, campaign identity, battlefield strengths, leaders, and what still needs testing.",
     },
     {
+      title: "Leaders Guide",
+      href: "/games/mechanicus-ii/leaders-guide",
+      description:
+        "Faustinius, Nefershah, leader safety, leader death risk, faction resources, and first-campaign decision rules.",
+    },
+    {
       title: "System Requirements",
       href: "/games/mechanicus-ii/system-requirements",
       description:
@@ -457,6 +469,12 @@ export const romestead: GameConfig = {
       href: "/games/romestead/tips-and-tricks",
       description:
         "Beginner tips for first-day routing, early resources, compact bases, survivors, night defense, co-op, and safe expansion.",
+    },
+    {
+      title: "Settlement Building & Citizens",
+      href: "/games/romestead/settlement-building-citizens",
+      description:
+        "Settlement layout, storage, workstations, food flow, citizen jobs, compact expansion, and night-defense planning.",
     },
     {
       title: "Multiplayer & Co-op",
@@ -776,6 +794,12 @@ export const starminer: GameConfig = {
         "Asteroid extraction, refining, production chains, automated logistics, research, link gates, profit, and maintenance.",
     },
     {
+      title: "Resources: Cobalt, Thorium & Eonite",
+      href: "/games/starminer/resources-cobalt-thorium-eonite",
+      description:
+        "Where key resources fit into mining, selling, research, reactors, repairs, storage, and early expansion planning.",
+    },
+    {
       title: "Heat, Aliens & Defense",
       href: "/games/starminer/heat-aliens-defense",
       description:
@@ -903,6 +927,33 @@ export const fatekeeper: GameConfig = {
       href: "/games/fatekeeper/crashing-fix",
       description:
         "Startup crashes, black screen, low FPS, UE5 settings, driver checks, and Early Access troubleshooting.",
+    },
+  ],
+};
+
+export const gateGuardSimulator: GameConfig = {
+  id: "gate-guard-simulator",
+  slugPrefix: "gate-guard-simulator",
+  hubPath: "/games/gate-guard-simulator",
+  name: "Gate Guard Simulator",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "A medieval gate inspection simulation game from Redox Interactive and Forklift Interactive where players inspect seals, expose smugglers, reveal witches, and decide who enters the castle.",
+  platforms: ["PC via Steam"],
+  genres: ["Casual", "Indie", "Simulation", "Inspection Sim"],
+  developer: "Redox Interactive",
+  publisher: "Forklift Interactive",
+  releaseDate: "2026",
+  operatingSystem: "Windows 10 64-bit",
+  url: "https://store.steampowered.com/app/4111570/Gate_Guard_Simulator/",
+  availability: "https://schema.org/PreOrder",
+  heroImage: "/games/gate-guard-simulator/screenshot-1.jpg",
+  guideLinks: [
+    {
+      title: "Release Date, Playtest & Platforms",
+      href: "/games/gate-guard-simulator",
+      description:
+        "Steam 2026 status, Playtest request, PC specs, platform caveats, gameplay facts, media signals, and whether it is worth covering before launch.",
     },
   ],
 };

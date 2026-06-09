@@ -94,6 +94,7 @@ const projectMistSessionRows = [
 
 function getProjectMistGuideImage(href: string) {
   if (href.includes('system')) return projectMistImages.facilities;
+  if (href.includes('map-facilities')) return projectMistImages.facilities;
   if (href.includes('multiplayer')) return projectMistImages.multiplayer;
   if (href.includes('beginner')) return projectMistImages.beginner;
   if (href.includes('crashing')) return projectMistImages.screenshot6;

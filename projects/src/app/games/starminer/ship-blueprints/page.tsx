@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ActionTable, BlufBox, SearchAnswerPanel } from "@/components/guide-blocks";
 import { StarminerArticle } from "@/components/starminer-article";
+import { ArticleImage } from "@/components/article-media";
 import {
   createStarminerMetadata,
   starminerBlueprintRows,
@@ -78,6 +79,22 @@ const jumpLinks = [
   { href: "/games/starminer/make-money", label: "Make money" },
 ];
 
+const playerRows = [
+  ["New player", "Build one compact mining ship first and test docking, power, thrust, cargo, and heat.", "A working small ship teaches more than a large untested design."],
+  ["Builder", "Separate ships by job: miner, hauler, patrol, research, defense.", "Specialized ships are easier to repair, replace, and improve."],
+  ["Logistics player", "Add haulers only after miners can fill storage faster than the station can process it.", "A hauler solves transport, not mining output or refining speed."],
+  ["Combat player", "Build patrol boats only when heat creates repeated attacks.", "Weapons too early slow mining; weapons too late cost ships."],
+  ["Optimizer", "Clone a blueprint only after one design works across several runs.", "Blueprints scale mistakes as quickly as they scale good designs."],
+];
+
+const designProblemRows = [
+  ["Ship cannot dock", "The design is too long or awkward for early docking constraints.", "Shorten the hull and keep starter ships compact."],
+  ["Ship turns slowly", "Mass and thrust are mismatched.", "Remove unnecessary modules or add thrusters before adding cargo."],
+  ["Mining stops mid-route", "Power reserve or cargo capacity is too low.", "Add reserve power and cargo before increasing mining lasers."],
+  ["Patrol boat dies quickly", "It is fighting without shields, speed, or station support.", "Use it for response, not solo warship duty."],
+  ["Blueprint is expensive to rebuild", "The design uses rare parts before the economy is stable.", "Create a cheaper version for loss-prone early routes."],
+];
+
 export default function StarminerBlueprintsPage() {
   return (
     <StarminerArticle
@@ -108,6 +125,11 @@ export default function StarminerBlueprintsPage() {
 
       <section id="design-principles">
         <h2 className="mb-4 text-2xl font-bold text-foreground">Ship Design Principles</h2>
+        <ArticleImage
+          src={starminerImages.build}
+          alt="Starminer modular ship blueprint design principles"
+          caption="Blueprints are useful only when the role is clear: mining, hauling, patrol, research, or defense."
+        />
         <div className="grid gap-4 sm:grid-cols-2">
           {[
             { title: "Build by Role", desc: "Each ship does one job. A miner mines. A hauler hauls. A patrol boat fights. Mixing roles creates expensive ships that do everything poorly." },
@@ -127,6 +149,11 @@ export default function StarminerBlueprintsPage() {
 
       <section id="starter-designs" className="mt-10">
         <h2 className="mb-4 text-2xl font-bold text-foreground">5 Starter Ship Designs</h2>
+        <ArticleImage
+          src={starminerImages.officialBuild}
+          alt="Starminer starter ship blueprint build order"
+          caption="Starter designs should be cheap, compact, and replaceable. Save the giant builds for after income and repairs are stable."
+        />
         <p className="mb-4 leading-relaxed text-muted-foreground">
           These designs are tested against Early Access launch mechanics. All use
           T1/T2 modules available in the first 10 hours. Build them in order — each
@@ -137,6 +164,11 @@ export default function StarminerBlueprintsPage() {
 
       <section className="mt-10">
         <h2 className="mb-4 text-2xl font-bold text-foreground">Build Order Strategy</h2>
+        <ArticleImage
+          src={starminerImages.officialFleet}
+          alt="Starminer fleet blueprint progression"
+          caption="A reliable fleet grows in phases: miners first, haulers second, patrols when heat rises, and defense platforms once attacks become routine."
+        />
         <div className="space-y-4">
           {[
             { phase: "Phase 1 (0-2 hours)", builds: ["Mining Ship x2"], goal: "Stable ore income. Two miners keep one smelter running constantly. Sell surplus iron to fund the hauler." },
@@ -152,6 +184,61 @@ export default function StarminerBlueprintsPage() {
               <p className="text-sm leading-relaxed text-muted-foreground">{phase.goal}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Blueprint Plan by Player Type</h2>
+        <p className="mb-4 leading-relaxed text-muted-foreground">
+          The best blueprint depends on what is currently limiting your save.
+          New players need a compact miner. Builders need clean role separation.
+          Logistics players need haulers only after miners outpace processing.
+          Combat players need patrols when heat creates losses. Optimizers need
+          proof that a design works before duplicating it.
+        </p>
+        <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player type</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Blueprint focus</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              {playerRows.map(([type, focus, why]) => (
+                <tr key={type} className="border-b border-border/30 last:border-0">
+                  <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{type}</th>
+                  <td className="px-4 py-3 text-muted-foreground">{focus}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{why}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Blueprint Troubleshooting</h2>
+        <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Problem</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Likely cause</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Fix</th>
+              </tr>
+            </thead>
+            <tbody>
+              {designProblemRows.map(([problem, cause, fix]) => (
+                <tr key={problem} className="border-b border-border/30 last:border-0">
+                  <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{problem}</th>
+                  <td className="px-4 py-3 text-muted-foreground">{cause}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{fix}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
     </StarminerArticle>

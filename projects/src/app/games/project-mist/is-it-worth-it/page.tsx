@@ -22,14 +22,14 @@ const faqs = [
       'Project: Mist is most worth considering if you accept Early Access risk and want physics survival, online co-op, giant creatures, and a moving train base.',
   },
   {
-    question: 'What was the Project: Mist launch price?',
+    question: 'What is the Project: Mist Steam price snapshot?',
     answer:
-      'The US Steam store snapshot showed $22.49 with a 10% launch discount from a $24.99 base price on 20 May, 2026.',
+      'The US Steam store snapshot showed $24.99 on 9 June, 2026. Regional prices and discounts can change, so check your local store before buying.',
   },
   {
     question: 'What are the Steam reviews like?',
     answer:
-      'Steam reviews were Mixed from 31 reviews in the 20 May, 2026 snapshot, so read recent reviews before buying.',
+      'Steam reviews were Mixed from 169 reviews in the 9 June, 2026 snapshot, so read recent reviews before buying.',
   },
   {
     question: 'Who should wait for patches?',
@@ -67,11 +67,10 @@ export default function ProjectMistWorthItPage() {
           caption="Buying advice should use dated facts because Steam discounts, review count, and player sentiment can move quickly after launch."
         />
         <p>
-          On 20 May, 2026, the US Steam store snapshot showed a $22.49 launch
-          discount from a $24.99 base price. Steam reviews were Mixed from 31
-          reviews in the same snapshot. Those numbers are useful for context,
-          but your final decision should use the current store page and recent
-          reviews in your region.
+          On 9 June, 2026, the US Steam store snapshot showed $24.99. Steam
+          reviews were Mixed from 169 reviews in the same snapshot. Those
+          numbers are useful for context, but your final decision should use
+          the current store page and recent reviews in your region.
         </p>
       </section>
 

@@ -14,9 +14,9 @@ import {
   zeroParadesWorthItRows,
 } from '@/lib/zero-parades';
 
-const title = 'ZERO PARADES Guide 2026: GOG, PS5, Controller, Best Builds & Specs';
+const title = 'ZERO PARADES Guide: Walkthrough, Best Build, GOG, PS5 & Specs';
 const description =
-  'ZERO PARADES launched May 21, 2026 on PC. Check GOG availability, PS5 status, controller support, best builds, system requirements, game length, and beginner tips.';
+  'ZERO PARADES guide for walkthrough, best build, GOG, PS5 status, controller support, system requirements, game length, time limits, and beginner tips.';
 const canonical = '/games/zero-parades';
 
 export const metadata = createZeroParadesMetadata({

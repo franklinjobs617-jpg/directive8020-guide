@@ -15,7 +15,7 @@ export const projectMistDiscussionsUrl =
 export const chickenLauncherUrl =
   "https://www.gematsu.com/companies/chicken-launcher";
 
-export const projectMistSnapshotDate = "20 May, 2026";
+export const projectMistSnapshotDate = "9 June, 2026";
 
 export const projectMistQuickFacts = [
   ["Release", "Live in Steam Early Access since 19 May, 2026"],
@@ -24,8 +24,8 @@ export const projectMistQuickFacts = [
   ["Players", "Single-player, multi-player, co-op, online co-op"],
   ["Co-op size", "1-4 players in Steam page copy"],
   ["Core tools", "Gravity Gun and moving train base"],
-  ["Price snapshot", "$22.49 launch discount in the US store on 20 May, 2026"],
-  ["Review snapshot", "Mixed from 31 Steam reviews on 20 May, 2026"],
+  ["Price snapshot", "$24.99 in the US Steam store on 9 June, 2026"],
+  ["Review snapshot", "Mixed from 169 Steam reviews on 9 June, 2026"],
 ];
 
 export const projectMistLaunchIntentRows = [
@@ -58,11 +58,11 @@ export const projectMistLaunchSnapshotRows = [
   ],
   [
     "US price snapshot",
-    "$22.49 launch discount from a $24.99 base price on 20 May, 2026.",
+    "$24.99 in the US Steam store on 9 June, 2026.",
   ],
   [
     "Review snapshot",
-    "31 Steam reviews with a Mixed review summary on 20 May, 2026.",
+    "169 Steam reviews with a Mixed review summary on 9 June, 2026.",
   ],
   [
     "Roadmap timing",
@@ -103,6 +103,56 @@ export const projectMistDemoRouteRows = [
   [
     "Prometheus Laboratory",
     "Expect indoor hazards, crafting stations, upgrade stations, loot rooms, and root-themed enemies.",
+  ],
+];
+
+export const projectMistMapRouteRows = [
+  [
+    "Wake-up room",
+    "Use this as the control and inventory check before following the first objective marker.",
+  ],
+  [
+    "Midway Bridge",
+    "Follow map and compass markers toward the train instead of free-roaming before you have storage and retreat options.",
+  ],
+  [
+    "Train base",
+    "Treat the train as the route hub: unload resources, craft, repair, and set the next facility objective.",
+  ],
+  [
+    "Busted mech part",
+    "Use the westward mech-part objective before expecting later train and gate steps to open cleanly.",
+  ],
+  [
+    "Greenhouse",
+    "Enter as a planned facility run with healing, ammo, and a clear exit path.",
+  ],
+  [
+    "Prometheus Laboratory",
+    "Expect a denser indoor route with crafting stations, upgrade checks, hazards, and enemy pressure.",
+  ],
+];
+
+export const projectMistFacilityRows = [
+  [
+    "Crafting bench",
+    "Use facility benches to convert gathered materials before pushing into longer rooms or boss gates.",
+  ],
+  [
+    "Upgrade stations",
+    "Check for gear, capacity, health, and Gravity Gun upgrade opportunities before leaving.",
+  ],
+  [
+    "Locked chests",
+    "Bring lockpicking knowledge because side rooms and containers can hold survival resources.",
+  ],
+  [
+    "Crates and optional rooms",
+    "Clear carefully; useful items can be tucked behind side paths instead of placed on the main route.",
+  ],
+  [
+    "Hazard rooms",
+    "Watch for corrosive floors, root enemies, and low-ammo pressure before committing to a fight.",
   ],
 ];
 
@@ -305,11 +355,11 @@ export const projectMistWorthItRows = [
   ],
   [
     "Price check",
-    "The US store showed $22.49 with a 10% launch discount on 20 May, 2026.",
+    "The US Steam store showed $24.99 on 9 June, 2026; regional prices and discounts can change.",
   ],
   [
     "Review check",
-    "Steam reviews were Mixed from 31 reviews on 20 May, 2026, so read recent reviews before buying.",
+    "Steam reviews were Mixed from 169 reviews on 9 June, 2026, so read recent reviews before buying.",
   ],
   [
     "Refund safety",
@@ -338,7 +388,7 @@ export const projectMistSourceRows = [
   },
   {
     claim:
-      "Steam API reported a $22.49 US launch-discount price from a $24.99 base price on 20 May, 2026.",
+      "Steam API reported a $24.99 US store price on 9 June, 2026.",
     source: "Steam store API",
     status: "verified" as const,
     href: projectMistSteamUrl,
@@ -346,7 +396,7 @@ export const projectMistSourceRows = [
   },
   {
     claim:
-      "Steam reviews API reported 31 reviews with a Mixed summary on 20 May, 2026.",
+      "Steam reviews API reported 169 reviews with a Mixed summary on 9 June, 2026.",
     source: "Steam reviews API",
     status: "verified" as const,
     href: projectMistReviewsApiUrl,
@@ -485,6 +535,9 @@ const projectMistKeywords = [
   "Project Mist multiplayer",
   "Project Mist co-op",
   "Project Mist beginner guide",
+  "Project Mist map",
+  "Project Mist facilities",
+  "Project Mist train location",
   "Project Mist crashing fix",
   "Project Mist lockpick",
   "Project Mist train door key",

@@ -116,6 +116,7 @@ function getGuideImage(href: string) {
   if (href.includes("system")) return starminerImages.hero;
   if (href.includes("modes")) return starminerImages.survival;
   if (href.includes("ship")) return starminerImages.build;
+  if (href.includes("resources")) return starminerImages.officialMining;
   if (href.includes("mining")) return starminerImages.mining;
   if (href.includes("heat")) return starminerImages.combat;
   if (href.includes("multiplayer")) return starminerImages.fleet;

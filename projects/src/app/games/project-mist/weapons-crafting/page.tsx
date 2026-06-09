@@ -1,3 +1,4 @@
+import { ArticleImage } from "@/components/article-media";
 import { ActionTable, BlufBox, SearchAnswerPanel } from "@/components/guide-blocks";
 import { ProjectMistArticle } from "@/components/project-mist-article";
 import {
@@ -6,9 +7,9 @@ import {
   projectMistImages,
 } from "@/lib/project-mist";
 
-const title = "Project: Mist Weapons, Crafting & Best Gear Guide";
+const title = "Project: Mist Weapons & Crafting Guide: Gear, Ammo and Upgrades";
 const description =
-  "Complete Project: Mist weapons and crafting guide. All weapon locations, best early gear, Gravity Gun upgrades, ammo crafting recipes, medkit formula, train base build order, and material farming tips.";
+  "Project: Mist weapons and crafting guide for Early Access: Gravity Gun, ammo planning, gear priorities, crafting checks, upgrades, and co-op loadouts.";
 const canonical = "/games/project-mist/weapons-crafting";
 
 export const metadata = createProjectMistMetadata({
@@ -22,59 +23,102 @@ const faqs = [
   {
     question: "What is the best early weapon in Project: Mist?",
     answer:
-      "Shotgun — found in the Greenhouse facility first floor armory. High close-range damage, reveals invisible enemies, and one-shots small creatures. Craft shells at 1 gunpowder + 1 scrap metal = 4 shells. Most ammo-efficient weapon in Early Access.",
+      "Do not rely on one claimed best weapon yet. Use a reliable close-range option, a medium-range backup, the Gravity Gun, and enough healing or ammo to finish the route.",
   },
   {
-    question: "How do I upgrade the Gravity Gun?",
+    question: "How important is the Gravity Gun?",
     answer:
-      "Spend Blood Orbs in the perks menu. Tier 1: stronger pull. Tier 2: throw objects as projectiles (3x pistol damage). Tier 3: briefly grab enemies. Prioritize Blood Orbs for Tier 2 — it's the biggest power spike in the game.",
+      "The Gravity Gun is a core Project: Mist tool because official store copy and preview coverage emphasize physics interaction, object control, and environmental combat.",
   },
   {
-    question: "How do I craft ammo and medkits?",
+    question: "Should I craft ammo or healing first?",
     answer:
-      "Ammo at workbench: gunpowder + scrap metal. Rifle: 1+1=8 rounds. Shotgun: 1+1=4 shells. Medkit: 1 cloth + 1 alcohol + 1 herb. You cannot buy ammo — crafting is the only reliable source. Scrap duplicate weapons for metal.",
+      "Craft what fixes the next route. Before facilities, healing and backup ammo matter more than extra damage. Before bosses, repair, ammo, and a tested fallback matter most.",
   },
   {
-    question: "What's the best train base build order?",
+    question: "Are exact recipes final?",
     answer:
-      "Storage Depot → Workbench Tier 2 → Armory → Defensive Turrets. Storage first because it gates everything else. More storage = longer expeditions. Turrets auto-defend the train while you craft.",
+      "No. Project: Mist is Early Access, so exact recipe costs, yields, weapon balance, and upgrade effects should be checked in the current workbench UI.",
   },
 ];
 
 const searchIntentRows = [
   {
     query: "Project Mist weapons guide",
-    answer: "Shotgun (Greenhouse armory), Rifle (Comm Tower), Gravity Gun upgrades (Blood Orbs). Shotgun is best early — reveals invisible enemies and one-shots small creatures.",
+    answer:
+      "Build around role and route: close-range safety, medium-range backup, Gravity Gun utility, healing, and enough ammo to retreat.",
     href: "#weapons",
     label: "Weapons",
   },
   {
     query: "Project Mist crafting recipes",
-    answer: "Ammo: gunpowder + scrap metal. Medkits: cloth + alcohol + herb. EMP grenade: copper wire + battery + explosive compound.",
+    answer:
+      "Use workbenches to prepare ammo, healing, repairs, and utility items. Verify exact recipes in your current Early Access build.",
     href: "#crafting",
-    label: "Recipes",
+    label: "Crafting",
   },
   {
     query: "Project Mist best gear",
-    answer: "Shotgun + Rifle combo. Gravity Gun Tier 2. 3+ medkits. Upgrade weapons before crafting new ones.",
+    answer:
+      "Best gear depends on solo, co-op, boss, or facility route. Do not spend scarce materials before the next bottleneck is clear.",
     href: "#best-gear",
-    label: "Best",
+    label: "Best gear",
   },
   {
     query: "Project Mist Gravity Gun upgrade",
-    answer: "Spend Blood Orbs in perks menu. Rush Tier 2 — thrown objects deal 3x pistol damage. Tier 3 lets you grab enemies.",
+    answer:
+      "Treat Gravity Gun upgrades as high priority when they improve every route, not only one rare fight.",
     href: "#gravity-gun",
-    label: "Gravity Gun",
+    label: "Upgrade",
   },
 ];
 
 const jumpLinks = [
-  { href: "#weapons", label: "All weapons" },
+  { href: "#weapons", label: "Weapons" },
+  { href: "#gravity-gun", label: "Gravity Gun" },
   { href: "#crafting", label: "Crafting" },
-  { href: "#best-gear", label: "Best gear" },
+  { href: "#best-gear", label: "Loadouts" },
   { href: "/games/project-mist/all-bosses", label: "Boss guide" },
-  { href: "/games/project-mist/beginner-guide", label: "Beginner guide" },
-  { href: "/games/project-mist/building-train-base", label: "Train base" },
+  { href: "/games/project-mist/map-facilities", label: "Map route" },
+];
+
+const playerRows = [
+  ["New player", "Carry one dependable weapon, learn the Gravity Gun, and return to the train before supplies collapse.", "Survival comes from preparation and retreat discipline, not one perfect weapon claim."],
+  ["Co-op group", "Split roles between close defense, ranged damage, looting, and healing support.", "Groups waste ammo when everyone fires at the same target without tracking supplies."],
+  ["Crafter", "Track ammo, healing, repair materials, and upgrade currency separately.", "A full inventory is useless if it lacks the one material blocking the next run."],
+  ["Boss-focused player", "Enter arenas with tested weapons, backup healing, and Gravity Gun options.", "Boss fights punish untested loadouts more than normal rooms do."],
+  ["Returning player", "Re-check recipes and upgrade behavior after patches.", "Early Access balance can change crafting yields, costs, and weapon value."],
+];
+
+const prepRows = [
+  ["Before a facility", "Repair gear, craft healing, make ammo, clear inventory, and mark the exit.", "Facilities are where bad supply planning becomes expensive."],
+  ["Before a boss", "Test the weapon, count healing, identify cover or throwable objects, and save manually.", "You need a fallback if the first strategy fails."],
+  ["Before co-op", "Assign who carries healing, who loots materials, and who watches retreat routes.", "Role clarity preserves supplies and prevents scattered deaths."],
+  ["Before upgrading", "Ask whether the upgrade improves every run or only one rare situation.", "Scarce upgrade currency should fix repeated problems first."],
+];
+
+const routeGearRows = [
+  ["Short loot run", "Light weapon, small healing reserve, empty inventory space.", "The goal is to bring materials back, not win a long fight."],
+  ["Greenhouse or facility run", "Reliable weapon, backup ammo, healing, repair option, and marked exit.", "Facilities create supply pressure and route confusion at the same time."],
+  ["Boss route", "Tested weapon, Gravity Gun plan, healing reserve, manual save, and backup strategy.", "Boss attempts should produce information even when the first run fails."],
+  ["Co-op material run", "One player tracks loot, one covers exits, one carries healing, one handles pressure.", "The team gains more by preserving supplies than by stacking damage."],
+  ["Returning after patch", "Verify recipes, upgrade costs, weapon feel, and save behavior before a long route.", "Early Access changes can invalidate old assumptions without changing the page title."],
+];
+
+const verificationRows = [
+  ["Recipe cost", "Check the current workbench before relying on any guide value.", "Crafting costs can change during Early Access."],
+  ["Weapon value", "Test on the same enemy type before calling something best.", "One lucky fight is not a reliable loadout test."],
+  ["Upgrade effect", "Record what changes after the upgrade: range, control, damage, timing, or utility.", "Useful upgrades solve repeat problems, not just stats on paper."],
+  ["Material bottleneck", "Track which material stops your next craft most often.", "The best farming route is the one that fixes that bottleneck."],
+];
+
+const craftingRows = [
+  ["Ammo", "Check current workbench UI", "Build-dependent", "Prioritize before facility or boss routes."],
+  ["Healing", "Check current workbench UI", "Build-dependent", "Carry enough to survive a failed first attempt."],
+  ["Repair item", "Check current workbench UI", "Build-dependent", "Use before boss gates and long routes."],
+  ["Throwable or utility item", "Check current workbench UI", "Build-dependent", "Best for controlling dangerous rooms."],
+  ["Upgrade material", "Track separately from common loot", "Scarce", "Spend only on repeated bottlenecks."],
+  ["Train-base supplies", "Storage, crafting, healing, ammo, defenses", "Route support", "Keeps deeper runs from becoming one-way trips."],
 ];
 
 export default function ProjectMistWeaponsPage() {
@@ -89,49 +133,68 @@ export default function ProjectMistWeaponsPage() {
       faqs={faqs}
       showSources={false}
     >
-      <BlufBox title="BLUF">
-        The Gravity Gun is your best tool — upgrade it with Blood Orbs as soon as
-        you can. The Steam page confirms crafting exists, and you can't buy ammo,
-        so learning recipes matters. Specific weapon locations and crafting
-        formulas below are from community reports and preview footage, not our
-        own testing yet. <strong>We'll verify and update.</strong>
+      <BlufBox title="Gear Rule">
+        <p>
+          <strong>Do not build around unverified perfect-loadout claims.</strong>{" "}
+          Build around the next route: facility, boss, co-op run, or train
+          return. The Gravity Gun, ammo, healing, repairs, and inventory space
+          matter together.
+        </p>
       </BlufBox>
 
       <SearchAnswerPanel
-        title="Project: Mist Weapons & Crafting"
-        answer="Gravity Gun with Blood Orb upgrades is your core tool. Crafting is confirmed but specific recipes need verification. Community reports are our current source — we're testing firsthand."
+        title="What gear should you bring in Project: Mist?"
+        answer="Bring a practical kit: one reliable weapon, one backup option, Gravity Gun utility, healing, ammo, and enough empty inventory to bring useful materials back to the train."
         intentRows={searchIntentRows}
         jumpLinks={jumpLinks}
       />
 
       <section id="weapons" className="mb-10">
-        <h2 className="mb-4 text-2xl font-bold text-foreground">All Weapons & Gear</h2>
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Weapons and Gear Priorities</h2>
+        <ArticleImage
+          src={projectMistImages.crafting}
+          alt="Project: Mist crafting bench and weapon planning"
+          caption="Use weapons and crafting as a preparation loop: repair, craft, restock, then enter the next facility with a real exit plan."
+        />
         <ActionTable rows={projectMistCraftingRows} />
       </section>
 
+      <section id="gravity-gun" className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Gravity Gun Upgrade Thinking</h2>
+        <ArticleImage
+          src={projectMistImages.gravityGun}
+          alt="Project: Mist Gravity Gun upgrade and combat utility"
+          caption="The Gravity Gun is valuable because it can affect movement, space control, object use, and combat preparation, not only raw damage."
+        />
+        <p className="leading-relaxed text-muted-foreground">
+          The best upgrade is the one that improves repeated problems: unsafe
+          rooms, boss pressure, blocked routes, or low-ammo fights. New players
+          should use the Gravity Gun as a utility tool first. Experienced
+          players should decide whether an upgrade improves every route or only
+          one rare encounter.
+        </p>
+      </section>
+
       <section id="crafting" className="mt-10">
-        <h2 className="mb-4 text-2xl font-bold text-foreground">Crafting Recipe Quick Reference</h2>
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Crafting and Supply Checklist</h2>
+        <ArticleImage
+          src={projectMistImages.trainBase}
+          alt="Project: Mist train base crafting preparation"
+          caption="The train base is the safest place to convert loose loot into ammo, healing, repairs, and route readiness."
+        />
         <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border/50 bg-card/50">
-                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Item</th>
-                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Ingredients</th>
-                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Yield</th>
-                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Where to Farm Materials</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Item type</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Recipe handling</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Certainty</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Best use</th>
               </tr>
             </thead>
             <tbody>
-              {[
-                ["Rifle Rounds", "1 Gunpowder + 1 Scrap Metal", "8 rounds", "Military crates (gunpowder), scrap weapons (metal)"],
-                ["Shotgun Shells", "1 Gunpowder + 1 Scrap Metal", "4 shells", "Same as rifle — prioritize rifle if low on both"],
-                ["Medkit", "1 Cloth + 1 Alcohol + 1 Herb", "1 medkit", "Containers (cloth), kitchens (alcohol), outdoor bushes (herbs)"],
-                ["EMP Grenade", "2 Copper Wire + 1 Battery + 1 Explosive Compound", "1 grenade", "Facility storage (wire/battery), military crates (compound)"],
-                ["Bandage", "2 Cloth", "2 bandages", "Lootable containers throughout all areas"],
-                ["Weapon Repair Kit", "2 Scrap Metal + 1 Oil", "1 kit", "Break down weapons (metal), facility machinery rooms (oil)"],
-                ["Upgraded Magazine", "3 Scrap Metal + 2 Copper Wire", "1 magazine", "Hold 50% more rounds before reloading"],
-              ].map((row, i) => (
-                <tr key={i} className="border-b border-border/30 last:border-0">
+              {craftingRows.map((row) => (
+                <tr key={row[0]} className="border-b border-border/30 last:border-0">
                   <td className="px-4 py-3 font-semibold text-foreground">{row[0]}</td>
                   <td className="px-4 py-3 text-muted-foreground">{row[1]}</td>
                   <td className="px-4 py-3 text-d8020 font-semibold">{row[2]}</td>
@@ -144,41 +207,94 @@ export default function ProjectMistWeaponsPage() {
       </section>
 
       <section id="best-gear" className="mt-10">
-        <h2 className="mb-4 text-2xl font-bold text-foreground">Best Loadout Per Role</h2>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {[
-            {
-              role: "Solo Player",
-              weapons: "Shotgun (primary) + Rifle (secondary) + Pistol (backup)",
-              gear: "Gravity Gun T2, 3 medkits, 2 EMP grenades",
-              tip: "Shotgun handles close threats and invisible enemies. Rifle for medium range. Switch to pistol only when both are dry.",
-            },
-            {
-              role: "Co-op Tank (Aggro)",
-              weapons: "Shotgun + Heavy Armor + Melee weapon",
-              gear: "5 medkits, 1 EMP grenade",
-              tip: "Draw enemy attention while teammates deal damage. Stay between the boss and your squad. Use melee to conserve ammo on small creatures.",
-            },
-            {
-              role: "Co-op DPS (Damage)",
-              weapons: "Rifle (scoped) + Shotgun (backup)",
-              gear: "Gravity Gun T2, 3 medkits, 40+ rifle rounds",
-              tip: "Focus on weak points. Gravity Gun throws deal 3x damage. Let the tank draw aggro before engaging.",
-            },
-            {
-              role: "Co-op Support (Medic)",
-              weapons: "Rifle + Pistol",
-              gear: "8 medkits, 4 EMP grenades, 4 bandages",
-              tip: "Stay back, watch health bars, throw EMP at boss stun windows. Don't engage directly unless the team is wiped.",
-            },
-          ].map((item) => (
-            <div key={item.role} className="rounded-lg border border-d8020/25 bg-d8020/5 p-5">
-              <h3 className="text-base font-bold text-d8020">{item.role}</h3>
-              <p className="mt-2 text-sm"><strong className="text-foreground">Weapons:</strong> <span className="text-muted-foreground">{item.weapons}</span></p>
-              <p className="mt-1 text-sm"><strong className="text-foreground">Gear:</strong> <span className="text-muted-foreground">{item.gear}</span></p>
-              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{item.tip}</p>
-            </div>
-          ))}
+        <h2 className="mb-4 text-2xl font-bold text-foreground">New Player vs Experienced Player Gear Plan</h2>
+        <ArticleImage
+          src={projectMistImages.multiplayer}
+          alt="Project: Mist co-op weapon and crafting roles"
+          caption="The best loadout changes by role. Solo players need flexibility; co-op groups need clear supply ownership."
+        />
+        <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <tbody>
+              {playerRows.map(([type, plan, why]) => (
+                <tr key={type} className="border-b border-border/30 last:border-0">
+                  <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{type}</th>
+                  <td className="px-4 py-3 text-muted-foreground">{plan}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{why}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Preparation Checklist</h2>
+        <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <tbody>
+              {prepRows.map(([moment, action, why]) => (
+                <tr key={moment} className="border-b border-border/30 last:border-0">
+                  <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{moment}</th>
+                  <td className="px-4 py-3 text-muted-foreground">{action}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{why}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Gear Plan by Route Type</h2>
+        <ArticleImage
+          src={projectMistImages.facilities}
+          alt="Project: Mist facility gear route planning"
+          caption="A useful gear plan starts with the route type: short loot run, facility push, boss attempt, co-op material run, or patch recheck."
+        />
+        <p className="mb-4 leading-relaxed text-muted-foreground">
+          The same item can be good or bad depending on the route. A short loot
+          run wants empty space and low commitment. A facility run wants
+          healing, ammo, and exit discipline. A boss route wants a tested kit
+          and a save point. Co-op needs role ownership. This is why this page
+          does not pretend one universal loadout solves every Project: Mist
+          problem.
+        </p>
+        <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <tbody>
+              {routeGearRows.map(([route, gear, why]) => (
+                <tr key={route} className="border-b border-border/30 last:border-0">
+                  <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{route}</th>
+                  <td className="px-4 py-3 text-muted-foreground">{gear}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{why}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">What to Verify in Your Build</h2>
+        <p className="mb-4 leading-relaxed text-muted-foreground">
+          Project: Mist is exactly the type of Early Access game where bad
+          guides become harmful: a recipe changes, a weapon is tuned, an
+          upgrade behaves differently, or a route gets patched. Use this
+          verification table whenever a claim looks too exact.
+        </p>
+        <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <tbody>
+              {verificationRows.map(([item, check, reason]) => (
+                <tr key={item} className="border-b border-border/30 last:border-0">
+                  <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{item}</th>
+                  <td className="px-4 py-3 text-muted-foreground">{check}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{reason}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
     </ProjectMistArticle>

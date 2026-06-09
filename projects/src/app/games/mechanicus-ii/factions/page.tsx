@@ -10,9 +10,9 @@ import {
   mechanicusIIUnitRoleRows,
 } from '@/lib/mechanicus-ii';
 
-const title = 'Warhammer 40,000: Mechanicus II Factions, Units & Builds Guide';
+const title = 'Mechanicus 2 Factions & Best Units: Necrons vs Adeptus';
 const description =
-  'Mechanicus II factions, units, and builds guide covering Adeptus Mechanicus, Necrons, campaign leaders, role-based unit value, and launch-window build cautions.';
+  'Mechanicus 2 factions and best units guide: Adeptus Mechanicus vs Necrons, playable campaigns, unit roles, builds, leaders, and first-campaign choice.';
 const canonical = '/games/mechanicus-ii/factions';
 
 export const metadata = createMechanicusIIMetadata({
@@ -73,7 +73,7 @@ export default function MechanicusIIFactionsPage() {
     >
       <BlufBox title="Faction Answer">
         <p>
-          <strong>Mechanicus II lets players experience both the Adeptus
+          <strong>Mechanicus 2 lets players experience both the Adeptus
           Mechanicus and the Necrons through distinct campaigns.</strong> That
           is the central faction answer. The unsafe claim is calling one side
           the best before enough campaign data, difficulty reports, and balance

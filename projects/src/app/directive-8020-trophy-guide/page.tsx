@@ -2,22 +2,27 @@ import type { Metadata } from 'next';
 import { Breadcrumb } from '@/components/breadcrumb';
 import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
-import { JsonLd, generateArticleSchema, generateFAQSchema, generateHowToSchema } from '@/components/json-ld';
+import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { TrophyProgressTracker } from '@/components/tools/trophy-progress-tracker';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 Trophy & Achievement Guide - Full List & Unlock Tips',
+  title: 'Directive 8020 Platinum Guide: Trophies & 100%',
   description:
-    'Directive 8020 trophy and achievement guide: Steam achievements, likely trophy categories, missable route planning, Turning Points cleanup, collectibles, endings, and 100% strategy.',
+    'Directive 8020 Platinum trophy guide: 100% roadmap, Steam achievements, PS5 trophy status, missable trophies, endings, deaths, collectibles, and cleanup order.',
   alternates: {
     canonical: '/directive-8020-trophy-guide',
   },
 };
 
 const faqs = [
+  {
+    question: 'Does Directive 8020 have a Platinum trophy?',
+    answer:
+      'Treat Platinum status as platform-dependent until the live PS5 trophy list is verified. The safest 100% route is one clean playthrough, save-everyone cleanup, endings and death branches, then collectibles and mode-specific cleanup.',
+  },
   {
     question: 'Does Directive 8020 have Steam achievements?',
     answer:
@@ -157,9 +162,9 @@ export default function TrophyGuidePage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 Trophy & Achievement Guide - Full List & Unlock Tips',
+          title: 'Directive 8020 Platinum Trophy Guide',
           description:
-            'Directive 8020 trophy guide covering achievement categories, missable planning, Turning Points cleanup, collectibles, endings, and 100% strategy.',
+            'Directive 8020 Platinum trophy guide covering 100% roadmap, Steam achievements, PS5 trophy status, missable trophies, Turning Points cleanup, collectibles, endings, and deaths.',
           url: '/directive-8020-trophy-guide',
           datePublished: '2026-05-12',
           dateModified: '2026-05-18',
@@ -167,39 +172,13 @@ export default function TrophyGuidePage() {
         })}
       />
       <JsonLd data={generateFAQSchema(faqs)} />
-      <JsonLd
-        data={generateHowToSchema({
-          name: 'How to plan Directive 8020 trophy cleanup',
-          description:
-            'A conservative trophy cleanup route for Directive 8020 using one clean route, Turning Points, endings, deaths, collectibles, and final platform checks.',
-          url: '/directive-8020-trophy-guide',
-          steps: [
-            {
-              name: 'Complete one full route',
-              text: 'Finish one natural playthrough and record deaths, endings, collectibles, and major Story Tree branches.',
-            },
-            {
-              name: 'Build a save-everyone base',
-              text: 'Use Turning Points to repair deaths and preserve a clean survivor route before destructive trophy cleanup.',
-            },
-            {
-              name: 'Branch for endings and deaths',
-              text: 'Change one late-game variable at a time so each ending or death result can be verified.',
-            },
-            {
-              name: 'Finish collectibles and platform checks',
-              text: 'Complete Secrets, Simms Recordings, O Death Secrets, Heirlooms, mode checks, and verified platform trophy names.',
-            },
-          ],
-        })}
-      />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: 'Trophy Guide' }]} />
         <PageHero src="/d8020-screenshot-06.jpg" alt="Directive 8020 Story Tree trophy guide screenshot" />
 
         <h1 className="text-3xl sm:text-4xl font-black text-foreground leading-tight mb-4">
-          Directive 8020 Trophy &amp; Achievement Guide
+          Directive 8020 Platinum Trophy Guide
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
           Directive 8020 trophy guide short answer: build one clean route first,

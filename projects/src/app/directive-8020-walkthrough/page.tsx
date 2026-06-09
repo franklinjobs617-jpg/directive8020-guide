@@ -9,15 +9,20 @@ import { EpisodeNavigator } from '@/components/tools/episode-navigator';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
 export const metadata: Metadata = {
-  title: 'Directive 8020 Walkthrough - All 8 Episodes & Choices',
+  title: 'Directive 8020 Walkthrough: All Episodes & Choices',
   description:
-    'Directive 8020 walkthrough for all 8 episodes: Little Star, Best Laid Plans, The Sample, Dragnet, Mr. Williams, Hostile Takeover, Revelation, Come True, choices, QTEs, collectibles, and endings.',
+    'Directive 8020 walkthrough for all 8 episodes, choices, chapters, QTEs, collectibles, Turning Points, endings, deaths, and spoiler-safe route order.',
   alternates: {
     canonical: '/directive-8020-walkthrough',
   },
 };
 
 const faqs = [
+  {
+    question: 'What is the Directive 8020 walkthrough order?',
+    answer:
+      'Play the eight episodes in order: Little Star, Best Laid Plans, The Sample, Dragnet, Mr. Williams, Hostile Takeover, Revelation, and Come True.',
+  },
   {
     question: 'How many episodes are in Directive 8020?',
     answer:
@@ -286,9 +291,9 @@ export default function WalkthroughPage() {
     <>
       <JsonLd
         data={generateArticleSchema({
-          title: 'Directive 8020 Walkthrough - All 8 Episodes & Choices',
+          title: 'Directive 8020 Walkthrough: All Episodes & Choices',
           description:
-            'Directive 8020 walkthrough for all 8 episodes, route notes, QTE and stealth tips, scanner use, collectibles, Turning Points, Destinies, endings prep, and spoiler-safe first-run advice.',
+            'Directive 8020 walkthrough for all 8 episodes, choices, QTE and stealth tips, scanner use, collectibles, Turning Points, Destinies, endings prep, and spoiler-safe route order.',
           url: '/directive-8020-walkthrough',
           datePublished: '2026-05-12',
           dateModified: '2026-05-21',

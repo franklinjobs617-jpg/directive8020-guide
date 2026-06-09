@@ -3,9 +3,9 @@ import { ArticleImage } from '@/components/article-media';
 import { BlufBox, SearchAnswerPanel } from '@/components/guide-blocks';
 import { createProjectMistMetadata, projectMistImages, projectMistLaunchSnapshotRows } from '@/lib/project-mist';
 
-const title = 'Project Mist Release Date: Xbox, PS5, Console & Early Access';
+const title = 'Project: Mist Release Date: Xbox, PS5, Console & Early Access';
 const description =
-  'Project: Mist released May 19, 2026 in Steam Early Access on PC. Xbox, PS5, and console versions are not confirmed. Check demo, price, and platform details.';
+  'Project: Mist is out now on PC Steam Early Access. Xbox, PS5, and console versions are not confirmed. Check release date, demo, price, and platforms.';
 const canonical = '/games/project-mist/release-date';
 
 export const metadata = createProjectMistMetadata({
@@ -57,7 +57,7 @@ const launchChecks = [
   ['Steam status', 'Project: Mist is live in Early Access; check the current store button in your region before buying.'],
   ['Demo access', 'Check whether the demo is still available for your account and whether demo saves behave correctly.'],
   ['Build version', 'Read the latest Steam news before a group run because demo and Early Access builds can differ.'],
-  ['Price', 'The US store snapshot was $22.49 on 20 May, 2026; check your local Steam currency before purchase.'],
+  ['Price', 'The US store snapshot was $24.99 on 9 June, 2026; check your local Steam currency before purchase.'],
   ['Save data', 'Do not assume demo saves transfer unless Chicken Launcher confirms it.'],
 ];
 

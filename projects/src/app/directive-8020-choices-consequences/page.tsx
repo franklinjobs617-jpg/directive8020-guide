@@ -210,7 +210,7 @@ export default function ChoicesConsequencesPage() {
         <ChoiceImpactFilter />
 
         <div className="prose-game">
-          <h2 id="choice-logic">Do Choices Matter in Directive 8020?</h2>
+          <h2 id="choice-logic">Directive 8020 Choices and Consequences: What Matters?</h2>
           <p>
             This is the biggest post-launch community question. The practical
             answer is yes, but with a caveat: Directive 8020 has both small
@@ -270,7 +270,7 @@ export default function ChoicesConsequencesPage() {
         </div>
 
         <div className="prose-game">
-          <h2 id="best-choices">Best Choices for a Safer First Route</h2>
+          <h2 id="best-choices">Best Directive 8020 Choices for a Safer First Route</h2>
           <p>
             There is no universal good dialogue button, but the safest route
             pattern is consistent: gather evidence, avoid needless isolation,
@@ -334,7 +334,7 @@ export default function ChoicesConsequencesPage() {
         </div>
 
         <div className="prose-game">
-          <h2 id="mimic-choice-logic">The Mimic Changes Choice Logic</h2>
+          <h2 id="mimic-choice-logic">Mimic Choice Logic: Who Can You Trust?</h2>
           <p>
             In a normal branching drama, helping a frightened ally is usually a
             positive action. In Directive 8020, that same action can be a trap.

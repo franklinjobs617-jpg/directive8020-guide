@@ -1,3 +1,4 @@
+import { ArticleImage } from "@/components/article-media";
 import { ActionTable, BlufBox, SearchAnswerPanel } from "@/components/guide-blocks";
 import { MechanicusIIArticle } from "@/components/mechanicus-ii-article";
 import {
@@ -22,36 +23,36 @@ const faqs = [
   {
     question: "What are the best units in Mechanicus II?",
     answer:
-      "Necron Warriors and Skitarii Rangers are the backbone units — reliable, efficient, and essential for building your economy (Dominion or Cognition). Canoptek Wraiths are mandatory for Necron leader protection. Servitors feed Cognition for Mechanicus by getting shot.",
+      "For launch-window play, the safest answer is role-based: Necron Warriors and Skitarii Rangers are the backbone units because they keep the faction economy and damage plan stable. Canoptek Wraiths are high-value protection pieces for Necron leaders, while Servitors help Mechanicus absorb pressure and keep Cognition moving.",
   },
   {
     question: "Which faction has better units?",
     answer:
-      "Neither is strictly better — they play differently. Necron units are more aggressive and self-sufficient (Reanimation Protocols). Mechanicus units rely on cover and support synergies. Your first campaign faction should be Mechanicus — it's more forgiving while you learn unit roles.",
+      "Neither faction is simply better. Necron units reward tempo, damage pressure, and reanimation timing. Mechanicus units reward cover discipline, support timing, and Cognition planning. Pick based on the mistakes you make most often, not only on tier labels.",
   },
   {
     question: "What should my first squad look like?",
     answer:
-      "Mechanicus: 1-2 Servitors, 2-3 Skitarii Rangers, 1 Tech-Priest (Lexmechanic), 1 Tech-Priest (Dominus), 1 Enginseer. Necrons: core of Warriors, 1-2 Immortals, 1 Canoptek Wraith, Vargard Nefershah mid-line.",
+      "Start with one leader-protection plan, two reliable damage lanes, one support or repair answer, and enough basic bodies to hold space. For Mechanicus that usually means Rangers plus Servitors around protected Tech-Priests. For Necrons it usually means Warriors, a stronger damage piece, and a mobile bodyguard near Nefershah.",
   },
 ];
 
 const searchIntentRows = [
   {
     query: "Mechanicus II tier list",
-    answer: "S-tier: Necron Warriors, Skitarii Rangers. A-tier: Canoptek Wraiths, Servitors, Immortals. B-tier: Tech-Priests, Enginseers.",
+    answer: "Use role tiers, not final meta claims. S roles are reliable economy and damage bodies. A roles protect leaders, stabilize turns, or add higher threat. B roles are powerful but punish poor positioning.",
     href: "#tier-list",
     label: "Tiers",
   },
   {
     query: "Mechanicus II best units",
-    answer: "Warriors and Rangers are your core. Don't skip them for flashier picks. Wraiths are mandatory for Necrons — hero death fails the mission.",
+    answer: "Warriors and Rangers are the safest core units because they keep your plan repeatable. Wraith-style mobility is high value when leader exposure is the reason you keep resetting.",
     href: "#tier-list",
     label: "Best",
   },
   {
     query: "Mechanicus II squad composition",
-    answer: "Mechanicus: 1-2 Servitors, 2-3 Rangers, 2 Tech-Priests, 1 Enginseer. Necrons: Warriors + Immortals + Wraith + leader mid-line.",
+    answer: "Build around jobs: leader safety, two damage lanes, one resource enabler, one support answer, and one objective runner. Exact counts should change with mission rules.",
     href: "#compositions",
     label: "Comps",
   },
@@ -78,52 +79,161 @@ export default function MechanicusIIUnitTierPage() {
       showSources={false}
     >
       <BlufBox title="BLUF">
-        Warriors and Rangers. That's your core. Everything else supports them.
-        Wraiths are non-negotiable for Necrons — without one, your leader dies
-        and the mission ends. Servitors are your Cognition battery. Flashy units
-        are fun but don't win missions — reliable damage and resource generation
-        do.{" "}
-        <em>Source: Game Truth launch-weekend testing.</em>
+        Treat this as a launch-window role tier list, not a final solved meta.
+        The highest-value units are the ones that make your turns repeatable:
+        core infantry that creates damage or resources, mobile pieces that stop
+        leader deaths, and support units that prevent attrition from becoming a
+        wipe. The current weakness of this page was obvious: it ranked names
+        without teaching the reader when to ignore the ranking. That is fixed
+        below with role rules, squad templates, and failure diagnosis.
       </BlufBox>
 
       <SearchAnswerPanel
         title="Unit Tier List & Best Picks"
-        answer="S-tier: Warriors (Necron), Rangers (Mechanicus). A-tier: Wraiths, Servitors, Immortals. B-tier: Tech-Priests, Enginseers. Core units win missions — don't skip the basics."
+        answer="Use role tiers: S roles keep economy and damage reliable, A roles protect leaders or add threat, B roles are strong but punish bad positioning. Core units win more early missions than flashy specialists."
         intentRows={searchIntentRows}
         jumpLinks={jumpLinks}
       />
 
       <section id="tier-list">
         <h2 className="mb-4 text-2xl font-bold text-foreground">Unit Tier List</h2>
+        <p className="mb-4 leading-relaxed text-muted-foreground">
+          A useful tier list answers one question: what helps a player win more
+          turns with fewer resets? It does not need to pretend that every late
+          campaign build, difficulty setting, patch, and mission variant has
+          already been solved. For Mechanicus II, the first filter is role value.
+          A unit that creates repeatable resources, protects a required leader,
+          or keeps a damage lane open should rank above a unit that only looks
+          impressive in one perfect turn.
+        </p>
         <ActionTable rows={mechanicusIIUnitTierRows} />
+      </section>
+
+      <ArticleImage
+        src={mechanicusIIImages.screenshot3}
+        alt="Mechanicus II tactical combat board showing units, cover, and firing lanes"
+        caption="Judge units by the board problems they solve: leader safety, damage lanes, resource flow, and objective access."
+      />
+
+      <section className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">How to Read This Tier List</h2>
+        <p className="leading-relaxed text-muted-foreground">
+          Read the tiers as first-campaign value, not as a permanent esports
+          ranking. A unit can move up in value when the mission needs its exact
+          job, and it can move down when the map removes that job. For example,
+          a support piece is stronger on a long attrition map than on a short
+          objective grab. A mobile bodyguard is stronger when leader exposure is
+          the fail state. A pure attacker is stronger only when your existing
+          economy and protection plan already work. This keeps the list useful
+          for both new players and players who are already testing harder routes.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Beginner vs Veteran Priorities</h2>
+        <div className="overflow-x-auto rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player type</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Prioritize</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Avoid</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["New player", "Rangers, Warriors, Servitors, one support piece, and simple leader protection.", "Overbuilding around a unit you do not know how to keep alive."],
+                ["Returning tactics player", "Mobility, turn order pressure, and units that convert small openings into safe kills.", "Copying a tier list without checking mission objectives first."],
+                ["Mechanicus learner", "Cover discipline, Cognition consistency, protected Tech-Priests, and safe ranged lanes.", "Standing specialists in open ground for one bigger attack."],
+                ["Necron learner", "Damage tempo, reanimation timing, leader bodyguard spacing, and controlled forward pressure.", "Charging before you know which lane keeps Nefershah safe."],
+              ].map(([type, prioritize, avoid]) => (
+                <tr key={type} className="border-b border-border/30 last:border-0">
+                  <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{type}</th>
+                  <td className="px-4 py-3 text-muted-foreground">{prioritize}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{avoid}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section id="compositions" className="mt-10">
         <h2 className="mb-4 text-2xl font-bold text-foreground">Recommended Squad Compositions</h2>
         <div className="grid gap-5 sm:grid-cols-2">
           <div className="rounded-lg border border-border/50 bg-card/30 p-5">
-            <h3 className="text-base font-bold text-foreground">Mechanicus Starter Squad</h3>
-            <div className="mt-3 space-y-2 text-sm text-muted-foreground">
-              <p>• <strong>1-2 Servitors</strong> — frontline, generate Cognition by getting hit</p>
-              <p>• <strong>2-3 Skitarii Rangers</strong> — backline, generate Cognition from range</p>
-              <p>• <strong>1 Tech-Priest (Lexmechanic)</strong> — passive Cognition per turn</p>
-              <p>• <strong>1 Tech-Priest (Dominus)</strong> — raw damage output</p>
-              <p>• <strong>1 Enginseer</strong> — healing and support</p>
-            </div>
-            <p className="mt-3 text-xs text-muted-foreground">Cover-dependent. Spread units across multiple positions. Protect your Tech-Priests.</p>
+            <h3 className="text-base font-bold text-foreground">Mechanicus Starter Logic</h3>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted-foreground">
+              <li><strong>1-2 Servitors:</strong> absorb pressure and help your economy survive bad openings.</li>
+              <li><strong>2-3 Skitarii Rangers:</strong> hold ranged lanes and punish exposed targets.</li>
+              <li><strong>1-2 Tech-Priests:</strong> choose based on whether you need more resources, damage, or control.</li>
+              <li><strong>1 Enginseer:</strong> add when attrition is the reason missions collapse.</li>
+            </ul>
+            <p className="mt-3 text-xs text-muted-foreground">Cover-dependent. Spread units across multiple positions and protect your Tech-Priests before chasing damage.</p>
           </div>
           <div className="rounded-lg border border-border/50 bg-card/30 p-5">
-            <h3 className="text-base font-bold text-foreground">Necron Starter Squad</h3>
-            <div className="mt-3 space-y-2 text-sm text-muted-foreground">
-              <p>• <strong>3-4 Necron Warriors</strong> — core infantry, build Dominion</p>
-              <p>• <strong>1-2 Immortals</strong> — higher damage, less Dominion per hit</p>
-              <p>• <strong>1 Canoptek Wraith</strong> — bodyguard, teleport to save allies</p>
-              <p>• <strong>Vargard Nefershah</strong> — mid-line commander, never frontline</p>
-            </div>
-            <p className="mt-3 text-xs text-muted-foreground">Aggression-first. Destroy enemy cover. Push Warriors into exposed positions. Wraith stays near leader.</p>
+            <h3 className="text-base font-bold text-foreground">Necron Starter Logic</h3>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted-foreground">
+              <li><strong>Warrior core:</strong> use basic bodies to take space and create repeatable damage.</li>
+              <li><strong>Immortal-style threat:</strong> add stronger damage only after the core is stable.</li>
+              <li><strong>Mobile bodyguard:</strong> keep one answer near Nefershah or any mission-critical leader.</li>
+              <li><strong>Fallback lane:</strong> keep one route open so reanimation timing does not leave the board empty.</li>
+            </ul>
+            <p className="mt-3 text-xs text-muted-foreground">Aggression-first does not mean reckless. Push after the leader lane and fallback route are readable.</p>
           </div>
         </div>
       </section>
+
+      <ArticleImage
+        src={mechanicusIIImages.screenshot4}
+        alt="Mechanicus II destructible battlefield cover and environmental pressure"
+        caption="Terrain changes can make a lower-tier unit useful if it opens the correct lane at the correct time."
+      />
+
+      <section className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">When to Ignore the Tier List</h2>
+        <p className="leading-relaxed text-muted-foreground">
+          Ignore the ranking when the mission is asking for a specific job. If
+          the objective requires interaction, a mobile runner can be better than
+          another damage piece. If the map punishes open ground, a support or
+          bodyguard can be better than a second attacker. If the enemy keeps
+          breaking your line, a unit that looks mediocre on damage can be the
+          reason your best unit gets to act twice. This is where many thin tier
+          pages fail: they answer "who is strong?" but not "what problem am I
+          losing to?" Use the table below before replacing your whole roster.
+        </p>
+        <div className="mt-4 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border/50 bg-card/50">
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">You keep losing because...</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Roster fix</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Do not overreact by...</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["Leader dies early", "Add mobility, bodyguard spacing, and safer opening lanes.", "Adding only more damage."],
+                ["Damage feels low", "Check line of sight, resource flow, and whether targets are in cover.", "Dropping every support unit."],
+                ["Missions drag too long", "Improve repeatable damage lanes and objective timing.", "Chasing one-turn burst builds you cannot sustain."],
+                ["Units die before acting", "Rebuild around cover, turn order, and fallback positions.", "Calling the unit bad after one exposed deployment."],
+              ].map(([problem, fix, avoid]) => (
+                <tr key={problem} className="border-b border-border/30 last:border-0">
+                  <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{problem}</th>
+                  <td className="px-4 py-3 text-muted-foreground">{fix}</td>
+                  <td className="px-4 py-3 text-muted-foreground">{avoid}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <ArticleImage
+        src={mechanicusIIImages.screenshot5}
+        alt="Mechanicus II character customization and unit build planning"
+        caption="Build choices matter most when they support a repeated job across several missions, not a single perfect screenshot."
+      />
     </MechanicusIIArticle>
   );
 }

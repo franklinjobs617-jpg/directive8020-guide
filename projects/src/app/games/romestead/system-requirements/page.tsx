@@ -7,9 +7,9 @@ import {
   romesteadSpecRows,
 } from '@/lib/romestead';
 
-const title = 'Romestead Steam Deck & System Requirements — PC Specs and Performance';
+const title = 'Romestead System Requirements & Steam Deck PC Specs';
 const description =
-  'Romestead Steam Deck compatibility, official minimum and recommended PC specs, Windows 10 requirements, performance test checklist, and co-op frame pacing notes.';
+  'Romestead system requirements and Steam Deck status: minimum and recommended PC specs, Windows 10, storage, controller checks, and co-op performance notes.';
 const canonical = '/games/romestead/system-requirements';
 
 export const metadata = createRomesteadMetadata({
@@ -44,6 +44,11 @@ const faqs = [
     question: 'Is Romestead Steam Deck verified?',
     answer:
       'Steam Deck Verified status is not confirmed at this check, so Deck-first players should wait for launch testing.',
+  },
+  {
+    question: 'Can Romestead run on Steam Deck?',
+    answer:
+      'Romestead may be playable because the PC specs are modest, but Steam Deck Verified status is not confirmed. Check text size, controls, building placement, and co-op performance before committing.',
   },
   {
     question: 'Does Romestead need internet?',

@@ -67,6 +67,7 @@ const faqs = [
 function getGuideImage(href: string) {
   if (href.includes('beginner')) return mechanicusIIImages.screenshot1;
   if (href.includes('walkthrough')) return mechanicusIIImages.screenshot4;
+  if (href.includes('leaders')) return mechanicusIIImages.screenshot1;
   if (href.includes('factions')) return mechanicusIIImages.screenshot2;
   if (href.includes('system')) return mechanicusIIImages.screenshot3;
   if (href.includes('steam-deck')) return mechanicusIIImages.screenshot3;

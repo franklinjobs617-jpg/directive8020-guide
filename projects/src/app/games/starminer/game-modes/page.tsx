@@ -8,9 +8,9 @@ import {
   starminerModeRows,
 } from "@/lib/starminer";
 
-const title = "Starminer Game Modes: Campaign, Sandbox, Survival & Best First Save";
+const title = "Starminer Game Modes: Campaign vs Sandbox vs Survival";
 const description =
-  "Starminer game modes guide explaining Campaign, Sandbox, and Survival, who should start where, what each mode teaches, replay value, and Early Access caveats.";
+  "Starminer game modes guide: Campaign vs Sandbox vs Survival, best first save, beginner mode choice, replay value, defense testing, and Early Access caveats.";
 const canonical = "/games/starminer/game-modes";
 
 export const metadata = createStarminerMetadata({
@@ -30,6 +30,11 @@ const faqs = [
     question: "Which Starminer mode should I play first?",
     answer:
       "Campaign is the best first mode for most players because it teaches core mechanics through missions before you move into open-ended building.",
+  },
+  {
+    question: "What is the best Starminer mode for beginners?",
+    answer:
+      "Campaign is the best beginner mode because it teaches mining, power, logistics, heat, and defense before you move into Sandbox or Survival.",
   },
   {
     question: "Is Sandbox mode good for beginners?",
