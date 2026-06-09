@@ -16,10 +16,11 @@ import { starminerImages } from "@/lib/starminer";
 import { lunaAbyssImages } from "@/lib/luna-abyss";
 import { fatekeeperImages } from "@/lib/fatekeeper";
 import { gateGuardImages } from "@/lib/gate-guard-simulator";
+import { enginefallImages } from "@/lib/enginefall";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
-  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, fantasy RPGs, inspection sims, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, and story-driven games, including Gate Guard Simulator, Luna Abyss, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, fantasy RPGs, inspection sims, train-based crafting shooters, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, and story-driven games, including Enginefall, Gate Guard Simulator, Luna Abyss, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
   title: {
@@ -44,6 +45,7 @@ export const metadata: Metadata = {
     "Luna Abyss guide",
     "Fatekeeper guide",
     "Gate Guard Simulator guide",
+    "Enginefall guide",
   ],
   authors: [{ name: "Enjoy4Game Guides" }],
   alternates: {
@@ -66,6 +68,13 @@ export const metadata: Metadata = {
 };
 
 const gameCards = [
+  {
+    title: "Enginefall",
+    href: "/games/enginefall",
+    label: "Crafting extraction shooter",
+    body: "June 2026 playtest hub for Steam access, release date, Titan Trains, Dagger shuttle, Conductor route, beginner extraction, PC specs, and PS5 or Xbox caveats.",
+    image: enginefallImages.hero,
+  },
   {
     title: "Gate Guard Simulator",
     href: "/games/gate-guard-simulator",

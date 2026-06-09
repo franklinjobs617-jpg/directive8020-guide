@@ -958,6 +958,70 @@ export const gateGuardSimulator: GameConfig = {
   ],
 };
 
+export const enginefall: GameConfig = {
+  id: "enginefall",
+  slugPrefix: "enginefall",
+  hubPath: "/games/enginefall",
+  name: "Enginefall",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "A player-driven crafting shooter from Red Rover Interactive set on colossal post-apocalyptic megatrains, where Freerailers raid Titan Trains, craft gear, extract loot, and upgrade a Dagger shuttle home base.",
+  platforms: ["PC via Steam"],
+  genres: [
+    "Action",
+    "Adventure",
+    "Indie",
+    "Massively Multiplayer",
+    "Crafting Shooter",
+    "Extraction Shooter",
+  ],
+  developer: "Red Rover Interactive",
+  publisher: "Red Rover Interactive",
+  releaseDate: "2026",
+  operatingSystem: "Windows 10 64-bit",
+  url: "https://store.steampowered.com/app/2437390/Enginefall/",
+  availability: "https://schema.org/PreOrder",
+  heroImage: "/games/enginefall/hero.jpg",
+  guideLinks: [
+    {
+      title: "Release Date, Gameplay & Platforms",
+      href: "/games/enginefall",
+      description:
+        "Steam status, official site, 2026 release window, Titan Trains, Dagger shuttle, Conductor role, PS5 and Xbox caveats, and guide map.",
+    },
+    {
+      title: "Playtest, Demo, Key & Discord",
+      href: "/games/enginefall-playtest",
+      description:
+        "June 2026 playtest and demo windows, Steam access, key questions, Discord, server-password searches, player count, and review caveats.",
+    },
+    {
+      title: "Beginner Guide",
+      href: "/games/enginefall-beginner-guide",
+      description:
+        "How to play your first run, what to loot, when to craft, how to extract, and how to survive PvP pressure.",
+    },
+    {
+      title: "Conductor Guide",
+      href: "/games/enginefall-conductor-guide",
+      description:
+        "C00 route, Breacher use, Control Room registration, Conductor powers, Fuel Cores, keycard printing, and extraction planning.",
+    },
+    {
+      title: "Dagger Shuttle Guide",
+      href: "/games/enginefall-dagger-guide",
+      description:
+        "Dagger shuttle role, personal rail base, fuel, storage, schematics, Dagger vs Dagger pressure, and raid preparation.",
+    },
+    {
+      title: "System Requirements & Platforms",
+      href: "/games/enginefall-system-requirements-platforms",
+      description:
+        "Official PC minimum specs, Steam Deck status, PS5 and Xbox caveats, controller expectations, and platform FAQ.",
+    },
+  ],
+};
+
 export const lunaAbyss: GameConfig = {
   id: "luna-abyss",
   slugPrefix: "luna-abyss",

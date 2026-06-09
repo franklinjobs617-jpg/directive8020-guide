@@ -11,6 +11,7 @@ import {
   jumpKingQuest,
   starminer,
   fatekeeper,
+  enginefall,
   lunaAbyss,
   type GameConfig,
 } from '@/lib/games';
@@ -85,7 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const gameHubs: MetadataRoute.Sitemap = [
     projectMist, thickAsThieves, zeroParades, mechanicusII, romestead,
     paralives, minaTheHollower, firstLight007, jumpKingQuest, starminer,
-    fatekeeper, lunaAbyss,
+    fatekeeper, enginefall, lunaAbyss,
   ].map((game) => ({
     url: `${BASE_URL}${game.hubPath}`,
     lastModified: today,
@@ -106,6 +107,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...gameSubPages(jumpKingQuest),
     ...gameSubPages(starminer),
     ...gameSubPages(fatekeeper),
+    ...gameSubPages(enginefall),
     ...gameSubPages(lunaAbyss),
   ];
 

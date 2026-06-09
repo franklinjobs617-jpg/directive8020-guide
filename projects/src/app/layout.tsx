@@ -115,9 +115,7 @@ export default function RootLayout({
       </head>
 
       <body className="antialiased min-h-screen flex flex-col">
-        {/* ========================================================= */}
-        {/* 3. 其他非阻塞、次要第三方脚本 (页面加载后延迟执行)          */}
-        {/* ========================================================= */}
+
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3383070348689557"
