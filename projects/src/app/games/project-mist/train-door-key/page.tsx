@@ -1,7 +1,22 @@
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
-import { createProjectMistMetadata, projectMistImages, projectMistTrainDoorRows } from '@/lib/project-mist';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
+import {
+  createProjectMistMetadata,
+  pmTrainKeyActionRows,
+  pmTrainKeyJumpLinks,
+  pmTrainKeySearchIntent,
+  pmTrainKeySourceRows,
+  pmTrainKeyStatusItems,
+  projectMistImages,
+  projectMistTrainDoorRows,
+} from '@/lib/project-mist';
 
 const title = 'Project: Mist Train Door Key - Missing Key and Route Checks';
 const description =
@@ -58,7 +73,16 @@ export default function ProjectMistTrainDoorKeyPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Project: Mist Train Door Key Quick Answer"
+ answer="The early route points through the train, a mech part, the greenhouse, and a boss step. Steam discussion replies say the key console should appear after the early boss. Reload before the arena first."
+ intentRows={pmTrainKeySearchIntent}
+ jumpLinks={pmTrainKeyJumpLinks}
+ />
+
+ <StatusPanel items={pmTrainKeyStatusItems} />
+
+ <section id="route-order" className="prose-game">
  <h2>Route Checks Before the Key</h2>
  <ArticleImage
  src={projectMistImages.firstSteps}
@@ -92,7 +116,7 @@ export default function ProjectMistTrainDoorKeyPage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="missing-key" className="prose-game">
  <h2>When to Treat It as a Bug</h2>
  <ArticleImage
  src={projectMistImages.screenshot6}
@@ -106,6 +130,35 @@ export default function ProjectMistTrainDoorKeyPage() {
  the build version and the exact objective state first.
  </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Missing Key Recovery Plan</h2>
+ <ActionTable rows={pmTrainKeyActionRows} />
+
+ <section id="boss-gate" className="prose-game">
+ <h2>Boss Gate and Key Console Timing</h2>
+ <p>
+ A Steam discussion reply says the key console should appear after
+ killing the early boss. If the console never appears after a clean
+ boss kill, the most useful next step is a reload from before the
+ arena and a second attempt. If the issue repeats, capture the build
+ version, last location, and save state before reporting it in Steam
+ Discussions.
+ </p>
+ </section>
+
+ <section id="bug-report" className="prose-game">
+ <h2>Reporting a Missing Key Bug</h2>
+ <p>
+ A useful bug report explains the build version, the route state, the
+ boss state, and whether the key console appeared after a reload. Do
+ not delete the save as a first response, because the original state
+ is often what developers need to confirm a real bug. If the issue
+ repeats, post in Steam Discussions and wait for an official
+ response.
+ </p>
+ </section>
+
+ <SourceCheckTable title="Project: Mist Train Door Key Sources" rows={pmTrainKeySourceRows} />
  </ProjectMistArticle>
  );
 }

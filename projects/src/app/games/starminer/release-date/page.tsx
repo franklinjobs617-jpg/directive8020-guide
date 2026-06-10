@@ -1,13 +1,24 @@
 import Link from "next/link";
 import { StarminerArticle } from "@/components/starminer-article";
 import { ArticleImage } from "@/components/article-media";
-import { BlufBox } from "@/components/guide-blocks";
 import {
- createStarminerMetadata,
- starminerImages,
- starminerOfficialUrl,
- starminerSteamDbUrl,
- starminerSteamUrl,
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from "@/components/guide-blocks";
+import {
+  createStarminerMetadata,
+  starminerImages,
+  starminerOfficialUrl,
+  starminerSteamDbUrl,
+  starminerSteamUrl,
+  smReleaseActionRows,
+  smReleaseJumpLinks,
+  smReleaseSearchIntent,
+  smReleaseSourceRows,
+  smReleaseStatusItems,
 } from "@/lib/starminer";
 
 const title = "Starminer Release Date, Early Access, Steam Unlock & Platform Status";
@@ -87,7 +98,16 @@ export default function StarminerReleaseDatePage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Starminer Release Quick Answer"
+ answer="Steam lists May 27, 2026. SteamDB lists 27 May 2026 at 16:00 UTC. Early Access is confirmed. Steam is the confirmed store page. Epic Games Store is listed as coming soon on the official site. Consoles are not confirmed."
+ intentRows={smReleaseSearchIntent}
+ jumpLinks={smReleaseJumpLinks}
+ />
+
+ <StatusPanel items={smReleaseStatusItems} />
+
+ <section id="release-anchor" className="prose-game">
  <h2>Release Status Snapshot</h2>
  <ArticleImage
  src={starminerImages.frontier}
@@ -177,6 +197,11 @@ export default function StarminerReleaseDatePage() {
  </li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Release Plan</h2>
+ <ActionTable rows={smReleaseActionRows} />
+
+ <SourceCheckTable title="Starminer Release Sources" rows={smReleaseSourceRows} />
  </StarminerArticle>
  );
 }

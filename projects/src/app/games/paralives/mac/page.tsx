@@ -1,10 +1,15 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { ParalivesArticle } from '@/components/paralives-article';
 import {
  createParalivesMetadata,
  paralivesImages,
+ paralivesMacActionRows,
+ paralivesMacJumpLinks,
  paralivesMacRows,
+ paralivesMacSearchIntent,
+ paralivesMacSourceRows,
+ paralivesMacStatusItems,
  paralivesSpecRows,
 } from '@/lib/paralives';
 
@@ -63,8 +68,17 @@ export default function ParalivesMacPage() {
  </p>
  </BlufBox>
 
+ <SearchAnswerPanel
+ title="Paralives Mac Quick Answer"
+ answer="Mac support requires Apple silicon. Minimum: M2 and 12 GB RAM. Recommended: M3 and 16 GB RAM. macOS Big Sur 11 or newer. Intel Mac is not in the listed support path."
+ intentRows={paralivesMacSearchIntent}
+ jumpLinks={paralivesMacJumpLinks}
+ />
+
+ <StatusPanel items={paralivesMacStatusItems} />
+
  <section className="prose-game">
- <h2>Mac Support Table</h2>
+ <h2 id="mac-support">Mac Support Table</h2>
  <ArticleImage
  src={paralivesImages.town}
  alt="Paralives Mac support town screenshot"
@@ -87,7 +101,7 @@ export default function ParalivesMacPage() {
  </div>
 
  <section className="prose-game">
- <h2>Windows and Mac Requirements</h2>
+ <h2 id="mac-apple-silicon">Windows and Mac Requirements</h2>
  </section>
 
  <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
@@ -110,6 +124,34 @@ export default function ParalivesMacPage() {
  </tbody>
  </table>
  </div>
+
+ <section className="prose-game">
+ <h2 id="mac-intel">Intel Mac and Unsupported Hardware</h2>
+ <p>
+ The official Mac requirements say an Apple processor is required, so
+ Intel Macs are not supported by the listed requirements. Players on
+ older Mac hardware should plan around a Windows PC, a newer Apple
+ silicon Mac, or a Steam Deck test under refund rules. Treat the
+ current Mac requirements as the support boundary until Steam updates
+ the listing.
+ </p>
+ </section>
+
+ <section className="prose-game">
+ <h2 id="mac-performance">Performance Settings and Stability</h2>
+ <p>
+ If framerate drops on Mac, lower display resolution and graphics
+ settings before changing anything else. The official requirement
+ note repeats this advice. For long saves, run a small household first
+ to confirm stability, then grow the home, the family, and the town
+ footprint over time.
+ </p>
+ </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Mac Plan</h2>
+ <ActionTable rows={paralivesMacActionRows} />
+
+ <SourceCheckTable title="Paralives Mac Sources" rows={paralivesMacSourceRows} />
  </ParalivesArticle>
  );
 }

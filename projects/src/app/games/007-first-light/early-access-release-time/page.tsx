@@ -1,10 +1,21 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { FirstLightArticle } from '@/components/007-first-light-article';
 import {
- createFirstLightMetadata,
- firstLightImages,
- firstLightReleaseRows,
+  createFirstLightMetadata,
+  firstLightImages,
+  firstLightJumpLinksRelease,
+  firstLightReleaseActionRows,
+  firstLightReleaseRows,
+  firstLightReleaseSourceRows,
+  firstLightReleaseStatusItems,
+  firstLightSearchIntentRelease,
 } from '@/lib/007-first-light';
 
 const title = '007 First Light Release Time, Early Access, Preload & Australia';
@@ -62,7 +73,16 @@ export default function FirstLightEarlyAccessPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="007 First Light Release Quick Answer"
+ answer="May 27, 2026 launch. Deluxe pre-orders get 24-hour early access plus a cosmetic bundle. Preload is not universal, Australia time zones shift the calendar, and Denuvo is listed on Steam."
+ intentRows={firstLightSearchIntentRelease}
+ jumpLinks={firstLightJumpLinksRelease}
+ />
+
+ <StatusPanel items={firstLightReleaseStatusItems} />
+
+ <section id="release-checklist" className="prose-game">
  <h2>Release, Early Access, and Preload Checklist</h2>
  <ArticleImage
  src={firstLightImages.header}
@@ -91,7 +111,7 @@ export default function FirstLightEarlyAccessPage() {
  </div>
 
  <section className="prose-game">
- <h2>What Came With the Free Deluxe Upgrade?</h2>
+ <h2 id="deluxe-vs-standard">What Came With the Free Deluxe Upgrade?</h2>
  <p>
  Steam listed the pre-order upgrade as four outfits, the Agent&apos;s
  Mark weapon skin, and four Gleaming gadget skins: Lighter, Earphones,
@@ -99,14 +119,29 @@ export default function FirstLightEarlyAccessPage() {
  access, not as proof of extra story missions.
  </p>
 
- <h2>How to Check Preload Safely</h2>
+ <h2 id="preload-check">How to Check Preload Safely</h2>
  <p>
  Preload is a platform-library feature, not just a marketing line. If
  your library shows an install or preload button, use that. If it does
  not, wait for your platform countdown instead of deleting files,
  changing regions, or buying another edition just to force a preload.
  </p>
+
+ <h2 id="time-zones">Time Zones and Australia</h2>
+ <p>
+ Steam shows May 27 as the calendar date, but the visible unlock hour
+ in Australia can land on May 26 or May 28 depending on the storefront
+ and your exact region. Use the platform countdown, not the calendar,
+ for the final local hour. If the platform does not show a countdown,
+ open your store search, set the region, and let the storefront tell
+ you the unlock time.
+ </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Launch Plan</h2>
+ <ActionTable rows={firstLightReleaseActionRows} />
+
+ <SourceCheckTable title="007 First Light Release Sources" rows={firstLightReleaseSourceRows} />
  </FirstLightArticle>
  );
 }

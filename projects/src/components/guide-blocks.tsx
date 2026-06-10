@@ -22,7 +22,7 @@ interface ActionRow {
 }
 
 interface ActionTableProps {
- rows: ActionRow[];
+ rows: readonly ActionRow[];
 }
 
 interface RelatedGuide {
@@ -45,7 +45,7 @@ interface SourceCheckRow {
 
 interface SourceCheckTableProps {
  title?: string;
- rows: SourceCheckRow[];
+ rows: readonly SourceCheckRow[];
 }
 
 interface SearchIntentRow {

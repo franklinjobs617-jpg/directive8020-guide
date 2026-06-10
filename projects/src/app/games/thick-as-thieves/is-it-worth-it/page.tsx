@@ -1,8 +1,19 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { ThickAsThievesArticle } from '@/components/thick-as-thieves-article';
 import {
  createThickAsThievesMetadata,
+ tatWorthItActionRows,
+ tatWorthItJumpLinks,
+ tatWorthItSearchIntent,
+ tatWorthItSourceRows,
+ tatWorthItStatusItems,
  thickAsThievesImages,
  thickAsThievesWorthItRows,
 } from '@/lib/thick-as-thieves';
@@ -64,7 +75,16 @@ export default function ThickAsThievesWorthItPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Is Thick As Thieves Worth It? Quick Answer"
+ answer="Worth considering at $4.99 if you want a compact solo or partner co-op stealth heist. Wait for reviews if you need a long campaign, console version, or proof that the pivot from PvPvE to solo or two-player co-op works in practice."
+ intentRows={tatWorthItSearchIntent}
+ jumpLinks={tatWorthItJumpLinks}
+ />
+
+ <StatusPanel items={tatWorthItStatusItems} />
+
+ <section id="launch-value-snapshot" className="prose-game">
  <h2>Launch Value Snapshot</h2>
  <ArticleImage
  src={thickAsThievesImages.feature}
@@ -100,7 +120,7 @@ export default function ThickAsThievesWorthItPage() {
  </div>
 
  <section className="prose-game">
- <h2>Why the PvPvE Pivot Matters</h2>
+ <h2 id="why-the-pvpve-pivot-matters">Why the PvPvE Pivot Matters</h2>
  <ArticleImage
  src={thickAsThievesImages.soloCoop}
  alt="Thick As Thieves solo and co-op pivot image"
@@ -114,7 +134,7 @@ export default function ThickAsThievesWorthItPage() {
  what you actually want.
  </p>
 
- <h2>Who Should Buy Today</h2>
+ <h2 id="who-should-buy-today">Who Should Buy Today</h2>
  <ArticleImage
  src={thickAsThievesImages.beginner}
  alt="Thick As Thieves buy today image"
@@ -126,7 +146,7 @@ export default function ThickAsThievesWorthItPage() {
  <li>You enjoy replaying maps to improve routes, timing, and clean exits.</li>
  </ul>
 
- <h2>Who Should Wait</h2>
+ <h2 id="who-should-wait">Who Should Wait</h2>
  <ArticleImage
  src={thickAsThievesImages.roadmap}
  alt="Thick As Thieves wait before buying image"
@@ -138,6 +158,11 @@ export default function ThickAsThievesWorthItPage() {
  <li>Wait if 2 maps and at least 4 hours sounds too small for your taste.</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Buying Plan</h2>
+ <ActionTable rows={tatWorthItActionRows} />
+
+ <SourceCheckTable title="Thick As Thieves Worth-It Sources" rows={tatWorthItSourceRows} />
  </ThickAsThievesArticle>
  );
 }

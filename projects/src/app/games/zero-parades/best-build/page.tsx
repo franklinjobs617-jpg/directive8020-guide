@@ -1,11 +1,22 @@
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { ZeroParadesArticle } from '@/components/zero-parades-article';
 import {
- createZeroParadesMetadata,
- zeroParadesImages,
- zeroParadesBuildArchetypeRows,
- zeroParadesSkillRows,
+  createZeroParadesMetadata,
+  zpBuildActionRows,
+  zpBuildJumpLinks,
+  zpBuildSearchIntent,
+  zpBuildSourceRows,
+  zpBuildStatusItems,
+  zeroParadesBuildArchetypeRows,
+  zeroParadesImages,
+  zeroParadesSkillRows,
 } from '@/lib/zero-parades';
 
 const title = 'ZERO PARADES Best Build Guide (2026) - Skills, Roles & First-Run Advice';
@@ -64,18 +75,27 @@ export default function ZeroParadesBestBuildPage() {
  heroAlt="ZERO PARADES best build guide screenshot"
  faqs={faqs}
  >
- <BlufBox title="Build Answer">
- <p>
- <strong>There is no single best build in ZERO PARADES.</strong> The
- safest first-playthrough approach is the Careful Investigator:
- invest in Deduction, Observation, Perception, and Composure, then use
- Exertion only on mission-critical checks. Focus on 3-5 core skills
- instead of spreading across all 15.
- </p>
- </BlufBox>
+      <BlufBox title="Build Answer">
+        <p>
+          <strong>There is no single best build in ZERO PARADES.</strong> The
+          safest first-playthrough approach is the Careful Investigator:
+          invest in Deduction, Observation, Perception, and Composure, then use
+          Exertion only on mission-critical checks. Focus on 3-5 core skills
+          instead of spreading across all 15.
+        </p>
+      </BlufBox>
 
- <section className="prose-game">
- <h2>What Does &quot;Build&quot; Mean in ZERO PARADES?</h2>
+      <SearchAnswerPanel
+        title="ZERO PARADES Best Build Quick Answer"
+        answer="No single best build. Pick an archetype, invest in 3-5 core skills, and reserve Exertion for mission-critical checks. Conditioning changes the rules, so plan it alongside your skill picks."
+        intentRows={zpBuildSearchIntent}
+        jumpLinks={zpBuildJumpLinks}
+      />
+
+      <StatusPanel items={zpBuildStatusItems} />
+
+      <section className="prose-game">
+        <h2 id="what-does-build-mean-in-zero-parades">What Does &quot;Build&quot; Mean in ZERO PARADES?</h2>
  <ArticleImage
  src={zeroParadesImages.screenshot4}
  alt="ZERO PARADES build system explanation screenshot"
@@ -249,16 +269,44 @@ export default function ZeroParadesBestBuildPage() {
  if you push Exertion too hard.
  </li>
  <li>
- <strong>Reloading every failed check.</strong> Failure is part of
- the RPG structure. Some failed checks reveal information or open
- alternative routes that a &quot;perfect&quot; run misses.
- </li>
- <li>
- <strong>Changing Conditioning randomly.</strong> Conditioning
- changes have lasting effects. Understand the cost before swapping.
- </li>
- </ul>
- </section>
- </ZeroParadesArticle>
+          <strong>Reloading every failed check.</strong> Failure is part of
+          the RPG structure. Some failed checks reveal information or open
+          alternative routes that a &quot;perfect&quot; run misses.
+        </li>
+        <li>
+          <strong>Changing Conditioning randomly.</strong> Conditioning
+          changes have lasting effects. Understand the cost before swapping.
+        </li>
+      </ul>
+      </section>
+
+      <section className="prose-game">
+        <h2 id="build-vs-archetype">Build Identity vs Archetype Fluidity</h2>
+        <p>
+          The four archetype labels (Investigator, Operative, Social, Wildcard)
+          are starting points, not hard locks. A Careful Investigator run can
+          pivot to a Social Manipulator mid-game if dialogue rewards it, and a
+          Forceful Operative can pick up Deduction perks to read informants
+          more carefully. The mistake is to plan fluidity from the start:
+          that is just spreading points again, and it produces a build that
+          fails at important checks.
+        </p>
+        <p>
+          A cleaner mental model is to pick the identity you want the game to
+          remember you by, then spend the first 5-10 hours locking in core
+          skills. After that, Conditioning and dialogue choices can flex the
+          archetype without breaking it. The build is the spine; the
+          archetype is the story your save tells.
+        </p>
+      </section>
+
+      <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Build Plan</h2>
+      <ActionTable rows={zpBuildActionRows} />
+
+      <SourceCheckTable
+        title="ZERO PARADES Build Sources"
+        rows={zpBuildSourceRows}
+      />
+    </ZeroParadesArticle>
  );
 }

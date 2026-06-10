@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { BlufBox } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { VoidlingBoundArticle } from '@/components/voidling-bound-article';
 import {
  createVoidlingBoundMetadata,
@@ -9,6 +9,7 @@ import {
  voidlingGuideFaqs,
  voidlingSpecies,
 } from '@/lib/voidling-bound';
+import { vbVoidlingsActionRows, vbVoidlingsJumpLinks, vbVoidlingsSearchIntent, vbVoidlingsSourceRows, vbVoidlingsStatusItems } from '@/lib/voidling-bound';
 
 const title = 'All Voidlings List: Voidling Bound Species, Evolutions, Rarity and Elements';
 const description =
@@ -41,7 +42,16 @@ export default function VoidlingBoundVoidlingsPage() {
  </p>
  </BlufBox>
 
- <div className="space-y-10">
+ <SearchAnswerPanel
+ title="Voidling Bound All Voidlings Quick Answer"
+ answer="The all-Voidlings list is the crawlable index built from the wiki snapshot. Use it for species-by-species browsing and the database for search, filters, and comparison."
+ intentRows={vbVoidlingsSearchIntent}
+ jumpLinks={vbVoidlingsJumpLinks}
+ />
+
+ <StatusPanel items={vbVoidlingsStatusItems} />
+
+ <div className="space-y-10" id="voidlings-list">
  {voidlingSpecies.map((species) => {
  const entries = getVoidlingsBySpecies(species.name);
  return (
@@ -73,6 +83,41 @@ export default function VoidlingBoundVoidlingsPage() {
  );
  })}
  </div>
+
+ <section className="prose-game" id="voidlings-species">
+ <h2>Browsing the List by Species</h2>
+ <p>
+ The all-Voidlings list groups every wiki-derived entry by species, then by rarity inside each species card. The order is intentional. Species is the strongest filter for team planning, and rarity is a navigation aid inside the species, not a quality verdict on its own. Players who are hunting for a specific role should land on the species card first, then look at the rarity columns for entries that match the role.
+ </p>
+ <p>
+ The list is built as a crawlable index. Each species has its own anchor on this page, and each entry card links to its detail entry on a dedicated URL. That structure makes it easy to bookmark a species view and to share a single entry with another player.
+ </p>
+ </section>
+
+ <section className="prose-game" id="voidlings-vs-database">
+ <h2>List vs Database: When to Use Each</h2>
+ <p>
+ Use the all-Voidlings list when you want a species-by-species browse, a quick look at every entry in one species, or a bookmarkable index of the full snapshot. Use the database when you need text search, filters by element, rarity, ability slot, module, or status effect, or the comparison panel for side-by-side entry decisions. Both pages share the same wiki-derived data source. The list is the index. The database is the search and filter layer.
+ </p>
+ <p>
+ If a player is unsure which page to open, the rule of thumb is simple. If they know the species, open the list. If they only know a role, an element, or a fragment of a name, open the database.
+ </p>
+ </section>
+
+ <section className="prose-game" id="voidlings-snapshot">
+ <h2>Wiki Snapshot, Image Coverage, and Refresh Cadence</h2>
+ <p>
+ The list is generated from the Voidling Bound Wiki snapshot, with image files downloaded locally, converted to WebP, and attributed under the wiki license. Where the wiki has no exact file for an entry, the page uses a same-species fallback so the layout still works, and the fallback is recorded in the data.
+ </p>
+ <p>
+ Wiki snapshots can go stale. When the wiki updates, the list should be rebuilt from a fresh snapshot rather than trusted forever. Until then, the current entries, images, and ability slot labels are the best evidence available, and the SourceCheckTable below records which sources were used for which claims.
+ </p>
+ </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step All-Voidlings Plan</h2>
+ <ActionTable rows={vbVoidlingsActionRows} />
+
+ <SourceCheckTable title="Voidling Bound All Voidlings Sources" rows={vbVoidlingsSourceRows} />
  </VoidlingBoundArticle>
  );
 }

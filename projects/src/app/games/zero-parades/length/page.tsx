@@ -1,11 +1,22 @@
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { ZeroParadesArticle } from '@/components/zero-parades-article';
 import {
- createZeroParadesMetadata,
- zeroParadesImages,
- zeroParadesLengthRows,
- zeroParadesTimeLimitRows,
+  createZeroParadesMetadata,
+  zpLengthActionRows,
+  zpLengthJumpLinks,
+  zpLengthSearchIntent,
+  zpLengthSourceRows,
+  zpLengthStatusItems,
+  zeroParadesImages,
+  zeroParadesLengthRows,
+  zeroParadesTimeLimitRows,
 } from '@/lib/zero-parades';
 
 const title = 'ZERO PARADES Game Length - How Long to Beat & Time Limits';
@@ -64,18 +75,27 @@ export default function ZeroParadesLengthPage() {
  heroAlt="ZERO PARADES game length guide screenshot"
  faqs={faqs}
  >
- <BlufBox title="Length Answer">
- <p>
- <strong>ZERO PARADES takes 20-30 hours per playthrough.</strong>{' '}
- Completionist runs with multiple endings and full exploration can take
- 40+ hours. Some quests are time-sensitive, and the game does not
- always make these limits explicit. Save before resting and pay
- attention to case urgency in dialogue.
- </p>
- </BlufBox>
+      <BlufBox title="Length Answer">
+        <p>
+          <strong>ZERO PARADES takes 20-30 hours per playthrough.</strong>{' '}
+          Completionist runs with multiple endings and full exploration can take
+          40+ hours. Some quests are time-sensitive, and the game does not
+          always make these limits explicit. Save before resting and pay
+          attention to case urgency in dialogue.
+        </p>
+      </BlufBox>
 
- <section className="prose-game">
- <h2>Game Length by Playstyle</h2>
+      <SearchAnswerPanel
+        title="ZERO PARADES Length Quick Answer"
+        answer="A single playthrough is 20-30 hours. Thorough runs are 30-40 hours. Completionist runs with multiple endings and Conditioning experiments are 40+ hours. Some events are time-sensitive but the game does not always flag them with explicit timers."
+        intentRows={zpLengthSearchIntent}
+        jumpLinks={zpLengthJumpLinks}
+      />
+
+      <StatusPanel items={zpLengthStatusItems} />
+
+      <section className="prose-game">
+        <h2 id="game-length-by-playstyle">Game Length by Playstyle</h2>
  <ArticleImage
  src={zeroParadesImages.screenshot3}
  alt="ZERO PARADES game length breakdown screenshot"
@@ -211,11 +231,39 @@ export default function ZeroParadesLengthPage() {
  systems).
  </li>
  <li>
- <strong>Completionist:</strong> Experiment with Conditioning,
- test edge cases, and explore all major routes. 40+ hours total.
- </li>
- </ul>
- </section>
- </ZeroParadesArticle>
+          <strong>Completionist:</strong> Experiment with Conditioning,
+          test edge cases, and explore all major routes. 40+ hours total.
+        </li>
+      </ul>
+      </section>
+
+      <section className="prose-game">
+        <h2 id="replay-vs-completionist">Replay Run vs Completionist Run</h2>
+        <p>
+          A common confusion is treating a replay run and a completionist
+          run as the same thing. They are not. A replay run is a focused
+          second playthrough with a different build, usually 15-25 hours
+          because you already understand the systems. A completionist run
+          is a single playthrough that explores every route, tests
+          Conditioning experiments, and reads every dialogue option,
+          usually 40+ hours.
+        </p>
+        <p>
+          Players who want the most content per hour should plan a focused
+          first run, then a second replay with a different archetype.
+          Players who want one long save should plan for 40+ hours and
+          resist the urge to reload every failed check, since reloading
+          is one of the biggest playtime multipliers in the game.
+        </p>
+      </section>
+
+      <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Length Plan</h2>
+      <ActionTable rows={zpLengthActionRows} />
+
+      <SourceCheckTable
+        title="ZERO PARADES Length Sources"
+        rows={zpLengthSourceRows}
+      />
+    </ZeroParadesArticle>
  );
 }

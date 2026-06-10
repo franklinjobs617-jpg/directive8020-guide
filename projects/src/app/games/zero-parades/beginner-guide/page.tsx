@@ -1,10 +1,21 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { ZeroParadesArticle } from '@/components/zero-parades-article';
 import {
- createZeroParadesMetadata,
- zeroParadesBeginnerRows,
- zeroParadesImages,
+  createZeroParadesMetadata,
+  zpBeginnerActionRows,
+  zpBeginnerJumpLinks,
+  zpBeginnerSearchIntent,
+  zpBeginnerSourceRows,
+  zpBeginnerStatusItems,
+  zeroParadesBeginnerRows,
+  zeroParadesImages,
 } from '@/lib/zero-parades';
 
 const title = 'ZERO PARADES Beginner Guide - Skills, Conditioning & Exertion';
@@ -60,17 +71,26 @@ export default function ZeroParadesBeginnerGuidePage() {
  heroAlt="ZERO PARADES beginner guide screenshot"
  faqs={faqs}
  >
- <BlufBox title="Beginner Answer">
- <p>
- <strong>Do not play ZERO PARADES like a perfect-check simulator.</strong>{' '}
- Pick a skill identity, read motives, save before risky conversations,
- and use Exertion only when the outcome matters. Failure is part of the
- RPG structure, not always a reason to reload.
- </p>
- </BlufBox>
+      <BlufBox title="Beginner Answer">
+        <p>
+          <strong>Do not play ZERO PARADES like a perfect-check simulator.</strong>{' '}
+          Pick a skill identity, read motives, save before risky conversations,
+          and use Exertion only when the outcome matters. Failure is part of the
+          RPG structure, not always a reason to reload.
+        </p>
+      </BlufBox>
 
- <section className="prose-game">
- <h2>First-Session Priorities</h2>
+      <SearchAnswerPanel
+        title="ZERO PARADES Beginner Quick Answer"
+        answer="Start with an espionage identity and 3-5 core skills, save before risky conversations, spend Exertion only on mission-critical checks, and let some failures stand. Conditioning changes the rules, so treat it as a long-term commitment."
+        intentRows={zpBeginnerSearchIntent}
+        jumpLinks={zpBeginnerJumpLinks}
+      />
+
+      <StatusPanel items={zpBeginnerStatusItems} />
+
+      <section className="prose-game">
+        <h2 id="first-session-priorities">First-Session Priorities</h2>
  <ArticleImage
  src={zeroParadesImages.screenshot2}
  alt="ZERO PARADES first-session beginner guide screenshot"
@@ -149,13 +169,40 @@ export default function ZeroParadesBeginnerGuidePage() {
  caption="Steam lists Save Anytime, so use it before risky conversations, not after you have already pushed a bad pressure state too far."
  />
  <ul>
- <li>Save before major conversations, faction meetings, or suspicious informants.</li>
- <li>Read repeated wording carefully; in a spy RPG, phrasing can be evidence.</li>
- <li>Do not spend pressure on every small check just because the option appears.</li>
- <li>Let some failed rolls stand if they reveal motives or open a different route.</li>
- <li>Keep notes on names, cover stories, ideological factions, and contradictions.</li>
- </ul>
- </section>
- </ZeroParadesArticle>
+          <li>Save before major conversations, faction meetings, or suspicious informants.</li>
+          <li>Read repeated wording carefully; in a spy RPG, phrasing can be evidence.</li>
+          <li>Do not spend pressure on every small check just because the option appears.</li>
+          <li>Let some failed rolls stand if they reveal motives or open a different route.</li>
+          <li>Keep notes on names, cover stories, ideological factions, and contradictions.</li>
+        </ul>
+      </section>
+
+      <section className="prose-game">
+        <h2 id="failure-as-information">When Failure Is Route Information</h2>
+        <p>
+          Beginners often reload every failed check. In ZERO PARADES, that
+          habit costs time and removes the consequence-driven storytelling
+          the game is built around. A failed check can reveal an informant
+          who is hiding motives, expose a faction contradiction, or open a
+          route the successful check would have skipped. Read the failure
+          text before reaching for the load menu.
+        </p>
+        <p>
+          The same logic applies to pressure states. Spending Exertion to
+          avoid every failure builds Fatigue, Anxiety, and Delirium faster
+          than any single failed check. Reserve Exertion for checks that
+          match your build or route goal, not for the first available
+          option in a dialogue tree.
+        </p>
+      </section>
+
+      <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Beginner Plan</h2>
+      <ActionTable rows={zpBeginnerActionRows} />
+
+      <SourceCheckTable
+        title="ZERO PARADES Beginner Sources"
+        rows={zpBeginnerSourceRows}
+      />
+    </ZeroParadesArticle>
  );
 }

@@ -1,7 +1,22 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { ThickAsThievesArticle } from '@/components/thick-as-thieves-article';
-import { createThickAsThievesMetadata, thickAsThievesGearRows, thickAsThievesImages } from '@/lib/thick-as-thieves';
+import {
+ createThickAsThievesMetadata,
+ tatGearActionRows,
+ tatGearJumpLinks,
+ tatGearSearchIntent,
+ tatGearSourceRows,
+ tatGearStatusItems,
+ thickAsThievesGearRows,
+ thickAsThievesImages,
+} from '@/lib/thick-as-thieves';
 
 const title = 'Thick As Thieves Gear & Loadout Guide - First Unlock Priorities';
 const description =
@@ -57,7 +72,16 @@ export default function ThickAsThievesGearPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Thick As Thieves Gear & Loadout Quick Answer"
+ answer="Official launch messaging lists 6 pieces of gear. There is no confirmed tier list. Group gear by role, prioritize information and recovery tools, and verify exact stats in the live build before treating any loadout as final."
+ intentRows={tatGearSearchIntent}
+ jumpLinks={tatGearJumpLinks}
+ />
+
+ <StatusPanel items={tatGearStatusItems} />
+
+ <section id="think-in-loadout-roles" className="prose-game">
  <h2>Think in Loadout Roles</h2>
  <ArticleImage
  src={thickAsThievesImages.gear}
@@ -86,7 +110,7 @@ export default function ThickAsThievesGearPage() {
  </div>
 
  <section className="prose-game">
- <h2>First Unlock Priorities</h2>
+ <h2 id="first-unlock-priorities">First Unlock Priorities</h2>
  <ArticleImage
  src={thickAsThievesImages.screenshot4}
  alt="Thick As Thieves first unlock priority image"
@@ -99,7 +123,7 @@ export default function ThickAsThievesGearPage() {
  room has already collapsed.
  </p>
 
- <h2>What Needs Live Testing</h2>
+ <h2 id="what-needs-live-testing">What Needs Live Testing</h2>
  <ArticleImage
  src={thickAsThievesImages.screenshot7}
  alt="Thick As Thieves live gear testing image"
@@ -112,6 +136,11 @@ export default function ThickAsThievesGearPage() {
  <li>Whether solo and co-op progression share the same gear behavior.</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Loadout Plan</h2>
+ <ActionTable rows={tatGearActionRows} />
+
+ <SourceCheckTable title="Thick As Thieves Gear Sources" rows={tatGearSourceRows} />
  </ThickAsThievesArticle>
  );
 }

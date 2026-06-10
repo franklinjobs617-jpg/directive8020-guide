@@ -1,10 +1,21 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { MinaArticle } from '@/components/mina-the-hollower-article';
 import {
  createMinaMetadata,
  minaImages,
+ minaWorthItActionRows,
+ minaWorthItJumpLinks,
  minaWorthItRows,
+ minaWorthItSearchIntent,
+ minaWorthItSourceRows,
+ minaWorthItStatusItems,
 } from '@/lib/mina-the-hollower';
 
 const title = 'Is Mina the Hollower Worth It? Genre Fit, Platforms & Launch Advice';
@@ -63,7 +74,16 @@ export default function MinaWorthItPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Mina the Hollower Worth It Quick Answer"
+ answer="Strong buy for action-adventure fans who want gothic pixel art, bosses, secrets, and controller play. Wait if reviews, completion time, or platform performance matter to your decision."
+ intentRows={minaWorthItSearchIntent}
+ jumpLinks={minaWorthItJumpLinks}
+ />
+
+ <StatusPanel items={minaWorthItStatusItems} />
+
+ <section className="prose-game" id="launch-value">
  <h2>Launch Value Snapshot</h2>
  <ArticleImage
  src={minaImages.screenshot5}
@@ -98,7 +118,7 @@ export default function MinaWorthItPage() {
  </div>
 
  <section className="prose-game">
- <h2>Who Should Buy at Launch</h2>
+ <h2 id="who-buy">Who Should Buy at Launch</h2>
  <ArticleImage
  src={minaImages.screenshot6}
  alt="Mina the Hollower who should buy at launch"
@@ -110,7 +130,7 @@ export default function MinaWorthItPage() {
  <li>You value controller support, Steam Cloud, and handheld-friendly play.</li>
  </ul>
 
- <h2>Who Should Wait</h2>
+ <h2 id="who-wait">Who Should Wait</h2>
  <ArticleImage
  src={minaImages.screenshot8}
  alt="Mina the Hollower who should wait before buying"
@@ -122,7 +142,7 @@ export default function MinaWorthItPage() {
  <li>Wait if you only want co-op, survival crafting, or a large 3D RPG.</li>
  </ul>
 
- <h2>Platform Choice</h2>
+ <h2 id="platform-choice">Platform Choice</h2>
  <ArticleImage
  src={minaImages.screenshot3}
  alt="Mina the Hollower platform choice"
@@ -135,6 +155,11 @@ export default function MinaWorthItPage() {
  platform-specific features directly on their storefront before buying.
  </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Buying Plan</h2>
+ <ActionTable rows={minaWorthItActionRows} />
+
+ <SourceCheckTable title="Mina the Hollower Worth It Sources" rows={minaWorthItSourceRows} />
  </MinaArticle>
  );
 }

@@ -1,13 +1,24 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { MechanicusIIArticle } from '@/components/mechanicus-ii-article';
 import {
- createMechanicusIIMetadata,
- mechanicusIIImages,
- mechanicusIIPerformanceCheckRows,
- mechanicusIIPerformanceTriageRows,
- mechanicusIISpecRows,
- mechanicusIISteamDeckRows,
+  createMechanicusIIMetadata,
+  mechanicusIIImages,
+  mechanicusIIPerformanceCheckRows,
+  mechanicusIIPerformanceTriageRows,
+  mechanicusIISpecRows,
+  mechanicusIISteamDeckRows,
+  m2SteamDeckActionRows,
+  m2SteamDeckJumpLinks,
+  m2SteamDeckSearchIntent,
+  m2SteamDeckSourceRows,
+  m2SteamDeckStatusItems,
 } from '@/lib/mechanicus-ii';
 
 const title = 'Warhammer 40,000: Mechanicus II Steam Deck Unsupported & Performance Guide';
@@ -71,7 +82,16 @@ export default function MechanicusIISteamDeckPerformancePage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Mechanicus II Steam Deck & Performance Quick Answer"
+ answer="Steam Deck is unsupported at launch. PC minimum is GTX 1660 6GB / RX 5600 XT 6GB with 12 GB RAM. Recommended moves to RTX 2070 8GB / RX 6600 XT 8GB with 16 GB RAM. Both tiers list DirectX 12 and 25 GB storage."
+ intentRows={m2SteamDeckSearchIntent}
+ jumpLinks={m2SteamDeckJumpLinks}
+ />
+
+ <StatusPanel items={m2SteamDeckStatusItems} />
+
+ <section id="steamdeck-anchor" className="prose-game">
  <h2>Steam Deck Status</h2>
  <ArticleImage
  src={mechanicusIIImages.screenshot4}
@@ -209,6 +229,11 @@ export default function MechanicusIISteamDeckPerformancePage() {
  pacing before settling into a long campaign.
  </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Performance Plan</h2>
+ <ActionTable rows={m2SteamDeckActionRows} />
+
+ <SourceCheckTable title="Mechanicus II Performance Sources" rows={m2SteamDeckSourceRows} />
  </MechanicusIIArticle>
  );
 }

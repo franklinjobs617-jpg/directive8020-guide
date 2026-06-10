@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { ArticleImage } from '@/components/article-media';
-import { ActionTable, BlufBox } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { VoidlingBoundArticle } from '@/components/voidling-bound-article';
 import { createVoidlingBoundMetadata, voidlingBoundImages, voidlingGuideFaqs } from '@/lib/voidling-bound';
+import { vbBreedingActionRows, vbBreedingJumpLinks, vbBreedingSearchIntent, vbBreedingSourceRows, vbBreedingStatusItems } from '@/lib/voidling-bound';
 
 const title = 'Voidling Bound Breeding Guide: Eggs, Golden Eggs, Splicing, Mutagens and Lineage Planning';
 const description =
@@ -10,13 +11,6 @@ const description =
 const canonical = '/games/voidling-bound/breeding-guide';
 
 export const metadata = createVoidlingBoundMetadata({ title, description, canonical, image: voidlingBoundImages.screenshot3 });
-
-const rows = [
- { step: 'Define the target', doThis: 'Choose the species role and element branch before chasing rarity.', why: 'Breeding without a target creates clutter instead of progression.' },
- { step: 'Check the database', doThis: 'Filter by species, rarity, and element to see the possible destination names.', why: 'The database keeps names, branches, and ability slots in one place.' },
- { step: 'Track systems', doThis: 'Separate hatching, eggs, golden eggs, mutagens, splicing, and stations as different questions.', why: 'Mixing systems together creates fake formulas and bad guide copy.' },
- { step: 'Verify changes', doThis: 'Return to the wiki source link when exact wording or patch-sensitive behavior matters.', why: 'The wiki is the source of truth for this cluster.' },
-];
 
 export default function VoidlingBoundBreedingGuidePage() {
  return (
@@ -27,7 +21,16 @@ export default function VoidlingBoundBreedingGuidePage() {
  </p>
  </BlufBox>
 
- <ActionTable rows={rows} />
+ <SearchAnswerPanel
+ title="Voidling Bound Breeding Quick Answer"
+ answer="Breeding is a planning system. Define role and branch first, use the database to filter possibilities, then track eggs, golden eggs, mutagens, and splicing as separate questions. No hidden formulas are invented."
+ intentRows={vbBreedingSearchIntent}
+ jumpLinks={vbBreedingJumpLinks}
+ />
+
+ <StatusPanel items={vbBreedingStatusItems} />
+
+ <ActionTable rows={vbBreedingActionRows} />
 
  <section className="prose-game">
  <h2>Start Breeding With a Role Target</h2>

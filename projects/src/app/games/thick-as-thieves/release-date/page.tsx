@@ -1,8 +1,19 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { ThickAsThievesArticle } from '@/components/thick-as-thieves-article';
 import {
  createThickAsThievesMetadata,
+ tatReleaseActionRows,
+ tatReleaseJumpLinks,
+ tatReleaseSearchIntent,
+ tatReleaseSourceRows,
+ tatReleaseStatusItems,
  thickAsThievesImages,
  thickAsThievesLaunchCheckRows,
  thickAsThievesSteamFeatureRows,
@@ -68,7 +79,16 @@ export default function ThickAsThievesReleaseDatePage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Thick As Thieves Release Quick Answer"
+ answer="Launched May 20, 2026 for PC storefronts. Official launch price is $4.99 / EUR4.99 / GBP4.99. Platform scope is Steam and Epic Games Store; PS5, Xbox, local co-op, and cross-play are not confirmed. Verify the live store button and local pricing in your region."
+ intentRows={tatReleaseSearchIntent}
+ jumpLinks={tatReleaseJumpLinks}
+ />
+
+ <StatusPanel items={tatReleaseStatusItems} />
+
+ <section id="release-date-and-platform" className="prose-game">
  <h2>Release Date and Platform</h2>
  <ArticleImage
  src={thickAsThievesImages.release}
@@ -83,7 +103,7 @@ export default function ThickAsThievesReleaseDatePage() {
  cross-progression until those are announced.
  </p>
 
- <h2>Steam Feature Checklist</h2>
+ <h2 id="steam-feature-checklist">Steam Feature Checklist</h2>
  <ArticleImage
  src={thickAsThievesImages.screenshot3}
  alt="Thick As Thieves Steam features visual"
@@ -111,7 +131,7 @@ export default function ThickAsThievesReleaseDatePage() {
  </div>
 
  <section className="prose-game">
- <h2>Launch-Day Verification</h2>
+ <h2 id="launch-day-verification">Launch-Day Verification</h2>
  <ArticleImage
  src={thickAsThievesImages.screenshot4}
  alt="Thick As Thieves launch verification image"
@@ -137,6 +157,11 @@ export default function ThickAsThievesReleaseDatePage() {
  </tbody>
  </table>
  </div>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Launch Plan</h2>
+ <ActionTable rows={tatReleaseActionRows} />
+
+ <SourceCheckTable title="Thick As Thieves Release Sources" rows={tatReleaseSourceRows} />
  </ThickAsThievesArticle>
  );
 }

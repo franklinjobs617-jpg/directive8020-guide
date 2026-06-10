@@ -1,10 +1,15 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { ParalivesArticle } from '@/components/paralives-article';
 import {
  createParalivesMetadata,
  paralivesImages,
+ paralivesModsActionRows,
+ paralivesModsJumpLinks,
  paralivesModsRows,
+ paralivesModsSearchIntent,
+ paralivesModsSourceRows,
+ paralivesModsStatusItems,
 } from '@/lib/paralives';
 
 const title = 'Paralives Mods & CC Guide: Steam Workshop, Houses and Parafolks';
@@ -62,8 +67,17 @@ export default function ParalivesModsCcPage() {
  </p>
  </BlufBox>
 
+ <SearchAnswerPanel
+ title="Paralives Mods and CC Quick Answer"
+ answer="Steam lists an in-game modding interface and Steam Workshop support for mods, houses, and Parafolks. Workshop volume may take time to grow. Keep a clean save and add mods a few at a time."
+ intentRows={paralivesModsSearchIntent}
+ jumpLinks={paralivesModsJumpLinks}
+ />
+
+ <StatusPanel items={paralivesModsStatusItems} />
+
  <section className="prose-game">
- <h2>Safe Workshop Checklist</h2>
+ <h2 id="mods-overview">Safe Workshop Checklist</h2>
  <ArticleImage
  src={paralivesImages.life}
  alt="Paralives life simulation screenshot for mods and custom content"
@@ -91,6 +105,47 @@ export default function ParalivesModsCcPage() {
  </tbody>
  </table>
  </div>
+
+ <section className="prose-game">
+ <h2 id="mods-workshop">Steam Workshop and CC at Launch</h2>
+ <p>
+ Steam Workshop is the listed place to share and install
+ community-made mods, houses, and Parafolks. Workshop volume may take
+ time to grow after Early Access launch, so sort by recent and rating
+ instead of relying on item age. Custom content (CC) is part of the
+ modding and Workshop ecosystem, but the right anchor for any
+ compatibility question is the item's notes and the current Early
+ Access patch version.
+ </p>
+ </section>
+
+ <section className="prose-game">
+ <h2 id="mods-cc">Custom Content and Author Notes</h2>
+ <p>
+ Treat CC items like any other mod. Read the author notes for required
+ versions, dependencies, and load order hints before installing on a
+ save you care about. If the item is from a new creator or has few
+ ratings, test on a clean save first and keep a backup of the working
+ save. This keeps Workshop experiments from spreading into your main
+ family tree.
+ </p>
+ </section>
+
+ <section className="prose-game">
+ <h2 id="mods-safety">Save Safety and Early Access Updates</h2>
+ <p>
+ Early Access updates can change how mods and CC load. After a major
+ patch, re-test your Workshop and mod list and remove items that no
+ longer load. Keep a clean save, add a few items at a time, and avoid
+ loading every Workshop favorite in a single pass. A short re-test
+ after each patch is the cheapest way to keep saves stable.
+ </p>
+ </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Mods Plan</h2>
+ <ActionTable rows={paralivesModsActionRows} />
+
+ <SourceCheckTable title="Paralives Mods and CC Sources" rows={paralivesModsSourceRows} />
  </ParalivesArticle>
  );
 }

@@ -1,10 +1,21 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { RomesteadArticle } from '@/components/romestead-article';
 import {
- createRomesteadMetadata,
- romesteadCoopRows,
- romesteadImages,
+  createRomesteadMetadata,
+  rmCoopActionRows,
+  rmCoopJumpLinks,
+  rmCoopSearchIntent,
+  rmCoopSourceRows,
+  rmCoopStatusItems,
+  romesteadCoopRows,
+  romesteadImages,
 } from '@/lib/romestead';
 
 const title = 'Romestead Multiplayer: 1-8 Player Co-op, LAN & Split Screen';
@@ -80,7 +91,16 @@ export default function RomesteadMultiplayerCoopPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Romestead Co-op Quick Answer"
+ answer="Romestead supports 1-8 players, Online Co-op, and LAN Co-op per official Steam info. Split-screen, crossplay, dedicated servers, and host-save rules are not confirmed. Start with 2-4 players for a first world."
+ intentRows={rmCoopSearchIntent}
+ jumpLinks={rmCoopJumpLinks}
+ />
+
+ <StatusPanel items={rmCoopStatusItems} />
+
+ <section id="player-count" className="prose-game">
  <h2>Confirmed and Unconfirmed Co-op Features</h2>
  <ArticleImage
  src={romesteadImages.screenshot5}
@@ -150,6 +170,43 @@ export default function RomesteadMultiplayerCoopPage() {
  <li>Do a short night-defense test before expanding the settlement.</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Co-op Setup Plan</h2>
+ <ActionTable rows={rmCoopActionRows} />
+
+ <section id="split-screen" className="prose-game">
+ <h2>Split-screen, Couch Co-op, and Crossplay</h2>
+ <p>
+ Split-screen and couch co-op are not in the current Steam feature
+ labels, even though LAN Co-op is. Crossplay is also not confirmed
+ because only PC via Steam is verified right now. Do not assume
+ couch co-op or crossplay works until the developer announces it or
+ Steam updates its feature list.
+ </p>
+ </section>
+
+ <section id="host-saves" className="prose-game">
+ <h2>Host Saves, Reconnects, and Resource Sharing</h2>
+ <p>
+ Host-save behavior and rejoin rules need launch testing. For a
+ first long settlement, have the most stable player host, agree on
+ shared storage rules, and test reconnecting after a network blip
+ before investing many hours. This is the cleanest way to avoid
+ losing progress to a launch-window co-op issue.
+ </p>
+ </section>
+
+ <section id="crossplay" className="prose-game">
+ <h2>Crossplay and Console Co-op Status</h2>
+ <p>
+ Console versions (Xbox, PlayStation) are not confirmed in current
+ official store data. Crossplay is therefore not confirmed, because
+ there is no second verified platform to play across. Wait for an
+ official announcement before buying for cross-platform play.
+ </p>
+ </section>
+
+ <SourceCheckTable title="Romestead Co-op Sources" rows={rmCoopSourceRows} />
  </RomesteadArticle>
  );
 }

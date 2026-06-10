@@ -1,11 +1,22 @@
 import Link from "next/link";
 import { StarminerArticle } from "@/components/starminer-article";
 import { ArticleImage } from "@/components/article-media";
-import { BlufBox } from "@/components/guide-blocks";
 import {
- createStarminerMetadata,
- starminerDefenseRows,
- starminerImages,
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from "@/components/guide-blocks";
+import {
+  createStarminerMetadata,
+  starminerDefenseRows,
+  starminerImages,
+  smHeatAliensActionRows,
+  smHeatAliensJumpLinks,
+  smHeatAliensSearchIntent,
+  smHeatAliensSourceRows,
+  smHeatAliensStatusItems,
 } from "@/lib/starminer";
 
 const title = "Starminer Heat, Aliens & Defense Guide: Threats, Weapons, Power & Survival";
@@ -78,7 +89,16 @@ export default function StarminerHeatDefensePage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Starminer Heat & Defense Quick Answer"
+ answer="Heat signature rises with mining and expansion. Critical heat can trigger alien detection. Cover power, storage, refining, and approach routes. Plan energy distribution and test defense in a normal save before Survival waves."
+ intentRows={smHeatAliensSearchIntent}
+ jumpLinks={smHeatAliensJumpLinks}
+ />
+
+ <StatusPanel items={smHeatAliensStatusItems} />
+
+ <section id="heat-anchor" className="prose-game">
  <h2>How Threat Pressure Works</h2>
  <ArticleImage
  src={starminerImages.combat}
@@ -153,6 +173,11 @@ export default function StarminerHeatDefensePage() {
  </tbody>
  </table>
  </div>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Defense Plan</h2>
+ <ActionTable rows={smHeatAliensActionRows} />
+
+ <SourceCheckTable title="Starminer Defense Sources" rows={smHeatAliensSourceRows} />
  </StarminerArticle>
  );
 }

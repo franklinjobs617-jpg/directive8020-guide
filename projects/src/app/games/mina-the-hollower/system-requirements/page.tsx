@@ -1,11 +1,22 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { MinaArticle } from '@/components/mina-the-hollower-article';
 import {
  createMinaMetadata,
  minaFeatureRows,
  minaImages,
  minaMacLinuxSpecs,
+ minaSpecActionRows,
+ minaSpecJumpLinks,
+ minaSpecSearchIntent,
+ minaSpecSourceRows,
+ minaSpecStatusItems,
  minaWindowsSpecs,
 } from '@/lib/mina-the-hollower';
 
@@ -64,7 +75,16 @@ export default function MinaSystemRequirementsPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Mina the Hollower Specs Quick Answer"
+ answer="Steam lists Windows 8+, 4 GB RAM, DirectX 12, 860 MB storage, macOS 11+ with Apple M1+, and Linux support. A detailed recommended tier is not published yet, so do not assume high settings."
+ intentRows={minaSpecSearchIntent}
+ jumpLinks={minaSpecJumpLinks}
+ />
+
+ <StatusPanel items={minaSpecStatusItems} />
+
+ <section className="prose-game" id="windows-minimum">
  <h2>Windows Minimum Specs</h2>
  <ArticleImage
  src={minaImages.screenshot2}
@@ -93,7 +113,7 @@ export default function MinaSystemRequirementsPage() {
  </div>
 
  <section className="prose-game">
- <h2>Mac, Linux, Controller, and Cloud</h2>
+ <h2 id="mac-linux">Mac, Linux, Controller, and Cloud</h2>
  <ArticleImage
  src={minaImages.screenshot3}
  alt="Mina the Hollower Mac Linux controller and cloud support"
@@ -121,7 +141,7 @@ export default function MinaSystemRequirementsPage() {
  </div>
 
  <section className="prose-game">
- <h2>Steam Feature Support</h2>
+ <h2 id="steam-features">Steam Feature Support</h2>
  <ArticleImage
  src={minaImages.screenshot7}
  alt="Mina the Hollower Steam features"
@@ -147,6 +167,11 @@ export default function MinaSystemRequirementsPage() {
  </tbody>
  </table>
  </div>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Spec Check Plan</h2>
+ <ActionTable rows={minaSpecActionRows} />
+
+ <SourceCheckTable title="Mina the Hollower Specs Sources" rows={minaSpecSourceRows} />
  </MinaArticle>
  );
 }

@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { VoidlingBoundArticle } from '@/components/voidling-bound-article';
 import { createVoidlingBoundMetadata, voidlingAbilitySlots, voidlingBoundImages, voidlingGuideFaqs } from '@/lib/voidling-bound';
+import { vbAttributesActionRows, vbAttributesJumpLinks, vbAttributesSearchIntent, vbAttributesSourceRows, vbAttributesStatusItems } from '@/lib/voidling-bound';
 
 const title = 'Voidling Bound Attributes Guide: Agility, Strength, Vitality, Perks, Modules and Natures';
 const description =
@@ -20,8 +21,17 @@ export default function VoidlingBoundAttributesGuidePage() {
  </p>
  </BlufBox>
 
+ <SearchAnswerPanel
+ title="Voidling Bound Attributes Quick Answer"
+ answer="Read role first, ability slots second, then agility, strength, vitality, perks, modules, and natures from the wiki snapshot. This guide stops at comparison logic and does not publish best-build claims."
+ intentRows={vbAttributesSearchIntent}
+ jumpLinks={vbAttributesJumpLinks}
+ />
+
+ <StatusPanel items={vbAttributesStatusItems} />
+
  <section className="prose-game">
- <h2>Read Ability Slots Before Stat Words</h2>
+ <h2 id="attributes-workflow">Read Ability Slots Before Stat Words</h2>
  <ArticleImage src={voidlingBoundImages.hero} alt="Voidling Bound ability slots and attributes screenshot" caption="The current database exposes ability slots such as Primary, Secondary, Defense, Movement, Ultimate, and Perk where the wiki text provides them." />
  <p>
  The current parsed database includes these ability slot labels: {voidlingAbilitySlots.join(', ')}. Those labels are the best starting point for attribute decisions because they explain what the Voidling actually does. A stat bonus is only useful if it supports a real action pattern. A faster creature that still cannot survive the fight, or a stronger creature whose ability range does not fit the player, is not automatically better.
@@ -61,7 +71,7 @@ export default function VoidlingBoundAttributesGuidePage() {
  </section>
 
  <section className="prose-game">
- <h2>Why This Is Not a Best-Build Page</h2>
+ <h2 id="attributes-stats">Why This Is Not a Best-Build Page</h2>
  <ArticleImage src={voidlingBoundImages.screenshot2} alt="Voidling Bound attributes and build comparison screenshot" caption="A useful attribute guide explains comparison logic; a best-build page needs stable testing data that this snapshot does not claim to have." />
  <p>
  Best-build content is high risk when the data source is a wiki snapshot and the game is newly released. The page can truthfully explain how to read agility, strength, vitality, perks, modules, natures, levels, and ability slots. It cannot truthfully say which final build wins every situation without controlled testing. That is why this guide focuses on comparison logic and sends users back to detail pages for exact entries.
@@ -72,14 +82,40 @@ export default function VoidlingBoundAttributesGuidePage() {
  </section>
 
  <section className="prose-game">
- <h2>Practical Attribute Questions During Play</h2>
+ <h2 id="attributes-perks">Perks and Modules</h2>
  <p>
- Use attributes as diagnosis. If a fight feels chaotic, the answer may be movement, range, or defense rather than raw damage. If enemies survive too long, check whether the Primary or Secondary ability is built for sustained pressure, burst, area control, or status application. If a creature feels good in easy fights but fails under pressure, vitality and defensive tools may matter more than a larger damage number.
+ Perks and modules matter when they change the way a kit behaves, but
+ their value depends on the rest of the kit. A perk that adds a status
+ effect is only useful if the entry can apply that status in real
+ fights. A module that boosts a damage type is only useful if the
+ Primary or Secondary ability actually scales with that type. Read
+ the perk and module text against the ability list before forming a
+ plan.
  </p>
  <p>
- This also helps with database searching. A player who searches only “highest strength?can miss the actual problem. A player who searches by species, ability slot, and element first can then use attribute language to refine the decision. That order keeps the guide useful for both new and experienced players.
+ The wiki snapshot should be the anchor for any patch-sensitive claim
+ about perks, modules, or status effects. If the wiki updates a perk
+ description, refresh this page against the new wording rather than
+ trusting older guide copy.
  </p>
  </section>
+
+ <section className="prose-game">
+ <h2 id="attributes-no-tier">Why This Is Not a Tier List</h2>
+ <p>
+ A tier list for a new game on a wiki snapshot is high risk. The page
+ can truthfully explain how to read agility, strength, vitality,
+ perks, modules, natures, levels, and ability slots. It cannot
+ truthfully say which final build wins every situation without
+ controlled testing. Use this page as comparison logic and the
+ database for entry detail.
+ </p>
+ </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Attribute Plan</h2>
+ <ActionTable rows={vbAttributesActionRows} />
+
+ <SourceCheckTable title="Voidling Bound Attributes Sources" rows={vbAttributesSourceRows} />
  </VoidlingBoundArticle>
  );
 }

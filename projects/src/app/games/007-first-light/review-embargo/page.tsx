@@ -1,8 +1,19 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { FirstLightArticle } from '@/components/007-first-light-article';
 import {
  createFirstLightMetadata,
+ firstLightEmbargoActionRows,
+ firstLightEmbargoJumpLinks,
+ firstLightEmbargoSearchIntent,
+ firstLightEmbargoSourceRows,
+ firstLightEmbargoStatusItems,
  firstLightImages,
  firstLightPlayerConcernRows,
  firstLightReviewRows,
@@ -70,7 +81,16 @@ export default function FirstLightReviewEmbargoPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="007 First Light Review Embargo Quick Answer"
+ answer="Treat the embargo question as time-sensitive. Buy if current reviews match the Bond origin story you want. Wait if you need Steam user volume, Steam Deck proof, or more confidence in Denuvo and PC performance."
+ intentRows={firstLightEmbargoSearchIntent}
+ jumpLinks={firstLightEmbargoJumpLinks}
+ />
+
+ <StatusPanel items={firstLightEmbargoStatusItems} />
+
+ <section id="embargo-checklist" className="prose-game">
  <h2>Review Embargo and Buying Checklist</h2>
  <ArticleImage
  src={firstLightImages.reviewCombat}
@@ -98,7 +118,7 @@ export default function FirstLightReviewEmbargoPage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="review-sources" className="prose-game">
  <h2>Where to Check Review Scores</h2>
  <p>
  Players searching for Metacritic, OpenCritic, IGN, and Steam reviews
@@ -137,7 +157,7 @@ export default function FirstLightReviewEmbargoPage() {
  </p>
  </section>
 
- <section className="prose-game">
+ <section id="buy-or-wait" className="prose-game">
  <h2>What Players Are Checking After Launch</h2>
  <ArticleImage
  src={firstLightImages.reviewStealth}
@@ -174,7 +194,34 @@ export default function FirstLightReviewEmbargoPage() {
  Steam Deck rating or strong player reports appear, handheld
  performance is still a separate question from normal PC specs.
  </p>
+
+ <h2 id="buy-now-vs-wait">If You Buy Now vs If You Wait</h2>
+ <p>
+ If you buy now, you accept that current reviews and player reports
+ are still settling and that the Steam refund window is your main
+ safety net. If you wait, you give critic coverage, Steam user
+ reviews, and platform-specific reports a few more days to firm up.
+ Both are valid; the right answer depends on how much you weigh
+ playing on launch night versus waiting for stronger post-launch
+ signals.
+ </p>
+
+ <h2 id="denuvo">If Denuvo Matters to You vs If It Does Not</h2>
+ <p>
+ If Denuvo matters to you, treat the Steam disclosure as a real
+ factor: factor offline comfort, performance risk, and any DRM
+ sensitivity into the buying decision. If Denuvo does not matter to
+ you, use it as a background signal and focus on reviews, Steam user
+ reports, and platform-specific performance. In both cases, do not
+ assume the DRM label alone tells you about real performance, and
+ use the refund window to confirm on your own setup.
+ </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Review Plan</h2>
+ <ActionTable rows={firstLightEmbargoActionRows} />
+
+ <SourceCheckTable title="007 First Light Review Sources" rows={firstLightEmbargoSourceRows} />
  </FirstLightArticle>
  );
 }

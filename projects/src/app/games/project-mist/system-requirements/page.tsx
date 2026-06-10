@@ -1,7 +1,22 @@
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
-import { createProjectMistMetadata, projectMistImages, projectMistMinimumSpecs } from '@/lib/project-mist';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
+import {
+  createProjectMistMetadata,
+  pmSpecActionRows,
+  pmSpecJumpLinks,
+  pmSpecSearchIntent,
+  pmSpecSourceRows,
+  pmSpecStatusItems,
+  projectMistImages,
+  projectMistMinimumSpecs,
+} from '@/lib/project-mist';
 
 const title = 'Project: Mist System Requirements - Official Minimum PC Specs';
 const description =
@@ -66,6 +81,15 @@ export default function ProjectMistSystemRequirementsPage() {
  </p>
  </BlufBox>
 
+ <SearchAnswerPanel
+ title="Project: Mist System Requirements Quick Answer"
+ answer="Steam lists Windows 10/11 64-bit, 3.2 GHz dual core CPU, 8 GB RAM, GTX 750 or Radeon HD 7770, DirectX 11, and 20 GB storage. Recommended specs are not listed yet."
+ intentRows={pmSpecSearchIntent}
+ jumpLinks={pmSpecJumpLinks}
+ />
+
+ <StatusPanel items={pmSpecStatusItems} />
+
  <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
  <table className="w-full text-sm">
  <thead>
@@ -85,7 +109,7 @@ export default function ProjectMistSystemRequirementsPage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="min-spec" className="prose-game">
  <h2>Minimum Requirements</h2>
  <ArticleImage
  src={projectMistImages.facilities}
@@ -113,7 +137,7 @@ export default function ProjectMistSystemRequirementsPage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="rec-spec" className="prose-game">
  <h2>Recommended Requirements</h2>
  <ArticleImage
  src={projectMistImages.screenshot3}
@@ -127,7 +151,7 @@ export default function ProjectMistSystemRequirementsPage() {
  settings.
  </p>
 
- <h2>Low-End PC Advice</h2>
+ <h2 id="8gb-ram">Low-End PC Advice</h2>
  <ArticleImage
  src={projectMistImages.screenshot6}
  alt="Project: Mist low-end PC advice image"
@@ -152,6 +176,21 @@ export default function ProjectMistSystemRequirementsPage() {
  </li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Spec Planning Plan</h2>
+ <ActionTable rows={pmSpecActionRows} />
+
+ <section id="storage-dx" className="prose-game">
+ <h2>Storage, DirectX, and Co-op Headroom</h2>
+ <p>
+ The Steam minimum lists 20 GB storage and DirectX 11. Keep more than
+ 20 GB free so Steam can patch, unpack, and maintain cache files. For
+ co-op, leave extra headroom on the host PC because save, scaling, and
+ network traffic all add load beyond a single-player benchmark.
+ </p>
+ </section>
+
+ <SourceCheckTable title="Project: Mist System Requirements Sources" rows={pmSpecSourceRows} />
  </ProjectMistArticle>
  );
 }

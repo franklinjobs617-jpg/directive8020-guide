@@ -1,7 +1,22 @@
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
-import { createProjectMistMetadata, projectMistImages, projectMistSaveRows } from '@/lib/project-mist';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
+import {
+  createProjectMistMetadata,
+  pmSaveActionRows,
+  pmSaveJumpLinks,
+  pmSaveSearchIntent,
+  pmSaveSourceRows,
+  pmSaveStatusItems,
+  projectMistImages,
+  projectMistSaveRows,
+} from '@/lib/project-mist';
 
 const title = 'Project: Mist Demo Saves, Save Transfer & Infinite Loading';
 const description =
@@ -58,7 +73,16 @@ export default function ProjectMistSaveDemoTransferPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Project: Mist Demo Save Quick Answer"
+ answer="Do not assume demo saves transfer safely. Steam Cloud is enabled, but players report loading loops on demo-era saves. Back up, test a fresh save, and report a clear bug before deleting data."
+ intentRows={pmSaveSearchIntent}
+ jumpLinks={pmSaveJumpLinks}
+ />
+
+ <StatusPanel items={pmSaveStatusItems} />
+
+ <section id="demo-transfer" className="prose-game">
  <h2>Safe Save Checks</h2>
  <ArticleImage
  src={projectMistImages.demo}
@@ -92,7 +116,7 @@ export default function ProjectMistSaveDemoTransferPage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="bug-report" className="prose-game">
  <h2>What to Include in a Save Bug Report</h2>
  <ArticleImage
  src={projectMistImages.screenshot7}
@@ -106,6 +130,34 @@ export default function ProjectMistSaveDemoTransferPage() {
  <li>Whether a new save loads correctly on the same PC.</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Save Recovery Plan</h2>
+ <ActionTable rows={pmSaveActionRows} />
+
+ <section id="infinite-loading" className="prose-game">
+ <h2>Infinite Loading and Demo Save Behavior</h2>
+ <p>
+ Steam discussions include launch-window reports of demo save loading
+ loops. A clean test is to start a fresh Early Access save on the same
+ PC and see whether the loading loop returns. If the new save loads
+ normally, the issue is most likely save-specific rather than
+ build-wide. If the new save also loops, treat it as a launch-window
+ bug candidate and report it with your build version.
+ </p>
+ </section>
+
+ <section id="steam-cloud" className="prose-game">
+ <h2>Steam Cloud Sync and Local Save State</h2>
+ <p>
+ Steam Cloud is listed for Project: Mist, so cloud sync affects save
+ troubleshooting. Check the cloud sync state before deleting local
+ data, and disable cloud sync briefly if a bad cloud copy is
+ suspected. A backup of the local save folder is the cheapest safety
+ net during the launch window.
+ </p>
+ </section>
+
+ <SourceCheckTable title="Project: Mist Save and Demo Transfer Sources" rows={pmSaveSourceRows} />
  </ProjectMistArticle>
  );
 }

@@ -1,10 +1,15 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { JumpKingQuestArticle } from '@/components/jump-king-quest-article';
 import {
  createJumpKingQuestMetadata,
  jumpKingQuestImages,
+ jumpKingQuestMultiplayerActionRows,
+ jumpKingQuestMultiplayerJumpLinks,
  jumpKingQuestMultiplayerRows,
+ jumpKingQuestMultiplayerSearchIntent,
+ jumpKingQuestMultiplayerSourceRows,
+ jumpKingQuestMultiplayerStatusItems,
 } from '@/lib/jump-king-quest';
 
 const title = 'JUMP KING QUEST Multiplayer, Co-op, PvP & Controller Support';
@@ -74,8 +79,17 @@ export default function JumpKingQuestMultiplayerControllerPage() {
  </p>
  </BlufBox>
 
+ <SearchAnswerPanel
+ title="JUMP KING QUEST Multiplayer Quick Answer"
+ answer="Steam lists Single-player, Online Co-op, and Online PvP. Split-screen, couch co-op, and crossplay are not confirmed. Controller comfort and party setup should be tested during refund rules."
+ intentRows={jumpKingQuestMultiplayerSearchIntent}
+ jumpLinks={jumpKingQuestMultiplayerJumpLinks}
+ />
+
+ <StatusPanel items={jumpKingQuestMultiplayerStatusItems} />
+
  <section className="prose-game">
- <h2>Confirmed Multiplayer Features</h2>
+ <h2 id="multiplayer-confirmed">Confirmed Multiplayer Features</h2>
  <ArticleImage
  src={jumpKingQuestImages.pvp}
  alt="JUMP KING QUEST official video frame showing online player pressure"
@@ -112,7 +126,7 @@ export default function JumpKingQuestMultiplayerControllerPage() {
  </div>
 
  <section className="prose-game">
- <h2>Solo, Co-op, and PvP: How to Choose</h2>
+ <h2 id="multiplayer-modes">Solo, Co-op, and PvP: How to Choose</h2>
  <ArticleImage
  src={jumpKingQuestImages.climb}
  alt="JUMP KING QUEST official video frame showing climbing route pressure"
@@ -128,7 +142,18 @@ export default function JumpKingQuestMultiplayerControllerPage() {
  </section>
 
  <section className="prose-game">
- <h2>Controller Checks Before a Long Climb</h2>
+ <h2 id="multiplayer-pvp">PvP, Interference, and Duel Expectations</h2>
+ <p>
+ Treat online PvP as chaos-first until your group understands the mode.
+ Duel framing and player interference are part of the store description,
+ so routes that feel safe in solo or co-op can become contested in PvP.
+ Decide on voice, party setup, and recovery rules before a long PvP
+ session, and refund if the experience does not match your tolerance.
+ </p>
+ </section>
+
+ <section className="prose-game">
+ <h2 id="multiplayer-controller">Controller Checks Before a Long Climb</h2>
  <ArticleImage
  src={jumpKingQuestImages.header}
  alt="JUMP KING QUEST controller and setup guide image"
@@ -142,6 +167,11 @@ export default function JumpKingQuestMultiplayerControllerPage() {
  <li>Keep keyboard and mouse ready if your controller layout feels awkward.</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Multiplayer Plan</h2>
+ <ActionTable rows={jumpKingQuestMultiplayerActionRows} />
+
+ <SourceCheckTable title="JUMP KING QUEST Multiplayer Sources" rows={jumpKingQuestMultiplayerSourceRows} />
  </JumpKingQuestArticle>
  );
 }

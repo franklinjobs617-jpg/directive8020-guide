@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { VoidlingBoundArticle } from '@/components/voidling-bound-article';
 import { createVoidlingBoundMetadata, voidlingBoundImages, voidlingEntries, voidlingGuideFaqs, voidlingRarities, voidlingSpecies } from '@/lib/voidling-bound';
+import { vbEvolutionActionRows, vbEvolutionJumpLinks, vbEvolutionSearchIntent, vbEvolutionSourceRows, vbEvolutionStatusItems } from '@/lib/voidling-bound';
 
 const title = 'Voidling Bound Evolution Guide: Trees, Rarity, Elements, Mutations and Ability Changes';
 const description =
@@ -20,7 +21,16 @@ export default function VoidlingBoundEvolutionGuidePage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Voidling Bound Evolution Quick Answer"
+ answer="Evolution is branching information, not an automatic upgrade ladder. Read branch first, name second, ability slot third, and the wiki for source detail. This guide stops at comparison logic."
+ intentRows={vbEvolutionSearchIntent}
+ jumpLinks={vbEvolutionJumpLinks}
+ />
+
+ <StatusPanel items={vbEvolutionStatusItems} />
+
+ <section className="prose-game" id="evolution-workflow">
  <h2>How Evolution Trees Are Structured</h2>
  <ArticleImage src={voidlingBoundImages.hero} alt="Voidling Bound evolution tree guide screenshot" caption="Each species has a family identity, two element branches, and many named evolutions across rarity tiers." />
  <p>
@@ -93,21 +103,37 @@ export default function VoidlingBoundEvolutionGuidePage() {
  </div>
  </section>
 
- <section className="prose-game">
- <h2>How to Compare Two Evolutions</h2>
- <ArticleImage src={voidlingBoundImages.screenshot3} alt="Voidling Bound comparing evolutions screenshot" caption="Good evolution comparison asks what changed: element, ability slot, perk, range, survival tool, or species role." />
+ <section className="prose-game" id="evolution-trees">
+ <h2>Mutation Trees and How to Read Them</h2>
  <p>
- Compare evolutions in four passes. First, check species. If two entries are from different species, they are solving different baseline combat problems. Second, check element. Element branch explains why a name sits in a particular path. Third, compare ability slots, especially Primary and Secondary, because those are the most visible combat changes in the parsed data. Fourth, read the summary and source link rather than assuming the name tells the whole story.
+ The wiki Species page is the source of truth for mutation tree structure. Each species has two branches, and each branch has its own element identity. The database turns those branches into a filterable list. The branch read takes a minute and is the single most useful thing a player can do before any evolution decision. Without it, name-level comparisons often mix creatures that solve different team problems.
  </p>
  <p>
- The database supports this workflow directly. Open{' '}
- <Link href="/games/voidling-bound/database">the database</Link>
- , filter by species, then filter by element or rarity. Add up to three entries to the comparison panel. If the comparison still does not answer the decision, the problem is likely not a data problem; it is a gameplay preference problem. At that point, use the beginner or attributes guide to decide what role you actually need.
- </p>
- <p>
- This page intentionally avoids "all best evolutions" claims. That content would require stable patch data, testing methodology, and matchup context. The current evidence supports structured comparison, not final ranking.
+ Mutation tree endpoints are not always the strongest entries. Some early branches already solve a role the team needs, and pushing deeper into a tree is only worth it if the new ability slots actually change the way the creature fights. The wiki describes perks added at the end of a tree; that is a useful signal, but it does not guarantee the entry is a final pick.
  </p>
  </section>
+
+ <section className="prose-game" id="evolution-changes">
+ <h2>What Evolution Actually Changes</h2>
+ <p>
+ Many evolutions keep some base abilities while changing element, primary attacks, perks, or branch identity. That is the working definition of "evolution" on a wiki snapshot. The honest comparison workflow is to look at what changed, not at the new name. If the Primary ability did not change, the creature may play similarly to its base. If the element changed, the team role may have shifted. If a perk was added, the late-game value may have changed even when the early-game kit looks the same.
+ </p>
+ <p>
+ The database supports this by exposing ability slot labels for every entry it can parse. Use those labels to compare what actually changed before forming an opinion.
+ </p>
+ </section>
+
+ <section className="prose-game" id="evolution-no-best">
+ <h2>Why This Guide Does Not Publish a Best Evolution</h2>
+ <p>
+ Universal best-evolution claims need stable balance and matchup data, not just a wiki snapshot. The current data supports structured comparison, comparison-panel decisions, and entry-level reading. It does not support a final ranking that survives every patch. Honest comparison beats manufactured authority, especially on a newly released game. Use the ActionTable below for the recommended evolution workflow, then use the database for entry-level decisions.
+ </p>
+ </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Evolution Plan</h2>
+ <ActionTable rows={vbEvolutionActionRows} />
+
+ <SourceCheckTable title="Voidling Bound Evolution Sources" rows={vbEvolutionSourceRows} />
  </VoidlingBoundArticle>
  );
 }

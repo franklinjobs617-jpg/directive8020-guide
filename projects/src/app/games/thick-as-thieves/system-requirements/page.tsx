@@ -1,8 +1,19 @@
 import { ArticleImage } from "@/components/article-media";
-import { BlufBox } from "@/components/guide-blocks";
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from "@/components/guide-blocks";
 import { ThickAsThievesArticle } from "@/components/thick-as-thieves-article";
 import {
  createThickAsThievesMetadata,
+ tatSpecActionRows,
+ tatSpecJumpLinks,
+ tatSpecSearchIntent,
+ tatSpecSourceRows,
+ tatSpecStatusItems,
  thickAsThievesImages,
  thickAsThievesSpecs,
  thickAsThievesSteamFeatureRows,
@@ -65,7 +76,16 @@ export default function ThickAsThievesSystemRequirementsPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Thick As Thieves System Requirements Quick Answer"
+ answer="Steam lists Windows 10 minimum with 12 GB RAM, GTX 1060 6GB, DirectX 12, 10 GB storage, and SSD required. Recommended tier is Windows 11, 16 GB RAM, and RTX 2070 8GB. Full controller support and Steam Cloud are listed."
+ intentRows={tatSpecSearchIntent}
+ jumpLinks={tatSpecJumpLinks}
+ />
+
+ <StatusPanel items={tatSpecStatusItems} />
+
+ <section id="minimum-and-recommended-specs" className="prose-game">
  <h2>Minimum and Recommended Specs</h2>
  <ArticleImage
  src={thickAsThievesImages.specs}
@@ -112,7 +132,7 @@ export default function ThickAsThievesSystemRequirementsPage() {
  </div>
 
  <section className="prose-game">
- <h2>Controller, Cloud, and Accessibility</h2>
+ <h2 id="controller-cloud-and-accessibility">Controller, Cloud, and Accessibility</h2>
  <ArticleImage
  src={thickAsThievesImages.screenshot3}
  alt="Thick As Thieves controller and Steam Cloud image"
@@ -154,7 +174,7 @@ export default function ThickAsThievesSystemRequirementsPage() {
  </div>
 
  <section className="prose-game">
- <h2>Launch PC Checklist</h2>
+ <h2 id="launch-pc-checklist">Launch PC Checklist</h2>
  <ArticleImage
  src={thickAsThievesImages.screenshot8}
  alt="Thick As Thieves PC launch checklist image"
@@ -170,6 +190,11 @@ export default function ThickAsThievesSystemRequirementsPage() {
  </li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Specs Plan</h2>
+ <ActionTable rows={tatSpecActionRows} />
+
+ <SourceCheckTable title="Thick As Thieves Specs Sources" rows={tatSpecSourceRows} />
  </ThickAsThievesArticle>
  );
 }

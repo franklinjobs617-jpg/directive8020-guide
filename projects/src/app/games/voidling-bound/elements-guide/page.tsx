@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { VoidlingBoundArticle } from '@/components/voidling-bound-article';
 import { createVoidlingBoundMetadata, voidlingBoundImages, voidlingElements, voidlingEntries, voidlingGuideFaqs } from '@/lib/voidling-bound';
+import { vbElementsActionRows, vbElementsJumpLinks, vbElementsSearchIntent, vbElementsSourceRows, vbElementsStatusItems } from '@/lib/voidling-bound';
 
 const title = 'Voidling Bound Elements Guide: Organic, Pyro, Cryo, Plasma, Cyber and Neutral';
 const description =
@@ -20,7 +21,16 @@ export default function VoidlingBoundElementsGuidePage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Voidling Bound Elements Quick Answer"
+ answer="Element is one filter on a wiki-derived database. Use species first, element second, ability slot third, and the wiki for source confirmation. This guide does not publish per-element best claims."
+ intentRows={vbElementsSearchIntent}
+ jumpLinks={vbElementsJumpLinks}
+ />
+
+ <StatusPanel items={vbElementsStatusItems} />
+
+ <section className="prose-game" id="elements-workflow">
  <h2>What Elements Do for Search</h2>
  <ArticleImage src={voidlingBoundImages.screenshot2} alt="Voidling Bound element comparison screenshot" caption="Element pages should help players narrow branch identity, not pretend every matchup is solved." />
  <p>
@@ -60,15 +70,40 @@ export default function VoidlingBoundElementsGuidePage() {
  </p>
  </section>
 
- <section className="prose-game">
- <h2>When an Element Page Should Become Its Own Guide</h2>
+ <section className="prose-game" id="elements-branches">
+ <h2>Branch Source and How It Shapes Element Identity</h2>
  <p>
- Separate element pages should not be created just because a label exists. They become useful when search data or player behavior proves a deeper task: “best Pyro Voidlings,?“Cryo evolution path,?“Organic status effect,?or a specific species plus element combination. Until that signal exists, one strong elements guide and a filterable database are better than six thin pages repeating the same definition.
+ The wiki Species page is the source of truth for branch identity. Each species has two mutation tree branches with different elements per the wiki. That means a Pyro label is not just a name. It tells the player which mutation branch a creature belongs to, which in turn tells the player which neighboring evolutions share that branch and which ability slot changes are expected at each step. Players who skip the branch read often end up comparing names that solve different team problems.
  </p>
  <p>
- The next split should come from evidence. If GSC starts showing impressions for a single element, that element can get a focused page with examples, species coverage, ability-slot patterns, and internal links to matching entries. If no element gets independent demand, this guide should stay consolidated and the database should carry the lookup workload.
+ The practical workflow is to open the wiki Species page first, confirm which branch a target element lives in, then come back to the database to filter by species and element. The branch read takes a minute and prevents hours of stale comparisons.
  </p>
  </section>
+
+ <section className="prose-game" id="elements-neutral">
+ <h2>Reading Neutral Without Assuming Weakness</h2>
+ <p>
+ A Neutral label in the parsed database means the row is not assigned to one of the branch elements in the source structure. It does not mean the entry is weak, bad, or off-role. The right way to read Neutral is as a structural data label that still needs ability text to be evaluated. If a Neutral entry has a Primary ability the player already knows how to use, it can still be a strong pick. If the same entry sits on a branch the player does not run, Neutral is just a name.
+ </p>
+ <p>
+ When two Neutral entries are compared, the same rules apply as for any other element. Read the ability slots, check the species role, and confirm the source wording on the wiki before drawing a conclusion.
+ </p>
+ </section>
+
+ <section className="prose-game" id="elements-no-best">
+ <h2>Why This Guide Does Not Publish a Per-Element Best</h2>
+ <p>
+ Best-per-element content is high risk on a wiki snapshot of a newly released game. The data is rich enough to explain branch structure, filter by element, and compare ability slots. It is not rich enough to claim that one Pyro, Cryo, or Plasma entry beats every other entry of the same element across all matchups. The honest answer is comparison logic plus a link to the database. The wrong answer is a manufactured ranking that survives until the next patch.
+ </p>
+ <p>
+ Use the ActionTable below for the recommended element workflow, then use the database for entry-level decisions.
+ </p>
+ </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Element Plan</h2>
+ <ActionTable rows={vbElementsActionRows} />
+
+ <SourceCheckTable title="Voidling Bound Elements Sources" rows={vbElementsSourceRows} />
  </VoidlingBoundArticle>
  );
 }

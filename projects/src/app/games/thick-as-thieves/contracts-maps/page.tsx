@@ -1,7 +1,22 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { ThickAsThievesArticle } from '@/components/thick-as-thieves-article';
-import { createThickAsThievesMetadata, thickAsThievesCampaignRows, thickAsThievesImages } from '@/lib/thick-as-thieves';
+import {
+ createThickAsThievesMetadata,
+ tatContractsActionRows,
+ tatContractsJumpLinks,
+ tatContractsSearchIntent,
+ tatContractsSourceRows,
+ tatContractsStatusItems,
+ thickAsThievesCampaignRows,
+ thickAsThievesImages,
+} from '@/lib/thick-as-thieves';
 
 const title = 'Thick As Thieves Contracts, Maps & Replayability Guide';
 const description =
@@ -58,7 +73,16 @@ export default function ThickAsThievesContractsPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Thick As Thieves Contracts & Maps Quick Answer"
+ answer="Official launch scope is 2 dynamic replayable maps, 16 missions, at least 4 hours, and 6 gear pieces. Replay value should come from real route variation, gear choices, and co-op planning, not from a fixed roadmap or extra content promises."
+ intentRows={tatContractsSearchIntent}
+ jumpLinks={tatContractsJumpLinks}
+ />
+
+ <StatusPanel items={tatContractsStatusItems} />
+
+ <section id="official-launch-scope" className="prose-game">
  <h2>Official Launch Scope</h2>
  <ArticleImage
  src={thickAsThievesImages.contracts}
@@ -87,7 +111,7 @@ export default function ThickAsThievesContractsPage() {
  </div>
 
  <section className="prose-game">
- <h2>How to Read Replayability</h2>
+ <h2 id="how-to-read-replayability">How to Read Replayability</h2>
  <ArticleImage
  src={thickAsThievesImages.screenshot7}
  alt="Thick As Thieves replayability guide image"
@@ -101,7 +125,7 @@ export default function ThickAsThievesContractsPage() {
  scope can still support meaningful replay.
  </p>
 
- <h2>What Needs Live Testing</h2>
+ <h2 id="what-needs-live-testing">What Needs Live Testing</h2>
  <ArticleImage
  src={thickAsThievesImages.screenshot8}
  alt="Thick As Thieves contract testing image"
@@ -114,6 +138,11 @@ export default function ThickAsThievesContractsPage() {
  <li>Whether the 6 gear pieces open genuinely different approaches.</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Contracts Plan</h2>
+ <ActionTable rows={tatContractsActionRows} />
+
+ <SourceCheckTable title="Thick As Thieves Contracts Sources" rows={tatContractsSourceRows} />
  </ThickAsThievesArticle>
  );
 }

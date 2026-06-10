@@ -1,11 +1,22 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { ZeroParadesArticle } from '@/components/zero-parades-article';
 import {
- createZeroParadesMetadata,
- zeroParadesImages,
- zeroParadesLaunchCheckRows,
- zeroParadesQuickFacts,
+  createZeroParadesMetadata,
+  zpReleaseActionRows,
+  zpReleaseJumpLinks,
+  zpReleaseSearchIntent,
+  zpReleaseSourceRows,
+  zpReleaseStatusItems,
+  zeroParadesImages,
+  zeroParadesLaunchCheckRows,
+  zeroParadesQuickFacts,
 } from '@/lib/zero-parades';
 
 const title = 'ZERO PARADES Release Date - PC Launch, PS5, Price & Languages';
@@ -65,17 +76,26 @@ export default function ZeroParadesReleaseDatePage() {
  heroAlt="ZERO PARADES release date and platform guide screenshot"
  faqs={faqs}
  >
- <BlufBox title="Release Answer">
- <p>
- <strong>ZERO PARADES: For Dead Spies is a May 21, 2026 PC launch.</strong>{' '}
- Steam, Epic Games Store, and GOG are the PC storefronts. The US price
- is $39.99, Steam Deck Verified support is listed, and PS5 is announced
- for 2026 without an exact date yet.
- </p>
- </BlufBox>
+      <BlufBox title="Release Answer">
+        <p>
+          <strong>ZERO PARADES: For Dead Spies is a May 21, 2026 PC launch.</strong>{' '}
+          Steam, Epic Games Store, and GOG are the PC storefronts. The US price
+          is $39.99, Steam Deck Verified support is listed, and PS5 is announced
+          for 2026 without an exact date yet.
+        </p>
+      </BlufBox>
 
- <section className="prose-game">
- <h2>Release and Platform Status</h2>
+      <SearchAnswerPanel
+        title="ZERO PARADES Release Date Quick Answer"
+        answer="May 21, 2026 on PC (Steam, Epic, GOG). US price is $39.99. PS5 is announced for 2026 with no exact date yet. Launch text support includes English, German, Russian, Simplified Chinese, and Spanish - Latin America."
+        intentRows={zpReleaseSearchIntent}
+        jumpLinks={zpReleaseJumpLinks}
+      />
+
+      <StatusPanel items={zpReleaseStatusItems} />
+
+      <section className="prose-game">
+        <h2 id="release-and-platform-status">Release and Platform Status</h2>
  <ArticleImage
  src={zeroParadesImages.screenshot1}
  alt="ZERO PARADES platform and release status screenshot"
@@ -141,16 +161,45 @@ export default function ZeroParadesReleaseDatePage() {
 
  <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
  <table className="w-full text-sm">
- <tbody>
- {zeroParadesLaunchCheckRows.map(([check, value]) => (
- <tr key={check} className="border-b border-border last:border-0">
- <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{check}</th>
- <td className="px-4 py-3 text-muted-foreground">{value}</td>
- </tr>
- ))}
- </tbody>
- </table>
- </div>
- </ZeroParadesArticle>
+        <tbody>
+          {zeroParadesLaunchCheckRows.map(([check, value]) => (
+            <tr key={check} className="border-b border-border last:border-0">
+              <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{check}</th>
+              <td className="px-4 py-3 text-muted-foreground">{value}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      </div>
+
+      <section className="prose-game">
+        <h2 id="localization-and-launch-languages">Localization and Launch Languages</h2>
+        <p>
+          English has full audio at launch, and the Steam language list
+          names English, German, Russian, Simplified Chinese, and
+          Spanish - Latin America as supported text languages. If you need
+          French, Italian, Japanese, Korean, Polish, Portuguese
+          (Brazilian), Traditional Chinese, or Turkish, those are
+          described as planned free updates later in 2026, not launch
+          content.
+        </p>
+        <p>
+          The honest framing is: launch coverage is narrower than a
+          typical AAA RPG, with a small set of major text languages plus
+          English audio. The planned free update path matters if you
+          play in one of the post-launch languages, but it is not a
+          launch promise. Check the Steam language list before buying
+          if text language is a hard requirement for you.
+        </p>
+      </section>
+
+      <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Release Plan</h2>
+      <ActionTable rows={zpReleaseActionRows} />
+
+      <SourceCheckTable
+        title="ZERO PARADES Release Sources"
+        rows={zpReleaseSourceRows}
+      />
+    </ZeroParadesArticle>
  );
 }

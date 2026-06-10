@@ -298,6 +298,560 @@ export const mechanicusIISourceRows = [
  },
 ];
 
+// Factions page depth exports
+export const m2FactionsActionRows = [
+  {
+    step: '1. Read the campaign fantasy before the meta',
+    doThis: 'Pick Adeptus Mechanicus for tech-priest Cognition decisions or Necrons for Dominion-based pressure plays. Stay with the side for at least several missions before judging the campaign.',
+    why: 'Both factions have distinct resource systems. Final best-faction claims are not safe during launch week, and learning one side first prevents shallow first impressions.',
+  },
+  {
+    step: '2. Judge units by role, not damage screenshots',
+    doThis: 'Evaluate each unit by leader safety, objective interaction, resource contribution, durability, and repeatable mission value before chasing tier-list rankings.',
+    why: 'Launch-window tier claims depend on patch version, difficulty, and campaign side. Role-based evaluation survives balance updates better than single-number rankings.',
+  },
+  {
+    step: '3. Track Leagues of Votann as story, not campaign',
+    doThis: 'If preview coverage mentions Votann, treat them as mission context and battlefield flavor. Do not plan a save around a third playable campaign.',
+    why: 'Current store copy presents only Adeptus Mechanicus and Necrons as playable campaigns. Votann lore matters, but it does not change the first-campaign choice.',
+  },
+  {
+    step: '4. Lock in a leader protection habit early',
+    doThis: 'Keep Magos Dominus Faustinius or Vargard Nefershah behind cover, away from open lanes, and supported by mobile units. Spend faction resources defensively when leader exposure is real.',
+    why: 'Leader loss is the most common campaign-failure pattern. Defensive resource spending is cheaper than restarting a late-campaign mission.',
+  },
+  {
+    step: '5. Test Space Marine allies as support, not as army',
+    doThis: 'Use Space Marine allies shown in preview coverage for specific tactical moments. Do not build a save expecting them to replace a primary roster.',
+    why: 'Ally appearances in battle context are not the same as a playable roster. Treat them as situational reinforcements, not as a third army identity.',
+  },
+] as const;
+
+export const m2FactionsStatusItems = [
+  { label: 'Playable campaigns', value: 'Adeptus Mechanicus and Necrons each have a distinct campaign per Steam store copy.', status: 'verified' as const },
+  { label: 'Adeptus leader', value: 'Steam names Magos Dominus Faustinius as the Adeptus Mechanicus commander.', status: 'verified' as const },
+  { label: 'Necron leader', value: 'Steam names Vargard Nefershah as the Necron campaign commander.', status: 'verified' as const },
+  { label: 'Leagues of Votann', value: 'Preview coverage says Votann appear in the story, not as a third playable campaign.', status: 'working' as const },
+  { label: 'Final best-faction call', value: 'Not safe during launch week. Wait for completed campaign data and balance patches.', status: 'needs-check' as const },
+  { label: 'Space Marine allies', value: 'Show up in battle context per previews. Do not treat as a third army.', status: 'working' as const },
+];
+
+export const m2FactionsSourceRows = [
+  {
+    claim: 'Both Adeptus Mechanicus and Necrons are playable with distinct campaigns',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: mechanicusIISteamUrl,
+    note: 'Use for the dual-campaign framing, leaders, and faction resource systems.',
+  },
+  {
+    claim: 'Magos Dominus Faustinius and Vargard Nefershah are named campaign leaders',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: mechanicusIISteamUrl,
+    note: 'Use for the central commander identity on each campaign side.',
+  },
+  {
+    claim: 'Leagues of Votann appear in the story, not as a playable third campaign',
+    source: 'Epic Games Store preview',
+    status: 'working' as const,
+    href: 'https://store.epicgames.com/en-US/blog/warhammer-40000-mechanicus-2-preview-leagues-of-votann',
+    note: 'Use as story and lore context, not as a campaign choice.',
+  },
+  {
+    claim: 'Player reports on faction balance and best units',
+    source: 'Reddit community discussions',
+    status: 'needs-check' as const,
+    href: 'https://www.reddit.com/search/?q=Warhammer%2040%2C000%3A%20Mechanicus%20II%20factions%20best',
+    note: 'Treat community tier chatter as patch-dependent, not as final canon.',
+  },
+  {
+    claim: 'Campaign tone, faction visuals, and presentation',
+    source: 'Official launch trailer on YouTube',
+    status: 'verified' as const,
+    href: 'https://www.youtube.com/watch?v=jYyGB6wFFxE',
+    note: 'Use for tone and presentation context, not for tier conclusions.',
+  },
+];
+
+export const m2FactionsSearchIntent = [
+  {
+    query: 'Mechanicus 2 factions',
+    answer: 'Steam lists two playable campaigns: Adeptus Mechanicus and Necrons. Choose by campaign fantasy and resource identity, not by launch-week tier chatter.',
+    href: '#faction-anchor',
+    label: 'Factions',
+  },
+  {
+    query: 'Mechanicus 2 best faction',
+    answer: 'Not safe to call at launch. Pick the side whose resource loop sounds more interesting and learn its economy before judging.',
+    href: '#faction-anchor',
+    label: 'Best faction',
+  },
+  {
+    query: 'Mechanicus 2 Leagues of Votann playable',
+    answer: 'Preview coverage says Votann appear in the story. They are not presented as a third playable campaign faction in current store copy.',
+    href: '#faction-anchor',
+    label: 'Votann',
+  },
+  {
+    query: 'Mechanicus 2 Necron campaign',
+    answer: 'Necrons follow Vargard Nefershah. The campaign emphasizes Dominion pressure and Reanimation Protocols rather than Cognition decisions.',
+    href: '#faction-anchor',
+    label: 'Necron',
+  },
+];
+
+export const m2FactionsJumpLinks = [
+  { href: '#faction-anchor', label: 'Faction anchor' },
+  { href: '#votann-status', label: 'Votann status' },
+  { href: '/games/mechanicus-ii/leaders-guide', label: 'Leaders guide' },
+  { href: '/games/mechanicus-ii/best-units-builds', label: 'Units and builds' },
+  { href: '/games/mechanicus-ii/beginner-guide', label: 'Beginner guide' },
+];
+
+// Is-it-worth-it page depth exports
+export const m2WorthItActionRows = [
+  {
+    step: '1. Decide whether Mixed reviews are a blocker',
+    doThis: 'Read recent Steam review text first. Decide whether performance, balance, UI clarity, or sequel-comparison complaints match what would actually stop you from enjoying the game.',
+    why: 'Mixed is a caution signal, not a verdict. Most launch-week complaints cluster around familiar strategy-game risks, not always the same one.',
+  },
+  {
+    step: '2. Confirm your platform path before buying',
+    doThis: 'PC buyers should check the Steam specs, achievements, cloud saves, and discount window. Console buyers should check PS5 and Xbox store pages for current performance reports.',
+    why: 'Each platform has a different launch path. PC has the most visible data; console buyers should not assume parity without checking.',
+  },
+  {
+    step: '3. Test Steam Deck expectations early',
+    doThis: 'Do not buy on Steam Deck as a primary platform. The official Steam FAQ and Steam Deck compatibility data list Mechanicus II as unsupported at launch.',
+    why: 'Unsupported status is not a recommendation. Handheld-first buyers should wait for clearer compatibility updates or broad player reports.',
+  },
+  {
+    step: '4. Match the sequel hook to your taste',
+    doThis: 'Buy now if the dual-campaign structure with defined Adeptus Mechanicus and Necron leaders is the main appeal. Wait if you need solved late-campaign routes or a finished best-build meta.',
+    why: 'The strongest new hook is dual campaigns and leader identity. The weakest part of launch is final best-unit confidence and broad balance data.',
+  },
+  {
+    step: '5. Use the refund window as a real test',
+    doThis: 'Treat the first mission as a refund-window test. Watch battle camera movement, menu readability, leader protection, and cover discipline before settling in.',
+    why: 'A turn-based tactics game can feel fine in a tutorial and rough in late-campaign fights. The first session should test the most painful mechanics, not only the easiest one.',
+  },
+] as const;
+
+export const m2WorthItStatusItems = [
+  { label: 'Steam user reviews', value: 'Mixed at the latest check. Read recent review text for performance, balance, and sequel-comparison concerns.', status: 'needs-check' as const },
+  { label: 'Steam Deck', value: 'Unsupported at launch per official FAQ and Steam Deck compatibility data.', status: 'verified' as const },
+  { label: 'Steam base price', value: '$39.99 US base price at the latest check.', status: 'verified' as const },
+  { label: 'Launch discount', value: '10% introductory offer listed on Steam, ending May 28, 2026.', status: 'verified' as const },
+  { label: 'Console versions', value: 'PS5 and Xbox Series X|S are part of the launch platform set.', status: 'verified' as const },
+  { label: 'Best fit', value: 'Players who like turn-based Warhammer tactics and dual-campaign identity.', status: 'working' as const },
+];
+
+export const m2WorthItSourceRows = [
+  {
+    claim: 'Mixed Steam user reviews at the latest check',
+    source: 'Steam store page',
+    status: 'needs-check' as const,
+    href: mechanicusIISteamUrl,
+    note: 'Treat the label as a launch signal only. Read recent text for what the complaints actually are.',
+  },
+  {
+    claim: 'Steam Deck listed as unsupported at launch',
+    source: 'Steam Community FAQ',
+    status: 'verified' as const,
+    href: 'https://steamcommunity.com/app/2532480/discussions/0/695376132937213076/',
+    note: 'Use as the safest Deck expectation for launch week.',
+  },
+  {
+    claim: 'Base price and introductory discount timing',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: mechanicusIISteamUrl,
+    note: 'Use for the $39.99 base price and the 10% discount window.',
+  },
+  {
+    claim: 'Console launch platform set',
+    source: 'Kasedo Games official site',
+    status: 'verified' as const,
+    href: mechanicusIIOfficialUrl,
+    note: 'Use for official product positioning across PS5, Xbox, and PC.',
+  },
+  {
+    claim: 'Player concerns about sequel identity and balance',
+    source: 'Reddit community discussions',
+    status: 'working' as const,
+    href: 'https://www.reddit.com/search/?q=Warhammer%2040%2C000%3A%20Mechanicus%20II%20worth%20it',
+    note: 'Use for themes of complaints, not for final balance verdicts.',
+  },
+];
+
+export const m2WorthItSearchIntent = [
+  {
+    query: 'Is Mechanicus 2 worth it',
+    answer: 'Worth considering if you want a new Warhammer 40K turn-based tactics game with dual campaigns. Wait if Steam Deck, broad review consensus, or solved late-campaign balance matters to you.',
+    href: '#worthit-anchor',
+    label: 'Worth it',
+  },
+  {
+    query: 'Mechanicus 2 Steam Deck',
+    answer: 'The official Steam FAQ and Steam Deck compatibility data list it as unsupported at launch. Handheld-first buyers should wait.',
+    href: '#worthit-anchor',
+    label: 'Steam Deck',
+  },
+  {
+    query: 'Mechanicus 2 Mixed reviews',
+    answer: 'Steam currently shows Mixed user reviews. Read recent review text for performance, UI, balance, and sequel-comparison concerns before deciding.',
+    href: '#worthit-anchor',
+    label: 'Reviews',
+  },
+  {
+    query: 'Mechanicus 2 launch discount',
+    answer: 'Steam lists a 10% introductory offer ending May 28, 2026. Base price is $39.99 US at the latest check.',
+    href: '#worthit-anchor',
+    label: 'Discount',
+  },
+];
+
+export const m2WorthItJumpLinks = [
+  { href: '#worthit-anchor', label: 'Buy or wait anchor' },
+  { href: '/games/mechanicus-ii/system-requirements', label: 'PC requirements' },
+  { href: '/games/mechanicus-ii/steam-deck-performance', label: 'Steam Deck status' },
+  { href: '/games/mechanicus-ii/factions', label: 'Faction choice' },
+  { href: '/games/mechanicus-ii/beginner-guide', label: 'Beginner guide' },
+];
+
+// Steam Deck performance page depth exports
+export const m2SteamDeckActionRows = [
+  {
+    step: '1. Do not buy on Steam Deck as a primary platform',
+    doThis: 'Treat Steam Deck as a non-target until Valve or the developer changes the compatibility label. The official Steam FAQ and Steam Deck compatibility data list Mechanicus II as unsupported at launch.',
+    why: 'Unsupported is not a personal review. It is the safest signal that handheld-first buyers should not rely on Deck as their main device for the campaign.',
+  },
+  {
+    step: '2. Test readability before committing on PC',
+    doThis: 'On PC, check text size, battle camera movement, menu legibility, and the clarity of cover, terrain, and objective markers in the first mission before settling into a long campaign.',
+    why: 'Turn-based tactics depends on readable UI and predictable camera movement. The official minimum spec proves the game runs, not that it stays comfortable for hours.',
+  },
+  {
+    step: '3. Run the refund-window first session on real hardware',
+    doThis: 'Use the first 30 minutes on the actual machine you plan to play on. Watch for shader stutter, asset load delays, frame pacing during effects-heavy fights, and late-map navigation responsiveness.',
+    why: 'A tutorial mission is not a real test. Effects-heavy fights and late-campaign turns expose the same problems that refund windows can no longer help.',
+  },
+  {
+    step: '4. Check controller and Steam Cloud behavior',
+    doThis: 'Test Xbox controller button labels, in-game menu navigation, Steam Cloud save sync, and account-region differences before assuming your usual setup will work the same on the second device.',
+    why: 'Steam lists Xbox controller support and Steam Cloud, but those labels do not prove label clarity, save reliability, or region parity. Test on the real device, not on the assumption that the feature exists.',
+  },
+  {
+    step: '5. Plan for late-campaign slowdown, not only first mission',
+    doThis: 'If your hardware is near the minimum tier, plan a Campaign save that you can pause, restart, and observe. Watch for menu responsiveness, faction-resource screen lag, and battle camera comfort in longer fights.',
+    why: 'Tactics games often feel fine in the tutorial and degrade as battles, effects, and UI states get busier. Treat first-session performance as a baseline, not as a promise.',
+  },
+] as const;
+
+export const m2SteamDeckStatusItems = [
+  { label: 'Steam Deck status', value: 'Unsupported at launch per official Steam FAQ and Steam Deck compatibility data.', status: 'verified' as const },
+  { label: 'Official minimum PC', value: 'Windows 10 64-bit, GTX 1660 6GB / RX 5600 XT 6GB, 12 GB RAM, DirectX 12, 25 GB storage.', status: 'verified' as const },
+  { label: 'Official recommended PC', value: 'Windows 10 64-bit, RTX 2070 8GB / RX 6600 XT 8GB, 16 GB RAM, DirectX 12, 25 GB storage.', status: 'verified' as const },
+  { label: 'Controller support', value: 'Steam lists Xbox controller support. Handheld players should still check labels and menu comfort.', status: 'needs-check' as const },
+  { label: 'Steam Cloud', value: 'Listed on the Steam store. Confirm save sync works on your real device before swapping machines.', status: 'working' as const },
+  { label: 'First-session comfort', value: 'Depends on hardware tier, late-campaign fights, and personal sensitivity to camera and UI.', status: 'needs-check' as const },
+];
+
+export const m2SteamDeckSourceRows = [
+  {
+    claim: 'Steam Deck listed as unsupported at launch',
+    source: 'Steam Community FAQ',
+    status: 'verified' as const,
+    href: 'https://steamcommunity.com/app/2532480/discussions/0/695376132937213076/',
+    note: 'Use as the launch-week Deck expectation.',
+  },
+  {
+    claim: 'Official minimum and recommended PC requirements',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: mechanicusIISteamUrl,
+    note: 'Use for CPU, GPU, RAM, DirectX 12, and storage.',
+  },
+  {
+    claim: 'Xbox controller and Steam Cloud feature labels',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: mechanicusIISteamUrl,
+    note: 'Use for the feature inventory, then test on the real device.',
+  },
+  {
+    claim: 'Late-campaign performance reports from players',
+    source: 'Reddit community discussions',
+    status: 'working' as const,
+    href: 'https://www.reddit.com/search/?q=Warhammer%2040%2C000%3A%20Mechanicus%20II%20performance',
+    note: 'Use to confirm launch-week stutter and frame pacing patterns.',
+  },
+  {
+    claim: 'Official presentation and battle visuals',
+    source: 'Official launch trailer on YouTube',
+    status: 'verified' as const,
+    href: 'https://www.youtube.com/watch?v=jYyGB6wFFxE',
+    note: 'Use for visual context, not for performance claims.',
+  },
+];
+
+export const m2SteamDeckSearchIntent = [
+  {
+    query: 'Mechanicus 2 Steam Deck',
+    answer: 'Unsupported at launch per the official Steam FAQ and Steam Deck compatibility data. Handheld-first buyers should wait for clearer reports or a label change.',
+    href: '#steamdeck-anchor',
+    label: 'Steam Deck',
+  },
+  {
+    query: 'Mechanicus 2 PC requirements',
+    answer: 'Minimum is GTX 1660 6GB / RX 5600 XT 6GB with 12 GB RAM. Recommended is RTX 2070 8GB / RX 6600 XT 8GB with 16 GB RAM. Both list DirectX 12 and 25 GB storage.',
+    href: '#steamdeck-anchor',
+    label: 'PC specs',
+  },
+  {
+    query: 'Mechanicus 2 controller support',
+    answer: 'Steam lists Xbox controller support. Handheld players should still test button labels and menu navigation before committing to a long campaign.',
+    href: '#steamdeck-anchor',
+    label: 'Controller',
+  },
+  {
+    query: 'Mechanicus 2 first session test',
+    answer: 'Use the refund window to test text size, battle camera, load times, and frame pacing during effects-heavy fights before settling in.',
+    href: '#steamdeck-anchor',
+    label: 'First session',
+  },
+];
+
+export const m2SteamDeckJumpLinks = [
+  { href: '#steamdeck-anchor', label: 'Steam Deck anchor' },
+  { href: '/games/mechanicus-ii/system-requirements', label: 'PC requirements' },
+  { href: '/games/mechanicus-ii/is-it-worth-it', label: 'Is it worth it' },
+  { href: '/games/mechanicus-ii/factions', label: 'Faction choice' },
+  { href: '/games/mechanicus-ii/beginner-guide', label: 'Beginner guide' },
+];
+
+// System requirements page depth exports
+export const m2SpecActionRows = [
+  {
+    step: '1. Compare your hardware to the official PC tier',
+    doThis: 'Match your CPU, GPU, RAM, DirectX 12 support, and 25 GB free storage against the Steam minimum and recommended tiers before buying on PC.',
+    why: 'Official specs are the official floor. Anything below minimum is not covered by the published requirements, and minimum-tier hardware is not covered by the recommended promises.',
+  },
+  {
+    step: '2. Plan a refund-window first mission',
+    doThis: 'Use the first 30 minutes to check battle camera movement, shader or asset stutter, menu responsiveness, load times, and ultrawide UI behavior before assuming the full campaign will feel the same.',
+    why: 'A tutorial mission hides the most painful problems. Effects-heavy tactical fights, environmental hazards, and late-map navigation expose the same issues that refund windows can no longer help.',
+  },
+  {
+    step: '3. Check storage and shader compilation paths',
+    doThis: 'Confirm you have at least 25 GB free on the target drive. Expect shader compilation stutter on the first long session even on recommended hardware.',
+    why: 'Shader pre-compile behavior is platform-dependent. A small amount of launch-week stutter is not a sign of failure, but repeated hitches after the first session can be.',
+  },
+  {
+    step: '4. Read laptop thermals and ultrawide caveats',
+    doThis: 'Laptop buyers should cap framerate, test on AC power, and watch fan and thermal behavior. Ultrawide owners should verify UI scaling, safe-area text, and the campaign map layout.',
+    why: 'A tactics game depends on readable UI, not just on average framerate. Thermal throttling and ultrawide UI bugs both feel like game problems until they are isolated to the device.',
+  },
+  {
+    step: '5. Plan for late-campaign comfort, not only launch',
+    doThis: 'Avoid judging performance by the first mission alone. Watch for late-map menu lag, faction-resource screen responsiveness, and battle camera comfort in longer fights before settling in.',
+    why: 'Late-campaign state is busier than early missions. Treat the first session as a baseline, and check the most painful moments before assuming the full campaign will feel the same.',
+  },
+] as const;
+
+export const m2SpecStatusItems = [
+  { label: 'OS', value: 'Windows 10 64-bit on both minimum and recommended tiers.', status: 'verified' as const },
+  { label: 'Processor', value: 'Intel Core i7-7700 / Ryzen 5 1600 minimum; Intel Core i5-9600K / Ryzen 5 3600 recommended.', status: 'verified' as const },
+  { label: 'Memory', value: '12 GB RAM minimum; 16 GB RAM recommended.', status: 'verified' as const },
+  { label: 'Graphics', value: 'GTX 1660 6GB / RX 5600 XT 6GB minimum; RTX 2070 8GB / RX 6600 XT 8GB recommended.', status: 'verified' as const },
+  { label: 'DirectX', value: 'Version 12 required for both minimum and recommended.', status: 'verified' as const },
+  { label: 'Storage', value: '25 GB available space on both tiers.', status: 'verified' as const },
+];
+
+export const m2SpecSourceRows = [
+  {
+    claim: 'Official minimum and recommended PC requirements',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: mechanicusIISteamUrl,
+    note: 'Use for OS, CPU, GPU, RAM, DirectX, and storage tiers.',
+  },
+  {
+    claim: 'DirectX 12 requirement on both tiers',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: mechanicusIISteamUrl,
+    note: 'Use to confirm the DirectX 12 line for the minimum tier.',
+  },
+  {
+    claim: 'Real-world performance reports for similar hardware',
+    source: 'Reddit community discussions',
+    status: 'needs-check' as const,
+    href: 'https://www.reddit.com/search/?q=Warhammer%2040%2C000%3A%20Mechanicus%20II%20performance%20spec',
+    note: 'Use to judge near-minimum hardware, shader stutter, and ultrawide behavior.',
+  },
+  {
+    claim: 'Game visuals and battle presentation',
+    source: 'Official launch trailer on YouTube',
+    status: 'verified' as const,
+    href: 'https://www.youtube.com/watch?v=jYyGB6wFFxE',
+    note: 'Use for visual context, not for performance guarantees.',
+  },
+  {
+    claim: 'Steam Deck status vs PC tier',
+    source: 'Steam Community FAQ',
+    status: 'verified' as const,
+    href: 'https://steamcommunity.com/app/2532480/discussions/0/695376132937213076/',
+    note: 'Use to compare handheld expectations against the PC spec tier.',
+  },
+];
+
+export const m2SpecSearchIntent = [
+  {
+    query: 'Mechanicus 2 system requirements',
+    answer: 'Minimum is i7-7700 / Ryzen 5 1600, GTX 1660 6GB / RX 5600 XT 6GB, 12 GB RAM, DirectX 12, 25 GB storage. Recommended moves to i5-9600K / Ryzen 5 3600, RTX 2070 8GB / RX 6600 XT 8GB, 16 GB RAM.',
+    href: '#spec-anchor',
+    label: 'PC specs',
+  },
+  {
+    query: 'Mechanicus 2 DirectX 12',
+    answer: 'Yes. Both minimum and recommended tiers list DirectX 12 as the graphics API.',
+    href: '#spec-anchor',
+    label: 'DirectX 12',
+  },
+  {
+    query: 'Mechanicus 2 storage size',
+    answer: 'Steam lists 25 GB of available storage on both tiers.',
+    href: '#spec-anchor',
+    label: 'Storage',
+  },
+  {
+    query: 'Mechanicus 2 RAM requirement',
+    answer: '12 GB minimum and 16 GB recommended per the official Steam listing.',
+    href: '#spec-anchor',
+    label: 'RAM',
+  },
+];
+
+export const m2SpecJumpLinks = [
+  { href: '#spec-anchor', label: 'Spec anchor' },
+  { href: '/games/mechanicus-ii/steam-deck-performance', label: 'Steam Deck status' },
+  { href: '/games/mechanicus-ii/is-it-worth-it', label: 'Is it worth it' },
+  { href: '/games/mechanicus-ii/beginner-guide', label: 'Beginner guide' },
+];
+
+// Walkthrough page depth exports
+export const m2WalkthroughActionRows = [
+  {
+    step: '1. Read the objective, then check the tiles',
+    doThis: 'When a mission appears stuck, re-read the objective text first, then move a suitable unit close to any green console, highlighted tile, or marker before assuming the mission is bugged.',
+    why: 'Most early mission problems come from missing the interaction range or sending the wrong unit. A quick re-read and a movement check solves the majority of stuck-mission cases.',
+  },
+  {
+    step: '2. Protect the named leader as a fail condition',
+    doThis: 'Treat Magos Dominus Faustinius or Vargard Nefershah as mission-critical until the mission proves otherwise. Keep them behind cover and away from open lanes.',
+    why: 'Leader loss is the most common campaign-failure pattern. Spending faction resources defensively is usually cheaper than restarting a late-campaign mission.',
+  },
+  {
+    step: '3. Watch faction resources before the next enemy turn',
+    doThis: 'On the Adeptus side, watch Cognition flow. On the Necron side, watch Dominion pressure. Do not spend both your action economy and your faction resource on the same turn.',
+    why: 'Resource spending decisions matter more in the late turns than in the early turns. Running out of either economy makes the next enemy activation much harder to survive.',
+  },
+  {
+    step: '4. Record failures by cause, not by feel',
+    doThis: 'After a failed mission, write down whether the loss came from leader exposure, resource spending, turn order, objective misunderstanding, or enemy reinforcements.',
+    why: 'Causal notes turn the next attempt into a specific fix. Vague notes lead to repeating the same mistake with a different squad.',
+  },
+  {
+    step: '5. Use spoiler-light routes until more data exists',
+    doThis: 'Treat this page as a launch-window campaign flow guide, not as a final mission script. Use role-based unit judgment and objective reading until completed campaign data becomes reliable.',
+    why: 'Full mission-by-mission walkthroughs are not safe during launch week. Spoiler-light guidance gives you the read-the-objective habit without pretending the meta is solved.',
+  },
+] as const;
+
+export const m2WalkthroughStatusItems = [
+  { label: 'Walkthrough scope', value: 'Spoiler-light launch guidance for objective reading, leader safety, and progression problems. Not a full mission script.', status: 'verified' as const },
+  { label: 'Green console or tile', value: 'Treat as an objective or interaction clue. Move a suitable unit close enough to test interaction range.', status: 'verified' as const },
+  { label: 'Leader exposure', value: 'Treat leader safety as a fail condition until the mission proves otherwise. Spend resources defensively when the next activation is dangerous.', status: 'working' as const },
+  { label: 'Replayability', value: 'Expect story-driven missions and gated campaign steps rather than a fully random conquest layer.', status: 'needs-check' as const },
+  { label: 'Final best-build call', value: 'Not safe during launch week. Use role-based guidance until completed campaign data and patch context are stable.', status: 'needs-check' as const },
+  { label: 'Stuck objective check', value: 'Re-read the objective, test interaction range, confirm leader or specialist is alive, and check whether a specific unit is required.', status: 'working' as const },
+];
+
+export const m2WalkthroughSourceRows = [
+  {
+    claim: 'Campaign structure and named leaders',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: mechanicusIISteamUrl,
+    note: 'Use for the dual-campaign setup, leaders, and faction resource systems.',
+  },
+  {
+    claim: 'Official gameplay and objective logic',
+    source: 'Official launch trailer on YouTube',
+    status: 'verified' as const,
+    href: 'https://www.youtube.com/watch?v=jYyGB6wFFxE',
+    note: 'Use for battle pacing, mission flow, and visual context, not for final routes.',
+  },
+  {
+    claim: 'Player reports on stuck objectives and leader safety',
+    source: 'Reddit community discussions',
+    status: 'working' as const,
+    href: 'https://www.reddit.com/search/?q=Warhammer%2040%2C000%3A%20Mechanicus%20II%20walkthrough',
+    note: 'Use for common stuck-mission patterns, not as final mission scripts.',
+  },
+  {
+    claim: 'Faction resource and unit system framing',
+    source: 'Kasedo Games official site',
+    status: 'verified' as const,
+    href: mechanicusIIOfficialUrl,
+    note: 'Use as the basis for Cognition vs Dominion, leader identity, and tactical context.',
+  },
+  {
+    claim: 'Steam Deck context for handheld players',
+    source: 'Steam Community FAQ',
+    status: 'verified' as const,
+    href: 'https://steamcommunity.com/app/2532480/discussions/0/695376132937213076/',
+    note: 'Use to remind handheld players that the game is unsupported at launch.',
+  },
+];
+
+export const m2WalkthroughSearchIntent = [
+  {
+    query: 'Mechanicus 2 walkthrough',
+    answer: 'A spoiler-light launch walkthrough for objective reading, leader safety, green console checks, and progression problems. Not a final mission script.',
+    href: '#walkthrough-anchor',
+    label: 'Walkthrough',
+  },
+  {
+    query: 'Mechanicus 2 stuck objective',
+    answer: 'Re-read the objective, move a unit near any green console or tile, and check whether a living leader or specialist is required to trigger the next step.',
+    href: '#walkthrough-anchor',
+    label: 'Stuck objective',
+  },
+  {
+    query: 'Mechanicus 2 green console',
+    answer: 'Treat green consoles and highlighted tiles as objective clues. Move a suitable unit close enough to test interaction range before assuming the mission is bugged.',
+    href: '#walkthrough-anchor',
+    label: 'Green console',
+  },
+  {
+    query: 'Mechanicus 2 replay missions',
+    answer: 'Expect story-driven missions and gated campaign steps. Replay rules should be confirmed in your own save rather than assumed from launch copy.',
+    href: '#walkthrough-anchor',
+    label: 'Replay',
+  },
+];
+
+export const m2WalkthroughJumpLinks = [
+  { href: '#walkthrough-anchor', label: 'Walkthrough anchor' },
+  { href: '/games/mechanicus-ii/beginner-guide', label: 'Beginner guide' },
+  { href: '/games/mechanicus-ii/factions', label: 'Faction choice' },
+  { href: '/games/mechanicus-ii/steam-deck-performance', label: 'Performance' },
+  { href: '/games/mechanicus-ii/steam-deck-performance', label: 'Steam Deck status' },
+];
+
 export const mechanicusIIRelatedGuides: GameGuideLink[] = [
  {
  title: 'Mechanicus II Guide Hub',

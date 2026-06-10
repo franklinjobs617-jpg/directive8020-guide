@@ -1,9 +1,20 @@
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { ZeroParadesArticle } from '@/components/zero-parades-article';
 import {
- createZeroParadesMetadata,
- zeroParadesImages,
+  createZeroParadesMetadata,
+  zpWalkthroughActionRows,
+  zpWalkthroughJumpLinks,
+  zpWalkthroughSearchIntent,
+  zpWalkthroughSourceRows,
+  zpWalkthroughStatusItems,
+  zeroParadesImages,
 } from '@/lib/zero-parades';
 
 const title = 'ZERO PARADES Walkthrough - All Assignments, Choices & Endings';
@@ -72,18 +83,27 @@ export default function ZeroParadesWalkthroughPage() {
  heroAlt="ZERO PARADES walkthrough guide screenshot"
  faqs={faqs}
  >
- <BlufBox title="Walkthrough Answer">
- <p>
- <strong>ZERO PARADES is structured around espionage assignments with
- branching routes.</strong> Each assignment can be approached through
- different skills, Conditioning choices, and dialogue decisions. This
- walkthrough covers progression structure, key decision points, and
- missable content. Use the table of contents to jump to what you need.
- </p>
- </BlufBox>
+      <BlufBox title="Walkthrough Answer">
+        <p>
+          <strong>ZERO PARADES is structured around espionage assignments with
+          branching routes.</strong> Each assignment can be approached through
+          different skills, Conditioning choices, and dialogue decisions. This
+          walkthrough covers progression structure, key decision points, and
+          missable content. Use the table of contents to jump to what you need.
+        </p>
+      </BlufBox>
 
- <section className="prose-game">
- <h2>How ZERO PARADES Progression Works</h2>
+      <SearchAnswerPanel
+        title="ZERO PARADES Walkthrough Quick Answer"
+        answer="The game is structured around assignments, not chapters. Save before every major conversation, match your approach to your build, and watch for time-sensitive events before resting or moving between areas. Multiple endings reward different builds."
+        intentRows={zpWalkthroughSearchIntent}
+        jumpLinks={zpWalkthroughJumpLinks}
+      />
+
+      <StatusPanel items={zpWalkthroughStatusItems} />
+
+      <section className="prose-game">
+        <h2 id="how-zero-parades-progression-works">How ZERO PARADES Progression Works</h2>
  <ArticleImage
  src={zeroParadesImages.screenshot1}
  alt="ZERO PARADES progression structure screenshot"
@@ -237,15 +257,45 @@ export default function ZeroParadesWalkthroughPage() {
  alt="ZERO PARADES endings and replay value screenshot"
  caption="Multiple endings reward different builds and decision patterns. A second playthrough with a different archetype reveals entirely new routes."
  />
- <p>
- ZERO PARADES has multiple endings determined by your accumulated
- choices, skill investment, Conditioning state, and faction
- relationships. A Careful Investigator playthrough will see different
- outcomes than a Forceful Operative or Unstable Wildcard run. The
- game is designed for replay value: each build reveals different
- information and opens different routes through the same assignments.
- </p>
- </section>
- </ZeroParadesArticle>
+        <p>
+          ZERO PARADES has multiple endings determined by your accumulated
+          choices, skill investment, Conditioning state, and faction
+          relationships. A Careful Investigator playthrough will see different
+          outcomes than a Forceful Operative or Unstable Wildcard run. The
+          game is designed for replay value: each build reveals different
+          information and opens different routes through the same assignments.
+        </p>
+      </section>
+
+      <section className="prose-game">
+        <h2 id="save-anchor-points">Save Anchor Points for Long Runs</h2>
+        <p>
+          The most common walkthrough mistake is treating Steam Save
+          Anytime as a substitute for save discipline. Save Anytime is a
+          safety net, not a strategy. The reliable approach is to lock
+          in saves at predictable anchor points: before a new
+          assignment starts, before a faction meeting, before accepting
+          a Conditioning change, and before resting or moving between
+          areas.
+        </p>
+        <p>
+          A clean save chain looks like: assignment entry, briefing
+          review, first dialogue, second dialogue, decision point,
+          resolution. Each anchor is a recovery point. If a later
+          dialogue or Conditioning change produces a bad outcome, you
+          can rewind to the closest anchor without losing hours of
+          progress. The walkthrough works best when the player can
+          experiment without restart cost.
+        </p>
+      </section>
+
+      <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Walkthrough Plan</h2>
+      <ActionTable rows={zpWalkthroughActionRows} />
+
+      <SourceCheckTable
+        title="ZERO PARADES Walkthrough Sources"
+        rows={zpWalkthroughSourceRows}
+      />
+    </ZeroParadesArticle>
  );
 }

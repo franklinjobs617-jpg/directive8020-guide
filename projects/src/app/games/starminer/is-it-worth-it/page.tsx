@@ -1,11 +1,22 @@
 import Link from "next/link";
 import { StarminerArticle } from "@/components/starminer-article";
 import { ArticleImage } from "@/components/article-media";
-import { BlufBox } from "@/components/guide-blocks";
 import {
- createStarminerMetadata,
- starminerImages,
- starminerWorthRows,
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from "@/components/guide-blocks";
+import {
+  createStarminerMetadata,
+  starminerImages,
+  starminerWorthRows,
+  smWorthItActionRows,
+  smWorthItJumpLinks,
+  smWorthItSearchIntent,
+  smWorthItSourceRows,
+  smWorthItStatusItems,
 } from "@/lib/starminer";
 
 const title = "Is Starminer Worth It? Early Access Buying Advice, Fit, Risks & Who Should Wait";
@@ -81,7 +92,16 @@ export default function StarminerWorthItPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Is Starminer Worth It? Quick Answer"
+ answer="Worth considering for systems-focused solo builders. Wait if your decision depends on price, user reviews, recommended specs, Steam Deck support, multiplayer, modding, or community blueprint sharing. Plan a small Campaign save before committing to a long build."
+ intentRows={smWorthItSearchIntent}
+ jumpLinks={smWorthItJumpLinks}
+ />
+
+ <StatusPanel items={smWorthItStatusItems} />
+
+ <section id="worthit-anchor" className="prose-game">
  <h2>Who Starminer Fits</h2>
  <ArticleImage
  src={starminerImages.logistics}
@@ -163,6 +183,11 @@ export default function StarminerWorthItPage() {
  a confusing build experiment.
  </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Buy-or-Wait Plan</h2>
+ <ActionTable rows={smWorthItActionRows} />
+
+ <SourceCheckTable title="Starminer Worth-It Sources" rows={smWorthItSourceRows} />
  </StarminerArticle>
  );
 }

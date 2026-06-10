@@ -1,9 +1,14 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { JumpKingQuestArticle } from '@/components/jump-king-quest-article';
 import {
  createJumpKingQuestMetadata,
  jumpKingQuestImages,
+ jumpKingQuestWorthItActionRows,
+ jumpKingQuestWorthItJumpLinks,
+ jumpKingQuestWorthItSearchIntent,
+ jumpKingQuestWorthItSourceRows,
+ jumpKingQuestWorthItStatusItems,
  jumpKingQuestWorthRows,
 } from '@/lib/jump-king-quest';
 
@@ -68,8 +73,17 @@ export default function JumpKingQuestWorthItPage() {
  </p>
  </BlufBox>
 
+ <SearchAnswerPanel
+ title="JUMP KING QUEST Worth It Quick Answer"
+ answer="Buy now if you want hard platforming with combat, exploration, online co-op, and online PvP. Wait if you need a pure Jump King 1 climb, settled balance, verified controller comfort, or a route wiki."
+ intentRows={jumpKingQuestWorthItSearchIntent}
+ jumpLinks={jumpKingQuestWorthItJumpLinks}
+ />
+
+ <StatusPanel items={jumpKingQuestWorthItStatusItems} />
+
  <section className="prose-game">
- <h2>Buy Now or Wait</h2>
+ <h2 id="worth-it-fit">Buy Now or Wait</h2>
  <ArticleImage
  src={jumpKingQuestImages.combat}
  alt="JUMP KING QUEST official video frame showing combat and platforming pressure"
@@ -105,7 +119,7 @@ export default function JumpKingQuestWorthItPage() {
  </div>
 
  <section className="prose-game">
- <h2>Who This Fits Best</h2>
+ <h2 id="worth-it-reviews">Who This Fits Best</h2>
  <ArticleImage
  src={jumpKingQuestImages.coop}
  alt="JUMP KING QUEST official video frame showing online co-op context"
@@ -121,7 +135,7 @@ export default function JumpKingQuestWorthItPage() {
  </section>
 
  <section className="prose-game">
- <h2>Who Should Wait</h2>
+ <h2 id="worth-it-coop">Who Should Wait</h2>
  <ArticleImage
  src={jumpKingQuestImages.phantom}
  alt="JUMP KING QUEST Phantom Update buying advice image"
@@ -136,6 +150,11 @@ export default function JumpKingQuestWorthItPage() {
  difficult movement and early community discovery.
  </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Buying Plan</h2>
+ <ActionTable rows={jumpKingQuestWorthItActionRows} />
+
+ <SourceCheckTable title="JUMP KING QUEST Worth It Sources" rows={jumpKingQuestWorthItSourceRows} />
  </JumpKingQuestArticle>
  );
 }

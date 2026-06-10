@@ -1,10 +1,21 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { FirstLightArticle } from '@/components/007-first-light-article';
 import {
  createFirstLightMetadata,
  firstLightImages,
+ firstLightSpecActionRows,
+ firstLightSpecJumpLinks,
  firstLightSpecRows,
+ firstLightSpecSearchIntent,
+ firstLightSpecSourceRows,
+ firstLightSpecStatusItems,
 } from '@/lib/007-first-light';
 
 const title = '007 First Light System Requirements and PC Specs';
@@ -70,7 +81,16 @@ export default function FirstLightSystemRequirementsPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="007 First Light System Requirements Quick Answer"
+ answer="Minimum is Windows 10/11, i5-9500 or Ryzen 5 3500, 16 GB RAM, GTX 1660 or RX 5700, 80 GB SSD. Recommended moves to i5-13500, Ryzen 5 7600, RTX 3060 Ti or RX 6700 XT. Steam Deck is unverified, DLSS 4.5 is at launch, and path tracing is Summer 2026."
+ intentRows={firstLightSpecSearchIntent}
+ jumpLinks={firstLightSpecJumpLinks}
+ />
+
+ <StatusPanel items={firstLightSpecStatusItems} />
+
+ <section id="specs" className="prose-game">
  <h2>Minimum and Recommended Specs</h2>
  <ArticleImage
  src={firstLightImages.background}
@@ -100,7 +120,7 @@ export default function FirstLightSystemRequirementsPage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="performance" className="prose-game">
  <h2>Launch Performance Checks</h2>
  <p>
  Specs do not guarantee smooth performance in every mission. During
@@ -120,15 +140,35 @@ export default function FirstLightSystemRequirementsPage() {
  frame pacing before committing past the refund window.
  </p>
 
- <h2>DLSS, Path Tracing, and Future Updates</h2>
+ <h2 id="deck">If You Plan to Play on Steam Deck vs If You Are on Desktop</h2>
  <p>
- Steam news says launch PC features include uncapped framerate, NVIDIA
- DLSS 4.5 Super Resolution, and DLSS Dynamic Multi Frame Generation.
- It also says path tracing and DLSS Ray Reconstruction are planned for
- Summer 2026, so do not expect those features to be part of the first
- launch-day visual baseline.
+ If you plan to play on Steam Deck, treat the device as unverified:
+ expect to test low settings and upscaling inside the refund window
+ and avoid assuming the listed minimum spec translates to smooth
+ handheld play. If you are on a desktop that meets the recommended
+ tier, focus on DLSS or FSR presets, driver updates, and frame pacing
+ in dense stealth and driving sections instead of worrying about
+ handheld behavior. The right baseline depends on which platform you
+ actually plan to use, not on the spec sheet alone.
+ </p>
+
+ <h2 id="dlss">If DLSS Matters to You vs If You Prefer Native Resolution</h2>
+ <p>
+ If DLSS matters to you, treat the launch DLSS 4.5 Super Resolution
+ and DLSS Dynamic Multi Frame Generation as real launch features,
+ but do not assume path tracing or DLSS Ray Reconstruction is
+ available on day one; those are planned for Summer 2026. If you
+ prefer native resolution, plan for higher GPU pressure and verify
+ your card against the recommended tier rather than the minimum
+ tier. In both cases, use the refund window to confirm the visual
+ baseline on your own setup before settling in.
  </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Spec Plan</h2>
+ <ActionTable rows={firstLightSpecActionRows} />
+
+ <SourceCheckTable title="007 First Light Spec Sources" rows={firstLightSpecSourceRows} />
  </FirstLightArticle>
  );
 }

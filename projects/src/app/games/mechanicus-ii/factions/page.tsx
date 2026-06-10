@@ -1,13 +1,24 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { MechanicusIIArticle } from '@/components/mechanicus-ii-article';
 import {
- createMechanicusIIMetadata,
- mechanicusIIBuildDirectionRows,
- mechanicusIIFactionComparisonRows,
- mechanicusIIFactionRows,
- mechanicusIIImages,
- mechanicusIIUnitRoleRows,
+  createMechanicusIIMetadata,
+  mechanicusIIBuildDirectionRows,
+  mechanicusIIFactionComparisonRows,
+  mechanicusIIFactionRows,
+  mechanicusIIImages,
+  mechanicusIIUnitRoleRows,
+  m2FactionsActionRows,
+  m2FactionsJumpLinks,
+  m2FactionsSearchIntent,
+  m2FactionsSourceRows,
+  m2FactionsStatusItems,
 } from '@/lib/mechanicus-ii';
 
 const title = 'Mechanicus 2 Factions & Best Units: Necrons vs Adeptus';
@@ -81,7 +92,16 @@ export default function MechanicusIIFactionsPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Mechanicus II Factions Quick Answer"
+ answer="Two playable campaigns: Adeptus Mechanicus led by Magos Dominus Faustinius and Necrons led by Vargard Nefershah. The Leagues of Votann appear in the story, not as a third playable campaign. Final best-faction claims are not safe during launch week."
+ intentRows={m2FactionsSearchIntent}
+ jumpLinks={m2FactionsJumpLinks}
+ />
+
+ <StatusPanel items={m2FactionsStatusItems} />
+
+ <section id="faction-anchor" className="prose-game">
  <h2>Adeptus Mechanicus vs Necrons</h2>
  <ArticleImage
  src={mechanicusIIImages.screenshot1}
@@ -207,7 +227,7 @@ export default function MechanicusIIFactionsPage() {
  </div>
 
  <section className="prose-game">
- <h2>Are the Leagues of Votann Playable?</h2>
+ <h2 id="votann-status">Are the Leagues of Votann Playable?</h2>
  <p>
  The safest current answer is no: the confirmed playable campaign
  structure is Adeptus Mechanicus and Necrons. Public preview coverage
@@ -225,6 +245,11 @@ export default function MechanicusIIFactionsPage() {
  its economy before judging final difficulty or unit strength.
  </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Faction Decision</h2>
+ <ActionTable rows={m2FactionsActionRows} />
+
+ <SourceCheckTable title="Mechanicus II Faction Sources" rows={m2FactionsSourceRows} />
  </MechanicusIIArticle>
  );
 }

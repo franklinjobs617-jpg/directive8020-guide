@@ -1,10 +1,21 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { MinaArticle } from '@/components/mina-the-hollower-article';
 import {
  createMinaMetadata,
  minaFeatureRows,
  minaImages,
+ minaSteamDeckActionRows,
+ minaSteamDeckJumpLinks,
+ minaSteamDeckSearchIntent,
+ minaSteamDeckSourceRows,
+ minaSteamDeckStatusItems,
 } from '@/lib/mina-the-hollower';
 
 const title = 'Mina the Hollower Steam Deck Guide - Verified Status & Controls';
@@ -70,7 +81,16 @@ export default function MinaSteamDeckPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Mina the Hollower Steam Deck Quick Answer"
+ answer="Pre-launch coverage reports Steam Deck Verified and Steam lists full controller support plus Steam Cloud. Confirm the live Steam Deck badge on launch day and test a save sync before long sessions."
+ intentRows={minaSteamDeckSearchIntent}
+ jumpLinks={minaSteamDeckJumpLinks}
+ />
+
+ <StatusPanel items={minaSteamDeckStatusItems} />
+
+ <section className="prose-game" id="deck-readiness">
  <h2>Steam Deck Readiness</h2>
  <ArticleImage
  src={minaImages.screenshot3}
@@ -99,7 +119,7 @@ export default function MinaSteamDeckPage() {
  </div>
 
  <section className="prose-game">
- <h2>Control and Save Features</h2>
+ <h2 id="controls-saves">Control and Save Features</h2>
  <ArticleImage
  src={minaImages.screenshot7}
  alt="Mina the Hollower control and save features"
@@ -127,7 +147,7 @@ export default function MinaSteamDeckPage() {
  </div>
 
  <section className="prose-game">
- <h2>Launch-Week Handheld Checklist</h2>
+ <h2 id="handheld-checklist">Launch-Week Handheld Checklist</h2>
  <ArticleImage
  src={minaImages.screenshot5}
  alt="Mina the Hollower launch week handheld checklist"
@@ -140,6 +160,11 @@ export default function MinaSteamDeckPage() {
  <li>Check text readability in handheld mode before a long session.</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Deck Test Plan</h2>
+ <ActionTable rows={minaSteamDeckActionRows} />
+
+ <SourceCheckTable title="Mina the Hollower Steam Deck Sources" rows={minaSteamDeckSourceRows} />
  </MinaArticle>
  );
 }

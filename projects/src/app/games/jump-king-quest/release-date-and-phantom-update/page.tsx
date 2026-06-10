@@ -1,10 +1,15 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { JumpKingQuestArticle } from '@/components/jump-king-quest-article';
 import {
  createJumpKingQuestMetadata,
  jumpKingQuestImages,
+ jumpKingQuestReleaseActionRows,
+ jumpKingQuestReleaseJumpLinks,
  jumpKingQuestReleaseRows,
+ jumpKingQuestReleaseSearchIntent,
+ jumpKingQuestReleaseSourceRows,
+ jumpKingQuestReleaseStatusItems,
 } from '@/lib/jump-king-quest';
 
 const title = 'JUMP KING QUEST Release Date and 1.0 Phantom Update';
@@ -63,8 +68,17 @@ export default function JumpKingQuestReleasePage() {
  </p>
  </BlufBox>
 
+ <SearchAnswerPanel
+ title="JUMP KING QUEST Release Quick Answer"
+ answer="Full release: May 25, 2026. Early Access start: February 12, 2025. The 1.0 Phantom Update ended Early Access. Steam shows Very Positive signal and a 20% introductory discount ending June 8, 2026."
+ intentRows={jumpKingQuestReleaseSearchIntent}
+ jumpLinks={jumpKingQuestReleaseJumpLinks}
+ />
+
+ <StatusPanel items={jumpKingQuestReleaseStatusItems} />
+
  <section className="prose-game">
- <h2>Launch Timeline</h2>
+ <h2 id="release-timeline">Launch Timeline</h2>
  <ArticleImage
  src={jumpKingQuestImages.phantom}
  alt="JUMP KING QUEST Phantom Update launch image"
@@ -101,7 +115,7 @@ export default function JumpKingQuestReleasePage() {
  </div>
 
  <section className="prose-game">
- <h2>Why This Matters</h2>
+ <h2 id="release-phantom">Why This Matters</h2>
  <p>
  A launch-date page should answer two things fast: whether the game is
  actually out and whether the update language is talking about the
@@ -110,6 +124,22 @@ export default function JumpKingQuestReleasePage() {
  clean factual reference instead of a teaser.
  </p>
  </section>
+
+ <section className="prose-game">
+ <h2 id="release-discount">Launch Discount and 1.0 Buying Window</h2>
+ <p>
+ Steam shows a 20% introductory offer ending June 8, 2026 at the latest
+ check. Treat the launch offer as the cleanest buying window for
+ players who want the game at the lowest current price. After the
+ discount ends, the price on Steam is the right anchor for any later
+ purchase decision.
+ </p>
+ </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Release Plan</h2>
+ <ActionTable rows={jumpKingQuestReleaseActionRows} />
+
+ <SourceCheckTable title="JUMP KING QUEST Release Sources" rows={jumpKingQuestReleaseSourceRows} />
  </JumpKingQuestArticle>
  );
 }

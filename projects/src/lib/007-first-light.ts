@@ -324,3 +324,566 @@ export function createFirstLightMetadata({
  },
  };
 }
+
+export const firstLightReleaseActionRows = [
+ {
+ step: '1. Confirm your local unlock window',
+ doThis: 'Open your platform storefront countdown (Steam, PS5, Xbox) and write down the exact local hour, not just the calendar date.',
+ why: 'Calendar dates and time zones disagree. A countdown screenshot beats guessing on launch night, especially in Australia or other UTC+ regions.',
+ },
+ {
+ step: '2. Decide Standard vs Deluxe early access',
+ doThis: 'Pick Standard unless you want the 24-hour early access window plus the cosmetic bundle (four outfits, Agent\u2019s Mark weapon skin, four Gleaming gadget skins).',
+ why: 'Early access is bundled with the free Deluxe upgrade, not sold separately. The upgrade is cosmetic-plus-access, not extra story content.',
+ },
+ {
+ step: '3. Check preload from your library, not the store page',
+ doThis: 'After purchase, open Steam, PS5, or Xbox library and look for an Install or Preload button. Use the button if it appears.',
+ why: 'Store copy does not guarantee preload on every platform. Your library shows the real state for your account and region.',
+ },
+ {
+ step: '4. Plan launch-night session',
+ doThis: 'Block 2-3 hours, set display to your most-used resolution, cap background apps, and pick a save profile before downloading.',
+ why: '007 First Light has uncapped framerate and DLSS 4.5 at launch. First-hour testing reads cleaner when system load is stable.',
+ },
+ {
+ step: '5. Verify Denuvo and Steam Deck expectations',
+ doThis: 'Before launch, read the Steam page DRM note. For Steam Deck, plan a settings test within refund limits instead of assuming handheld play is safe.',
+ why: 'Denuvo Anti-Tamper and the third-party EULA are listed. Steam Deck status is unconfirmed at launch and depends on per-game settings.',
+ },
+] as const;
+
+export const firstLightReleaseStatusItems = [
+ { label: 'Standard release', value: 'May 27, 2026 on Steam and PS5.', status: 'verified' as const },
+ { label: '24-hour early access', value: 'Bundled with the free Deluxe Edition upgrade for pre-orders.', status: 'verified' as const },
+ { label: 'Preload availability', value: 'Not universally confirmed across platforms; check your library after purchase.', status: 'needs-check' as const },
+ { label: 'Steam Deck status', value: 'Unconfirmed at launch. Wait for a rating or strong player reports.', status: 'needs-check' as const },
+ { label: 'Denuvo DRM', value: 'Steam lists Denuvo Anti-Tamper and a third-party EULA.', status: 'verified' as const },
+ { label: 'Australia / time zones', value: 'Use platform countdown, not just calendar date.', status: 'working' as const },
+];
+
+export const firstLightReleaseSourceRows = [
+ {
+ claim: 'Release date, platforms, and pre-order Deluxe early access',
+ source: 'Steam store page',
+ status: 'verified' as const,
+ href: firstLightSteamUrl,
+ note: 'Used for May 27 release, PS5 status, Deluxe early access, and DRM disclosure.',
+ },
+ {
+ claim: 'Deluxe bonus contents (outfits, gadget skins, weapon skin)',
+ source: 'Steam store Deluxe edition copy',
+ status: 'verified' as const,
+ href: firstLightSteamUrl,
+ note: 'Confirms four outfits, Agent\u2019s Mark skin, and four Gleaming gadget skins.',
+ },
+ {
+ claim: 'Preload status and platform differences',
+ source: 'Steam community discussion',
+ status: 'needs-check' as const,
+ href: firstLightRedditPreloadUrl,
+ note: 'Reports vary by platform; PS5 preload is the more consistent path.',
+ },
+ {
+ claim: 'Review embargo and current critic reviews',
+ source: 'IO Interactive official site',
+ status: 'needs-check' as const,
+ href: firstLightOfficialUrl,
+ note: 'Treat the embargo question as time-sensitive. Confirm on launch day before quoting critic scores.',
+ },
+ {
+ claim: 'Steam Deck and PC performance',
+ source: 'Steam store system requirements',
+ status: 'needs-check' as const,
+ href: firstLightSteamUrl,
+ note: 'Spec lines and DLSS notes are confirmed; real-frame-pacing and Deck status depend on launch reports.',
+ },
+];
+
+export const firstLightSearchIntentRelease = [
+ {
+ query: '007 First Light release date',
+ answer: 'May 27, 2026 on Steam and PS5. Deluxe upgrade gives 24-hour early access for pre-orders.',
+ href: '#release-checklist',
+ label: 'Date',
+ },
+ {
+ query: '007 First Light early access',
+ answer: '24-hour early access is bundled with the free Deluxe Edition upgrade. Standard edition unlocks at the standard launch hour.',
+ href: '#deluxe-vs-standard',
+ label: 'Early access',
+ },
+ {
+ query: '007 First Light preload',
+ answer: 'Preload is not universally confirmed. Check your Steam or PS5 library after purchase; do not change region to force it.',
+ href: '#preload-check',
+ label: 'Preload',
+ },
+ {
+ query: '007 First Light release time Australia',
+ answer: 'Use the platform countdown. Australian time zones can shift the visible date or hour compared to the Steam calendar.',
+ href: '#time-zones',
+ label: 'Time zones',
+ },
+];
+
+export const firstLightJumpLinksRelease = [
+ { href: '#release-checklist', label: 'Release checklist' },
+ { href: '#deluxe-vs-standard', label: 'Deluxe vs Standard' },
+ { href: '#preload-check', label: 'Preload check' },
+ { href: '#time-zones', label: 'Time zones' },
+ { href: '/games/007-first-light/review-embargo', label: 'Review & Denuvo' },
+ { href: '/games/007-first-light/system-requirements', label: 'System requirements' },
+];
+
+export const firstLightBeginnerActionRows = [
+ {
+ step: '1. Read the room before any gadget or weapon',
+ doThis: 'Look for cameras, guard paths, climbable lines, cover, and exits before touching the gadget wheel or firing a shot.',
+ why: 'A first mission is a learn-the-language run, not a perfect run. Reading the room prevents the most common beginner mistake of committing to a loud route too early.',
+ },
+ {
+ step: '2. Try the quiet approach first, then escalate',
+ doThis: 'Move slowly, use cover, and try bluffing or non-lethal options before opening fire or alerting the whole room.',
+ why: 'Steam describes silent and loud options, and IO Interactive missions reward patience. Saving loud combat for forced encounters makes later rooms easier.',
+ },
+ {
+ step: '3. Use one gadget at a time',
+ doThis: 'Pick a single gadget to solve the current access, distraction, or camera problem instead of burning through your kit.',
+ why: 'Gadgets are route tools, not consumables. Saving a gadget for the next room often matters more than using one on the current puzzle.',
+ },
+ {
+ step: '4. Break line of sight when stealth fails',
+ doThis: 'If you are spotted, reposition behind cover and use a takedown, gadget, or melee before trading gunfire.',
+ why: 'Standing still to fight is the easiest way to lose ammo, health, and mission rhythm. A clean reset beats an open firefight for a beginner.',
+ },
+ {
+ step: '5. Note your route and replay with one goal',
+ doThis: 'After the mission, write down which approach worked, which gadget solved the room, and where detection happened. Replay with one specific improvement.',
+ why: 'Steam describes replaying missions with additional modifiers. A short note now makes replay planning useful instead of guessing later.',
+ },
+] as const;
+
+export const firstLightBeginnerStatusItems = [
+ { label: 'Beginner approach', value: 'Start stealth-first, escalate only when the scene forces it.', status: 'verified' as const },
+ { label: 'Gadget role', value: 'Use gadgets for access, distraction, and camera bypass, not only combat.', status: 'verified' as const },
+ { label: 'Combat role', value: 'Save firearms for failed stealth, forced combat, or action sequences.', status: 'verified' as const },
+ { label: 'Replay hook', value: 'Replay favorite missions with additional modifiers to test cleaner routes.', status: 'verified' as const },
+ { label: 'Driving sections', value: 'Expect driving segments. Treat vehicle pressure as a separate skill from stealth movement.', status: 'working' as const },
+ { label: 'Opening spoilers', value: 'The official first 13 minutes video shows the opening mission. Skip it for a blind start.', status: 'working' as const },
+];
+
+export const firstLightBeginnerSourceRows = [
+ {
+ claim: 'Silent and loud options, gadgets, and approach variety',
+ source: 'Steam store description',
+ status: 'verified' as const,
+ href: firstLightSteamUrl,
+ note: 'Use as the source for the playstyle flexibility, gadgets, and approach variety beginners should expect.',
+ },
+ {
+ claim: 'Replayable missions with additional modifiers',
+ source: 'Steam store description',
+ status: 'verified' as const,
+ href: firstLightSteamUrl,
+ note: 'Confirms the replay hook that makes a first-run notebook useful for planning a second route.',
+ },
+ {
+ claim: 'Driving segments and iconic vehicles',
+ source: 'Official launch trailer',
+ status: 'verified' as const,
+ href: firstLightLaunchTrailerUrl,
+ note: 'Use to warn new players that not every mission is pure stealth, and vehicle handling is part of the learning curve.',
+ },
+ {
+ claim: 'Opening 13 minutes gameplay and pacing',
+ source: 'Official YouTube gameplay video',
+ status: 'verified' as const,
+ href: firstLightGameplayUrl,
+ note: 'Useful for pacing context, but treat it as a spoiler for the opening mission.',
+ },
+ {
+ claim: 'Beginner approach discussion and gadget advice',
+ source: 'Reddit review thread',
+ status: 'working' as const,
+ href: firstLightRedditReviewUrl,
+ note: 'Use as a demand signal for what new players are asking, not as a definitive guide.',
+ },
+];
+
+export const firstLightBeginnerSearchIntent = [
+ {
+ query: '007 First Light beginner guide',
+ answer: 'Start stealth-first, read each room, use one gadget at a time, escalate only when detected, then replay with one specific improvement goal.',
+ href: '#first-60-minutes',
+ label: 'Beginner plan',
+ },
+ {
+ query: '007 First Light first mission',
+ answer: 'Treat the opening as a learn-the-language run. Use beginner habits, the first-mission checklist, and the recovery table instead of restarting on every mistake.',
+ href: '#first-mission',
+ label: 'First mission',
+ },
+ {
+ query: '007 First Light stealth or loud',
+ answer: 'Quiet routes are usually the safer first choice. Save loud combat for scenes that have already escalated, forced combat, or open action sequences.',
+ href: '#approach',
+ label: 'Stealth vs loud',
+ },
+ {
+ query: '007 First Light gadgets',
+ answer: 'Gadgets are route tools for access, distraction, and camera bypass. Use one at a time and save tools for later rooms when possible.',
+ href: '#recovery',
+ label: 'Gadgets',
+ },
+];
+
+export const firstLightBeginnerJumpLinks = [
+ { href: '#first-60-minutes', label: 'First 60 minutes' },
+ { href: '#beginner-habits', label: 'Beginner habits' },
+ { href: '#first-mission', label: 'First mission checklist' },
+ { href: '#recovery', label: 'Recovery paths' },
+ { href: '#approach', label: 'Choose an approach' },
+ { href: '/games/007-first-light/mission-list-chapters-length', label: 'Mission list & length' },
+];
+
+export const firstLightMissionActionRows = [
+ {
+ step: '1. Decide your run type before you start',
+ doThis: 'Pick story-only, explorer, or completionist based on how much time you want to spend on alternate routes, collectibles, and trophies.',
+ why: 'Run type changes how useful mission-list searches are. Story players need the chapter shape, completionists need verified collectible routes.',
+ },
+ {
+ step: '2. Use a spoiler-light mission shape first',
+ doThis: 'Track route shape only: opening tutorial, main objectives, stealth rooms, action spikes, and driving shifts. Skip full mission names until you are ready.',
+ why: 'Full mission names can spoil story, location, and characters. A shape-based plan gives you pacing without ruining the first run.',
+ },
+ {
+ step: '3. Plan for one replay pass after the story',
+ doThis: 'Treat the first run as a learning pass. Mark where detection happened, which gadget solved the room, and which sections feel worth replaying.',
+ why: 'Steam describes replaying favorite missions with additional modifiers. A short note now makes a second pass more useful than guessing later.',
+ },
+ {
+ step: '4. Separate collectible and trophy cleanup',
+ doThis: 'Do not chase every collectible during a first story run. Mark missed areas and return through replay or a verified checklist.',
+ why: 'Chasing collectibles mid-story can stall pacing. Cleanup passes are cleaner when you know which mission each collectible is tied to.',
+ },
+ {
+ step: '5. Verify time-to-beat against your style',
+ doThis: 'Compare your run type against current time-to-beat coverage, not just one estimate. Story runs finish faster than completionist runs.',
+ why: 'Length numbers are most useful when they match your style. A wrong baseline leads to a buy-or-wait decision based on the wrong number.',
+ },
+] as const;
+
+export const firstLightMissionStatusItems = [
+ { label: 'Mission list available', value: 'Yes, players are searching for mission-list structure. Keep routes spoiler-light until verified.', status: 'verified' as const },
+ { label: 'Replay hook', value: 'Replay favorite missions with additional modifiers, per Steam store copy.', status: 'verified' as const },
+ { label: 'Time-to-beat range', value: 'Public estimates cluster around a campaign-length action-adventure, not a short demo.', status: 'working' as const },
+ { label: 'Collectible routes', value: 'Treat collectible and trophy routes as post-story cleanup until verified checklists are available.', status: 'needs-check' as const },
+ { label: 'Chapter count', value: 'Use spoiler-light planning first. Full chapter counts may shift after launch updates.', status: 'needs-check' as const },
+ { label: 'Driving sections', value: 'Plan for vehicle segments between stealth and action sections, even on a story run.', status: 'working' as const },
+];
+
+export const firstLightMissionSourceRows = [
+ {
+ claim: 'Replayable missions with additional modifiers',
+ source: 'Steam store description',
+ status: 'verified' as const,
+ href: firstLightSteamUrl,
+ note: 'Confirms the replay hook that makes mission planning and run-type choice useful.',
+ },
+ {
+ claim: 'Mission shape, opening pacing, and driving tone',
+ source: 'Official YouTube launch trailer',
+ status: 'verified' as const,
+ href: firstLightLaunchTrailerUrl,
+ note: 'Use for tone and structure, not for specific mission names or spoilers.',
+ },
+ {
+ claim: 'Opening 13 minutes gameplay and pacing',
+ source: 'Official YouTube gameplay video',
+ status: 'verified' as const,
+ href: firstLightGameplayUrl,
+ note: 'Useful for pacing but contains opening mission spoilers.',
+ },
+ {
+ claim: 'Player demand for mission list and length',
+ source: 'Reddit review thread',
+ status: 'working' as const,
+ href: firstLightRedditReviewUrl,
+ note: 'Use as a demand signal for what players are asking, not as final length numbers.',
+ },
+ {
+ claim: 'Time-to-beat and replay coverage',
+ source: 'Steam community discussion',
+ status: 'needs-check' as const,
+ href: firstLightRedditPreloadUrl,
+ note: 'Use for player-reported length ranges, but verify against your run type before buying on length alone.',
+ },
+];
+
+export const firstLightMissionSearchIntent = [
+ {
+ query: '007 First Light mission list',
+ answer: 'Yes, there is a mission list. Use a spoiler-light shape first, then read full mission names only when you are ready for story spoilers.',
+ href: '#fast-answers',
+ label: 'Mission list',
+ },
+ {
+ query: '007 First Light chapters',
+ answer: 'Chapter and mission-count answers can spoil the campaign. Use a spoiler-light plan first and verify full names after launch updates.',
+ href: '#mission-shape',
+ label: 'Chapters',
+ },
+ {
+ query: '007 First Light how long to beat',
+ answer: 'Length depends on run type: story-only finishes fastest, explorer takes longer, and completionist is the longest because of replay and cleanup.',
+ href: '#length',
+ label: 'How long',
+ },
+ {
+ query: '007 First Light replayable missions',
+ answer: 'Yes. Steam describes replaying favorite missions with additional modifiers, which is the strongest confirmed replay hook.',
+ href: '#replay',
+ label: 'Replay',
+ },
+];
+
+export const firstLightMissionJumpLinks = [
+ { href: '#fast-answers', label: 'Fast answers' },
+ { href: '#mission-shape', label: 'Mission shape' },
+ { href: '#length', label: 'How long to beat' },
+ { href: '#replay', label: 'Replay & cleanup' },
+ { href: '/games/007-first-light/beginner-guide', label: 'Beginner guide' },
+ { href: '/games/007-first-light/review-embargo', label: 'Reviews & Denuvo' },
+];
+
+export const firstLightEmbargoActionRows = [
+ {
+ step: '1. Confirm whether reviews are live',
+ doThis: 'Check Metacritic, OpenCritic, IGN, and Steam user reviews on launch day before using older embargo countdown wording.',
+ why: 'Review status changes fast in the first 24-72 hours. Older wording can mislead you into thinking reviews are not out yet.',
+ },
+ {
+ step: '2. Read review details, not just scores',
+ doThis: 'Read what critics say about mission design, stealth quality, driving, gadgets, PC performance, and story pacing before buying.',
+ why: 'A score alone hides the questions that actually matter for a Bond origin campaign with mission replay.',
+ },
+ {
+ step: '3. Cross-check Steam user reviews',
+ doThis: 'Open Steam user reviews for PC-specific feedback on Denuvo, performance, refunds, and review-volume changes after launch.',
+ why: 'User reviews catch PC-specific issues that critic reviews may not cover, especially around DRM and frame pacing.',
+ },
+ {
+ step: '4. Decide buy or wait based on your risk',
+ doThis: 'Buy now if current reviews match what you want. Wait if you need broader player reports, Steam Deck proof, or PC performance proof.',
+ why: 'The buy-or-wait answer is personal. It depends on how much weight you put on Denuvo, handheld play, and PC performance.',
+ },
+ {
+ step: '5. Re-check before the refund window closes',
+ doThis: 'Within the Steam refund window, re-check reviews, performance, and any platform-specific reports before keeping the purchase.',
+ why: 'Launch-day reports evolve fast. A short re-check inside the refund window protects you from settling in on a problem copy.',
+ },
+] as const;
+
+export const firstLightEmbargoStatusItems = [
+ { label: 'Review status', value: 'Treat the embargo question as time-sensitive. Confirm on launch day before quoting critic scores.', status: 'needs-check' as const },
+ { label: 'Critic coverage', value: 'Use Metacritic, OpenCritic, and IGN as separate signals rather than treating one as final.', status: 'working' as const },
+ { label: 'Steam user reviews', value: 'Check Steam after launch for user-review volume and PC-specific reports.', status: 'needs-check' as const },
+ { label: 'Denuvo listing', value: 'Steam lists Denuvo Anti-Tamper and a third-party EULA. PC buyers should factor DRM into the decision.', status: 'verified' as const },
+ { label: 'Steam Deck', value: 'No Steam Deck Verified label is confirmed. Wait for a rating or strong player reports.', status: 'needs-check' as const },
+ { label: 'Buy or wait', value: 'Buy if reviews match your expectations. Wait if you need broader reports on performance or handheld play.', status: 'working' as const },
+];
+
+export const firstLightEmbargoSourceRows = [
+ {
+ claim: 'Review status, critic coverage, and Steam user reviews',
+ source: 'Metacritic, OpenCritic, and Steam user reviews',
+ status: 'needs-check' as const,
+ href: firstLightSteamUrl,
+ note: 'Confirm on launch day before quoting critic scores. Treat older embargo countdown posts as outdated.',
+ },
+ {
+ claim: 'Denuvo Anti-Tamper and third-party EULA',
+ source: 'Steam store page',
+ status: 'verified' as const,
+ href: firstLightSteamUrl,
+ note: 'Use as the source for the DRM disclosure that PC buyers should factor into the decision.',
+ },
+ {
+ claim: 'Player demand for reviews, Denuvo, performance, and Deck',
+ source: 'Reddit review thread',
+ status: 'working' as const,
+ href: firstLightRedditReviewUrl,
+ note: 'Use as a demand signal for what players are checking after launch, not as final review conclusions.',
+ },
+ {
+ claim: 'Steam Deck and handheld performance',
+ source: 'Steam Deck HQ first impressions',
+ status: 'working' as const,
+ href: firstLightSteamDeckHQUrl,
+ note: 'Use for handheld caution until Steam shows a rating or broader settings reports settle.',
+ },
+ {
+ claim: 'PC benchmark evidence',
+ source: 'TechPowerUp benchmark review',
+ status: 'working' as const,
+ href: firstLightTechPowerUpUrl,
+ note: 'Use as a performance reference, but keep hardware-specific claims tied to the benchmark source.',
+ },
+];
+
+export const firstLightEmbargoSearchIntent = [
+ {
+ query: '007 First Light review embargo',
+ answer: 'Treat the embargo question as time-sensitive. After reviews publish, use current critic reviews and Steam user reviews instead of older countdown wording.',
+ href: '#embargo-checklist',
+ label: 'Review embargo',
+ },
+ {
+ query: '007 First Light reviews out',
+ answer: 'Check current critic coverage and Steam after the May 27 launch window. Review and user-review signals can change quickly on release day.',
+ href: '#review-sources',
+ label: 'Reviews out',
+ },
+ {
+ query: '007 First Light worth buying',
+ answer: 'Buy if reviews match the Bond origin story you want. Wait if you need broader player reports, handheld testing, or more confidence in PC performance.',
+ href: '#buy-or-wait',
+ label: 'Worth buying',
+ },
+ {
+ query: '007 First Light Denuvo',
+ answer: 'Steam lists Denuvo Anti-Tamper and a third-party EULA. PC buyers who care about DRM should factor that into the decision.',
+ href: '#denuvo',
+ label: 'Denuvo',
+ },
+];
+
+export const firstLightEmbargoJumpLinks = [
+ { href: '#embargo-checklist', label: 'Embargo checklist' },
+ { href: '#review-sources', label: 'Review sources' },
+ { href: '#buy-or-wait', label: 'Buy or wait' },
+ { href: '#denuvo', label: 'Denuvo & Deck' },
+ { href: '/games/007-first-light/system-requirements', label: 'System requirements' },
+ { href: '/games/007-first-light/beginner-guide', label: 'Beginner guide' },
+];
+
+export const firstLightSpecActionRows = [
+ {
+ step: '1. Match your PC to the official spec tiers',
+ doThis: 'Compare your CPU, GPU, RAM, and storage against the minimum and recommended tiers before downloading or playing.',
+ why: 'The official tiers are the cleanest baseline. Anything below minimum risks missing features or running at unplayable settings.',
+ },
+ {
+ step: '2. Confirm SSD and 80 GB free space',
+ doThis: 'Check that you have an SSD and at least 80 GB of free space, with headroom for patches and shader caches.',
+ why: 'Steam lists SSD required in both tiers. HDD installs and tight free space are a common cause of stutter and long loads.',
+ },
+ {
+ step: '3. Plan DLSS or FSR behavior on your GPU',
+ doThis: 'Decide your DLSS or FSR preset before launch, and test it in driving and dense stealth areas first.',
+ why: 'DLSS 4.5 is listed at launch. Your preset choice changes both image quality and frame pacing more than raw settings sliders.',
+ },
+ {
+ step: '4. Test Steam Deck only inside the refund window',
+ doThis: 'If you plan to play on Steam Deck, test low settings and upscaling within the Steam refund window before committing.',
+ why: 'No Steam Deck Verified label is confirmed. The first 80 GB of testing is the safest time to confirm handheld play is usable.',
+ },
+ {
+ step: '5. Re-check specs and benchmarks after patches',
+ doThis: 'Re-read the Steam spec page and current benchmark coverage after major patches, since requirements can shift.',
+ why: 'Day-one spec lines are a baseline. Post-launch patches and Summer 2026 features like path tracing can change real-world needs.',
+ },
+] as const;
+
+export const firstLightSpecStatusItems = [
+ { label: 'Minimum GPU', value: 'GTX 1660 or RX 5700, plus 16 GB RAM and an SSD with 80 GB free.', status: 'verified' as const },
+ { label: 'Recommended GPU', value: 'RTX 3060 Ti or RX 6700 XT, plus 16 GB RAM and an SSD with 80 GB free.', status: 'verified' as const },
+ { label: 'Storage type', value: 'SSD required in both tiers. HDD installs are not supported.', status: 'verified' as const },
+ { label: 'DLSS 4.5 at launch', value: 'Steam news lists uncapped framerate, DLSS 4.5 Super Resolution, and DLSS Dynamic Multi Frame Generation.', status: 'verified' as const },
+ { label: 'Path tracing', value: 'Path tracing and DLSS Ray Reconstruction are planned for Summer 2026, not at launch.', status: 'verified' as const },
+ { label: 'Steam Deck', value: 'No Steam Deck Verified label is confirmed. Treat handheld play as player-report dependent.', status: 'needs-check' as const },
+ { label: 'Denuvo', value: 'Steam lists Denuvo Anti-Tamper. Test performance impact on your own setup rather than assuming.', status: 'working' as const },
+];
+
+export const firstLightSpecSourceRows = [
+ {
+ claim: 'Minimum and recommended PC requirements',
+ source: 'Steam store system requirements',
+ status: 'verified' as const,
+ href: firstLightSteamUrl,
+ note: 'Use as the official baseline for CPU, GPU, RAM, storage, and SSD requirement.',
+ },
+ {
+ claim: 'DLSS 4.5, uncapped framerate, and DLSS Dynamic Multi Frame Generation at launch',
+ source: 'Steam news copy',
+ status: 'verified' as const,
+ href: firstLightSteamUrl,
+ note: 'Use for launch PC features. Do not include path tracing as a launch feature.',
+ },
+ {
+ claim: 'Path tracing and DLSS Ray Reconstruction planned for Summer 2026',
+ source: 'Steam news copy',
+ status: 'verified' as const,
+ href: firstLightSteamUrl,
+ note: 'Use for the future-feature disclaimer. Do not list these as launch-day visuals.',
+ },
+ {
+ claim: 'Denuvo Anti-Tamper and third-party EULA',
+ source: 'Steam store page',
+ status: 'verified' as const,
+ href: firstLightSteamUrl,
+ note: 'Use for the DRM disclosure that PC buyers should factor into the decision.',
+ },
+ {
+ claim: 'Steam Deck handheld behavior and settings guidance',
+ source: 'Steam Deck HQ first impressions',
+ status: 'working' as const,
+ href: firstLightSteamDeckHQUrl,
+ note: 'Use for player-facing handheld caution until Steam shows a rating or broader reports settle.',
+ },
+ {
+ claim: 'PC benchmark evidence',
+ source: 'TechPowerUp benchmark review',
+ status: 'working' as const,
+ href: firstLightTechPowerUpUrl,
+ note: 'Use as a performance reference, but keep hardware-specific claims tied to the benchmark source.',
+ },
+];
+
+export const firstLightSpecSearchIntent = [
+ {
+ query: '007 First Light system requirements',
+ answer: 'Minimum is Windows 10/11, i5-9500 or Ryzen 5 3500, 16 GB RAM, GTX 1660 or RX 5700, 80 GB SSD. Recommended moves to i5-13500, Ryzen 5 7600, RTX 3060 Ti or RX 6700 XT.',
+ href: '#specs',
+ label: 'Requirements',
+ },
+ {
+ query: '007 First Light PC specs',
+ answer: 'Both tiers require 16 GB RAM, an SSD, and 80 GB free. The GPU jump is GTX 1660 or RX 5700 minimum to RTX 3060 Ti or RX 6700 XT recommended.',
+ href: '#performance',
+ label: 'PC specs',
+ },
+ {
+ query: '007 First Light Steam Deck',
+ answer: 'No Steam Deck Verified label is confirmed. Treat handheld play as settings-dependent until Steam or broad player reports settle.',
+ href: '#deck',
+ label: 'Steam Deck',
+ },
+ {
+ query: '007 First Light DLSS',
+ answer: 'Launch includes uncapped framerate, DLSS 4.5 Super Resolution, and DLSS Dynamic Multi Frame Generation. Path tracing arrives in Summer 2026.',
+ href: '#dlss',
+ label: 'DLSS',
+ },
+];
+
+export const firstLightSpecJumpLinks = [
+ { href: '#specs', label: 'Minimum & recommended' },
+ { href: '#performance', label: 'Launch performance' },
+ { href: '#deck', label: 'Steam Deck' },
+ { href: '#dlss', label: 'DLSS & path tracing' },
+ { href: '/games/007-first-light/review-embargo', label: 'Reviews & Denuvo' },
+ { href: '/games/007-first-light/beginner-guide', label: 'Beginner guide' },
+];

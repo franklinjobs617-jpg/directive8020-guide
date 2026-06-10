@@ -1,10 +1,21 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { MechanicusIIArticle } from '@/components/mechanicus-ii-article';
 import {
- createMechanicusIIMetadata,
- mechanicusIIImages,
- mechanicusIISpecRows,
+  createMechanicusIIMetadata,
+  mechanicusIIImages,
+  mechanicusIISpecRows,
+  m2SpecActionRows,
+  m2SpecJumpLinks,
+  m2SpecSearchIntent,
+  m2SpecSourceRows,
+  m2SpecStatusItems,
 } from '@/lib/mechanicus-ii';
 
 const title = 'Warhammer 40,000: Mechanicus II System Requirements';
@@ -61,7 +72,16 @@ export default function MechanicusIISystemRequirementsPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Mechanicus II PC Specs Quick Answer"
+ answer="Minimum is i7-7700 / Ryzen 5 1600, GTX 1660 6GB / RX 5600 XT 6GB, 12 GB RAM. Recommended moves to i5-9600K / Ryzen 5 3600, RTX 2070 8GB / RX 6600 XT 8GB, 16 GB RAM. Both tiers list DirectX 12 and 25 GB storage."
+ intentRows={m2SpecSearchIntent}
+ jumpLinks={m2SpecJumpLinks}
+ />
+
+ <StatusPanel items={m2SpecStatusItems} />
+
+ <section id="spec-anchor" className="prose-game">
  <h2>Minimum and Recommended Specs</h2>
  <ArticleImage
  src={mechanicusIIImages.screenshot4}
@@ -108,6 +128,11 @@ export default function MechanicusIISystemRequirementsPage() {
  the full campaign will feel the same.
  </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step PC Spec Plan</h2>
+ <ActionTable rows={m2SpecActionRows} />
+
+ <SourceCheckTable title="Mechanicus II PC Spec Sources" rows={m2SpecSourceRows} />
  </MechanicusIIArticle>
  );
 }

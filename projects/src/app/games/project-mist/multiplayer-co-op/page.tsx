@@ -1,7 +1,21 @@
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
-import { createProjectMistMetadata, projectMistImages } from '@/lib/project-mist';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
+import {
+  createProjectMistMetadata,
+  pmCoopActionRows,
+  pmCoopJumpLinks,
+  pmCoopSearchIntent,
+  pmCoopSourceRows,
+  pmCoopStatusItems,
+  projectMistImages,
+} from '@/lib/project-mist';
 
 const title = 'Project: Mist Multiplayer Co-op - 1-4 Players, Solo & Crossplay Status';
 const description =
@@ -90,6 +104,15 @@ export default function ProjectMistMultiplayerPage() {
  </p>
  </BlufBox>
 
+ <SearchAnswerPanel
+ title="Project: Mist Multiplayer Quick Answer"
+ answer="Project: Mist supports solo play and seamless 1-4 player online co-op. Split-screen, cross-play, and console co-op are not confirmed by the current Steam listing."
+ intentRows={pmCoopSearchIntent}
+ jumpLinks={pmCoopJumpLinks}
+ />
+
+ <StatusPanel items={pmCoopStatusItems} />
+
  <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
  <table className="w-full text-sm">
  <thead>
@@ -109,7 +132,7 @@ export default function ProjectMistMultiplayerPage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="player-count" className="prose-game">
  <h2>Multiplayer Status</h2>
  <ArticleImage
  src={projectMistImages.multiplayer}
@@ -194,6 +217,31 @@ export default function ProjectMistMultiplayerPage() {
  <li>Whether disconnects preserve inventory and base changes.</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Co-op Setup Plan</h2>
+ <ActionTable rows={pmCoopActionRows} />
+
+ <section id="crossplay" className="prose-game">
+ <h2>Cross-play, Split-screen, and Console Co-op</h2>
+ <p>
+ Do not assume cross-play, local split-screen, or console co-op is
+ available. The current Steam feature list confirms online co-op and
+ single-player on PC. Cross-play, local co-op, and Xbox or PlayStation
+ co-op need an official announcement before they can be claimed.
+ </p>
+ </section>
+
+ <section id="host-saves" className="prose-game">
+ <h2>Host Saves and Disconnects</h2>
+ <p>
+ Host-save behavior and disconnect handling should be tested in a
+ short world before committing many hours. Early Access co-op titles
+ can change save ownership, scaling, and inventory sharing between
+ patches, so a short test world is the safest first run.
+ </p>
+ </section>
+
+ <SourceCheckTable title="Project: Mist Multiplayer Sources" rows={pmCoopSourceRows} />
  </ProjectMistArticle>
  );
 }

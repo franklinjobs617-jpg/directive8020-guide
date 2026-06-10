@@ -1,10 +1,21 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { ZeroParadesArticle } from '@/components/zero-parades-article';
 import {
- createZeroParadesMetadata,
- zeroParadesFeatureRows,
- zeroParadesImages,
+  createZeroParadesMetadata,
+  zpSteamDeckActionRows,
+  zpSteamDeckJumpLinks,
+  zpSteamDeckSearchIntent,
+  zpSteamDeckSourceRows,
+  zpSteamDeckStatusItems,
+  zeroParadesFeatureRows,
+  zeroParadesImages,
 } from '@/lib/zero-parades';
 
 const title = 'ZERO PARADES Steam Deck Guide - Compatibility, Controls & Text';
@@ -61,17 +72,26 @@ export default function ZeroParadesSteamDeckPage() {
  heroAlt="ZERO PARADES Steam Deck compatibility screenshot"
  faqs={faqs}
  >
- <BlufBox title="Steam Deck Answer">
- <p>
- <strong>ZERO PARADES is listed as Steam Deck Verified.</strong>{' '}
- The handheld-friendly features are Save Anytime, adjustable text size,
- Steam Cloud, and no timed-input requirement. Still test menu prompts,
- text size, and cloud sync before moving a long save between devices.
- </p>
- </BlufBox>
+      <BlufBox title="Steam Deck Answer">
+        <p>
+          <strong>ZERO PARADES is listed as Steam Deck Verified.</strong>{' '}
+          The handheld-friendly features are Save Anytime, adjustable text size,
+          Steam Cloud, and no timed-input requirement. Still test menu prompts,
+          text size, and cloud sync before moving a long save between devices.
+        </p>
+      </BlufBox>
 
- <section className="prose-game">
- <h2>Deck Readiness Checklist</h2>
+      <SearchAnswerPanel
+        title="ZERO PARADES Steam Deck Quick Answer"
+        answer="Steam Deck Verified is listed. The handheld-friendly features are Save Anytime, adjustable text size, Steam Cloud, and no timed-input. Still test text size, prompts, and cloud sync within the refund window before committing to a long handheld run."
+        intentRows={zpSteamDeckSearchIntent}
+        jumpLinks={zpSteamDeckJumpLinks}
+      />
+
+      <StatusPanel items={zpSteamDeckStatusItems} />
+
+      <section className="prose-game">
+        <h2 id="deck-readiness-checklist">Deck Readiness Checklist</h2>
  <ArticleImage
  src={zeroParadesImages.screenshot4}
  alt="ZERO PARADES Steam Deck readiness screenshot"
@@ -111,16 +131,44 @@ export default function ZeroParadesSteamDeckPage() {
 
  <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
  <table className="w-full text-sm">
- <tbody>
- {zeroParadesFeatureRows.slice(2, 7).map(([feature, status]) => (
- <tr key={feature} className="border-b border-border last:border-0">
- <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{feature}</th>
- <td className="px-4 py-3 text-muted-foreground">{status}</td>
- </tr>
- ))}
- </tbody>
- </table>
- </div>
- </ZeroParadesArticle>
+        <tbody>
+          {zeroParadesFeatureRows.slice(2, 7).map(([feature, status]) => (
+            <tr key={feature} className="border-b border-border last:border-0">
+              <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{feature}</th>
+              <td className="px-4 py-3 text-muted-foreground">{status}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      </div>
+
+      <section className="prose-game">
+        <h2 id="deck-vs-pc-save-handoff">Deck vs PC Save Handoff</h2>
+        <p>
+          The Steam Cloud sync is reliable for most narrative RPGs, but it
+          is still worth confirming a clean handoff before committing to a
+          long run on the Deck. The safe sequence is: make a manual save
+          on your main PC, switch to the Deck, open the game, and confirm
+          the save appears. If it does not, force a sync from the Steam
+          settings menu before starting play on the Deck.
+        </p>
+        <p>
+          The reverse handoff matters too. If you finish a session on the
+          Deck, force a sync before opening the game on your PC. Without
+          the sync, your PC session may load an older save and the Deck
+          progress appears to vanish. A 30-second sync check is cheaper
+          than losing hours of dialogue choices and Conditioning
+          experiments.
+        </p>
+      </section>
+
+      <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Deck Plan</h2>
+      <ActionTable rows={zpSteamDeckActionRows} />
+
+      <SourceCheckTable
+        title="ZERO PARADES Steam Deck Sources"
+        rows={zpSteamDeckSourceRows}
+      />
+    </ZeroParadesArticle>
  );
 }

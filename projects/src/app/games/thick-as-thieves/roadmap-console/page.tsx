@@ -1,7 +1,21 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { ThickAsThievesArticle } from '@/components/thick-as-thieves-article';
-import { createThickAsThievesMetadata, thickAsThievesImages } from '@/lib/thick-as-thieves';
+import {
+ createThickAsThievesMetadata,
+ tatRoadmapActionRows,
+ tatRoadmapJumpLinks,
+ tatRoadmapSearchIntent,
+ tatRoadmapSourceRows,
+ tatRoadmapStatusItems,
+ thickAsThievesImages,
+} from '@/lib/thick-as-thieves';
 
 const title = 'Thick As Thieves Roadmap, Console Plans & Live Service Status';
 const description =
@@ -65,7 +79,16 @@ export default function ThickAsThievesRoadmapConsolePage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Thick As Thieves Roadmap & Console Quick Answer"
+ answer="Thick As Thieves is not a live service game. More content is intended after launch, but no fixed schedule is announced. Console versions are not announced for launch; the current focus is the PC release. Buy for the present product, not for an invented future roadmap."
+ intentRows={tatRoadmapSearchIntent}
+ jumpLinks={tatRoadmapJumpLinks}
+ />
+
+ <StatusPanel items={tatRoadmapStatusItems} />
+
+ <section id="live-service-and-post-launch-support" className="prose-game">
  <h2>Live Service and Post-Launch Support</h2>
  <ArticleImage
  src={thickAsThievesImages.roadmap}
@@ -100,7 +123,7 @@ export default function ThickAsThievesRoadmapConsolePage() {
  </div>
 
  <section className="prose-game">
- <h2>Console Status</h2>
+ <h2 id="console-status">Console Status</h2>
  <ArticleImage
  src={thickAsThievesImages.screenshot5}
  alt="Thick As Thieves console status image"
@@ -113,7 +136,7 @@ export default function ThickAsThievesRoadmapConsolePage() {
  hopeful signal, not a promise.
  </p>
 
- <h2>Who Should Wait</h2>
+ <h2 id="who-should-wait">Who Should Wait</h2>
  <ArticleImage
  src={thickAsThievesImages.screenshot6}
  alt="Thick As Thieves wait for roadmap image"
@@ -125,6 +148,11 @@ export default function ThickAsThievesRoadmapConsolePage() {
  <li>Wait if the 2-map, 16-mission introductory scope feels too small for you.</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Roadmap Plan</h2>
+ <ActionTable rows={tatRoadmapActionRows} />
+
+ <SourceCheckTable title="Thick As Thieves Roadmap & Console Sources" rows={tatRoadmapSourceRows} />
  </ThickAsThievesArticle>
  );
 }

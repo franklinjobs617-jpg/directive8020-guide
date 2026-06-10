@@ -284,6 +284,672 @@ export const starminerSourceRows = [
  },
 ];
 
+// Game modes page depth exports
+export const smGameModesActionRows = [
+  {
+    step: '1. Pick Campaign as the first save',
+    doThis: 'Start with Campaign unless you already know how mining, power, logistics, heat, and defense interact. Treat Campaign as the structured path that teaches the systems before Sandbox freedom becomes useful.',
+    why: 'Starminer is a systems-heavy sandbox. A blank Sandbox save drops you into a build space before the game has taught you the rules, so mistakes become expensive instead of educational.',
+  },
+  {
+    step: '2. Move to Sandbox after one stable Campaign run',
+    doThis: 'Once Campaign missions have introduced production chains, energy distribution, and basic defense, start a Sandbox save to test customized stations, ships, and resource layouts.',
+    why: 'Sandbox is creative space, not tutorial space. Builders who already understand power, heat, and storage will move faster there; new players will just rebuild the same mistakes.',
+  },
+  {
+    step: '3. Test Survival after defenses are stable',
+    doThis: 'Use Survival to pressure-test your defense plans. Start it only after you can build stable energy distribution, weapon coverage, and repair support in a normal save.',
+    why: 'Survival uses endless enemy waves. If your station browns out, runs out of repair materials, or has weapon coverage gaps, Survival will expose those problems in minutes rather than hours.',
+  },
+  {
+    step: '4. Save a blueprint after a build proves stable',
+    doThis: 'Once a station, ship, or mining platform survives real use, save a personal blueprint. Use the saved blueprint as a starting point in the next save instead of rebuilding from scratch.',
+    why: 'Blueprint save and recall is a confirmed feature. Treating it as a checkpoint habit keeps Early Access iteration cheaper when the game updates between saves.',
+  },
+  {
+    step: '5. Re-check balance during Early Access',
+    doThis: 'Treat each mode as a work in progress. Compare Campaign pacing, Sandbox customization, and Survival balance against the latest patch notes and player reports instead of trusting launch-day advice.',
+    why: 'The official FAQ says all three modes will be refined during Early Access. Treating early guides as launch-window advice prevents old builds from masquerading as final balance.',
+  },
+] as const;
+
+export const smGameModesStatusItems = [
+  { label: 'Confirmed modes', value: 'Campaign, Sandbox, and Survival per the official FAQ.', status: 'verified' as const },
+  { label: 'Best first save', value: 'Campaign is the recommended starting mode for most new players.', status: 'verified' as const },
+  { label: 'Single-player', value: 'Confirmed on Steam. Multiplayer is planned, not live at launch.', status: 'verified' as const },
+  { label: 'Blueprint feature', value: 'Personal blueprint save and recall is confirmed. Community sharing is planned.', status: 'verified' as const },
+  { label: 'Early Access caveat', value: 'All three modes will be refined during Early Access, so treat launch advice as time-limited.', status: 'working' as const },
+  { label: 'Language', value: 'English listed on the Steam supported languages field.', status: 'verified' as const },
+];
+
+export const smGameModesSourceRows = [
+  {
+    claim: 'Campaign, Sandbox, and Survival are the official modes',
+    source: 'Official site',
+    status: 'verified' as const,
+    href: starminerOfficialUrl,
+    note: 'Use as the basis for mode identity and ordering.',
+  },
+  {
+    claim: 'Single-player, achievements, and Steam Cloud at launch',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: starminerSteamUrl,
+    note: 'Use for the launch feature inventory, not for multiplayer claims.',
+  },
+  {
+    claim: 'Personal blueprint save and recall is confirmed',
+    source: 'Official site',
+    status: 'verified' as const,
+    href: starminerOfficialUrl,
+    note: 'Use to confirm personal blueprint behavior. Community sharing is separate.',
+  },
+  {
+    claim: 'Early Access May 2026 positioning and mode refinement',
+    source: 'TheSixthAxis',
+    status: 'working' as const,
+    href: starminerSixthAxisUrl,
+    note: 'Use as a secondary source for the Early Access context.',
+  },
+  {
+    claim: 'SteamDB timing and release window',
+    source: 'SteamDB',
+    status: 'working' as const,
+    href: starminerSteamDbUrl,
+    note: 'Use for launch timing context, not for mode behavior claims.',
+  },
+];
+
+export const smGameModesSearchIntent = [
+  {
+    query: 'Starminer game modes',
+    answer: 'The official FAQ lists Campaign, Sandbox, and Survival. Campaign is the best first save for most players, Sandbox is for customized builds, and Survival is for endless-wave defense testing.',
+    href: '#modes-anchor',
+    label: 'Game modes',
+  },
+  {
+    query: 'Starminer best first mode',
+    answer: 'Campaign is the best beginner mode because it teaches mining, power, logistics, heat, and defense before Sandbox or Survival make sense.',
+    href: '#modes-anchor',
+    label: 'First mode',
+  },
+  {
+    query: 'Starminer Survival mode',
+    answer: 'Survival uses endless enemy waves. It is best tried after you can build stable mining, energy, and weapon coverage in a normal save.',
+    href: '#modes-anchor',
+    label: 'Survival',
+  },
+  {
+    query: 'Starminer Sandbox mode',
+    answer: 'Sandbox lets you customize starting conditions and chase self-made factory or fleet goals. Start here only after you understand power, heat, logistics, and defense pressure.',
+    href: '#modes-anchor',
+    label: 'Sandbox',
+  },
+];
+
+export const smGameModesJumpLinks = [
+  { href: '#modes-anchor', label: 'Mode anchor' },
+  { href: '/games/starminer/beginner-guide', label: 'Beginner guide' },
+  { href: '/games/starminer/ship-building', label: 'Ship building' },
+  { href: '/games/starminer/heat-aliens-defense', label: 'Heat and defense' },
+  { href: '/games/starminer/mining-logistics', label: 'Mining logistics' },
+];
+
+// Heat aliens defense page depth exports
+export const smHeatAliensActionRows = [
+  {
+    step: '1. Treat expansion as threat generation',
+    doThis: 'Plan a defense pass for every major expansion. Mining and building raise heat signature, and critical heat can bring alien attention before you finish a new module.',
+    why: 'Heat turns economic growth into danger. Defending after the attack starts is always more expensive than defending before the next expansion is built.',
+  },
+  {
+    step: '2. Protect power, storage, refining, and routes',
+    doThis: 'When you place weapons and shields, cover the systems that keep the station alive. Do not rely on a single outer ring of turrets if core systems stay exposed.',
+    why: 'A station that browns out during an attack is not really defended. If storage, refining, or repair support is exposed, the same attack becomes a cascade failure.',
+  },
+  {
+    step: '3. Plan energy distribution before combat arrives',
+    doThis: 'Reserve power headroom for weapons, shields, repair, and life support. Test the worst-case load in a normal save before trusting the same station in Survival waves.',
+    why: 'Energy distribution is the difference between an armed station and a defended station. A defensive plan that ignores brownouts will fail at the worst possible moment.',
+  },
+  {
+    step: '4. Use warship support for mobile response',
+    doThis: 'Build at least one patrol or escort ship and position it near mining routes or station approach lanes. Use mobile ships to screen angles, rescue positions, and chase small threats.',
+    why: 'Static defenses are cheaper per unit, but pirates and aliens do not only attack from the obvious edge. Mobile ships fill the gap between turrets and reinforcements.',
+  },
+  {
+    step: '5. Repair, learn, and adjust after each attack',
+    doThis: 'After an attack, repair, identify which system was exposed, and adjust the layout before expanding again. Do not simply rebuild the same station and hope the next attack goes better.',
+    why: 'Defensive iteration is the main difference between a launch-day save and a stable mid-game save. Each attack is information about the next layout, not just a cost.',
+  },
+] as const;
+
+export const smHeatAliensStatusItems = [
+  { label: 'Heat signature', value: 'Mining, building, and expansion raise heat. Critical heat can trigger alien detection.', status: 'verified' as const },
+  { label: 'Alien threat', value: 'Steam confirms aliens detect you when heat reaches critical levels. Official site also lists pirates.', status: 'verified' as const },
+  { label: 'Defense priority', value: 'Cover power, storage, refining, production, and approach routes rather than only the outside edge.', status: 'working' as const },
+  { label: 'Energy distribution', value: 'Weapons and defenses need power. A station that browns out during attacks is not actually defended.', status: 'working' as const },
+  { label: 'Warship support', value: 'Use mobile ships to protect mining routes and station approaches, not only static turrets.', status: 'working' as const },
+  { label: 'Survival readiness', value: 'Test defense plans in a normal save before trusting them in endless-wave Survival pressure.', status: 'needs-check' as const },
+];
+
+export const smHeatAliensSourceRows = [
+  {
+    claim: 'Heat signature and alien detection at critical levels',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: starminerSteamUrl,
+    note: 'Use as the basis for the heat-to-threat chain.',
+  },
+  {
+    claim: 'Aliens and pirates as defended threats',
+    source: 'Official site',
+    status: 'verified' as const,
+    href: starminerOfficialUrl,
+    note: 'Use for pirate and alien threat framing.',
+  },
+  {
+    claim: 'Defense and weapon system descriptions',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: starminerSteamUrl,
+    note: 'Use for turret and shield context, not for specific build advice.',
+  },
+  {
+    claim: 'Survival mode endless enemy waves',
+    source: 'Official site',
+    status: 'verified' as const,
+    href: starminerOfficialUrl,
+    note: 'Use to explain why defense planning matters before Survival.',
+  },
+  {
+    claim: 'Community heat and defense patterns',
+    source: 'Reddit community discussions',
+    status: 'needs-check' as const,
+    href: 'https://www.reddit.com/search/?q=Starminer%20heat%20aliens%20defense',
+    note: 'Use for Early Access community patterns, not as final balance.',
+  },
+];
+
+export const smHeatAliensSearchIntent = [
+  {
+    query: 'Starminer heat signature',
+    answer: 'Steam says mining, building, and expansion raise heat. Critical heat can bring alien attention, so defense should be planned before the next big expansion.',
+    href: '#heat-anchor',
+    label: 'Heat signature',
+  },
+  {
+    query: 'Starminer aliens',
+    answer: 'Yes. Steam confirms aliens detect you when heat reaches critical levels. The official site also lists pirates as a defended threat.',
+    href: '#heat-anchor',
+    label: 'Aliens',
+  },
+  {
+    query: 'Starminer defense',
+    answer: 'Protect power, storage, refining, production, and approach routes. Plan energy distribution before the next attack and use mobile ships for screening.',
+    href: '#heat-anchor',
+    label: 'Defense',
+  },
+  {
+    query: 'Starminer Survival mode',
+    answer: 'Survival is built around endless enemy waves. Try it after mining, power, and weapon coverage are stable in a normal save.',
+    href: '#heat-anchor',
+    label: 'Survival',
+  },
+];
+
+export const smHeatAliensJumpLinks = [
+  { href: '#heat-anchor', label: 'Heat anchor' },
+  { href: '/games/starminer/ship-building', label: 'Ship building' },
+  { href: '/games/starminer/mining-logistics', label: 'Mining logistics' },
+  { href: '/games/starminer/game-modes', label: 'Game modes' },
+  { href: '/games/starminer/beginner-guide', label: 'Beginner guide' },
+];
+
+// Is-it-worth-it page depth exports
+export const smWorthItActionRows = [
+  {
+    step: '1. Match the buying decision to the missing evidence',
+    doThis: 'Decide what you need confirmed before buying. If you need price, reviews, recommended specs, Steam Deck support, multiplayer, or modding, wait for those signals instead of guessing.',
+    why: 'Early Access changes fast. The best way to avoid regret is to match the wait or buy decision to the specific thing that would actually change your mind.',
+  },
+  {
+    step: '2. Treat Steam Deck as a wait, not a buy',
+    doThis: 'Do not buy Starminer for Steam Deck as a primary device. The current store data does not confirm Steam Deck compatibility, and Early Access performance is not yet stable.',
+    why: 'Unsupported or unknown compatibility is a strong reason to wait. Early Access updates can change compatibility, so treat the wait as informed, not as fear.',
+  },
+  {
+    step: '3. Plan around the confirmed solo loop',
+    doThis: 'Buy for the confirmed single-player systems mastery loop: modular building, mining, logistics, ships, and defense. Plan a Campaign save first, not a long Sandbox or Survival commitment.',
+    why: 'Confirmed features are reliable. Treating the buy decision as a solo experience with systems depth prevents the launch-week save from turning into an early-access regret.',
+  },
+  {
+    step: '4. Verify PC specs and the missing recommended tier',
+    doThis: 'Compare your hardware to the official minimum and to the missing recommended tier. Use the system-requirements page and avoid building huge stations on minimum hardware until you have tested performance.',
+    why: 'Minimum specs are a floor. The recommended tier is not listed yet, so a Campaign or small Sandbox save is the safest first test of how the game actually runs on your hardware.',
+  },
+  {
+    step: '5. Track multiplayer, mods, and blueprint sharing as planned',
+    doThis: 'Do not treat multiplayer, modding, or community blueprint sharing as live features. Watch the Steam store, official site, and developer posts for exact wording before promising any of them in your save plan.',
+    why: 'Planned features can land mid-Early Access. Treating them as roadmap items instead of launch guarantees keeps the buy decision honest and avoids overpromising to other players.',
+  },
+] as const;
+
+export const smWorthItStatusItems = [
+  { label: 'Genre fit', value: 'Modular building, mining, logistics, ships, and defense planning. Strong for systems-focused solo players.', status: 'verified' as const },
+  { label: 'Steam Deck', value: 'Not confirmed by current store data. Treat handheld play as a wait.', status: 'needs-check' as const },
+  { label: 'Single-player', value: 'Confirmed on Steam. Multiplayer is planned, not live.', status: 'verified' as const },
+  { label: 'Modding', value: 'Described as a development priority. Do not assume Workshop support at launch.', status: 'working' as const },
+  { label: 'Reviews and user signal', value: 'Should be checked once the Steam store is live. Do not assume before launch.', status: 'needs-check' as const },
+  { label: 'Price', value: 'Should be checked once the Steam store is live. Avoid trusting pre-launch price chatter.', status: 'needs-check' as const },
+];
+
+export const smWorthItSourceRows = [
+  {
+    claim: 'Single-player, achievements, and Steam Cloud at launch',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: starminerSteamUrl,
+    note: 'Use for the confirmed feature inventory.',
+  },
+  {
+    claim: 'Modular construction, mining, production, and combat systems',
+    source: 'Official site',
+    status: 'verified' as const,
+    href: starminerOfficialUrl,
+    note: 'Use as the basis for the genre and fit claims.',
+  },
+  {
+    claim: 'Early Access May 2026 positioning',
+    source: 'TheSixthAxis',
+    status: 'working' as const,
+    href: starminerSixthAxisUrl,
+    note: 'Use as a secondary source for the Early Access context.',
+  },
+  {
+    claim: 'SteamDB timing and release window',
+    source: 'SteamDB',
+    status: 'working' as const,
+    href: starminerSteamDbUrl,
+    note: 'Use for timing context, not for buying advice.',
+  },
+  {
+    claim: 'Multiplayer, modding, and blueprint sharing roadmap',
+    source: 'Official site',
+    status: 'working' as const,
+    href: starminerOfficialUrl,
+    note: 'Use to confirm planned features, not to promise launch availability.',
+  },
+];
+
+export const smWorthItSearchIntent = [
+  {
+    query: 'Is Starminer worth it',
+    answer: 'Worth considering for systems-focused solo builders. Wait if your decision depends on price, reviews, Steam Deck, multiplayer, modding, or community blueprint sharing.',
+    href: '#worthit-anchor',
+    label: 'Worth it',
+  },
+  {
+    query: 'Starminer Steam Deck',
+    answer: 'Compatibility is not confirmed by current store data. Handheld players should wait for compatibility results or trusted player reports.',
+    href: '#worthit-anchor',
+    label: 'Steam Deck',
+  },
+  {
+    query: 'Starminer multiplayer',
+    answer: 'Multiplayer is described as a development priority, not as a confirmed launch feature. Treat solo play as the reliable assumption.',
+    href: '#worthit-anchor',
+    label: 'Multiplayer',
+  },
+  {
+    query: 'Starminer mods',
+    answer: 'Modding is a development priority. Do not assume Steam Workshop support until an official store or developer update confirms it.',
+    href: '#worthit-anchor',
+    label: 'Mods',
+  },
+];
+
+export const smWorthItJumpLinks = [
+  { href: '#worthit-anchor', label: 'Buy or wait anchor' },
+  { href: '/games/starminer/release-date', label: 'Release status' },
+  { href: '/games/starminer/system-requirements', label: 'PC specs' },
+  { href: '/games/starminer/multiplayer-mods-blueprints', label: 'Mods and multiplayer' },
+  { href: '/games/starminer/beginner-guide', label: 'Beginner guide' },
+];
+
+// Multiplayer mods blueprints page depth exports
+export const smMultiplayerActionRows = [
+  {
+    step: '1. Treat single-player as the only confirmed launch path',
+    doThis: 'Plan your first save as a solo experience. Use Campaign, Sandbox, Survival, and personal blueprint save and recall, and avoid promising co-op or shared-world features in your guide or plan.',
+    why: 'Single-player is the only launch-window certainty. Building a save plan around unconfirmed features sets the wrong expectations and risks wasted prep.',
+  },
+  {
+    step: '2. Use personal blueprint save and recall as a design habit',
+    doThis: 'Save personal blueprints after a station, ship, or platform proves stable. Recall those blueprints as starting points in new saves instead of rebuilding from scratch.',
+    why: 'Blueprint save and recall is confirmed by the official FAQ. Treating it as a checkpoint habit keeps iteration cheap and makes Experimental patches less punishing.',
+  },
+  {
+    step: '3. Watch the store, site, and developer posts for roadmap changes',
+    doThis: 'For multiplayer, modding, and community blueprint sharing, watch the Steam store, the official site, and any developer posts. Do not write those features as live until official labels change.',
+    why: 'Early Access roadmaps change. Treating official channels as the only source prevents you from repeating a rumor as a feature and embarrassing a save plan later.',
+  },
+  {
+    step: '4. Save a reusable starter design early',
+    doThis: 'Build a compact station and a mining ship that survive real use, then save both as personal blueprints. Use the saved designs as your baseline in every new save.',
+    why: 'A reusable starter saves the most time across Early Access patches. The first stable design becomes the safety net when a new patch breaks a different design.',
+  },
+  {
+    step: '5. Do not promise features you have not seen in store copy',
+    doThis: 'In guides, plans, and friend recommendations, separate confirmed features (single-player, blueprint save, achievements, Steam Cloud) from planned features (multiplayer, modding, community sharing).',
+    why: 'Confirmed and planned are not the same thing. Clear labeling protects your credibility and gives other players a better mental model of what to expect on day one.',
+  },
+] as const;
+
+export const smMultiplayerStatusItems = [
+  { label: 'Single-player', value: 'Confirmed on Steam. Treat solo play as the launch-window assumption.', status: 'verified' as const },
+  { label: 'Personal blueprints', value: 'Save and recall is confirmed by the official FAQ.', status: 'verified' as const },
+  { label: 'Community blueprints', value: 'Sharing is described as planned, not as a confirmed launch feature.', status: 'working' as const },
+  { label: 'Multiplayer', value: 'Described as a development priority. Do not write co-op guides as if it is live.', status: 'working' as const },
+  { label: 'Modding', value: 'Described as a development priority. Workshop support is not confirmed.', status: 'working' as const },
+  { label: 'Steam achievements', value: 'Confirmed on Steam. Unlock conditions can land later than the launch label.', status: 'verified' as const },
+];
+
+export const smMultiplayerSourceRows = [
+  {
+    claim: 'Single-player, achievements, and Steam Cloud at launch',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: starminerSteamUrl,
+    note: 'Use for the launch feature inventory.',
+  },
+  {
+    claim: 'Personal blueprint save and recall is confirmed',
+    source: 'Official site',
+    status: 'verified' as const,
+    href: starminerOfficialUrl,
+    note: 'Use to confirm personal blueprint behavior.',
+  },
+  {
+    claim: 'Multiplayer and modding are development priorities',
+    source: 'Official site',
+    status: 'working' as const,
+    href: starminerOfficialUrl,
+    note: 'Use for roadmap language, not for launch availability promises.',
+  },
+  {
+    claim: 'Early Access positioning and roadmap',
+    source: 'TheSixthAxis',
+    status: 'working' as const,
+    href: starminerSixthAxisUrl,
+    note: 'Use as a secondary source for the Early Access context.',
+  },
+  {
+    claim: 'SteamDB timing and release window',
+    source: 'SteamDB',
+    status: 'working' as const,
+    href: starminerSteamDbUrl,
+    note: 'Use for timing context only.',
+  },
+];
+
+export const smMultiplayerSearchIntent = [
+  {
+    query: 'Starminer multiplayer',
+    answer: 'Multiplayer is a development priority, not a confirmed launch feature. Treat single-player as the reliable launch assumption.',
+    href: '#multiplayer-anchor',
+    label: 'Multiplayer',
+  },
+  {
+    query: 'Starminer mods',
+    answer: 'Modding is a development priority. Do not assume Steam Workshop or mod tools until an official update confirms them.',
+    href: '#multiplayer-anchor',
+    label: 'Mods',
+  },
+  {
+    query: 'Starminer blueprints',
+    answer: 'Personal blueprint save and recall is confirmed. Community blueprint sharing is planned, not guaranteed at launch.',
+    href: '#multiplayer-anchor',
+    label: 'Blueprints',
+  },
+  {
+    query: 'Starminer Steam Workshop',
+    answer: 'Not confirmed by current store data. Treat it as a possible future priority until an official feature label or developer update confirms it.',
+    href: '#multiplayer-anchor',
+    label: 'Workshop',
+  },
+];
+
+export const smMultiplayerJumpLinks = [
+  { href: '#multiplayer-anchor', label: 'Feature anchor' },
+  { href: '/games/starminer/is-it-worth-it', label: 'Is it worth it' },
+  { href: '/games/starminer/release-date', label: 'Release status' },
+  { href: '/games/starminer/game-modes', label: 'Game modes' },
+  { href: '/games/starminer/beginner-guide', label: 'Beginner guide' },
+];
+
+// Release date page depth exports
+export const smReleaseActionRows = [
+  {
+    step: '1. Treat the Steam button as the final live signal',
+    doThis: 'Open the Steam store page on launch day and check whether the button shows purchase, install, or coming soon. Use that button, not calendar text, as the final availability check.',
+    why: 'Store state can change on launch day. Calendar dates and SteamDB timing are useful context, but the live store button is the only proof that the game is actually buyable or installable.',
+  },
+  {
+    step: '2. Use SteamDB timing for window planning',
+    doThis: 'Plan your launch session around the SteamDB unlock time, not just the calendar date. Convert the UTC time to your local zone before deciding when to start the download.',
+    why: 'SteamDB timing is a useful launch window, but it is still a third-party tracker. Pair it with the live store button and your own platform countdown before planning a session.',
+  },
+  {
+    step: '3. Plan an Early Access mindset for the first sessions',
+    doThis: 'Treat the first few sessions as iteration, not as a finished game. Expect balance, performance, and content updates, and avoid building a single save that depends on launch-day balance being final.',
+    why: 'Early Access games change. A save that assumes launch balance as final will feel rough after the first big patch. A save that treats the launch build as a snapshot stays useful across updates.',
+  },
+  {
+    step: '4. Confirm platform and language before installing',
+    doThis: 'Confirm Windows support, English language, and PC platform on the Steam store before installing. Do not assume console, Mac, or additional language support until an official label appears.',
+    why: 'The current Steam listing is Windows and English only. Confirming platform and language up front avoids wasted install time and keeps the launch session focused on the supported feature set.',
+  },
+  {
+    step: '5. Cross-check the official site and Steam for contradictions',
+    doThis: 'When the Steam store and the official site disagree, follow whichever source is most recent and most specific. Treat older copy and third-party trackers as background, not as ground truth.',
+    why: 'The official site, Steam, and SteamDB can drift. The safest launch decision is the one backed by the most recent and most specific source, not the one that has been repeated the most times.',
+  },
+] as const;
+
+export const smReleaseStatusItems = [
+  { label: 'Steam release date', value: 'May 27, 2026 per the Steam store listing.', status: 'verified' as const },
+  { label: 'SteamDB unlock', value: '27 May 2026 at 16:00 UTC per SteamDB.', status: 'working' as const },
+  { label: 'Early Access', value: 'Confirmed by the Steam tag and the official site wording.', status: 'verified' as const },
+  { label: 'Steam store page', value: 'Confirmed as the primary PC store page.', status: 'verified' as const },
+  { label: 'Epic Games Store', value: 'Listed as coming soon on the official site. Not the first place to check on launch day.', status: 'working' as const },
+  { label: 'Console release', value: 'Not confirmed by the current Steam or official site copy. Treat as PC-only until news appears.', status: 'needs-check' as const },
+];
+
+export const smReleaseSourceRows = [
+  {
+    claim: 'Steam lists Starminer for May 27, 2026 with single-player, achievements, and Steam Cloud',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: starminerSteamUrl,
+    note: 'Use for the primary release date and feature inventory.',
+  },
+  {
+    claim: 'SteamDB lists 27 May 2026 at 16:00 UTC',
+    source: 'SteamDB',
+    status: 'working' as const,
+    href: starminerSteamDbUrl,
+    note: 'Use for timing context, not as the final live signal.',
+  },
+  {
+    claim: 'Official site describes Early Access in May 2026 with Steam and Epic coming soon',
+    source: 'Official site',
+    status: 'verified' as const,
+    href: starminerOfficialUrl,
+    note: 'Use for the Early Access framing and store positioning.',
+  },
+  {
+    claim: 'TheSixthAxis covered the May 2026 Early Access release',
+    source: 'TheSixthAxis',
+    status: 'working' as const,
+    href: starminerSixthAxisUrl,
+    note: 'Use as a secondary source for the Early Access context.',
+  },
+  {
+    claim: 'Steam Deck compatibility is not confirmed in store data',
+    source: 'Steam store page',
+    status: 'needs-check' as const,
+    href: starminerSteamUrl,
+    note: 'Use to keep Steam Deck as a wait, not a launch assumption.',
+  },
+];
+
+export const smReleaseSearchIntent = [
+  {
+    query: 'Starminer release date',
+    answer: 'Steam lists May 27, 2026. SteamDB lists 27 May 2026 at 16:00 UTC. Use the Steam store button as the final live availability check.',
+    href: '#release-anchor',
+    label: 'Release date',
+  },
+  {
+    query: 'Starminer Early Access',
+    answer: 'Confirmed by the Steam tag and the official site. Treat launch as Early Access and plan for balance and content updates.',
+    href: '#release-anchor',
+    label: 'Early Access',
+  },
+  {
+    query: 'Starminer Epic Games Store',
+    answer: 'Listed as coming soon on the official site. Steam is the confirmed store page to check first.',
+    href: '#release-anchor',
+    label: 'Epic',
+  },
+  {
+    query: 'Starminer consoles',
+    answer: 'Not confirmed by the current Steam and official site copy. Treat as a PC release until official console news appears.',
+    href: '#release-anchor',
+    label: 'Consoles',
+  },
+];
+
+export const smReleaseJumpLinks = [
+  { href: '#release-anchor', label: 'Release anchor' },
+  { href: '/games/starminer/system-requirements', label: 'PC specs' },
+  { href: '/games/starminer/is-it-worth-it', label: 'Is it worth it' },
+  { href: '/games/starminer/beginner-guide', label: 'Beginner guide' },
+  { href: '/games/starminer/game-modes', label: 'Game modes' },
+];
+
+// System requirements page depth exports
+export const smSpecActionRows = [
+  {
+    step: '1. Compare your PC to the official minimum tier',
+    doThis: 'Check Windows 10 32-bit, Intel Core i3-10100 / Ryzen 3 3100, 8 GB RAM, GTX 1050 / RX 560, DirectX 11, and 7 GB storage against your hardware before installing.',
+    why: 'The minimum tier is the official floor. Anything below it is not covered by the published requirements, and minimum-tier hardware is not covered by the recommended promises.',
+  },
+  {
+    step: '2. Plan a small Campaign first save',
+    doThis: 'Use the first Campaign save as a real test. Build a compact station, run a small mining loop, and watch for shader stutter, menu lag, and load times before expanding.',
+    why: 'A small save hides the most painful problems until you can fix them. Treating the first save as a hardware test gives you a chance to adjust settings before committing hours to a build.',
+  },
+  {
+    step: '3. Reserve storage and shader compilation room',
+    doThis: 'Keep at least 7 GB free on the target drive, and expect first-session shader compilation even on hardware that exceeds the minimum spec.',
+    why: 'Storage and shader compilation are platform-dependent. A small amount of launch-week stutter is not a sign of failure, but repeated hitches after the first session can be.',
+  },
+  {
+    step: '4. Read laptop thermals and background app caveats',
+    doThis: 'Laptop buyers should cap framerate, test on AC power, and watch fan and thermal behavior. Close browsers and background apps before testing large builds or Survival pressure.',
+    why: 'A tactics or sandbox game depends on readable UI and predictable frame pacing, not just on average framerate. Thermals and background load both look like game problems until they are isolated.',
+  },
+  {
+    step: '5. Plan for missing recommended specs',
+    doThis: 'Until a recommended tier appears, treat the missing recommended spec as a warning. Avoid building massive stations, heavy fleets, or Survival saves on minimum hardware until you have tested performance.',
+    why: 'A minimum spec proves the game can run, not that it will scale gracefully. The recommended tier is the safer planning anchor when present, and its absence is itself a signal to plan carefully.',
+  },
+] as const;
+
+export const smSpecStatusItems = [
+  { label: 'OS', value: 'Windows 10 32-bit per the official minimum listing.', status: 'verified' as const },
+  { label: 'Processor', value: 'Intel Core i3-10100 / AMD Ryzen 3 3100 or similar.', status: 'verified' as const },
+  { label: 'Memory', value: '8 GB RAM per the official minimum listing.', status: 'verified' as const },
+  { label: 'Graphics', value: 'Nvidia GTX 1050 / AMD Radeon RX 560 or similar.', status: 'verified' as const },
+  { label: 'DirectX', value: 'Version 11 per the official minimum listing.', status: 'verified' as const },
+  { label: 'Steam Deck', value: 'Not confirmed by current store data. Treat handheld play as a wait.', status: 'needs-check' as const },
+];
+
+export const smSpecSourceRows = [
+  {
+    claim: 'Official minimum PC requirements',
+    source: 'Steam store page',
+    status: 'verified' as const,
+    href: starminerSteamUrl,
+    note: 'Use for OS, CPU, GPU, RAM, DirectX, storage, and sound card lines.',
+  },
+  {
+    claim: 'No recommended PC tier listed yet',
+    source: 'Steam store page',
+    status: 'needs-check' as const,
+    href: starminerSteamUrl,
+    note: 'Use to explain why near-minimum hardware is treated as a wait, not a buy.',
+  },
+  {
+    claim: 'Steam Deck compatibility not in current store data',
+    source: 'Steam store page',
+    status: 'needs-check' as const,
+    href: starminerSteamUrl,
+    note: 'Use to keep Steam Deck as a wait, not a buy.',
+  },
+  {
+    claim: 'Sandbox and systems scope for performance planning',
+    source: 'Official site',
+    status: 'verified' as const,
+    href: starminerOfficialUrl,
+    note: 'Use to explain why late-game performance can differ from a small starter save.',
+  },
+  {
+    claim: 'Community Early Access performance patterns',
+    source: 'Reddit community discussions',
+    status: 'working' as const,
+    href: 'https://www.reddit.com/search/?q=Starminer%20performance%20system%20requirements',
+    note: 'Use for Early Access performance patterns, not as final balance claims.',
+  },
+];
+
+export const smSpecSearchIntent = [
+  {
+    query: 'Starminer system requirements',
+    answer: 'Steam lists Windows 10 32-bit, i3-10100 / Ryzen 3 3100, 8 GB RAM, GTX 1050 / RX 560, DirectX 11, and 7 GB storage. No recommended tier is listed yet.',
+    href: '#spec-anchor',
+    label: 'PC specs',
+  },
+  {
+    query: 'Starminer Steam Deck',
+    answer: 'Steam Deck compatibility is not confirmed in the current store data. Handheld players should wait for compatibility results.',
+    href: '#spec-anchor',
+    label: 'Steam Deck',
+  },
+  {
+    query: 'Starminer DirectX',
+    answer: 'The official minimum requirements list DirectX 11, not DirectX 12.',
+    href: '#spec-anchor',
+    label: 'DirectX',
+  },
+  {
+    query: 'Starminer storage',
+    answer: 'Steam lists 7 GB of available storage. Plan a small Campaign save first instead of a large Sandbox or Survival commitment on minimum hardware.',
+    href: '#spec-anchor',
+    label: 'Storage',
+  },
+];
+
+export const smSpecJumpLinks = [
+  { href: '#spec-anchor', label: 'Spec anchor' },
+  { href: '/games/starminer/release-date', label: 'Release status' },
+  { href: '/games/starminer/is-it-worth-it', label: 'Is it worth it' },
+  { href: '/games/starminer/beginner-guide', label: 'Beginner guide' },
+  { href: '/games/starminer/game-modes', label: 'Game modes' },
+];
+
 export const starminerRelatedGuides: GameGuideLink[] = [
  {
  title: "Starminer Guide Hub",

@@ -182,6 +182,332 @@ export const jumpKingQuestSourceRows = [
  },
 ];
 
+export const jumpKingQuestWorthItActionRows = [
+ {
+ step: '1. Confirm your genre fit before paying full price',
+ doThis: 'Decide whether you actually want hard climbing mixed with combat, exploration, and online pressure, not just a nostalgia purchase for Jump King 1.',
+ why: 'Quest expands the formula. If you only want the original-style climb, this is the wrong 1.0 moment to commit at full price.',
+ },
+ {
+ step: '2. Read recent Steam reviews for difficulty and combat',
+ doThis: 'Open Steam, sort reviews by recent, and read at least 10 recent posts about difficulty, controller, and combat pressure before buying.',
+ why: 'The Very Positive signal is encouraging, but launch-week reviews are where you find out whether your tolerance matches the game.',
+ },
+ {
+ step: '3. Test co-op or PvP before turning it into a group purchase',
+ doThis: 'If buying for friends, run a short co-op or PvP session during a refund window and check party setup, voice, and controller comfort.',
+ why: 'Online co-op and PvP are listed on Steam, but the actual group experience depends on your platform and party setup.',
+ },
+ {
+ step: '4. Plan a short refund-window evaluation',
+ doThis: 'Block two hours inside Steam refund rules, run a solo climb, a co-op attempt, and a PvP attempt before deciding to keep or refund.',
+ why: 'Refund rules favor early decisions. A 1.0 launch is exactly when a short structured test is most useful.',
+ },
+ {
+ step: '5. Decide buy-now vs wait based on what you actually need',
+ doThis: 'Buy now if genre fit, combat, and online play are the draw. Wait if you need settled balance, a route wiki, or verified controller comfort.',
+ why: 'Launch week is a match between your tolerance for difficulty and the amount of community information you need before starting.',
+ },
+] as const;
+
+export const jumpKingQuestWorthItStatusItems = [
+ { label: 'Steam review signal', value: 'Very Positive overall and recent reviews at the latest check.', status: 'verified' as const },
+ { label: 'Full release date', value: 'May 25, 2026 on Steam PC.', status: 'verified' as const },
+ { label: 'Core feature set', value: 'Single-player, Online Co-op, Online PvP, Achievements, Cloud, Family Sharing.', status: 'verified' as const },
+ { label: 'Controller comfort', value: 'Steam-listed controller support should be tested on your exact setup.', status: 'needs-check' as const },
+ { label: 'Launch discount', value: '20% introductory offer ending June 8, 2026 at the latest check.', status: 'verified' as const },
+ { label: 'Best-build claims', value: 'Avoided. Quest has no verified tier list; difficulty and combat comfort depend on player testing.', status: 'working' as const },
+];
+
+export const jumpKingQuestWorthItSourceRows = [
+ {
+ claim: 'Should I buy JUMP KING QUEST now?',
+ source: 'Steam store and recent reviews',
+ status: 'verified' as const,
+ href: jumpKingQuestSteamUrl,
+ note: 'Use Steam for review signal, feature list, and the 20% launch discount. Use recent reviews for difficulty, controller, and multiplayer reality.',
+ },
+ {
+ claim: 'How different is it from Jump King 1?',
+ source: 'Steam store description',
+ status: 'verified' as const,
+ href: jumpKingQuestSteamUrl,
+ note: 'Quest adds combat, exploration, character customization, online co-op, and online PvP. It is not a 1:1 remake.',
+ },
+ {
+ claim: 'Is JUMP KING QUEST a good co-op buy?',
+ source: 'Steam community discussions',
+ status: 'working' as const,
+ href: jumpKingQuestSteamDiscussionsUrl,
+ note: 'Use discussions for party setup, voice, and player reports. Treat community difficulty claims as working signal, not final proof.',
+ },
+ {
+ claim: 'Where do 1.0 launch updates come from?',
+ source: 'Steam news hub',
+ status: 'verified' as const,
+ href: jumpKingQuestSteamNewsUrl,
+ note: 'Steam news is the right place for Phantom Update scope, balance patches, and confirmed post-launch notes.',
+ },
+] as const;
+
+export const jumpKingQuestWorthItSearchIntent = [
+ {
+ query: 'Is JUMP KING QUEST worth it',
+ answer: 'Buy if you want hard climbing with combat, exploration, and online play. Wait if you need settled balance, a route wiki, or verified controller comfort.',
+ href: '#worth-it-fit',
+ label: 'Worth it',
+ },
+ {
+ query: 'JUMP KING QUEST review signal',
+ answer: 'Steam shows Very Positive overall and recent reviews. Read recent posts for difficulty, controller, and combat expectations.',
+ href: '#worth-it-reviews',
+ label: 'Reviews',
+ },
+ {
+ query: 'JUMP KING QUEST difficulty',
+ answer: 'Quest is framed as a difficult punishment platformer with combat. Difficulty is a player-fit question, not a single tier-list claim.',
+ href: '#worth-it-fit',
+ label: 'Difficulty',
+ },
+ {
+ query: 'JUMP KING QUEST co-op or PvP',
+ answer: 'Steam lists Online Co-op and Online PvP. Test party setup, voice, and input comfort during refund rules before keeping the game.',
+ href: '#worth-it-coop',
+ label: 'Multiplayer',
+ },
+] as const;
+
+export const jumpKingQuestWorthItJumpLinks = [
+ { href: '#worth-it-fit', label: 'Who it fits' },
+ { href: '#worth-it-reviews', label: 'Review signal' },
+ { href: '#worth-it-coop', label: 'Co-op / PvP' },
+ { href: '/games/jump-king-quest/release-date-and-phantom-update', label: 'Release & 1.0' },
+ { href: '/games/jump-king-quest/multiplayer-controller', label: 'Multiplayer & controller' },
+ { href: '/games/jump-king-quest/beginner-guide', label: 'Beginner guide' },
+] as const;
+
+export const jumpKingQuestMultiplayerActionRows = [
+ {
+ step: '1. Confirm your platform scope first',
+ doThis: 'Open Steam and confirm the platform entry shows Single-player, Online Co-op, Online PvP, Steam Cloud, and Family Sharing before you plan around the feature.',
+ why: 'Public Steam feature labels are the safe anchor. Console, crossplay, and split-screen claims need separate confirmation.',
+ },
+ {
+ step: '2. Run a short solo test before bringing a group',
+ doThis: 'Spend 30-60 minutes on a solo climb to learn jump timing, combat spacing, and recovery routes before you invite friends.',
+ why: 'Online co-op and PvP are easier to enjoy when each player already understands basic platforming pressure.',
+ },
+ {
+ step: '3. Test your controller for jump charge and combat',
+ doThis: 'Test your preferred controller for jump charge consistency, attack inputs, menu navigation, and camera movement before a long session.',
+ why: 'Precision platforming is sensitive to input comfort. A short test prevents mid-session frustration.',
+ },
+ {
+ step: '4. Check party setup and voice expectations',
+ doThis: 'Decide on invites, region, voice channel, and a recovery protocol before a serious co-op run.',
+ why: 'Bad party flow can turn a safe climb into a messy recovery loop. Communication matters in tight jumps.',
+ },
+ {
+ step: '5. Avoid split-screen and crossplay claims',
+ doThis: 'Treat split-screen, couch co-op, and crossplay as unconfirmed until Steam or Nexile explicitly lists them.',
+ why: 'This guide is anchored to PC via Steam. Other labels need separate official confirmation.',
+ },
+] as const;
+
+export const jumpKingQuestMultiplayerStatusItems = [
+ { label: 'Single-player', value: 'Steam lists Single-player.', status: 'verified' as const },
+ { label: 'Online co-op', value: 'Steam lists Online Co-op.', status: 'verified' as const },
+ { label: 'Online PvP', value: 'Steam lists Online PvP.', status: 'verified' as const },
+ { label: 'Steam Cloud and Family Sharing', value: 'Both listed on the Steam feature list.', status: 'verified' as const },
+ { label: 'Controller support', value: 'Steam-listed support should be tested on your exact controller.', status: 'needs-check' as const },
+ { label: 'Split-screen / crossplay', value: 'Not confirmed in current public Steam feature labels.', status: 'needs-check' as const },
+];
+
+export const jumpKingQuestMultiplayerSourceRows = [
+ {
+ claim: 'Is JUMP KING QUEST multiplayer?',
+ source: 'Steam store',
+ status: 'verified' as const,
+ href: jumpKingQuestSteamUrl,
+ note: 'Use Steam for the feature list. Single-player, Online Co-op, Online PvP, Cloud, and Family Sharing are confirmed labels.',
+ },
+ {
+ claim: 'Does controller support work for JUMP KING QUEST?',
+ source: 'Steam store controller field',
+ status: 'needs-check' as const,
+ href: jumpKingQuestSteamUrl,
+ note: 'Steam lists controller support. Comfort and layout still depend on your specific controller and play style.',
+ },
+ {
+ claim: 'Is JUMP KING QUEST split-screen or crossplay?',
+ source: 'Steam feature labels and store description',
+ status: 'needs-check' as const,
+ href: jumpKingQuestSteamUrl,
+ note: 'Split-screen, couch co-op, and crossplay are not in the current public Steam feature labels.',
+ },
+ {
+ claim: 'How is online co-op and PvP described?',
+ source: 'Steam store description',
+ status: 'verified' as const,
+ href: jumpKingQuestSteamUrl,
+ note: 'Store copy describes parties, duel framing, and player interference during climbs. Treat descriptions as direction, not balance data.',
+ },
+ {
+ claim: 'What are players reporting about multiplayer?',
+ source: 'Steam discussions',
+ status: 'working' as const,
+ href: jumpKingQuestSteamDiscussionsUrl,
+ note: 'Use discussions for real party setup, voice, and PvP reports. Community signal, not official proof.',
+ },
+] as const;
+
+export const jumpKingQuestMultiplayerSearchIntent = [
+ {
+ query: 'JUMP KING QUEST multiplayer',
+ answer: 'Steam lists Single-player, Online Co-op, and Online PvP. Split-screen and crossplay are not confirmed in public Steam labels.',
+ href: '#multiplayer-confirmed',
+ label: 'Multiplayer',
+ },
+ {
+ query: 'JUMP KING QUEST co-op',
+ answer: 'Online Co-op is listed. Test party flow, voice, and input comfort during refund rules before relying on co-op for the long run.',
+ href: '#multiplayer-coop',
+ label: 'Co-op',
+ },
+ {
+ query: 'JUMP KING QUEST PvP',
+ answer: 'Online PvP is listed and framed around duels and player interference. Treat PvP as chaos-first until your group knows the mode.',
+ href: '#multiplayer-pvp',
+ label: 'PvP',
+ },
+ {
+ query: 'JUMP KING QUEST controller support',
+ answer: 'Steam lists controller support. Test jump charge, attack inputs, and menus on your exact controller before a long climb.',
+ href: '#multiplayer-controller',
+ label: 'Controller',
+ },
+] as const;
+
+export const jumpKingQuestMultiplayerJumpLinks = [
+ { href: '#multiplayer-confirmed', label: 'Confirmed features' },
+ { href: '#multiplayer-modes', label: 'Co-op / PvP modes' },
+ { href: '#multiplayer-pvp', label: 'PvP expectations' },
+ { href: '#multiplayer-controller', label: 'Controller checks' },
+ { href: '/games/jump-king-quest/is-it-worth-it', label: 'Is it worth it' },
+ { href: '/games/jump-king-quest/release-date-and-phantom-update', label: 'Release & 1.0' },
+] as const;
+
+export const jumpKingQuestReleaseActionRows = [
+ {
+ step: '1. Confirm the calendar date on Steam',
+ doThis: 'Open the Steam store page and write down the listed release date, Early Access start, and 1.0 / Phantom Update label before relying on community posts.',
+ why: 'Steam is the safe anchor. Forum posts and videos sometimes mix Early Access and 1.0 dates.',
+ },
+ {
+ step: '2. Separate Early Access history from 1.0 state',
+ doThis: 'Treat the February 12, 2025 Early Access start as history. Treat May 25, 2026 as the current live 1.0 state.',
+ why: 'Players searching for "release date" often need to know which transition the question refers to.',
+ },
+ {
+ step: '3. Read the Phantom Update framing carefully',
+ doThis: 'Open the Steam news hub and read the Phantom Update post for scope, endgame, and balance changes before repeating claims.',
+ why: 'Steam news is the right source for 1.0 scope. Community threads may overclaim or underclaim what is included.',
+ },
+ {
+ step: '4. Check the launch discount window',
+ doThis: 'If you are waiting for a discount, confirm the 20% introductory offer end date on Steam before assuming the offer is still active.',
+ why: 'Introductory offers have a fixed window. Steam is the safe place to confirm the current price and discount.',
+ },
+ {
+ step: '5. Plan your first session around 1.0 content',
+ doThis: 'After purchase, set a short refund-window block to test the live 1.0 build instead of relying on Early Access videos.',
+ why: '1.0 launch state and Early Access videos are not the same thing. A short test gives a real answer.',
+ },
+] as const;
+
+export const jumpKingQuestReleaseStatusItems = [
+ { label: 'Full release', value: 'May 25, 2026 on Steam PC.', status: 'verified' as const },
+ { label: 'Early Access start', value: 'February 12, 2025.', status: 'verified' as const },
+ { label: '1.0 / Phantom Update', value: 'Steam news labels the full launch as the 1.0 Phantom Update.', status: 'verified' as const },
+ { label: 'Review signal', value: 'Very Positive overall and recent reviews at the latest check.', status: 'verified' as const },
+ { label: 'Launch discount', value: '20% introductory offer ending June 8, 2026 at the latest check.', status: 'verified' as const },
+ { label: 'Current platform', value: 'PC via Steam is the verified public storefront in this guide.', status: 'verified' as const },
+];
+
+export const jumpKingQuestReleaseSourceRows = [
+ {
+ claim: 'When did JUMP KING QUEST leave Early Access?',
+ source: 'Steam store',
+ status: 'verified' as const,
+ href: jumpKingQuestSteamUrl,
+ note: 'Use Steam for the May 25, 2026 full release, February 12, 2025 Early Access start, feature list, and review signal.',
+ },
+ {
+ claim: 'What is the 1.0 Phantom Update?',
+ source: 'Steam news hub',
+ status: 'verified' as const,
+ href: jumpKingQuestSteamNewsUrl,
+ note: 'Steam news lists the 1.0 Phantom Update. Use it for update framing, not unverified route or boss claims.',
+ },
+ {
+ claim: 'Is there a launch discount?',
+ source: 'Steam store pricing',
+ status: 'verified' as const,
+ href: jumpKingQuestSteamUrl,
+ note: 'Steam shows a 20% introductory offer ending June 8, 2026 at the latest check.',
+ },
+ {
+ claim: 'What is the current review signal?',
+ source: 'Steam reviews',
+ status: 'verified' as const,
+ href: jumpKingQuestSteamUrl,
+ note: 'Steam shows Very Positive overall and recent reviews. Use this as a signal, not a guarantee of fit.',
+ },
+ {
+ claim: 'Where do post-launch updates appear?',
+ source: 'Steam discussions and news',
+ status: 'working' as const,
+ href: jumpKingQuestSteamDiscussionsUrl,
+ note: 'Discussions are useful for player reports. News is the right place for confirmed 1.0 patch scope.',
+ },
+] as const;
+
+export const jumpKingQuestReleaseSearchIntent = [
+ {
+ query: 'JUMP KING QUEST release date',
+ answer: 'May 25, 2026 on Steam PC. The full launch is the 1.0 Phantom Update that ended the Early Access run that began February 12, 2025.',
+ href: '#release-timeline',
+ label: 'Release',
+ },
+ {
+ query: 'JUMP KING QUEST Phantom Update',
+ answer: 'The 1.0 Phantom Update is the full-release label used in Steam news for the May 25, 2026 launch.',
+ href: '#release-phantom',
+ label: 'Phantom',
+ },
+ {
+ query: 'JUMP KING QUEST Early Access',
+ answer: 'Early Access began February 12, 2025 and ended with the 1.0 Phantom Update on May 25, 2026.',
+ href: '#release-timeline',
+ label: 'Early Access',
+ },
+ {
+ query: 'JUMP KING QUEST launch discount',
+ answer: 'Steam shows a 20% introductory offer ending June 8, 2026 at the latest check.',
+ href: '#release-discount',
+ label: 'Discount',
+ },
+] as const;
+
+export const jumpKingQuestReleaseJumpLinks = [
+ { href: '#release-timeline', label: 'Launch timeline' },
+ { href: '#release-phantom', label: 'Phantom Update' },
+ { href: '#release-discount', label: 'Launch discount' },
+ { href: '/games/jump-king-quest/is-it-worth-it', label: 'Is it worth it' },
+ { href: '/games/jump-king-quest/multiplayer-controller', label: 'Multiplayer & controller' },
+ { href: '/games/jump-king-quest/beginner-guide', label: 'Beginner guide' },
+] as const;
+
 export const jumpKingQuestRelatedGuides: GameGuideLink[] = [
  {
  title: 'JUMP KING QUEST Guide Hub',

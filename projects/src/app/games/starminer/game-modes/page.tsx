@@ -1,11 +1,22 @@
 import Link from "next/link";
 import { StarminerArticle } from "@/components/starminer-article";
 import { ArticleImage } from "@/components/article-media";
-import { BlufBox } from "@/components/guide-blocks";
 import {
- createStarminerMetadata,
- starminerImages,
- starminerModeRows,
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from "@/components/guide-blocks";
+import {
+  createStarminerMetadata,
+  starminerImages,
+  starminerModeRows,
+  smGameModesActionRows,
+  smGameModesJumpLinks,
+  smGameModesSearchIntent,
+  smGameModesSourceRows,
+  smGameModesStatusItems,
 } from "@/lib/starminer";
 
 const title = "Starminer Game Modes: Campaign vs Sandbox vs Survival";
@@ -85,7 +96,16 @@ export default function StarminerGameModesPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Starminer Game Modes Quick Answer"
+ answer="Three official modes: Campaign (best first save), Sandbox (customized builds), and Survival (endless enemy waves). Campaign is the recommended first mode for new players. All three modes will be refined during Early Access."
+ intentRows={smGameModesSearchIntent}
+ jumpLinks={smGameModesJumpLinks}
+ />
+
+ <StatusPanel items={smGameModesStatusItems} />
+
+ <section id="modes-anchor" className="prose-game">
  <h2>Mode Comparison</h2>
  <ArticleImage
  src={starminerImages.survival}
@@ -170,6 +190,11 @@ export default function StarminerGameModesPage() {
  before treating launch-window balance as final.
  </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Mode Plan</h2>
+ <ActionTable rows={smGameModesActionRows} />
+
+ <SourceCheckTable title="Starminer Game Mode Sources" rows={smGameModesSourceRows} />
  </StarminerArticle>
  );
 }

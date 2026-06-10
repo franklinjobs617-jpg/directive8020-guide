@@ -1,10 +1,21 @@
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { FirstLightArticle } from '@/components/007-first-light-article';
 import {
  createFirstLightMetadata,
  firstLightApproachRows,
+ firstLightBeginnerActionRows,
+ firstLightBeginnerJumpLinks,
  firstLightBeginnerRows,
+ firstLightBeginnerSearchIntent,
+ firstLightBeginnerSourceRows,
+ firstLightBeginnerStatusItems,
  firstLightFirstMissionRows,
  firstLightFirstHourRouteRows,
  firstLightImages,
@@ -83,7 +94,16 @@ export default function FirstLightBeginnerGuidePage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="007 First Light Beginner Quick Answer"
+ answer="Start stealth-first, read each room, use one gadget at a time, escalate only when detected, then replay missions with one specific improvement goal. Driving sections and opening spoilers are separate decisions from your main approach."
+ intentRows={firstLightBeginnerSearchIntent}
+ jumpLinks={firstLightBeginnerJumpLinks}
+ />
+
+ <StatusPanel items={firstLightBeginnerStatusItems} />
+
+ <section id="first-60-minutes" className="prose-game">
  <h2>First 60 Minutes Route</h2>
  <p>
  Use this as an operating path for your first session. It avoids
@@ -112,7 +132,7 @@ export default function FirstLightBeginnerGuidePage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="beginner-habits" className="prose-game">
  <h2>First-Session Priorities</h2>
  <ArticleImage
  src={firstLightImages.background}
@@ -140,7 +160,7 @@ export default function FirstLightBeginnerGuidePage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="first-mission" className="prose-game">
  <h2>First Mission Decision Checklist</h2>
  <ArticleImage
  src={firstLightImages.header}
@@ -168,7 +188,7 @@ export default function FirstLightBeginnerGuidePage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="recovery" className="prose-game">
  <h2>If Things Go Wrong</h2>
  <p>
  New players do not need to restart every mistake. A messy first
@@ -197,7 +217,7 @@ export default function FirstLightBeginnerGuidePage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="approach" className="prose-game">
  <h2>Pick the Right Approach</h2>
  <p>
  A useful beginner guide should not force one playstyle. The practical
@@ -251,7 +271,33 @@ export default function FirstLightBeginnerGuidePage() {
  pacing and controls, but it shows opening mission content. Skip it if
  your priority is a blind first mission.
  </p>
+
+ <h2 id="stealth-vs-loud">If You Prefer Stealth vs If You Prefer Loud</h2>
+ <p>
+ If you prefer stealth, treat every room as a read-then-move puzzle,
+ use one gadget to create access, and save firearms for forced combat.
+ If you prefer loud play, do not assume the missions reward full
+ aggression: cover, spacing, and gadget timing still matter, and
+ noise will trigger responses you may not be ready for. The practical
+ answer is the same: pick the right tool for the room instead of
+ forcing a single playstyle.
+ </p>
+
+ <h2 id="opening-vs-blind">If You Watch the Opening vs If You Go In Blind</h2>
+ <p>
+ If you watch the official first 13 minutes video, you trade a blind
+ first mission for useful pacing and control context. If you go in
+ blind, you keep the surprise of the opening mission at the cost of
+ slower learning. Both choices are valid; pick the one that matches
+ whether spoilers or faster onboarding matters more to you, and use
+ replay modifiers later to revisit the opening with a different goal.
+ </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Beginner Plan</h2>
+ <ActionTable rows={firstLightBeginnerActionRows} />
+
+ <SourceCheckTable title="007 First Light Beginner Sources" rows={firstLightBeginnerSourceRows} />
 
  <VideoEmbed
  videoId={firstLightVideos[1].id}

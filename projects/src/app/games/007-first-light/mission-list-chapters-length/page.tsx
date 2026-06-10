@@ -1,13 +1,24 @@
 import Link from 'next/link';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { FirstLightArticle } from '@/components/007-first-light-article';
 import {
  createFirstLightMetadata,
  firstLightImages,
  firstLightLengthRows,
+ firstLightMissionActionRows,
  firstLightMissionFastRows,
+ firstLightMissionJumpLinks,
  firstLightMissionPlanningRows,
+ firstLightMissionSearchIntent,
+ firstLightMissionSourceRows,
+ firstLightMissionStatusItems,
  firstLightReplayRows,
  firstLightVideos,
 } from '@/lib/007-first-light';
@@ -73,7 +84,16 @@ export default function FirstLightMissionListChaptersLengthPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="007 First Light Mission List Quick Answer"
+ answer="Use a spoiler-light mission shape first: opening tutorial, main objectives, stealth rooms, action spikes, and driving shifts. Replay is part of the structure, and time-to-beat depends on your run type. Collectible and trophy details should wait for verified checklists."
+ intentRows={firstLightMissionSearchIntent}
+ jumpLinks={firstLightMissionJumpLinks}
+ />
+
+ <StatusPanel items={firstLightMissionStatusItems} />
+
+ <section id="fast-answers" className="prose-game">
  <h2>Fast Answers for Mission List, Chapters, and Length</h2>
  <p>
  The safest way to answer mission-list searches is to separate route
@@ -104,7 +124,7 @@ export default function FirstLightMissionListChaptersLengthPage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="mission-shape" className="prose-game">
  <h2>How to Use a Mission List Without Spoiling the Campaign</h2>
  <ArticleImage
  src={firstLightImages.missionRoute}
@@ -134,7 +154,7 @@ export default function FirstLightMissionListChaptersLengthPage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="length" className="prose-game">
  <h2>How Long to Beat 007 First Light</h2>
  <p>
  Length depends on how you play. A story-first player who accepts
@@ -168,7 +188,7 @@ export default function FirstLightMissionListChaptersLengthPage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="replay" className="prose-game">
  <h2>Replayability, Modifiers, and Cleanup</h2>
  <p>
  The strongest confirmed replay hook is mission replay with additional
@@ -217,7 +237,35 @@ export default function FirstLightMissionListChaptersLengthPage() {
  to check current reviews, Denuvo, Steam user reports, and performance
  risk.
  </p>
+
+ <h2 id="story-vs-completionist">If You Are Story-Focused vs If You Are a Completionist</h2>
+ <p>
+ If you are story-focused, treat the campaign as a cinematic Bond
+ origin run. Skip collectible chasing, accept some messy stealth, and
+ use replay later if you want a cleaner route. If you are a
+ completionist, do not chase every collectible during the first run;
+ keep a short list of missed missions and return through replay with
+ one specific cleanup goal. Both are valid, but the planning cost is
+ very different, and that changes which mission-list searches help
+ you.
+ </p>
+
+ <h2 id="buying-on-length">If You Are Buying on Length vs If You Are Buying on Replay</h2>
+ <p>
+ If you are buying on length, compare time-to-beat against your run
+ type and remember that replay and modifiers can extend the useful
+ life of the campaign well past the first finish. If you are buying
+ on replay, treat mission replay with additional modifiers as the
+ confirmed hook and decide whether you actually want a second or
+ third pass before buying. The right answer depends on whether you
+ value the first finish or the long-tail replay value more.
+ </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Mission Planning Plan</h2>
+ <ActionTable rows={firstLightMissionActionRows} />
+
+ <SourceCheckTable title="007 First Light Mission List Sources" rows={firstLightMissionSourceRows} />
 
  <VideoEmbed
  videoId={firstLightVideos[1].id}

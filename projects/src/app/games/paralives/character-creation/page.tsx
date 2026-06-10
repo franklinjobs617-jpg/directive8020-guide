@@ -1,8 +1,13 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { ParalivesArticle } from '@/components/paralives-article';
 import {
  createParalivesMetadata,
+ paralivesCharacterActionRows,
+ paralivesCharacterJumpLinks,
+ paralivesCharacterSearchIntent,
+ paralivesCharacterSourceRows,
+ paralivesCharacterStatusItems,
  paralivesImages,
  paralivesParamakerRows,
 } from '@/lib/paralives';
@@ -63,8 +68,17 @@ export default function ParalivesCharacterCreationPage() {
  </p>
  </BlufBox>
 
+ <SearchAnswerPanel
+ title="Paralives Character Creation Quick Answer"
+ answer="Paramaker is the creator. Use it for height, body, face, outfit, and personality. Concept first, body second, outfit last, then plan the household role."
+ intentRows={paralivesCharacterSearchIntent}
+ jumpLinks={paralivesCharacterJumpLinks}
+ />
+
+ <StatusPanel items={paralivesCharacterStatusItems} />
+
  <section className="prose-game">
- <h2>First Parafolk Workflow</h2>
+ <h2 id="character-workflow">First Parafolk Workflow</h2>
  <ArticleImage
  src={paralivesImages.paramaker}
  alt="Paralives Paramaker character creation tools screenshot"
@@ -94,7 +108,7 @@ export default function ParalivesCharacterCreationPage() {
  </div>
 
  <section className="prose-game">
- <h2>Character Ideas That Work Well Early</h2>
+ <h2 id="character-personality">Character Ideas That Work Well Early</h2>
  <p>
  For a first save, make two or three Parafolks with obvious differences:
  one social character, one career-focused character, and one homebody
@@ -103,6 +117,23 @@ export default function ParalivesCharacterCreationPage() {
  without waiting for a huge family tree.
  </p>
  </section>
+
+ <section className="prose-game">
+ <h2 id="character-household">Household and Home Planning</h2>
+ <p>
+ After the Parafolks are ready, plan the household. Pick careers,
+ relationships, and a home layout that supports the people in it. A
+ homebody lives well in a cozy space with reading nooks. A
+ career-focused character benefits from a home office. A social
+ character needs space to host. This is where Paramaker choices meet
+ build-mode planning.
+ </p>
+ </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Paramaker Plan</h2>
+ <ActionTable rows={paralivesCharacterActionRows} />
+
+ <SourceCheckTable title="Paralives Character Creation Sources" rows={paralivesCharacterSourceRows} />
  </ParalivesArticle>
  );
 }

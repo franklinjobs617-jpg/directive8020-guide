@@ -1,7 +1,22 @@
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
-import { createProjectMistMetadata, projectMistBuildingRows, projectMistImages } from '@/lib/project-mist';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
+import {
+  createProjectMistMetadata,
+  pmBaseActionRows,
+  pmBaseJumpLinks,
+  pmBaseSearchIntent,
+  pmBaseSourceRows,
+  pmBaseStatusItems,
+  projectMistBuildingRows,
+  projectMistImages,
+} from '@/lib/project-mist';
 
 const title = 'Project: Mist Train Base Building Guide - Storage, Defense & Limits';
 const description =
@@ -59,7 +74,16 @@ export default function ProjectMistBuildingTrainBasePage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Project: Mist Train Base Quick Answer"
+ answer="The train is a moving base that can be upgraded, fortified, defended, and customized. In Early Access, build storage first, defenses before long trips, and treat doors and windows as future patches."
+ intentRows={pmBaseSearchIntent}
+ jumpLinks={pmBaseJumpLinks}
+ />
+
+ <StatusPanel items={pmBaseStatusItems} />
+
+ <section id="base-priorities" className="prose-game">
  <h2>Train Base Priorities</h2>
  <ArticleImage
  src={projectMistImages.trainBase}
@@ -105,6 +129,41 @@ export default function ProjectMistBuildingTrainBasePage() {
  <li>Assign one player to crafting and ammo so the group knows when to retreat.</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Base Building Plan</h2>
+ <ActionTable rows={pmBaseActionRows} />
+
+ <section id="storage-vs-defense" className="prose-game">
+ <h2>Storage vs Defense Priority</h2>
+ <p>
+ The most common Early Access base failure is not too few defenses but
+ too little storage discipline. Sort materials first, then add
+ defenses, then plan the train repair objective. This order keeps the
+ group productive instead of arguing over missing parts.
+ </p>
+ </section>
+
+ <section id="doors-windows" className="prose-game">
+ <h2>Doors and Windows: Plan for Future Patches</h2>
+ <p>
+ Steam discussion replies indicate that doors, windows, and expanded
+ structures are planned for later patches. Do not build a layout that
+ depends on pieces that are not yet confirmed in the current build.
+ </p>
+ </section>
+
+ <section id="coop-roles" className="prose-game">
+ <h2>Co-op Building Roles in Practice</h2>
+ <p>
+ The simplest co-op split for the moving base is a builder, a
+ defender, a quartermaster, and a scout. The scout handles route
+ scouting, the builder places defenses, the quartermaster sorts
+ storage, and the defender covers the return trip. Rotate the
+ quartermaster role so no one is stuck sorting loot for every run.
+ </p>
+ </section>
+
+ <SourceCheckTable title="Project: Mist Train Base Sources" rows={pmBaseSourceRows} />
  </ProjectMistArticle>
  );
 }

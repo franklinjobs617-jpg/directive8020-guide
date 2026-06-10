@@ -1,12 +1,23 @@
 import Link from 'next/link';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { MechanicusIIArticle } from '@/components/mechanicus-ii-article';
 import {
- createMechanicusIIMetadata,
- mechanicusIIImages,
- mechanicusIIWalkthroughProblemRows,
- mechanicusIIWalkthroughRows,
+  createMechanicusIIMetadata,
+  mechanicusIIImages,
+  mechanicusIIWalkthroughProblemRows,
+  mechanicusIIWalkthroughRows,
+  m2WalkthroughActionRows,
+  m2WalkthroughJumpLinks,
+  m2WalkthroughSearchIntent,
+  m2WalkthroughSourceRows,
+  m2WalkthroughStatusItems,
 } from '@/lib/mechanicus-ii';
 
 const title = 'Warhammer 40,000: Mechanicus II Walkthrough: Missions, Consoles & Route Help';
@@ -70,7 +81,16 @@ export default function MechanicusIIWalkthroughPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Mechanicus II Walkthrough Quick Answer"
+ answer="Spoiler-light launch guidance for objective reading, leader safety, green console checks, and progression problems. Not a final mission script. Re-read the objective, move a unit to the marked tile, and protect the named leader before assuming the mission is bugged."
+ intentRows={m2WalkthroughSearchIntent}
+ jumpLinks={m2WalkthroughJumpLinks}
+ />
+
+ <StatusPanel items={m2WalkthroughStatusItems} />
+
+ <section id="walkthrough-anchor" className="prose-game">
  <h2>Mission Flow Checklist</h2>
  <ArticleImage
  src={mechanicusIIImages.screenshot3}
@@ -162,6 +182,11 @@ export default function MechanicusIIWalkthroughPage() {
  .
  </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Walkthrough Plan</h2>
+ <ActionTable rows={m2WalkthroughActionRows} />
+
+ <SourceCheckTable title="Mechanicus II Walkthrough Sources" rows={m2WalkthroughSourceRows} />
  </MechanicusIIArticle>
  );
 }

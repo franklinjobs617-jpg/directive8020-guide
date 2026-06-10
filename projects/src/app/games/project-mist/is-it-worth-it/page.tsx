@@ -1,7 +1,22 @@
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
-import { createProjectMistMetadata, projectMistImages, projectMistWorthItRows } from '@/lib/project-mist';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
+import {
+  createProjectMistMetadata,
+  pmWorthItActionRows,
+  pmWorthItJumpLinks,
+  pmWorthItSearchIntent,
+  pmWorthItSourceRows,
+  pmWorthItStatusItems,
+  projectMistImages,
+  projectMistWorthItRows,
+} from '@/lib/project-mist';
 
 const title = 'Is Project: Mist Worth It in Early Access? Price, Reviews & Risk';
 const description =
@@ -59,7 +74,16 @@ export default function ProjectMistWorthItPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Project: Mist Worth It Quick Answer"
+ answer="Buy now if you want physics survival, online co-op, and a moving train base, and you accept Early Access risk. Wait if you need polished saves, stable performance, or a finished campaign. Read recent reviews before buying."
+ intentRows={pmWorthItSearchIntent}
+ jumpLinks={pmWorthItJumpLinks}
+ />
+
+ <StatusPanel items={pmWorthItStatusItems} />
+
+ <section id="price-reviews" className="prose-game">
  <h2>Launch Price and Review Snapshot</h2>
  <ArticleImage
  src={projectMistImages.hero}
@@ -94,7 +118,7 @@ export default function ProjectMistWorthItPage() {
  </div>
 
  <section className="prose-game">
- <h2>Buy Now If These Are Your Priorities</h2>
+ <h2 id="buy-now">Buy Now If These Are Your Priorities</h2>
  <ArticleImage
  src={projectMistImages.creatures}
  alt="Project: Mist creature and co-op value image"
@@ -106,7 +130,7 @@ export default function ProjectMistWorthItPage() {
  <li>You like testing systems while developers are actively collecting feedback.</li>
  </ul>
 
- <h2>Wait If These Are Deal Breakers</h2>
+ <h2 id="refund">Wait If These Are Deal Breakers</h2>
  <ArticleImage
  src={projectMistImages.screenshot6}
  alt="Project: Mist wait for patches guide image"
@@ -118,6 +142,22 @@ export default function ProjectMistWorthItPage() {
  <li>You prefer buying after roadmap details and early patches are published.</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Buying Decision Plan</h2>
+ <ActionTable rows={pmWorthItActionRows} />
+
+ <section id="roadmap" className="prose-game">
+ <h2>Roadmap and Patch Notes</h2>
+ <p>
+ The launch news promises a roadmap after roughly 2-3 weeks of feedback.
+ Track Steam Community news and patch notes for the first weeks after
+ launch, then revisit the buying decision if the patches land well or
+ poorly. The most useful buying signal in Early Access is how the
+ developer responds to early feedback, not the launch trailer.
+ </p>
+ </section>
+
+ <SourceCheckTable title="Project: Mist Worth It Sources" rows={pmWorthItSourceRows} />
  </ProjectMistArticle>
  );
 }

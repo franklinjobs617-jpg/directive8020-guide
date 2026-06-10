@@ -1,11 +1,22 @@
 import Link from "next/link";
 import { StarminerArticle } from "@/components/starminer-article";
 import { ArticleImage } from "@/components/article-media";
-import { BlufBox } from "@/components/guide-blocks";
 import {
- createStarminerMetadata,
- starminerFeatureStatusRows,
- starminerImages,
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from "@/components/guide-blocks";
+import {
+  createStarminerMetadata,
+  starminerFeatureStatusRows,
+  starminerImages,
+  smMultiplayerActionRows,
+  smMultiplayerJumpLinks,
+  smMultiplayerSearchIntent,
+  smMultiplayerSourceRows,
+  smMultiplayerStatusItems,
 } from "@/lib/starminer";
 
 const title = "Starminer Multiplayer, Mods & Blueprints: Confirmed Features vs Planned Support";
@@ -73,7 +84,16 @@ export default function StarminerMultiplayerModsBlueprintsPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Starminer Feature Status Quick Answer"
+ answer="Single-player is confirmed at launch. Personal blueprint save and recall is confirmed. Multiplayer, modding, Steam Workshop, and community blueprint sharing are planned or development priorities, not confirmed launch features."
+ intentRows={smMultiplayerSearchIntent}
+ jumpLinks={smMultiplayerJumpLinks}
+ />
+
+ <StatusPanel items={smMultiplayerStatusItems} />
+
+ <section id="multiplayer-anchor" className="prose-game">
  <h2>Confirmed vs Planned Features</h2>
  <ArticleImage
  src={starminerImages.fleet}
@@ -144,6 +164,11 @@ export default function StarminerMultiplayerModsBlueprintsPage() {
  for current launch-source notes.
  </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Feature Plan</h2>
+ <ActionTable rows={smMultiplayerActionRows} />
+
+ <SourceCheckTable title="Starminer Feature Status Sources" rows={smMultiplayerSourceRows} />
  </StarminerArticle>
  );
 }

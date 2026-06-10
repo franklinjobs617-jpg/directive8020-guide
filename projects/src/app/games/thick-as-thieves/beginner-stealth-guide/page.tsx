@@ -1,7 +1,22 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { ThickAsThievesArticle } from '@/components/thick-as-thieves-article';
-import { createThickAsThievesMetadata, thickAsThievesBeginnerRows, thickAsThievesImages } from '@/lib/thick-as-thieves';
+import {
+ createThickAsThievesMetadata,
+ tatStealthActionRows,
+ tatStealthJumpLinks,
+ tatStealthSearchIntent,
+ tatStealthSourceRows,
+ tatStealthStatusItems,
+ thickAsThievesBeginnerRows,
+ thickAsThievesImages,
+} from '@/lib/thick-as-thieves';
 
 const title = 'Thick As Thieves Beginner Stealth Guide - First Heist Tips';
 const description =
@@ -57,8 +72,16 @@ export default function ThickAsThievesBeginnerPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
- <h2>First-Run Mindset</h2>
+ <SearchAnswerPanel
+ title="Thick As Thieves Beginner Stealth Quick Answer"
+ answer="Treat the first contract as a scouting run: read sightlines, plan the exit, then commit to the objective. Use slow movement, identify patrols and cameras, and abort early on alert chain. Solo is best for clean route learning, co-op only with a partner who can communicate."
+ intentRows={tatStealthSearchIntent}
+ jumpLinks={tatStealthJumpLinks}
+ />
+
+ <StatusPanel items={tatStealthStatusItems} />
+
+ <section id="first-run-mindset" className="prose-game">
  <ArticleImage
  src={thickAsThievesImages.beginner}
  alt="Thick As Thieves first-run stealth mindset image"
@@ -92,7 +115,7 @@ export default function ThickAsThievesBeginnerPage() {
  </div>
 
  <section className="prose-game">
- <h2>Route Before Loot</h2>
+ <h2 id="route-before-loot">Route Before Loot</h2>
  <ArticleImage
  src={thickAsThievesImages.screenshot3}
  alt="Thick As Thieves route before loot image"
@@ -105,7 +128,7 @@ export default function ThickAsThievesBeginnerPage() {
  scouting.
  </p>
 
- <h2>Co-op Beginner Roles</h2>
+ <h2 id="coop-beginner-roles">Co-op Beginner Roles</h2>
  <ArticleImage
  src={thickAsThievesImages.screenshot6}
  alt="Thick As Thieves co-op beginner roles image"
@@ -117,6 +140,11 @@ export default function ThickAsThievesBeginnerPage() {
  <li>Both players agree on the exit before optional loot detours.</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Beginner Plan</h2>
+ <ActionTable rows={tatStealthActionRows} />
+
+ <SourceCheckTable title="Thick As Thieves Beginner Sources" rows={tatStealthSourceRows} />
  </ThickAsThievesArticle>
  );
 }

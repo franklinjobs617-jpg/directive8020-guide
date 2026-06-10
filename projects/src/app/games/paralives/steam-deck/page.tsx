@@ -1,9 +1,14 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { ParalivesArticle } from '@/components/paralives-article';
 import {
  createParalivesMetadata,
+ paralivesDeckActionRows,
+ paralivesDeckJumpLinks,
  paralivesDeckRows,
+ paralivesDeckSearchIntent,
+ paralivesDeckSourceRows,
+ paralivesDeckStatusItems,
  paralivesImages,
 } from '@/lib/paralives';
 
@@ -62,8 +67,17 @@ export default function ParalivesSteamDeckPage() {
  </p>
  </BlufBox>
 
+ <SearchAnswerPanel
+ title="Paralives Steam Deck Quick Answer"
+ answer="No Steam Deck Verified claim is in the checked official Steam data. Treat Deck as unverified. Test trackpad, build mode, framerate, and text size within Steam refund rules."
+ intentRows={paralivesDeckSearchIntent}
+ jumpLinks={paralivesDeckJumpLinks}
+ />
+
+ <StatusPanel items={paralivesDeckStatusItems} />
+
  <section className="prose-game">
- <h2>Deck Testing Checklist</h2>
+ <h2 id="deck-status">Deck Testing Checklist</h2>
  <ArticleImage
  src={paralivesImages.home}
  alt="Paralives home and interface screenshot for Steam Deck testing"
@@ -91,6 +105,45 @@ export default function ParalivesSteamDeckPage() {
  </tbody>
  </table>
  </div>
+
+ <section className="prose-game">
+ <h2 id="deck-controls">Controls, Build Mode, and Text Size</h2>
+ <p>
+ Life sims rely on pointer precision. Test trackpad, mouse region, and
+ any community layouts for build mode before committing to a long
+ session. Check text size in Paramaker, Workshop, and the in-game
+ menus. If text feels small at Deck resolution, raise UI scale and
+ re-test menus before starting a household.
+ </p>
+ </section>
+
+ <section className="prose-game">
+ <h2 id="deck-performance">Performance and Settings</h2>
+ <p>
+ If framerate drops on Deck, lower display resolution and graphics
+ settings before changing anything else. The official Windows and Mac
+ requirements repeat this advice. Use Proton with a small household
+ first to confirm a stable framerate, then grow the home, the family,
+ and the town footprint over time.
+ </p>
+ </section>
+
+ <section className="prose-game">
+ <h2 id="deck-buying">Buying Advice and Desktop Backup</h2>
+ <p>
+ Buy Paralives for Steam Deck only if you are willing to test
+ quickly and use Steam refund rules if performance or controls do not
+ work for your setup. Keep a Windows PC or Apple silicon Mac as the
+ safe supported path, then treat Deck as an experiment. Do not start a
+ long Paralives save on Deck before confirming the controls and
+ framerate for your specific hardware.
+ </p>
+ </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Deck Plan</h2>
+ <ActionTable rows={paralivesDeckActionRows} />
+
+ <SourceCheckTable title="Paralives Steam Deck Sources" rows={paralivesDeckSourceRows} />
  </ParalivesArticle>
  );
 }

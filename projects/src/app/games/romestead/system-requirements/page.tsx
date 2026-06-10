@@ -1,10 +1,21 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { RomesteadArticle } from '@/components/romestead-article';
 import {
- createRomesteadMetadata,
- romesteadImages,
- romesteadSpecRows,
+  createRomesteadMetadata,
+  rmSpecActionRows,
+  rmSpecJumpLinks,
+  rmSpecSearchIntent,
+  rmSpecSourceRows,
+  rmSpecStatusItems,
+  romesteadImages,
+  romesteadSpecRows,
 } from '@/lib/romestead';
 
 const title = 'Romestead System Requirements & Steam Deck PC Specs';
@@ -79,7 +90,16 @@ export default function RomesteadSystemRequirementsPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Romestead System Requirements Quick Answer"
+ answer="Minimum: Windows 10, Intel Core i5, 8 GB RAM, DirectX 11, broadband internet, 2 GB storage. Recommended: Intel Core i7, 16 GB RAM, 4 GB storage. Steam Deck Verified is not confirmed."
+ intentRows={rmSpecSearchIntent}
+ jumpLinks={rmSpecJumpLinks}
+ />
+
+ <StatusPanel items={rmSpecStatusItems} />
+
+ <section id="min-spec" className="prose-game">
  <h2>Official PC Requirements</h2>
  <ArticleImage
  src={romesteadImages.screenshot2}
@@ -116,7 +136,7 @@ export default function RomesteadSystemRequirementsPage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="rec-spec" className="prose-game">
  <h2>Steam Deck, Controller and Co-op Performance Checks</h2>
  <ArticleImage
  src={romesteadImages.screenshot3}
@@ -133,7 +153,7 @@ export default function RomesteadSystemRequirementsPage() {
  </p>
  </section>
 
- <section className="prose-game">
+ <section id="steam-deck" className="prose-game">
  <h2>First 30 Minutes Performance Test</h2>
  <ArticleImage
  src={romesteadImages.screenshot6}
@@ -148,6 +168,22 @@ export default function RomesteadSystemRequirementsPage() {
  <li>Test cloud saves before switching machines.</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Spec Planning Plan</h2>
+ <ActionTable rows={rmSpecActionRows} />
+
+ <section id="storage-dx" className="prose-game">
+ <h2>Storage, DirectX, and Co-op Headroom</h2>
+ <p>
+ Steam lists 2 GB storage minimum and 4 GB recommended, plus DirectX
+ 11 for both tiers. Keep more than the listed amount free so Steam
+ can patch, unpack, and maintain cache files. For co-op, leave extra
+ headroom on the host PC because save, scaling, and network traffic
+ all add load beyond a single-player benchmark.
+ </p>
+ </section>
+
+ <SourceCheckTable title="Romestead System Requirements Sources" rows={rmSpecSourceRows} />
  </RomesteadArticle>
  );
 }

@@ -1,11 +1,22 @@
 import Link from "next/link";
 import { StarminerArticle } from "@/components/starminer-article";
 import { ArticleImage } from "@/components/article-media";
-import { BlufBox } from "@/components/guide-blocks";
 import {
- createStarminerMetadata,
- starminerImages,
- starminerMinimumSpecs,
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from "@/components/guide-blocks";
+import {
+  createStarminerMetadata,
+  starminerImages,
+  starminerMinimumSpecs,
+  smSpecActionRows,
+  smSpecJumpLinks,
+  smSpecSearchIntent,
+  smSpecSourceRows,
+  smSpecStatusItems,
 } from "@/lib/starminer";
 
 const title = "Starminer System Requirements: Official Minimum PC Specs & Steam Deck Status";
@@ -81,7 +92,16 @@ export default function StarminerSystemRequirementsPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Starminer PC Specs Quick Answer"
+ answer="Steam lists Windows 10 32-bit, i3-10100 / Ryzen 3 3100, 8 GB RAM, GTX 1050 / RX 560, DirectX 11, and 7 GB storage. No recommended tier is listed yet. Steam Deck compatibility is not confirmed by current store data."
+ intentRows={smSpecSearchIntent}
+ jumpLinks={smSpecJumpLinks}
+ />
+
+ <StatusPanel items={smSpecStatusItems} />
+
+ <section id="spec-anchor" className="prose-game">
  <h2>Official Minimum PC Specs</h2>
  <ArticleImage
  src={starminerImages.hero}
@@ -151,6 +171,11 @@ export default function StarminerSystemRequirementsPage() {
  </tbody>
  </table>
  </div>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Spec Plan</h2>
+ <ActionTable rows={smSpecActionRows} />
+
+ <SourceCheckTable title="Starminer PC Spec Sources" rows={smSpecSourceRows} />
  </StarminerArticle>
  );
 }

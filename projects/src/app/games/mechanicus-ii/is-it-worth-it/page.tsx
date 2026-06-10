@@ -1,11 +1,22 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { MechanicusIIArticle } from '@/components/mechanicus-ii-article';
 import {
- createMechanicusIIMetadata,
- mechanicusIIImages,
- mechanicusIIReviewConcernRows,
- mechanicusIIWorthRows,
+  createMechanicusIIMetadata,
+  mechanicusIIImages,
+  mechanicusIIReviewConcernRows,
+  mechanicusIIWorthRows,
+  m2WorthItActionRows,
+  m2WorthItJumpLinks,
+  m2WorthItSearchIntent,
+  m2WorthItSourceRows,
+  m2WorthItStatusItems,
 } from '@/lib/mechanicus-ii';
 
 const title = 'Is Warhammer 40,000: Mechanicus II Worth It?';
@@ -74,7 +85,16 @@ export default function MechanicusIIWorthItPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Is Mechanicus II Worth It? Quick Answer"
+ answer="Buy now if you want dual Warhammer 40K campaigns and a familiar turn-based tactics structure. Wait if Steam Deck unsupported, Mixed reviews, launch-week balance, or console-specific performance would change your decision. Discount window ends May 28, 2026."
+ intentRows={m2WorthItSearchIntent}
+ jumpLinks={m2WorthItJumpLinks}
+ />
+
+ <StatusPanel items={m2WorthItStatusItems} />
+
+ <section id="worthit-anchor" className="prose-game">
  <h2>Fast Buyer Verdict</h2>
  <ArticleImage
  src={mechanicusIIImages.worthItBanner}
@@ -151,6 +171,11 @@ export default function MechanicusIIWorthItPage() {
  performance consensus.
  </p>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Buy-or-Wait Plan</h2>
+ <ActionTable rows={m2WorthItActionRows} />
+
+ <SourceCheckTable title="Mechanicus II Worth-It Sources" rows={m2WorthItSourceRows} />
  </MechanicusIIArticle>
  );
 }

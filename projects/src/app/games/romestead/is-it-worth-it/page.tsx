@@ -1,10 +1,21 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { RomesteadArticle } from '@/components/romestead-article';
 import {
- createRomesteadMetadata,
- romesteadImages,
- romesteadWorthRows,
+  createRomesteadMetadata,
+  rmWorthItActionRows,
+  rmWorthItJumpLinks,
+  rmWorthItSearchIntent,
+  rmWorthItSourceRows,
+  rmWorthItStatusItems,
+  romesteadImages,
+  romesteadWorthRows,
 } from '@/lib/romestead';
 
 const title = 'Is Romestead Worth It in Early Access? Buy Now or Wait';
@@ -75,7 +86,16 @@ export default function RomesteadWorthItPage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Romestead Worth It Quick Answer"
+ answer="Buy now if you want a Roman-inspired survival town builder on PC and accept Early Access risk. Wait for 1.0 if you need a finished game, verified Steam Deck, or settled late-game balance. Test the build inside refund rules."
+ intentRows={rmWorthItSearchIntent}
+ jumpLinks={rmWorthItJumpLinks}
+ />
+
+ <StatusPanel items={rmWorthItStatusItems} />
+
+ <section id="buy-now" className="prose-game">
  <h2>Buy Now, Try First, or Wait</h2>
  <ArticleImage
  src={romesteadImages.screenshot1}
@@ -111,7 +131,7 @@ export default function RomesteadWorthItPage() {
  </table>
  </div>
 
- <section className="prose-game">
+ <section id="coop-value" className="prose-game">
  <h2>Co-op Value and Group Risk</h2>
  <ArticleImage
  src={romesteadImages.screenshot3}
@@ -129,7 +149,7 @@ export default function RomesteadWorthItPage() {
  </p>
  </section>
 
- <section className="prose-game">
+ <section id="steam-deck" className="prose-game">
  <h2>What to Check Before Keeping the Game</h2>
  <ArticleImage
  src={romesteadImages.planningVillageMarket}
@@ -144,6 +164,23 @@ export default function RomesteadWorthItPage() {
  <li>Does the Early Access content feel deep enough for the price in your region?</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Buying Decision Plan</h2>
+ <ActionTable rows={rmWorthItActionRows} />
+
+ <section id="refund" className="prose-game">
+ <h2>Refund Safety and Patch Tracking</h2>
+ <p>
+ Steam refund rules apply, so spend the first 2 hours testing
+ performance, controls, building, saves, and co-op before keeping
+ the game. Track Steam Community news and patch notes for the first
+ weeks after launch. Early Access is most useful when you follow the
+ patches, and the launch summary will not tell you whether the
+ developer is responding well to feedback.
+ </p>
+ </section>
+
+ <SourceCheckTable title="Romestead Worth It Sources" rows={rmWorthItSourceRows} />
  </RomesteadArticle>
  );
 }

@@ -1,11 +1,22 @@
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
 import { ZeroParadesArticle } from '@/components/zero-parades-article';
 import {
- createZeroParadesMetadata,
- zeroParadesControllerRows,
- zeroParadesFeatureRows,
- zeroParadesImages,
+  createZeroParadesMetadata,
+  zpControllerActionRows,
+  zpControllerJumpLinks,
+  zpControllerSearchIntent,
+  zpControllerSourceRows,
+  zpControllerStatusItems,
+  zeroParadesControllerRows,
+  zeroParadesFeatureRows,
+  zeroParadesImages,
 } from '@/lib/zero-parades';
 
 const title = 'ZERO PARADES Controller Support Guide - Partial Support Explained';
@@ -59,18 +70,27 @@ export default function ZeroParadesControllerSupportPage() {
  heroAlt="ZERO PARADES controller support guide screenshot"
  faqs={faqs}
  >
- <BlufBox title="Controller Answer">
- <p>
- <strong>ZERO PARADES has partial controller support on Steam.</strong>{' '}
- Basic movement and dialogue work with a controller, but some UI
- elements may require mouse precision. For a text-heavy espionage RPG,
- keyboard and mouse are generally more comfortable for extended
- sessions. Steam Deck users should test font size before committing.
- </p>
- </BlufBox>
+      <BlufBox title="Controller Answer">
+        <p>
+          <strong>ZERO PARADES has partial controller support on Steam.</strong>{' '}
+          Basic movement and dialogue work with a controller, but some UI
+          elements may require mouse precision. For a text-heavy espionage RPG,
+          keyboard and mouse are generally more comfortable for extended
+          sessions. Steam Deck users should test font size before committing.
+        </p>
+      </BlufBox>
 
- <section className="prose-game">
- <h2>What Partial Controller Support Means</h2>
+      <SearchAnswerPanel
+        title="ZERO PARADES Controller Quick Answer"
+        answer="Partial controller support is listed on Steam. Basic gameplay and dialogue work; some UI still favors mouse. Steam Deck is verified, but text size and prompt readability need a quick test before long sessions."
+        intentRows={zpControllerSearchIntent}
+        jumpLinks={zpControllerJumpLinks}
+      />
+
+      <StatusPanel items={zpControllerStatusItems} />
+
+      <section className="prose-game">
+        <h2 id="what-partial-controller-support-means">What Partial Controller Support Means</h2>
  <ArticleImage
  src={zeroParadesImages.screenshot4}
  alt="ZERO PARADES controller support explanation screenshot"
@@ -184,16 +204,43 @@ export default function ZeroParadesControllerSupportPage() {
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">What it means</th>
  </tr>
  </thead>
- <tbody>
- {zeroParadesFeatureRows.map(([feature, status]) => (
- <tr key={feature} className="border-b border-border last:border-0">
- <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{feature}</th>
- <td className="px-4 py-3 text-muted-foreground">{status}</td>
- </tr>
- ))}
- </tbody>
- </table>
- </div>
- </ZeroParadesArticle>
+        <tbody>
+          {zeroParadesFeatureRows.map(([feature, status]) => (
+            <tr key={feature} className="border-b border-border last:border-0">
+              <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{feature}</th>
+              <td className="px-4 py-3 text-muted-foreground">{status}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      </div>
+
+      <section className="prose-game">
+        <h2 id="when-to-switch-input">When to Switch to Keyboard and Mouse</h2>
+        <p>
+          Even players who prefer controller-only play benefit from a hybrid
+          approach on ZERO PARADES. The most common moments to switch to
+          keyboard and mouse are long dialogue review (where mouse hover
+          reveals hidden details), skill check interfaces (where precise
+          selection matters), and journal or evidence screens (where
+          scrolling speed makes a difference).
+        </p>
+        <p>
+          On Steam Deck, the same rule applies but with one extra step:
+          pause the game, dock the device, and finish the precision-heavy
+          interaction on a full keyboard and mouse. Returning to handheld
+          play after a precision check is faster than fighting an
+          imprecise UI for a long session.
+        </p>
+      </section>
+
+      <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Controller Plan</h2>
+      <ActionTable rows={zpControllerActionRows} />
+
+      <SourceCheckTable
+        title="ZERO PARADES Controller Sources"
+        rows={zpControllerSourceRows}
+      />
+    </ZeroParadesArticle>
  );
 }

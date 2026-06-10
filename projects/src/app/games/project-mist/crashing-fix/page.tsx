@@ -1,7 +1,22 @@
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
-import { createProjectMistMetadata, projectMistImages, projectMistSaveRows } from '@/lib/project-mist';
+import {
+  ActionTable,
+  BlufBox,
+  SearchAnswerPanel,
+  SourceCheckTable,
+  StatusPanel,
+} from '@/components/guide-blocks';
+import {
+  createProjectMistMetadata,
+  pmCrashActionRows,
+  pmCrashJumpLinks,
+  pmCrashSearchIntent,
+  pmCrashSourceRows,
+  pmCrashStatusItems,
+  projectMistImages,
+  projectMistSaveRows,
+} from '@/lib/project-mist';
 
 const title = 'Project: Mist Crashing, Black Screen, Low FPS & Co-op Fix';
 const description =
@@ -80,6 +95,15 @@ export default function ProjectMistCrashingFixPage() {
  </p>
  </BlufBox>
 
+ <SearchAnswerPanel
+ title="Project: Mist Crashing and Performance Quick Answer"
+ answer="Start with reversible PC fixes: update GPU drivers, verify Steam files, disable overlays, and confirm the PC meets the official minimum spec. Do not delete saves or reinstall until those checks fail."
+ intentRows={pmCrashSearchIntent}
+ jumpLinks={pmCrashJumpLinks}
+ />
+
+ <StatusPanel items={pmCrashStatusItems} />
+
  <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
  <table className="w-full text-sm">
  <thead>
@@ -112,7 +136,7 @@ export default function ProjectMistCrashingFixPage() {
  ))}
  </ul>
 
- <h2>Fix Startup Crash or Black Screen</h2>
+ <h2 id="startup-crash">Fix Startup Crash or Black Screen</h2>
  <ArticleImage
  src={projectMistImages.screenshot8}
  alt="Project: Mist black screen troubleshooting image"
@@ -126,7 +150,7 @@ export default function ProjectMistCrashingFixPage() {
  <li>Press Alt+Enter or remove custom launch options if the screen stays black.</li>
  </ol>
 
- <h2>Fix Low FPS or Stutter</h2>
+ <h2 id="low-fps">Fix Low FPS or Stutter</h2>
  <ArticleImage
  src={projectMistImages.screenshot7}
  alt="Project: Mist low FPS troubleshooting image"
@@ -139,7 +163,7 @@ export default function ProjectMistCrashingFixPage() {
  <li>Lower shadows, effects, and view distance before lowering resolution.</li>
  </ul>
 
- <h2>Gameplay Comfort Issues Are Not Always Bugs</h2>
+ <h2 id="comfort-feel">Gameplay Comfort Issues Are Not Always Bugs</h2>
  <ArticleImage
  src={projectMistImages.firstSteps}
  alt="Project: Mist movement and comfort troubleshooting image"
@@ -182,7 +206,7 @@ export default function ProjectMistCrashingFixPage() {
  </div>
 
  <section className="prose-game">
- <h2>Fix Online Co-op Problems</h2>
+ <h2 id="coop-issues">Fix Online Co-op Problems</h2>
  <ArticleImage
  src={projectMistImages.multiplayer}
  alt="Project: Mist online co-op troubleshooting image"
@@ -195,6 +219,11 @@ export default function ProjectMistCrashingFixPage() {
  <li>Test a new session instead of repeatedly reconnecting to a broken one.</li>
  </ul>
  </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Crash Recovery Plan</h2>
+ <ActionTable rows={pmCrashActionRows} />
+
+ <SourceCheckTable title="Project: Mist Crash and Performance Sources" rows={pmCrashSourceRows} />
  </ProjectMistArticle>
  );
 }

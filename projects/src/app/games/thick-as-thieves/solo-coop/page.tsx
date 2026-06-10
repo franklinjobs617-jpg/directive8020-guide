@@ -1,8 +1,19 @@
 import { ArticleImage } from "@/components/article-media";
-import { BlufBox } from "@/components/guide-blocks";
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from "@/components/guide-blocks";
 import { ThickAsThievesArticle } from "@/components/thick-as-thieves-article";
 import {
  createThickAsThievesMetadata,
+ tatSoloCoopActionRows,
+ tatSoloCoopJumpLinks,
+ tatSoloCoopSearchIntent,
+ tatSoloCoopSourceRows,
+ tatSoloCoopStatusItems,
  thickAsThievesImages,
 } from "@/lib/thick-as-thieves";
 
@@ -103,6 +114,15 @@ export default function ThickAsThievesSoloCoopPage() {
  </p>
  </BlufBox>
 
+ <SearchAnswerPanel
+ title="Thick As Thieves Solo & Co-op Quick Answer"
+ answer="Solo play and two-player online co-op. The official FAQ says you can play solo or with a partner in crime. Split-screen, couch co-op, local co-op, crossplay, and PS5 co-op are not confirmed in current public materials. Run a short host test before a long co-op session."
+ intentRows={tatSoloCoopSearchIntent}
+ jumpLinks={tatSoloCoopJumpLinks}
+ />
+
+ <StatusPanel items={tatSoloCoopStatusItems} />
+
  <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
  <table className="w-full text-sm">
  <thead>
@@ -134,7 +154,7 @@ export default function ThickAsThievesSoloCoopPage() {
  </div>
 
  <section className="prose-game">
- <h2>Solo Versus Co-op</h2>
+ <h2 id="solo-versus-coop">Solo Versus Co-op</h2>
  <ArticleImage
  src={thickAsThievesImages.soloCoop}
  alt="Thick As Thieves solo versus co-op visual"
@@ -148,7 +168,7 @@ export default function ThickAsThievesSoloCoopPage() {
  chase loot without a shared exit plan.
  </p>
 
- <h2>Co-op Launch Checklist</h2>
+ <h2 id="coop-launch-checklist">Co-op Launch Checklist</h2>
  <ArticleImage
  src={thickAsThievesImages.screenshot6}
  alt="Thick As Thieves co-op launch checklist image"
@@ -186,6 +206,11 @@ export default function ThickAsThievesSoloCoopPage() {
  </tbody>
  </table>
  </div>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Co-op Plan</h2>
+ <ActionTable rows={tatSoloCoopActionRows} />
+
+ <SourceCheckTable title="Thick As Thieves Solo & Co-op Sources" rows={tatSoloCoopSourceRows} />
  </ThickAsThievesArticle>
  );
 }

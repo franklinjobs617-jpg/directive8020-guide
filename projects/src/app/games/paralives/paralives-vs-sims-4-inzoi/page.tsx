@@ -1,9 +1,14 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 import { ParalivesArticle } from '@/components/paralives-article';
 import {
  createParalivesMetadata,
+ paralivesComparisonActionRows,
+ paralivesComparisonJumpLinks,
  paralivesComparisonRows,
+ paralivesComparisonSearchIntent,
+ paralivesComparisonSourceRows,
+ paralivesComparisonStatusItems,
  paralivesImages,
 } from '@/lib/paralives';
 
@@ -61,8 +66,17 @@ export default function ParalivesComparisonPage() {
  </p>
  </BlufBox>
 
+ <SearchAnswerPanel
+ title="Paralives vs Sims 4 vs inZOI Quick Answer"
+ answer="Paralives: Early Access customization, flexible building, Mac support, Workshop. Sims 4: mature content library and CC ecosystem. inZOI: realism-focused direction. Pick by dimension, not by hype."
+ intentRows={paralivesComparisonSearchIntent}
+ jumpLinks={paralivesComparisonJumpLinks}
+ />
+
+ <StatusPanel items={paralivesComparisonStatusItems} />
+
  <section className="prose-game">
- <h2>Life Sim Comparison Table</h2>
+ <h2 id="comparison-strengths">Life Sim Comparison Table</h2>
  <ArticleImage
  src={paralivesImages.hero}
  alt="Paralives life simulation screenshot for Sims 4 and inZOI comparison"
@@ -90,6 +104,49 @@ export default function ParalivesComparisonPage() {
  </tbody>
  </table>
  </div>
+
+ <section className="prose-game">
+ <h2 id="comparison-direction">Direction and Realism</h2>
+ <p>
+ Paralives leans into stylized customization and flexible building.
+ The Sims 4 sits in the middle of the market with familiar systems and
+ years of expansions. inZOI is commonly searched for its realistic
+ visual direction. If realism is your main priority, inZOI is the
+ shortlist. If you care more about building tools and modding, both
+ Paralives and The Sims 4 belong on your shortlist, with very
+ different content timelines.
+ </p>
+ </section>
+
+ <section className="prose-game">
+ <h2 id="comparison-fit">Best Fit by Player Type</h2>
+ <p>
+ Pick by dimension, not by hype. If you want flexible building,
+ Paramaker, Mac support, and Workshop sharing with a free-update
+ pledge, Paralives is the right fit. If you want the deepest existing
+ content library and a familiar system, The Sims 4 is the safe pick.
+ If you want realism and a different life-sim fantasy, inZOI is the
+ shortlist. Life by You is useful as search context, not a current
+ buying alternative.
+ </p>
+ </section>
+
+ <section className="prose-game">
+ <h2 id="comparison-context">Market Context and Roadmap</h2>
+ <p>
+ The wider life-sim market has moved quickly in the last few years.
+ Paralives is in Early Access with a published feature set and a
+ free-update pledge. The Sims 4 has years of expansions and a deep CC
+ community. inZOI is positioned around realism. Life by You is no
+ longer a current buying alternative. Pick the game that matches your
+ dimension, not the loudest marketing message.
+ </p>
+ </section>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Comparison Plan</h2>
+ <ActionTable rows={paralivesComparisonActionRows} />
+
+ <SourceCheckTable title="Paralives vs Sims 4 vs inZOI Sources" rows={paralivesComparisonSourceRows} />
  </ParalivesArticle>
  );
 }

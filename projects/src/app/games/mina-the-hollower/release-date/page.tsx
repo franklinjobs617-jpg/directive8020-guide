@@ -1,11 +1,22 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { MinaArticle } from '@/components/mina-the-hollower-article';
 import {
  createMinaMetadata,
  minaImages,
  minaLaunchCheckRows,
  minaQuickFacts,
+ minaReleaseActionRows,
+ minaReleaseJumpLinks,
+ minaReleaseSearchIntent,
+ minaReleaseSourceRows,
+ minaReleaseStatusItems,
 } from '@/lib/mina-the-hollower';
 
 const title = 'Mina the Hollower Release Date, Platforms, Demo & Unlock Status';
@@ -64,7 +75,16 @@ export default function MinaReleaseDatePage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Mina the Hollower Release Quick Answer"
+ answer="Steam shows May 28, 2026 while official and platform coverage announce May 29, 2026. Check your local storefront for the real unlock hour and do not assume demo progress transfers."
+ intentRows={minaReleaseSearchIntent}
+ jumpLinks={minaReleaseJumpLinks}
+ />
+
+ <StatusPanel items={minaReleaseStatusItems} />
+
+ <section className="prose-game" id="release-status">
  <h2>Release Date Status</h2>
  <ArticleImage
  src={minaImages.screenshot1}
@@ -93,7 +113,7 @@ export default function MinaReleaseDatePage() {
  </div>
 
  <section className="prose-game">
- <h2>Platform Notes</h2>
+ <h2 id="platform-notes">Platform Notes</h2>
  <ArticleImage
  src={minaImages.screenshot2}
  alt="Mina the Hollower platform notes"
@@ -107,7 +127,7 @@ export default function MinaReleaseDatePage() {
  platforms.
  </p>
 
- <h2>Launch-Week Checklist</h2>
+ <h2 id="launch-checklist">Launch-Week Checklist</h2>
  <ArticleImage
  src={minaImages.screenshot3}
  alt="Mina the Hollower launch week checklist"
@@ -133,6 +153,11 @@ export default function MinaReleaseDatePage() {
  </tbody>
  </table>
  </div>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Launch Plan</h2>
+ <ActionTable rows={minaReleaseActionRows} />
+
+ <SourceCheckTable title="Mina the Hollower Release Sources" rows={minaReleaseSourceRows} />
  </MinaArticle>
  );
 }

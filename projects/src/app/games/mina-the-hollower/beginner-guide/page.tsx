@@ -1,9 +1,21 @@
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox, RelatedGuides } from '@/components/guide-blocks';
+import {
+ ActionTable,
+ BlufBox,
+ RelatedGuides,
+ SearchAnswerPanel,
+ SourceCheckTable,
+ StatusPanel,
+} from '@/components/guide-blocks';
 import { MinaArticle } from '@/components/mina-the-hollower-article';
 import {
  createMinaMetadata,
+ minaBeginnerActionRows,
+ minaBeginnerJumpLinks,
  minaBeginnerRows,
+ minaBeginnerSearchIntent,
+ minaBeginnerSourceRows,
+ minaBeginnerStatusItems,
  minaImages,
 } from '@/lib/mina-the-hollower';
 
@@ -71,7 +83,16 @@ export default function MinaBeginnerGuidePage() {
  </p>
  </BlufBox>
 
- <section className="prose-game">
+ <SearchAnswerPanel
+ title="Mina the Hollower Beginner Quick Answer"
+ answer="Spend the first session on burrow timing, Nightstar reach, sidearm budget, one-trinket-at-a-time testing, and side-path sweeps. Do not trust boss-skip or secret-route claims until the release build is live."
+ intentRows={minaBeginnerSearchIntent}
+ jumpLinks={minaBeginnerJumpLinks}
+ />
+
+ <StatusPanel items={minaBeginnerStatusItems} />
+
+ <section className="prose-game" id="beginner-priorities">
  <h2>Beginner Priorities</h2>
  <ArticleImage
  src={minaImages.screenshot4}
@@ -100,7 +121,7 @@ export default function MinaBeginnerGuidePage() {
  </div>
 
  <section className="prose-game">
- <h2>Burrowing and Movement</h2>
+ <h2 id="burrowing-movement">Burrowing and Movement</h2>
  <ArticleImage
  src={minaImages.screenshot6}
  alt="Mina the Hollower burrowing and movement"
@@ -113,7 +134,7 @@ export default function MinaBeginnerGuidePage() {
  claim exact secret routes or boss skips without proof.
  </p>
 
- <h2>Nightstar, Sidearms, and Trinkets</h2>
+ <h2 id="nightstar-sidearms">Nightstar, Sidearms, and Trinkets</h2>
  <ArticleImage
  src={minaImages.screenshot7}
  alt="Mina the Hollower Nightstar sidearms and trinkets"
@@ -126,12 +147,19 @@ export default function MinaBeginnerGuidePage() {
  whether it helps against the current enemy pattern.
  </p>
 
- <h2>Common Beginner Mistakes</h2>
+ <h2 id="mistakes">Common Beginner Mistakes</h2>
  <ArticleImage
  src={minaImages.screenshot5}
  alt="Mina the Hollower beginner mistakes"
  caption="Most early mistakes come from rushing: skipping movement practice, burning sidearms, or ignoring side paths in an interconnected world."
  />
+ <p>
+ The fastest way to lose an early run is to treat Mina the Hollower as
+ a checklist. Burrow, dodge, and read the room before reaching for
+ sidearms. If you do use a trinket, swap one piece at a time so the
+ cause and effect stays clear. Boss-skip and secret-route guides
+ should wait for the release build before you trust them.
+ </p>
  </section>
 
  <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
@@ -152,6 +180,11 @@ export default function MinaBeginnerGuidePage() {
  </tbody>
  </table>
  </div>
+
+ <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step First-Session Plan</h2>
+ <ActionTable rows={minaBeginnerActionRows} />
+
+ <SourceCheckTable title="Mina the Hollower Beginner Sources" rows={minaBeginnerSourceRows} />
 
  <RelatedGuides
  guides={[
