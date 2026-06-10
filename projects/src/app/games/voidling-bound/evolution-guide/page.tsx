@@ -57,6 +57,42 @@ export default function VoidlingBoundEvolutionGuidePage() {
         </div>
       </section>
 
+      <section className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Evolution Tree View by Species</h2>
+        <div className="space-y-6">
+          {voidlingSpecies.map((species) => {
+            const speciesEntries = voidlingEntries.filter((entry) => entry.species === species.name);
+            return (
+              <section key={species.slug} className="rounded-lg border border-border/50 bg-card/30 p-5">
+                <h3 className="text-lg font-black text-foreground">{species.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{species.summary}</p>
+                <div className="mt-4 grid gap-3 lg:grid-cols-5">
+                  {voidlingRarities.map((rarity) => {
+                    const rarityEntries = speciesEntries.filter((entry) => entry.rarity === rarity);
+                    return (
+                      <div key={rarity} className="rounded-md border border-border/40 bg-background/30 p-3">
+                        <h4 className="mb-2 text-xs font-bold uppercase tracking-wider text-d8020">{rarity}</h4>
+                        <ul className="space-y-2">
+                          {rarityEntries.map((entry) => (
+                            <li key={entry.slug}>
+                              <Link href={`/games/voidling-bound/voidlings/${entry.slug}`} className="block rounded border border-border/35 bg-card/30 px-2 py-2 text-xs leading-relaxed text-muted-foreground transition-colors hover:border-d8020/45 hover:text-foreground">
+                                <span className="font-semibold text-foreground">{entry.name}</span>
+                                <br />
+                                {entry.element} | {entry.abilities[0]?.name ?? 'Ability data'}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            );
+          })}
+        </div>
+      </section>
+
       <section className="prose-game">
         <h2>How to Compare Two Evolutions</h2>
         <ArticleImage src={voidlingBoundImages.screenshot3} alt="Voidling Bound comparing evolutions screenshot" caption="Good evolution comparison asks what changed: element, ability slot, perk, range, survival tool, or species role." />
@@ -69,7 +105,7 @@ export default function VoidlingBoundEvolutionGuidePage() {
           , filter by species, then filter by element or rarity. Add up to three entries to the comparison panel. If the comparison still does not answer the decision, the problem is likely not a data problem; it is a gameplay preference problem. At that point, use the beginner or attributes guide to decide what role you actually need.
         </p>
         <p>
-          This page intentionally avoids “all best evolutions” claims. That content would require stable patch data, testing methodology, and matchup context. The current evidence supports structured comparison, not final ranking.
+          This page intentionally avoids "all best evolutions" claims. That content would require stable patch data, testing methodology, and matchup context. The current evidence supports structured comparison, not final ranking.
         </p>
       </section>
     </VoidlingBoundArticle>

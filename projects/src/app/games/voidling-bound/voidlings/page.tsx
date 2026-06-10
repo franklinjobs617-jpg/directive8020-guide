@@ -56,8 +56,8 @@ export default function VoidlingBoundVoidlingsPage() {
               <div className="grid gap-4 sm:grid-cols-2">
                 {entries.map((entry) => (
                   <Link key={entry.slug} href={`/games/voidling-bound/voidlings/${entry.slug}`} className="grid grid-cols-[112px_1fr] overflow-hidden rounded-md border border-border/40 bg-background/30 transition-colors hover:border-d8020/45">
-                    <div className="relative min-h-[92px]">
-                      <Image src={entry.image} alt={`${entry.name} Voidling image`} fill className="object-cover" sizes="112px" />
+                    <div className="relative min-h-[92px] bg-background/60">
+                      <Image src={entry.thumbImage} alt={`${entry.name} Voidling thumbnail`} fill className="object-contain p-2" sizes="112px" />
                     </div>
                     <div className="p-3">
                       <h3 className="text-sm font-bold text-foreground">{entry.name}</h3>

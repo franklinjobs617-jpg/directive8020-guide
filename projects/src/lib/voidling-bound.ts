@@ -32,6 +32,9 @@ export const voidlingSpeciesNames = voidlingSpecies.map((species) => species.nam
 export const voidlingAbilitySlots = [
   ...new Set(voidlingEntries.flatMap((entry) => entry.abilities.map((ability) => ability.slot))),
 ].sort();
+export const voidlingSizes = [...new Set(voidlingEntries.map((entry) => entry.size).filter(Boolean))].sort();
+export const voidlingModules = [...new Set(voidlingEntries.flatMap((entry) => entry.modules.map((module) => module.name)))].sort();
+export const voidlingStatusEffects = voidlingBoundWikiData.statusEffects;
 
 export const voidlingQuickFacts = [
   ['Release status', 'Released on Steam on June 9, 2026'],
@@ -41,7 +44,10 @@ export const voidlingQuickFacts = [
   ['Wiki license', voidlingBoundWikiData.wiki.license],
   ['Species count', `${voidlingSpecies.length} playable species listed on the Species page`],
   ['Voidling entries', `${voidlingEntries.length} wiki-derived evolution entries`],
-  ['Local wiki images', `${voidlingEntries.filter((entry) => entry.image.includes('/wiki/')).length} compressed local WebP images currently mapped`],
+  ['Exact wiki images', `${voidlingEntries.filter((entry) => entry.imageStatus === 'exact').length} exact compressed local WebP images`],
+  ['Species image fallbacks', `${voidlingEntries.filter((entry) => entry.imageStatus === 'speciesFallback').length} entries use a same-species image because the wiki snapshot has no exact file`],
+  ['Modules parsed', `${voidlingEntries.filter((entry) => entry.modules.length > 0).length} entries include parsed module rows`],
+  ['Status effects parsed', `${voidlingEntries.filter((entry) => entry.statusEffects.length > 0).length} entries include parsed status-effect labels`],
 ] as const;
 
 export const voidlingSourceRows = [
@@ -72,6 +78,13 @@ export const voidlingSourceRows = [
     status: 'verified' as const,
     href: voidlingBoundWikiData.wiki.licenseUrl,
     note: 'Images are downloaded locally, converted to WebP, and attributed under the wiki license.',
+  },
+  {
+    claim: 'Status effect labels',
+    source: 'Voidling Bound Wiki Status Effects page',
+    status: 'verified' as const,
+    href: voidlingBoundWikiData.wiki.statusEffectsUrl,
+    note: 'Used to match status-effect labels inside parsed ability descriptions.',
   },
 ];
 
@@ -164,8 +177,8 @@ export const voidlingGuideFaqs = {
       answer: 'The database is generated from Voidling Bound Wiki pages on wiki.gg, especially Species and the nine List of Species Evolutions pages, with Steam used for store-level facts.',
     },
     {
-      question: 'Can I search by evolution, element, or ability?',
-      answer: 'Yes. The database supports text search plus filters for species, rarity, element, and ability slot, so players can find a Voidling by name, branch, or combat role.',
+      question: 'Can I search by evolution, element, ability, module, or status effect?',
+      answer: 'Yes. The database supports text search plus filters for species, rarity, element, ability slot, status effect, module, size, and image coverage, so players can find a Voidling by name, branch, combat role, or parsed wiki field.',
     },
     {
       question: 'Are the images official?',

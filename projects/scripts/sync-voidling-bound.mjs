@@ -1,11 +1,14 @@
-import { spawn } from 'node:child_process';
-import { existsSync } from 'node:fs';
+﻿import { spawn } from 'node:child_process';
+import { existsSync, statSync } from 'node:fs';
 import { mkdir, readFile, unlink, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const root = process.cwd();
 const publicDir = path.join(root, 'public', 'games', 'voidling-bound');
 const wikiImageDir = path.join(publicDir, 'wiki');
+const wikiThumbDir = path.join(wikiImageDir, 'thumb');
+const wikiCardDir = path.join(wikiImageDir, 'card');
+const wikiDetailDir = path.join(wikiImageDir, 'detail');
 const outputFile = path.join(root, 'src', 'lib', 'voidling-bound-wiki-data.ts');
 const wikiApi = 'https://voidlingbound.wiki.gg/api.php';
 const steamApi = 'https://store.steampowered.com/api/appdetails?appids=2004680&l=english';
@@ -26,12 +29,19 @@ const speciesOrder = [
 ];
 
 const rarityNames = new Set(['Common', 'Rare', 'Superior', 'Exotic', 'Mutated']);
+const rarityRank = new Map([
+  ['Common', 1],
+  ['Rare', 2],
+  ['Superior', 3],
+  ['Exotic', 4],
+  ['Mutated', 5],
+]);
 const abilitySlots = ['Primary', 'Secondary', 'Tertiary', 'Defense', 'Movement', 'Ultimate', 'Perk'];
 
 function slugify(value) {
   return value
     .toLowerCase()
-    .replace(/['’]/g, '')
+    .replace(/['\u2018\u2019]/g, '')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
@@ -98,10 +108,12 @@ async function download(url, target) {
   if (existsSync(target)) return;
   const response = await fetchWithRetry(url);
   if (!response.ok) throw new Error(`Download failed ${response.status}: ${url}`);
-  await writeFile(target, Buffer.from(await response.arrayBuffer()));
+  const bytes = Buffer.from(await response.arrayBuffer());
+  if (bytes.length < 1024) throw new Error(`Downloaded file is too small: ${url}`);
+  await writeFile(target, bytes);
 }
 
-function runFfmpeg(input, output, size = 640) {
+function runFfmpeg(input, output, size = 640, quality = 78) {
   return new Promise((resolve, reject) => {
     const child = spawn('ffmpeg', [
       '-y',
@@ -112,11 +124,11 @@ function runFfmpeg(input, output, size = 640) {
       '-vf',
       `scale='min(${size},iw)':-2`,
       '-quality',
-      '78',
+      String(quality),
       output,
     ]);
     child.on('close', (code) => {
-      if (code === 0) resolve();
+      if (code === 0 && existsSync(output) && statSync(output).size > 1024) resolve();
       else reject(new Error(`ffmpeg exited with ${code}: ${input}`));
     });
   });
@@ -169,7 +181,37 @@ function parseAbility(value) {
   };
 }
 
-function parseVoidlingSection({ species, rarity, heading, sectionText }) {
+function extractModules(text) {
+  const modulesText = extractField(text, 'Modules', ['Evolution Path']);
+  if (!modulesText) return [];
+  return [...modulesText.matchAll(/([A-Z][A-Za-z0-9 '\-]+?)\s*\(\+(\d+)\s+([A-Za-z ]+?)\s*\)/g)]
+    .map((match) => ({
+      name: match[1].trim(),
+      bonus: `+${match[2]} ${match[3].trim()}`,
+    }));
+}
+
+function extractStatusEffects(text, statusNames) {
+  const normalized = ` ${text.toLowerCase()} `;
+  return statusNames.filter((status) => normalized.includes(` ${status.toLowerCase()} `));
+}
+
+function normalizeImageName(value) {
+  return value.toLowerCase().replace(/[_\s]+/g, ' ').replace(/\s*\(presskit\)/g, '').trim();
+}
+
+function findImageFile(name, images) {
+  const expected = normalizeImageName(name);
+  const matching = images.filter((image) => normalizeImageName(image.replace(/\.[^.]+$/, '')) === expected);
+  return (
+    matching.find((image) => image.toLowerCase().endsWith('.jpg')) ??
+    matching.find((image) => image.toLowerCase().includes('(presskit).png')) ??
+    matching[0] ??
+    `${name}.jpg`
+  );
+}
+
+function parseVoidlingSection({ species, rarity, heading, sectionText, statusNames, imageFile }) {
   const element = extractField(sectionText, 'Element', ['Color', 'Eye', 'Pattern', 'Size', 'Type', ...abilitySlots]);
   const color = extractField(sectionText, 'Color', ['Eye', 'Pattern', 'Size', 'Type', ...abilitySlots]);
   const eye = extractField(sectionText, 'Eye', ['Pattern', 'Size', 'Type', ...abilitySlots]);
@@ -182,6 +224,12 @@ function parseVoidlingSection({ species, rarity, heading, sectionText }) {
       return { slot, ...parseAbility(value) };
     })
     .filter(Boolean);
+  const modules = extractModules(sectionText);
+  const statusEffects = extractStatusEffects(
+    abilities.map((ability) => `${ability.name} ${ability.description}`).join(' '),
+    statusNames,
+  );
+  const perks = abilities.filter((ability) => ability.slot === 'Perk').map((ability) => ability.name);
 
   return {
     name: heading.text,
@@ -194,16 +242,20 @@ function parseVoidlingSection({ species, rarity, heading, sectionText }) {
     pattern,
     size,
     abilities,
+    perks,
+    modules,
+    statusEffects,
     summary: compact(`${heading.text} is a ${rarity.toLowerCase()} ${species} evolution with ${element || 'Neutral'} element data on the Voidling Bound Wiki. ${abilities.slice(0, 2).map((ability) => `${ability.slot}: ${ability.name}`).join('. ')}`, 360),
-    imageFile: `${heading.text}.jpg`,
+    imageFile,
     wikiUrl: `https://voidlingbound.wiki.gg/wiki/List_of_${encodeURIComponent(species.replaceAll(' ', '_'))}_Evolutions#${heading.id}`,
   };
 }
 
-async function parseEvolutionPage(species) {
+async function parseEvolutionPage(species, statusNames) {
   const pageTitle = `List of ${species} Evolutions`;
   const parsed = await wikiQuery({ action: 'parse', page: pageTitle, prop: 'text|links|images' });
   const html = parsed.parse.text['*'];
+  const images = parsed.parse.images ?? [];
   const headings = parseHeadings(html);
   let currentRarity = 'Common';
   const entries = [];
@@ -221,10 +273,18 @@ async function parseEvolutionPage(species) {
       rarity: currentRarity,
       heading,
       sectionText,
+      statusNames,
+      imageFile: findImageFile(heading.text, images),
     }));
   }
 
   return entries;
+}
+
+function parseStatusNames(html) {
+  return [...html.matchAll(/<span[^>]+id="([^"]+)"[^>]*>([\s\S]*?)<\/span>/g)]
+    .map((match) => stripHtml(match[2]))
+    .filter((name) => name && name !== 'Contents');
 }
 
 async function fetchImageInfo(fileName) {
@@ -238,25 +298,84 @@ async function fetchImageInfo(fileName) {
   return page?.imageinfo?.[0] ?? null;
 }
 
+function imageSetForSlug(slug) {
+  return {
+    thumbImage: `/games/voidling-bound/wiki/thumb/${slug}.webp`,
+    image: `/games/voidling-bound/wiki/card/${slug}.webp`,
+    detailImage: `/games/voidling-bound/wiki/detail/${slug}.webp`,
+    thumbPath: path.join(wikiThumbDir, `${slug}.webp`),
+    cardPath: path.join(wikiCardDir, `${slug}.webp`),
+    detailPath: path.join(wikiDetailDir, `${slug}.webp`),
+  };
+}
+
+function fallbackImageSet(species, status) {
+  const speciesSlug = slugify(species);
+  const speciesSet = imageSetForSlug(speciesSlug);
+  const hasSpeciesSet = existsSync(speciesSet.thumbPath) && existsSync(speciesSet.cardPath) && existsSync(speciesSet.detailPath);
+  if (hasSpeciesSet) {
+    return {
+      thumbImage: speciesSet.thumbImage,
+      image: speciesSet.image,
+      detailImage: speciesSet.detailImage,
+      imageStatus: status,
+      source: null,
+    };
+  }
+  return {
+    thumbImage: '/games/voidling-bound/card.webp',
+    image: '/games/voidling-bound/card.webp',
+    detailImage: '/games/voidling-bound/card.webp',
+    imageStatus: 'genericFallback',
+    source: null,
+  };
+}
+
+async function createImageVariants(input, imageSet) {
+  await runFfmpeg(input, imageSet.thumbPath, 240, 78);
+  await runFfmpeg(input, imageSet.cardPath, 480, 72);
+  await runFfmpeg(input, imageSet.detailPath, 720, 80);
+}
+
 async function downloadWikiImage(entry) {
-  const webpName = `${entry.slug}.webp`;
-  const finalPath = path.join(wikiImageDir, webpName);
-  if (existsSync(finalPath)) return { image: `/games/voidling-bound/wiki/${webpName}`, source: null };
+  const imageSet = imageSetForSlug(entry.slug);
+  if (existsSync(imageSet.thumbPath) && existsSync(imageSet.cardPath) && existsSync(imageSet.detailPath)) {
+    return {
+      thumbImage: imageSet.thumbImage,
+      image: imageSet.image,
+      detailImage: imageSet.detailImage,
+      imageStatus: 'exact',
+      source: null,
+    };
+  }
   if (newWikiImageDownloads >= maxNewWikiImages) {
-    return { image: '/games/voidling-bound/card.webp', source: null };
+    return fallbackImageSet(entry.species, 'speciesFallback');
   }
 
   const imageInfo = await fetchImageInfo(entry.imageFile);
-  if (!imageInfo?.url) return { image: '/games/voidling-bound/card.webp', source: null };
+  if (!imageInfo?.url) {
+    return fallbackImageSet(entry.species, 'speciesFallback');
+  }
 
   const extension = path.extname(new URL(imageInfo.url).pathname) || '.jpg';
   const tempPath = path.join(wikiImageDir, `${entry.slug}${extension}`);
-  await download(imageInfo.url, tempPath);
-  await runFfmpeg(tempPath, finalPath, 640);
+  try {
+    await download(imageInfo.url, tempPath);
+    await createImageVariants(tempPath, imageSet);
+  } catch (error) {
+    await unlink(tempPath).catch(() => {});
+    await unlink(imageSet.thumbPath).catch(() => {});
+    await unlink(imageSet.cardPath).catch(() => {});
+    await unlink(imageSet.detailPath).catch(() => {});
+    return fallbackImageSet(entry.species, 'speciesFallback');
+  }
   await unlink(tempPath).catch(() => {});
   newWikiImageDownloads += 1;
   return {
-    image: `/games/voidling-bound/wiki/${webpName}`,
+    thumbImage: imageSet.thumbImage,
+    image: imageSet.image,
+    detailImage: imageSet.detailImage,
+    imageStatus: 'exact',
     source: {
       file: entry.imageFile,
       sourceUrl: imageInfo.descriptionurl ?? `https://voidlingbound.wiki.gg/wiki/File:${encodeURIComponent(entry.imageFile.replaceAll(' ', '_'))}`,
@@ -324,26 +443,40 @@ async function downloadSteamAssets() {
 
 async function main() {
   await mkdir(wikiImageDir, { recursive: true });
-  const [siteInfo, speciesPage, steam] = await Promise.all([
+  await mkdir(wikiThumbDir, { recursive: true });
+  await mkdir(wikiCardDir, { recursive: true });
+  await mkdir(wikiDetailDir, { recursive: true });
+  const [siteInfo, speciesPage, statusPage, steam] = await Promise.all([
     wikiQuery({ action: 'query', meta: 'siteinfo', siprop: 'general|rightsinfo' }),
     wikiQuery({ action: 'query', titles: 'Species', prop: 'revisions', rvprop: 'content|ids|timestamp', rvslots: 'main' }),
+    wikiQuery({ action: 'parse', page: 'Status Effects', prop: 'text|links' }),
     downloadSteamAssets(),
   ]);
 
   const speciesWikiPage = Object.values(speciesPage.query.pages)[0];
   const speciesRevision = speciesWikiPage.revisions[0];
   const speciesRaw = speciesRevision.slots.main['*'];
+  const statusNames = parseStatusNames(statusPage.parse.text['*']);
   const species = extractSpeciesSummaries(speciesRaw);
   const voidlings = [];
 
   for (const speciesName of speciesOrder) {
-    voidlings.push(...await parseEvolutionPage(speciesName));
+    voidlings.push(...await parseEvolutionPage(speciesName, statusNames));
   }
 
   const imageSources = [];
   for (const entry of voidlings) {
     const imageResult = await downloadWikiImage(entry);
+    entry.thumbImage = imageResult.thumbImage;
     entry.image = imageResult.image;
+    entry.detailImage = imageResult.detailImage;
+    entry.imageStatus = imageResult.imageStatus;
+    entry.rarityRank = rarityRank.get(entry.rarity) ?? 99;
+    entry.speciesSlug = slugify(entry.species);
+    entry.primaryAbility = entry.abilities.find((ability) => ability.slot === 'Primary')?.name ?? '';
+    entry.secondaryAbility = entry.abilities.find((ability) => ability.slot === 'Secondary')?.name ?? '';
+    entry.moduleNames = entry.modules.map((module) => module.name);
+    entry.statusEffectNames = entry.statusEffects;
     delete entry.imageFile;
     if (imageResult.source) {
       imageSources.push({ name: entry.name, ...imageResult.source });
@@ -360,7 +493,9 @@ async function main() {
       speciesRevisionId: speciesRevision.revid,
       speciesUpdatedAt: speciesRevision.timestamp,
       speciesUrl: 'https://voidlingbound.wiki.gg/wiki/Species',
+      statusEffectsUrl: 'https://voidlingbound.wiki.gg/wiki/Status_Effects',
     },
+    statusEffects: statusNames,
     species,
     voidlings,
     imageSources,
