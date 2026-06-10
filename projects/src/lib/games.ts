@@ -981,7 +981,7 @@ export const enginefall: GameConfig = {
   operatingSystem: "Windows 10 64-bit",
   url: "https://store.steampowered.com/app/2437390/Enginefall/",
   availability: "https://schema.org/PreOrder",
-  heroImage: "/games/enginefall/hero.jpg",
+  heroImage: "/games/enginefall/hero.webp",
   guideLinks: [
     {
       title: "Release Date, Gameplay & Platforms",
@@ -1018,6 +1018,75 @@ export const enginefall: GameConfig = {
       href: "/games/enginefall-system-requirements-platforms",
       description:
         "Official PC minimum specs, Steam Deck status, PS5 and Xbox caveats, controller expectations, and platform FAQ.",
+    },
+  ],
+};
+
+export const voidlingBound: GameConfig = {
+  id: "voidling-bound",
+  slugPrefix: "voidling-bound",
+  hubPath: "/games/voidling-bound",
+  name: "Voidling Bound",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "A creature-collecting action RPG from Hatchery Games where players hatch, train, splice, evolve, and battle Voidlings across species, elements, rarity tiers, abilities, perks, breeding systems, and missions.",
+  platforms: ["PC via Steam"],
+  genres: ["Action", "Adventure", "RPG", "Creature Collector"],
+  developer: "Hatchery Games",
+  publisher: "Hatchery Games",
+  releaseDate: "2026-06-09",
+  operatingSystem: "Windows",
+  url: "https://store.steampowered.com/app/2004680/Voidling_Bound/",
+  availability: "https://schema.org/InStock",
+  heroImage: "/games/voidling-bound/hero.webp",
+  guideLinks: [
+    {
+      title: "Voidling Bound Guide Hub",
+      href: "/games/voidling-bound",
+      description:
+        "Release status, Steam facts, platform caveats, database links, beginner path, evolutions, breeding, elements, and attributes.",
+    },
+    {
+      title: "All Voidlings Database",
+      href: "/games/voidling-bound/database",
+      description:
+        "Search and filter all wiki-derived Voidlings by species, rarity, element, ability slot, and local image availability.",
+    },
+    {
+      title: "All Voidlings List",
+      href: "/games/voidling-bound/voidlings",
+      description:
+        "Crawlable species-by-species list of Voidling evolutions with rarity, element, ability notes, and detail pages.",
+    },
+    {
+      title: "Beginner Guide",
+      href: "/games/voidling-bound/beginner-guide",
+      description:
+        "First-session route for hatching, training, missions, species choice, early fights, and when to use the database.",
+    },
+    {
+      title: "Evolution Guide",
+      href: "/games/voidling-bound/evolution-guide",
+      description:
+        "How to read evolution trees, rarity tiers, element branches, ability changes, and mutation endpoints without guessing.",
+    },
+    {
+      title: "Breeding Guide",
+      href: "/games/voidling-bound/breeding-guide",
+      description:
+        "Breeding, eggs, golden eggs, splicing, mutagens, and how to track lineage decisions using wiki-confirmed systems.",
+    },
+    {
+      title: "Elements Guide",
+      href: "/games/voidling-bound/elements-guide",
+      description:
+        "Organic, Pyro, Cryo, Plasma, Cyber, Neutral, status-effect reading, and how element searches connect to evolutions.",
+    },
+    {
+      title: "Attributes Guide",
+      href: "/games/voidling-bound/attributes-guide",
+      description:
+        "Agility, strength, vitality, level, nature, perks, modules, and what stats matter when comparing Voidlings.",
     },
   ],
 };

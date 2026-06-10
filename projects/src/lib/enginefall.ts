@@ -24,6 +24,15 @@ export interface EnginefallPageData {
   label: string;
   heroImage: string;
   heroAlt: string;
+  sourceImage?: string;
+  sourceImageAlt?: string;
+  sourceImageCaption?: string;
+  relatedImage?: string;
+  relatedImageAlt?: string;
+  relatedImageCaption?: string;
+  faqImage?: string;
+  faqImageAlt?: string;
+  faqImageCaption?: string;
   blufTitle: string;
   bluf: string[];
   quickFacts: EnginefallQuickFact[];
@@ -46,7 +55,7 @@ export interface EnginefallPageData {
   }[];
 }
 
-export const enginefallLastModified = '2026-06-09';
+export const enginefallLastModified = '2026-06-10';
 export const enginefallSteamUrl = 'https://store.steampowered.com/app/2437390/Enginefall/';
 export const enginefallOfficialUrl = 'https://enginefall.com/';
 export const enginefallPlaytestPostUrl =
@@ -69,18 +78,24 @@ export const enginefallSteamDiscussionsUrl =
   'https://steamcommunity.com/app/2437390/discussions/0/';
 
 export const enginefallImages = {
-  hero: '/games/enginefall/hero.jpg',
-  header: '/games/enginefall/header.jpg',
-  card: '/games/enginefall/card.jpg',
-  screenshot1: '/games/enginefall/screenshot-1.jpg',
-  screenshot2: '/games/enginefall/screenshot-2.jpg',
-  screenshot3: '/games/enginefall/screenshot-3.jpg',
-  screenshot4: '/games/enginefall/screenshot-4.jpg',
-  screenshot5: '/games/enginefall/screenshot-5.jpg',
-  screenshot6: '/games/enginefall/screenshot-6.jpg',
-  screenshot7: '/games/enginefall/screenshot-7.jpg',
-  screenshot8: '/games/enginefall/screenshot-8.jpg',
-  screenshot9: '/games/enginefall/screenshot-9.jpg',
+  hero: '/games/enginefall/hero.webp',
+  header: '/games/enginefall/header.webp',
+  card: '/games/enginefall/card.webp',
+  screenshot1: '/games/enginefall/screenshot-1.webp',
+  screenshot2: '/games/enginefall/screenshot-2.webp',
+  screenshot3: '/games/enginefall/screenshot-3.webp',
+  screenshot4: '/games/enginefall/screenshot-4.webp',
+  screenshot5: '/games/enginefall/screenshot-5.webp',
+  screenshot6: '/games/enginefall/screenshot-6.webp',
+  screenshot7: '/games/enginefall/screenshot-7.webp',
+  screenshot8: '/games/enginefall/screenshot-8.webp',
+  screenshot9: '/games/enginefall/screenshot-9.webp',
+  screenshot10: '/games/enginefall/screenshot-10.webp',
+  screenshot11: '/games/enginefall/screenshot-11.webp',
+  screenshot12: '/games/enginefall/screenshot-12.webp',
+  screenshot13: '/games/enginefall/screenshot-13.webp',
+  screenshot14: '/games/enginefall/screenshot-14.webp',
+  screenshot15: '/games/enginefall/screenshot-15.webp',
 };
 
 export const enginefallQuickFacts: EnginefallQuickFact[] = [
@@ -282,6 +297,18 @@ export const enginefallPages = {
     label: 'Enginefall',
     heroImage: enginefallImages.hero,
     heroAlt: 'Enginefall official Steam screenshot showing a post-apocalyptic train combat scene',
+    sourceImage: enginefallImages.screenshot10,
+    sourceImageAlt: 'Enginefall official screenshot for hub source verification',
+    sourceImageCaption:
+      'Official Enginefall sources are strongest for release status, playtest access, platform facts, screenshots, and system names; build-sensitive balance should wait for testing.',
+    relatedImage: enginefallImages.screenshot11,
+    relatedImageAlt: 'Enginefall official screenshot for hub related guides',
+    relatedImageCaption:
+      'Move from the hub into the page that matches the player task: playtest access, beginner extraction, Conductor control, Dagger systems, or platform checks.',
+    faqImage: enginefallImages.screenshot12,
+    faqImageAlt: 'Enginefall official screenshot for hub FAQ section',
+    faqImageCaption:
+      'The hub FAQ answers the broad questions first: release state, confirmed platforms, PvP framing, and what not to fake before launch.',
     blufTitle: 'Worth Doing?',
     bluf: [
       'Enginefall is worth a real guide cluster, not a thin release-date page. Google Trends and autocomplete show active demand around the game, playtest, release date, Steam, PS5, Xbox, Discord, gameplay, review, and Conductor searches. More importantly, the official site and Steam page already expose enough systems to write useful pages without fabricating data.',
@@ -449,6 +476,18 @@ export const enginefallPages = {
     label: 'Playtest',
     heroImage: enginefallImages.screenshot1,
     heroAlt: 'Enginefall official screenshot for playtest access guide',
+    sourceImage: enginefallImages.screenshot6,
+    sourceImageAlt: 'Enginefall official screenshot for playtest source verification',
+    sourceImageCaption:
+      'Playtest pages must point back to Steam and official Enginefall posts because access windows, demo buttons, and server details can change quickly.',
+    relatedImage: enginefallImages.screenshot7,
+    relatedImageAlt: 'Enginefall official screenshot for playtest related guides',
+    relatedImageCaption:
+      'After access questions, most players need beginner survival, extraction, Dagger context, and Conductor route planning.',
+    faqImage: enginefallImages.screenshot8,
+    faqImageAlt: 'Enginefall official screenshot for playtest FAQ section',
+    faqImageCaption:
+      'Playtest FAQ content should separate dates, access routes, keys, Discord, and player-count questions from final launch assumptions.',
     blufTitle: 'Playtest Answer',
     bluf: [
       'Enginefall playtest demand is strong enough for its own page. Users are not only searching the game name; they are searching playtest dates, playtest key, Discord, player count, Steam charts, server password, and review. Those are access and trust questions, so they need fast answers before any gameplay explanation.',
@@ -628,6 +667,18 @@ export const enginefallPages = {
     label: 'Beginner Guide',
     heroImage: enginefallImages.screenshot2,
     heroAlt: 'Enginefall official screenshot for beginner guide',
+    sourceImage: enginefallImages.screenshot8,
+    sourceImageAlt: 'Enginefall official screenshot for beginner guide source verification',
+    sourceImageCaption:
+      'Beginner advice should teach decisions that survive patches: route reading, extraction timing, crafting purpose, and PvP caution.',
+    relatedImage: enginefallImages.screenshot9,
+    relatedImageAlt: 'Enginefall official screenshot for beginner guide related links',
+    relatedImageCaption:
+      'Once the first run makes sense, continue into playtest access, Conductor, Dagger, and platform guidance.',
+    faqImage: enginefallImages.screenshot10,
+    faqImageAlt: 'Enginefall official screenshot for beginner guide FAQ',
+    faqImageCaption:
+      'The beginner FAQ keeps answers practical and avoids unstable tier lists, complete recipes, and final build claims.',
     blufTitle: 'First Run Priority',
     bluf: [
       'The first Enginefall goal is not to win the train. It is to understand the loop, leave with value, and learn what killed you. New players should move with a purpose, loot for immediate survival, craft to solve the next obstacle, avoid ego fights, and extract before the run turns into a trap.',
@@ -807,6 +858,18 @@ export const enginefallPages = {
     label: 'Conductor Guide',
     heroImage: enginefallImages.screenshot3,
     heroAlt: 'Enginefall official screenshot for Conductor guide',
+    sourceImage: enginefallImages.screenshot8,
+    sourceImageAlt: 'Enginefall official screenshot for Conductor source verification',
+    sourceImageCaption:
+      'The Conductor page is grounded in the official C00, Breacher, Control Room, Fuel Core, keycard, and extraction guidance.',
+    relatedImage: enginefallImages.screenshot9,
+    relatedImageAlt: 'Enginefall official screenshot for Conductor related guides',
+    relatedImageCaption:
+      'Conductor planning connects naturally to Dagger fuel value, beginner extraction habits, and playtest access details.',
+    faqImage: enginefallImages.screenshot10,
+    faqImageAlt: 'Enginefall official screenshot for Conductor FAQ',
+    faqImageCaption:
+      'Conductor FAQ answers focus on what official sources confirm and avoid exact timers or costs that may change.',
     blufTitle: 'Conductor Route',
     bluf: [
       'The Conductor route is worth its own page because it is a named official system with direct search demand. The route is not automatic: reach Carriage C00, craft and plant a Breacher, enter the Control Room, register as Conductor, use the role, then extract before the train turns the reward into a death trap.',
@@ -986,6 +1049,18 @@ export const enginefallPages = {
     label: 'Dagger Guide',
     heroImage: enginefallImages.screenshot4,
     heroAlt: 'Enginefall official screenshot for Dagger shuttle guide',
+    sourceImage: enginefallImages.screenshot8,
+    sourceImageAlt: 'Enginefall official screenshot for Dagger source verification',
+    sourceImageCaption:
+      'Dagger coverage uses official world and playtest language for shuttle, base, fuel, schematics, and Dagger vs Dagger pressure.',
+    relatedImage: enginefallImages.screenshot9,
+    relatedImageAlt: 'Enginefall official screenshot for Dagger related guides',
+    relatedImageCaption:
+      'Dagger planning links back to extraction habits, playtest status, Conductor fuel value, and platform checks.',
+    faqImage: enginefallImages.screenshot10,
+    faqImageAlt: 'Enginefall official screenshot for Dagger FAQ',
+    faqImageCaption:
+      'The Dagger FAQ explains current confirmed concepts without inventing a complete upgrade tree or stable raid meta.',
     blufTitle: 'Dagger Role',
     bluf: [
       'The Dagger is important enough for a standalone guide because it is not just transportation. The official site describes it as the player home on rails, while current and future content mentions Dagger bases, Dagger vs Dagger combat, storage, fuel, schematics, and long-term upgrades.',
@@ -1165,6 +1240,18 @@ export const enginefallPages = {
     label: 'System Requirements & Platforms',
     heroImage: enginefallImages.screenshot6,
     heroAlt: 'Enginefall official screenshot for system requirements and platform status',
+    sourceImage: enginefallImages.screenshot11,
+    sourceImageAlt: 'Enginefall official screenshot for platform source verification',
+    sourceImageCaption:
+      'Platform coverage uses Steam for official PC requirements and keeps PS5, Xbox, and Steam Deck claims separate from search demand.',
+    relatedImage: enginefallImages.screenshot12,
+    relatedImageAlt: 'Enginefall official screenshot for platform related guides',
+    relatedImageCaption:
+      'After platform checks, players can move to playtest access, beginner survival, Conductor, or Dagger system pages.',
+    faqImage: enginefallImages.screenshot13,
+    faqImageAlt: 'Enginefall official screenshot for platform FAQ',
+    faqImageCaption:
+      'The platform FAQ gives direct answers for PC specs, console status, and Steam Deck verification without overclaiming.',
     blufTitle: 'Platform Answer',
     bluf: [
       'The confirmed Enginefall platform is Windows PC via Steam. PS5 and Xbox have search demand, but demand is not confirmation. Steam Deck is also not the same as PC support. The page should answer all of these directly because vague platform language creates bad clicks.',

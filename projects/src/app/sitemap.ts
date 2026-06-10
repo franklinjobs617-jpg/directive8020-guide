@@ -12,19 +12,22 @@ import {
   starminer,
   fatekeeper,
   enginefall,
+  voidlingBound,
   lunaAbyss,
   type GameConfig,
 } from '@/lib/games';
+import { voidlingEntries } from '@/lib/voidling-bound';
 
 const BASE_URL = 'https://enjoy4game.com';
 
 function gameSubPages(
   game: GameConfig,
   priorityBase = 0.68,
+  lastModified = '2026-06-03',
 ): MetadataRoute.Sitemap {
   return game.guideLinks.map((link) => ({
     url: `${BASE_URL}${link.href}`,
-    lastModified: '2026-06-03',
+    lastModified,
     changeFrequency: 'weekly' as const,
     priority: priorityBase,
   }));
@@ -86,10 +89,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const gameHubs: MetadataRoute.Sitemap = [
     projectMist, thickAsThieves, zeroParades, mechanicusII, romestead,
     paralives, minaTheHollower, firstLight007, jumpKingQuest, starminer,
-    fatekeeper, enginefall, lunaAbyss,
+    fatekeeper, enginefall, voidlingBound, lunaAbyss,
   ].map((game) => ({
     url: `${BASE_URL}${game.hubPath}`,
-    lastModified: today,
+    lastModified: game.id === 'enginefall' ? '2026-06-10' : today,
     changeFrequency: 'daily' as const,
     priority: 0.74,
   }));
@@ -107,9 +110,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...gameSubPages(jumpKingQuest),
     ...gameSubPages(starminer),
     ...gameSubPages(fatekeeper),
-    ...gameSubPages(enginefall),
+    ...gameSubPages(enginefall, 0.68, '2026-06-10'),
+    ...gameSubPages(voidlingBound, 0.7, '2026-06-10'),
     ...gameSubPages(lunaAbyss),
   ];
 
-  return [...staticPages, ...d8020Pages, ...gameHubs, ...gameSubs];
+  const voidlingDetailPages: MetadataRoute.Sitemap = voidlingEntries.map((entry) => ({
+    url: `${BASE_URL}/games/voidling-bound/voidlings/${entry.slug}`,
+    lastModified: '2026-06-10',
+    changeFrequency: 'weekly' as const,
+    priority: 0.56,
+  }));
+
+  return [...staticPages, ...d8020Pages, ...gameHubs, ...gameSubs, ...voidlingDetailPages];
 }

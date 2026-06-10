@@ -26,6 +26,15 @@ interface EnginefallArticleProps {
   label: string;
   heroImage?: string;
   heroAlt: string;
+  sourceImage?: string;
+  sourceImageAlt?: string;
+  sourceImageCaption?: string;
+  relatedImage?: string;
+  relatedImageAlt?: string;
+  relatedImageCaption?: string;
+  faqImage?: string;
+  faqImageAlt?: string;
+  faqImageCaption?: string;
   faqs: FAQItem[];
   children: ReactNode;
   dateModified?: string;
@@ -39,6 +48,15 @@ export function EnginefallArticle({
   label,
   heroImage = enginefall.heroImage,
   heroAlt,
+  sourceImage = enginefallImages.screenshot8,
+  sourceImageAlt = 'Enginefall official source verification image from Steam screenshots',
+  sourceImageCaption = 'Enginefall is still in playtest and demo coverage, so the source table separates confirmed official facts from media impressions and community signals.',
+  relatedImage = enginefallImages.screenshot9,
+  relatedImageAlt = 'Enginefall related guide image showing official train combat',
+  relatedImageCaption = 'Use the related guides to move from release facts to playtest access, first-run survival, Conductor progression, Dagger planning, and platform checks.',
+  faqImage = enginefallImages.screenshot5,
+  faqImageAlt = 'Enginefall FAQ image showing official rail survival gameplay',
+  faqImageCaption = 'Because the June 2026 build is not the final launch version, each answer separates stable facts from playtest-sensitive details.',
   faqs,
   children,
   dateModified = enginefallLastModified,
@@ -88,23 +106,23 @@ export function EnginefallArticle({
         {showSources && (
           <>
             <ArticleImage
-              src={enginefallImages.screenshot8}
-              alt="Enginefall official source verification image from Steam screenshots"
-              caption="Enginefall is still in playtest and demo coverage, so the source table separates confirmed official facts from media impressions and community signals."
+              src={sourceImage}
+              alt={sourceImageAlt}
+              caption={sourceImageCaption}
             />
             <SourceCheckTable title="Enginefall Sources and Verification" rows={enginefallSourceRows} />
           </>
         )}
         <ArticleImage
-          src={enginefallImages.screenshot9}
-          alt="Enginefall related guide image showing official train combat"
-          caption="Use the related guides to move from release facts to playtest access, first-run survival, Conductor progression, Dagger planning, and platform checks."
+          src={relatedImage}
+          alt={relatedImageAlt}
+          caption={relatedImageCaption}
         />
         <RelatedGuides guides={getEnginefallRelated(canonical)} />
         <ArticleImage
-          src={enginefallImages.screenshot5}
-          alt="Enginefall FAQ image showing official rail survival gameplay"
-          caption="Because the June 2026 build is not the final launch version, each answer separates stable facts from playtest-sensitive details."
+          src={faqImage}
+          alt={faqImageAlt}
+          caption={faqImageCaption}
         />
         <FAQSection faqs={faqs} />
       </article>
@@ -121,6 +139,15 @@ export function EnginefallGuidePage({ page }: { page: EnginefallPageData }) {
       label={page.label}
       heroImage={page.heroImage}
       heroAlt={page.heroAlt}
+      sourceImage={page.sourceImage}
+      sourceImageAlt={page.sourceImageAlt}
+      sourceImageCaption={page.sourceImageCaption}
+      relatedImage={page.relatedImage}
+      relatedImageAlt={page.relatedImageAlt}
+      relatedImageCaption={page.relatedImageCaption}
+      faqImage={page.faqImage}
+      faqImageAlt={page.faqImageAlt}
+      faqImageCaption={page.faqImageCaption}
       faqs={page.faqs}
     >
       <BlufBox title={page.blufTitle}>

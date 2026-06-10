@@ -17,10 +17,11 @@ import { lunaAbyssImages } from "@/lib/luna-abyss";
 import { fatekeeperImages } from "@/lib/fatekeeper";
 import { gateGuardImages } from "@/lib/gate-guard-simulator";
 import { enginefallImages } from "@/lib/enginefall";
+import { voidlingBoundImages } from "@/lib/voidling-bound";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
-  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, fantasy RPGs, inspection sims, train-based crafting shooters, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, and story-driven games, including Enginefall, Gate Guard Simulator, Luna Abyss, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+  "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, fantasy RPGs, creature collectors, inspection sims, train-based crafting shooters, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, and story-driven games, including Voidling Bound, Enginefall, Gate Guard Simulator, Luna Abyss, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
   title: {
@@ -46,6 +47,7 @@ export const metadata: Metadata = {
     "Fatekeeper guide",
     "Gate Guard Simulator guide",
     "Enginefall guide",
+    "Voidling Bound guide",
   ],
   authors: [{ name: "Enjoy4Game Guides" }],
   alternates: {
@@ -68,6 +70,13 @@ export const metadata: Metadata = {
 };
 
 const gameCards = [
+  {
+    title: "Voidling Bound",
+    href: "/games/voidling-bound",
+    label: "Creature collector RPG",
+    body: "Wiki-derived database for all Voidlings, species, evolutions, elements, breeding, attributes, beginner route, Steam release facts, and source-backed detail pages.",
+    image: voidlingBoundImages.hero,
+  },
   {
     title: "Enginefall",
     href: "/games/enginefall",

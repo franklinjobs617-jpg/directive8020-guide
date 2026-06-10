@@ -1,0 +1,147 @@
+import Link from 'next/link';
+import { ArticleImage } from '@/components/article-media';
+import { BlufBox, SearchAnswerPanel, StatusPanel } from '@/components/guide-blocks';
+import { VoidlingBoundArticle } from '@/components/voidling-bound-article';
+import {
+  createVoidlingBoundMetadata,
+  voidlingBoundImages,
+  voidlingQuickFacts,
+  voidlingGuideFaqs,
+} from '@/lib/voidling-bound';
+
+const title = 'Voidling Bound Guide: Database, All Voidlings, Evolutions, Elements & Beginner Tips';
+const description =
+  'Voidling Bound guide hub with a wiki-derived searchable database, all Voidlings, evolutions, elements, breeding, attributes, Steam release facts, and beginner route.';
+const canonical = '/games/voidling-bound';
+
+export const metadata = createVoidlingBoundMetadata({
+  title,
+  description,
+  canonical,
+  image: voidlingBoundImages.hero,
+});
+
+const searchIntentRows = [
+  {
+    query: 'voidling bound all voidlings',
+    answer: 'Use the database and all Voidlings list for species, rarity, element, ability notes, and detail pages.',
+    href: '/games/voidling-bound/database',
+    label: 'Database',
+  },
+  {
+    query: 'voidling bound evolution tree',
+    answer: 'Use the evolution guide to understand rarity tiers, element branches, ability changes, and mutation endpoints.',
+    href: '/games/voidling-bound/evolution-guide',
+    label: 'Evolution',
+  },
+  {
+    query: 'voidling bound guide',
+    answer: 'Start with the beginner guide, then move into breeding, elements, attributes, and the searchable database.',
+    href: '/games/voidling-bound/beginner-guide',
+    label: 'Guide',
+  },
+  {
+    query: 'voidling bound creatures wiki',
+    answer: 'This hub uses the wiki as source data, then restructures it into filters, comparison, summaries, and source checks.',
+    href: '#sources',
+    label: 'Sources',
+  },
+];
+
+const jumpLinks = [
+  { href: '#database-first', label: 'Database first' },
+  { href: '#steam-status', label: 'Steam facts' },
+  { href: '#guide-map', label: 'Guide map' },
+  { href: '#sources', label: 'Sources' },
+];
+
+export default function VoidlingBoundHubPage() {
+  return (
+    <VoidlingBoundArticle
+      title={title}
+      description={description}
+      canonical={canonical}
+      label="Voidling Bound"
+      heroImage={voidlingBoundImages.hero}
+      heroAlt="Voidling Bound Steam screenshot showing creature action RPG gameplay"
+      faqs={voidlingGuideFaqs.hub}
+    >
+      <BlufBox title="Worth Doing?">
+        <p>
+          <strong>Voidling Bound is worth doing as a database-first SEO cluster.</strong> The demand is not only the game name. Search suggestions already split into all Voidlings, creatures wiki, evolution tree, evolutions, elements, price, console, multiplayer, and guide intent. A normal article cannot satisfy those users. A raw wiki mirror also fails because it does not give fast filtering, comparison, beginner ordering, or page-level answers.
+        </p>
+      </BlufBox>
+
+      <StatusPanel
+        items={voidlingQuickFacts.map(([label, value]) => ({
+          label,
+          value,
+          status: 'verified' as const,
+        }))}
+      />
+
+      <SearchAnswerPanel
+        title="Voidling Bound Search Answer"
+        answer="Voidling Bound is live on Steam, and the highest-value content is a searchable wiki-derived database supported by beginner, evolution, breeding, elements, and attributes guides."
+        intentRows={searchIntentRows}
+        jumpLinks={jumpLinks}
+      />
+
+      <section id="database-first" className="prose-game">
+        <h2>Why the Database Comes First</h2>
+        <ArticleImage
+          src={voidlingBoundImages.screenshot1}
+          alt="Voidling Bound gameplay screenshot for database hub"
+          caption="Players searching Voidling Bound are not only asking whether the game exists; they are trying to identify creatures, evolutions, elements, and ability changes."
+        />
+        <p>
+          The core information problem in Voidling Bound is lookup speed. A player sees a Voidling name, an element branch, a rarity tier, or an ability and needs to understand what it means without reading every species page manually. That is why the first page in this cluster is the database. It converts the wiki snapshot into filters for species, rarity, element, and ability slot, while keeping each entry crawlable and linked to a detail page.
+        </p>
+        <p>
+          The database does not replace the wiki. It solves a different job. Wiki pages are the source of truth. The Enjoy4Game database is the working layer: search, compare, move from a Voidling to related evolutions, and then jump into guide articles when a system needs explanation. That structure fits both new players and returning players. Beginners need ordering. Experienced players need fast retrieval.
+        </p>
+        <p>
+          Start with the{' '}
+          <Link href="/games/voidling-bound/database">All Voidlings Database</Link>
+          {' '}when you know a name, element, rarity, or ability. Use the{' '}
+          <Link href="/games/voidling-bound/voidlings">All Voidlings List</Link>
+          {' '}when you want a crawlable species-by-species view. Use guide pages when the question is not “what is this?” but “what should I do with this?”
+        </p>
+      </section>
+
+      <section id="steam-status" className="prose-game">
+        <h2>Steam Release, Platform, and Console Status</h2>
+        <ArticleImage
+          src={voidlingBoundImages.screenshot2}
+          alt="Voidling Bound Steam screenshot used for release and platform context"
+          caption="Steam is used for release status and store facts; wiki.gg is used for creature and system data."
+        />
+        <p>
+          Steam-level facts should stay separate from creature data. Voidling Bound released on Steam on June 9, 2026. Hatchery Games is listed as developer and publisher. The store context supports PC coverage, screenshots, controller and feature notes, and release-state answers. It does not confirm every console query that appears in search suggestions.
+        </p>
+        <p>
+          That distinction matters because autocomplete can expose PS5, Xbox, console, price, and multiplayer searches before the official information supports a full standalone page. The current hub answers those questions directly, but the first real content investment belongs to the database and guide cluster. Console pages should wait until official platform confirmation or GSC impressions justify a dedicated page.
+        </p>
+      </section>
+
+      <section id="guide-map" className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Guide Map</h2>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {[
+            ['/games/voidling-bound/database', 'All Voidlings Database', 'Search and filter every wiki-derived entry by species, rarity, element, and ability slot.'],
+            ['/games/voidling-bound/beginner-guide', 'Beginner Guide', 'First-session route for species choice, hatching, training, missions, and database use.'],
+            ['/games/voidling-bound/evolution-guide', 'Evolution Guide', 'Read rarity tiers, branches, mutations, and ability changes without inventing tier lists.'],
+            ['/games/voidling-bound/breeding-guide', 'Breeding Guide', 'Connect eggs, golden eggs, splicing, mutagens, and lineage planning to confirmed wiki systems.'],
+            ['/games/voidling-bound/elements-guide', 'Elements Guide', 'Use Organic, Pyro, Cryo, Plasma, Cyber, and Neutral as filters instead of guesses.'],
+            ['/games/voidling-bound/attributes-guide', 'Attributes Guide', 'Compare role, ability slots, perks, modules, nature, level, and attribute support.'],
+          ].map(([href, itemTitle, body]) => (
+            <Link key={href} href={href} className="rounded-lg border border-border/50 bg-card/30 p-4 transition-colors hover:border-d8020/45">
+              <h3 className="text-sm font-bold text-foreground">{itemTitle}</h3>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{body}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </VoidlingBoundArticle>
+  );
+}
