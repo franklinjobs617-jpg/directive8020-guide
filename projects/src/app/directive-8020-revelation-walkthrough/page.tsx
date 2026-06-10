@@ -5,11 +5,11 @@ import { episodeWalkthroughs } from '@/lib/episode-walkthroughs';
 const data = episodeWalkthroughs['directive-8020-revelation-walkthrough'];
 
 export const metadata: Metadata = {
-  title: data.metaTitle,
-  description: data.description,
-  alternates: { canonical: `/${data.slug}` },
+ title: data.metaTitle,
+ description: data.description,
+ alternates: { canonical: `/${data.slug}` },
 };
 
 export default function Page() {
-  return <EpisodeWalkthroughPage data={data} />;
+ return <EpisodeWalkthroughPage data={data} />;
 }

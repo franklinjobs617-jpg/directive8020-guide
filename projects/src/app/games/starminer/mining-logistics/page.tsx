@@ -3,285 +3,285 @@ import { StarminerArticle } from "@/components/starminer-article";
 import { ArticleImage } from "@/components/article-media";
 import { BlufBox, SearchAnswerPanel } from "@/components/guide-blocks";
 import {
-  createStarminerMetadata,
-  starminerImages,
-  starminerLogisticsRows,
+ createStarminerMetadata,
+ starminerImages,
+ starminerLogisticsRows,
 } from "@/lib/starminer";
 
 const title = "Starminer Mining Guide: Asteroid Extraction, Refining & Production Chains";
 const description =
-  "Starminer mining and logistics guide: asteroid extraction, refining, automated production chains, research, link gates, profit optimization, and expansion planning.";
+ "Starminer mining and logistics guide: asteroid extraction, refining, automated production chains, research, link gates, profit optimization, and expansion planning.";
 const canonical = "/games/starminer/mining-logistics";
 
 export const metadata = createStarminerMetadata({
-  title,
-  description,
-  canonical,
-  image: starminerImages.mining,
+ title,
+ description,
+ canonical,
+ image: starminerImages.mining,
 });
 
 const faqs = [
-  {
-    question: "What is the main mining loop in Starminer?",
-    answer:
-      "The loop is to extract resources from asteroids, refine them into usable materials, feed production chains, research new modules and tools, then expand while keeping maintenance and defense supplied.",
-  },
-  {
-    question: "What are link gates in Starminer?",
-    answer:
-      "Steam says players can build link gates to access new riches in new sectors of space. Build them after your current mining, logistics, and defense network is stable.",
-  },
-  {
-    question: "Should I use resources for profit or fleet expansion?",
-    answer:
-      "Both are part of the official pitch. Beginners should reserve enough resources for maintenance, defense, and research before turning every material into profit or expansion.",
-  },
-  {
-    question: "How do I avoid logistics problems?",
-    answer:
-      "Keep production chains readable, avoid expanding faster than storage and refining can support, and pause when materials start piling up or starving key modules.",
-  },
-  {
-    question: "When should I research new modules?",
-    answer:
-      "Research when the current station is stable enough to support new modules and when a clear bottleneck needs a better tool, ship role, or production step.",
-  },
+ {
+ question: "What is the main mining loop in Starminer?",
+ answer:
+ "The loop is to extract resources from asteroids, refine them into usable materials, feed production chains, research new modules and tools, then expand while keeping maintenance and defense supplied.",
+ },
+ {
+ question: "What are link gates in Starminer?",
+ answer:
+ "Steam says players can build link gates to access new riches in new sectors of space. Build them after your current mining, logistics, and defense network is stable.",
+ },
+ {
+ question: "Should I use resources for profit or fleet expansion?",
+ answer:
+ "Both are part of the official pitch. Beginners should reserve enough resources for maintenance, defense, and research before turning every material into profit or expansion.",
+ },
+ {
+ question: "How do I avoid logistics problems?",
+ answer:
+ "Keep production chains readable, avoid expanding faster than storage and refining can support, and pause when materials start piling up or starving key modules.",
+ },
+ {
+ question: "When should I research new modules?",
+ answer:
+ "Research when the current station is stable enough to support new modules and when a clear bottleneck needs a better tool, ship role, or production step.",
+ },
 ];
 
 const bottleneckRows = [
-  ["Asteroids are mined but production stalls", "Check refining and storage before adding more miners."],
-  ["Refined goods pile up", "Add production demand or improve transport paths."],
-  ["Research feels slow", "Stabilize inputs and stop spending every material on expansion."],
-  ["New sector feels risky", "Delay link gates until current defenses and maintenance reserves are strong."],
-  ["Repairs consume the network", "Reduce heat pressure and improve defense before scaling extraction."],
+ ["Asteroids are mined but production stalls", "Check refining and storage before adding more miners."],
+ ["Refined goods pile up", "Add production demand or improve transport paths."],
+ ["Research feels slow", "Stabilize inputs and stop spending every material on expansion."],
+ ["New sector feels risky", "Delay link gates until current defenses and maintenance reserves are strong."],
+ ["Repairs consume the network", "Reduce heat pressure and improve defense before scaling extraction."],
 ];
 
 const searchIntentRows = [
-  {
-    query: "Starminer mining",
-    answer: "Mine asteroids only as fast as refining, storage, production, repairs, and defense can absorb the output.",
-    href: "#first-chain",
-    label: "Mining",
-  },
-  {
-    query: "Starminer logistics",
-    answer: "Keep the chain readable: extraction, refining, storage, production, research, maintenance, and link gates.",
-    href: "#core-loop",
-    label: "Logistics",
-  },
-  {
-    query: "Production chain",
-    answer: "Start with one stable chain before adding new miners, ships, or link gates.",
-    href: "#first-chain",
-    label: "Production",
-  },
-  {
-    query: "Automation mistakes",
-    answer: "Most early problems come from mining faster than storage, refining, transport, or defense can support.",
-    href: "#automation-mistakes",
-    label: "Avoid",
-  },
+ {
+ query: "Starminer mining",
+ answer: "Mine asteroids only as fast as refining, storage, production, repairs, and defense can absorb the output.",
+ href: "#first-chain",
+ label: "Mining",
+ },
+ {
+ query: "Starminer logistics",
+ answer: "Keep the chain readable: extraction, refining, storage, production, research, maintenance, and link gates.",
+ href: "#core-loop",
+ label: "Logistics",
+ },
+ {
+ query: "Production chain",
+ answer: "Start with one stable chain before adding new miners, ships, or link gates.",
+ href: "#first-chain",
+ label: "Production",
+ },
+ {
+ query: "Automation mistakes",
+ answer: "Most early problems come from mining faster than storage, refining, transport, or defense can support.",
+ href: "#automation-mistakes",
+ label: "Avoid",
+ },
 ];
 
 const jumpLinks = [
-  { href: "#first-chain", label: "First chain" },
-  { href: "#core-loop", label: "Core loop" },
-  { href: "#profit-maintenance", label: "Profit vs maintenance" },
-  { href: "#automation-mistakes", label: "Mistakes" },
-  { href: "/games/starminer/ship-building", label: "Ship building" },
-  { href: "/games/starminer/heat-aliens-defense", label: "Defense" },
+ { href: "#first-chain", label: "First chain" },
+ { href: "#core-loop", label: "Core loop" },
+ { href: "#profit-maintenance", label: "Profit vs maintenance" },
+ { href: "#automation-mistakes", label: "Mistakes" },
+ { href: "/games/starminer/ship-building", label: "Ship building" },
+ { href: "/games/starminer/heat-aliens-defense", label: "Defense" },
 ];
 
 const firstChainRows = [
-  ["Extract", "Mine a nearby asteroid with a controlled starter setup.", "A nearby source is easier to protect and diagnose."],
-  ["Refine", "Turn raw inputs into usable materials before adding more miners.", "Raw stockpiles do not help if the refinery is the bottleneck."],
-  ["Store", "Keep enough storage near the production path.", "Overflow and long movement routes hide shortages."],
-  ["Produce", "Feed one useful module, ship part, or research need at a time.", "A single working chain is easier to scale than three broken chains."],
-  ["Reserve", "Hold material for repairs and defense before link gates.", "Expansion without reserves can collapse after the first attack."],
+ ["Extract", "Mine a nearby asteroid with a controlled starter setup.", "A nearby source is easier to protect and diagnose."],
+ ["Refine", "Turn raw inputs into usable materials before adding more miners.", "Raw stockpiles do not help if the refinery is the bottleneck."],
+ ["Store", "Keep enough storage near the production path.", "Overflow and long movement routes hide shortages."],
+ ["Produce", "Feed one useful module, ship part, or research need at a time.", "A single working chain is easier to scale than three broken chains."],
+ ["Reserve", "Hold material for repairs and defense before link gates.", "Expansion without reserves can collapse after the first attack."],
 ];
 
 const automationMistakeRows = [
-  ["Too many miners", "Extraction outpaces refining and storage, so materials pile up without progress."],
-  ["No repair reserve", "Every attack drains the same materials needed for growth."],
-  ["Unprotected routes", "Mining ships and outer stations become easy targets once heat pressure rises."],
-  ["Link gates too early", "New sectors stretch logistics before the current sector can sustain itself."],
-  ["Research without a bottleneck", "New modules add complexity if the current chain is not stable."],
+ ["Too many miners", "Extraction outpaces refining and storage, so materials pile up without progress."],
+ ["No repair reserve", "Every attack drains the same materials needed for growth."],
+ ["Unprotected routes", "Mining ships and outer stations become easy targets once heat pressure rises."],
+ ["Link gates too early", "New sectors stretch logistics before the current sector can sustain itself."],
+ ["Research without a bottleneck", "New modules add complexity if the current chain is not stable."],
 ];
 
 export default function StarminerMiningLogisticsPage() {
-  return (
-    <StarminerArticle
-      title={title}
-      description={description}
-      canonical={canonical}
-      label="Mining & Logistics"
-      heroImage={starminerImages.mining}
-      heroAlt="Starminer mining and logistics asteroid extraction image"
-      faqs={faqs}
-    >
-      <SearchAnswerPanel
-        title="How should mining and logistics work in Starminer?"
-        answer="Build one stable production chain first: asteroid extraction, refining, nearby storage, useful production, research, repair reserve, then link gates. If any step stalls, pause expansion and fix that bottleneck before adding more ships."
-        intentRows={searchIntentRows}
-        jumpLinks={jumpLinks}
-      />
+ return (
+ <StarminerArticle
+ title={title}
+ description={description}
+ canonical={canonical}
+ label="Mining & Logistics"
+ heroImage={starminerImages.mining}
+ heroAlt="Starminer mining and logistics asteroid extraction image"
+ faqs={faqs}
+ >
+ <SearchAnswerPanel
+ title="How should mining and logistics work in Starminer?"
+ answer="Build one stable production chain first: asteroid extraction, refining, nearby storage, useful production, research, repair reserve, then link gates. If any step stalls, pause expansion and fix that bottleneck before adding more ships."
+ intentRows={searchIntentRows}
+ jumpLinks={jumpLinks}
+ />
 
-      <BlufBox title="Logistics Rule">
-        <p>
-          <strong>Do not expand past the weakest link in the chain.</strong>{" "}
-          Starminer turns asteroid mining into a full network: extraction,
-          refining, production, research, link gates, maintenance, and defense.
-          If any step is unstable, bigger ships from the{" "}
-          <Link href="/games/starminer/ship-building">ship building guide</Link>{" "}
-          will only make the problem more expensive.
-        </p>
-      </BlufBox>
+ <BlufBox title="Logistics Rule">
+ <p>
+ <strong>Do not expand past the weakest link in the chain.</strong>{" "}
+ Starminer turns asteroid mining into a full network: extraction,
+ refining, production, research, link gates, maintenance, and defense.
+ If any step is unstable, bigger ships from the{" "}
+ <Link href="/games/starminer/ship-building">ship building guide</Link>{" "}
+ will only make the problem more expensive.
+ </p>
+ </BlufBox>
 
-      <section className="prose-game">
-        <h2 id="first-chain">First Production Chain</h2>
-        <ArticleImage
-          src={starminerImages.logistics}
-          alt="Starminer first mining production chain and storage planning image"
-          caption="The first production chain should be short, readable, and easy to defend before link gates or larger fleets stretch the network."
-        />
-      </section>
+ <section className="prose-game">
+ <h2 id="first-chain">First Production Chain</h2>
+ <ArticleImage
+ src={starminerImages.logistics}
+ alt="Starminer first mining production chain and storage planning image"
+ caption="The first production chain should be short, readable, and easy to defend before link gates or larger fleets stretch the network."
+ />
+ </section>
 
-      <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="border-b border-border/50 bg-card/50">
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Step</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Do this</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it matters</th>
-            </tr>
-          </thead>
-          <tbody>
-            {firstChainRows.map(([step, action, why]) => (
-              <tr key={step} className="border-b border-border/30 last:border-0">
-                <td className="px-4 py-3 font-semibold text-foreground">{step}</td>
-                <td className="px-4 py-3 text-muted-foreground">{action}</td>
-                <td className="px-4 py-3 text-muted-foreground">{why}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+ <div className="my-6 overflow-x-auto rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist">
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Step</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Do this</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it matters</th>
+ </tr>
+ </thead>
+ <tbody>
+ {firstChainRows.map(([step, action, why]) => (
+ <tr key={step} className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">{step}</td>
+ <td className="px-4 py-3 text-muted-foreground">{action}</td>
+ <td className="px-4 py-3 text-muted-foreground">{why}</td>
+ </tr>
+ ))}
+ </tbody>
+ </table>
+ </div>
 
-      <section className="prose-game">
-        <h2 id="core-loop">The Core Resource Loop</h2>
-        <ArticleImage
-          src={starminerImages.mining}
-          alt="Starminer asteroid mining and refining logistics guide image"
-          caption="Mining is not just gathering: resources must be extracted, refined, moved, spent, defended, and sometimes saved for repairs."
-        />
-      </section>
+ <section className="prose-game">
+ <h2 id="core-loop">The Core Resource Loop</h2>
+ <ArticleImage
+ src={starminerImages.mining}
+ alt="Starminer asteroid mining and refining logistics guide image"
+ caption="Mining is not just gathering: resources must be extracted, refined, moved, spent, defended, and sometimes saved for repairs."
+ />
+ </section>
 
-      <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="border-b border-border/50 bg-card/50">
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">System</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player takeaway</th>
-            </tr>
-          </thead>
-          <tbody>
-            {starminerLogisticsRows.map(([system, takeaway]) => (
-              <tr key={system} className="border-b border-border/30 last:border-0">
-                <td className="px-4 py-3 font-semibold text-foreground">{system}</td>
-                <td className="px-4 py-3 text-muted-foreground">{takeaway}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+ <div className="my-6 overflow-x-auto rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist">
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">System</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player takeaway</th>
+ </tr>
+ </thead>
+ <tbody>
+ {starminerLogisticsRows.map(([system, takeaway]) => (
+ <tr key={system} className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">{system}</td>
+ <td className="px-4 py-3 text-muted-foreground">{takeaway}</td>
+ </tr>
+ ))}
+ </tbody>
+ </table>
+ </div>
 
-      <section className="prose-game">
-        <h2 id="profit-maintenance">Profit Versus Maintenance</h2>
-        <ArticleImage
-          src={starminerImages.logistics}
-          alt="Starminer production chains and maintenance planning image"
-          caption="The strongest logistics network keeps enough material for research, repairs, defenses, and expansion instead of spending every input immediately."
-        />
-        <p>
-          Steam frames Starminer around profit, resource processing, fleet
-          maintenance, missions, and expansion. That creates a real tradeoff:
-          resources can become money, modules, research, repairs, or defenses.
-          Beginners should avoid treating every asteroid as pure expansion fuel.
-          Keep a reserve for maintenance and defense before building link gates
-          or oversized ships.
-        </p>
-        <p>
-          The moment expansion raises heat faster than your defenses can handle,
-          move to the{" "}
-          <Link href="/games/starminer/heat-aliens-defense">
-            heat and defense guide
-          </Link>
-          . Mining more can solve material shortages, but it can also invite
-          more danger if the station is already exposed.
-        </p>
-      </section>
+ <section className="prose-game">
+ <h2 id="profit-maintenance">Profit Versus Maintenance</h2>
+ <ArticleImage
+ src={starminerImages.logistics}
+ alt="Starminer production chains and maintenance planning image"
+ caption="The strongest logistics network keeps enough material for research, repairs, defenses, and expansion instead of spending every input immediately."
+ />
+ <p>
+ Steam frames Starminer around profit, resource processing, fleet
+ maintenance, missions, and expansion. That creates a real tradeoff:
+ resources can become money, modules, research, repairs, or defenses.
+ Beginners should avoid treating every asteroid as pure expansion fuel.
+ Keep a reserve for maintenance and defense before building link gates
+ or oversized ships.
+ </p>
+ <p>
+ The moment expansion raises heat faster than your defenses can handle,
+ move to the{" "}
+ <Link href="/games/starminer/heat-aliens-defense">
+ heat and defense guide
+ </Link>
+ . Mining more can solve material shortages, but it can also invite
+ more danger if the station is already exposed.
+ </p>
+ </section>
 
-      <section className="prose-game">
-        <h2 id="automation-mistakes">Automation Mistakes and Bottlenecks</h2>
-      </section>
+ <section className="prose-game">
+ <h2 id="automation-mistakes">Automation Mistakes and Bottlenecks</h2>
+ </section>
 
-      <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="border-b border-border/50 bg-card/50">
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Problem</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Fix before expanding</th>
-            </tr>
-          </thead>
-          <tbody>
-            {bottleneckRows.map(([problem, fix]) => (
-              <tr key={problem} className="border-b border-border/30 last:border-0">
-                <td className="px-4 py-3 font-semibold text-foreground">{problem}</td>
-                <td className="px-4 py-3 text-muted-foreground">{fix}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+ <div className="my-6 overflow-x-auto rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist">
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Problem</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Fix before expanding</th>
+ </tr>
+ </thead>
+ <tbody>
+ {bottleneckRows.map(([problem, fix]) => (
+ <tr key={problem} className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">{problem}</td>
+ <td className="px-4 py-3 text-muted-foreground">{fix}</td>
+ </tr>
+ ))}
+ </tbody>
+ </table>
+ </div>
 
-      <div className="my-6 overflow-x-auto rounded-lg border border-border/50 bg-card/30">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="border-b border-border/50 bg-card/50">
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Mistake</th>
-              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it hurts</th>
-            </tr>
-          </thead>
-          <tbody>
-            {automationMistakeRows.map(([mistake, reason]) => (
-              <tr key={mistake} className="border-b border-border/30 last:border-0">
-                <td className="px-4 py-3 font-semibold text-foreground">{mistake}</td>
-                <td className="px-4 py-3 text-muted-foreground">{reason}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+ <div className="my-6 overflow-x-auto rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist">
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Mistake</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it hurts</th>
+ </tr>
+ </thead>
+ <tbody>
+ {automationMistakeRows.map(([mistake, reason]) => (
+ <tr key={mistake} className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">{mistake}</td>
+ <td className="px-4 py-3 text-muted-foreground">{reason}</td>
+ </tr>
+ ))}
+ </tbody>
+ </table>
+ </div>
 
-      <section className="prose-game">
-        <h2>When to Build Link Gates</h2>
-        <p>
-          Link gates should not be the first answer to a local bottleneck. Build
-          them when the current sector can support its own mining, refining,
-          storage, repair needs, and defense coverage. A new sector offers new
-          riches, but it also stretches the network. If the current base is
-          already underpowered or undefended, a link gate creates more surface
-          area for failure.
-        </p>
-        <p>
-          If this is your first save, follow the{" "}
-          <Link href="/games/starminer/beginner-guide">beginner route</Link>{" "}
-          first. If your build is stable and you want a better fleet before
-          crossing sectors, use the{" "}
-          <Link href="/games/starminer/ship-building">ship building guide</Link>
-          .
-        </p>
-      </section>
-    </StarminerArticle>
-  );
+ <section className="prose-game">
+ <h2>When to Build Link Gates</h2>
+ <p>
+ Link gates should not be the first answer to a local bottleneck. Build
+ them when the current sector can support its own mining, refining,
+ storage, repair needs, and defense coverage. A new sector offers new
+ riches, but it also stretches the network. If the current base is
+ already underpowered or undefended, a link gate creates more surface
+ area for failure.
+ </p>
+ <p>
+ If this is your first save, follow the{" "}
+ <Link href="/games/starminer/beginner-guide">beginner route</Link>{" "}
+ first. If your build is stable and you want a better fleet before
+ crossing sectors, use the{" "}
+ <Link href="/games/starminer/ship-building">ship building guide</Link>
+ .
+ </p>
+ </section>
+ </StarminerArticle>
+ );
 }

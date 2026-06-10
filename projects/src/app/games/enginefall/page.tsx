@@ -4,12 +4,12 @@ import { createEnginefallMetadata, enginefallImages, enginefallPages } from '@/l
 const page = enginefallPages.hub;
 
 export const metadata = createEnginefallMetadata({
-  title: page.title,
-  description: page.description,
-  canonical: page.canonical,
-  image: enginefallImages.hero,
+ title: page.title,
+ description: page.description,
+ canonical: page.canonical,
+ image: enginefallImages.hero,
 });
 
 export default function EnginefallHubPage() {
-  return <EnginefallGuidePage page={page} />;
+ return <EnginefallGuidePage page={page} />;
 }

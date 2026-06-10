@@ -3,149 +3,131 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Menu, Search, X } from 'lucide-react';
+
+const navLinks = [
+ { href: '/guides', label: 'Guides' },
+ { href: '/games', label: 'Games' },
+ { href: '/steam-deck', label: 'Steam Deck' },
+ { href: '/games/fatekeeper', label: 'Fatekeeper' },
+ { href: '/games/starminer', label: 'Starminer' },
+ { href: '/games/project-mist', label: 'Project: Mist' },
+ { href: '/games/paralives', label: 'Paralives' },
+];
+
+const mobileGameLinks = [
+ { href: '/games', label: 'All Games' },
+ { href: '/steam-deck', label: 'Steam Deck Games' },
+ { href: '/games/fatekeeper', label: 'Fatekeeper' },
+ { href: '/games/starminer', label: 'Starminer' },
+ { href: '/games/project-mist', label: 'Project: Mist' },
+ { href: '/games/paralives', label: 'Paralives' },
+ { href: '/games/mechanicus-ii', label: 'Mechanicus II' },
+];
 
 export function SiteHeader() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+ const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+ const closeMobileMenu = () => {
+ setIsMobileMenuOpen(false);
+ };
 
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
+ return (
+ <header className="sticky top-0 z-50 w-full bg-deep-plum text-white">
+ <div className="site-shell flex h-16 items-center justify-between gap-4">
+ <Link href="/" className="flex min-w-0 items-center gap-3" onClick={closeMobileMenu}>
+ <Image
+ src="/logo-icon.jpg"
+ alt="Enjoy4Game Guides logo"
+ width={34}
+ height={34}
+ className="rounded-lg bg-white"
+ priority
+ />
+ <span className="truncate text-lg font-bold tracking-[-0.01em]">
+ Enjoy4Game
+ </span>
+ </Link>
 
-  return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-3 group">
-          <Image
-            src="/logo-icon.jpg"
-            alt="Enjoy4Game Guides logo"
-            width={36}
-            height={36}
-            className="rounded-md"
-          />
-          <div className="flex flex-col">
-            <span className="text-sm font-bold text-foreground leading-tight">
-              Enjoy4Game
-            </span>
-            <span className="text-[10px] text-muted-foreground leading-tight tracking-widest uppercase">
-              Guides
-            </span>
-          </div>
-        </Link>
+ <nav className="hidden min-w-0 items-center gap-1 lg:flex">
+ {navLinks.map((link) => (
+ <Link
+ key={link.href}
+ href={link.href}
+ className="rounded-lg px-3 py-2 text-sm font-medium text-white/88 transition-colors hover:bg-white/10 hover:text-white"
+ >
+ {link.label}
+ </Link>
+ ))}
+ </nav>
 
-        <nav className="hidden lg:flex items-center gap-6">
-          <Link
-            href="/guides"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Guides
-          </Link>
-          <Link
-            href="/games"
-            className="text-sm font-semibold text-emerald-300 hover:text-emerald-200 transition-colors"
-          >
-            Games
-          </Link>
-          <Link
-            href="/steam-deck"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Steam Deck
-          </Link>
-          <Link
-            href="/games/fatekeeper"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Fatekeeper
-          </Link>
-          <Link
-            href="/games/starminer"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Starminer
-          </Link>
-          <Link
-            href="/games/project-mist"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Project: Mist
-          </Link>
-          <Link
-            href="/games/paralives"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Paralives
-          </Link>
-        </nav>
+ <div className="hidden items-center gap-2 lg:flex">
+ <Link
+ href="/directive-8020-walkthrough"
+ className="rounded-lg border border-white/20 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+ >
+ D8020 Hub
+ </Link>
+ <Link
+ href="https://www.reddit.com/r/enjoy4game/"
+ className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-deep-plum transition-colors hover:bg-mist"
+ >
+ Reddit
+ </Link>
+ </div>
 
-        <div className="hidden lg:flex items-center gap-3">
-          <Link
-            href="/directive-8020-walkthrough"
-            className="text-xs font-medium px-3 py-1.5 rounded-md bg-d8020/15 text-d8020 border border-d8020/30 hover:bg-d8020/25 transition-colors"
-          >
-            D8020 Hub
-          </Link>
-          <Link href="https://www.reddit.com/r/enjoy4game/">
-            <button className="text-xs font-medium px-3 py-1.5 rounded-md bg-blue-600/15 text-blue-600 border border-blue-600/30 hover:bg-blue-600/25 transition-colors">
-              Reddit
-            </button>
-          </Link>
-        </div>
+ <button
+ onClick={() => setIsMobileMenuOpen((current) => !current)}
+ className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-white transition-colors hover:bg-white/15 lg:hidden"
+ aria-label="Toggle mobile menu"
+ aria-expanded={isMobileMenuOpen}
+ >
+ {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+ </button>
+ </div>
 
-        <button
-          onClick={toggleMobileMenu}
-          className="lg:hidden flex items-center justify-center w-10 h-10 rounded-md hover:bg-muted transition-colors"
-          aria-label="Toggle mobile menu"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className={`transition-transform ${isMobileMenuOpen ? 'rotate-90' : ''}`}
-          >
-            {isMobileMenuOpen ? (
-              <>
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </>
-            ) : (
-              <>
-                <line x1="4" y1="6" x2="20" y2="6" />
-                <line x1="4" y1="12" x2="20" y2="12" />
-                <line x1="4" y1="18" x2="20" y2="18" />
-              </>
-            )}
-          </svg>
-        </button>
-      </div>
-
-      {isMobileMenuOpen && (
-        <div className="lg:hidden border-t border-border/50 bg-background/95 backdrop-blur-md">
-          <nav className="flex flex-col px-4 py-4 gap-2">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-emerald-300 px-3 pt-2">Popular Games</p>
-            <Link href="/games" onClick={closeMobileMenu} className="text-sm font-semibold text-emerald-300 hover:bg-muted px-3 py-2 rounded-md transition-colors">All Games</Link>
-            <Link href="/steam-deck" onClick={closeMobileMenu} className="text-sm text-muted-foreground hover:text-foreground hover:bg-muted px-3 py-2 rounded-md transition-colors">Steam Deck Games</Link>
-            <Link href="/games/fatekeeper" onClick={closeMobileMenu} className="text-sm text-muted-foreground hover:text-foreground hover:bg-muted px-3 py-2 rounded-md transition-colors">Fatekeeper</Link>
-            <Link href="/games/starminer" onClick={closeMobileMenu} className="text-sm text-muted-foreground hover:text-foreground hover:bg-muted px-3 py-2 rounded-md transition-colors">Starminer</Link>
-            <Link href="/games/project-mist" onClick={closeMobileMenu} className="text-sm text-muted-foreground hover:text-foreground hover:bg-muted px-3 py-2 rounded-md transition-colors">Project: Mist</Link>
-            <Link href="/games/paralives" onClick={closeMobileMenu} className="text-sm text-muted-foreground hover:text-foreground hover:bg-muted px-3 py-2 rounded-md transition-colors">Paralives</Link>
-            <Link href="/games/mechanicus-ii" onClick={closeMobileMenu} className="text-sm text-muted-foreground hover:text-foreground hover:bg-muted px-3 py-2 rounded-md transition-colors">Mechanicus II</Link>
-            <div className="border-t border-border/40 my-1" />
-            <Link href="/guides" onClick={closeMobileMenu} className="text-sm text-muted-foreground hover:text-foreground hover:bg-muted px-3 py-2 rounded-md transition-colors">Directive 8020 Guides</Link>
-            <Link href="/directive-8020-walkthrough" onClick={closeMobileMenu} className="text-sm text-muted-foreground hover:text-foreground hover:bg-muted px-3 py-2 rounded-md transition-colors">D8020 Walkthrough</Link>
-            <Link href="https://www.reddit.com/r/enjoy4game/" onClick={closeMobileMenu} className="text-sm font-medium text-blue-400 hover:bg-muted px-3 py-2 rounded-md transition-colors">Join Reddit</Link>
-          </nav>
-        </div>
-      )}
-    </header>
-  );
+ {isMobileMenuOpen && (
+ <div className="border-t border-white/10 bg-deep-plum lg:hidden">
+ <nav className="site-shell grid gap-2 py-4">
+ <div className="mb-2 flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 text-sm text-white/80">
+ <Search className="h-4 w-4" />
+ <span>Find a guide hub</span>
+ </div>
+ {mobileGameLinks.map((link) => (
+ <Link
+ key={link.href}
+ href={link.href}
+ onClick={closeMobileMenu}
+ className="rounded-lg px-3 py-2 text-sm font-medium text-white/86 transition-colors hover:bg-white/10 hover:text-white"
+ >
+ {link.label}
+ </Link>
+ ))}
+ <div className="my-2 h-px bg-white/10" />
+ <Link
+ href="/guides"
+ onClick={closeMobileMenu}
+ className="rounded-lg px-3 py-2 text-sm font-medium text-white/86 transition-colors hover:bg-white/10 hover:text-white"
+ >
+ Directive 8020 Guides
+ </Link>
+ <Link
+ href="/directive-8020-walkthrough"
+ onClick={closeMobileMenu}
+ className="rounded-lg bg-white px-3 py-2 text-sm font-semibold text-deep-plum"
+ >
+ D8020 Walkthrough
+ </Link>
+ <Link
+ href="https://www.reddit.com/r/enjoy4game/"
+ onClick={closeMobileMenu}
+ className="rounded-lg border border-white/20 px-3 py-2 text-sm font-semibold text-white"
+ >
+ Join Reddit
+ </Link>
+ </nav>
+ </div>
+ )}
+ </header>
+ );
 }

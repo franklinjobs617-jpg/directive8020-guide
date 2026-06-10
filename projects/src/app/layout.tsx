@@ -9,8 +9,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://enjoy4game.com"),
   title: {
-    default:
-      "Enjoy4Game Guides - Game Walkthroughs, Builds, Tips & Strategy",
+    default: "Enjoy4Game Guides - Game Walkthroughs, Builds, Tips & Strategy",
     template: "%s | Enjoy4Game Guides",
   },
   description:
@@ -103,9 +102,9 @@ export default function RootLayout({
         />
         <Script id="ezoic-analytics-init" strategy="beforeInteractive">
           {`
-            window.ezstandalone = window.ezstandalone || {};
-            ezstandalone.cmd = ezstandalone.cmd || [];
-          `}
+ window.ezstandalone = window.ezstandalone || {};
+ ezstandalone.cmd = ezstandalone.cmd || [];
+ `}
         </Script>
         <Script
           id="ezoic-analytics"
@@ -115,7 +114,6 @@ export default function RootLayout({
       </head>
 
       <body className="antialiased min-h-screen flex flex-col">
-
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3383070348689557"
@@ -133,15 +131,15 @@ export default function RootLayout({
         />
         <Script id="ga-config" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ window.gtag = gtag;
 
-            gtag('js', new Date());
-            gtag('config', 'G-1K6LQQSKHV', {
-              page_path: window.location.pathname,
-            });
-          `}
+ gtag('js', new Date());
+ gtag('config', 'G-1K6LQQSKHV', {
+ page_path: window.location.pathname,
+ });
+ `}
         </Script>
 
         {isDev && <Inspector />}

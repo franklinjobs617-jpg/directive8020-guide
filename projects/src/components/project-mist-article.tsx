@@ -9,99 +9,99 @@ import { projectMist } from '@/lib/games';
 import { getProjectMistRelated, projectMistImages, projectMistLastModified, projectMistSourceRows } from '@/lib/project-mist';
 
 interface FAQItem {
-  question: string;
-  answer: string;
+ question: string;
+ answer: string;
 }
 
 interface ProjectMistArticleProps {
-  title: string;
-  description: string;
-  canonical: string;
-  label: string;
-  heroImage?: string;
-  heroAlt: string;
-  faqs: FAQItem[];
-  children: ReactNode;
-  dateModified?: string;
-  showSources?: boolean;
+ title: string;
+ description: string;
+ canonical: string;
+ label: string;
+ heroImage?: string;
+ heroAlt: string;
+ faqs: FAQItem[];
+ children: ReactNode;
+ dateModified?: string;
+ showSources?: boolean;
 }
 
 export function ProjectMistArticle({
-  title,
-  description,
-  canonical,
-  label,
-  heroImage = projectMist.heroImage,
-  heroAlt,
-  faqs,
-  children,
-  dateModified = projectMistLastModified,
-  showSources = true,
+ title,
+ description,
+ canonical,
+ label,
+ heroImage = projectMist.heroImage,
+ heroAlt,
+ faqs,
+ children,
+ dateModified = projectMistLastModified,
+ showSources = true,
 }: ProjectMistArticleProps) {
-  const breadcrumbItems =
-    canonical === projectMist.hubPath
-      ? [
-          { label: 'Games', href: '/games' },
-          { label: 'Project: Mist', href: canonical },
-        ]
-      : [
-          { label: 'Games', href: '/games' },
-          { label: 'Project: Mist', href: projectMist.hubPath },
-          { label, href: canonical },
-        ];
+ const breadcrumbItems =
+ canonical === projectMist.hubPath
+ ? [
+ { label: 'Games', href: '/games' },
+ { label: 'Project: Mist', href: canonical },
+ ]
+ : [
+ { label: 'Games', href: '/games' },
+ { label: 'Project: Mist', href: projectMist.hubPath },
+ { label, href: canonical },
+ ];
 
-  return (
-    <>
-      <JsonLd data={generateVideoGameSchema(projectMist)} />
-      <JsonLd
-        data={generateArticleSchema({
-          title,
-          description,
-          url: canonical,
-          datePublished: projectMist.releaseDate,
-          dateModified,
-          imageUrl: heroImage,
-          game: projectMist,
-        })}
-      />
-      <JsonLd data={generateFAQSchema(faqs)} />
+ return (
+ <>
+ <JsonLd data={generateVideoGameSchema(projectMist)} />
+ <JsonLd
+ data={generateArticleSchema({
+ title,
+ description,
+ url: canonical,
+ datePublished: projectMist.releaseDate,
+ dateModified,
+ imageUrl: heroImage,
+ game: projectMist,
+ })}
+ />
+ <JsonLd data={generateFAQSchema(faqs)} />
 
-      <article className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
-        <Breadcrumb items={breadcrumbItems} />
-        <PageHero src={heroImage} alt={heroAlt} />
+ <article className="mx-auto max-w-[960px] px-4 py-8 sm:px-6">
+ <Breadcrumb items={breadcrumbItems} />
+ <PageHero src={heroImage} alt={heroAlt} />
 
-        <h1 className="mb-4 text-3xl font-black leading-tight text-foreground sm:text-4xl">
-          {title}
-        </h1>
-        <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
-          {description}
-        </p>
+ <h1 className="mb-4 text-[36px] font-bold leading-[1.06] tracking-[-1.1px] text-foreground sm:text-[54px] sm:leading-[1.08] sm:tracking-[-1.39px]">
+ {title}
+ </h1>
+ <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
+ {description}
+ </p>
 
-        {children}
+ {children}
 
-        {showSources && (
-          <>
-            <ArticleImage
-              src={projectMistImages.screenshot1}
-              alt="Project: Mist official links and Early Access notes image"
-              caption="Project: Mist is in Early Access, so check Steam details, demo notes, and recent player reports before starting a long run."
-            />
-            <SourceCheckTable title="Project: Mist Official Links and References" rows={projectMistSourceRows} />
-          </>
-        )}
-        <ArticleImage
-          src={projectMistImages.screenshot2}
-          alt="Project: Mist related guide image"
-          caption="Use the related guides to move from release facts to specs, co-op, first-day survival, and troubleshooting."
-        />
-        <RelatedGuides guides={getProjectMistRelated(canonical)} />
-        <ArticleImage
-          src={projectMistImages.screenshot3}
-          alt="Project: Mist FAQ image"
-          caption="Check release status, platforms, co-op support, specs, and early survival tips before buying or starting a run."
-        />
-        <FAQSection faqs={faqs} />
-      </article>
-    </>
-  );
+ {showSources && (
+ <>
+ <ArticleImage
+ src={projectMistImages.screenshot1}
+ alt="Project: Mist official links and Early Access notes image"
+ caption="Project: Mist is in Early Access, so check Steam details, demo notes, and recent player reports before starting a long run."
+ />
+ <SourceCheckTable title="Project: Mist Official Links and References" rows={projectMistSourceRows} />
+ </>
+ )}
+ <ArticleImage
+ src={projectMistImages.screenshot2}
+ alt="Project: Mist related guide image"
+ caption="Use the related guides to move from release facts to specs, co-op, first-day survival, and troubleshooting."
+ />
+ <RelatedGuides guides={getProjectMistRelated(canonical)} />
+ <ArticleImage
+ src={projectMistImages.screenshot3}
+ alt="Project: Mist FAQ image"
+ caption="Check release status, platforms, co-op support, specs, and early survival tips before buying or starting a run."
+ />
+ <FAQSection faqs={faqs} />
+ </article>
+ </>
+ );
 }
