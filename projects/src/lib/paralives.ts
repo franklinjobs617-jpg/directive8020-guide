@@ -195,7 +195,7 @@ export const paralivesCharacterActionRows = [
  doThis: 'Set traits, wants, and needs that create story tension. Place the Parafolk in a household and home that supports the role.',
  why: 'Paralives is strongest when a household has clear goals, friction, and shared spaces.',
  },
-] as const;
+];
 
 export const paralivesCharacterStatusItems = [
  { label: 'Creator name', value: 'Paramaker is the official Paralives character creator.', status: 'verified' as const },
@@ -235,7 +235,7 @@ export const paralivesCharacterSourceRows = [
  href: paralivesRedditUrl,
  note: 'Recent player discussion is useful for Paramaker comfort, household planning, and build-mode questions, but official claims still need Steam or developer confirmation.',
  },
-] as const;
+];
 
 export const paralivesCharacterSearchIntent = [
  {
@@ -262,7 +262,7 @@ export const paralivesCharacterSearchIntent = [
  href: '#character-household',
  label: 'Household',
  },
-] as const;
+];
 
 export const paralivesCharacterJumpLinks = [
  { href: '#character-workflow', label: 'Paramaker workflow' },
@@ -271,7 +271,7 @@ export const paralivesCharacterJumpLinks = [
  { href: '/games/paralives/build-mode', label: 'Build mode' },
  { href: '/games/paralives/mods-cc', label: 'Mods & CC' },
  { href: '/games/paralives/mac', label: 'Mac support' },
-] as const;
+];
 
 export const paralivesMacActionRows = [
  {
@@ -299,7 +299,7 @@ export const paralivesMacActionRows = [
  doThis: 'Save in a clean folder, and keep a Windows PC plan in mind if your Mac is below the listed requirements.',
  why: 'Life sims can run for years. A small hardware upgrade path now saves frustration during major Early Access updates.',
  },
-] as const;
+];
 
 export const paralivesMacStatusItems = [
  { label: 'Mac support', value: 'Steam lists macOS support.', status: 'verified' as const },
@@ -346,7 +346,7 @@ export const paralivesMacSourceRows = [
  href: paralivesOfficialUrl,
  note: 'Use the official site for Early Access Mac patches and known-issue notes. Community threads are useful but not official.',
  },
-] as const;
+];
 
 export const paralivesMacSearchIntent = [
  {
@@ -373,7 +373,7 @@ export const paralivesMacSearchIntent = [
  href: '#mac-performance',
  label: 'Performance',
  },
-] as const;
+];
 
 export const paralivesMacJumpLinks = [
  { href: '#mac-support', label: 'Mac support' },
@@ -382,7 +382,7 @@ export const paralivesMacJumpLinks = [
  { href: '#mac-performance', label: 'Performance' },
  { href: '/games/paralives/steam-deck', label: 'Steam Deck' },
  { href: '/games/paralives/character-creation', label: 'Character creation' },
-] as const;
+];
 
 export const paralivesModsActionRows = [
  {
@@ -410,7 +410,7 @@ export const paralivesModsActionRows = [
  doThis: 'After a major Early Access patch, re-test your Workshop and mod list and remove items that no longer load.',
  why: 'Early Access patches can change how items load. A quick re-test keeps saves stable.',
  },
-] as const;
+];
 
 export const paralivesModsStatusItems = [
  { label: 'In-game modding', value: 'Steam lists an in-game modding interface to edit or add content.', status: 'verified' as const },
@@ -449,7 +449,7 @@ export const paralivesModsSourceRows = [
  href: paralivesRedditUrl,
  note: 'Community threads are useful for player reports on which Workshop items are stable, not as final proof.',
  },
-] as const;
+];
 
 export const paralivesModsSearchIntent = [
  {
@@ -476,7 +476,7 @@ export const paralivesModsSearchIntent = [
  href: '#mods-safety',
  label: 'Safety',
  },
-] as const;
+];
 
 export const paralivesModsJumpLinks = [
  { href: '#mods-overview', label: 'Mods overview' },
@@ -485,7 +485,7 @@ export const paralivesModsJumpLinks = [
  { href: '#mods-safety', label: 'Save safety' },
  { href: '/games/paralives/character-creation', label: 'Character creation' },
  { href: '/games/paralives/steam-deck', label: 'Steam Deck' },
-] as const;
+];
 
 export const paralivesComparisonActionRows = [
  {
@@ -513,7 +513,7 @@ export const paralivesComparisonActionRows = [
  doThis: 'Buy Paralives if you want to participate in Early Access and flexible building. Wait if you need years of expansions immediately.',
  why: 'Early Access players gain influence and accept risk. Players who want a finished content library should not pick the new project first.',
  },
-] as const;
+];
 
 export const paralivesComparisonStatusItems = [
  { label: 'Paralives status', value: 'Early Access on Steam from May 25, 2026.', status: 'verified' as const },
@@ -553,7 +553,7 @@ export const paralivesComparisonSourceRows = [
  href: paralivesOfficialUrl,
  note: 'Life by You is useful as search context but is not a current buying alternative after cancellation.',
  },
-] as const;
+];
 
 export const paralivesComparisonSearchIntent = [
  {
@@ -580,7 +580,7 @@ export const paralivesComparisonSearchIntent = [
  href: '#comparison-context',
  label: 'Context',
  },
-] as const;
+];
 
 export const paralivesComparisonJumpLinks = [
  { href: '#comparison-strengths', label: 'Strengths' },
@@ -589,7 +589,7 @@ export const paralivesComparisonJumpLinks = [
  { href: '#comparison-context', label: 'Market context' },
  { href: '/games/paralives/character-creation', label: 'Character creation' },
  { href: '/games/paralives/steam-deck', label: 'Steam Deck' },
-] as const;
+];
 
 export const paralivesDeckActionRows = [
  {
@@ -617,7 +617,7 @@ export const paralivesDeckActionRows = [
  doThis: 'If Deck testing fails, plan around a Windows PC or Apple silicon Mac as the supported target.',
  why: 'Official support is clearer for Windows and Mac than for Deck. A desktop plan is the safe path.',
  },
-] as const;
+];
 
 export const paralivesDeckStatusItems = [
  { label: 'Steam Deck Verified', value: 'No Steam Deck Verified claim is available in the checked official Steam data.', status: 'needs-check' as const },
@@ -657,7 +657,7 @@ export const paralivesDeckSourceRows = [
  href: paralivesRedditUrl,
  note: 'Use recent player discussion for real Deck reports, but treat community signal as a starting point, not final proof.',
  },
-] as const;
+];
 
 export const paralivesDeckSearchIntent = [
  {
@@ -684,7 +684,7 @@ export const paralivesDeckSearchIntent = [
  href: '#deck-buying',
  label: 'Buying',
  },
-] as const;
+];
 
 export const paralivesDeckJumpLinks = [
  { href: '#deck-status', label: 'Deck status' },
@@ -693,7 +693,7 @@ export const paralivesDeckJumpLinks = [
  { href: '#deck-buying', label: 'Buying advice' },
  { href: '/games/paralives/mac', label: 'Mac support' },
  { href: '/games/paralives/mods-cc', label: 'Mods & CC' },
-] as const;
+];
 
 export const paralivesRelatedGuides: GameGuideLink[] = [
  {

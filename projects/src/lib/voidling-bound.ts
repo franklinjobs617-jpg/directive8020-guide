@@ -43,7 +43,7 @@ export const voidlingQuickFacts = [
  ['Species count', `${voidlingSpecies.length} playable species`],
  ['Evolution entries', `${voidlingEntries.length} wiki-derived entries`],
  ['Wiki license', voidlingBoundWikiData.wiki.license],
-] as const;
+];
 
 export const voidlingSourceRows = [
  {
@@ -177,7 +177,7 @@ export const vbAttributesActionRows = [
  doThis: 'Stop at comparison logic. Do not claim a final build wins every situation from a wiki snapshot alone.',
  why: 'Best-build content is high risk without controlled testing. Honest comparison beats manufactured authority.',
  },
-] as const;
+];
 
 export const vbAttributesStatusItems = [
  { label: 'Ability slot labels', value: `Parsed slot labels include ${voidlingAbilitySlots.join(', ')} where the wiki text provides them.`, status: 'verified' as const },
@@ -217,7 +217,7 @@ export const vbAttributesSourceRows = [
  href: voidlingBoundWikiUrl,
  note: 'Compare ability slots first, then agility, strength, and vitality from wiki data. Use the database comparison panel for side-by-side entries.',
  },
-] as const;
+];
 
 export const vbAttributesSearchIntent = [
  {
@@ -244,7 +244,7 @@ export const vbAttributesSearchIntent = [
  href: '#attributes-no-tier',
  label: 'Best build',
  },
-] as const;
+];
 
 export const vbAttributesJumpLinks = [
  { href: '#attributes-workflow', label: 'Attribute workflow' },
@@ -253,7 +253,7 @@ export const vbAttributesJumpLinks = [
  { href: '#attributes-no-tier', label: 'Comparison guide' },
  { href: '/games/voidling-bound/evolution-guide', label: 'Evolution guide' },
  { href: '/games/voidling-bound/database', label: 'Database' },
-] as const;
+];
 
 export const vbBreedingActionRows = [
  {
@@ -291,7 +291,7 @@ export const vbBreedingActionRows = [
  doThis: 'After a patch, re-test the breeding loop and update the wiki-linked evidence if anything changed.',
  why: 'Early Access updates can change breeding behavior. A short re-test keeps the guide honest.',
  },
-] as const;
+];
 
 export const vbBreedingStatusItems = [
  { label: 'Breeding coverage', value: 'Wiki exposes eggs, golden eggs, mutagens, splicing, and related stations.', status: 'verified' as const },
@@ -330,7 +330,7 @@ export const vbBreedingSourceRows = [
  href: voidlingBoundWikiData.wiki.statusEffectsUrl,
  note: 'Status effect labels are matched from the parsed ability descriptions.',
  },
-] as const;
+];
 
 export const vbBreedingSearchIntent = [
  {
@@ -357,7 +357,7 @@ export const vbBreedingSearchIntent = [
  href: '#breeding-no-formula',
  label: 'Formulas',
  },
-] as const;
+];
 
 export const vbBreedingJumpLinks = [
  { href: '#breeding-workflow', label: 'Breeding workflow' },
@@ -366,7 +366,7 @@ export const vbBreedingJumpLinks = [
  { href: '#breeding-no-formula', label: 'Breeding systems' },
  { href: '/games/voidling-bound/database', label: 'Database' },
  { href: '/games/voidling-bound/evolution-guide', label: 'Evolution guide' },
-] as const;
+];
 
 export const vbElementsActionRows = [
  {
@@ -394,7 +394,7 @@ export const vbElementsActionRows = [
  doThis: 'Do not split this guide into per-element pages just because labels exist. Wait for player demand signal before splitting.',
  why: 'One strong elements guide plus a filterable database is better than six thin pages repeating definitions.',
  },
-] as const;
+];
 
 export const vbElementsStatusItems = [
  { label: 'Element labels', value: `Current parsed elements include ${voidlingElements.join(', ')} across ${voidlingEntries.length} entries.`, status: 'verified' as const },
@@ -433,7 +433,7 @@ export const vbElementsSourceRows = [
  href: voidlingBoundSteamUrl,
  note: 'Steam is used for release state, developer, publisher, and platform facts. Element detail is wiki-sourced.',
  },
-] as const;
+];
 
 export const vbElementsSearchIntent = [
  {
@@ -460,7 +460,7 @@ export const vbElementsSearchIntent = [
  href: '#elements-no-best',
  label: 'Per element',
  },
-] as const;
+];
 
 export const vbElementsJumpLinks = [
  { href: '#elements-workflow', label: 'Element workflow' },
@@ -469,7 +469,7 @@ export const vbElementsJumpLinks = [
  { href: '#elements-no-best', label: 'Element comparison' },
  { href: '/games/voidling-bound/database', label: 'Database' },
  { href: '/games/voidling-bound/evolution-guide', label: 'Evolution guide' },
-] as const;
+];
 
 export const vbEvolutionActionRows = [
  {
@@ -497,7 +497,7 @@ export const vbEvolutionActionRows = [
  doThis: 'Stop at comparison logic. Do not rank evolutions as a universal best from a wiki snapshot alone.',
  why: 'Best-evolution content is high risk without stable balance and matchup data. Honest comparison beats manufactured authority.',
  },
-] as const;
+];
 
 export const vbEvolutionStatusItems = [
  { label: 'Species coverage', value: `${voidlingSpecies.length} species pages and ${voidlingEntries.length} evolution entries in the current snapshot.`, status: 'verified' as const },
@@ -536,7 +536,7 @@ export const vbEvolutionSourceRows = [
  href: voidlingBoundWikiData.wiki.statusEffectsUrl,
  note: 'Status effect labels are matched from the parsed ability descriptions when the wiki text provides them.',
  },
-] as const;
+];
 
 export const vbEvolutionSearchIntent = [
  {
@@ -563,7 +563,7 @@ export const vbEvolutionSearchIntent = [
  href: '#evolution-no-best',
  label: 'Best evolution',
  },
-] as const;
+];
 
 export const vbEvolutionJumpLinks = [
  { href: '#evolution-workflow', label: 'Evolution workflow' },
@@ -572,7 +572,7 @@ export const vbEvolutionJumpLinks = [
  { href: '#evolution-no-best', label: 'Comparison guide' },
  { href: '/games/voidling-bound/database', label: 'Database' },
  { href: '/games/voidling-bound/elements-guide', label: 'Elements guide' },
-] as const;
+];
 
 export const vbVoidlingsActionRows = [
  {
@@ -600,7 +600,7 @@ export const vbVoidlingsActionRows = [
  doThis: 'Treat the list as a navigation surface. Final build and team decisions belong in the attributes and evolution guides.',
  why: 'Best-list claims are high risk without controlled testing. The list is honest when it stays an index.',
  },
-] as const;
+];
 
 export const vbVoidlingsStatusItems = [
  { label: 'List scope', value: `${voidlingSpecies.length} species, ${voidlingEntries.length} evolution entries.`, status: 'verified' as const },
@@ -639,7 +639,7 @@ export const vbVoidlingsSourceRows = [
  href: voidlingBoundWikiData.wiki.statusEffectsUrl,
  note: 'Status effect labels are matched from the parsed ability descriptions when the wiki text provides them.',
  },
-] as const;
+];
 
 export const vbVoidlingsSearchIntent = [
  {
@@ -666,7 +666,7 @@ export const vbVoidlingsSearchIntent = [
  href: '#voidlings-snapshot',
  label: 'Snapshot',
  },
-] as const;
+];
 
 export const vbVoidlingsJumpLinks = [
  { href: '#voidlings-list', label: 'All Voidlings list' },
@@ -675,7 +675,7 @@ export const vbVoidlingsJumpLinks = [
  { href: '#voidlings-snapshot', label: 'Wiki snapshot' },
  { href: '/games/voidling-bound/database', label: 'Database' },
  { href: '/games/voidling-bound/beginner-guide', label: 'Beginner guide' },
-] as const;
+];
 
 export const vbControlsActionRows = [
  {
@@ -703,7 +703,7 @@ export const vbControlsActionRows = [
  doThis: 'Xbox controller default: left stick move, RT primary, LT secondary, LB defense, RB melee, Y movement, X ultimate, A jump, B dodge.',
  why: 'Controller layout mirrors keyboard logic with triggers for attack weighting. Steam Deck uses the same layout natively.',
  },
-] as const;
+];
 
 export const vbControlsStatusItems = [
  { label: 'Keyboard controls', value: 'Full keyboard mapping: 12 core keys + full remap support in settings.', status: 'verified' as const },
@@ -735,7 +735,7 @@ export const vbControlsSourceRows = [
  href: voidlingBoundSteamUrl,
  note: 'Steam Deck uses default Xbox controller layout. Verified control customization available.',
  },
-] as const;
+];
 
 export const vbControlsSearchIntent = [
  {
@@ -762,7 +762,7 @@ export const vbControlsSearchIntent = [
  href: '#controls-dodge',
  label: 'Dodge',
  },
-] as const;
+];
 
 export const vbControlsJumpLinks = [
  { href: '#controls-keyboard', label: 'Keyboard layout' },
@@ -771,7 +771,7 @@ export const vbControlsJumpLinks = [
  { href: '#controls-combos', label: 'Ability combos' },
  { href: '#controls-remap', label: 'Custom remapping' },
  { href: '/games/voidling-bound/beginner-guide', label: 'Beginner guide' },
-] as const;
+];
 
 export const voidlingGuideFaqs = {
  hub: [
