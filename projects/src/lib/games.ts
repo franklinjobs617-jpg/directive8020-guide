@@ -1171,3 +1171,54 @@ export const lunaAbyss: GameConfig = {
  },
  ],
 };
+
+export const fearsToFathom: GameConfig = {
+ id: "fears-to-fathom",
+ slugPrefix: "fears-to-fathom",
+ hubPath: "/games/fears-to-fathom",
+ name: "Fears to Fathom: Scratch Creek",
+ guidePublisher: "Enjoy4Game Guides",
+ description:
+ "Fears to Fathom: Scratch Creek is an episodic co-op psychological horror game from Rayll Studios. A young couple stranded in a creepy town must survive together. Co-op only — no single player.",
+ platforms: ["PC via Steam"],
+ genres: ["Adventure", "Horror", "Casual", "Walking Simulator", "Psychological Horror"],
+ developer: "Rayll Studios",
+ publisher: "Rayll Studios",
+ releaseDate: "2026-06-10",
+ operatingSystem: "Windows",
+ url: "https://store.steampowered.com/app/4121170/Fears_to_Fathom__Scratch_Creek/",
+ availability: "https://schema.org/InStock",
+ heroImage: "/games/fears-to-fathom/hero.webp",
+ guideLinks: [
+ {
+ title: "Fears to Fathom Hub",
+ href: "/games/fears-to-fathom",
+ description:
+ "Co-op only horror game from Rayll Studios. Find walkthrough, co-op guide, achievements, and buying advice for Scratch Creek.",
+ },
+ {
+ title: "Can I Play Solo? + Co-op Guide",
+ href: "/games/fears-to-fathom/co-op-guide",
+ description:
+ "Fears to Fathom: Scratch Creek is co-op only with no single player mode. Learn how co-op works, how to find a partner, and how to play together.",
+ },
+ {
+ title: "Full Walkthrough",
+ href: "/games/fears-to-fathom/walkthrough",
+ description:
+ "Complete walkthrough for Fears to Fathom: Scratch Creek. Chapter-by-chapter guide covering every puzzle, key decision, and ending.",
+ },
+ {
+ title: "All Achievements",
+ href: "/games/fears-to-fathom/achievements",
+ description:
+ "Full achievement list for Fears to Fathom: Scratch Creek. Unlock conditions, secret achievements, and 100% completion guide.",
+ },
+ {
+ title: "Is It Worth It?",
+ href: "/games/fears-to-fathom/is-it-worth-it",
+ description:
+ "Is Fears to Fathom: Scratch Creek worth buying? Co-op only analysis, price, length, horror level, and who should play.",
+ },
+ ],
+};

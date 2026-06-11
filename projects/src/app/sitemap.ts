@@ -14,6 +14,7 @@ import {
  enginefall,
  voidlingBound,
  lunaAbyss,
+ fearsToFathom,
  type GameConfig,
 } from '@/lib/games';
 import { voidlingEntries } from '@/lib/voidling-bound';
@@ -89,10 +90,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
  const gameHubs: MetadataRoute.Sitemap = [
  projectMist, thickAsThieves, zeroParades, mechanicusII, romestead,
  paralives, minaTheHollower, firstLight007, jumpKingQuest, starminer,
- fatekeeper, enginefall, voidlingBound, lunaAbyss,
+ fatekeeper, enginefall, voidlingBound, lunaAbyss, fearsToFathom,
  ].map((game) => ({
  url: `${BASE_URL}${game.hubPath}`,
- lastModified: game.id === 'enginefall' ? '2026-06-10' : today,
+ lastModified: game.id === 'enginefall' ? '2026-06-10' : game.id === 'fears-to-fathom' ? '2026-06-11' : today,
  changeFrequency: 'daily' as const,
  priority: 0.74,
  }));
@@ -113,6 +114,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  ...gameSubPages(enginefall, 0.68, '2026-06-10'),
  ...gameSubPages(voidlingBound, 0.7, '2026-06-10'),
  ...gameSubPages(lunaAbyss),
+ ...gameSubPages(fearsToFathom, 0.7, '2026-06-11'),
  ];
 
  const voidlingDetailPages: MetadataRoute.Sitemap = voidlingEntries.map((entry) => ({
