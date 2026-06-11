@@ -420,7 +420,7 @@ export const jumpKingQuestMultiplayerSearchIntent = [
  href: '#multiplayer-controller',
  label: 'Controller',
  },
-] as const;
+],
 
 export const jumpKingQuestMultiplayerJumpLinks = [
  { href: '#multiplayer-confirmed', label: 'Confirmed features' },
@@ -429,7 +429,7 @@ export const jumpKingQuestMultiplayerJumpLinks = [
  { href: '#multiplayer-controller', label: 'Controller checks' },
  { href: '/games/jump-king-quest/is-it-worth-it', label: 'Is it worth it' },
  { href: '/games/jump-king-quest/release-date-and-phantom-update', label: 'Release & 1.0' },
-] as const;
+];
 
 export const jumpKingQuestReleaseActionRows = [
  {
