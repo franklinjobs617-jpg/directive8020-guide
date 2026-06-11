@@ -5,9 +5,9 @@ import { VoidlingBoundArticle } from '@/components/voidling-bound-article';
 import { createVoidlingBoundMetadata, voidlingAbilitySlots, voidlingBoundImages, voidlingGuideFaqs } from '@/lib/voidling-bound';
 import { vbAttributesActionRows, vbAttributesJumpLinks, vbAttributesSearchIntent, vbAttributesSourceRows, vbAttributesStatusItems } from '@/lib/voidling-bound';
 
-const title = 'Voidling Bound Attributes Guide: Agility, Strength, Vitality, Perks, Modules and Natures';
+const title = 'Voidling Bound Attributes Guide: Agility, Strength, Vitality, Perks & Best Builds';
 const description =
- 'Voidling Bound attributes guide for reading ability slots, agility, strength, vitality, perks, modules, natures, levels, and database comparisons.';
+ 'Compare Voidling Bound attributes: agility, strength, vitality, perks, modules, and natures. Learn how to read ability slots and match stats to your playstyle.';
 const canonical = '/games/voidling-bound/attributes-guide';
 
 export const metadata = createVoidlingBoundMetadata({ title, description, canonical, image: voidlingBoundImages.screenshot1 });

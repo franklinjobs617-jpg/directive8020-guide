@@ -11,7 +11,7 @@ import {
 
 const title = 'Voidling Bound Guide: Database, All Voidlings, Evolutions, Elements & Beginner Tips';
 const description =
- 'Voidling Bound guide hub with a wiki-derived searchable database, all Voidlings, evolutions, elements, breeding, attributes, Steam release facts, and beginner route.';
+ 'Find every Voidling by species, element, and abilities. Searchable wiki-derived database plus guides for evolution, breeding, elements, attributes, and beginner tips for Voidling Bound on Steam.';
 const canonical = '/games/voidling-bound';
 
 export const metadata = createVoidlingBoundMetadata({
@@ -133,6 +133,7 @@ export default function VoidlingBoundHubPage() {
  ['/games/voidling-bound/breeding-guide', 'Breeding Guide', 'Connect eggs, golden eggs, splicing, mutagens, and lineage planning to confirmed wiki systems.'],
  ['/games/voidling-bound/elements-guide', 'Elements Guide', 'Use Organic, Pyro, Cryo, Plasma, Cyber, and Neutral as filters instead of guesses.'],
  ['/games/voidling-bound/attributes-guide', 'Attributes Guide', 'Compare role, ability slots, perks, modules, nature, level, and attribute support.'],
+ ['/games/voidling-bound/controls', 'Controls Guide', 'Default keyboard and controller controls, dodge mechanics, ability combos, and full remap guide.'],
  ].map(([href, itemTitle, body]) => (
  <Link key={href} href={href} className="rounded-lg border border-border bg-white p-4 transition-colors hover:border-border">
  <h3 className="text-sm font-bold text-foreground">{itemTitle}</h3>

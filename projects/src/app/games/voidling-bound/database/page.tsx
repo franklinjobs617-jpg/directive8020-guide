@@ -32,7 +32,7 @@ import {
 const title =
  "Voidling Bound Database: All Voidlings, Evolutions, Elements, Rarity and Abilities";
 const description =
- "Search the Voidling Bound database for all wiki-derived Voidlings by species, rarity, element, ability slot, status effect, module, size, evolution name, and image coverage.";
+ "Search and filter all Voidling Bound Voidlings by species, rarity, element, ability slot, and evolution name. Browse 120+ wiki-derived entries with images, ability notes, and comparison tools.";
 const canonical = "/games/voidling-bound/database";
 
 export const metadata = createVoidlingBoundMetadata({

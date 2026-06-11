@@ -5,9 +5,9 @@ import { VoidlingBoundArticle } from '@/components/voidling-bound-article';
 import { createVoidlingBoundMetadata, voidlingBoundImages, voidlingGuideFaqs } from '@/lib/voidling-bound';
 import { vbBreedingActionRows, vbBreedingJumpLinks, vbBreedingSearchIntent, vbBreedingSourceRows, vbBreedingStatusItems } from '@/lib/voidling-bound';
 
-const title = 'Voidling Bound Breeding Guide: Eggs, Golden Eggs, Splicing, Mutagens and Lineage Planning';
+const title = 'Voidling Bound Breeding Guide: Eggs, Golden Eggs, Splicing, Mutagens & Level 20 Cap';
 const description =
- 'Voidling Bound breeding guide explaining eggs, golden eggs, splicing, mutagens, species planning, evolution lookup, and how to avoid fake hidden formulas.';
+ 'Master Voidling Bound breeding with level 20 cap, parent attribute inheritance, 150+ research points per release, Cleansing quest egg farming, and splicing station guide.';
 const canonical = '/games/voidling-bound/breeding-guide';
 
 export const metadata = createVoidlingBoundMetadata({ title, description, canonical, image: voidlingBoundImages.screenshot3 });

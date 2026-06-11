@@ -5,9 +5,9 @@ import { VoidlingBoundArticle } from '@/components/voidling-bound-article';
 import { createVoidlingBoundMetadata, voidlingBoundImages, voidlingEntries, voidlingGuideFaqs, voidlingRarities, voidlingSpecies } from '@/lib/voidling-bound';
 import { vbEvolutionActionRows, vbEvolutionJumpLinks, vbEvolutionSearchIntent, vbEvolutionSourceRows, vbEvolutionStatusItems } from '@/lib/voidling-bound';
 
-const title = 'Voidling Bound Evolution Guide: Trees, Rarity, Elements, Mutations and Ability Changes';
+const title = 'Voidling Bound Evolution Guide: Species Trees, Mutation Branches & Ability Changes';
 const description =
- 'Voidling Bound evolution guide explaining how to read species trees, rarity tiers, element branches, mutations, ability changes, and database comparisons.';
+ 'Learn how Voidling Bound evolution works: species trees, mutation branches, rarity tiers, element shifts, ability changes, and how to plan your evolution path across 9 species.';
 const canonical = '/games/voidling-bound/evolution-guide';
 
 export const metadata = createVoidlingBoundMetadata({ title, description, canonical, image: voidlingBoundImages.screenshot2 });

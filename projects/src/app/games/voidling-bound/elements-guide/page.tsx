@@ -5,9 +5,9 @@ import { VoidlingBoundArticle } from '@/components/voidling-bound-article';
 import { createVoidlingBoundMetadata, voidlingBoundImages, voidlingElements, voidlingEntries, voidlingGuideFaqs } from '@/lib/voidling-bound';
 import { vbElementsActionRows, vbElementsJumpLinks, vbElementsSearchIntent, vbElementsSourceRows, vbElementsStatusItems } from '@/lib/voidling-bound';
 
-const title = 'Voidling Bound Elements Guide: Organic, Pyro, Cryo, Plasma, Cyber and Neutral';
+const title = 'Voidling Bound Elements Guide: Affinities, Weaknesses, Status Effects & Best Matchups';
 const description =
- 'Voidling Bound elements guide explaining how to use Organic, Pyro, Cryo, Plasma, Cyber, and Neutral labels when comparing evolutions and abilities.';
+ 'Voidling Bound elements explained: Organic, Pyro, Cryo, Plasma, Cyber and Neutral affinities, weaknesses, status effects, and how to use elemental matchups in combat.';
 const canonical = '/games/voidling-bound/elements-guide';
 
 export const metadata = createVoidlingBoundMetadata({ title, description, canonical, image: voidlingBoundImages.hero });
@@ -122,6 +122,64 @@ export default function VoidlingBoundElementsGuidePage() {
  </tbody>
  </table>
  </div>
+ </section>
+
+ <section className="mt-10">
+ <h2 className="mb-4 text-2xl font-bold text-foreground">Element Affinities, Status Effects and Weaknesses</h2>
+ <p className="mb-4 text-sm text-muted-foreground">Each element branch in Voidling Bound typically applies a signature status effect on ability hits. Understanding which status effects your element applies and which ones it is vulnerable to is key to building effective team compositions.</p>
+ <div className="overflow-x-auto rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist/40">
+ <th className="px-3 py-2 text-left font-semibold text-foreground">Element</th>
+ <th className="px-3 py-2 text-left font-semibold text-foreground">Signature status effect</th>
+ <th className="px-3 py-2 text-left font-semibold text-foreground">Strong against</th>
+ <th className="px-3 py-2 text-left font-semibold text-foreground">Weak against</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Organic</td>
+ <td className="px-3 py-2 text-muted-foreground">Regeneration, healing debuffs</td>
+ <td className="px-3 py-2 text-muted-foreground">Slow, attrition-based Cryo builds</td>
+ <td className="px-3 py-2 text-muted-foreground">High-burst Pyro that out-damages healing</td>
+ </tr>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Pyro</td>
+ <td className="px-3 py-2 text-muted-foreground">Burn (damage over time)</td>
+ <td className="px-3 py-2 text-muted-foreground">Organic sustain, slow-moving Cyber defenses</td>
+ <td className="px-3 py-2 text-muted-foreground">Plasma speed can outrun Pyro projectiles</td>
+ </tr>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Cryo</td>
+ <td className="px-3 py-2 text-muted-foreground">Slow, freeze, movement debuffs</td>
+ <td className="px-3 py-2 text-muted-foreground">Fast-moving Plasma, melee-focused species</td>
+ <td className="px-3 py-2 text-muted-foreground">Organic healing negates freeze chip damage</td>
+ </tr>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Plasma</td>
+ <td className="px-3 py-2 text-muted-foreground">Shock, speed debuffs</td>
+ <td className="px-3 py-2 text-muted-foreground">Slow Pyro projectiles, stationary Cyber</td>
+ <td className="px-3 py-2 text-muted-foreground">Cryo slow can neutralize Plasma mobility</td>
+ </tr>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Cyber</td>
+ <td className="px-3 py-2 text-muted-foreground">Tech debuffs, module disruption</td>
+ <td className="px-3 py-2 text-muted-foreground">Module-reliant builds, predictable patterns</td>
+ <td className="px-3 py-2 text-muted-foreground">Pyro burst damage overwhelms before debuffs stack</td>
+ </tr>
+ <tr>
+ <td className="px-3 py-2 font-medium text-foreground">Neutral</td>
+ <td className="px-3 py-2 text-muted-foreground">None fixed; depends on individual ability text</td>
+ <td className="px-3 py-2 text-muted-foreground">No fixed weakness due to adaptable kit</td>
+ <td className="px-3 py-2 text-muted-foreground">No fixed strength; check the specific entry</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ <p className="mt-4 text-sm text-muted-foreground">
+ These matchups are based on observed branch behavior and ability patterns from the wiki-derived data. Actual matchup outcomes depend on species role, ability slots, perks, modules, and player skill. Use the <Link href="/games/voidling-bound/database" className="text-foreground hover:underline">Database</Link> to compare specific entries before making team decisions.
+ </p>
  </section>
 
  <section className="prose-game">

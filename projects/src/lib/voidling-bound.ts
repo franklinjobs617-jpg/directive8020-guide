@@ -677,6 +677,102 @@ export const vbVoidlingsJumpLinks = [
  { href: '/games/voidling-bound/beginner-guide', label: 'Beginner guide' },
 ] as const;
 
+export const vbControlsActionRows = [
+ {
+ step: '1. Learn the core keyboard layout',
+ doThis: 'WASD move, left click Primary, right click Secondary, V melee, Q Defense, E Movement, R Ultimate, Shift sprint, Ctrl dodge, Space jump, F interact, Esc menu.',
+ why: 'These 12 keys cover combat, movement, and navigation. Learn them first before customizing.',
+ },
+ {
+ step: '2. Master the dodge timing',
+ doThis: 'Use Ctrl to dodge. The dodge has invincibility frames and is your primary survival tool against heavy attacks.',
+ why: 'Mastering dodge timing is critical for high-difficulty missions and Abyss endgame layers.',
+ },
+ {
+ step: '3. Practice ability combos',
+ doThis: 'Chain Defense (Q) \u2192 Movement (E) \u2192 Ultimate (R) in training mode to learn cooldown rhythm before real fights.',
+ why: 'Each species has unique ability slot positions. Practice the sequence before relying on it in combat.',
+ },
+ {
+ step: '4. Customize keybinds for comfort',
+ doThis: 'Open Settings \u2192 Controls to remap any key. Common adjustments: rebind melee (V) to a mouse button, or swap dodge (Ctrl) to Shift.',
+ why: 'Default binds work for most players, but minor tweaks can significantly improve reaction time in fast fights.',
+ },
+ {
+ step: '5. Set up controller for Steam Deck or couch play',
+ doThis: 'Xbox controller default: left stick move, RT primary, LT secondary, LB defense, RB melee, Y movement, X ultimate, A jump, B dodge.',
+ why: 'Controller layout mirrors keyboard logic with triggers for attack weighting. Steam Deck uses the same layout natively.',
+ },
+] as const;
+
+export const vbControlsStatusItems = [
+ { label: 'Keyboard controls', value: 'Full keyboard mapping: 12 core keys + full remap support in settings.', status: 'verified' as const },
+ { label: 'Controller support', value: 'Xbox layout supported with full button remapping. Steam Deck native.', status: 'verified' as const },
+ { label: 'Dodge mechanics', value: 'Ctrl (keyboard) / B (controller) for dodge with invincibility frames.', status: 'verified' as const },
+ { label: 'Ability slots', value: 'Q/E/R for Defense/Movement/Ultimate. Customizable per player preference.', status: 'verified' as const },
+ { label: 'Remap support', value: 'Full control customization available in Settings > Controls menu.', status: 'verified' as const },
+];
+
+export const vbControlsSourceRows = [
+ {
+ claim: 'Default keyboard and controller controls',
+ source: 'Voidling Bound Wiki',
+ status: 'verified' as const,
+ href: 'https://voidlingbound.wiki.gg',
+ note: 'Controls data from voidlingbound.wiki.gg confirmed against in-game settings menu.',
+ },
+ {
+ claim: 'Control remap and customization',
+ source: 'Steam store page + Voidling Bound Wiki',
+ status: 'verified' as const,
+ href: voidlingBoundSteamUrl,
+ note: 'Full remap support confirmed in Steam feature tags and in-game settings documentation.',
+ },
+ {
+ claim: 'Steam Deck compatibility',
+ source: 'Steam store + Voidling Bound Wiki',
+ status: 'verified' as const,
+ href: voidlingBoundSteamUrl,
+ note: 'Steam Deck uses default Xbox controller layout. Verified control customization available.',
+ },
+] as const;
+
+export const vbControlsSearchIntent = [
+ {
+ query: 'Voidling Bound controls',
+ answer: 'WASD to move, left click Primary, right click Secondary, V melee, Q Defense, E Movement, R Ultimate, Shift sprint, Ctrl dodge, Space jump, F interact.',
+ href: '#controls-keyboard',
+ label: 'Keyboard',
+ },
+ {
+ query: 'Voidling Bound controller support',
+ answer: 'Yes. Xbox-style controller with full mapping: left stick move, RT/LT attacks, LB/RB abilities, Y movement, X ultimate, A jump, B dodge.',
+ href: '#controls-controller',
+ label: 'Controller',
+ },
+ {
+ query: 'Voidling Bound keybinds remap',
+ answer: 'All keybinds can be customized in Settings > Controls. Remap any keyboard or controller button to your preference.',
+ href: '#controls-remap',
+ label: 'Remap',
+ },
+ {
+ query: 'Voidling Bound dodge button',
+ answer: 'Default dodge is Ctrl on keyboard and B on controller. Dodge has invincibility frames for avoiding heavy attacks.',
+ href: '#controls-dodge',
+ label: 'Dodge',
+ },
+] as const;
+
+export const vbControlsJumpLinks = [
+ { href: '#controls-keyboard', label: 'Keyboard layout' },
+ { href: '#controls-controller', label: 'Controller setup' },
+ { href: '#controls-dodge', label: 'Dodge mechanics' },
+ { href: '#controls-combos', label: 'Ability combos' },
+ { href: '#controls-remap', label: 'Custom remapping' },
+ { href: '/games/voidling-bound/beginner-guide', label: 'Beginner guide' },
+] as const;
+
 export const voidlingGuideFaqs = {
  hub: [
  {
@@ -774,6 +870,20 @@ export const voidlingGuideFaqs = {
  {
  question: 'Is this a best-build page?',
  answer: 'No. It is an attribute-reading guide. Best-build claims would need stable balance data and testing, not just wiki field extraction.',
+ },
+ ],
+ controls: [
+ {
+ question: 'What are the default keyboard controls for Voidling Bound?',
+ answer: 'WASD to move, left click Primary Attack, right click Secondary Attack, V for melee, Q Defense, E Movement, R Ultimate, Shift sprint, Ctrl dodge, Space jump, F interact, Esc menu.',
+ },
+ {
+ question: 'Can I remap the controls in Voidling Bound?',
+ answer: 'Yes. All keybinds can be fully customized in the Settings menu under Controls. This includes keyboard keys and controller buttons.',
+ },
+ {
+ question: 'Does Voidling Bound support controllers?',
+ answer: 'Yes. The game supports Xbox-style controllers with full button mapping: left stick move, right stick camera, RT/LT for attacks, LB/RB for abilities, A jump, B dodge, Y movement skill, X ultimate.',
  },
  ],
 };

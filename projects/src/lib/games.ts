@@ -1088,6 +1088,12 @@ export const voidlingBound: GameConfig = {
  description:
  "Agility, strength, vitality, level, nature, perks, modules, and what stats matter when comparing Voidlings.",
  },
+ {
+ title: "Controls Guide",
+ href: "/games/voidling-bound/controls",
+ description:
+ "Default keyboard and controller controls, dodge mechanics, ability combos, Steam Deck setup, and how to remap keybinds.",
+ },
  ],
 };
 

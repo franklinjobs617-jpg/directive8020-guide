@@ -11,9 +11,9 @@ import {
 } from '@/lib/voidling-bound';
 import { vbVoidlingsActionRows, vbVoidlingsJumpLinks, vbVoidlingsSearchIntent, vbVoidlingsSourceRows, vbVoidlingsStatusItems } from '@/lib/voidling-bound';
 
-const title = 'All Voidlings List: Voidling Bound Species, Evolutions, Rarity and Elements';
+const title = 'All Voidlings List: 120+ Voidling Bound Species, Evolutions, Rarity and Elements';
 const description =
- 'Browse every Voidling Bound species and evolution entry from the wiki-derived dataset, with rarity, element, images, ability notes, and detail links.';
+ 'Browse all 120+ Voidling Bound evolution entries by species, with rarity tiers, elements, ability notes, images, and detail links to the wiki-derived database.';
 const canonical = '/games/voidling-bound/voidlings';
 
 export const metadata = createVoidlingBoundMetadata({

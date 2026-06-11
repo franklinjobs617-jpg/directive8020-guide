@@ -4,9 +4,9 @@ import { ActionTable, BlufBox } from '@/components/guide-blocks';
 import { VoidlingBoundArticle } from '@/components/voidling-bound-article';
 import { createVoidlingBoundMetadata, voidlingBoundImages, voidlingGuideFaqs, voidlingSpecies } from '@/lib/voidling-bound';
 
-const title = 'Voidling Bound Beginner Guide: First Species, Hatching, Training, Missions and Database Use';
+const title = 'Voidling Bound Beginner Guide: Best Tips for First Species, Evolution, Breeding & Database';
 const description =
- 'Voidling Bound beginner guide for first-session choices: species roles, hatching, training, missions, evolutions, database lookup, and mistakes to avoid.';
+ 'Start Voidling Bound with the right species, difficulty, and first attribute points. Beginner tips for hatching, training, missions, evolution, breeding, elemental matchups, and database use.';
 const canonical = '/games/voidling-bound/beginner-guide';
 
 export const metadata = createVoidlingBoundMetadata({ title, description, canonical, image: voidlingBoundImages.screenshot1 });
@@ -116,20 +116,38 @@ export default function VoidlingBoundBeginnerGuidePage() {
  </section>
 
  <section className="prose-game">
- <h2>First-Hour Route</h2>
- <ArticleImage src={voidlingBoundImages.screenshot2} alt="Voidling Bound first hour missions and combat image" caption="The first hour should teach combat role, hatching and training flow, mission rhythm, and how evolution names map back to the database." />
- <p>
- Start by treating the game like a system-learning RPG, not a collection checklist. Finish the tutorial flow, pay attention to the species ability slots, and avoid making permanent-feeling decisions only because a rarity label looks exciting. When a new system appears, name the question: is this about combat role, hatching, training, breeding, splicing, element identity, or attributes? That habit keeps the guide path clean.
- </p>
- <p>
- Use early fights to answer practical questions. Can you keep pressure while moving? Do you need a defensive button? Are you losing because the species is weak, or because you do not understand its range? Are you choosing an element branch because it fits your plan, or because the name looks cooler? These are better questions than “what is the best Voidling,?because they connect directly to play.
- </p>
- <p>
- Once names start piling up, open the database. Search the species, filter by element, and compare ability slots. Then move into the{' '}
- <Link href="/games/voidling-bound/evolution-guide">evolution guide</Link>
- {' '}or{' '}
- <Link href="/games/voidling-bound/breeding-guide">breeding guide</Link>
- {' '}when you need system-level explanation.
+ <h2>First-Hour Route: Step by Step</h2>
+ <ArticleImage src={voidlingBoundImages.screenshot2} alt="Voidling Bound first hour missions and combat image" caption="Your first hour should follow a clear path: tutorial, first species, first missions, hatch, train, then database." />
+ <h3>0\u201315 Minutes: Tutorial and Starter Setup</h3>
+ <ol>
+ <li>Launch the game and select <strong>Adventurer</strong> difficulty (balanced challenge for first playthrough).</li>
+ <li>Complete the tutorial — pay close attention to your species ability slots (Primary, Secondary, Defense, Movement, Ultimate).</li>
+ <li>Put your first attribute point into <strong>Vitality</strong> for survivability. More HP means more time to learn combat mechanics before dying.</li>
+ <li>Your starter is Kwipeck by default. Stick with it for the first hour — its well-rounded kit is the best teaching tool in the game.</li>
+ </ol>
+ <h3>15\u201330 Minutes: First Missions and Combat Rhythm</h3>
+ <ol>
+ <li>Run the first 2-3 story missions. Focus on timing: learn when to use Defense (Q), when to dodge (Ctrl), and when to spam Primary attack (Left click).</li>
+ <li>Practice the basic combo: Secondary attack \u2192 Defense (Q) \u2192 Movement (E) to reposition \u2192 Ultimate (R) when enemies group up.</li>
+ <li>Check your mission rewards. Collect any Mutagens dropped by enemies — these are progression resources, not optional items.</li>
+ <li>Open the menu and check <strong>Training Room</strong> if available. Practice dodge timing against training targets for 3-5 minutes.</li>
+ </ol>
+ <h3>30\u201345 Minutes: Hatching and First Evolution</h3>
+ <ol>
+ <li>When the game unlocks hatching, hatch any egg you have received. The first hatch is tutorial-guided.</li>
+ <li>Compare the hatchling\u2019s ability slots with your starter. Note what changed and what stayed the same.</li>
+ <li>Open the <Link href="/games/voidling-bound/database">database</Link> and search your starter species (Kwipeck). Browse the evolution entries by rarity.</li>
+ <li>Filter by element to see which branch your current evolution is on. Note how Primary and Secondary abilities differ between branches.</li>
+ </ol>
+ <h3>45\u201360 Minutes: Database Lookup and Next Session Planning</h3>
+ <ol>
+ <li>Run one more mission to collect resources. Release any unwanted low-rarity Voidlings from your inventory for ~150 research points each.</li>
+ <li>Open the <Link href="/games/voidling-bound/database">database</Link> and bookmark it. Search a species you are interested in for next session.</li>
+ <li>Read the <Link href="/games/voidling-bound/elements-guide">elements guide</Link> to understand which element branch fits your preferred playstyle.</li>
+ <li>Set a goal for session 2: \u201CI will evolve my Kwipeck to a specific Pyro-branch evolution and compare ability slots.\u201d</li>
+ </ol>
+ <p className="mt-4 text-sm text-muted-foreground">
+ This route is designed for Adventurer difficulty with Kwipeck starter. If you chose a different species or difficulty, adjust the timing and focus accordingly. The goal is not to optimize everything in hour one \u2014 it is to learn the systems so hours 2\u201310 are productive.
  </p>
  </section>
  </VoidlingBoundArticle>
