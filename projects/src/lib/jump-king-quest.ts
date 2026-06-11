@@ -531,7 +531,7 @@ export const jumpKingQuestReleaseSearchIntent = [
  href: '#release-discount',
  label: 'Discount',
  },
-] as const;
+];
 
 export const jumpKingQuestReleaseJumpLinks = [
  { href: '#release-timeline', label: 'Launch timeline' },
