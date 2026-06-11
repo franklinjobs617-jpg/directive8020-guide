@@ -282,17 +282,27 @@ const commonFaqs = [
  'Windows PC via Steam is confirmed. PS5, Xbox, and Steam Deck verification are not confirmed by the official Steam data checked for this guide.',
  },
  {
- question: 'Is Enginefall a PvP game?',
- answer:
- 'Yes, PvP is a core part of the current pitch. The game is a player-driven crafting shooter with raids, Dagger vs Dagger pressure, extraction, and social conflict on Titan Trains.',
- },
+  question: 'Is PvP forced in Enginefall, or can I play PvE only?',
+  answer:
+    'PvP is a core part of Enginefall. There is no PvE-only mode confirmed. Other players can contest the same train, control room, and extraction points. If you only want PvE, this game may not fit your expectation.',
+},
+{
+  question: 'Is the tutorial good for beginners?',
+  answer:
+    'The current playtest tutorial is rough and does not clearly explain extraction, crafting, or train layout. Use this guide alongside the official blog posts to learn the systems.',
+},
+{
+  question: 'Is Enginefall buggy during playtest?',
+  answer:
+    'Yes, this is a development build. Crashes, desyncs, and missing UI feedback are expected. Report bugs via the official Discord. Dont judge the final game by the playtest build.',
+},
 ];
 
 export const enginefallPages = {
  hub: {
- title: 'Enginefall Guide: Release Date, Gameplay, Steam, PS5, Xbox & Playtest',
- description:
- 'Enginefall is a 2026 Steam coming-soon crafting shooter about Titan Trains, Dagger shuttles, PvP raids, extraction, Conductor control, and June 2026 playtest access.',
+  title: 'Enginefall Guide 2026 - Release Date, Gameplay & How to Get Playtest Access',
+  description:
+    'Enginefall is a train-based PvP crafting shooter from Red Rover Interactive. Learn the release date, how to join the 2026 playtest, system requirements for PC/PS5/Xbox, and beginner extraction tips.',
  canonical: '/games/enginefall',
  label: 'Enginefall',
  heroImage: enginefallImages.hero,
@@ -309,11 +319,11 @@ export const enginefallPages = {
  faqImageAlt: 'Enginefall official screenshot for hub FAQ section',
  faqImageCaption:
  'The hub FAQ answers the broad questions first: release state, confirmed platforms, PvP framing, and what not to fake before launch.',
- blufTitle: 'Worth Doing?',
- bluf: [
- 'Enginefall is worth a real guide cluster, not a thin release-date page. Google Trends and autocomplete show active demand around the game, playtest, release date, Steam, PS5, Xbox, Discord, gameplay, review, and Conductor searches. More importantly, the official site and Steam page already expose enough systems to write useful pages without fabricating data.',
- versionParagraph,
- ],
+  blufTitle: 'What Youll Find in This Enginefall Guide',
+  bluf: [
+    'Enginefall is a train-based PvP crafting and extraction shooter from Red Rover Interactive, set on colossal post-apocalyptic trains. This guide covers everything players need right now: the 2026 release window, how to get playtest and demo access, system requirements for PC/PS5/Xbox, beginner extraction tips, Conductor role mechanics, and Dagger shuttle base building.',
+    versionParagraph,
+  ],
  quickFacts: enginefallQuickFacts,
  answerTitle: 'What is Enginefall?',
  answer:
@@ -361,16 +371,15 @@ export const enginefallPages = {
  'Enginefall is not only a train shooter. The official pitch combines rail survival, extraction pressure, crafting, player conflict, and a moving home base.',
  paragraphs: [
  'Enginefall is a multiplayer survival and crafting shooter built around a very specific fantasy: society survives on massive Titan Trains, while Freerailers live outside that system by raiding, stealing fuel, and escaping with whatever they can carry. That gives the game a clearer identity than a generic survival sandbox. The player is not dropped into a forest with a stone axe. The player is pushed onto rails, into class-separated train space, and into conflict over gear, fuel, rooms, routes, and extraction windows.',
- 'The official Steam description says players start in the tail alone or with friends, scavenge, craft, build, push toward First Class, seize better gear car by car, then escape with high-value loot to upgrade a personal home on the rails. That single sentence is important for SEO because it creates several separate user tasks. One user wants to know whether the game is out. Another wants to know how the playtest works. Another wants to understand extraction. Another wants to know what a Dagger shuttle is. Another searches for Conductor because the official blog already names that role.',
- 'The page should therefore answer the broad brand query first, then route users into task pages. A thin page that only repeats the Steam description would lose the opportunity. A fake database page would damage trust. The correct hub is a source-checked overview with direct answers, official screenshots, platform caveats, and links into the narrower guides that solve player problems.',
- versionParagraph,
+'You start in the tail alone or with friends, scavenge materials, craft tools and weapons, push car by car toward First Class, seize better gear, then extract with high-value loot to upgrade your personal Dagger shuttle. Whether you want release dates, playtest access, extraction tips, Dagger base building, or Conductor role guides — this guide cluster covers each topic on its own page.',
+  versionParagraph,
  ],
  tableHeadings: ['Topic', 'Current answer', 'Why it matters'],
  rows: [
- ['Game type', 'PvP crafting shooter with extraction and base-building pressure.', 'This explains why guide demand goes beyond release-date searches.'],
- ['World hook', 'Humanity survives on Titan Trains after a collapse, while Freerailers raid from outside.', 'This gives the guide cluster consistent vocabulary.'],
- ['Player home', 'The Dagger shuttle is a personal rail base that can be upgraded.', 'This supports a dedicated Dagger page.'],
- ['High-status role', 'The Conductor controls important train functions after reaching C00 and the Control Room.', 'This supports a dedicated Conductor page.'],
+ ['Game type', 'PvP crafting shooter with extraction and base-building pressure.', 'The core gameplay loop to master.'],
+ ['World hook', 'Humanity survives on Titan Trains after a collapse, while Freerailers raid from outside.', 'Your role in the world as a Freerailer.'],
+ ['Player home', 'The Dagger shuttle is a personal rail base that can be upgraded.', 'Your personal base and progression system.'],
+ ['High-status role', 'The Conductor controls important train functions after reaching C00 and the Control Room.', 'A high-risk, high-reward objective to pursue.'],
  ],
  },
  {
@@ -381,16 +390,16 @@ export const enginefallPages = {
  caption:
  'Steam is the authority for the current release state. The official site and blog explain the June 2026 test window.',
  paragraphs: [
- 'Enginefall is not fully released. Steam lists it as Coming Soon with a 2026 release window. That means the hub must not use launch language such as full review, final weapon list, final map, or complete recipe database. It should instead tell users what can be done now: wishlist the game, request or enter test access when available, join the Discord, read official updates, and use the June 2026 guides with the understanding that balance may change.',
- 'The playtest timing needs careful wording because official sources use overlapping language. The June 8 official post says the open playtest runs June 8-14 and that the demo is available June 11-22. The April date-change post and several media pieces frame the moved test window as June 8-22. The honest answer is that the June 2026 access window centers on June 8-22, with specific playtest and demo wording varying by official post. The page should tell users to use the live Steam page as the final access source.',
- 'This is where many game sites create bad content. They turn a coming-soon Steam page into an exact release day, or they copy an old test date without explaining whether the build is live. Enginefall should be handled differently: direct date answer, current playable state, official links, and a visible update date. That is more useful for players and safer for search engines.',
+ 'Enginefall is not fully released. Steam lists it as Coming Soon with a 2026 release window. You can wishlist it now, join the official Discord for updates, request playtest access when available, and use our June 2026 guides. Keep in mind that balance and mechanics may change before launch.',
+ 'The playtest date varies across official sources. The June 8 post says open playtest runs June 8-14 and demo runs June 11-22. The earlier date-change post uses June 8-22. The safest window is June 8-22. Always check the live Steam page for real-time access status.',
+ 'Check back on this page for updates. The game is still in development, and both release dates and test windows can shift rapidly.',
  ],
- tableHeadings: ['Question', 'Answer', 'Page action'],
+ tableHeadings: ['Question', 'Answer', 'What to do'],
  rows: [
- ['Is it out?', 'No, Steam lists Coming Soon with a 2026 window.', 'Use cautious release language.'],
- ['Can players try it?', 'June 2026 playtest and demo access are the relevant current actions.', 'Link to the playtest page.'],
- ['Is the demo final?', 'No, it is a test/demo build during development.', 'Mark mechanics as build-sensitive.'],
- ['Where should users click?', 'Steam and the official site.', 'Keep external links visible and labeled.'],
+ ['Is it out?', 'No, Steam lists Coming Soon with a 2026 window.', 'Wishlist on Steam for launch notification.'],
+ ['Can players try it?', 'June 2026 playtest and demo access are available.', 'Check our Playtest access guide.'],
+ ['Is the demo final?', 'No, it is a development build.', 'Expect bugs, crashes, and balance changes.'],
+ ['Where should users click?', 'Steam and the official site.', 'Use official channels only, avoid third-party keys.'],
  ],
  },
  {
@@ -401,9 +410,9 @@ export const enginefallPages = {
  caption:
  'The safest current gameplay explanation is loop-based: what players try to do, what creates pressure, and what changes between runs.',
  paragraphs: [
- 'The core loop is simple to explain and hard to master. A run begins at the lower end of the train hierarchy, then asks the player to move through dangerous spaces, gather usable resources, craft tools or gear, fight or avoid other players, and decide when to leave. Because loot only matters if it survives extraction, the guide should keep returning to one question: what helps the player leave alive with value?',
- 'The official site emphasizes flexible crafting and build systems. That does not mean we should publish a complete recipe list today. It means beginners need to know how to think about materials, storage, weapons, armor, structures, and timing. A player who spends everything too early may reach a more dangerous carriage without escape options. A player who hoards everything may die with unused value. The useful guide voice is practical, not encyclopedic.',
- 'The social layer is the other reason Enginefall deserves multiple pages. It is built around human opponents and temporary allies. A route that works against NPC pressure can fail when another crew contests the same control point. A guide should explain conflict signals, retreat planning, and extraction discipline, but it should avoid promising that any route is safe. That honesty fits the game and prevents outdated advice.',
+ 'The core loop is simple: start at the lower end of the train, move through dangerous carriages, gather resources, craft gear, fight or avoid other players, and decide when to extract. The one question that matters: what helps you leave alive with value?',
+ 'The official site describes flexible crafting and build systems. As a beginner, focus on learning the categories: materials, storage, weapons, armor, structures, and timing. Spending everything too early leaves you exposed in harder carriages. Hoarding everything means dying with unused value. Craft what solves your next problem.',
+ 'The social layer is built around human opponents and temporary allies. A route that works against NPC pressure can fail when another crew contests the same point. Learn conflict signals, retreat planning, and extraction discipline. No route is guaranteed safe.',
  ],
  tableHeadings: ['Loop step', 'What to do', 'Common mistake'],
  rows: [
@@ -419,18 +428,18 @@ export const enginefallPages = {
  image: enginefallImages.screenshot3,
  imageAlt: 'Enginefall official screenshot used for guide map context',
  caption:
- 'The cluster should split by search intent: access, first-run survival, Conductor, Dagger, and platform checks.',
+ 'Pick the page that matches what you need: playtest access, first-run survival, Conductor role, Dagger base, or platform checks.',
  paragraphs: [
- 'The six-page structure is not content padding. It matches the way real searches divide. A user searching Enginefall playtest wants dates, key access, Discord, and server-password context. A user searching how to extract does not want a platform article. A user searching Enginefall Conductor wants C00, Breacher, Control Room, powers, and escape advice. Merging all of those into one page would create a long article that answers every query too slowly.',
- 'The hub should be the router. It gives the core facts, then sends the player to the page that matches the immediate job. The playtest page handles access. The beginner guide handles first-run survival. The Conductor guide handles the official high-status role. The Dagger guide handles the personal base and shuttle systems. The platform page handles specs, PS5, Xbox, and Steam Deck. That structure also gives GSC a cleaner way to reveal which intent is working.',
+ 'We split the guides so you get the right answer fast. If you only want playtest dates and keys, head to the Playtest page. If you need extraction and survival tips, the Beginner Guide is your page. Conductor info, Dagger base building, and platform checks each have their own focused guide.',
+ 'This hub gives you the core facts. For specific tasks, use the links below or the jump menu to get straight to what you need.',
  noFakeParagraph,
  ],
- tableHeadings: ['Page', 'Best user', 'Reason to split'],
+ tableHeadings: ['Page', 'Who it is for', 'What you will get'],
  rows: [
- ['Playtest guide', 'Players trying to enter the June 2026 build.', 'Access questions are time-sensitive and should not bury the hub.'],
- ['Beginner guide', 'First-run players who need survival rhythm.', 'How-to-play intent is different from release intent.'],
- ['Conductor guide', 'Players targeting C00 and Control Room power.', 'Official Conductor content already creates a named query.'],
- ['Dagger guide', 'Players confused by shuttle, fuel, storage, and raids.', 'Dagger is the player home and deserves its own context.'],
+ ['Playtest guide', 'Players trying to get into the June 2026 build.', 'Steam access steps, demo dates, Discord info, and server tips.'],
+ ['Beginner guide', 'First-run players who need survival basics.', 'Gameplay loop, looting priorities, crafting, extraction discipline.'],
+ ['Conductor guide', 'Players targeting C00 and Control Room power.', 'Step-by-step route to C00, Breacher timing, registration and powers.'],
+ ['Dagger guide', 'Players managing their shuttle base.', 'Upgrade priorities, fuel management, storage, and raid preparation.'],
  ],
  },
  {
@@ -441,11 +450,11 @@ export const enginefallPages = {
  caption:
  'Autocomplete shows PS5, Xbox, and Steam Deck interest, but official confirmation is narrower than user demand.',
  paragraphs: [
- 'The confirmed platform is Windows PC via Steam. That answer must be visible because platform searches are already appearing. Users who search PS5 or Xbox are not wrong to ask, but the page must not turn demand into confirmation. There is no official PS5 or Xbox release listed in the checked Steam data. The correct wording is direct: PC is confirmed, console versions are not confirmed, and future announcements should be checked through official channels.',
- 'Steam Deck is a separate question. A game can support controllers or run on PC and still not be Steam Deck Verified. Enginefall also has PvP, online access, text/UI readability, and performance considerations that matter more on a handheld. The platform page should explain the difference between playable, supported, and verified. It should not tell players to expect a smooth handheld experience without test evidence.',
- 'The system requirements page can use official minimum specs, but it should be careful with recommended settings. Steam currently lists a minimum baseline and notes that requirements are not final during development. That makes a cautious spec page useful: it can tell players whether their machine is near the current floor while warning that optimization and requirements can change before launch.',
+ 'The confirmed platform is Windows PC via Steam. PS5 and Xbox have search demand but no official version is confirmed. PC is confirmed, consoles are not. Check official channels for future announcements.',
+ 'A game can support controllers and run on PC without being Steam Deck Verified. Enginefall adds PvP, online play, and text-heavy UI — all harder on a handheld. Do not expect a smooth Deck experience without official verification.',
+ 'Steam lists a minimum baseline and warns that requirements are not final during development. Your machine may be near the current floor, but optimization and requirements can change before launch.',
  ],
- tableHeadings: ['Platform', 'Current status', 'Correct wording'],
+ tableHeadings: ['Platform', 'Current status', 'What to do'],
  rows: [
  ['PC Steam', 'Confirmed.', 'Enginefall is listed for Windows PC via Steam.'],
  ['PS5', 'Not confirmed.', 'Search demand exists, but no official PS5 version is confirmed.'],
@@ -469,9 +478,9 @@ export const enginefallPages = {
  ],
  },
  playtest: {
- title: 'Enginefall Playtest Dates, Demo, Key, Discord & Steam Access Guide',
- description:
- 'Enginefall playtest guide for June 2026 dates, Steam demo access, key questions, Discord, server password searches, player count checks, and what is not final.',
+  title: 'Enginefall Playtest 2026 - Dates, Demo Access & How to Get a Key',
+  description:
+    'The Enginefall June 2026 playtest and demo are live. Here\u2019s how to get Steam access, whether you need a key, where to join Discord, and what is still not final.',
  canonical: '/games/enginefall-playtest',
  label: 'Playtest',
  heroImage: enginefallImages.screenshot1,
@@ -488,11 +497,11 @@ export const enginefallPages = {
  faqImageAlt: 'Enginefall official screenshot for playtest FAQ section',
  faqImageCaption:
  'Playtest FAQ content should separate dates, access routes, keys, Discord, and player-count questions from final launch assumptions.',
- blufTitle: 'Playtest Answer',
- bluf: [
- 'Enginefall playtest demand is strong enough for its own page. Users are not only searching the game name; they are searching playtest dates, playtest key, Discord, player count, Steam charts, server password, and review. Those are access and trust questions, so they need fast answers before any gameplay explanation.',
- versionParagraph,
- ],
+  blufTitle: 'Quick Playtest Answer',
+  bluf: [
+    'The Enginefall June 2026 playtest and demo are active. Steam is the official access route. Discord helps with updates and support. Avoid third-party key claims. This guide explains the exact dates, how Steam access works, and whats not final yet.',
+    versionParagraph,
+  ],
  quickFacts: [
  ['Main window', 'Official and media wording centers the June 2026 access period around June 8-22.', 'working'],
  ['Playtest wording', 'The June 8 official post names June 8-14 for open playtest access.', 'verified'],
@@ -546,9 +555,9 @@ export const enginefallPages = {
  caption:
  'The safest date answer acknowledges that official posts use overlapping but not identical wording.',
  paragraphs: [
- 'The June 2026 Enginefall playtest information has one detail that most thin pages will get wrong: different official and media pages use slightly different date framing. The official June 8 post says players can join an open playtest from June 8-14 and play the demo from June 11-22. The earlier official date-change post says the Spring Open Playtest moved to June 8-22. PCGamesN and GamingTrend also frame the public test around June 8-22.',
- 'The correct user-facing answer is not to pick one line and ignore the rest. The page should say that the broader June 2026 access period is June 8-22, while specific official post wording separates the open playtest and demo dates. That is more useful than a false clean answer because users may see different dates on Steam News, the official site, media posts, and social channels.',
- 'This also explains why the page must show a last-updated date. Playtest windows can move, demo buttons can disappear, and Steam access can change without warning. A good guide should point users to Steam for the final access state and explain the known public timeline in plain language.',
+ 'The Enginefall June 2026 playtest uses slightly different dates across official sources. The official June 8 post says open playtest runs June 8-14 and demo runs June 11-22. The earlier date-change post uses June 8-22. PCGamesN and GamingTrend also frame the public test around June 8-22.',
+ 'The broader access period is June 8-22. You may see either date range on different platforms — this is normal. The key dates: playtest access June 8-14, demo access June 11-22.',
+ 'Playtest windows can shift and demo buttons may appear or disappear. Always check the live Steam page for real-time access status.',
  versionParagraph,
  ],
  tableHeadings: ['Date wording', 'Source-aware answer', 'User action'],
@@ -567,9 +576,9 @@ export const enginefallPages = {
  caption:
  'Players searching for keys and passwords usually need official access guidance, not risky third-party promises.',
  paragraphs: [
- 'The safest access route is Steam. If Steam exposes a playtest request, demo button, or store-page access option, that is the route players should use. A guide should not send players to random key sites or unverified Discord posts. Search demand around playtest key and server password exists because players hit friction: they cannot find the button, do not know whether access is automatic, or see discussions about private test servers.',
- 'That friction is a content opportunity, but it is also a trust risk. The page should explain that a key, password, or invite is only trustworthy when it comes from Steam, the official Enginefall team, or an official community announcement. If a site claims instant access, players should treat it as suspicious unless the developer verifies it. This is especially important for an unreleased multiplayer game where closed tests and public demos may overlap.',
- 'The page should also separate access from entitlement. Joining a Discord, requesting playtest access, or wishlisting does not guarantee a slot unless the official team says so. That simple distinction prevents a lot of bad clicks. It also gives the page a useful answer for users who search Enginefall playtest key and only need to know whether they are missing a hidden step.',
+ 'The safest access route is Steam. If you see a playtest request, demo button, or store-page access option on Steam, use it. Do not trust random key sites or unverified Discord posts. Players often search for keys and passwords because they cannot find the button, do not know whether access is automatic, or see discussions about private test servers.',
+ 'Only trust keys, passwords, or invites from Steam, the official Enginefall team, or official community announcements. If a third-party site claims instant access, treat it as suspicious. This matters because closed tests and public demos may overlap in an unreleased multiplayer game.',
+ 'Joining the Discord, requesting playtest access, or wishlisting does not guarantee a slot unless the official team says so. If you are searching for a key and cannot find one, you are probably not missing a hidden step — it simply may not be required.',
  ],
  tableHeadings: ['Access question', 'Direct answer', 'Risk'],
  rows: [
@@ -587,9 +596,9 @@ export const enginefallPages = {
  caption:
  'The official blog repeatedly points players toward Discord for support and feedback during testing.',
  paragraphs: [
- 'Discord matters for Enginefall because the current product stage is not a quiet store-page wait. The official blog talks about playtests, bug reporting, feedback, community suggestions, and future changes. That makes Discord an important support layer for players who are stuck, confused by access, or trying to understand whether a bug is known.',
- 'A useful Discord section should not overpromise. It should tell users what Discord is good for: announcement follow-up, bug report channels, surveys, player feedback, clip sharing, and community coordination. It should also tell users what Discord is not: a guaranteed key dispenser, a replacement for Steam access, or a stable documentation source for final launch mechanics.',
- 'The best guide angle is practical. If a player hits a bug, they should note what happened, where it happened, whether it can be reproduced, and attach screenshots or clips when appropriate. If a player has balance feedback, they should separate mechanical feedback from general frustration. That mirrors the kind of structured feedback the official posts ask for and helps the community produce better test data.',
+ 'Discord is where the Enginefall team posts updates, handles bug reports, collects feedback, and manages the playtest community. If you are stuck, confused by access, or unsure if a bug is known, join the official Discord.',
+ 'Use Discord for: announcement updates, bug report channels, surveys, player feedback, clip sharing, and finding teammates. Discord is NOT a guaranteed key source, a replacement for Steam access, or final documentation for launch mechanics.',
+ 'If you hit a bug: note what happened, where it happened, whether you can reproduce it, and attach screenshots or clips. For balance feedback: explain what system felt wrong and why, rather than just venting. Structured reports get faster fixes.',
  ],
  tableHeadings: ['Discord use', 'Good for', 'Not good for'],
  rows: [
@@ -607,9 +616,9 @@ export const enginefallPages = {
  caption:
  'Playtest metrics can show interest, but they do not measure the final launch population.',
  paragraphs: [
- 'Enginefall player count searches are understandable because multiplayer survival games live or die by population. But a playtest count is not the same as a launch count. It depends on test window, region, time of day, invite flow, Steam visibility, demo availability, and server structure. A guide can explain where players usually check activity, but it should not treat a temporary test spike or dip as a final verdict.',
- 'Review searches need the same caution. PC Gamer hands-on coverage is valuable because it gives outside context, including promise and rough edges. Steam discussions are valuable because they reveal user concerns around PvP, solo friction, controller support, access, and server questions. Neither source should be used as a finished review score. The page should tell players whether the test is worth trying, not whether the final game has succeeded.',
- 'This is also why the playtest page should connect to the beginner guide. A player who only checks population may miss the bigger question: does the first session make sense? If the tutorial, extraction, and Dagger flow are confusing, the guide can help. If the player wants a polished PvE survival game with no player threat, the guide should say that Enginefall may not fit their expectation.',
+ 'Enginefall player count searches make sense — multiplayer survival games live or die by population. But playtest numbers are not launch numbers. They depend on test window, region, time of day, invite flow, Steam visibility, demo availability, and server structure. Do not treat a temporary test spike or dip as the final verdict.',
+ 'PC Gamer hands-on coverage is valuable for external impressions. Steam discussions reveal real user concerns: PvP, solo friction, controller support, access issues, and server questions. Neither source is a finished review. The test is worth trying if you enjoy PvP extraction games and can handle rough edges. Skip it if you want a polished PvE survival experience.',
+ 'If your first session is confusing, use our Beginner Guide for the gameplay loop, extraction, and crafting system. Enginefall may not fit you if you want a pure PvE survival game with no player threat.',
  ],
  tableHeadings: ['Metric', 'What it can show', 'What it cannot prove'],
  rows: [
@@ -628,9 +637,9 @@ export const enginefallPages = {
  'A good playtest guide helps users produce useful feedback while also improving their own first session.',
  paragraphs: [
  'The first playtest session should not try to master everything. Players should test the entry flow, tutorial clarity, movement, looting readability, crafting prompts, extraction signals, Dagger return behavior, combat feel, and how quickly PvP pressure arrives. Those are the systems that determine whether a new player understands the game before another crew interrupts the run.',
- 'Players should also take notes. If a door, crafting station, inventory item, or extraction cue is unclear, write down where it happened. If performance drops, note the hardware, settings, and scene. If the player dies without understanding why, note whether the problem was audio, UI, enemy readability, or another player. That turns frustration into useful feedback and gives the guide page real user value.',
- noFakeParagraph,
+ 'Players should also take notes. If a door, crafting station, inventory item, or extraction cue is unclear, write down where it happened. If performance drops, note the hardware, settings, and scene. If the player dies without understanding why, note whether the problem was audio, UI, enemy readability, or another player.',
  ],
+
  tableHeadings: ['Test area', 'What to watch', 'Why it matters'],
  rows: [
  ['Tutorial', 'Whether first-time goals are clear.', 'New player retention depends on the first route.'],
@@ -660,9 +669,9 @@ export const enginefallPages = {
  ],
  },
  beginner: {
- title: 'Enginefall Beginner Guide: How to Play, Extract, Craft and Survive Your First Run',
- description:
- 'Enginefall beginner guide for June 2026 playtest players: how to play your first run, what to loot, when to craft, how to extract, and how to survive PvP pressure.',
+  title: 'Enginefall Beginner Guide - How to Survive Your First Run & Extract',
+  description:
+    'New to Enginefall? Learn the core loop: how to loot with purpose, when to craft, how to extract before dying, and how to survive your first PvP encounter.',
  canonical: '/games/enginefall-beginner-guide',
  label: 'Beginner Guide',
  heroImage: enginefallImages.screenshot2,
@@ -679,11 +688,11 @@ export const enginefallPages = {
  faqImageAlt: 'Enginefall official screenshot for beginner guide FAQ',
  faqImageCaption:
  'The beginner FAQ keeps answers practical and avoids unstable tier lists, complete recipes, and final build claims.',
- blufTitle: 'First Run Priority',
- bluf: [
- 'The first Enginefall goal is not to win the train. It is to understand the loop, leave with value, and learn what killed you. New players should move with a purpose, loot for immediate survival, craft to solve the next obstacle, avoid ego fights, and extract before the run turns into a trap.',
- versionParagraph,
- ],
+  blufTitle: 'Your First Run Survival Plan',
+  bluf: [
+    'Your first Enginefall goal is not to clear the whole train. It is to understand the loop, leave with value, and learn what killed you. Move with a purpose, loot only what helps survival, craft to solve the next obstacle, avoid ego fights, and extract before the run turns into a trap.',
+    versionParagraph,
+  ],
  quickFacts: [
  ['Best first goal', 'Complete a modest loot-and-extract run instead of chasing First Class immediately.', 'working'],
  ['Main threat', 'Other players, contested rooms, confusion, and staying too long.', 'working'],
@@ -735,11 +744,11 @@ export const enginefallPages = {
  image: enginefallImages.screenshot3,
  imageAlt: 'Enginefall official screenshot showing train route pressure',
  caption:
- 'A first run should teach route reading, looting, crafting, and extraction timing before the player chases deeper objectives.',
+ 'Your first run goal: survive, extract with value, and learn what killed you. Save deeper objectives for later runs.',
  paragraphs: [
- 'A beginner should not load Enginefall with the goal of becoming the best raider on the first run. The game combines PvP, crafting, extraction, vertical train progression, and a personal Dagger base, so the first useful victory is understanding how those pieces connect. Enter the run with one small target: find useful materials, read the train space, craft one practical upgrade or tool, and extract without turning every sound into a fight.',
- 'The official pitch says players start in the tail and push car by car toward better gear and First Class. That means early space is not worthless. It is where new players learn what items look like, how quickly risk rises, how other players move, and which exits matter. If the player sprints forward without a retreat plan, the run becomes a lesson in losing inventory rather than learning the system.',
- 'A good first-run habit is to look for three things before looting deeply: a route back, a route forward, and a reason to stay. If none of those are clear, the player should slow down. Enginefall is not only about aim. It is about judging whether the next room is worth the time and noise. That is why this guide avoids fake best-build advice and focuses on practical decision making.',
+ 'Do not aim to become the best raider on run one. Enginefall combines PvP, crafting, extraction, train progression, and Dagger base building. Your first victory is understanding how these pieces connect. Enter with one small target: find useful materials, read the train layout, craft one practical item, and extract without fighting everything.',
+ 'You start in the tail and push car by car toward better gear and First Class. The early carriages are your training ground — learn item recognition, threat timing, player movement patterns, and exit locations. Sprinting forward without a retreat plan turns the run into lost inventory, not learning.',
+ 'Before looting deeply, check three things: a route back, a route forward, and a reason to stay. If none are clear, slow down. Enginefall is about judging whether the next room is worth the time and risk — not just aim.',
  versionParagraph,
  ],
  tableHeadings: ['Beginner habit', 'Do this', 'Avoid this'],
@@ -758,9 +767,8 @@ export const enginefallPages = {
  caption:
  'The best early loot is not the flashiest item. It is the item that helps the current run survive and the Dagger improve.',
  paragraphs: [
- 'In extraction-style games, inventory greed is a beginner killer. Enginefall adds another layer because loot can feed crafting, survival, Dagger upgrades, and long-term progression. That makes every pickup feel potentially useful, but a full inventory does not matter if the player dies before extraction. Beginners should prioritize items that solve immediate problems first, then materials that support Dagger or progression goals.',
- 'The right question is not, is this item good? The right question is, what job does this item do before I leave? If it improves survivability, opens a route, supports crafting, fuels the Dagger, or has clear value for extraction, it deserves space. If the player cannot explain its use, it may be clutter. This is especially true during a playtest where item balance can change and a written value list may be outdated quickly.',
- 'The beginner guide should therefore teach a looting framework instead of a static item ranking. That gives players something useful even as patches land. It also leaves room to expand later if GSC shows searches for schematics, crafting, or specific materials after more stable data appears.',
+ 'Prioritize items that solve immediate problems: survival, crafting your next tool, or Dagger progression. A full inventory means nothing if you die before extraction.',
+ 'Ask yourself: what job does this item do before I leave? If it helps survivability, opens a route, supports crafting, fuels the Dagger, or has clear extraction value — keep it. If you cannot explain its use, it is clutter. Item balance changes during playtests, so learning to judge for yourself is more useful than memorizing static value lists.',
  ],
  tableHeadings: ['Loot type', 'Why it matters', 'Beginner rule'],
  rows: [
@@ -778,11 +786,11 @@ export const enginefallPages = {
  caption:
  'Enginefall crafting is useful when it solves the next problem. It is risky when it becomes menu time in a dangerous route.',
  paragraphs: [
- 'The official site highlights flexible crafting and build systems, and the Steam page describes crafting and building your way up the train. That is enough to write a beginner crafting guide, but not enough to write a complete recipe database. The current useful advice is to craft for the next obstacle: survival, access, combat, storage, or extraction support.',
- 'Beginners should avoid two extremes. The first is ignoring crafting until every fight is harder than it needs to be. The second is spending too long in crafting menus while other players move through the same train. Crafting should happen when the benefit is clear and the location is reasonably controlled. If the player cannot protect the time, the craft may become a donation to the next crew.',
- 'Because the game is still in development, build advice should use roles instead of final rankings. A defensive craft helps the player survive pressure. An access craft helps the player reach a locked or contested space. A mobility or extraction-oriented craft helps the player leave with value. This role-based framing stays useful even if item names or costs change.',
+ 'Craft for the next obstacle: survival, access, combat, storage, or extraction support.',
+ 'Avoid two extremes: ignoring crafting (every fight becomes harder) and spending too long crafting (other players move through the train). Craft when the benefit is clear and the area is controlled. If you cannot protect the crafting time, your work becomes a donation to the next crew.',
+ 'Think in roles, not rankings. Defensive crafts help you survive. Access crafts open locked spaces. Extraction crafts help you leave with value.',
  ],
- tableHeadings: ['Craft role', 'When to use it', 'Why it is safer than tier lists'],
+ tableHeadings: ['Craft role', 'When to use it', 'How to decide'],
  rows: [
  ['Survival', 'When the next room is likely to involve damage.', 'Survival value remains useful across patches.'],
  ['Access', 'When a door, carriage, or objective blocks progress.', 'Access tools are tied to goals, not rankings.'],
@@ -818,9 +826,9 @@ export const enginefallPages = {
  caption:
  'Enginefall is built around player conflict. Solo players should treat information and exits as their main defense.',
  paragraphs: [
- 'Enginefall is pitched as a social multiplayer sandbox with human opponents and allies. That does not mean a solo player cannot try it, but it does mean solo expectations must be realistic. A solo player should not judge success by winning every duel. Success can be avoiding a bad fight, extracting with modest value, and learning routes without giving another crew a free inventory.',
- 'Solo players should move slower, avoid noisy commitments, and treat every contested objective as optional unless the reward is worth the risk. If two groups are fighting, the solo player does not need to become the third participant. Sometimes the best play is to wait, listen, move around the pressure, or leave. This is not cowardice; it is extraction discipline.',
- 'The page should not promise PvE-only comfort unless official sources confirm such a mode. Current official positioning emphasizes PvP, Dagger conflicts, raids, clans, and social features. That means the beginner guide should help cautious players survive the real game instead of selling them a different game.',
+ 'Enginefall is a social multiplayer sandbox built around human opponents and allies. You can play solo, but set realistic expectations. Success is not winning every duel — it is avoiding bad fights, extracting with modest value, and learning routes without donating your inventory to another crew.',
+ 'Move slower than squads. Avoid noisy commitments. Treat contested objectives as optional unless the reward outweighs the risk. If two groups are fighting, you do not need to become the third. Wait, listen, move around the pressure, or leave. This is extraction discipline, not cowardice.',
+ 'There is no PvE-only mode confirmed. Official positioning centers on PvP, Dagger conflicts, raids, and social features. If you want a pure PvE survival game with no player threat, Enginefall may not be the right fit for you.',
  ],
  tableHeadings: ['Solo problem', 'Practical response', 'Bad habit'],
  rows: [
@@ -851,9 +859,9 @@ export const enginefallPages = {
  ],
  },
  conductor: {
- title: 'How to Become Conductor in Enginefall: C00, Breacher, Control Room and Extraction',
- description:
- 'Enginefall Conductor guide explaining the C00 route, Breacher use, Control Room registration, Conductor powers, Fuel Cores, keycard printing, and safe extraction.',
+  title: 'Enginefall Conductor Guide - How to Reach C00, Use Breacher & Extract',
+  description:
+    'Learn how to become Conductor in Enginefall: reach Carriage C00, plant the Breacher, register in the Control Room, use role powers, and extract with loot before dying.',
  canonical: '/games/enginefall-conductor-guide',
  label: 'Conductor Guide',
  heroImage: enginefallImages.screenshot3,
@@ -870,11 +878,11 @@ export const enginefallPages = {
  faqImageAlt: 'Enginefall official screenshot for Conductor FAQ',
  faqImageCaption:
  'Conductor FAQ answers focus on what official sources confirm and avoid exact timers or costs that may change.',
- blufTitle: 'Conductor Route',
- bluf: [
- 'The Conductor route is worth its own page because it is a named official system with direct search demand. The route is not automatic: reach Carriage C00, craft and plant a Breacher, enter the Control Room, register as Conductor, use the role, then extract before the train turns the reward into a death trap.',
- versionParagraph,
- ],
+  blufTitle: 'Quick Conductor Answer',
+  bluf: [
+    'The Conductor is a powerful role earned mid-run, not a starting class. Reach Carriage C00, craft and plant a Breacher, enter the Control Room, register as Conductor, use the role powers, then extract before dying. This guide explains every step and the risks.',
+    versionParagraph,
+  ],
  quickFacts: [
  ['Target carriage', 'C00 and the Control Room.', 'verified'],
  ['Required access', 'Craft and plant a Breacher to enter locked Control Room access.', 'verified'],
@@ -928,9 +936,9 @@ export const enginefallPages = {
  caption:
  'Conductor is a role earned during a run. It is powerful because it controls systems, crafting, fuel, and communication.',
  paragraphs: [
- 'The official Conductor guide describes the role as a high-power position at the center of the action. That matters because Conductor is not a cosmetic title or a menu class selected before the match. It is something earned during a run by reaching the correct carriage, breaching access, and registering in the Control Room.',
- 'That structure creates a natural guide page. Players need to know where the route starts, why C00 matters, when to craft the Breacher, what kind of danger to expect near the Control Room, what powers unlock after registration, and when to leave. The official article gives the skeleton. Enjoy4Game can add player-facing risk framing without inventing mechanics.',
- 'The role also tells us how Enginefall thinks about progression. It rewards movement through the train, contesting important rooms, using crafted access tools, and turning temporary control into extracted value. If the player becomes Conductor but dies before leaving, the run still fails in practical terms.',
+ 'Conductor is not a starting class or cosmetic title. You earn it during a run by reaching the correct carriage, breaching access, and registering in the Control Room. The official guide describes it as a high-power position at the center of the action.',
+ 'Here is what you need to know: where the route starts, why C00 matters, when to craft the Breacher, what danger to expect near the Control Room, what powers unlock after registration, and when to leave.',
+ 'The role rewards movement through the train, contesting important rooms, using crafted access tools, and turning temporary control into extracted value. If you become Conductor but die before leaving, the run still fails.',
  versionParagraph,
  ],
  tableHeadings: ['Conductor concept', 'Meaning', 'Player takeaway'],
@@ -971,7 +979,7 @@ export const enginefallPages = {
  paragraphs: [
  'The Breacher is the key route detail because it turns a locked Control Room path into an active objective. A beginner might think of it as a simple door opener, but in a PvP game it is also a signal. Planting a Breacher says that someone is trying to take a valuable room. Any player who understands that value may push, wait, or ambush.',
  'Good Breacher timing begins before the craft. Check whether your inventory supports the attempt, whether teammates know their roles, whether extraction is still realistic, and whether the area is too noisy. If the route is already contested, the Breacher may become a bait tool rather than a safe entry tool. That does not make it bad. It means the player needs to know what fight they are starting.',
- 'The guide should avoid claiming exact timers, costs, or counters unless those are verified in the current build. Those values can change. The stable advice is about process: prepare, secure, plant, watch, enter, register, and leave.',
+ 'Exact timers, costs, and counters can change between builds. The stable process is: prepare, secure, plant, watch, enter, register, and leave.',
  ],
  tableHeadings: ['Timing check', 'Good sign', 'Bad sign'],
  rows: [
@@ -987,7 +995,7 @@ export const enginefallPages = {
  image: enginefallImages.screenshot5,
  imageAlt: 'Enginefall official screenshot for Conductor powers and crafting context',
  caption:
- 'The official guide names the broad power set. Current pages should explain uses without inventing exact stat values.',
+ 'The official guide names the broad power set. Use these as guidelines, not exact stats.',
  paragraphs: [
  'The official Conductor guide lists several powerful actions: communicate with the entire train through announcements and messages, craft the highest-tier weapons and armor, create Conductor-exclusive clothing, produce Fuel Cores directly from the Control Room, craft fuel-related resources outside the train such as fuel nodes and shards, and print a Control Room keycard for easier access.',
  'That list is enough to explain why the role is contested. It touches communication, gear quality, fuel economy, identity items, and access control. It also creates several future SEO branches, but those branches should not be split until player search data appears. For now, one Conductor page can cover the powers and link to the Dagger guide for fuel/base context.',
@@ -1010,9 +1018,9 @@ export const enginefallPages = {
  'The Conductor run is not complete at registration. The official guide still tells players to extract.',
  paragraphs: [
  'The official guide ends with the most important reminder: once you have gathered what you need, leave. That should shape the entire page. Becoming Conductor is not the finish line. It is the point where the run becomes more valuable and more dangerous. Other players may know the room is active, teammates may overstay to craft more, and the group may forget that extracted value is the real reward.',
- 'A clean Conductor extraction starts before registration. Decide what value is enough, which exit is closest, who carries what, and whether the group will fight or disengage if challenged. If the team has no answer, they are not ready to turn the role into progress. The Control Room can make the group feel powerful, but power does not stop a bad retreat.',
- noFakeParagraph,
+ 'A clean Conductor extraction starts before registration. Decide what value is enough, which exit is closest, who carries what, and whether the group will fight or disengage if challenged. If the team has no answer, they are not ready to turn the role into progress.',
  ],
+
  tableHeadings: ['After registration', 'Do this', 'Do not do this'],
  rows: [
  ['Choose value', 'Take the role output that matters for the run.', 'Try every option while exposed.'],
@@ -1042,9 +1050,9 @@ export const enginefallPages = {
  ],
  },
  dagger: {
- title: 'Enginefall Dagger Guide: Shuttle Base, Fuel, Storage, Schematics and Raids',
- description:
- 'Enginefall Dagger guide explaining the Dagger shuttle, personal rail base, fuel, storage, schematics, Dagger vs Dagger combat, raid risk, and first upgrade priorities.',
+  title: 'Enginefall Dagger Guide - Shuttle Base, Fuel & Upgrade Priorities',
+  description:
+    'Learn about the Dagger shuttle in Enginefall: your personal rail base for storing loot, upgrading gear, managing fuel, and preparing for the next raid.',
  canonical: '/games/enginefall-dagger-guide',
  label: 'Dagger Guide',
  heroImage: enginefallImages.screenshot4,
@@ -1061,11 +1069,11 @@ export const enginefallPages = {
  faqImageAlt: 'Enginefall official screenshot for Dagger FAQ',
  faqImageCaption:
  'The Dagger FAQ explains current confirmed concepts without inventing a complete upgrade tree or stable raid meta.',
- blufTitle: 'Dagger Role',
- bluf: [
- 'The Dagger is important enough for a standalone guide because it is not just transportation. The official site describes it as the player home on rails, while current and future content mentions Dagger bases, Dagger vs Dagger combat, storage, fuel, schematics, and long-term upgrades.',
- versionParagraph,
- ],
+  blufTitle: 'What Is the Dagger?',
+  bluf: [
+    'The Dagger is your personal shuttle and rail base - not just transportation. It is where you store loot, upgrade gear, manage fuel, and plan for the next raid. This guide explains Dagger vs Dagger combat, storage priorities, and first upgrade choices.',
+    versionParagraph,
+  ],
  quickFacts: [
  ['What it is', 'A shuttle and personal rail base used by Freerailers.', 'verified'],
  ['Long-term role', 'Upgrade point for extracted loot and personal progression.', 'verified'],
@@ -1117,11 +1125,11 @@ export const enginefallPages = {
  image: enginefallImages.screenshot1,
  imageAlt: 'Enginefall official screenshot for Dagger role overview',
  caption:
- 'The Dagger guide should explain the shuttle as a gameplay system, a home base, and a reason extraction matters.',
+ 'The Dagger is your shuttle, home base, and the reason extraction matters.',
  paragraphs: [
  'The official site describes Dagger Shuttles as service craft designed to operate alongside Titan Trains. In the player fantasy, a stolen shuttle installed with a jailbroken AI becomes the Freerailer way to live outside the train system, raid Titan Trains, and build a life away from the ruling structure. That lore matters because it explains why the Dagger is not a disposable vehicle.',
- 'From a gameplay guide perspective, the Dagger is where extraction value becomes long-term meaning. If a player raids a train, collects materials, and leaves alive, that value needs somewhere to go. The Dagger is the natural answer: home, shuttle, upgrade target, storage context, and future conflict space. This is why the beginner guide should constantly remind players to leave with value instead of dying with full pockets.',
- 'The Dagger also connects multiple Enginefall search intents. Players searching Dagger may need lore, fuel, storage, schematic, base, or raid answers. That is too much for a small hub section and too specific for a general platform page. A dedicated Dagger page keeps all shuttle/base questions together without forcing unsupported upgrade-tree claims.',
+ 'The Dagger is where extraction value becomes long-term meaning. When you raid a train, collect materials, and extract alive, that value goes to your Dagger. It is your home, shuttle, upgrade target, storage, and future conflict space — which is why extracting with value beats dying with full pockets.',
+ 'This page covers the Dagger from all angles: lore, fuel, storage, schematics, base building, and raid preparation. Everything you need in one place.',
  versionParagraph,
  ],
  tableHeadings: ['Dagger function', 'What it means', 'Guide approach'],
@@ -1141,8 +1149,8 @@ export const enginefallPages = {
  'The official world page gives enough context to explain why Freerailers depend on Dagger shuttles.',
  paragraphs: [
  'Enginefall worldbuilding separates Titan Train passengers from Freerailers. Titan Trains are moving cities organized by class, while Freerailers live outside that system, often aboard Dagger shuttles. This creates the social conflict underneath the gameplay. You are not only looting a train because it has items. You are raiding the system that controls fuel, space, class, and survival.',
- 'That context makes the Dagger emotionally important. It is the player identity as much as a base. A Dagger is what lets the player exist outside the Titan Train hierarchy. When the official site says players can turn a Dagger from a rust bucket into an assault craft and eventually take control of larger trains, it is describing a progression fantasy that can support months of guide updates.',
- 'For now, the page should keep the lore practical. Terms like Titan Train, Freerailer, Dagger, Marauder train, Fuel Core, and Control Room should be explained because players will see them across the official site and blogs. A glossary-style explanation is useful, but it should stay grounded in official wording and avoid inventing faction mechanics that have not been confirmed.',
+ 'Your Dagger is your identity as much as your base. It lets you exist outside the Titan Train hierarchy. The official site describes turning it from a rust bucket into an assault craft and eventually taking control of larger trains.',
+ 'Key terms: Titan Train (massive moving city), Freerailer (you, living outside the system), Dagger Shuttle (your personal rail base), Marauder train (future player-owned trains), Fuel Core (high-value Conductor resource), Control Room (Conductor domain).',
  ],
  tableHeadings: ['Term', 'Meaning', 'Why players care'],
  rows: [
@@ -1160,16 +1168,16 @@ export const enginefallPages = {
  caption:
  'Storage and schematic details are useful, but exact values must wait for stable data.',
  paragraphs: [
- 'A Dagger base guide should help players understand priorities rather than claim a final upgrade order. Extracted resources, storage capacity, schematic access, fuel pressure, and defense all compete for attention. The best early question is not what is the best upgrade? The better question is what problem is currently blocking the next run?',
- 'If the player runs out of space, storage planning matters. If the player cannot support routes or fuel pressure, fuel-related planning matters. If the player loses value to other players, defense and retreat discipline matter. If the player does not know what to craft next, schematic clarity matters. These are guide sections that stay useful across patches because they teach diagnosis.',
- 'Official Steam News and blog language mention Dagger changes, base systems, schematics, and playtest iteration. That is enough to discuss categories, but not enough to publish a complete schematic tree. This page should explicitly say that exact upgrade names, costs, and priority orders should be updated after hands-on testing or official documentation stabilizes.',
+ 'Understand priorities instead of chasing a final upgrade order. Extracted resources, storage capacity, schematic access, fuel pressure, and defense all compete for your attention. The best question: what problem is blocking your next run?',
+ 'If you run out of space, storage matters. If you cannot support routes or fuel, fuel planning matters. If you lose value to other players, defense and retreat discipline matter. If you do not know what to craft next, schematic discovery matters. These diagnostic skills stay useful across patches.',
+ 'Exact upgrade names, costs, and priority orders will be updated after hands-on testing or when official documentation stabilizes.',
  ],
- tableHeadings: ['Base problem', 'Likely priority', 'Why not fake exact data'],
+ tableHeadings: ['Base problem', 'Likely priority', 'Caution'],
  rows: [
- ['Too little space', 'Storage and organization.', 'Exact storage values can change.'],
- ['Run support weak', 'Fuel or practical crafting support.', 'Fuel economy is patch-sensitive.'],
- ['No clear next craft', 'Schematic discovery and planning.', 'Complete schematic data is not stable yet.'],
- ['Frequent losses', 'Safer extraction and base defense thinking.', 'PvP balance can change rapidly.'],
+ ['Too little space', 'Storage and organization.', 'Exact values are build-dependent.'],
+ ['Run support weak', 'Fuel or practical crafting support.', 'Fuel economy may change per patch.'],
+ ['No clear next craft', 'Schematic discovery and planning.', 'Schematics change between builds.'],
+ ['Frequent losses', 'Safer extraction and base defense thinking.', 'Defense becomes instinct with practice.'],
  ],
  },
  {
@@ -1180,11 +1188,10 @@ export const enginefallPages = {
  caption:
  'Fuel connects high-value Control Room play with long-term Dagger and rail progression.',
  paragraphs: [
- 'Fuel is one of the cleanest bridges between the Conductor guide and the Dagger guide. The official Conductor guide says the role can produce Fuel Cores directly from the Control Room and craft fuel-related resources outside the train, including fuel nodes and shards. That makes fuel more than a background resource. It is part of why the Control Room route can matter to a Dagger-focused player.',
- 'A fuel section should explain the relationship, not invent a complete economy. Players should know that fuel value can influence route planning, extraction priority, and Dagger progression. They should not be told that a specific node, shard, or core value is best unless the guide has current build proof.',
- 'This approach keeps the page useful and honest. It tells a player why fuel terms are important, where they appear in official material, and how to think about them in a run. It leaves room to add exact farming routes after reliable data exists.',
+ 'Fuel links Conductor and Dagger progression. The official Conductor guide confirms the role can produce Fuel Cores from the Control Room and craft fuel-related resources outside the train (fuel nodes, shards). Fuel is a strategic asset that makes the Control Room route valuable for Dagger players.',
+ 'Fuel value influences route planning, extraction priority, and Dagger progression. We do not claim a specific node, shard, or core is best — those values depend on the current build.',
  ],
- tableHeadings: ['Fuel term', 'Current confirmed context', 'Guide caution'],
+ tableHeadings: ['Fuel term', 'Current confirmed context', 'What changes'],
  rows: [
  ['Fuel Core', 'Conductor can produce it from the Control Room.', 'Do not invent exact rates.'],
  ['Fuel node', 'Official Conductor guide references fuel-related resources.', 'Needs build-specific testing.'],
@@ -1200,10 +1207,10 @@ export const enginefallPages = {
  caption:
  'Dagger vs Dagger pressure means players should think about exposure, storage, and extraction discipline from the start.',
  paragraphs: [
- 'Official playtest and future feature language includes Dagger vs Dagger combat. That means the Dagger is not a safe menu space in every possible context. It can become part of the conflict layer. A guide should prepare players for that idea without pretending to know every raid rule before the final build.',
- 'Defensive thinking begins before a raid. Do not carry every valuable item into unnecessary danger. Do not overstay after a good extraction target. Do not assume the route back is safe because it was safe ten minutes earlier. If Dagger pressure grows in later builds, these habits will matter even more.',
- noFakeParagraph,
+ 'Official playtest and future feature language includes Dagger vs Dagger combat. Your Dagger is not a safe menu space. Plan for this now — good defensive habits formed early will protect you when Dagger pressure intensifies.',
+ 'Defensive thinking begins before a raid. Do not carry every valuable item into unnecessary danger. Do not overstay after a good extraction target. Do not assume the route back is safe because it was safe ten minutes earlier.',
  ],
+
  tableHeadings: ['Raid risk', 'Preparation', 'Bad assumption'],
  rows: [
  ['Other players contest route', 'Track sound and avoid predictable returns.', 'Home route is always safe.'],
@@ -1233,9 +1240,9 @@ export const enginefallPages = {
  ],
  },
  platforms: {
- title: 'Enginefall System Requirements, Steam Deck, PS5, Xbox and PC Platform Status',
- description:
- 'Enginefall platform guide covering official PC system requirements, Steam Deck status, PS5 and Xbox caveats, controller expectations, and what is not confirmed.',
+  title: 'Enginefall System Requirements 2026 - PC Specs, Steam Deck & Console Status',
+  description:
+    'Check the official Enginefall PC system requirements for 2026, whether it runs on Steam Deck, and the real status of PS5/Xbox versions.',
  canonical: '/games/enginefall-system-requirements-platforms',
  label: 'System Requirements & Platforms',
  heroImage: enginefallImages.screenshot6,
@@ -1252,11 +1259,11 @@ export const enginefallPages = {
  faqImageAlt: 'Enginefall official screenshot for platform FAQ',
  faqImageCaption:
  'The platform FAQ gives direct answers for PC specs, console status, and Steam Deck verification without overclaiming.',
- blufTitle: 'Platform Answer',
- bluf: [
- 'The confirmed Enginefall platform is Windows PC via Steam. PS5 and Xbox have search demand, but demand is not confirmation. Steam Deck is also not the same as PC support. The page should answer all of these directly because vague platform language creates bad clicks.',
- versionParagraph,
- ],
+  blufTitle: 'Quick Platform Answer',
+  bluf: [
+    'The confirmed Enginefall platform is Windows PC via Steam. PS5 and Xbox have search demand, but no official version is confirmed yet. Steam Deck playability is unknown until Valve or official testing confirms it. This guide gives direct answers for all three.',
+    versionParagraph,
+  ],
  quickFacts: [
  ['Confirmed store', 'Steam.', 'verified'],
  ['Confirmed OS', 'Windows 10 64-bit minimum on the Steam listing.', 'verified'],
@@ -1313,8 +1320,8 @@ export const enginefallPages = {
  'Steam provides the current minimum PC baseline, but also warns that requirements are not final during development.',
  paragraphs: [
  'Steam lists Enginefall with a Windows 10 64-bit minimum, a 64-bit processor and operating system requirement, Intel Core i7-8700K or AMD Ryzen 7 2700X, 16 GB RAM, NVIDIA GTX 1080 or AMD Radeon RX 5700, DirectX 12, broadband internet, and an SSD strongly recommended. The listing also notes that system requirements are not final at this stage of development.',
- 'That last note matters. A system requirements page should not treat the current minimum spec as a permanent launch floor. The developer says ongoing optimization will improve performance across a wider range of hardware, which means players below the current listed baseline may still want to wait for updated requirements rather than assume the game will never run.',
- 'For SEO, this page should give the direct table answer first, then explain practical interpretation. If a player is near the listed minimum, they should expect to test cautiously. If a player is well below it, they should wait for updated specs or demo reports. If a player has a hard drive instead of an SSD, the official note already makes the safer recommendation clear.',
+ 'The current minimum spec may change. The developer says ongoing optimization will improve performance across a wider range of hardware. If you are below the listed baseline, wait for updated requirements — do not assume the game will never run.',
+ 'If you are near the listed minimum: test cautiously. Well below it: wait for updated specs or demo reports. Using a hard drive instead of an SSD: the official recommendation is already clear.',
  versionParagraph,
  ],
  tableHeadings: ['Spec', 'Official current minimum', 'Player note'],
@@ -1333,8 +1340,8 @@ export const enginefallPages = {
  caption:
  'PS5 and Xbox autocomplete demand exists, but official confirmation is narrower than search interest.',
  paragraphs: [
- 'Google Suggest shows Enginefall PS5 and Enginefall Xbox demand. That is useful for prioritizing the page, but it does not make those versions real. The official Steam data confirms PC. The official site points users toward Steam and wishlist behavior. No checked official source confirms a PS5 or Xbox release at the time this page is written.',
- 'The page should say this directly because console users deserve a clear answer. Soft wording like available on platforms or coming to consoles can create false expectations. A better answer is: PC via Steam is confirmed, PS5 and Xbox are not confirmed, and future console announcements should be checked through Enginefall official channels.',
+ 'Many players search for Enginefall PS5 and Enginefall Xbox — but searching does not make those versions real. Steam confirms PC only. The official site directs users to Steam and wishlist. No checked official source confirms PS5 or Xbox.',
+ 'The direct answer: PC via Steam is confirmed. PS5 and Xbox are not confirmed. Check Enginefall official channels for future console announcements.',
  'This page can still capture console searches without misleading users. It can explain why people are asking, what would count as confirmation, where to check, and how to follow updates. That is a useful search result even when the answer is no.',
  ],
  tableHeadings: ['Platform', 'Current answer', 'What would change it'],
@@ -1353,8 +1360,8 @@ export const enginefallPages = {
  caption:
  'Steam Deck support should not be assumed from PC support alone, especially for an online PvP test build.',
  paragraphs: [
- 'Steam Deck is a separate question from PC availability. A game can be listed for Windows and still have text readability, controller mapping, anti-cheat, online, or performance issues on Deck. Enginefall is also a multiplayer PvP game with extraction pressure, which makes input reliability and readable UI especially important.',
- 'The correct current answer is that Steam Deck verification is not confirmed by the checked sources. If a player wants to test anyway through the demo or playtest, they should treat the experience as experimental and watch for login, controller, text size, FPS, and network issues. They should not assume a Verified-style experience.',
+ 'Steam Deck is different from PC support. A game listed for Windows can still have text readability, controller mapping, anti-cheat, online, or performance issues on Deck. Enginefall adds multiplayer PvP with extraction pressure, making input reliability and readable UI critical.',
+ 'Steam Deck verification is not confirmed. If you test via the demo or playtest, treat it as experimental. Watch for login issues, controller mapping, text size, FPS drops, and network problems. Do not expect a Verified-level experience.',
  'This is not negative coverage. It is accurate coverage. Steam Deck users often want to know whether a game is playable enough, not whether a marketing page says PC. A cautious page can still be helpful by explaining what to test and what would count as a real confirmation.',
  ],
  tableHeadings: ['Deck check', 'What to test', 'Why it matters'],
@@ -1394,9 +1401,8 @@ export const enginefallPages = {
  'Because Enginefall is unreleased, platform advice should help users decide whether to wishlist, test, or wait.',
  paragraphs: [
  'The practical platform decision is simple. If you have a Windows PC near or above the current Steam minimum and you like PvP survival extraction games, wishlist or test Enginefall through official Steam access. If you are a console-only player, follow official channels and wait. If you are a Steam Deck player, wait for verification or hands-on reports unless you are comfortable experimenting with an unsupported test build.',
- 'This checklist also protects the site from overclaiming. It answers real platform searches but does not pretend to have console news, Steam Deck validation, or final performance data. That is exactly the kind of page Google can understand: direct answer, official source, caveat, and next action.',
- noFakeParagraph,
  ],
+
  tableHeadings: ['Player type', 'Best action', 'Reason'],
  rows: [
  ['Windows PC above minimum', 'Wishlist and test official demo/playtest access.', 'You match the confirmed platform.'],
