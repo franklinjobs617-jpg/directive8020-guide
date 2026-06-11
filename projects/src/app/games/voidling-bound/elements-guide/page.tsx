@@ -12,6 +12,15 @@ const canonical = '/games/voidling-bound/elements-guide';
 
 export const metadata = createVoidlingBoundMetadata({ title, description, canonical, image: voidlingBoundImages.hero });
 
+const elementBestFor: Record<string, string> = {
+ 'Organic': 'Sustain, healing, and survivability-focused builds',
+ 'Pyro': 'Damage pressure and burst damage roles',
+ 'Cryo': 'Control, slowing, and positioning advantage',
+ 'Plasma': 'Speed, agility, and hit-and-run tactics',
+ 'Cyber': 'Tech-based utility, debuffs, and module synergy',
+ 'Neutral': 'Flexible filler that adapts to the rest of the kit',
+};
+
 export default function VoidlingBoundElementsGuidePage() {
  return (
  <VoidlingBoundArticle title={title} description={description} canonical={canonical} label="Elements Guide" heroImage={voidlingBoundImages.hero} heroAlt="Voidling Bound elements guide image" faqs={voidlingGuideFaqs.elements}>
@@ -53,9 +62,65 @@ export default function VoidlingBoundElementsGuidePage() {
  <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
  Examples: {entries.slice(0, 5).map((entry) => entry.name).join(', ')}
  </p>
+ <p className="mt-1 text-xs font-medium text-emerald-700">{elementBestFor[element]}</p>
  </Link>
  );
  })}
+ </div>
+ </section>
+
+ <section className="mt-10">
+ <h2 className="mb-4 text-2xl font-bold text-foreground">Element Playstyle Quick Reference</h2>
+ <p className="mb-4 text-sm text-muted-foreground">Elements in Voidling Bound are branch identity markers that shape combat role, not a rock-paper-scissors advantage system. Use this reference to match element to playstyle.</p>
+ <div className="overflow-x-auto rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist/40">
+ <th className="px-3 py-2 text-left font-semibold text-foreground">Element</th>
+ <th className="px-3 py-2 text-left font-semibold text-foreground">Combat focus</th>
+ <th className="px-3 py-2 text-left font-semibold text-foreground">Works well with</th>
+ <th className="px-3 py-2 text-left font-semibold text-foreground">Look for in abilities</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Organic</td>
+ <td className="px-3 py-2 text-muted-foreground">Sustain, healing, survivability</td>
+ <td className="px-3 py-2 text-muted-foreground">Defensive species (Kerapin), vitality builds</td>
+ <td className="px-3 py-2 text-muted-foreground">Heal, regen, or shield effects in ability text</td>
+ </tr>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Pyro</td>
+ <td className="px-3 py-2 text-muted-foreground">Damage pressure, burst</td>
+ <td className="px-3 py-2 text-muted-foreground">Close-range species (Gilick), strength builds</td>
+ <td className="px-3 py-2 text-muted-foreground">Burn, explosion, or damage-over-time effects</td>
+ </tr>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Cryo</td>
+ <td className="px-3 py-2 text-muted-foreground">Control, slowing, positioning</td>
+ <td className="px-3 py-2 text-muted-foreground">Agility species (Anami), kiting builds</td>
+ <td className="px-3 py-2 text-muted-foreground">Slow, freeze, or movement-impairing effects</td>
+ </tr>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Plasma</td>
+ <td className="px-3 py-2 text-muted-foreground">Speed, agility, hit-and-run</td>
+ <td className="px-3 py-2 text-muted-foreground">Mobile species, harassment tactics</td>
+ <td className="px-3 py-2 text-muted-foreground">Dash, teleport, or rapid-fire effects</td>
+ </tr>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Cyber</td>
+ <td className="px-3 py-2 text-muted-foreground">Tech utility, debuffs, modules</td>
+ <td className="px-3 py-2 text-muted-foreground">Status-focused species, module-heavy builds</td>
+ <td className="px-3 py-2 text-muted-foreground">Debuff, hack, or tech-based status effects</td>
+ </tr>
+ <tr>
+ <td className="px-3 py-2 font-medium text-foreground">Neutral</td>
+ <td className="px-3 py-2 text-muted-foreground">Flexible filler, adapts to kit</td>
+ <td className="px-3 py-2 text-muted-foreground">Any species, any role</td>
+ <td className="px-3 py-2 text-muted-foreground">Elementless abilities that work with any branch</td>
+ </tr>
+ </tbody>
+ </table>
  </div>
  </section>
 

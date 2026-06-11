@@ -250,7 +250,7 @@ export function VoidlingBoundDatabase({
  setQuery(event.target.value);
  setPage(1);
  }}
- className="h-11 w-full rounded-xl border border-transparent bg-mist py-2 pl-9 pr-3 text-sm text-foreground outline-none transition-colors focus:border-dribbble-pink"
+ className="h-11 w-full rounded-lg border border-transparent bg-mist py-2 pl-9 pr-3 text-sm text-foreground outline-none transition-colors focus:border-dribbble-pink"
  placeholder="Name, ability, module, status"
  />
  </span>

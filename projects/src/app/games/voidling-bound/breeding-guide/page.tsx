@@ -17,13 +17,13 @@ export default function VoidlingBoundBreedingGuidePage() {
  <VoidlingBoundArticle title={title} description={description} canonical={canonical} label="Breeding Guide" heroImage={voidlingBoundImages.screenshot3} heroAlt="Voidling Bound breeding and progression guide image" faqs={voidlingGuideFaqs.breeding}>
  <BlufBox title="Breeding Rule">
  <p>
- <strong>Breeding is a planning system, not a magic answer machine.</strong> The wiki exposes breeding-related topics such as eggs, golden eggs, mutagens, splicing, and stations. This guide explains how to organize those systems without inventing unconfirmed formulas.
+ <strong>Breeding has a level 20 cap, and releasing Voidlings gives ~150 research points.</strong> The wiki exposes eggs, golden eggs, mutagens, splicing, and stations. This guide explains how to plan targets with the database, use Cleansing quests for egg production, and keep each system separate.
  </p>
  </BlufBox>
 
  <SearchAnswerPanel
  title="Voidling Bound Breeding Quick Answer"
- answer="Breeding is a planning system. Define role and branch first, use the database to filter possibilities, then track eggs, golden eggs, mutagens, and splicing as separate questions. No hidden formulas are invented."
+ answer="Breeding caps at level 20, with parent attributes influencing offspring. Release unwanted Voidlings for ~150 research points. Define role and branch first, use the database to filter, then track eggs, golden eggs, mutagens, and splicing as separate questions."
  intentRows={vbBreedingSearchIntent}
  jumpLinks={vbBreedingJumpLinks}
  />
@@ -39,7 +39,7 @@ export default function VoidlingBoundBreedingGuidePage() {
  The wrong way to approach breeding is to start with “what is the rarest result?” That question ignores the reason the creature exists in your team. A better first question is role: do you need range, defense, close-range burst, minion pressure, mobility, status pressure, or a specific species identity? Once the role is clear, rarity and element become filters rather than distractions.
  </p>
  <p>
- Voidling Bound has enough named systems that sloppy content can easily become fake. Breeding, eggs, golden eggs, mutagens, splicing, and stations are connected progression topics, but they are not the same action. A useful guide keeps them separate until the source data proves how they interact. That is why this page links back to the database instead of pretending to know every hidden formula.
+ Voidling Bound has enough named systems that the guide must keep them separate. Breeding, eggs, golden eggs, mutagens, splicing, and stations are connected progression topics, but they are not the same action. Run Cleansing-type quests to produce eggs consistently — Cleansing quests are a reliable egg source for hatching, golden egg creation, and splicing at stations.
  </p>
  </section>
 

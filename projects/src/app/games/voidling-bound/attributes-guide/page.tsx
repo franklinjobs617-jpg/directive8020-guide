@@ -58,6 +58,8 @@ export default function VoidlingBoundAttributesGuidePage() {
  ['Do fights take too long?', 'Primary and Secondary ability descriptions, strength support, element branch, and role fit.', '/games/voidling-bound/database'],
  ['Does this evolution fit my plan?', 'Species, rarity, element, changed ability slots, and related entries.', '/games/voidling-bound/evolution-guide'],
  ['Should I breed for this?', 'Target role, branch identity, eggs, mutagens, splicing, and confirmed source wording.', '/games/voidling-bound/breeding-guide'],
+ ['Which species fits my playstyle?', 'Species summary, ability slot pattern, element branch, and movement type.', '/games/voidling-bound/beginner-guide'],
+ ['How do modules change my build?', 'Module name, matching ability type, perk synergy, and element identity.', '/games/voidling-bound/database'],
  ].map(([question, check, href]) => (
  <tr key={question} className="border-b border-border last:border-0">
  <td className="px-4 py-3 font-semibold text-foreground">{question}</td>
@@ -71,13 +73,13 @@ export default function VoidlingBoundAttributesGuidePage() {
  </section>
 
  <section className="prose-game">
- <h2 id="attributes-stats">Why This Is Not a Best-Build Page</h2>
- <ArticleImage src={voidlingBoundImages.screenshot2} alt="Voidling Bound attributes and build comparison screenshot" caption="A useful attribute guide explains comparison logic; a best-build page needs stable testing data that this snapshot does not claim to have." />
+ <h2 id="attributes-stats">How to Use Attributes for Decisions</h2>
+ <ArticleImage src={voidlingBoundImages.screenshot2} alt="Voidling Bound attributes and build comparison screenshot" caption="Compare ability slots first, then match attributes to the problem you are solving: agility for movement, strength for pressure, vitality for survival." />
  <p>
- Best-build content is high risk when the data source is a wiki snapshot and the game is newly released. The page can truthfully explain how to read agility, strength, vitality, perks, modules, natures, levels, and ability slots. It cannot truthfully say which final build wins every situation without controlled testing. That is why this guide focuses on comparison logic and sends users back to detail pages for exact entries.
+ The correct workflow is: identify the problem, filter the database, open the detail entry, read ability slots, then decide which attribute would solve the problem. Use agility for movement and repositioning, strength for damage pressure, vitality for survival and close contact. Perks, modules, natures, and level needs support a plan — they do not replace understanding species role and ability slots.
  </p>
  <p>
- The correct workflow is: identify the problem, filter the database, open the detail entry, read ability slots, then decide which attribute would solve the problem. This keeps the content useful for players without manufacturing authority the site does not have.
+ This guide uses wiki-derived data for comparison, not artificial rankings. Best-build or tier-list claims would need stable testing data across patches, which a wiki snapshot cannot provide. Use the Attribute Reading Matrix above to match your question to the right guide, then use the database for entry-level decisions.
  </p>
  </section>
 
@@ -97,18 +99,6 @@ export default function VoidlingBoundAttributesGuidePage() {
  about perks, modules, or status effects. If the wiki updates a perk
  description, refresh this page against the new wording rather than
  trusting older guide copy.
- </p>
- </section>
-
- <section className="prose-game">
- <h2 id="attributes-no-tier">Why This Is Not a Tier List</h2>
- <p>
- A tier list for a new game on a wiki snapshot is high risk. The page
- can truthfully explain how to read agility, strength, vitality,
- perks, modules, natures, levels, and ability slots. It cannot
- truthfully say which final build wins every situation without
- controlled testing. Use this page as comparison logic and the
- database for entry detail.
  </p>
  </section>
 

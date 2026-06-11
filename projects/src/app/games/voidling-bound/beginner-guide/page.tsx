@@ -12,11 +12,24 @@ const canonical = '/games/voidling-bound/beginner-guide';
 export const metadata = createVoidlingBoundMetadata({ title, description, canonical, image: voidlingBoundImages.screenshot1 });
 
 const firstSteps = [
+ { step: 'Pick the right starter setup', doThis: 'Choose Adventurer difficulty. Put first attribute points into Vitality for survival. Start with Kwipeck for tutorial balance.', why: 'Adventurer provides balanced challenge without early frustration. Vitality keeps you alive while learning ability slots. Kwipeck is the tutorial starter with the safest kit.' },
  { step: 'Start with role', doThis: 'Pick a species whose basic combat style is readable: Kwipeck for tutorial balance, Gilick for close-range pressure, Kerapin for defense, or Gwigoon for minions.', why: 'A role you understand beats a rare evolution you cannot play well.' },
  { step: 'Use missions', doThis: 'Use early missions to learn movement, combat timing, and resource flow before optimizing lineage.', why: 'Voidling Bound has many systems; missions keep the first hour from turning into menu browsing.' },
  { step: 'Check entries', doThis: 'Search the database whenever a species, evolution, element, or ability name appears.', why: 'Fast lookup prevents bad assumptions about rarity or branch identity.' },
  { step: 'Delay ranking', doThis: 'Compare ability slots and elements before asking what is best.', why: 'The current dataset supports decisions, not fake tier-list certainty.' },
 ];
+
+const speciesSuggestions: Record<string, string> = {
+ 'Kwipeck': 'Best for learning ability slots and balanced combat',
+ 'Gilick': 'Best for close-range pressure and aggressive play',
+ 'Kerapin': 'Best for defensive play and holding ground',
+ 'Gwigoon': 'Best for minion-based tactics and support',
+ 'Anami': 'Best for agility, harassment, and hit-and-run',
+ 'Ur-Sek': 'Best for players who want form-swapping complexity',
+ 'Morfang': 'Best for specialized melee and debuff stacking',
+ 'Nimiod': 'Best for ranged kiting and elemental coverage',
+ 'Packuran': 'Best for pack tactics and coordinated attacks',
+};
 
 export default function VoidlingBoundBeginnerGuidePage() {
  return (
@@ -28,6 +41,53 @@ export default function VoidlingBoundBeginnerGuidePage() {
  </BlufBox>
 
  <ActionTable rows={firstSteps} />
+
+ <section className="mt-10">
+ <h2 className="mb-4 text-2xl font-bold text-foreground">6 Common Beginner Mistakes</h2>
+ <div className="overflow-x-auto rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist/40">
+ <th className="px-3 py-2 text-left font-semibold text-foreground">Mistake</th>
+ <th className="px-3 py-2 text-left font-semibold text-foreground">Why It Hurts</th>
+ <th className="px-3 py-2 text-left font-semibold text-foreground">Fix</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Chasing rarity first</td>
+ <td className="px-3 py-2 text-muted-foreground">Rare evolutions may have ability slots that do not fit your playstyle.</td>
+ <td className="px-3 py-2 text-muted-foreground">Learn species ability slots and combat rhythm before treating rarity as the only goal.</td>
+ </tr>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Ignoring ability slots</td>
+ <td className="px-3 py-2 text-muted-foreground">Two Voidlings with the same element can play completely differently if ability slots change.</td>
+ <td className="px-3 py-2 text-muted-foreground">Always read Primary, Secondary, Defense, Movement, and Ultimate slots before committing.</td>
+ </tr>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Skipping missions</td>
+ <td className="px-3 py-2 text-muted-foreground">Menu-browsing the database for an hour teaches names, not timing and resource flow.</td>
+ <td className="px-3 py-2 text-muted-foreground">Run early missions to learn combat rhythm and cooldown feel before optimizing lineage.</td>
+ </tr>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Mixing up systems</td>
+ <td className="px-3 py-2 text-muted-foreground">Treating breeding, splicing, and evolution as one system creates confusion.</td>
+ <td className="px-3 py-2 text-muted-foreground">Name each system separately. Breeding is not evolution. Splicing is not breeding.</td>
+ </tr>
+ <tr className="border-b border-border">
+ <td className="px-3 py-2 font-medium text-foreground">Picking element by cool name</td>
+ <td className="px-3 py-2 text-muted-foreground">An element branch defines damage type and matchups, not just visual theme.</td>
+ <td className="px-3 py-2 text-muted-foreground">Check the element guide to understand each element\u2019s strengths and weaknesses first.</td>
+ </tr>
+ <tr>
+ <td className="px-3 py-2 font-medium text-foreground">Over-optimizing early</td>
+ <td className="px-3 py-2 text-muted-foreground">The level 20 cap and Early Access patches mean early-game optimization has a short shelf life.</td>
+ <td className="px-3 py-2 text-muted-foreground">Focus on learning systems. Refine builds after you understand what a patch can change.</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </section>
 
  <section className="prose-game">
  <h2>Choose a First Species by Job, Not Hype</h2>
@@ -49,6 +109,7 @@ export default function VoidlingBoundBeginnerGuidePage() {
  <h3 className="text-sm font-bold text-foreground">{species.name}</h3>
  <p className="mt-1 text-xs text-muted-foreground">{species.elements.join(' / ') || 'Element branches in database'}</p>
  <p className="mt-2 line-clamp-3 text-xs leading-relaxed text-muted-foreground">{species.summary}</p>
+ <p className="mt-1 text-xs font-medium text-emerald-700">{speciesSuggestions[species.name]}</p>
  </Link>
  ))}
  </div>

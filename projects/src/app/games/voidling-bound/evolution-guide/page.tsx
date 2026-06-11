@@ -124,9 +124,12 @@ export default function VoidlingBoundEvolutionGuidePage() {
  </section>
 
  <section className="prose-game" id="evolution-no-best">
- <h2>Why This Guide Does Not Publish a Best Evolution</h2>
+ <h2>How to Compare Evolutions</h2>
  <p>
- Universal best-evolution claims need stable balance and matchup data, not just a wiki snapshot. The current data supports structured comparison, comparison-panel decisions, and entry-level reading. It does not support a final ranking that survives every patch. Honest comparison beats manufactured authority, especially on a newly released game. Use the ActionTable below for the recommended evolution workflow, then use the database for entry-level decisions.
+ Universal best-evolution rankings need stable balance data across patches, which a wiki snapshot cannot provide. Instead, compare evolutions by branch, ability changes, element shifts, rarity tier, and whether the new ability slots fit your playstyle. Use the species tree view above to find candidate evolutions, then open the database comparison panel to check ability slots side by side.
+ </p>
+ <p>
+ Example: a Kwipeck player who wants more damage pressure might follow the Pyro branch evolution path — Kwipeck (base, balanced) → an intermediate Pyro-branch evolution with damage perk → a final Pyro-branch evolution with mutated perk at the tree endpoint. At each step, compare the ability slots to confirm the change matches the intended playstyle.
  </p>
  </section>
 

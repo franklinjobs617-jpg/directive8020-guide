@@ -39,15 +39,10 @@ export const voidlingStatusEffects = voidlingBoundWikiData.statusEffects;
 export const voidlingQuickFacts = [
  ['Release status', 'Released on Steam on June 9, 2026'],
  ['Developer / Publisher', 'Hatchery Games'],
- ['Steam app', 'Voidling Bound app 2004680'],
- ['Database source', 'Voidling Bound Wiki snapshot'],
+ ['Platform', 'PC via Steam'],
+ ['Species count', `${voidlingSpecies.length} playable species`],
+ ['Evolution entries', `${voidlingEntries.length} wiki-derived entries`],
  ['Wiki license', voidlingBoundWikiData.wiki.license],
- ['Species count', `${voidlingSpecies.length} playable species listed on the Species page`],
- ['Voidling entries', `${voidlingEntries.length} wiki-derived evolution entries`],
- ['Exact wiki images', `${voidlingEntries.filter((entry) => entry.imageStatus === 'exact').length} exact compressed local WebP images`],
- ['Species image fallbacks', `${voidlingEntries.filter((entry) => entry.imageStatus === 'speciesFallback').length} entries use a same-species image because the wiki snapshot has no exact file`],
- ['Modules parsed', `${voidlingEntries.filter((entry) => entry.modules.length > 0).length} entries include parsed module rows`],
- ['Status effects parsed', `${voidlingEntries.filter((entry) => entry.statusEffects.length > 0).length} entries include parsed status-effect labels`],
 ] as const;
 
 export const voidlingSourceRows = [
@@ -189,7 +184,7 @@ export const vbAttributesStatusItems = [
  { label: 'Species coverage', value: `${voidlingSpecies.length} species pages and ${voidlingEntries.length} evolution entries in the current snapshot.`, status: 'verified' as const },
  { label: 'Attributes data', value: 'Agility, strength, vitality, perks, modules, and natures are read from the wiki snapshot.', status: 'verified' as const },
  { label: 'Module and perk refresh', value: 'Treat modules, perks, and attribute interactions as data that should be refreshed when the wiki changes.', status: 'needs-check' as const },
- { label: 'Best-build claims', value: 'Not a best-build page. The guide stops at comparison logic and sends users back to detail entries.', status: 'working' as const },
+ { label: 'Best-build claims', value: 'Attribute comparison uses wiki-derived ability data, not tier-list rankings. Use the database to verify before finalizing a build.', status: 'working' as const },
  { label: 'Database source', value: 'Wiki snapshot is the data source. Steam is used for store-level facts.', status: 'verified' as const },
 ];
 
@@ -216,11 +211,11 @@ export const vbAttributesSourceRows = [
  note: 'Steam is the right place for release state, developer, publisher, screenshots, and platform facts.',
  },
  {
- claim: 'How should attribute questions be answered?',
+ claim: 'Where to compare attributes side by side?',
  source: 'Wiki-derived database + guide logic',
  status: 'working' as const,
  href: voidlingBoundWikiUrl,
- note: 'Use the database for evidence and the guide for comparison logic. Do not invent tier-list claims.',
+ note: 'Compare ability slots first, then agility, strength, and vitality from wiki data. Use the database comparison panel for side-by-side entries.',
  },
 ] as const;
 
@@ -245,7 +240,7 @@ export const vbAttributesSearchIntent = [
  },
  {
  query: 'Voidling Bound best build',
- answer: 'No best-build claim. The guide stops at comparison logic. Final build calls need stable testing data, not just wiki text.',
+ answer: 'Use the database to compare ability slots and attributes side by side. Final build decisions should be based on your species role and combat needs.',
  href: '#attributes-no-tier',
  label: 'Best build',
  },
@@ -255,7 +250,7 @@ export const vbAttributesJumpLinks = [
  { href: '#attributes-workflow', label: 'Attribute workflow' },
  { href: '#attributes-stats', label: 'Agility, strength, vitality' },
  { href: '#attributes-perks', label: 'Perks and modules' },
- { href: '#attributes-no-tier', label: 'No tier list' },
+ { href: '#attributes-no-tier', label: 'Comparison guide' },
  { href: '/games/voidling-bound/evolution-guide', label: 'Evolution guide' },
  { href: '/games/voidling-bound/database', label: 'Database' },
 ] as const;
@@ -272,17 +267,27 @@ export const vbBreedingActionRows = [
  why: 'The database keeps names, branches, and ability slots in one place so breeding decisions are anchored to wiki data.',
  },
  {
- step: '3. Track each system as its own question',
+ step: '3. Know the level cap and point economics',
+ doThis: 'Breeding has a level 20 cap. Release unwanted Voidlings for approximately 150 research points each. Parent attributes influence offspring results.',
+ why: 'Level 20 cap limits how high you can push through breeding. Research points from release fund further hatching and station use.',
+ },
+ {
+ step: '4. Use Cleansing quests for egg production',
+ doThis: 'Run Cleansing-type quests to produce eggs consistently. Eggs feed into hatching, golden egg creation, and splicing at stations.',
+ why: 'Cleansing quests are a reliable egg source. Random drops are not enough when consistent egg production matters for breeding loops.',
+ },
+ {
+ step: '5. Track each system as its own question',
  doThis: 'Separate eggs, golden eggs, mutagens, splicing, and stations into different questions and steps.',
  why: 'Mixing systems together creates fake formulas and bad guide copy.',
  },
  {
- step: '4. Verify any patch-sensitive claim on the wiki',
+ step: '6. Verify any patch-sensitive claim on the wiki',
  doThis: 'Open the wiki source link when exact wording, eligibility, or patch behavior matters.',
  why: 'The wiki is the source of truth for this cluster. Confirmation prevents repeating stale claims.',
  },
  {
- step: '5. Re-check after Early Access updates',
+ step: '7. Re-check after updates',
  doThis: 'After a patch, re-test the breeding loop and update the wiki-linked evidence if anything changed.',
  why: 'Early Access updates can change breeding behavior. A short re-test keeps the guide honest.',
  },
@@ -290,7 +295,7 @@ export const vbBreedingActionRows = [
 
 export const vbBreedingStatusItems = [
  { label: 'Breeding coverage', value: 'Wiki exposes eggs, golden eggs, mutagens, splicing, and related stations.', status: 'verified' as const },
- { label: 'Hidden formulas', value: 'No hidden breeding formulas invented. The guide organizes confirmed systems only.', status: 'working' as const },
+ { label: 'Hidden formulas', value: 'Breeding systems are confirmed from wiki data: eggs, golden eggs, mutagens, splicing, and stations. No invented formulas.', status: 'working' as const },
  { label: 'Wiki snapshot role', value: 'Wiki is the data source. Steam is used for store-level facts only.', status: 'verified' as const },
  { label: 'Early Access status', value: 'Voidling Bound released on Steam on June 9, 2026 and is in active development.', status: 'verified' as const },
  { label: 'Decision anchor', value: 'Role and branch first, rarity and element second. Database is the lookup layer.', status: 'working' as const },
@@ -348,7 +353,7 @@ export const vbBreedingSearchIntent = [
  },
  {
  query: 'Voidling Bound hidden breeding formula',
- answer: 'This guide does not invent hidden formulas. It organizes confirmed wiki systems and links back to the database.',
+ answer: 'Breeding uses confirmed systems from the wiki: eggs, golden eggs, mutagens, splicing, and stations. Check the database for entry-level detail.',
  href: '#breeding-no-formula',
  label: 'Formulas',
  },
@@ -358,7 +363,7 @@ export const vbBreedingJumpLinks = [
  { href: '#breeding-workflow', label: 'Breeding workflow' },
  { href: '#breeding-golden', label: 'Golden eggs' },
  { href: '#breeding-tools', label: 'Mutagens and splicing' },
- { href: '#breeding-no-formula', label: 'No hidden formulas' },
+ { href: '#breeding-no-formula', label: 'Breeding systems' },
  { href: '/games/voidling-bound/database', label: 'Database' },
  { href: '/games/voidling-bound/evolution-guide', label: 'Evolution guide' },
 ] as const;
@@ -396,7 +401,7 @@ export const vbElementsStatusItems = [
  { label: 'Branch source', value: 'Branch identity comes from the wiki Species page.', status: 'verified' as const },
  { label: 'Element-only claims', value: 'Element is one filter. Species, ability slots, perks, and rarity still matter.', status: 'working' as const },
  { label: 'Neutral reading', value: 'Neutral is a structural label, not a weakness claim.', status: 'working' as const },
- { label: 'Per-element pages', value: 'No per-element pages yet. They should be created only when player demand signal exists.', status: 'needs-check' as const },
+ { label: 'Per-element pages', value: 'All six elements are covered in this single guide with database filter links. Per-element splitting waits for player demand signal.', status: 'needs-check' as const },
 ];
 
 export const vbElementsSourceRows = [
@@ -451,7 +456,7 @@ export const vbElementsSearchIntent = [
  },
  {
  query: 'Best Pyro / Cryo / Plasma Voidling',
- answer: 'No per-element best claim. Use the database filters and read the actual ability text for the final decision.',
+ answer: 'Use the database to filter by element, then compare ability slots directly. Element alone does not determine what is best for your role.',
  href: '#elements-no-best',
  label: 'Per element',
  },
@@ -461,7 +466,7 @@ export const vbElementsJumpLinks = [
  { href: '#elements-workflow', label: 'Element workflow' },
  { href: '#elements-branches', label: 'Branch source' },
  { href: '#elements-neutral', label: 'Neutral reading' },
- { href: '#elements-no-best', label: 'No per-element best' },
+ { href: '#elements-no-best', label: 'Element comparison' },
  { href: '/games/voidling-bound/database', label: 'Database' },
  { href: '/games/voidling-bound/evolution-guide', label: 'Evolution guide' },
 ] as const;
@@ -499,7 +504,7 @@ export const vbEvolutionStatusItems = [
  { label: 'Branch structure', value: 'Each species has two mutation tree branches with different elements per the wiki.', status: 'verified' as const },
  { label: 'Ability change pattern', value: 'Many evolutions keep some base abilities and change element, primary attacks, perks, or branch identity.', status: 'working' as const },
  { label: 'Rarity tiers', value: `Current parsed rarity labels include ${voidlingRarities.join(', ')}.`, status: 'verified' as const },
- { label: 'Tier lists', value: 'No tier list. The guide stops at structured comparison from wiki-confirmed facts.', status: 'working' as const },
+ { label: 'Tier lists', value: 'Evolution comparison uses species trees, rarity tiers, and ability changes from wiki data. No artificial rankings.', status: 'working' as const },
 ];
 
 export const vbEvolutionSourceRows = [
@@ -554,7 +559,7 @@ export const vbEvolutionSearchIntent = [
  },
  {
  query: 'Voidling Bound best evolution',
- answer: 'No universal best. The guide stops at comparison. Final ranking needs stable balance and matchup data.',
+ answer: 'Compare evolutions by branch, ability changes, and element shifts using the database. Final ranking depends on your role and combat needs.',
  href: '#evolution-no-best',
  label: 'Best evolution',
  },
@@ -564,7 +569,7 @@ export const vbEvolutionJumpLinks = [
  { href: '#evolution-workflow', label: 'Evolution workflow' },
  { href: '#evolution-trees', label: 'Mutation trees' },
  { href: '#evolution-changes', label: 'Ability changes' },
- { href: '#evolution-no-best', label: 'No best claim' },
+ { href: '#evolution-no-best', label: 'Comparison guide' },
  { href: '/games/voidling-bound/database', label: 'Database' },
  { href: '/games/voidling-bound/elements-guide', label: 'Elements guide' },
 ] as const;
@@ -602,7 +607,7 @@ export const vbVoidlingsStatusItems = [
  { label: 'Database role', value: 'Database is the search and filter layer. List is the crawlable index.', status: 'verified' as const },
  { label: 'Image coverage', value: `${voidlingEntries.filter((entry) => entry.imageStatus === 'exact').length} exact local WebP images, plus species fallbacks where the wiki has no exact file.`, status: 'verified' as const },
  { label: 'Wiki snapshot', value: `Snapshot revision ${voidlingBoundWikiData.wiki.speciesRevisionId}, updated ${voidlingBoundWikiData.wiki.speciesUpdatedAt}.`, status: 'verified' as const },
- { label: 'Best-list claims', value: 'No universal best claim. The list is a navigation surface, not a ranking.', status: 'working' as const },
+ { label: 'Best-list claims', value: 'The list is a navigation index grouped by species for browsing and bookmarking. Rankings belong in the evolution and attributes guides.', status: 'working' as const },
 ];
 
 export const vbVoidlingsSourceRows = [

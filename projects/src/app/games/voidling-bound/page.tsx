@@ -68,7 +68,7 @@ export default function VoidlingBoundHubPage() {
  >
  <BlufBox title="Worth Doing?">
  <p>
- <strong>Voidling Bound is worth doing as a database-first SEO cluster.</strong> The demand is not only the game name. Search suggestions already split into all Voidlings, creatures wiki, evolution tree, evolutions, elements, price, console, multiplayer, and guide intent. A normal article cannot satisfy those users. A raw wiki mirror also fails because it does not give fast filtering, comparison, beginner ordering, or page-level answers.
+ <strong>Voidling Bound has over 120 named evolutions across 9 species.</strong> You need fast lookup to identify creatures, compare ability slots, and plan evolution paths — not read every wiki page manually. This hub gives you a searchable database, beginner route, and system guides (evolution, breeding, elements, attributes) in one place.
  </p>
  </BlufBox>
 
@@ -82,7 +82,7 @@ export default function VoidlingBoundHubPage() {
 
  <SearchAnswerPanel
  title="Voidling Bound Search Answer"
- answer="Voidling Bound is live on Steam, and the highest-value content is a searchable wiki-derived database supported by beginner, evolution, breeding, elements, and attributes guides."
+ answer="Voidling Bound is live on Steam. Use the database to search 120+ Voidlings by species, rarity, element, and ability slot. Then read the beginner, evolution, breeding, elements, and attributes guides for system-level explanations."
  intentRows={searchIntentRows}
  jumpLinks={jumpLinks}
  />
@@ -119,7 +119,7 @@ export default function VoidlingBoundHubPage() {
  Steam-level facts should stay separate from creature data. Voidling Bound released on Steam on June 9, 2026. Hatchery Games is listed as developer and publisher. The store context supports PC coverage, screenshots, controller and feature notes, and release-state answers. It does not confirm every console query that appears in search suggestions.
  </p>
  <p>
- That distinction matters because autocomplete can expose PS5, Xbox, console, price, and multiplayer searches before the official information supports a full standalone page. The current hub answers those questions directly, but the first real content investment belongs to the database and guide cluster. Console pages should wait until official platform confirmation or GSC impressions justify a dedicated page.
+ Console versions (PS5, Xbox, Switch 2) have been mentioned in search suggestions but are not officially confirmed. The current coverage focuses on the confirmed PC/Steam release.
  </p>
  </section>
 

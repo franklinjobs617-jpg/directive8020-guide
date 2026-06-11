@@ -140,7 +140,7 @@ export default function VoidlingBoundDatabasePage() {
  </thead>
  <tbody>
  {voidlingEntries.map((entry) => (
- <tr key={entry.slug} className="border-b border-border last:border-0">
+ <tr key={entry.slug} className="border-b border-border last:border-0 hover:bg-mist/60">
  <td className="px-4 py-3 font-semibold text-foreground">
  <Link href={`/games/voidling-bound/voidlings/${entry.slug}`} className="hover:text-foreground">
  {entry.name}
