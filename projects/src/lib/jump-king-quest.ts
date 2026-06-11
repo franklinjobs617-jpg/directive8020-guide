@@ -309,7 +309,7 @@ export const jumpKingQuestWorthItSearchIntent = [
  href: '#worth-it-coop',
  label: 'Multiplayer',
  },
-] as const;
+];
 
 export const jumpKingQuestWorthItJumpLinks = [
  { href: '#worth-it-fit', label: 'Who it fits' },
@@ -318,7 +318,7 @@ export const jumpKingQuestWorthItJumpLinks = [
  { href: '/games/jump-king-quest/release-date-and-phantom-update', label: 'Release & 1.0' },
  { href: '/games/jump-king-quest/multiplayer-controller', label: 'Multiplayer & controller' },
  { href: '/games/jump-king-quest/beginner-guide', label: 'Beginner guide' },
-] as const;
+];
 
 export const jumpKingQuestMultiplayerActionRows = [
  {
@@ -540,7 +540,7 @@ export const jumpKingQuestReleaseJumpLinks = [
  { href: '/games/jump-king-quest/is-it-worth-it', label: 'Is it worth it' },
  { href: '/games/jump-king-quest/multiplayer-controller', label: 'Multiplayer & controller' },
  { href: '/games/jump-king-quest/beginner-guide', label: 'Beginner guide' },
-] as const;
+];
 
 export const jumpKingQuestRelatedGuides: GameGuideLink[] = [
  {
