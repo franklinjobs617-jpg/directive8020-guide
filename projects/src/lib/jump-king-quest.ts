@@ -420,7 +420,7 @@ export const jumpKingQuestMultiplayerSearchIntent = [
  href: '#multiplayer-controller',
  label: 'Controller',
  },
-],
+]
 
 export const jumpKingQuestMultiplayerJumpLinks = [
  { href: '#multiplayer-confirmed', label: 'Confirmed features' },
