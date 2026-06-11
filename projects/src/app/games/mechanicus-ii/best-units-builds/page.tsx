@@ -25,7 +25,7 @@ const faqs = [
  {
  question: 'What are the best units in Mechanicus II?',
  answer:
- 'Final best-unit claims are not safe yet. Judge units by leader safety, objective interaction, resource flow, durability, and repeatable value across missions.',
+ 'Necron Warriors and Skitarii Rangers are the safest first picks for any campaign — they provide reliable damage output and keep your faction resource (Dominion or Cognition) flowing. Add Canoptek Wraiths as mobile leader bodyguards. For Adeptus Mechanicus, Servitors provide good Cognition support. Avoid replacing all core infantry with flashy specialists until you understand mission pacing.',
  },
  {
  question: 'What is the safest first build in Mechanicus II?',
@@ -35,7 +35,7 @@ const faqs = [
  {
  question: 'Are Adeptus Mechanicus or Necron builds better?',
  answer:
- 'Neither side should be called universally better yet. Pick builds around the faction resource and mission problems you are actually facing.',
+ 'Adeptus Mechanicus is the safer first pick if you want a methodical, Cognition-driven build that rewards positioning. Necrons are stronger if you prefer aggressive forward pressure with Dominion-fueled momentum and Reanimation Protocols as recovery insurance. Pick Adeptus Mechanicus for control; pick Necrons for tempo.',
  },
  {
  question: 'Should I copy a tier list?',

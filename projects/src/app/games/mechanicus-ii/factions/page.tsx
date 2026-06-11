@@ -52,7 +52,7 @@ const faqs = [
  {
  question: 'Which faction is best in Mechanicus II?',
  answer:
- 'It is too early to call a final best faction. Choose by campaign fantasy and tactical preference until more completed runs and patches settle the meta.',
+ 'Adeptus Mechanicus is the safest first pick for players who played Mechanicus 1 — their Cognition resource system and tech-priest gameplay feel familiar, and Magos Dominus Faustinius has clearer starting support. Necrons are the stronger pick if you want the new experience: Dominion pressure rewards aggressive play and Reanimation Protocols provide recovery insurance. Pick Adeptus Mechanicus for a methodical learning curve; pick Necrons for forward-pressure gameplay.',
  },
  {
  question: 'Which Mechanicus II faction should I play first?',
@@ -62,7 +62,7 @@ const faqs = [
  {
  question: 'What are the best units and builds in Mechanicus II?',
  answer:
- 'Final best-unit claims are not safe yet. Judge units by leader safety, objective interaction, resource flow, durability, and repeatable mission value.',
+ 'Necron Warriors and Skitarii Rangers are the safest first picks — they provide reliable damage and keep your faction resource (Dominion or Cognition) flowing. Add Canoptek Wraiths as mobile bodyguards for your leader. For a first build, focus on leader protection, cover discipline, one reliable ranged threat, and resource stability. Avoid replacing all core infantry with flashy specialists until you understand mission pacing.',
  },
  {
  question: 'Are the Leagues of Votann playable in Mechanicus II?',

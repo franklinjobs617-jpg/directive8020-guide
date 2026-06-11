@@ -24,42 +24,42 @@ const faqs = [
  {
  question: 'Does Paralives have grid-less building?',
  answer:
- 'Yes. Steam describes Paralives as supporting truly grid-less construction. You can place walls and objects freely without snapping to a tile grid.',
+ 'Yes. You can place walls and objects freely without snapping to a tile grid. Start with the exterior walls, then add interior partitions — the gridless system lets you rotate walls at any angle and place windows precisely where you want them, unlike grid-locked builders like The Sims 4.',
  },
  {
  question: 'Can you build curved walls in Paralives?',
  answer:
- 'Yes. Curved walls are listed as an official building feature. Plan the exterior curve first, then place furniture after the room shape is locked.',
+ 'Yes. Place the curved exterior wall first using the curve tool (click-drag to set radius), then add rooms inside the curve. Keep curved rooms at least 3 tiles (roughly 3 meters) wide at the narrowest point — anything tighter makes furniture placement and Parafolk pathing difficult. Add windows after the room shape is finalized.',
  },
  {
  question: 'Can you make split-level floors?',
  answer:
- 'Yes. Split-level floors are part of the building toolset. Use them after the main footprint is complete to avoid rebuilding stairs and room flow later.',
+ 'Yes. Use the half-wall tool to create a split level after the main footprint is complete. A common setup is a 3-step split between living and dining areas (about 0.5 tiles high). Add stairs or ramps before placing furniture — you need to test whether Parafolk can path between the two levels. Avoid more than 2 split levels in a small home as pathing becomes unreliable.',
  },
  {
  question: 'Does Paralives support Steam Workshop for builds?',
  answer:
- 'Steam Workshop is part of the official feature set for sharing houses, Parafolks, and custom content. Check the live Early Access build for upload and browser behavior.',
+ 'Yes. Steam Workshop is live for uploading and downloading houses, Parafolks, and custom content. To upload, save your build in-game and select "Share to Workshop" from the save menu. Browse Workshop under the "Homes" or "Parafolks" tabs. Some large decorated homes (over 100 objects) may have upload issues in the current Early Access build — test with a small build first.',
  },
  {
  question: 'What roof styles are available in Paralives?',
  answer:
- 'Paralives supports flat roofs, pitched roofs, gable roofs, and custom roof shapes. Each style suits a different architectural look and build approach.',
+ 'Four main styles: Flat roofs (best for modern minimalist homes, doubles as a terrace if you add railings), Pitched roofs (traditional sloped, sheds rain well but requires planning interior ceiling height — aim for at least 2.5 tiles at the peak), Gable roofs (triangular with two sloping sides, a versatile middle ground that works with most rectangular floor plans and provides usable attic space), and Custom roofs (free-form shapes using the gridless tool, best for experienced builders — start with a simple single-pitch shape before adding dormers or valleys).',
  },
  {
  question: 'What is Paramaker in Paralives?',
  answer:
- 'Paramaker is the character-creation side of Paralives. Build mode and Paramaker connect through shared homes, households, styles, and Workshop sharing.',
+ 'Paramaker is the character creator where you customize Parafolks (height, body shape, face, clothing, personality traits). Build mode and Paramaker connect through shared households: create a Parafolk in Paramaker first, then build a home that fits their traits. An Artistic Parafolk benefits from a creative workspace, while a Lazy Parafolk needs a shorter route from bed to bathroom. Both modes feed into Steam Workshop for sharing.',
  },
  {
  question: 'Are all roadmap build features available now?',
  answer:
- 'Not all features are available at launch. Check the live Early Access build for current tools, build limits, and performance before planning around a promised feature.',
+ 'Not yet. The current Early Access build has gridless placement, curved walls, split-level floors, resizing, recoloring, and object stacking. Features still on the roadmap include expanded build limits (current limit is roughly 500 objects per lot), additional roof styles (mansard, butterfly), and advanced stair tools. Check the in-game build menu for exactly what is unlocked before planning a complex build.',
  },
  {
  question: 'Can objects be resized and recolored?',
  answer:
- 'Yes. Resizing, recoloring, stacking, and freely placing furniture, decor, and clutter objects are all supported in the current build.',
+ 'Yes. Select any furniture or decor object and use the resize slider (range is roughly 50% to 200% of base size). Recoloring works with a color wheel and material presets (wood, metal, fabric). For best results, stick to 3-4 colors per room and resize from the base dimensions upward — oversized furniture can block door access if pushed past 150% in a small room.',
  },
 ];
 
