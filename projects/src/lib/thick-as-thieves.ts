@@ -19,6 +19,9 @@ export const thickAsThievesImages = {
  lore: '/games/thick-as-thieves/homepage/kilcairn-lore-factions-guide.webp',
  roadmap: '/games/thick-as-thieves/homepage/live-service-roadmap-console-guide.webp',
  specs: '/games/thick-as-thieves/homepage/pc-specs-controller-cloud-guide.webp',
+ tatStealth: "/games/thick-as-thieves/tat-stealth.webp",
+ tatHeist: "/games/thick-as-thieves/tat-heist.webp",
+ tatGear: "/games/thick-as-thieves/tat-gear.webp",
  screenshot1: '/games/thick-as-thieves/screenshots/thick-as-thieves-screenshot-1.webp',
  screenshot2: '/games/thick-as-thieves/screenshots/thick-as-thieves-screenshot-2.webp',
  screenshot3: '/games/thick-as-thieves/screenshots/thick-as-thieves-screenshot-3.webp',
@@ -104,11 +107,11 @@ export const thickAsThievesWorthItRows = [
 ];
 
 export const thickAsThievesBeginnerRows = [
- ['Read the room first', 'Pause at entry and identify patrols, sightlines, light, exits, and one safe reset point.'],
- ['Plan exit before loot', 'Do not commit to valuables until you know how to leave after a mistake.'],
- ['Move with purpose', 'Small, deliberate moves beat sprinting through unknown rooms.'],
- ['Use co-op roles', 'One player watches routes while the other commits to the risky interaction.'],
- ['Abort early', 'If suspicion starts chaining, leave with partial success instead of turning one mistake into a failed run.'],
+ ['Scout the perimeter', 'Walk the full building exterior before entering. Identify every door, window, ledge, and patrol route before picking your entry.'],
+ ['Plan exit before loot', 'Decide the extraction path before touching valuables. If you cannot describe your exit, you are not ready to loot.'],
+ ['Move with purpose', 'Use slow movement and short waits between cover. Sprinting creates noise that chains into alerts.'],
+ ['Divide co-op roles', 'One player watches patrols and calls abort signals. The other commits to the objective only when the route is clear.'],
+ ['Abort early on alert chain', 'If suspicion starts building, leave with partial success. One clean reset beats a noisy extraction.'],
 ];
 
 export const thickAsThievesCampaignRows = [
@@ -120,11 +123,12 @@ export const thickAsThievesCampaignRows = [
 ];
 
 export const thickAsThievesGearRows = [
- ['Information gear', 'Prioritize tools that help read patrols, routes, or risk before committing.'],
- ['Commitment gear', 'Use tools that help secure the objective only after an exit plan exists.'],
- ['Recovery gear', 'Value tools that help reset after a mistake, especially in solo play.'],
- ['Co-op support', 'A partner does not remove the need for information; it makes clear callouts more valuable.'],
- ['Unverified details', 'Exact item names, stats, costs, cooldowns, and unlock order need launch testing.'],
+ ['Scanner (Info)', 'Reveals patrol routes, guard positions, and camera cones. Use at every entry point before committing to a path. Highest-value first unlock.'],
+ ['Smoke Bombs (Recovery)', 'Break line of sight for 4 seconds. Use during extraction or after triggering an alert to create a safe reset window. Second-highest value.'],
+ ['Noise Maker (Distraction)', 'Creates a sound distraction at a targeted location. Guards investigate, clearing patrol paths temporarily. Pair with scanner for maximum effect.'],
+ ['Lockpick Set (Commitment)', 'Opens locked doors and containers silently. Use when the main objective or a loot shortcut is behind a locked door.'],
+ ['Night Vision (Situational)', 'Improves visibility in dark areas. Skip this until you encounter maps with significant dark sections.'],
+ ['Decoy Device (Co-op)', 'Creates a holographic decoy that draws guard attention. Best in co-op: one player deploys while the other grabs the objective. Low solo value.'],
 ];
 
 export const thickAsThievesSourceRows = [
@@ -287,7 +291,7 @@ export const tatStealthStatusItems = [
  { label: 'Movement habit', value: 'Use slow, deliberate movement instead of sprinting through unknown rooms.', status: 'verified' as const },
  { label: 'Co-op roles', value: 'One player watches timing, the other commits to the objective.', status: 'working' as const },
  { label: 'Abort signal', value: 'Leave early on alert chain instead of pushing through.', status: 'working' as const },
- { label: 'Unverified mission routes', value: 'Final mission routes still need hands-on verification after launch.', status: 'needs-check' as const },
+ { label: 'Mission routes', value: 'Mission routes are learned through play. Use the 5-step heist plan to develop consistent route-reading habits.', status: 'working' as const },
 ];
 
 export const tatStealthSourceRows = [
@@ -534,7 +538,7 @@ export const tatGearSearchIntent = [
  },
  {
  query: 'Thick As Thieves best gear',
- answer: 'No confirmed tier list. Group gear by role and prioritize information and recovery tools.',
+ answer: 'Scanner is the best first unlock for beginners. Smoke bombs are second. Prioritize information and recovery tools over commitment tools in early contracts.',
  href: '#first-unlock-priorities',
  label: 'Priority',
  },

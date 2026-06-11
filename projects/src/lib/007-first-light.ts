@@ -31,6 +31,8 @@ export const firstLightImages = {
  missionPlanning: '/games/007-first-light/guide/mission-planning.webp',
  reviewCombat: '/games/007-first-light/guide/review-combat.webp',
  reviewStealth: '/games/007-first-light/guide/review-stealth.webp',
+ flCombat: '/games/007-first-light/fl-combat.webp',
+ flGadget: '/games/007-first-light/fl-gadget.webp',
 };
 
 export const firstLightVideos = [

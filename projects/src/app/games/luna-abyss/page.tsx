@@ -17,7 +17,7 @@ import {
 
 const title = 'Luna Abyss Guide Hub: Game Pass, Steam Deck, Achievements & Walkthrough';
 const description =
- 'Luna Abyss guide hub for Game Pass, Steam Deck settings, achievements, system requirements, walkthrough, ending explained, crash fixes, and buying advice.';
+ 'Find Luna Abyss guides for beginner tips, walkthrough, achievements, weapon builds, Game Pass, system requirements, Steam Deck settings, and crashing fixes.';
 const canonical = '/games/luna-abyss';
 
 export const metadata = createLunaAbyssMetadata({

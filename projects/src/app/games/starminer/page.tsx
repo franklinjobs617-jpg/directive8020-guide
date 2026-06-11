@@ -15,7 +15,7 @@ import {
 
 const title = "Starminer Guide Hub ?Beginner Tips, Ships, Mining & Defense";
 const description =
- "Starminer Early Access guide hub: beginner tips, Campaign, Sandbox, Survival, ship building, mining logistics, heat management, alien defense, and PC specs.";
+ "Find Starminer guides for beginner tips, ship building, mining, resources, tech tree, game modes, blueprints, and how to make money fast in 2026 Early Access.";
 const canonical = "/games/starminer";
 
 export const metadata = createStarminerMetadata({

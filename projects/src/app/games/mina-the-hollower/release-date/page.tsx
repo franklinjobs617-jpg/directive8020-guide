@@ -21,7 +21,7 @@ import {
 
 const title = 'Mina the Hollower Release Date, Platforms, Demo & Unlock Status';
 const description =
- 'Mina the Hollower release guide: Steam shows May 28, 2026, official/platform coverage says May 29, 2026, with PC, Mac, Linux, PS5, Xbox, Switch, and Switch 2 notes.';
+ 'Mina the Hollower released May 29, 2026 on Steam. Check PC, Mac, Linux, PS5, Xbox, Switch, and Switch 2 platform status and unlock timing.';
 const canonical = '/games/mina-the-hollower/release-date';
 
 export const metadata = createMinaMetadata({

@@ -23,6 +23,9 @@ export const lunaAbyssImages = {
  screenshot5: '/games/luna-abyss/screenshots/luna-abyss-screenshot-5.jpg',
  screenshot6: '/games/luna-abyss/screenshots/luna-abyss-screenshot-6.jpg',
  screenshot7: '/games/luna-abyss/screenshots/luna-abyss-screenshot-7.jpg',
+ laCombat: '/games/luna-abyss/la-combat.webp',
+ laBoss: '/games/luna-abyss/la-boss.webp',
+ laShield: '/games/luna-abyss/la-shield.webp',
 };
 
 export const lunaAbyssQuickFacts = [
@@ -202,6 +205,77 @@ export const lunaAbyssBeginnerRows = [
  doThis: 'Save achievement and ending cleanup for after one natural route.',
  why: 'The first run is better for learning systems than forcing perfect completion.',
  },
+];
+
+export const laBeginnerActionRows = [
+ {
+ step: '1. Tune comfort settings before combat',
+ doThis: 'Set subtitles, text size, camera sensitivity, brightness, and difficulty in the first safe area. Do not delay these settings or assume defaults will carry you through bullet-hell pressure.',
+ why: 'Comfort settings affect every part of the run. Changing them mid-combat costs more than a few seconds of setup time.',
+ },
+ {
+ step: '2. Learn dash timing before treating combat as pure shooting',
+ doThis: 'Practice sprint, jump, dash, and air control in the first traversal sections. Map the dash to a comfortable button if the default placement bothers you during arena fights.',
+ why: 'Luna Abyss rewards movement as much as aim. Standing still in a bullet-hell arena ends the run faster than missing shots.',
+ },
+ {
+ step: '3. Match weapon color to enemy shield type',
+ doThis: 'Pay attention to enemy shield colors. Some weapons or damage types break certain shields faster. If an enemy absorbs your current weapon, switch to the matching color or damage type.',
+ why: 'Color-matched shield breaking is the fastest way to end arena pressure. Fighting through the wrong shield type wastes ammo and extends dangerous exposure windows.',
+ },
+ {
+ step: '4. Use arena space before tunnel-visioning on damage',
+ doThis: 'Map exits, dash routes, and cover options during the first wave of each arena. Prioritize dodging over landing every shot.',
+ why: 'Arena awareness matters more than raw accuracy. Knowing where to dodge next prevents the corner-pin scenario that ends most first attempts.',
+ },
+ {
+ step: '5. Check side routes after fights for secrets and lore',
+ doThis: 'Build the habit of scanning side paths after combat clears and before taking the obvious forward exit. Secrets often sit just off the main route.',
+ why: 'Secrets, lore logs, and achievement cleanup are much easier when you build the exploration habit early rather than backtracking late.',
+ },
+] as const;
+
+export const laBeginnerStatusItems = [
+ { label: 'Best first goal', value: 'Learn movement, dash rhythm, and shield-color matching before cleanup.', status: 'verified' as const },
+ { label: 'Accessibility', value: 'Steam lists adjustable text size, difficulty, subtitles, and camera comfort categories.', status: 'verified' as const },
+ { label: 'Achievements', value: '45 public Steam achievements are visible.', status: 'verified' as const },
+ { label: 'Shield color system', value: 'Enemy shields have color affinities. Match your weapon damage type or color to break them efficiently.', status: 'working' as const },
+ { label: 'Spoiler posture', value: 'Use ending and trophy pages after one natural route.', status: 'working' as const },
+];
+
+export const laBeginnerSearchIntent = [
+ {
+ query: 'Luna Abyss beginner guide',
+ answer: 'Start with comfort settings, then practice movement and dash timing. Match weapon color to enemy shields and use arena space before chasing damage.',
+ href: '#beginner-anchor',
+ label: 'Beginner guide',
+ },
+ {
+ query: 'Luna Abyss color shield',
+ answer: 'Enemy shields have color affinities. Matching your weapon damage type or color to the shield type breaks them faster and conserves ammo during arena fights.',
+ href: '#shield-colors',
+ label: 'Shield colors',
+ },
+ {
+ query: 'Luna Abyss best weapon build',
+ answer: 'Prioritize one reliable ranged weapon and one close-range option early. Match weapon color to common enemy shield types in the current area.',
+ href: '#weapon-builds',
+ label: 'Weapon builds',
+ },
+ {
+ query: 'Luna Abyss first hour',
+ answer: 'Use the first hour to set controls and practice movement. Do not treat it as a completion run. Secrets and achievements are easier on a second pass.',
+ href: '#beginner-anchor',
+ label: 'First hour',
+ },
+];
+
+export const laBeginnerJumpLinks = [
+ { href: '#beginner-anchor', label: 'Beginner anchor' },
+ { href: '#shield-colors', label: 'Shield color chart' },
+ { href: '#weapon-builds', label: 'Weapon builds' },
+ { href: '/games/luna-abyss/walkthrough', label: 'Walkthrough' },
+ { href: '/games/luna-abyss/achievements-trophy-guide', label: 'Achievements' },
 ];
 
 export const lunaAbyssWalkthroughRows = [

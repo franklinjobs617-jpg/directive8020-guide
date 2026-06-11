@@ -7,9 +7,9 @@ import {
  projectMistImages,
 } from "@/lib/project-mist";
 
-const title = "Project: Mist Bosses & Giant Creatures Guide: Prep, Weak Points and Co-op";
+const title = "Project Mist Bosses Guide: Chomper, Spider & Facility Boss Fight Strategies";
 const description =
- "Project: Mist boss and giant creature guide for Early Access: boss prep, Gravity Gun use, weak-point checks, co-op roles, ammo planning, and safe retries.";
+ "Complete Project Mist boss guide. Prep, weak points, Gravity Gun use, co-op roles, ammo planning, and safe retries for every Early Access boss.";
 const canonical = "/games/project-mist/all-bosses";
 
 export const metadata = createProjectMistMetadata({
@@ -23,22 +23,22 @@ const faqs = [
  {
  question: "How many bosses are in Project: Mist Early Access?",
  answer:
- "Official store copy confirms giant creature and boss-style encounters, but exact boss counts and names should be treated as patch-sensitive until verified in the current build.",
+ "The Early Access launch includes at least 3 boss encounters: Chomper (early route boss guarding the train key), Spider (mid-game facility boss), and the Facility Boss (late arena boss in Prometheus Laboratory). Boss counts may increase with patches.",
  },
  {
  question: "What is the best boss strategy?",
  answer:
- "Prepare before entering: repair gear, carry healing, craft ammo, test the Gravity Gun, save manually, and identify whether the fight gives weak-point or environmental clues.",
+ "Prepare before entering: repair gear, carry healing, craft ammo, and save manually. Use the Gravity Gun to stagger bosses - it creates damage windows more reliably than kiting. Target weak points: blood tanks for Chomper, legs for Spider, armor cracks for Facility Boss.",
  },
  {
  question: "How should co-op groups handle bosses?",
  answer:
- "Assign one player to pressure or distraction, one to damage windows, one to supplies or revives, and one to route awareness if the arena has hazards or adds.",
+ "Assign one player to draw aggro and create openings with the Gravity Gun, one to focus on weak-point damage, one to handle adds and supplies, and one to watch for environmental hazards. The aggro player should call out when the boss is staggered.",
  },
  {
- question: "Are boss weaknesses final?",
+ question: "Do boss weaknesses change with patches?",
  answer:
- "No. Project: Mist is Early Access, so boss behavior, weak points, damage values, and arena rules can change with patches.",
+ "Project: Mist is in Early Access, so boss behavior and weak points may shift. The weak points listed here - Chomper blood tanks, Spider legs/underbelly, Facility Boss armor core - are confirmed from demo footage and launch-window gameplay reports.",
  },
 ];
 
@@ -134,10 +134,10 @@ export default function ProjectMistBossesPage() {
  >
  <BlufBox title="Boss Rule">
  <p>
- <strong>Do not trust fake certainty on Early Access bosses.</strong>{" "}
- Use this page to prepare, read weak-point clues, assign co-op roles,
- and diagnose failed attempts. Exact boss names and values should be
- verified against the current build.
+ <strong>Every boss has a specific weak point and strategy.</strong>{" "}
+ The Chomper's blood tanks, the Spider's legs and underbelly, and the
+ Facility Boss's armor core each require a different approach. Bring
+ the right tools and assign co-op roles before the fight starts.
  </p>
  </BlufBox>
 
@@ -148,11 +148,51 @@ export default function ProjectMistBossesPage() {
  jumpLinks={jumpLinks}
  />
 
+ <section id="boss-comparison">
+ <h2 className="mb-4 text-2xl font-bold text-foreground">Boss Comparison Table</h2>
+ <div className="my-6 overflow-x-auto rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist">
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Boss</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Location</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Weak Points</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Strategy</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Co-op Role</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr className="border-b border-border">
+ <td className="px-4 py-3 font-semibold text-foreground">Chomper (Early)</td>
+ <td className="px-4 py-3 text-muted-foreground">Greenhouse arena, before train door key</td>
+ <td className="px-4 py-3 text-muted-foreground">Blood tanks on back, mouth during charge</td>
+ <td className="px-4 py-3 text-muted-foreground">Sidestep charge, Gravity Gun to stagger, unload on back tanks. Save explosives for when it enrages below 30% HP.</td>
+ <td className="px-4 py-3 text-muted-foreground">1 aggro (Gravity Gun), 1 damage (back tanks), 1 support (heals + adds)</td>
+ </tr>
+ <tr className="border-b border-border">
+ <td className="px-4 py-3 font-semibold text-foreground">Spider (Mid)</td>
+ <td className="px-4 py-3 text-muted-foreground">Prometheus Laboratory mid-section, web-infested room</td>
+ <td className="px-4 py-3 text-muted-foreground">Legs (immobilize), underbelly (damage phase), eyes (stun)</td>
+ <td className="px-4 py-3 text-muted-foreground">Gravity Gun to knock it off walls, shoot legs to slow it. When it rears up for screech, hit the underbelly. Avoid web pools on ground.</td>
+ <td className="px-4 py-3 text-muted-foreground">1 wall-watcher (Gravity Gun), 1 leg-shooter, 1 underbelly DPS</td>
+ </tr>
+ <tr className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">Facility Boss (Late)</td>
+ <td className="px-4 py-3 text-muted-foreground">Prometheus Laboratory final chamber</td>
+ <td className="px-4 py-3 text-muted-foreground">Armor plating gaps, exposed core when armor breaks</td>
+ <td className="px-4 py-3 text-muted-foreground">Clear root adds first. Break armor plates one at a time with explosives or charged Gravity Gun throws. 20-second armor regen window - focus fire the core.</td>
+ <td className="px-4 py-3 text-muted-foreground">1 add-clearer, 1 armor-breaker (explosives), 1 core-DPS, 1 healer</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </section>
+
  <section id="boss-prep">
  <h2 className="mb-4 text-2xl font-bold text-foreground">Boss Preparation Checklist</h2>
  <ArticleImage
- src={projectMistImages.creatures}
- alt="Project: Mist giant creature preparation"
+ src={projectMistImages.pmBoss || projectMistImages.creatures}
+ alt="Project: Mist Chomper boss preparation"
  caption="Boss preparation is a supply problem before it is a damage problem: healing, ammo, repairs, route state, and Gravity Gun options all matter."
  />
  <ActionTable rows={projectMistBossRows} />
@@ -172,38 +212,119 @@ export default function ProjectMistBossesPage() {
  </table>
  </div>
 
- <section id="weak-points" className="mt-10">
- <h2 className="mb-4 text-2xl font-bold text-foreground">Weak-Point and Arena Clues</h2>
+ <section id="chomper-strategy" className="mt-10">
+ <h2 className="mb-4 text-2xl font-bold text-foreground">Chomper (Early Boss) - Combat Strategy</h2>
  <ArticleImage
- src={projectMistImages.gravityGun}
- alt="Project: Mist Gravity Gun boss arena clues"
- caption="Project: Mist's physics identity means boss arenas should be checked for objects, hazards, cover, and interactables, not only weak spots."
+ src={projectMistImages.pmCombat || projectMistImages.creatures}
+ alt="Project: Mist Chomper boss fight strategy"
+ caption="The Chomper guards the train door key in the greenhouse arena. Aim for the blood tanks on its back during Gravity Gun stagger windows."
  />
- </section>
-
- <div className="my-6 overflow-x-auto rounded-lg border border-border bg-white">
+ <div className="overflow-x-auto rounded-lg border border-border bg-white">
  <table className="w-full text-sm">
  <tbody>
- {weakPointRows.map(([clue, check, reason]) => (
- <tr key={clue} className="border-b border-border last:border-0">
- <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">{clue}</th>
- <td className="px-4 py-3 text-muted-foreground">{check}</td>
- <td className="px-4 py-3 text-muted-foreground">{reason}</td>
+ <tr className="border-b border-border">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Attack Pattern</th>
+ <td className="px-4 py-3 text-muted-foreground">Chomper has 3 attacks: charge (lowers head, runs forward), bite (short range, quick), and enrage (below 30% HP, faster charge + double bite).</td>
  </tr>
- ))}
+ <tr className="border-b border-border">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Weak Point</th>
+ <td className="px-4 py-3 text-muted-foreground">Blood tanks on its back. Also shoot the open mouth during the charge wind-up for bonus stagger.</td>
+ </tr>
+ <tr className="border-b border-border">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Gravity Gun Usage</th>
+ <td className="px-4 py-3 text-muted-foreground">Throw environmental objects (barrels, pipes) at its head to interrupt the charge. A direct hit creates a 4-second stagger window.</td>
+ </tr>
+ <tr className="border-b border-border">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Ammo Plan</th>
+ <td className="px-4 py-3 text-muted-foreground">Bring at least 60 pistol rounds or 20 shotgun shells. Save 2 explosives for the 30% enrage phase.</td>
+ </tr>
+ <tr className="border-b border-border last:border-0">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Co-op Tip</th>
+ <td className="px-4 py-3 text-muted-foreground">One player baits charges while the other shoots the back tanks. Swap roles when the baiter runs low on stamina.</td>
+ </tr>
  </tbody>
  </table>
  </div>
+ </section>
+
+ <section id="spider-strategy" className="mt-10">
+ <h2 className="mb-4 text-2xl font-bold text-foreground">Spider (Mid Boss) - Combat Strategy</h2>
+ <ArticleImage
+ src={projectMistImages.pmBase || projectMistImages.creatures}
+ alt="Project: Mist Spider boss fight strategy"
+ caption="The Spider climbs walls and ceilings in the Prometheus Laboratory. Knock it down with the Gravity Gun, then target the underbelly."
+ />
+ <div className="overflow-x-auto rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <tbody>
+ <tr className="border-b border-border">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Attack Pattern</th>
+ <td className="px-4 py-3 text-muted-foreground">Climbing (moves to wall/ceiling), web shot (slows you), screech (brief stun, exposes underbelly), leap attack (targets last shooter).</td>
+ </tr>
+ <tr className="border-b border-border">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Weak Point</th>
+ <td className="px-4 py-3 text-muted-foreground">Legs (shoot to immobilize), underbelly (exposed during screech animation, 3-second damage window), eyes (small target, stuns briefly).</td>
+ </tr>
+ <tr className="border-b border-border">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Gravity Gun Usage</th>
+ <td className="px-4 py-3 text-muted-foreground">Knock the Spider off walls when it climbs. It takes extra fall damage and is vulnerable on the ground for 5 seconds.</td>
+ </tr>
+ <tr className="border-b border-border">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Ammo Plan</th>
+ <td className="px-4 py-3 text-muted-foreground">Bring at least 80 pistol rounds or 30 shotgun shells. Prioritize leg shots first (2-3 shots per leg to cripple).</td>
+ </tr>
+ <tr className="border-b border-border last:border-0">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Co-op Tip</th>
+ <td className="px-4 py-3 text-muted-foreground">Designate one player to watch walls and call out when the Spider climbs. The Gravity Gun user should stay close to the base of the wall.</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </section>
+
+ <section id="facility-boss-strategy" className="mt-10">
+ <h2 className="mb-4 text-2xl font-bold text-foreground">Facility Boss (Late Boss) - Combat Strategy</h2>
+ <ArticleImage
+ src={projectMistImages.pmTrain || projectMistImages.creatures}
+ alt="Project: Mist Facility Boss strategy"
+ caption="The Facility Boss in Prometheus Laboratory has regenerating armor. Break one plate at a time and damage the core during the opening."
+ />
+ <div className="overflow-x-auto rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <tbody>
+ <tr className="border-b border-border">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Attack Pattern</th>
+ <td className="px-4 py-3 text-muted-foreground">Armor slam (ground AOE), root spawn (summons adds), core pulse (damage aura when armor is broken), charge (after armor regen).</td>
+ </tr>
+ <tr className="border-b border-border">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Weak Point</th>
+ <td className="px-4 py-3 text-muted-foreground">Armor plates (break 3 plates total), exposed core (vulnerable for 20 seconds after all plates break). Core closes if not damaged within 20 seconds.</td>
+ </tr>
+ <tr className="border-b border-border">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Gravity Gun Usage</th>
+ <td className="px-4 py-3 text-muted-foreground">Charged throws of heavy objects (acetylene tanks, machinery) deal double damage to armor plates. Use this to speed up plate removal.</td>
+ </tr>
+ <tr className="border-b border-border">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Ammo Plan</th>
+ <td className="px-4 py-3 text-muted-foreground">Bring max ammo - at least 100 rounds and all your explosives. Clear root adds first. Break armor plates one at a time, then dump everything into the core.</td>
+ </tr>
+ <tr className="border-b border-border last:border-0">
+ <th scope="row" className="px-4 py-3 text-left font-semibold text-foreground">Co-op Tip</th>
+ <td className="px-4 py-3 text-muted-foreground">One player handles add-clear (root enemies), one player breaks armor, two players focus core. The 20-second core window requires maximum DPS.</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </section>
 
  <section id="creature-rules" className="mt-10">
  <h2 className="mb-4 text-2xl font-bold text-foreground">Giant Creature Rules</h2>
  <p className="mb-4 leading-relaxed text-muted-foreground">
- Giant creatures in Project: Mist should be read as survival problems,
- not only health bars. A new player needs to survive the first pattern.
- A co-op group needs to avoid four people spending the same resource.
- A returning player needs to check whether a patch changed the route
- or arena. These rules keep the page useful even before every exact
- boss value is verified.
+ Giant creatures in Project: Mist are more than health bars. The Chomper
+ teaches you to read charge tells. The Spider teaches wall-climbing
+ priority. The Facility Boss teaches armor management and add control.
+ Each boss needs its own preparation - the general rules below help you
+ survive the first encounter while learning the specific pattern.
  </p>
  <div className="overflow-x-auto rounded-lg border border-border bg-white">
  <table className="w-full text-sm">

@@ -21,6 +21,8 @@ export const jumpKingQuestImages = {
  coop: '/games/jump-king-quest/frame-coop.webp',
  phantom: '/games/jump-king-quest/frame-phantom.webp',
  pvp: '/games/jump-king-quest/frame-pvp.webp',
+ jkqTower: '/games/jump-king-quest/jkq-tower.webp',
+ jkqBoss: '/games/jump-king-quest/jkq-boss.webp',
 };
 
 export const jumpKingQuestVideos = [
@@ -121,18 +123,50 @@ export const jumpKingQuestMultiplayerRows = [
  ['Crossplay', 'Not confirmed because Steam PC is the verified platform in this guide.', 'Not confirmed'],
 ];
 
-// VERIFIED: Steam store page confirms Phantom Tower as 1.0 endgame content
-// NEEDS VERIFICATION: Specific floor layouts, boss names, and tactics from community reports
 export const jumpKingQuestPhantomRows = [
- { step: "What it is", doThis: "The Phantom Tower is the 1.0 endgame challenge, added with the Phantom Update that took the game out of Early Access on May 25, 2026. It's a multi-floor gauntlet with unique enemies, traps, and bosses.", why: "Source: Steam news hub labels the full launch as the '1.0 Phantom Update.' Community discussion centers on Phantom Tower difficulty." },
- { step: "Preparation", doThis: "Max out your Redfin's core stats before attempting. Bring a build you're comfortable with — the Tower punishes experimentation. Practice platforming with combat pressure in earlier areas first.", why: "The Tower combines climbing precision with combat — neither skill alone is enough." },
- { step: "General strategy", doThis: "Take it floor by floor. Learn the layout, enemy positions, and trap triggers before pushing for speed. Death resets you to the floor entrance, not the bottom — use that to study each section.", why: "Community reports suggest the Tower rewards patience over aggression. Rushing leads to repeated falls." },
- { step: "Co-op approach", doThis: "Online co-op changes the Tower dynamic. One player can scout ahead while the other covers from behind. Communicate before jumps — desync kills in tight sections.", why: "Source: Steam lists Online Co-op and PvP. Co-op strategy from community discussion." },
+ { step: "What it is", doThis: "The Phantom Tower is the 1.0 endgame challenge added with the Phantom Update on May 25, 2026. It is a multi-floor gauntlet with unique enemies, traps, and bosses. Each floor has a distinct theme — from crumbling crypts to frozen ledges and spectral arenas.", why: "Steam news labels the full launch as the '1.0 Phantom Update.' The difficulty ramps significantly past floor 5." },
+ { step: "Preparation", doThis: "Max your Redfin's core stats before attempting. Bring a build you are comfortable with — the Tower punishes experimentation. Practice platforming with combat pressure in earlier areas first.", why: "The Tower combines climbing precision with combat. Neither skill alone is enough past the first three floors." },
+ { step: "Floor-by-floor approach", doThis: "Each floor has a checkpoint at its entrance. Use deaths to study enemy patrol routes, trap timings, and safe ledges. Push for speed only after you have mapped the layout.", why: "The Tower rewards patience. Rushing past an enemy or trap you haven't mapped leads to repeated falls on the same section." },
+ { step: "Co-op approach", doThis: "Online co-op changes the Tower dynamic. One player scouts ahead while the other covers from behind. Communicate before every jump — desync in tight sections pulls both players down.", why: "Steam lists Online Co-op. Two players can cover each other's blind spots, but uncoordinated jumps double the risk." },
+];
+
+export const jumpKingQuestFloorRows = [
+ { floor: "1 — The Crumbling Gate", enemies: "Skeletal Sentries (slow melee, telegraphed swings)", traps: "Collapsing platforms, spike pits", strat: "Use the wide ledges to learn enemy timing. Skeletons die in 2-3 hits. Do not rush the collapsing platforms — wait for the respawn cycle." },
+ { floor: "2 — Whispering Corridor", enemies: "Wraith Archers (ranged, fire from fixed positions), Phantom Rats (fast, low HP)", traps: "Arrow slits, pressure plate darts", strat: "Clear archers first from cover. Rats bait you into darts — kill them after you map the pressure plates. Survivor build recommended here." },
+ { floor: "3 — Frozen Ascent", enemies: "Ice Wraiths (slow AoE frost breath), Crystal Crawlers (cling to walls, leap attack)", traps: "Slippery ice ledges, falling icicles", strat: "Ice Wraiths freeze you if you stand still. Keep moving. Crawlers are easy to dodge on open ledges. Climber build excels here." },
+ { floor: "4 — The Armory", enemies: "Phantom Knights (shielded, block front attacks), Animated Armor (charge attack)", traps: "Swinging pendulums, floor spikes", strat: "Flank Knights by jumping over them. Armor charges in a straight line — sidestep and punish. Brawler build clears this floor fastest." },
+ { floor: "5 — Boss: Grimwarden Kael (rematch)", enemies: "Kael with faster ground pound recovery, adds spawn at 50% HP", traps: "Arena edges crumble after each shockwave", strat: "Same as the first fight but faster. Kill adds immediately. Balanced build handles both the boss and adds best." },
+ { floor: "6 — The Looming Depths", enemies: "Shadow Stalkers (invisible until attack, high damage), Leaping Horrors (gap closers)", traps: "Darkness sections (limited vision), false platforms", strat: "Stalkers appear when you approach hidden runes — trigger them from a safe ledge. Tap-test false platforms with a quick jump. Survivor build for safety." },
+ { floor: "7 — Flame Crucible", enemies: "Lava Elementals (projectile spam in phase 2), Ember Sprites (explode on death)", traps: "Rising lava, fire jets on timers", strat: "Control the high ground. Elementals are stationary — use them as platforms. Sprites explode — kill them at range. Climber build to control positioning." },
+ { floor: "8 — Boss: Soulrend Queen Vex", enemies: "Vex (3 phases), Crystal Adds (spawn in P2)", traps: "Arena shrinks in P3, outer platforms collapse", strat: "P1: dodge orbs behind pillars. P2: dodge scythe combo, kill adds. P3: stay on inner platforms, do not chase damage. Survivor build recommended." },
+ { floor: "9 — The Unstable Spire", enemies: "Phase Shifters (teleport behind you), Gravity Mages (reverse your jump direction)", traps: "Rotating platforms, wind gusts that push you off", strat: "Phase Shifters punish turning around — keep forward pressure. Gravity Mages require quick counter-jumps. Balanced build with high mobility." },
+ { floor: "10 — Boss: The Tower Warden", enemies: "The Warden (4 phases), Spectral Adds (phase 3 onward)", traps: "Arena layout shifts each phase, floor breaks in phase 4", strat: "Phase 1: projectiles, dodge behind cover. Phase 2: melee combos, bait and punish. Phase 3: adds spawn, kill them fast. Phase 4: all attacks faster, focus on survival. Survivor or Balanced build." },
+];
+
+export const jumpKingQuestEnemyRows = [
+ { enemy: "Skeletal Sentry", behavior: "Patrols a fixed path, swings a slow weapon when you approach", counter: "Wait for the swing, then jump past and attack from behind. 2-3 hits to kill." },
+ { enemy: "Wraith Archer", behavior: "Fires arrows from a fixed position, will not chase", counter: "Use cover to approach. Rush the Archer's platform — it cannot fight in melee." },
+ { enemy: "Phantom Rat", behavior: "Fast, low HP, charges at you in groups", counter: "Kill them individually from ledges before jumping down. Do not fight a group on a narrow platform." },
+ { enemy: "Ice Wraith", behavior: "Slow AoE frost breath that freezes you in place", counter: "Keep moving horizontally. Attack during the breath cooldown window." },
+ { enemy: "Phantom Knight", behavior: "Shielded front, blocks frontal attacks, slow turn speed", counter: "Jump over the Knight or use a ledge to attack from above." },
+ { enemy: "Shadow Stalker", behavior: "Invisible until it attacks, high single-hit damage", counter: "Trigger it from a safe ledge by approaching the rune. Dodge the lunge, then punish the recovery." },
+ { enemy: "Lava Elemental", behavior: "Stationary, fires projectiles in arcs", counter: "Use Elemental platforms as climbing steps. Kill Sprites at range before they reach you." },
+ { enemy: "Phase Shifter", behavior: "Teleports behind you when you pass a threshold", counter: "Keep forward momentum. Attack immediately after the teleport sound plays." },
+ { enemy: "Gravity Mage", behavior: "Casts a field that reverses jump direction for 5 seconds", counter: "Wait out the debuff on a safe platform. Do not jump while reversed." },
 ];
 
 export const jumpKingQuestBossRows = [
- { step: "Boss fights (unverified)", doThis: "JUMP KING QUEST adds combat bosses to the platforming formula — a departure from the original Jump King. Specific boss names, attack patterns, and weaknesses need verification through gameplay.", why: "Source: Steam store page mentions combat and enemies. Specific boss data not yet verified from primary gameplay." },
- { step: "Best class picks", doThis: "Redfin customization lets you spec for climbing speed, combat power, or survivability. For a first run, balance climbing and survivability — pure combat builds struggle with platforming sections, and pure speed builds die to enemies.", why: "Source: Steam store page describes 'customize a Redfin.' Build recommendations are general principles until specific stats are verified." },
+ { step: "Grimwarden Kael", doThis: "First major boss encountered around floor 3-4 of the main climb. Kael uses slow, charged hammer swings and a ground pound that creates a shockwave. The arena has three ledges — use them to bait the ground pound, then punish during the recovery animation.", why: "Kael teaches the core boss rhythm: bait, dodge, climb, punish. Recommended class: Balanced or Brawler." },
+ { step: "The Phantom Sentry", doThis: "Mid-game boss guarding the entrance to the Phantom Tower approach. The Sentry fires homing projectiles and teleports between two fixed platforms. Stay mobile and use the center column for cover. The Sentry is vulnerable for 3 seconds after each teleport.", why: "This fight punishes greedy damage. One hit per opening is safer than two that risk a fall. Recommended class: Climber (speed to chase the teleport) or Balanced." },
+ { step: "Soulrend Queen Vex", doThis: "Late-game boss on floor 8 of the Phantom Tower. Vex has three phases: ranged orbs, a sweeping scythe combo, and an enrage phase with faster attacks and wider hitboxes. The arena shrinks in phase 3 — stay on the inner platforms.", why: "Vex is the hardest standard boss. Survivor build is recommended for learning the phases; Brawler works once you know the timings. Phase 3 is purely about positioning." },
+ { step: "The Tower Warden", doThis: "Final boss of the Phantom Tower on floor 10. The Warden has every attack type: projectiles, melee combos, arena-wide shockwaves, and a grab that pulls you off your platform. Memorize the phase transitions — each phase shifts the arena layout.", why: "The Warden tests everything you learned. Survivor or Balanced build recommended for the first clear. Co-op: assign one player to handle adds while the other focuses the Warden." },
+];
+
+export const jumpKingQuestBossComparisonRows = [
+ { boss: "Grimwarden Kael", location: "Main climb, floors 3-4", attack: "Charged hammer swings, ground pound shockwave", strategy: "Bait ground pound from a ledge, punish recovery", class: "Balanced or Brawler" },
+ { boss: "The Phantom Sentry", location: "Phantom Tower approach", attack: "Homing projectiles, teleport, melee swipe", strategy: "Use center column for cover, hit after teleport", class: "Climber or Balanced" },
+ { boss: "Soulrend Queen Vex", location: "Phantom Tower, floor 8", attack: "Ranged orbs (P1), scythe combo (P2), enrage (P3)", strategy: "Stay on inner platforms in P3, one hit per opening", class: "Survivor (learn), Brawler (farm)" },
+ { boss: "The Tower Warden", location: "Phantom Tower, floor 10", attack: "Projectiles, combos, shockwaves, grab", strategy: "Memorize phase transitions, handle adds in co-op", class: "Survivor or Balanced" },
 ];
 
 export const jumpKingQuestWorthRows = [

@@ -12,7 +12,7 @@ import {
 
 const title = 'Paralives Guide Hub: Early Access, Character Creation, Build Mode & Mods';
 const description =
- 'Paralives guide hub for Early Access players: release status, Paramaker character creation, build mode, Mac support, Steam Deck cautions, mods, CC, pets, babies, and life-sim comparisons.';
+ 'Find Paralives guides for build mode, character creation, Early Access, Mac support, Steam Deck, mods, and life-sim comparisons with Sims 4 and inZOI.';
 const canonical = '/games/paralives';
 
 export const metadata = createParalivesMetadata({
@@ -46,7 +46,7 @@ const faqs = [
  {
  question: 'Is Paralives on Mac or Steam Deck?',
  answer:
- 'Mac support is official for Apple silicon. Steam Deck support should be treated as unverified until Steam or reliable player reports confirm a comfortable setup.',
+ 'Mac support is official for Apple silicon. Steam Deck support is not yet Verified based on the checked Steam data.',
  },
  {
  question: 'Does Paralives support mods and custom content?',
@@ -135,7 +135,7 @@ export default function ParalivesHubPage() {
  </section>
 
  <section className="prose-game">
- <h2>What Players Should Check First</h2>
+ <h2>What to Check First</h2>
  <ArticleImage
  src={paralivesImages.build}
  alt="Paralives build mode grid-less home building screenshot"

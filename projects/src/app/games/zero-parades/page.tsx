@@ -16,7 +16,7 @@ import {
 
 const title = 'ZERO PARADES Guide: Walkthrough, Best Build, GOG, PS5 & Specs';
 const description =
- 'ZERO PARADES guide for walkthrough, best build, GOG, PS5 status, controller support, system requirements, game length, time limits, and beginner tips.';
+ 'Find ZERO PARADES guides for beginner tips, best build, walkthrough, game length, system requirements, Steam Deck, controller support, and buying advice.';
 const canonical = '/games/zero-parades';
 
 export const metadata = createZeroParadesMetadata({

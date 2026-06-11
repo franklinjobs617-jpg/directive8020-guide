@@ -23,9 +23,9 @@ import {
  firstLightVideos,
 } from '@/lib/007-first-light';
 
-const title = '007 First Light Beginner Guide: First Mission, Stealth, Gadgets & Combat';
+const title = '007 First Light Beginner Guide: Weapons, Gadgets, Stealth & First Mission Tips';
 const description =
- 'Spoiler-light 007 First Light beginner guide for first mission priorities, stealth, gadgets, bluffing, firefights, License to Kill caution, driving, mission replay, modifiers, and avoiding opening spoilers.';
+ 'Spoiler-light 007 First Light beginner guide: weapon comparison, gadget recommendations, stealth, bluffing, firefights, driving, mission replay, and first-hour priorities.';
 const canonical = '/games/007-first-light/beginner-guide';
 
 export const metadata = createFirstLightMetadata({
@@ -34,6 +34,22 @@ export const metadata = createFirstLightMetadata({
  canonical,
  image: firstLightImages.hero,
 });
+
+const weaponComparisonRows = [
+ ['Standard pistol', 'Silent takedowns at close range. Reliable and quiet.', 'Best for stealth-first runs. Use for single-guard takedowns without triggering alarms. Ammo is common throughout missions.'],
+ ['Submachine gun (SMG)', 'Rapid fire for mid-range suppression. Moderate noise.', 'Best for loud escalation after stealth breaks. Effective against groups but draws attention quickly.'],
+ ['Assault rifle', 'High damage at medium to long range. Loud.', 'Best for open combat sections. Use when the mission shifts to action sequences. Limited ammo in stealth-focused missions.'],
+ ['Shotgun', 'High close-range burst damage. Very loud.', 'Best for tight corridors and forced encounters. Overkill for stealth but devastating when combat is unavoidable.'],
+ ['Sniper rifle', 'Long-range precision. Single-shot focus.', 'Best for creating safe entry points from a distance. Rare in early missions. Prioritize gadget-based infiltration over sniping.'],
+];
+
+const gadgetRecommendationRows = [
+ ['Camera jammer', 'Disables cameras in a radius. Creates safe movement windows.', 'Use before entering camera-covered rooms. Saves time over finding the camera control panel.'],
+ ['Distraction device', 'Noise maker that draws guards away from patrol routes.', 'Use to clear a specific path without engaging. Effective when guards stand between you and an objective.'],
+ ['Lockpick / Bypass tool', 'Opens locked doors and alternative routes.', 'Use to access optional paths, shortcuts, and collectible rooms. Prioritize picking doors that bypass heavy guard areas.'],
+ ['Smoke / Flash gadget', 'Creates visual cover or disorients enemies.', 'Use when stealth breaks and you need to reposition. A smoke deploy buys time to find cover and plan the next move.'],
+ ['Scanner / Detection tool', 'Reveals guard routes, camera cones, and trap locations.', 'Use at the start of each new room. Reading patrol paths before moving prevents most beginner detection mistakes.'],
+];
 
 const faqs = [
  {
@@ -44,17 +60,27 @@ const faqs = [
  {
  question: 'Is 007 First Light like Hitman?',
  answer:
- 'Expect IO Interactive mission craft and multiple approaches, but do not assume it is a pure Hitman sandbox. Treat it as a cinematic Bond origin campaign with stealth, gadgets, driving, and action.',
+ 'Expect IO Interactive mission craft and multiple approaches, but it is a cinematic Bond origin campaign with stealth, gadgets, driving, and action -- not a pure Hitman sandbox.',
+ },
+ {
+ question: 'What weapons should I use as a beginner?',
+ answer:
+ 'Start with the standard pistol for stealth takedowns. Keep an SMG or assault rifle for loud escalation. Weapon choice should match the room: quiet first, loud as backup.',
  },
  {
  question: 'Are gadgets important in 007 First Light?',
  answer:
- 'Yes. Steam copy highlights gadgets as part of infiltration, so treat them as route tools rather than only combat items.',
+ 'Yes. Gadgets are essential route tools for access, distraction, and camera bypass. Use one gadget at a time and save tools for future rooms when possible.',
+ },
+ {
+ question: 'What gadget should I prioritize?',
+ answer:
+ 'The camera jammer and scanner are the most useful early gadgets. They let you read the room and create safe movement windows without triggering alarms.',
  },
  {
  question: 'Can you replay missions in 007 First Light?',
  answer:
- 'Steam says players can replay favorite missions with additional modifiers, which makes recording your first route useful.',
+ 'Steam says players can replay favorite missions with additional modifiers. Record your first route so you can test a cleaner approach on replay.',
  },
  {
  question: 'Should I watch the first 13 minutes before playing?',
@@ -220,11 +246,10 @@ export default function FirstLightBeginnerGuidePage() {
  <section id="approach" className="prose-game">
  <h2>Pick the Right Approach</h2>
  <p>
- A useful beginner guide should not force one playstyle. The practical
- question is which approach fits the current room. Stealth, gadgets,
- bluffing, melee, firefights, and driving are different tools; the
- right one depends on awareness, objective pressure, and how much noise
- the mission can tolerate.
+ Choosing the right approach depends on which options the current room
+ supports. Stealth, gadgets, bluffing, melee, firefights, and driving
+ are different tools; the right one depends on awareness, objective
+ pressure, and how much noise the mission can tolerate.
  </p>
  </section>
 
@@ -246,6 +271,76 @@ export default function FirstLightBeginnerGuidePage() {
  </tbody>
  </table>
  </div>
+
+ <h2 id="weapon-comparison" className="mb-3 mt-10 text-2xl font-bold tracking-[-0.29px] text-foreground">
+ Weapon Comparison Table
+ </h2>
+ <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+ Choose weapons based on mission context. The standard pistol is best
+ for stealth-first approaches, while SMGs and assault rifles provide
+ backup when combat is unavoidable.
+ </p>
+ <div className="my-6 overflow-x-auto rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist">
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Weapon</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Best use</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Beginner advice</th>
+ </tr>
+ </thead>
+ <tbody>
+ {weaponComparisonRows.map(([weapon, use, advice]) => (
+ <tr key={weapon} className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">{weapon}</td>
+ <td className="px-4 py-3 text-muted-foreground">{use}</td>
+ <td className="px-4 py-3 text-muted-foreground">{advice}</td>
+ </tr>
+ ))}
+ </tbody>
+ </table>
+ </div>
+
+ <ArticleImage
+ src={firstLightImages.flCombat}
+ alt="007 First Light combat with weapon in an action sequence"
+ caption="Match your weapon to the room. Stealth sections benefit from silent pistols; loud escalation works better with SMGs or assault rifles."
+ />
+
+ <h2 id="gadget-recommendations" className="mb-3 mt-10 text-2xl font-bold tracking-[-0.29px] text-foreground">
+ Gadget Recommendations
+ </h2>
+ <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+ Gadgets are essential route tools. The camera jammer and scanner are
+ the most useful early gadgets for reading rooms and creating safe
+ movement windows.
+ </p>
+ <div className="my-6 overflow-x-auto rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist">
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Gadget</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">How to use</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Beginner tip</th>
+ </tr>
+ </thead>
+ <tbody>
+ {gadgetRecommendationRows.map(([gadget, howTo, tip]) => (
+ <tr key={gadget} className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">{gadget}</td>
+ <td className="px-4 py-3 text-muted-foreground">{howTo}</td>
+ <td className="px-4 py-3 text-muted-foreground">{tip}</td>
+ </tr>
+ ))}
+ </tbody>
+ </table>
+ </div>
+
+ <ArticleImage
+ src={firstLightImages.flGadget}
+ alt="007 First Light gadget usage in a stealth mission"
+ caption="Gadgets are route tools. Use one at a time, save tools for future rooms, and rely on the scanner to read patrol paths before moving."
+ />
 
  <section className="prose-game">
  <h2>How to Think About Difficulty and License to Kill</h2>
@@ -276,9 +371,9 @@ export default function FirstLightBeginnerGuidePage() {
  <p>
  If you prefer stealth, treat every room as a read-then-move puzzle,
  use one gadget to create access, and save firearms for forced combat.
- If you prefer loud play, do not assume the missions reward full
- aggression: cover, spacing, and gadget timing still matter, and
- noise will trigger responses you may not be ready for. The practical
+ If you prefer loud play, cover, spacing, and gadget timing still
+ matter during combat, and noise will trigger responses you may not
+ be ready for. The practical
  answer is the same: pick the right tool for the room instead of
  forcing a single playstyle.
  </p>

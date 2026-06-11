@@ -28,7 +28,7 @@ const faqs = [
  {
  question: 'Is Paralives Steam Deck Verified?',
  answer:
- 'No official Steam Deck Verified claim is available in the checked Steam data. Treat Steam Deck play as unverified until Steam or reliable player reports confirm it.',
+ 'No Steam Deck Verified claim is available in the checked Steam data. Treat Deck play as unverified until Steam or player reports confirm it.',
  },
  {
  question: 'Can Paralives run on Steam Deck?',
@@ -43,7 +43,7 @@ const faqs = [
  {
  question: 'Should I buy Paralives only for Steam Deck?',
  answer:
- 'Only do that if you are comfortable testing quickly and using Steam refund rules if performance or controls do not work for your setup.',
+ 'Only if you are comfortable testing quickly and using Steam refund rules if performance or controls do not work for your setup.',
  },
 ];
 
@@ -60,16 +60,16 @@ export default function ParalivesSteamDeckPage() {
  >
  <BlufBox title="Deck Answer">
  <p>
- <strong>Paralives should be treated as unverified on Steam Deck right now.</strong>{' '}
+ <strong>Paralives is not Steam Deck Verified based on the checked Steam data.</strong>{' '}
  The game has Windows support, Mac support, mouse-friendly life-sim
- tools, Paramaker, build mode, and Workshop systems, but the checked
- official Steam data does not provide a Steam Deck Verified claim.
+ tools, Paramaker, build mode, and Workshop systems, but no Steam Deck
+ Verified claim appears in the checked official Steam data.
  </p>
  </BlufBox>
 
  <SearchAnswerPanel
  title="Paralives Steam Deck Quick Answer"
- answer="No Steam Deck Verified claim is in the checked official Steam data. Treat Deck as unverified. Test trackpad, build mode, framerate, and text size within Steam refund rules."
+ answer="No Steam Deck Verified claim appears in the checked official Steam data. Test trackpad, build mode, framerate, and text size within Steam refund rules."
  intentRows={paralivesDeckSearchIntent}
  jumpLinks={paralivesDeckJumpLinks}
  />

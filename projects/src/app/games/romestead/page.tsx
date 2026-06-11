@@ -12,7 +12,7 @@ import {
 
 const title = 'Romestead Guide: Multiplayer, Co-op, Release Date & Tips';
 const description =
- 'Romestead guide for multiplayer, 1-8 player co-op, release date, Early Access, beginner settlement tips, PC specs, Steam Deck status, and buy-or-wait advice.';
+ 'Find Romestead guides for multiplayer co-op, best profession, beginner tips, settlement building, system requirements, Steam Deck, and early access buying advice for 2026.';
 const canonical = '/games/romestead';
 
 export const metadata = createRomesteadMetadata({

@@ -25,6 +25,10 @@ export const starminerImages = {
  officialFleet: "/games/starminer/screenshots/starminer-screenshot-2.webp",
  officialMining: "/games/starminer/screenshots/starminer-screenshot-3.webp",
  officialCombat: "/games/starminer/screenshots/starminer-screenshot-4.webp",
+ smShip: "/games/starminer/sm-ship.webp",
+ smMining: "/games/starminer/sm-mining.webp",
+ smCombat: "/games/starminer/sm-combat.webp",
+ smBase: "/games/starminer/sm-base.webp",
 };
 
 export const starminerQuickFacts = [
@@ -163,34 +167,34 @@ export const starminerModeRows = [
 
 export const starminerFirstHourRows = [
  {
- step: "1. Pick Campaign first",
- doThis:
- "Use Campaign as the first save unless you already know the building and logistics loop.",
- why: "Official FAQ says Campaign missions introduce mechanics and lore, so it is the safest route into a systems-heavy sandbox.",
+   step: "1. Start Campaign, skip Sandbox for now",
+   doThis:
+     "Launch Campaign mode. Follow the initial tutorial prompts. Your first goal is not to build a fleet — it is to understand how power, heat, storage, and refining interact on a single station.",
+   why: "Campaign missions introduce mechanics one at a time. Players who start in Sandbox face a blank build screen with no guidance, which leads to preventable mistakes like power outages and heat spikes.",
  },
  {
- step: "2. Build small and readable",
- doThis:
- "Keep the first station compact, leave room for future modules, and avoid spreading power and logistics too thin.",
- why: "Starminer links power, heat, logistics, production, and crew, so messy early layouts become expensive to diagnose.",
+   step: "2. Build a compact starter station",
+   doThis:
+     "Place 1 reactor, 1 small thruster, 1 basic smelter, 1 cargo module, and 1 crew quarters on a small frame. Keep all modules within 2-3 grid tiles of each other. Do not expand until the first loop is stable.",
+   why: "Compact layouts make power routing visible and heat manageable. A spread-out station hides where the bottleneck is and makes it harder to diagnose problems in the first hour.",
  },
  {
- step: "3. Stabilize mining",
- doThis:
- "Create a basic asteroid extraction and refining loop before chasing distant sectors or larger ships.",
- why: "Every expansion needs materials for maintenance, research, defenses, and fleet growth.",
+   step: "3. Mine Cobalt and iron in the nearest debris field",
+   doThis:
+     "Target the closest debris field or C-class asteroid from the starter station. Mine Cobalt (72 cr/unit) for income and Iron for construction. Ignore Ice and Silicone until the first refinery is running.",
+   why: "Cobalt is the best early income at 6x Iron's value. A single cargo run of Cobalt funds your next module. Iron is kept for hull and frame construction, not sold.",
  },
  {
- step: "4. Watch heat pressure",
- doThis:
- "Treat every major expansion as a risk increase and add defenses before the heat signature reaches critical levels.",
- why: "Steam explains that mining and building raise heat until aliens detect the fleet.",
+   step: "4. Sell Cobalt, clear the starting debt",
+   doThis:
+     "After the first mining run, dock at the nearest trade station within 1000m. Sell only Cobalt — keep Iron and Silicone. Use the credits to clear the starting debt immediately. Debt compounds interest in Starminer.",
+   why: "Clearing debt in the first hour saves 15-20% of early income that would otherwise go to interest payments. A debt-free station grows faster than one with compounding liabilities.",
  },
  {
- step: "5. Save a blueprint checkpoint",
- doThis:
- "Save or recall useful designs once a build proves stable instead of rebuilding every experiment from scratch.",
- why: "Blueprint save and recall is confirmed, while community sharing is planned rather than a launch guarantee.",
+   step: "5. Add a Basic Smelter and T2 Storage before expanding",
+   doThis:
+     "Build a Basic Smelter to convert raw ore into ingots (3-5x value density per cargo space). Place a T2 Metal Storage next to it and set auto-sell at 80% capacity. Only then build a second mining ship or new module.",
+   why: "Smelting doubles your effective cargo value per trip. Auto-sell generates passive income while you focus on expansion. Building more ships before smelting and storage means hauling low-value ore — the most common first-hour mistake.",
  },
 ];
 

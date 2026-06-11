@@ -17,6 +17,8 @@ export const paralivesImages = {
  town: '/games/paralives/screenshot-town.jpg',
  life: '/games/paralives/screenshot-life.jpg',
  home: '/games/paralives/screenshot-home.jpg',
+ paraBuild: '/games/paralives/para-build.webp',
+ paraParamaker: '/games/paralives/para-paramaker.webp',
 };
 
 export const paralivesVideos = [

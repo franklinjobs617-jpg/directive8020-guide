@@ -4,38 +4,38 @@ import { ActionTable, BlufBox, SearchAnswerPanel } from '@/components/guide-bloc
 import { RomesteadArticle } from '@/components/romestead-article';
 import { createRomesteadMetadata, romesteadImages } from '@/lib/romestead';
 
-const title = 'Romestead Best Profession & Class Guide: First Role, Co-op Jobs and Builds';
+const title = 'Romestead Best Profession: All 8 Classes Compared & Which to Pick First';
 const description =
- 'Romestead best profession and class guide for choosing a first role by food, gathering, crafting, defense, exploration, co-op needs, and settlement goals.';
+ 'Compare all 8 Romestead starting professions: Scholar, Legionary, Gladiator, and more. Find which class fits your playstyle, co-op role, and first-day strategy.';
 const canonical = '/games/romestead/best-profession-class';
 
 export const metadata = createRomesteadMetadata({
  title,
  description,
  canonical,
- image: romesteadImages.planningVillageMarket,
+ image: romesteadImages.screenshotCombat,
 });
 
 const faqs = [
  {
  question: 'What is the best profession in Romestead?',
  answer:
- 'There is no safe final best profession yet. Pick the role that solves your first shortage: food, materials, crafting speed, defense, or exploration safety.',
+ 'Scholar is the safest first pick for new players thanks to its ranged magic attack that lets you learn combat timing from a distance. Legionary (longer melee reach) and Woodcutter (faster wood gathering) are strong alternatives depending on your playstyle.',
  },
  {
  question: 'What is the best class for solo players?',
  answer:
- 'Solo players should favor a flexible role that helps early gathering, food, and survival before specializing into deep crafting or combat.',
+ 'Scholar for ranged safety, or Woodcutter/Miner for faster resource gathering. Solo play benefits from versatility — avoid overspecialized picks like Lobber or Mechanicus on your first save.',
  },
  {
  question: 'What is the best class for co-op?',
  answer:
- 'Co-op groups should split jobs. One player handles food and gathering, one handles crafting and storage, one scouts, and one prepares defense.',
+ 'Co-op groups should split roles: Scholar or Legionary for combat, Woodcutter for materials, Miner for metal, Mechanicus for crafting. Avoid four players picking the same role.',
  },
  {
  question: 'Can I change profession later?',
  answer:
- 'Treat respec and late-role switching as something to verify in your current build. Avoid choices that assume unlimited resets until the game proves it.',
+ 'Profession choice affects your starting weapon and skill bonus, but every character can learn every skill over time. Your first pick smoothes the first hour, not the whole game.',
  },
 ];
 
@@ -75,13 +75,15 @@ const jumpLinks = [
  { href: '/games/romestead/tips-and-tricks', label: 'Tips' },
 ];
 
-const professionRows = [
- ['Food and farming focus', 'Solo beginners, cautious co-op groups', 'Use when hunger, recovery, and routine gathering slow the settlement.'],
- ['Gathering and materials focus', 'Fast base setup', 'Use when wood, stone, and basic materials block every workstation.'],
- ['Crafting and storage focus', 'Organized builders', 'Use when the group has resources but wastes time moving or crafting.'],
- ['Defense focus', 'Players struggling at night', 'Use when undead pressure breaks the settlement before morning.'],
- ['Exploration focus', 'Scouts and dungeon groups', 'Use after food, tools, storage, and defense are stable.'],
- ['Blessing-focused build', 'Experimenters', 'Use only after you know which shortage the blessing is meant to solve.'],
+const professionData = [
+ { name: 'Scholar', weapon: 'Scroll of the Novice (ranged magic offhand)', style: 'Ranged magic', bestFor: 'Best for beginners — attack from distance while learning dodge/block timing', rating: '⭐⭐⭐' },
+ { name: 'Legionary', weapon: 'Flint Hasta (spear, dmg 4-5)', style: 'Melee with reach', bestFor: 'Best for players who want longer melee range and forgiving positioning', rating: '⭐⭐⭐' },
+ { name: 'Gladiator', weapon: 'Flint Gladius (short sword, dmg 3-4)', style: 'Fast melee', bestFor: 'Good for experienced melee players; sword skills scale differently with shields', rating: '⭐⭐' },
+ { name: 'Phalanx', weapon: 'Wooden Shield (20 block, 120° arc)', style: 'Defensive', bestFor: 'Best for defense-focused players; needs a crafted main weapon to pair with shield', rating: '⭐⭐' },
+ { name: 'Lobber', weapon: 'Wrist Wraps (+1 thrown attack)', style: 'Environment throwing', bestFor: 'Niche pick for players who master the throwing system; no conventional weapon', rating: '⭐' },
+ { name: 'Woodcutter', weapon: 'Flint Axe (+5 axe power)', style: 'Resource gathering', bestFor: 'Best for fast base setup — wood is the most consumed resource from early to mid game', rating: '⭐⭐⭐' },
+ { name: 'Miner', weapon: 'Flint Pickaxe (+5 pickaxe power)', style: 'Resource gathering', bestFor: 'Best for solo players rushing metal age; needs Mining level 3+ for tin', rating: '⭐⭐' },
+ { name: 'Mechanicus', weapon: 'Workbench (placeable item)', style: 'Building', bestFor: 'Best for builders who want to skip the first workbench craft; starts building immediately', rating: '⭐⭐' },
 ];
 
 const routeRows = [
@@ -121,8 +123,8 @@ export default function RomesteadBestProfessionClassPage() {
  description={description}
  canonical={canonical}
  label="Best Profession & Class"
- heroImage={romesteadImages.planningVillageMarket}
- heroAlt="Romestead best profession and class settlement role planning image"
+ heroImage={romesteadImages.screenshotCombat}
+ heroAlt="Romestead best profession and class combat gameplay screenshot"
  faqs={faqs}
  showSources={false}
  >
@@ -143,11 +145,11 @@ export default function RomesteadBestProfessionClassPage() {
  </BlufBox>
 
  <section className="prose-game">
- <h2 id="profession-table">Profession Choice by Player Goal</h2>
+ <h2 id="profession-table">All 8 Starting Professions Compared</h2>
  <ArticleImage
- src={romesteadImages.planningVillageMarket}
- alt="Romestead profession and class choice by settlement goal"
- caption="The best early role depends on what your settlement lacks: food, materials, crafting flow, defense, or safe exploration."
+ src={romesteadImages.screenshotCombat}
+ alt="Romestead 8 starting professions comparison screenshot"
+ caption="Compare all 8 Romestead starting professions by weapon, combat style, and best use case. Scholar is the safest first pick for beginners."
  />
  </section>
 
@@ -155,17 +157,21 @@ export default function RomesteadBestProfessionClassPage() {
  <table className="w-full text-sm">
  <thead>
  <tr className="border-b border-border bg-mist">
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">Role direction</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">Best fit</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why to choose it</th>
+ <th className="px-3 py-3 text-left font-medium text-muted-foreground">Profession</th>
+ <th className="px-3 py-3 text-left font-medium text-muted-foreground">Starting weapon</th>
+ <th className="px-3 py-3 text-left font-medium text-muted-foreground">Style</th>
+ <th className="px-3 py-3 text-left font-medium text-muted-foreground">Best for</th>
+ <th className="px-3 py-3 text-left font-medium text-muted-foreground">Rating</th>
  </tr>
  </thead>
  <tbody>
- {professionRows.map(([role, fit, reason]) => (
- <tr key={role} className="border-b border-border last:border-0">
- <td className="px-4 py-3 font-semibold text-foreground">{role}</td>
- <td className="px-4 py-3 text-muted-foreground">{fit}</td>
- <td className="px-4 py-3 text-muted-foreground">{reason}</td>
+ {professionData.map((p) => (
+ <tr key={p.name} className="border-b border-border last:border-0 hover:bg-mist/40">
+ <td className="px-3 py-3 font-semibold text-foreground">{p.name}</td>
+ <td className="px-3 py-3 text-muted-foreground text-xs">{p.weapon}</td>
+ <td className="px-3 py-3 text-muted-foreground">{p.style}</td>
+ <td className="px-3 py-3 text-muted-foreground text-xs">{p.bestFor}</td>
+ <td className="px-3 py-3 text-muted-foreground">{p.rating}</td>
  </tr>
  ))}
  </tbody>

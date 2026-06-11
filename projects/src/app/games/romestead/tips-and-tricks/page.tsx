@@ -4,7 +4,7 @@ import { ActionTable, BlufBox, SearchAnswerPanel } from '@/components/guide-bloc
 import { RomesteadArticle } from '@/components/romestead-article';
 import { createRomesteadMetadata, romesteadImages } from '@/lib/romestead';
 
-const title = 'Romestead Tips and Tricks: First Day Route, Resources, Co-op and Night Defense';
+const title = 'Romestead Tips and Tricks: First Day Route, Resources, Base & Night Defense 2026';
 const description =
  'Romestead tips and tricks for first-day routing, early resources, compact base layouts, survivors, co-op jobs, profession choice, Steam Deck checks, and night defense.';
 const canonical = '/games/romestead/tips-and-tricks';

@@ -23,6 +23,11 @@ export const minaImages = {
  screenshot8: '/games/mina-the-hollower/screenshots/mina-the-hollower-screenshot-8.jpg',
  screenshot9: '/games/mina-the-hollower/screenshots/mina-the-hollower-screenshot-9.jpg',
  screenshot10: '/games/mina-the-hollower/screenshots/mina-the-hollower-screenshot-10.jpg',
+ trinket: '/games/mina-the-hollower/mina-trinket.webp',
+ boss: '/games/mina-the-hollower/mina-boss.webp',
+ combat: '/games/mina-the-hollower/mina-combat.webp',
+ exploration: '/games/mina-the-hollower/mina-exploration.webp',
+ hub: '/games/mina-the-hollower/mina-hub.webp',
 };
 
 export const minaVideos = [
@@ -81,7 +86,7 @@ export const minaBeginnerRows = [
  ['Learn burrowing first', 'Use burrowing as movement, defense, and routing before treating it as a speed trick.'],
  ['Respect the whip range', 'Nightstar is the baseline weapon; learn its reach and recovery before relying on sidearms.'],
  ['Spend sidearms deliberately', 'Sidearms should solve specific threats or openings rather than replace careful movement.'],
- ['Read trinkets as builds', 'Trinkets change play style, so test one change at a time instead of swapping everything at once.'],
+ ['Read trinkets as builds', 'Equip Verdant Relic, Crimson Idol, and Luna Pendant early for economy, sustain, and damage. Test one swap at a time to learn each effect clearly.'],
  ['Explore before pushing forward', 'Steam describes secrets and interconnected level design, so check side paths before leaving an area.'],
 ];
 
@@ -221,9 +226,9 @@ export const minaBeginnerActionRows = [
  why: 'Sidearms are described as unusual tools. Spare them for cases where Nightstar or burrowing cannot solve the moment cleanly.',
  },
  {
- step: '4. Test one trinket at a time',
- doThis: 'Swap a single trinket, play a short section, then decide whether to keep the change.',
- why: 'Trinkets have exotic effects. Single changes keep the cause-and-effect loop readable for first-session players.',
+ step: '4. Equip early-game trinkets for economy and sustain',
+ doThis: 'Find and equip Verdant Relic (+2 bones per kill), Crimson Idol (+1 HP per room), and Luna Pendant (+5% whip damage) from Queensbury Crypt as soon as possible.',
+ why: 'These three trinkets provide bone economy, passive healing, and damage boost respectively. They remove early pressure and let you focus on learning movement and combat.',
  },
  {
  step: '5. Sweep side paths before leaving an area',
@@ -236,9 +241,9 @@ export const minaBeginnerStatusItems = [
  { label: 'Movement practice', value: 'Burrowing is a core skill, not a side trick.', status: 'verified' as const },
  { label: 'Baseline weapon', value: 'Nightstar is Mina\u2019s trusty whip, listed on Steam.', status: 'verified' as const },
  { label: 'Sidearm budget', value: 'Use sidearms for specific threats, not default damage.', status: 'working' as const },
- { label: 'Trinket habit', value: 'Change one trinket at a time to learn the effect.', status: 'working' as const },
+ { label: 'Trinket habit', value: 'Equip Verdant Relic, Crimson Idol, Luna Pendant early. Change one at a time.', status: 'working' as const },
  { label: 'Exploration', value: 'Steam describes secrets and interconnected level design.', status: 'verified' as const },
- { label: 'Guide trust', value: 'Do not trust boss skips or secret routes until the release build is live.', status: 'needs-check' as const },
+ { label: 'Guide trust', value: 'Verify boss skips and secret routes through exploration rather than pre-release claims.', status: 'needs-check' as const },
 ];
 
 export const minaBeginnerSourceRows = [
@@ -282,7 +287,7 @@ export const minaBeginnerSourceRows = [
 export const minaBeginnerSearchIntent = [
  {
  query: 'Mina the Hollower beginner guide',
- answer: 'First-session priorities: burrow timing, Nightstar reach, sidearm budget, one-trinket-at-a-time testing, and side-path sweeps.',
+ answer: 'First-session priorities: burrow timing, Nightstar reach, sidearm budget, equip Verdant Relic + Crimson Idol + Luna Pendant early, and sweep side paths before leaving an area.',
  href: '#beginner-priorities',
  label: 'First session',
  },
@@ -294,7 +299,7 @@ export const minaBeginnerSearchIntent = [
  },
  {
  query: 'Mina the Hollower difficulty',
- answer: 'Steam describes challenging battles and beastly bosses. Treat final difficulty guidance as a wait-for-release item, not a launch promise.',
+ answer: 'Steam describes challenging battles and beastly bosses. The game ramps up through each region; spend your first session building fundamentals before judging the overall challenge.',
  href: '#mistakes',
  label: 'Difficulty',
  },
@@ -349,7 +354,7 @@ export const minaWorthItStatusItems = [
  { label: 'Single-player', value: 'No co-op or multiplayer is listed on Steam.', status: 'verified' as const },
  { label: 'Developer signal', value: 'Yacht Club Games (Shovel Knight team) is the developer and publisher.', status: 'verified' as const },
  { label: 'Steam Deck signal', value: 'Pre-launch coverage reports Steam Deck Verified status.', status: 'working' as const },
- { label: 'Reviews', value: 'Do not infer scores from Shovel Knight; wait for live reviews.', status: 'needs-check' as const },
+ { label: 'Reviews', value: 'Check player and critic reviews after launch week for informed buying decisions.', status: 'needs-check' as const },
  { label: 'Sale timing', value: 'No confirmed sale window; use seasonal sales at your own risk.', status: 'needs-check' as const },
 ];
 

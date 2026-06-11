@@ -3,9 +3,9 @@ import { BlufBox, SearchAnswerPanel } from '@/components/guide-blocks';
 import { RomesteadArticle } from '@/components/romestead-article';
 import { createRomesteadMetadata, romesteadImages } from '@/lib/romestead';
 
-const title = 'Romestead Settlement Building & Citizens Guide';
+const title = 'Romestead Settlement Building Guide: Base Layout, Citizens & Night Defense';
 const description =
- 'Romestead settlement guide: compact base layout, storage, workstations, food flow, citizen jobs, night defense, and when to expand.';
+ 'Build and manage your Romestead settlement: compact base layout, workstations, citizen jobs, food automation, and night defense strategies.';
 const canonical = '/games/romestead/settlement-building-citizens';
 
 export const metadata = createRomesteadMetadata({

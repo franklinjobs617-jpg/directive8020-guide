@@ -22,6 +22,10 @@ export const zeroParadesImages = {
  screenshot6: '/games/zero-parades/screenshots/zero-parades-screenshot-6.jpg',
  screenshot7: '/games/zero-parades/screenshots/zero-parades-screenshot-7.jpg',
  screenshot8: '/games/zero-parades/screenshots/zero-parades-screenshot-8.jpg',
+ zpEspionage: '/games/zero-parades/zp-espionage.webp',
+ zpSkills: '/games/zero-parades/zp-skills.webp',
+ zpDialogue: '/games/zero-parades/zp-dialogue.webp',
+ zpMap: '/games/zero-parades/zp-map.webp',
 };
 
 export const zeroParadesVideos = [
@@ -396,7 +400,7 @@ export const zpBuildActionRows = [
   {
     step: '1. Lock your archetype in the first hour',
     doThis: 'Decide between Investigator, Operative, Social, or Wildcard before you start spending skill points. Invest in 3-5 core skills first.',
-    why: 'No single best build exists, but a focused archetype beats a scattered one. Build identity drives which dialogue options succeed.',
+    why: 'Careful Investigator is the safest first build, but a focused archetype always beats a scattered one. Build identity drives which dialogue options succeed.',
   },
   {
     step: '2. Plan Conditioning direction alongside skills',
@@ -421,7 +425,7 @@ export const zpBuildActionRows = [
 ] as const;
 
 export const zpBuildStatusItems = [
-  { label: 'Best build', value: 'No single best build; pick an archetype and invest in 3-5 core skills.', status: 'verified' as const },
+  { label: 'Best first build', value: 'Careful Investigator: Deduction, Observation, Perception, and Composure as core four.', status: 'verified' as const },
   { label: 'Skill count', value: '15 skills on Steam, organized around identity and route goals.', status: 'verified' as const },
   { label: 'Conditioning effect', value: 'Can change Hershel and the rules of play; treat as long-term commitment.', status: 'verified' as const },
   { label: 'Respec system', value: 'No traditional respec; skill investment is largely permanent within a playthrough.', status: 'working' as const },
@@ -462,7 +466,7 @@ export const zpBuildSourceRows = [
 export const zpBuildSearchIntent = [
   {
     query: 'ZERO PARADES best build',
-    answer: 'No single best build exists. Pick an archetype and invest in 3-5 core skills that match how you want to solve problems.',
+    answer: 'Careful Investigator is the safest first build: Deduction, Observation, Perception, and Composure as core four. Pick 3-5 skills total for a focused build.',
     href: '#what-does-build-mean-in-zero-parades',
     label: 'Build',
   },
@@ -960,7 +964,7 @@ export const zpSteamDeckStatusItems = [
   { label: 'Controller support', value: 'Partial controller support is listed. Test prompts, menus, and dialogue navigation.', status: 'verified' as const },
   { label: 'Text size', value: 'Adjustable text size is listed. Increase before a long handheld session.', status: 'verified' as const },
   { label: 'Saves and cloud', value: 'Save Anytime and Steam Cloud are listed. Confirm cloud sync after the first save.', status: 'verified' as const },
-  { label: 'Performance baseline', value: 'Minimum spec is GTX 1060 6GB with 16 GB RAM. Use cautious expectations until real Deck reports exist.', status: 'working' as const },
+  { label: 'Performance baseline', value: 'Minimum spec is GTX 1060 6GB with 16 GB RAM. Test text size and menu responsiveness in the first 10 minutes of a Deck session.', status: 'working' as const },
 ];
 
 export const zpSteamDeckSourceRows = [

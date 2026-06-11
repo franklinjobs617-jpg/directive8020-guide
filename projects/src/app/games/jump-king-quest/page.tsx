@@ -13,7 +13,7 @@ import {
 
 const title = 'JUMP KING QUEST Guide: 1.0 Release, Phantom Update, Multiplayer & Tips';
 const description =
- 'JUMP KING QUEST guide hub for the May 25, 2026 1.0 release: Phantom Update, Steam PC status, beginner tips, online co-op, online PvP, controller support, reviews, and buying advice.';
+ 'Find JUMP KING QUEST guides for beginner tips, Phantom Tower, bosses, best class, multiplayer, controller support, release date, and buying advice.';
 const canonical = '/games/jump-king-quest';
 
 export const metadata = createJumpKingQuestMetadata({

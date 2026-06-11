@@ -20,7 +20,7 @@ import {
 
 const title = 'Is Romestead Worth It in Early Access? Buy Now or Wait';
 const description =
- 'Romestead Early Access buying guide: who should buy now, who should try a demo first, who should wait, co-op value, Steam Deck risk, 1.0 expectations, and launch-window checks.';
+ 'Is Romestead worth buying in 2026 Early Access? Compare co-op value, Steam Deck risk, demo availability, and 1.0 expectations before you buy.';
 const canonical = '/games/romestead/is-it-worth-it';
 
 export const metadata = createRomesteadMetadata({

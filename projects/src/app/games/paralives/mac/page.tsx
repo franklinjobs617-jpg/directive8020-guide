@@ -61,10 +61,10 @@ export default function ParalivesMacPage() {
  >
  <BlufBox title="Mac Answer">
  <p>
- <strong>Paralives officially supports Mac, but the listed Mac target is Apple silicon.</strong>{' '}
+ <strong>Paralives officially supports Mac on Apple silicon hardware.</strong>{' '}
  Steam lists Apple M2 and 12 GB RAM as the minimum, Apple M3 and 16 GB
- RAM as recommended, and macOS Big Sur 11 or newer. Intel Mac support
- should not be assumed from the current requirements.
+ RAM as recommended, and macOS Big Sur 11 or newer. Intel Mac is not
+ listed in the current Mac requirements.
  </p>
  </BlufBox>
 
@@ -82,7 +82,7 @@ export default function ParalivesMacPage() {
  <ArticleImage
  src={paralivesImages.town}
  alt="Paralives Mac support town screenshot"
- caption="Mac players should check Apple silicon model, memory, macOS version, and graphics settings before building a large household."
+ caption="Check Apple silicon model, memory, macOS version, and graphics settings before building a large household."
  />
  </section>
 

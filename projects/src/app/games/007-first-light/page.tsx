@@ -14,7 +14,7 @@ import {
 
 const title = '007 First Light Guide Hub: Reviews, Release Time, Denuvo & PC Specs';
 const description =
- '007 First Light guide hub for reviews, review embargo status, release date, release time, preload, PS5, Steam Deck caution, Denuvo, PC specs, and spoiler-light beginner tips.';
+ 'Find 007 First Light guides for beginner tips, weapons, system requirements, mission list, reviews, release time, and buying advice for the 2026 launch.';
 const canonical = '/games/007-first-light';
 
 export const metadata = createFirstLightMetadata({

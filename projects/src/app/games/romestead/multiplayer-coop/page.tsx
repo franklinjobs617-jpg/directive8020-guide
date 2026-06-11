@@ -18,9 +18,9 @@ import {
   romesteadImages,
 } from '@/lib/romestead';
 
-const title = 'Romestead Multiplayer: 1-8 Player Co-op, LAN & Split Screen';
+const title = 'Romestead Multiplayer Guide: 1-8 Player Co-op, LAN, Split Screen & Crossplay';
 const description =
- 'Romestead multiplayer guide: 1-8 player online co-op, LAN co-op, split-screen status, crossplay, host saves, group roles, and launch testing notes.';
+ 'Learn how Romestead multiplayer works: 1-8 player online co-op, LAN, split-screen status, crossplay support, host saves, and group role assignments.';
 const canonical = '/games/romestead/multiplayer-coop';
 
 export const metadata = createRomesteadMetadata({

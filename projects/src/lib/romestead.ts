@@ -21,6 +21,9 @@ export const romesteadImages = {
  planningCropHarvesting: '/games/romestead/planning-crop-harvesting.webp',
  planningFarmOverview: '/games/romestead/planning-farm-overview.webp',
  planningVillageMarket: '/games/romestead/planning-village-market.webp',
+ screenshotCombat: '/games/romestead/profession-combat.webp',
+ screenshotBase: '/games/romestead/profession-base.webp',
+ screenshotBuilding: '/games/romestead/profession-building.webp',
 };
 
 export const romesteadVideos = [

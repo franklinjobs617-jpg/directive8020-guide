@@ -11,7 +11,7 @@ import {
 
 const title = "Starminer Beginner Guide: First Hour, Campaign Start, Mining, Heat & Defense";
 const description =
- "Starminer beginner guide for the first hour: Campaign start, starter station, power, heat, mass, mining, storage, blueprints, defenses, and what to avoid.";
+ "Starminer beginner guide for the first hour: Campaign start, starter station, power, heat, mass, mining, storage, blueprints, defenses, and what to avoid in Early Access.";
 const canonical = "/games/starminer/beginner-guide";
 
 export const metadata = createStarminerMetadata({

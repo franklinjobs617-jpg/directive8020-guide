@@ -16,7 +16,7 @@ import {
 
 const title = 'Mina the Hollower Guide Hub - Release, Specs, Steam Deck & Tips';
 const description =
- 'Mina the Hollower guide hub with verified release timing, platforms, PC specs, Steam Deck status, spoiler-light beginner tips, official features, and buying advice.';
+ 'Find Mina the Hollower guides for beginner tips, trinkets, bosses, trophy guide, system requirements, Steam Deck, release date, and buying advice for 2026.';
 const canonical = '/games/mina-the-hollower';
 
 export const metadata = createMinaMetadata({

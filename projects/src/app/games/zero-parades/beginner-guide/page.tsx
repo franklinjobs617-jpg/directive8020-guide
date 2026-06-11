@@ -98,6 +98,25 @@ export default function ZeroParadesBeginnerGuidePage() {
  />
  </section>
 
+ <section className="prose-game">
+   <h2>First 60 Minutes: Step-by-Step Route</h2>
+   <ArticleImage
+     src={zeroParadesImages.zpEspionage}
+     alt="ZERO PARADES first hour route"
+     caption="The first hour sets your build direction and play habits. Follow this route to avoid common beginner mistakes."
+   />
+ </section>
+
+ <div className="my-6 rounded-lg border border-border bg-mist p-5">
+   <ol className="list-decimal space-y-4 pl-5 text-sm leading-relaxed text-muted-foreground">
+     <li><strong>Minutes 0-10 — Start the game and pick your identity.</strong> When the skill screen opens, invest your first 3 points in Deduction and Observation (the two safest early skills for any archetype). Do not spread points across more than 3 skills.</li>
+     <li><strong>Minutes 10-20 — Read the case briefing carefully.</strong> Steam describes the espionage RPG structure. Read every name, faction, and job title in the briefing. Treat the briefing as evidence, not flavor. Do not skip text to reach gameplay faster.</li>
+     <li><strong>Minutes 20-35 — First conversation.</strong> Make a manual save before the first major dialogue. Pick options that match your Deduction and Observation investment. If a check fails, read the failure text before reaching for reload — it reveals motives.</li>
+     <li><strong>Minutes 35-45 — First Conditioning encounter.</strong> When Conditioning is offered, read the description carefully. Do not accept changes you do not understand. For first playthrough, prioritize Conditioning that reinforces observation and patience over physical changes.</li>
+     <li><strong>Minutes 45-60 — Explore and test Exertion.</strong> Spend Exertion on one mission-critical check to understand how it works. Watch Fatigue and Anxiety indicators. Do not spend Exertion on minor dialogue — save it for checks tied to your build direction or route goals.</li>
+   </ol>
+ </div>
+
  <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
  <table className="w-full text-sm">
  <thead>

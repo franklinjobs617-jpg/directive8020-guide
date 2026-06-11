@@ -16,7 +16,7 @@ import {
 
 const title = 'Warhammer 40,000: Mechanicus II Guide: Walkthrough, Units & Builds';
 const description =
- 'Warhammer 40,000: Mechanicus II guide hub for walkthrough help, units, builds, factions, Steam Deck status, release date, PS5, Xbox, PC specs, and buying advice.';
+ 'Find Mechanicus II guides for beginner tips, best units, factions, walkthrough, unit tier list, system requirements, Steam Deck, and buying advice.';
 const canonical = '/games/mechanicus-ii';
 
 export const metadata = createMechanicusIIMetadata({

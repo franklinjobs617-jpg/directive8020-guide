@@ -46,39 +46,45 @@ const faqs = [
  {
  question: "Is this beginner guide final?",
  answer:
- "No. Project: Mist is an Early Access game, so route and balance advice should be treated as launch-window guidance until patches stabilize.",
+ "Project: Mist is in Early Access so routes and balance may shift. The first-hour tips here - grab starter chest supplies, head to the train, learn the Gravity Gun, avoid the power whale - are confirmed from demo and launch-window gameplay.",
  },
  {
  question: "Should beginners learn lockpicking early?",
  answer:
- "Yes. Locked chests can hold useful resources, and Steam discussions show lockpicking is a common launch-window confusion point.",
+ "Yes. Locked chests can hold useful resources like ammo, healing items, and upgrade materials. Spend 2-3 minutes practicing in the safe room before heading out.",
  },
 ];
 
 const firstDayRows = [
  {
- step: "1. Test controls",
+ step: "1. Grab starter chest supplies",
  doThis:
- "Save, open the starter chest, test flashlight, inventory, crafting, quick slots, and objective tracking before leaving the safe room.",
- why: "The opening teaches survival UI before the first real route decision.",
+ "Open the small chest in the wake-up room immediately. Take bandages, food, water, and the flashlight. Save the game before leaving the room.",
+ why: "The starter chest gives you the basics for surviving the first route segment. Saving early creates a clean restart point if things go wrong.",
  },
  {
- step: "2. Secure basics",
+ step: "2. Follow the compass to the train",
  doThis:
- "Gather food, water, bandages, ammo, bear traps, and crafting materials before committing to the greenhouse route.",
- why: "The demo route can create ammo and health pressure before the boss, so entering light is risky.",
+ "After leaving the wake-up room, follow the compass marker and map toward the Midway Bridge. The train is the first major base objective.",
+ why: "The train base is your safe return point, storage hub, and crafting station. Reaching it early makes every subsequent run less risky.",
  },
  {
- step: "3. Mark retreat paths",
+ step: "3. Grab the mech part before pushing into facilities",
  doThis:
- "Reach the train, handle the mech-part objective, then treat the greenhouse as a planned facility run.",
- why: "Early gameplay footage ties train progress to the mech part and greenhouse access card objective.",
+ "The demo route points west to a busted mech part. Collect it before entering the greenhouse - it unlocks the train repair objective.",
+ why: "Skipping the mech part blocks the train gate progress. The greenhouse route opens fully only after the mech part is handled.",
  },
  {
- step: "4. Learn creature behavior",
+ step: "4. Learn lockpicking in the first facility",
  doThis:
- "Avoid the power whale, study facility enemies, and save explosives for encounters with clear weak-point hints.",
- why: "Demo dialogue explicitly warns against provoking the whale and gives a boss weak-point clue later.",
+ "When you find a locked chest, practice the lockpick minigame: Space to rotate, left mouse to raise. Gold pins unlock the chest.",
+ why: "Locked chests in the greenhouse and Prometheus Laboratory contain ammo, healing items, and blueprints. Lockpicking is the difference between surviving and struggling.",
+ },
+ {
+ step: "5. Treat the Greenhouse as a planned facility run",
+ doThis:
+ "Before entering the greenhouse, check your ammo count, healing supplies, and exit route. Do not enter low on resources.",
+ why: "The greenhouse contains the access card needed for later progress, but it also has corrosive floors and root enemies that punish careless entry.",
  },
 ];
 
@@ -93,24 +99,32 @@ export default function ProjectMistBeginnerGuidePage() {
  heroAlt="Project: Mist beginner survival guide image"
  faqs={faqs}
  >
- <BlufBox title="First-Day Rule">
+ <BlufBox title="First-Hour Rule">
  <p>
  <strong>
- Play the first session like a systems test, not a full clear.
+ Your first hour should achieve 3 things: reach the train, learn the Gravity Gun, and secure a retreat route.
  </strong>{" "}
- Learn the Gravity Gun, secure basic resources, return to the moving
- train base early, and treat every deep facility trip as optional until
- you understand enemy pressure.
+ Do not chase every objective marker. The train base is your safe harbor -
+ storage, crafting, and repairs all depend on it. Anything you do before
+ reaching the train is a scouting run.
  </p>
  </BlufBox>
 
  <section className="prose-game">
- <h2>First Day Priorities</h2>
+ <h2>First Hour Priorities - Minute-by-Minute</h2>
  <ArticleImage
- src={projectMistImages.beginner}
- alt="Project: Mist first day beginner guide visual"
- caption="A strong first save should produce information: controls, safe routes, resource loops, and return paths."
+ src={projectMistImages.pmTrain || projectMistImages.beginner}
+ alt="Project: Mist train base first priority"
+ caption="Reach the train in the first 15-20 minutes. It becomes your crafting, storage, and safety hub for the rest of the run."
  />
+ <ul>
+ <li><strong>Minutes 0-5:</strong> Open starter chest, save, test flashlight and inventory. Do not leave without checking the objective screen.</li>
+ <li><strong>Minutes 5-10:</strong> Follow the compass toward the train. Gather loose resources along the path but do not get sidetracked.</li>
+ <li><strong>Minutes 10-20:</strong> Reach the train, deposit resources, check crafting stations. This is your new home base.</li>
+ <li><strong>Minutes 20-30:</strong> Head west for the mech part. This unlocks train gate progress. Craft extra ammo before leaving.</li>
+ <li><strong>Minutes 30-45:</strong> Enter the greenhouse with full supplies. Look for the access card and locked chests.</li>
+ <li><strong>Minutes 45-60:</strong> Return to the train, deposit loot, repair gear, and plan the next facility run.</li>
+ </ul>
  </section>
  <ActionTable rows={firstDayRows} />
 
@@ -122,10 +136,11 @@ export default function ProjectMistBeginnerGuidePage() {
  caption="The demo route gives beginners a clean order: starter supplies, train, mech part, greenhouse, then facility progress."
  />
  <p>
- The opening route is clearer than a generic survival checklist: get
- supplied, reach the train, find the mech part, then enter the
- greenhouse with enough resources to survive the facility. Treat this
- as demo guidance because Early Access routes can change.
+ The opening route is straightforward once you know the steps: grab
+ starter supplies, reach the train, find the mech part west of the
+ bridge, then enter the greenhouse with enough resources to survive
+ the facility. The Prometheus Laboratory comes last - do not enter
+ until your gear is upgraded and you have at least 100 rounds.
  </p>
  </section>
 
@@ -156,9 +171,17 @@ export default function ProjectMistBeginnerGuidePage() {
  caption="Use the Gravity Gun to block paths, move debris, interrupt pressure, and solve movement problems before spending scarce resources."
  />
  <p>
- Steam describes the Gravity Gun as a way to move objects, manipulate
- enemies or debris, control space, and turn the environment into a
- weapon. That makes it a utility tool first and a damage tool second.
+ The Gravity Gun does more than throw objects. Use it to:
+ </p>
+ <ul>
+ <li><strong>Block doorways:</strong> Drag debris or crates to create cover in narrow corridors.</li>
+ <li><strong>Interrupt enemies:</strong> A well-timed throw staggers most creatures, creating escape windows.</li>
+ <li><strong>Solve puzzles:</strong> Some facility doors require moving heavy objects onto pressure plates.</li>
+ <li><strong>Save ammo:</strong> Throwing environment objects deals damage without spending bullets.</li>
+ </ul>
+ <p>
+ Upgrade the Gravity Gun with Blood Orbs when you find upgrade stations.
+ Tier 2 adds projectile throwing - this is a major combat power spike.
  </p>
  </section>
 
@@ -169,6 +192,13 @@ export default function ProjectMistBeginnerGuidePage() {
  alt="Project: Mist beginner lockpick and chest image"
  caption="Lockpicking is worth learning early because locked chests and side rooms can support ammo, healing, crafting, and upgrades."
  />
+ <p>
+ Lockpicking is a simple minigame: use Space to rotate the pick,
+ left mouse to raise it, and guide it past obstacles toward the
+ gold pins. Practice on the first chest you find - it only takes
+ 2-3 attempts to get comfortable. Each gold pin you hit unlocks
+ better loot, so do not rush the final approach.
+ </p>
  </section>
 
  <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
@@ -217,14 +247,18 @@ export default function ProjectMistBeginnerGuidePage() {
  <ArticleImage
  src={projectMistImages.facilities}
  alt="Project: Mist facility beginner route image"
- caption="Facilities are likely progression hotspots. Enter them only after you know your exit route and have enough supplies to recover."
+ caption="Facilities are progression hotspots. Enter only when you have full ammo, healing, and a clear retreat plan."
  />
  <p>
- Public gameplay coverage points to facility routes, traversal hazards,
- and utility loot. That means beginners should avoid treating every
- building like a quick loot room. Check visibility, retreat options,
- and resource pressure before committing.
+ The Prometheus Laboratory is the end goal of the early route, but
+ it is also the most dangerous. Before entering:
  </p>
+ <ul>
+ <li><strong>Bring 100+ rounds</strong> for the root enemies and Spider boss.</li>
+ <li><strong>Carry 3+ healing items</strong> for corrosive floor damage.</li>
+ <li><strong>Know the exit</strong> - backtracking through the greenhouse is the only retreat path.</li>
+ <li><strong>Use the crafting bench</strong> inside the facility to convert materials before the boss fight.</li>
+ </ul>
  </section>
 
  <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
@@ -251,7 +285,7 @@ export default function ProjectMistBeginnerGuidePage() {
  <ArticleImage
  src={projectMistImages.creatures}
  alt="Project: Mist beginner danger and creature image"
- caption="The safest beginner mindset is to observe large threats first, then spend ammo or explosives only after the game gives a clear reason."
+ caption="Observe large threats first, then spend ammo or explosives only after the game gives a clear reason."
  />
  </section>
 

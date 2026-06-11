@@ -7,7 +7,7 @@ import {
  starminerImages,
 } from "@/lib/starminer";
 
-const title = "Starminer How to Make Money Fast: Credits, Trade & Debt Clearing Guide";
+const title = "Starminer How to Make Money Fast: Credits, Trade Routes & Debt Clearing 2026";
 const description =
  "How to earn credits fast in Starminer. Best resources to sell (Cobalt 72/unit, Thorium 360/unit), mission efficiency, automated trade routes, debt clearing strategy, and passive income setups.";
 const canonical = "/games/starminer/make-money";
@@ -28,12 +28,22 @@ const faqs = [
  {
  question: "What resource sells for the most in Starminer?",
  answer:
- "Thorium Chunks sell for 360 credits each ?the highest-value early resource. Cobalt at 72/unit is the best consistent income. Iron (12/unit) and Silicone (12/unit) are too cheap to sell ?use them for construction instead.",
+ "Thorium Chunks sell for 360 credits each — the highest-value early resource. Cobalt at 72/unit is the best consistent income. Iron (12/unit) and Silicone (12/unit) are too cheap to sell — use them for construction instead.",
  },
  {
  question: "How do I clear my starting debt?",
  answer:
  "Sell 2-3 Thorium Chunks or ~10 Cobalt units at a trade station. Accept mining delivery missions from the Operations Interface for bonus credits. Clear debt in the first 2 hours to avoid compounding interest.",
+ },
+ {
+ question: "Should I sell Iron and Silicone for quick cash?",
+ answer:
+ "No. Iron (12/unit) and Silicone (12/unit) pay too little for the cargo space. Keep them for hull frames and electronics. Sell only Cobalt, Thorium, and Gold for credit income.",
+ },
+ {
+ question: "How do I automate credit income?",
+ answer:
+ "Build a T2 Metal Storage module and set an auto-sell trigger at 80% capacity. The automation trigger has infinite range — it will sell surplus at the nearest trade station without manual hauling.",
  },
 ];
 
@@ -116,13 +126,26 @@ export default function StarminerMoneyPage() {
  />
 
  <section id="best-resources" className="mb-10">
- <h2 className="mb-4 text-2xl font-bold text-foreground">Best Resources to Sell</h2>
- <ArticleImage
- src={starminerImages.mining}
- alt="Starminer mining resources for credit income"
- caption="Fast money starts with knowing what is safe to sell and what must stay reserved for construction, power, research, and repairs."
- />
- <ActionTable rows={starminerMoneyRows} />
+   <h2 className="mb-4 text-2xl font-bold text-foreground">Best Resources to Sell</h2>
+   <ArticleImage
+     src={starminerImages.mining}
+     alt="Starminer mining resources for credit income"
+     caption="Fast money starts with knowing what is safe to sell and what must stay reserved for construction, power, research, and repairs."
+   />
+   <ActionTable rows={starminerMoneyRows} />
+ </section>
+
+ <section id="first-hour" className="mb-10 mt-10">
+   <h2 className="mb-4 text-2xl font-bold text-foreground">First-Hour Money Making Route</h2>
+   <div className="rounded-lg border border-border bg-mist p-5">
+     <ol className="list-decimal space-y-4 pl-5 text-sm leading-relaxed text-muted-foreground">
+       <li><strong>Minutes 0-15 — Build your first mining ship.</strong> Attach 1 mining laser, 1 small thruster, 1 reactor, 1 cargo module, and crew quarters to a small frame. Launch from the starter station and target the nearest debris field or C-class asteroid cluster.</li>
+       <li><strong>Minutes 15-25 — Mine Cobalt and Thorium.</strong> Focus fire on glowing mineral nodes. Cobalt appears in most debris fields. Thorium chunks (worth 360 credits each) are rarer but clearly marked with orange glow. A single Thorium chunk covers your starting debt.</li>
+       <li><strong>Minutes 25-35 — First sell run.</strong> Dock at the nearest trade station (within 1000m of your mining zone). Sell all Cobalt and Thorium. Keep Iron and Silicone. This first trip should yield 500-1500 credits.</li>
+       <li><strong>Minutes 35-45 — Clear the starting debt.</strong> Return to the Governance ship or trade lane terminal. Pay off the starting debt with 2 Thorium chunks or ~10 Cobalt units. Interest compounds — clearing it in the first hour saves credits for ships and upgrades.</li>
+       <li><strong>Minutes 45-60 — Set up automation.</strong> Build a Basic Smelter next to your mining dock and a T2 Metal Storage with auto-sell trigger at 80%. Now your mining loop generates passive income while you expand.</li>
+     </ol>
+   </div>
  </section>
 
  <section id="price-table" className="mt-10">

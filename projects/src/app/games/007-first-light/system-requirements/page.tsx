@@ -20,7 +20,7 @@ import {
 
 const title = '007 First Light System Requirements and PC Specs';
 const description =
- 'Official 007 First Light PC requirements and launch performance checks: Windows 10/11, 16 GB RAM, GTX 1660 or RX 5700 minimum, RTX 3060 Ti or RX 6700 XT recommended, 80 GB SSD, DLSS notes, Steam Deck caution, and Denuvo.';
+ 'Official 007 First Light PC requirements and launch performance checks: Windows 10/11, 16 GB RAM, GTX 1660 or RX 5700 minimum, RTX 3060 Ti or RX 6700 XT recommended, 80 GB SSD, DLSS notes, Steam Deck status, and Denuvo.';
 const canonical = '/games/007-first-light/system-requirements';
 
 export const metadata = createFirstLightMetadata({
@@ -133,8 +133,8 @@ export default function FirstLightSystemRequirementsPage() {
  <h2>Steam Deck, Denuvo, and Benchmark Signals</h2>
  <p>
  Player questions outside Google are focused on handheld play, DRM,
- and real benchmark behavior. Treat Steam Deck as unverified unless a
- Steam rating or strong player settings reports fit your tolerance.
+ and real benchmark behavior. Steam Deck is unconfirmed unless a
+ Steam rating or reliable player settings reports fit your tolerance.
  For PC, compare your GPU and CPU against current benchmarks, then test
  cutscenes, driving, dense stealth areas, DLSS or FSR behavior, and
  frame pacing before committing past the refund window.
@@ -142,8 +142,7 @@ export default function FirstLightSystemRequirementsPage() {
 
  <h2 id="deck">If You Plan to Play on Steam Deck vs If You Are on Desktop</h2>
  <p>
- If you plan to play on Steam Deck, treat the device as unverified:
- expect to test low settings and upscaling inside the refund window
+ If you plan to play on Steam Deck, expect to test low settings and upscaling inside the refund window
  and avoid assuming the listed minimum spec translates to smooth
  handheld play. If you are on a desktop that meets the recommended
  tier, focus on DLSS or FSR presets, driver updates, and frame pacing
@@ -156,8 +155,7 @@ export default function FirstLightSystemRequirementsPage() {
  <p>
  If DLSS matters to you, treat the launch DLSS 4.5 Super Resolution
  and DLSS Dynamic Multi Frame Generation as real launch features,
- but do not assume path tracing or DLSS Ray Reconstruction is
- available on day one; those are planned for Summer 2026. If you
+ but path tracing and DLSS Ray Reconstruction are planned for Summer 2026, not available on day one. If you
  prefer native resolution, plan for higher GPU pressure and verify
  your card against the recommended tier rather than the minimum
  tier. In both cases, use the refund window to confirm the visual

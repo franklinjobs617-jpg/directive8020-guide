@@ -23,6 +23,7 @@ export const mechanicusIIImages = {
  screenshot5: '/games/mechanicus-ii/character-customization.webp',
  buyer: '/games/mechanicus-ii/buyer-art.webp',
  worthItBanner: '/games/mechanicus-ii/worth-it-banner.webp',
+ battle: '/games/mechanicus-ii/m2-battle.webp',
 };
 
 export const mechanicusIIVideos = [

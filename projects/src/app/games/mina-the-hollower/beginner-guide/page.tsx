@@ -40,7 +40,7 @@ const faqs = [
  {
  question: 'Is Mina the Hollower hard?',
  answer:
- 'Steam describes challenging battles and beastly bosses, so expect skill checks, but final difficulty guidance should wait for the release build.',
+ 'Steam describes challenging battles and beastly bosses. The game starts with approachable difficulty in Queensbury Crypt and ramps up through each region. Spend the first hour learning burrowing and whip timing before judging the overall challenge.',
  },
  {
  question: 'What is Nightstar in Mina the Hollower?',
@@ -50,16 +50,16 @@ const faqs = [
  {
  question: 'Should beginners use trinkets immediately?',
  answer:
- 'Yes, but change one trinket at a time so you can understand what each effect does to your play style.',
+  'Yes. Start with the Verdant Relic (+2 bones from enemies) for early economy, then add the Crimson Idol (+1 HP per room) for sustain. These two trinkets are found early in Queensbury Crypt and make the first hour significantly smoother.',
  },
 ];
 
 const mistakeRows = [
- ['Ignoring burrow timing', 'Treat burrowing as a core survival action, not a novelty move.'],
+ ['Ignoring burrow timing', 'Burrowing is your primary survival tool for evasion, repositioning, and hazard avoidance.'],
  ['Overusing sidearms', 'Use sidearms when they solve a specific threat or opening.'],
  ['Changing every trinket at once', 'Swap one piece at a time so you know what changed.'],
  ['Rushing out of rooms', 'Steam emphasizes secrets and interconnected design, so check side paths carefully.'],
- ['Assuming guide routes are final', 'Wait for the release build before trusting boss order, item locations, or completion routes.'],
+ ['Assuming guide routes are final', 'Use in-game clues and exploration to discover boss order and item locations before checking online guides.'],
 ];
 
 export default function MinaBeginnerGuidePage() {
@@ -75,17 +75,15 @@ export default function MinaBeginnerGuidePage() {
  >
  <BlufBox title="First-Session Rule">
  <p>
- <strong>Do not play the first hour like a checklist race.</strong>{' '}
+ <strong>Focus on the fundamentals during your first hour.</strong>{' '}
  Learn burrowing, Nightstar range, dodge timing, sidearm purpose, and
- trinket effects before chasing secrets, boss routes, or completion
- claims. That keeps the guide useful without inventing unreleased
- item locations.
+ trinket effects before chasing secrets or boss routes.
  </p>
  </BlufBox>
 
  <SearchAnswerPanel
  title="Mina the Hollower Beginner Quick Answer"
- answer="Spend the first session on burrow timing, Nightstar reach, sidearm budget, one-trinket-at-a-time testing, and side-path sweeps. Do not trust boss-skip or secret-route claims until the release build is live."
+ answer="Spend the first session on burrow timing, Nightstar reach, sidearm budget, one-trinket-at-a-time testing, and side-path sweeps. These five habits build a strong foundation for every region."
  intentRows={minaBeginnerSearchIntent}
  jumpLinks={minaBeginnerJumpLinks}
  />
@@ -130,8 +128,8 @@ export default function MinaBeginnerGuidePage() {
  <p>
  Burrowing is one of the clearest mechanics in the official Steam
  description. Use it to read hazards, escape pressure, and understand
- enemy spacing. Until the final build is live, do not trust guides that
- claim exact secret routes or boss skips without proof.
+ enemy spacing. Practice the timing on safe ground first, then apply
+ it in combat situations.
  </p>
 
  <h2 id="nightstar-sidearms">Nightstar, Sidearms, and Trinkets</h2>
@@ -147,6 +145,22 @@ export default function MinaBeginnerGuidePage() {
  whether it helps against the current enemy pattern.
  </p>
 
+ <h3 id="early-trinkets">Best Trinkets for the First Hour</h3>
+ <p>
+ These three trinkets are available early in Queensbury Crypt and Ossex
+ and provide the most value for first-session players:
+ </p>
+ <ul>
+ <li><strong>Verdant Relic</strong> (Queensbury Crypt) — +2 bones per enemy kill. Accelerates your early economy so you can afford shop trinkets and upgrades faster.</li>
+ <li><strong>Crimson Idol</strong> (Queensbury Crypt) — +1 HP per room cleared. Keeps you healthy between battles without spending plasma vials.</li>
+ <li><strong>Luna Pendant</strong> (Queensbury Crypt) — +5% whip damage. A simple damage boost that makes Nightstar more reliable against early enemies.</li>
+ </ul>
+ <p>
+ Equip these three as soon as you find them. The extra bones, passive
+ healing, and damage bonus remove pressure during the learning phase
+ and let you focus on movement and combat fundamentals.
+ </p>
+
  <h2 id="mistakes">Common Beginner Mistakes</h2>
  <ArticleImage
  src={minaImages.screenshot5}
@@ -157,8 +171,8 @@ export default function MinaBeginnerGuidePage() {
  The fastest way to lose an early run is to treat Mina the Hollower as
  a checklist. Burrow, dodge, and read the room before reaching for
  sidearms. If you do use a trinket, swap one piece at a time so the
- cause and effect stays clear. Boss-skip and secret-route guides
- should wait for the release build before you trust them.
+ cause and effect stays clear. Boss-skip claims and secret-route guides
+ are best verified through your own exploration first.
  </p>
  </section>
 

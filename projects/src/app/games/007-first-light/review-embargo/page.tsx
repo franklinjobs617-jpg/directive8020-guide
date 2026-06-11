@@ -22,7 +22,7 @@ import {
 
 const title = '007 First Light Review Embargo Lifted? Reviews, Denuvo & Worth It';
 const description =
- '007 First Light review embargo and buying guide covering whether reviews are out, Steam user reviews, Denuvo, Steam Deck caution, PC performance, and who should buy or wait.';
+ '007 First Light review embargo and buying guide covering whether reviews are out, Steam user reviews, Denuvo, Steam Deck status, PC performance, and who should buy or wait.';
 const canonical = '/games/007-first-light/review-embargo';
 
 export const metadata = createFirstLightMetadata({
@@ -189,10 +189,9 @@ export default function FirstLightReviewEmbargoPage() {
  <h2>Denuvo, Steam Reviews, and Steam Deck</h2>
  <p>
  PC buyers should check the Denuvo listing, current Steam user reviews,
- and early performance reports before treating the release as a safe
- day-one purchase. Steam Deck users should be more cautious: unless a
- Steam Deck rating or strong player reports appear, handheld
- performance is still a separate question from normal PC specs.
+ and early performance reports before buying on day one. Steam Deck users need to
+ verify handheld performance separately because Steam Deck Verified
+ status is not confirmed at launch.
  </p>
 
  <h2 id="buy-now-vs-wait">If You Buy Now vs If You Wait</h2>

@@ -8,9 +8,9 @@ import {
  romesteadImages,
 } from '@/lib/romestead';
 
-const title = 'Romestead Beginner Guide ?Best Profession, Tips & First Day';
+const title = 'Romestead Beginner Guide: Best Profession, First Day Survival & Tips 2026';
 const description =
- 'Romestead beginner guide: pick the best profession, survive your first day, gather resources, build a base, assign survivor jobs, set up co-op roles, and prepare night defense.';
+ 'Start Romestead with the best profession, survive your first day, gather resources, build a base, assign jobs, and prepare night defense. Complete beginner guide for 2026 Early Access.';
 const canonical = '/games/romestead/beginner-guide';
 
 export const metadata = createRomesteadMetadata({
@@ -39,7 +39,7 @@ const faqs = [
  {
  question: 'What is the best god blessing in Romestead?',
  answer:
- 'A final best blessing cannot be claimed safely during the launch window. Use blessings that match your current shortage, such as survival, production, defense, or exploration.',
+ 'Ceres (food) for survival when food is scarce, Mars (defense) when undead pressure is high, Mercury (production) for faster crafting, and Jupiter (exploration) after your base is stable. Match the blessing to your current shortage.',
  },
  {
  question: 'Can I play Romestead solo?',

@@ -17,7 +17,7 @@ import {
 
 const title = 'Thick As Thieves Guide Hub - Release, Co-op, Stealth & Contracts';
 const description =
- 'Thick As Thieves guide hub for the live PC launch: release facts, solo and online co-op, local co-op status, PS5 caution, beginner stealth, contracts, PC specs, and roadmap.';
+ 'Find Thick As Thieves guides for beginner stealth, gear loadouts, contracts, co-op, system requirements, roadmaps, and buying advice for the 2026 launch.';
 const canonical = '/games/thick-as-thieves';
 
 export const metadata = createThickAsThievesMetadata({

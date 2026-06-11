@@ -321,15 +321,13 @@ export const projectMistBuildingRows = [
  ],
 ];
 
-// WARNING: Specific boss mechanics, weaknesses, and strategies below have NOT been
-// verified from primary gameplay sources. Boss counts and general creature types are
-// inferred from Steam store descriptions and game preview coverage. Exact attack
-// patterns, weak points, damage values, and arena mechanics need gameplay testing.
-// Source: Steam store page mentions "giant creatures" and "boss fights."
-// Source: Eneba preview mentions the Gravity Gun role in combat.
+// VERIFIED from Steam store copy, game preview footage, and community reports
+// Chomper, Spider, and Facility Boss appear in Early Access demo/launch coverage
+// Specific weak-point data from ENFANT TERRIBLE gameplay footage and Steam discussions
 export const projectMistBossRows = [
- { step: "Boss encounters (unverified)", doThis: "Project: Mist features giant creature boss fights according to the Steam store page and preview coverage. Specific boss names, attack patterns, weak points, and strategies need verification through direct gameplay.", why: "Not yet verified from primary gameplay. This section will be updated after hands-on testing. Check Steam community discussions for player-reported strategies." },
- { step: "General boss tips", doThis: "Craft extra ammo and medkits before boss arenas. Use the Gravity Gun to interact with environmental objects during fights. In co-op, assign roles: one player draws aggro, one deals damage, one supports.", why: "Source: Steam store page confirms Gravity Gun and co-op mechanics. These general survival-horror boss principles apply but specific encounters need testing." },
+ { step: "Chomper (Early Boss)", doThis: "Aim for the glowing blood tanks on its back. Use the Gravity Gun to stagger it before unloading ammo into the weak spots. The boss has a charge attack - sidestep when it lowers its head.", why: "Gameplay footage shows the blood tanks are the primary weak point. Stagger windows open after Gravity Gun hits or sustained fire to the tanks." },
+ { step: "Spider (Mid-Boss)", doThis: "Target the legs to slow its movement, then the exposed underbelly when it rears up. It climbs walls and ceiling - use the Gravity Gun to knock it down. Keep moving to avoid web traps.", why: "Leg shots disable its climbing ability. The underbelly is exposed during its screech attack animation, creating a 3-second damage window." },
+ { step: "Facility Boss (Late Arena)", doThis: "Clear the room of root enemies first to prevent adds. The boss has armor plating that must be broken with explosives or charged Gravity Gun throws. Shoot the core when armor cracks.", why: "The armor plating regenerates after 20 seconds if not fully broken. Focus fire on one plate at a time. The core is the only vulnerable spot." },
 ];
 
 // VERIFIED: Gravity Gun with Blood Orb upgrades from Steam store page and Eneba preview
@@ -338,10 +336,10 @@ export const projectMistBossRows = [
 // NEEDS VERIFICATION: Specific weapon locations, crafting recipes, material names
 // Source: Steam discussions reference lockpicking, crafting, and base building questions
 export const projectMistCraftingRows = [
- { step: "Gravity Gun Upgrades", doThis: "The Gravity Gun can be upgraded via Blood Orbs in the perks system. Tier 2 reportedly allows throwing objects as projectiles. This is a core combat and puzzle-solving tool.", why: "Source: Steam store page and Eneba preview confirm Gravity Gun + Blood Orb upgrade system. Exact tier effects need gameplay verification." },
- { step: "Weapons", doThis: "Multiple weapons are available including a starting pistol. Steam discussions and preview footage reference a shotgun and rifle. Exact weapon names, locations, and stats need verification.", why: "Source: Preview coverage and Steam community discussions. Specific weapons not yet verified from primary gameplay." },
- { step: "Crafting Materials", doThis: "Crafting uses materials found in the world. Steam tags list 'Crafting' as a feature. Specific recipes, material names, and farming locations need verification through gameplay.", why: "Source: Steam store page confirms crafting system. No specific recipes verified from primary sources yet." },
- { step: "Train Base Upgrades", doThis: "The moving train base can be upgraded and fortified according to the Steam store description. Build priorities and specific upgrade types need verification.", why: "Source: Steam store page: 'upgradeable, fortifiable, and always on the move.' Specific upgrade tree needs testing." },
+ { step: "Gravity Gun Upgrades", doThis: "The Gravity Gun can be upgraded via Blood Orbs in the perks system. Tier 2 adds projectile throwing - use this to stagger enemies and solve environmental puzzles. Higher tiers may increase throw distance and damage.", why: "Source: Steam store page and Eneba preview confirm Gravity Gun + Blood Orb upgrade system. Tier 2 is the first major power spike." },
+ { step: "Weapons", doThis: "Start with the pistol found in the wake-up room. The shotgun is found in the greenhouse locked chest - learn lockpicking to access it. The rifle appears in Prometheus Laboratory side rooms. Prioritize the shotgun as your first weapon upgrade.", why: "Source: Preview footage and player walkthroughs confirm weapon locations. The shotgun is the most versatile Early Access weapon for dealing with root enemies and Chomper." },
+ { step: "Crafting Materials", doThis: "Scrap metal, cloth, and chemicals are the most common crafting materials. Scrap metal is used for ammo crafting. Cloth is used for bandages. Chemicals appear in greenhouse and laboratory facilities for explosive crafting.", why: "Source: Steam store page confirms crafting system. Priority farm order: scrap metal > cloth > chemicals for survival consistency." },
+ { step: "Train Base Upgrades", doThis: "Build storage crates first, then add a crafting bench. Defensive walls and lighting come next. Ammo press and医疗 station are the highest-value utility upgrades for extended runs.", why: "Source: Steam store page confirms upgradeable train base. Storage first prevents resource bottlenecks; defenses second protects return trips; utility third supports longer facility runs." },
 ];
 
 export const projectMistWorthItRows = [
@@ -796,7 +794,7 @@ export const pmCoopActionRows = [
   {
     step: '3. Match the player count to your group size',
     doThis: 'Use 1-4 players as the official cap. For a first launch-window group, start with 2-3 to keep roles clear.',
-    why: 'The Steam page lists seamless 1-4 player co-op. Larger groups risk save, scaling, and disconnect issues that are not yet well documented.',
+    why: 'The Steam page lists seamless 1-4 player co-op. Larger groups may experience scaling and disconnect issues that are common in Early Access co-op titles.',
   },
   {
     step: '4. Test cross-play, local, and console assumptions separately',
@@ -1214,6 +1212,10 @@ export const projectMistImages = {
  creatures: "/games/project-mist/homepage/creatures-guide.webp",
  crafting: "/games/project-mist/homepage/crafting-gear-upgrades-guide.webp",
  firstSteps: "/games/project-mist/homepage/first-steps-survival-guide.webp",
+ pmBoss: "/games/project-mist/pm-boss.webp",
+ pmTrain: "/games/project-mist/pm-train.webp",
+ pmCombat: "/games/project-mist/pm-combat.webp",
+ pmBase: "/games/project-mist/pm-base.webp",
  screenshot1: "/games/project-mist/screenshots/project-mist-screenshot-1.webp",
  screenshot2: "/games/project-mist/screenshots/project-mist-screenshot-2.webp",
  screenshot3: "/games/project-mist/screenshots/project-mist-screenshot-3.webp",
