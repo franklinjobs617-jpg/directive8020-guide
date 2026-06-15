@@ -3,55 +3,60 @@ import Script from "next/script";
 import { Inspector } from "react-dev-inspector";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { NanoBananasBanner } from "@/components/nano-bananas-banner";
+// ✅ REMOVED: NanoBananasBanner — 外链跳转到 nanobananas.me 破坏站点完整性，AdSense 审核减分
+// import { NanoBananasBanner } from "@/components/nano-bananas-banner";
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://enjoy4game.com"),
   title: {
-    default: "Enjoy4Game Guides - Game Walkthroughs, Builds, Tips & Strategy",
-    template: "%s | Enjoy4Game Guides",
+    // ✅ CHANGED: 更突出 "multi-game hub" 定位，让审核员第一眼就读懂这是多游戏站
+    default: "Enjoy4Game — Game Guides, Walkthroughs & Tools for New Releases",
+    template: "%s | Enjoy4Game",
   },
+  // ✅ CHANGED: 强调覆盖类型和站点持续运营性质，而非单一游戏
   description:
-    "Game guides for survival horror, RPG, life sim, strategy, and indie games. Walkthroughs, builds, tips, system requirements, Steam Deck checks, and buying advice.",
+    "Game guides, walkthroughs, builds, and tools for Steam new releases and early access games. Coverage includes survival, RPG, horror, strategy, life sim, and indie games.",
   keywords: [
     "game guides",
     "game walkthroughs",
-    "PC game guides",
-    "indie game guides",
+    "Steam new releases guide",
+    "early access game guides",
     "survival game guides",
     "RPG game guides",
-    "Steam game guides",
-    "Early Access game guides",
-    "game tips and tricks",
-    "game system requirements",
+    "indie game guides",
+    "PC game guides",
     "Steam Deck game guides",
+    "game builds and tips",
+    "game release coverage",
   ],
-  authors: [{ name: "Enjoy4Game Guides" }],
+  // ✅ ADDED: 明确作者身份，E-E-A-T 要求
+  authors: [{ name: "Enjoy4Game Editorial" }],
   other: {
     "google-adsense-account": "ca-pub-3383070348689557",
     "msvalidate.01": "AF7A71774B31B882258DD5FDB265DB04",
   },
   openGraph: {
-    title: "Enjoy4Game Guides - Game Walkthroughs, Builds, Tips & Strategy",
+    // ✅ CHANGED: OG title 与 default title 保持一致
+    title: "Enjoy4Game — Game Guides, Walkthroughs & Tools for New Releases",
     description:
-      "Game guides for survival horror, RPG, life sim, strategy, and indie games. Walkthroughs, builds, tips, system requirements, Steam Deck checks, and buying advice.",
+      "Game guides, walkthroughs, builds, and tools for Steam new releases and early access games. Coverage includes survival, RPG, horror, strategy, life sim, and indie games.",
     locale: "en_US",
     type: "website",
-    siteName: "Enjoy4Game Guides",
+    siteName: "Enjoy4Game",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Enjoy4Game Guides - Game Walkthroughs, Builds, Tips & Strategy",
+    title: "Enjoy4Game — Game Guides, Walkthroughs & Tools for New Releases",
     description:
-      "Game guides for survival horror, RPG, life sim, strategy, and indie games. Walkthroughs, builds, tips, system requirements, Steam Deck checks, and buying advice.",
+      "Game guides, walkthroughs, builds, and tools for Steam new releases and early access games. Coverage includes survival, RPG, horror, strategy, life sim, and indie games.",
   },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://enjoy4game.com",
   },
 };
 
@@ -76,7 +81,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://cdn.pokiter.com" />
         <link rel="dns-prefetch" href="https://ezoicanalytics.com" />
         {/* ========================================================= */}
-        {/* 1. Ezoic 隐私合规脚本 (在 sa.min.js 之前加载以确保合规性) */}
+        {/* 1. Ezoic 隐私合规脚本 */}
         {/* ========================================================= */}
         <meta name="msvalidate.01" content="AF7A71774B31B882258DD5FDB265DB04" />
         <Script
@@ -91,7 +96,6 @@ export default function RootLayout({
           strategy="beforeInteractive"
           data-cfasync="false"
         />
-
         {/* ========================================================= */}
         {/* 2. Ezoic 核心初始化脚本 */}
         {/* ========================================================= */}
@@ -102,9 +106,9 @@ export default function RootLayout({
         />
         <Script id="ezoic-analytics-init" strategy="beforeInteractive">
           {`
- window.ezstandalone = window.ezstandalone || {};
- ezstandalone.cmd = ezstandalone.cmd || [];
- `}
+window.ezstandalone = window.ezstandalone || {};
+ezstandalone.cmd = ezstandalone.cmd || [];
+`}
         </Script>
         <Script
           id="ezoic-analytics"
@@ -114,6 +118,12 @@ export default function RootLayout({
       </head>
 
       <body className="antialiased min-h-screen flex flex-col">
+        {/*
+          ⚠️  AdSense + Ezoic 并存注意事项:
+          如果你已经在用 Ezoic 变现, 暂时不需要同时跑 AdSense 脚本。
+          等 AdSense 审核通过后, 根据你选择的变现平台保留其中一个。
+          目前两个都保留不影响审核, 但 Ezoic 会接管广告位。
+        */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3383070348689557"
@@ -131,20 +141,19 @@ export default function RootLayout({
         />
         <Script id="ga-config" strategy="afterInteractive">
           {`
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
- window.gtag = gtag;
-
- gtag('js', new Date());
- gtag('config', 'G-1K6LQQSKHV', {
- page_path: window.location.pathname,
- });
- `}
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
+gtag('js', new Date());
+gtag('config', 'G-1K6LQQSKHV', {
+  page_path: window.location.pathname,
+});
+`}
         </Script>
 
         {isDev && <Inspector />}
         <SiteHeader />
-        <NanoBananasBanner />
+        {/* ✅ REMOVED: <NanoBananasBanner /> */}
         <main className="flex-1">{children}</main>
         <SiteFooter />
       </body>
