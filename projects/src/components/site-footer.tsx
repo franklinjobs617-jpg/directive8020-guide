@@ -38,6 +38,7 @@ const footerGroups = [
       ["Paralives Guide", "/games/paralives"],
       ["Romestead Guide", "/games/romestead"],
       ["Mina the Hollower", "/games/mina-the-hollower"],
+      ["Grow a Garden 2 Wiki ↗", "https://growagarden2pet.wiki"],
     ],
   },
   // ✅ CHANGED: Terms 路径从 /terms-of-use → /terms (与新建页面路径一致)
