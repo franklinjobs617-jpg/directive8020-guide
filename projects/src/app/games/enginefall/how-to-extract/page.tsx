@@ -165,7 +165,6 @@ export default function EnginefallHowToExtractPage() {
               ['Beginner Guide — First Run Survival', '/games/enginefall-beginner-guide'],
               ['Dagger Guide — Your Rail Base & Upgrades', '/games/enginefall-dagger-guide'],
               ['Conductor Guide — Train Control', '/games/enginefall-conductor-guide'],
-              ['System Requirements & Console Status', '/games/enginefall-system-requirements-platforms'],
             ].map(([label, href]) => (
               <a
                 key={href}

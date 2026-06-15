@@ -199,12 +199,7 @@ export const enginefallRelatedGuides: GameGuideLink[] = [
  description:
  'Dagger shuttle role, personal rail base, fuel, storage, schematics, Dagger vs Dagger pressure, and raid preparation.',
  },
- {
- title: 'System Requirements & Platforms',
- href: '/games/enginefall-system-requirements-platforms',
- description:
- 'Official PC specs, Steam Deck status, PS5 and Xbox caveats, controller expectations, and platform FAQ.',
- },
+
 ];
 
 export function getEnginefallRelated(excludeHref: string) {
