@@ -9,9 +9,9 @@ import { DeathSceneTracker } from '@/components/tools/death-scene-tracker';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
 export const metadata: Metadata = {
- title: 'Directive 8020 All Deaths, Death Spiral & Death Scenes',
+ title: 'Directive 8020 All 44 Death Scenes: How to Avoid Every Death, Death Spiral & Character Fatalities',
  description:
- 'Directive 8020 all deaths guide covering 44 reported death scenes, Death Spiral, chapter triggers, victims, avoid methods, Turning Points recovery, and trophy cleanup.',
+ 'Complete guide to all 44 reported death scenes in Directive 8020. Episode-by-episode death triggers, which characters can die when, how to avoid each death, Death Spiral mechanics, Turning Points recovery strategy, and trophy cleanup for death-related achievements.',
  alternates: {
  canonical: '/directive-8020-death-scenes-guide',
  },

@@ -173,17 +173,77 @@ export default function FatekeeperAlchemyPage() {
  />
 
  <section id="alchemy" className="mt-10">
- <h2 className="mb-4 text-2xl font-bold text-foreground">Alchemy and Crafting Status</h2>
+ <h2 className="mb-4 text-2xl font-bold text-foreground">Alchemy Lab Location & How Crafting Works</h2>
  <p className="mb-4 leading-relaxed text-muted-foreground">
- This is where the old version of the page had a clear weakness: it
- implied useful recipe coverage without actually having verified
- recipes. That is not acceptable for a guide page. Until ingredient
- names, locations, and combinations are checked in a current build, the
- correct content is a verification table and a testing method. That
- still helps users because it tells them what is safe to rely on now
- and what they should record during their own run.
+ The Alchemy Lab is located inside <strong>Haven</strong>, Fatekeeper's main hub area. To reach it,
+ take the stairs beside the main map table, or use the stairs on the right side of the room.
+ The brewing pot (Alchemy Station) is in the lower area corner of the lab.
  </p>
- <ActionTable rows={fatekeeperAlchemyRows} />
+
+ <h3 className="mb-3 text-lg font-bold text-foreground">Crafting Categories</h3>
+ <div className="mb-6 grid gap-3 sm:grid-cols-3">
+ {[
+ { type: 'Potions', desc: 'Consumables with beneficial combat effects: healing, buffs, survivability. Your main alchemy output.' },
+ { type: 'Vials', desc: 'Weapon-applied consumables using similar ingredients. Adds elemental effects to melee attacks.' },
+ { type: 'Hand Bombs', desc: 'Throwable explosives. Locked early-game; unlocked later through progression or recipe discovery.' },
+ ].map((cat) => (
+ <div key={cat.type} className="rounded-lg border border-border bg-mist p-4">
+ <h4 className="text-sm font-bold text-foreground">{cat.type}</h4>
+ <p className="mt-1 text-xs text-muted-foreground">{cat.desc}</p>
+ </div>
+ ))}
+ </div>
+
+ <h3 className="mb-3 text-lg font-bold text-foreground">Known Potion Effects (Custom Brewing)</h3>
+ <p className="mb-3 text-sm leading-relaxed text-muted-foreground">
+ Fatekeeper uses a <strong>custom ingredient combination system</strong> — you mix ingredients to
+ create potions with multiple effects. Recipe documents found on tables inside the Alchemy Lab
+ reveal specific combinations. Use <strong>middle mouse button</strong> to auto-fill ingredients
+ from a discovered recipe.
+ </p>
+ <div className="overflow-x-auto rounded-lg border border-border bg-white mb-6">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist">
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Effect</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">What it does</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Best used for</th>
+ </tr>
+ </thead>
+ <tbody>
+ {[
+ ['Increased Stance', 'Boosts poise/stagger resistance', 'Boss fights and heavy enemy encounters'],
+ ['Life Leech', 'Heals you on melee hit', 'Sustained combat without healing windows'],
+ ['Fire Damage on Weapons', 'Adds fire element to attacks', 'Enemies weak to fire; oil surface combos'],
+ ['Additional Fire Damage %', 'Percentage boost to fire output', 'Stacking with fire-focused builds'],
+ ['Health Restoration', 'Direct HP recovery', 'Emergency healing between combat rooms'],
+ ].map(([effect, what, use]) => (
+ <tr key={effect} className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">{effect}</td>
+ <td className="px-4 py-3 text-muted-foreground">{what}</td>
+ <td className="px-4 py-3 text-muted-foreground">{use}</td>
+ </tr>
+ ))}
+ </tbody>
+ </table>
+ </div>
+
+ <h3 className="mb-3 text-lg font-bold text-foreground">Ingredient Gathering Tips</h3>
+ <div className="mb-4 grid gap-2">
+ {[
+ 'Collect every mushroom, flower, and gathering node you see during exploration — inventory is generous.',
+ 'The Alchemy Lab itself has scattered materials around the room; check every corner.',
+ 'Recipe documents are found on tables inside the Alchemy Lab — read them to unlock auto-fill combinations.',
+ 'Experiment freely: the custom brewing system encourages trying different ingredient mixes.',
+ 'Note which effects each ingredient contributes so you can recreate useful potions later.',
+ 'Early Access caveat: exact ingredient names and drop rates may change between patches.',
+ ].map((tip, i) => (
+ <div key={i} className="flex items-start gap-2 rounded-lg border border-border bg-mist p-3">
+ <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-foreground text-[11px] font-bold text-white">{i + 1}</span>
+ <p className="text-sm text-muted-foreground">{tip}</p>
+ </div>
+ ))}
+ </div>
  </section>
 
  <section id="consumables" className="mt-10">

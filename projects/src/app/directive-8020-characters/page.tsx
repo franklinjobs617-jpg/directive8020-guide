@@ -10,9 +10,9 @@ import { RelatedGuides, SearchAnswerPanel } from '@/components/guide-blocks';
 import { crewPortraitHero, directiveCharacters } from '@/lib/directive-8020-characters';
 
 export const metadata: Metadata = {
- title: 'Directive 8020 Characters, Cast, Actors & Face Models',
+ title: 'Directive 8020 Characters & Cast: All 10 Crew Members, Actors, Face Models & Who Plays Who',
  description:
- 'Directive 8020 characters guide with playable crew, cast, actors, face model status, Brianna Young, Eisele actor verification, mimic clues, and survival roles.',
+ 'Complete Directive 8020 characters and cast guide: all 10 playable and NPC crew members, real actor names, face model details, who plays Brianna Young and Eisele, Samantha Cooper face model, mimic clues by character, and who can die vs survive.',
  alternates: {
  canonical: '/directive-8020-characters',
  },
@@ -119,9 +119,9 @@ export default function CharactersPage() {
  <>
  <JsonLd
  data={generateArticleSchema({
- title: 'Directive 8020 Characters, Cast, Actors & Face Models',
+ title: 'Directive 8020 Characters & Cast: All 10 Crew Members, Actors, Face Models & Who Plays Who',
  description:
- 'Directive 8020 characters guide with playable crew, cast details, actor verification, face model cautions, mimic threat, and survival notes.',
+ 'Complete Directive 8020 characters and cast guide: all 10 playable and NPC crew members, real actor names, face model details, who plays Brianna Young and Eisele, Samantha Cooper face model, mimic clues by character, and who can die vs survive.',
  url: '/directive-8020-characters',
  datePublished: '2026-05-10',
  dateModified: '2026-05-21',

@@ -9,9 +9,9 @@ import { MimicDetector } from '@/components/tools/mimic-detector';
 import { ChoiceImpactFilter } from '@/components/tools/choice-impact-filter';
 
 export const metadata: Metadata = {
- title: 'Directive 8020 All Choices & Consequences - Decision Map',
+ title: 'Directive 8020 All Choices & Consequences: Decision Tree, Best Ending Route & Every Major Choice',
  description:
- 'Directive 8020 choices and consequences guide: how to read major decisions, mimic trust checks, relationship changes, Story Tree branches, and Turning Points.',
+ 'Complete Directive 8020 decision tree: every major choice by episode, what happens, best safe route pick, mimic trust tests, QTEs, turning points, and how each decision affects character survival and endings.',
  alternates: {
  canonical: '/directive-8020-choices-consequences',
  },
@@ -166,9 +166,9 @@ export default function ChoicesConsequencesPage() {
  <>
  <JsonLd
  data={generateArticleSchema({
- title: 'Directive 8020 All Choices & Consequences - Decision Map',
+ title: 'Directive 8020 All Choices & Consequences: Decision Tree, Best Ending Route & Every Major Choice',
  description:
- 'Directive 8020 choices and consequences guide with mimic trust checks, relationship logic, Story Tree branches, and Turning Points strategy.',
+ 'Complete Directive 8020 decision tree: every major choice by episode, what happens, best safe route pick, mimic trust tests, QTEs, turning points, and how each decision affects character survival and endings.',
  url: '/directive-8020-choices-consequences',
  datePublished: '2026-05-12',
  dateModified: '2026-05-18',

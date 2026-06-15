@@ -17,9 +17,9 @@ import {
  thickAsThievesImages,
 } from "@/lib/thick-as-thieves";
 
-const title = "Thick As Thieves Co-op: How Many Players, Split Screen & Crossplay";
+const title = "Thick As Thieves Co-op & Solo: How Many Players, Split Screen, Crossplay & Can You Play Alone?";
 const description =
- "Thick As Thieves co-op guide: how many players, split screen status, couch co-op, local co-op, crossplay, online partner co-op, solo play, and what is confirmed versus unconfirmed.";
+ "Complete Thick As Thieves co-op and solo guide. How many players in co-op? Is there split screen or couch co-op? Does it support crossplay? Can you play solo? All confirmed facts vs unconfirmed rumors about multiplayer, online co-op partner play, and single player mode.";
 const canonical = "/games/thick-as-thieves/solo-coop";
 
 export const metadata = createThickAsThievesMetadata({

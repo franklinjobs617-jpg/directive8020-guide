@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { ArticleImage } from '@/components/article-media';
 import { createFearsToFathomMetadata, fearsToFathomImages } from '@/lib/fears-to-fathom';
 
-const title = 'Fears to Fathom: Scratch Creek — Full Walkthrough, All Chapters & Both Endings';
+const title = 'Fears to Fathom Scratch Creek Walkthrough: All 7 Chapters, Puzzles, Choices & Endings';
 const description =
- 'Complete walkthrough for Fears to Fathom: Scratch Creek. Chapter-by-chapter guide covering every step, puzzle solution, key decision, and how to get both endings.';
+ 'Complete step-by-step walkthrough for Fears to Fathom: Scratch Creek. Covers all 7 chapters with puzzle solutions, key decisions, character choices, how to unlock every ending, and co-op tips for both Marcus and Tessa.';
 const canonical = '/games/fears-to-fathom/walkthrough';
 
 export const metadata = createFearsToFathomMetadata({ title, description, canonical, image: fearsToFathomImages.screenshot3 });
@@ -129,9 +129,14 @@ export default function FearsToFathomWalkthroughPage() {
     </ul>
    </section>
 
-   <div className="mt-8 flex gap-4">
-    <Link href="/games/fears-to-fathom/co-op-guide" className="text-sm text-foreground underline hover:no-underline">\u2190 Co-op Guide</Link>
-    <Link href="/games/fears-to-fathom/achievements" className="text-sm text-foreground underline hover:no-underline">Achievements \u2192</Link>
+   <div className="mt-8 rounded-lg border border-border bg-mist p-5">
+    <h3 className="mb-3 text-sm font-bold text-foreground">More Scratch Creek Guides</h3>
+    <div className="flex flex-wrap gap-3">
+     <Link href="/games/fears-to-fathom" className="text-sm text-foreground underline hover:no-underline">Guide Hub</Link>
+     <Link href="/games/fears-to-fathom/co-op-guide" className="text-sm text-foreground underline hover:no-underline">Co-op & Solo FAQ</Link>
+     <Link href="/games/fears-to-fathom/achievements" className="text-sm text-foreground underline hover:no-underline">Achievements</Link>
+     <Link href="/games/fears-to-fathom/is-it-worth-it" className="text-sm text-foreground underline hover:no-underline">Is It Worth It?</Link>
+    </div>
    </div>
 
    <p className="mt-10 text-xs text-muted-foreground">

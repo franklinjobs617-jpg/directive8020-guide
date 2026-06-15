@@ -1172,6 +1172,51 @@ export const lunaAbyss: GameConfig = {
  ],
 };
 
+export const sellLemons: GameConfig = {
+ id: "sell-lemons",
+ slugPrefix: "sell-lemons",
+ hubPath: "/games/sell-lemons",
+ name: "Sell Lemons",
+ guidePublisher: "Enjoy4Game Guides",
+ description:
+ "A Roblox idle tycoon game from BloxByte Games where players sell lemons, automate income, unlock new activities, solve sewer routes, collect keys, and chase badges.",
+ platforms: ["Roblox"],
+ genres: ["Idle Tycoon", "Roblox", "Simulation", "Progression", "Casual"],
+ developer: "BloxByte Games",
+ publisher: "BloxByte Games",
+ releaseDate: "2026-05-16",
+ operatingSystem: "Roblox",
+ url: "https://www.roblox.com/games/79268393072444/Sell-Lemons",
+ availability: "https://schema.org/InStock",
+ heroImage: "/games/sell-lemons/icon.png",
+ guideLinks: [
+ {
+ title: "Sell Lemons Guide Hub",
+ href: "/games/sell-lemons",
+ description:
+ "Beginner route, money fast priorities, Sewer Key, UFO Key, badges, upgrades, and codes status.",
+ },
+ {
+ title: "Beginner Guide + Money Fast",
+ href: "/games/sell-lemons/beginner-guide",
+ description:
+ "First route, manager upgrades, newest activity priority, events, and common early mistakes.",
+ },
+ {
+ title: "Sewer Key + Cosmic Farmer",
+ href: "/games/sell-lemons/sewer-key-cosmic-farmer",
+ description:
+ "Colored lever sequence, Sewer Key route, Sewer Gate unlock, and Cosmic Farmer badge path.",
+ },
+ {
+ title: "UFO Key + Good Samaritan",
+ href: "/games/sell-lemons/ufo-key-good-samaritan",
+ description:
+ "UFO Key lever order, alien room route, Good Samaritan badge path, and stuck checks.",
+ },
+ ],
+};
+
 export const fearsToFathom: GameConfig = {
  id: "fears-to-fathom",
  slugPrefix: "fears-to-fathom",

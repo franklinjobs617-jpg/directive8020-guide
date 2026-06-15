@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArticleImage } from '@/components/article-media';
-import { ActionTable, BlufBox } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, RelatedGuides } from '@/components/guide-blocks';
 import { MechanicusIIArticle } from '@/components/mechanicus-ii-article';
 import {
  createMechanicusIIMetadata,
@@ -10,9 +10,9 @@ import {
  mechanicusIIImages,
 } from '@/lib/mechanicus-ii';
 
-const title = 'Warhammer 40,000: Mechanicus II Beginner Guide: First Campaign & Builds';
+const title = 'Mechanicus II Beginner Guide: Which Campaign First, Best Units, Tips & Builds 2026';
 const description =
- 'Spoiler-light Mechanicus II beginner guide for first campaign choice, safe builds, cover, terrain, Cognition, Dominion, turn order, and early mission mistakes.';
+ 'New to Warhammer 40,000: Mechanicus II? Learn which campaign to pick first (Adeptus Mechanicus vs Necrons), best beginner units and builds, cover tactics, Cognition and Dominion explained, and tips to avoid common early mistakes.';
 const canonical = '/games/mechanicus-ii/beginner-guide';
 
 export const metadata = createMechanicusIIMetadata({
@@ -237,6 +237,18 @@ export default function MechanicusIIBeginnerGuidePage() {
  </tbody>
  </table>
  </div>
+
+ <RelatedGuides
+ guides={[
+ { title: 'Mechanicus II Hub', href: '/games/mechanicus-ii', description: 'All Mechanicus II guides in one place: walkthrough, factions, units, tips, and more.' },
+ { title: 'Missions Walkthrough', href: '/games/mechanicus-ii/missions-walkthrough', description: 'Mission-by-mission routing help for objectives, interactables, and campaign progression.' },
+ { title: 'Factions Guide', href: '/games/mechanicus-ii/factions', description: 'Adeptus Mechanicus vs Necrons: campaign identity, battlefield strengths, and leader comparison.' },
+ { title: 'Unit Tier List & Best Builds', href: '/games/mechanicus-ii/unit-tier-list', description: 'S-tier to C-tier ranking for every unit across both factions with best squad compositions.' },
+ { title: 'Tips and Tricks', href: '/games/mechanicus-ii/tips-and-tricks', description: 'Practical tactics for cover, turn order, green consoles, campaign resources, and leader safety.' },
+ { title: 'Leaders Guide', href: '/games/mechanicus-ii/leaders-guide', description: 'Faustinius, Nefershah, leader safety, death risk, and first-campaign decision rules.' },
+ ]}
+ />
+
  </MechanicusIIArticle>
  );
 }

@@ -17,9 +17,9 @@ import {
  projectMistVideos,
 } from '@/lib/project-mist';
 
-const title = 'Project: Mist Guide 2026: Xbox, Release Date, Co-op & Beginner Tips';
+const title = 'Project: Mist Guide 2026: Is It on Xbox & PS5? Release Date, Co-op & Beginner Tips';
 const description =
- 'Find Project Mist guides for beginner tips, boss fights, train base building, weapons crafting, co-op, system requirements, crashing fixes, and Early Access buying advice.';
+ 'Is Project: Mist on Xbox or PS5? Currently PC Steam Early Access only — consoles not confirmed. Find guides for beginner tips, boss fights, train base building, weapons crafting, co-op, system requirements, crashing fixes, and Early Access buying advice.';
 const canonical = '/games/project-mist';
 
 export const metadata = createProjectMistMetadata({

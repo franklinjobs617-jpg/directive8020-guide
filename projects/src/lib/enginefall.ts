@@ -300,9 +300,9 @@ const commonFaqs = [
 
 export const enginefallPages = {
  hub: {
-  title: 'Enginefall Guide 2026 - Release Date, Gameplay & How to Get Playtest Access',
+  title: 'Enginefall Guide 2026: Release Date, PS5 & Xbox Status, Gameplay & Playtest Access',
   description:
-    'Enginefall is a train-based PvP crafting shooter from Red Rover Interactive. Learn the release date, how to join the 2026 playtest, system requirements for PC/PS5/Xbox, and beginner extraction tips.',
+    'Is Enginefall on PS5 and Xbox? PC via Steam is confirmed, consoles are not officially announced. Get the latest on the 2026 release window, playtest access, system requirements, beginner extraction tips, Conductor role, and Dagger shuttle guide.',
  canonical: '/games/enginefall',
  label: 'Enginefall',
  heroImage: enginefallImages.hero,
@@ -348,10 +348,10 @@ export const enginefallPages = {
  label: 'Gameplay',
  },
  {
- query: 'enginefall ps5 xbox',
- answer: 'PC via Steam is confirmed; PS5 and Xbox are not officially confirmed.',
+ query: 'is enginefall on ps5 xbox console',
+ answer: 'Enginefall is confirmed for PC via Steam. PS5, Xbox Series X|S, and other consoles are not officially announced yet. The developer has not confirmed console release dates.',
  href: '#platforms',
- label: 'Platforms',
+ label: 'PS5 & Xbox',
  },
  ],
  jumpLinks: [
@@ -729,6 +729,12 @@ export const enginefallPages = {
  href: '#solo-pvp',
  label: 'Solo',
  },
+ {
+ query: 'is enginefall on xbox ps5 console',
+ answer: 'Enginefall is confirmed for PC via Steam. PS5, Xbox Series X|S, and console releases are not officially announced yet. Check the official Steam page for platform updates.',
+ href: '#console-faq',
+ label: 'Console',
+ },
  ],
  jumpLinks: [
  { href: '#first-run', label: 'First run' },
@@ -736,6 +742,7 @@ export const enginefallPages = {
  { href: '#crafting', label: 'Crafting' },
  { href: '#extraction', label: 'Extraction' },
  { href: '#solo-pvp', label: 'Solo/PvP' },
+ { href: '#console-faq', label: 'PS5 & Xbox' },
  ],
  sections: [
  {
@@ -838,6 +845,27 @@ export const enginefallPages = {
  ['PvP frustration', 'Decide whether the game fit is right for you.', 'Expecting a pure PvE survival loop.'],
  ],
  },
+ {
+ id: 'console-faq',
+ title: 'Is Enginefall on PS5, Xbox, or Console?',
+ image: enginefallImages.screenshot5,
+ imageAlt: 'Enginefall official screenshot for platform and console FAQ',
+ caption:
+ 'Enginefall is confirmed for PC via Steam. Console releases are not officially announced.',
+ paragraphs: [
+ 'The most common question from new Enginefall players is whether the game is available on PlayStation 5, Xbox Series X|S, or other consoles. As of the latest official information, Enginefall is confirmed for PC via Steam only. Red Rover Interactive has not announced PS5, Xbox, or other console release dates.',
+ 'If you are searching for "is Enginefall on PS5" or "is Enginefall on Xbox," the short answer is no — not yet. The developer has focused on the PC Steam launch first, including playtests and demos on that platform. Console ports have not been confirmed, and no release window has been given for PlayStation or Xbox.',
+ 'The best way to stay updated on platform announcements is to follow the official Enginefall Steam page and Red Rover Interactive\'s social channels. For now, if you want to play Enginefall, you will need a Windows PC that meets the minimum system requirements.',
+ ],
+ tableHeadings: ['Platform', 'Status', 'Notes'],
+ rows: [
+ ['PC (Steam)', 'Confirmed', 'Playtests, demos, and launch all on Steam.'],
+ ['PS5', 'Not announced', 'No official PlayStation release date or confirmation.'],
+ ['Xbox Series X|S', 'Not announced', 'No official Xbox release date or confirmation.'],
+ ['Steam Deck', 'Not confirmed', 'No official Steam Deck compatibility announced.'],
+ ['Other consoles', 'Not announced', 'No Switch or other platform announcements.'],
+ ],
+ },
  ],
  faqs: [
  ...commonFaqs,
@@ -856,13 +884,18 @@ export const enginefallPages = {
  answer:
  'Solo players can attempt cautious runs, but the current pitch is built around multiplayer PvP pressure. Solo players should avoid unnecessary fights and extract earlier.',
  },
+ {
+ question: 'Is Enginefall on PS5 or Xbox?',
+ answer:
+ 'No. Enginefall is currently confirmed for PC via Steam only. PS5, Xbox Series X|S, and other console releases have not been officially announced by Red Rover Interactive. Check the Steam page for platform updates.',
+ },
  ],
  },
  conductor: {
-  title: 'Enginefall Conductor Guide - How to Reach C00, Use Breacher & Extract',
+  title: 'Enginefall Conductor Guide: How to Become Conductor, Reach C00, Breacher Setup & Role Powers',
   description:
-    'Learn how to become Conductor in Enginefall: reach Carriage C00, plant the Breacher, register in the Control Room, use role powers, and extract with loot before dying.',
- canonical: '/games/enginefall-conductor-guide',
+    'Complete Enginefall Conductor role guide: step-by-step how to become Conductor, reach Carriage C00, craft and plant the Breacher, register in the Control Room, unlock Conductor powers (Fuel Cores, keycard printing, announcements), and extract safely with your loot.',
+  canonical: '/games/enginefall-conductor-guide',
  label: 'Conductor Guide',
  heroImage: enginefallImages.screenshot3,
  heroAlt: 'Enginefall official screenshot for Conductor guide',

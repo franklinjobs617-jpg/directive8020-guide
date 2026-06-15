@@ -10,7 +10,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
  "directive-8020-little-star-walkthrough": {
  slug: "directive-8020-little-star-walkthrough",
  title: "Directive 8020 Little Star Walkthrough",
- metaTitle: "Directive 8020 Little Star Walkthrough - Episode 1 Guide",
+ metaTitle: "Directive 8020 Little Star Walkthrough: Episode 1 Crew Intro, Air Leak & First QTE",
  description:
  "Directive 8020 Little Star walkthrough for Episode 1: first-run route priorities, QTE setup, crew baseline, collectibles, Turning Points, and spoiler-safe tracking.",
  h1: "Directive 8020 Episode 1: Little Star Walkthrough",
@@ -102,7 +102,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
  "directive-8020-best-laid-plans-walkthrough": {
  slug: "directive-8020-best-laid-plans-walkthrough",
  title: "Directive 8020 Best Laid Plans Walkthrough",
- metaTitle: "Directive 8020 Best Laid Plans Walkthrough - Episode 2",
+ metaTitle: "Directive 8020 Best Laid Plans Walkthrough: Episode 2 Landing Computer Choice & Fire Control",
  description:
  "Directive 8020 Best Laid Plans walkthrough for Episode 2: relationship tracking, evidence-first decisions, QTEs, early branches, and Story Tree notes.",
  h1: "Directive 8020 Episode 2: Best Laid Plans Walkthrough",
@@ -182,9 +182,9 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
  "directive-8020-the-sample-walkthrough": {
  slug: "directive-8020-the-sample-walkthrough",
  title: "Directive 8020 The Sample Walkthrough",
- metaTitle: "Directive 8020 The Sample Walkthrough - Episode 3 Guide",
+ metaTitle: "Directive 8020 The Sample Walkthrough: Episode 3 Crash Landing, Food Storage Code & All Choices",
  description:
- "Directive 8020 The Sample walkthrough for Episode 3: Food Storage code 0402, lab evidence, specimen choices, mimic suspicion, collectibles, QTE tracking, and Story Tree cleanup.",
+ "Directive 8020 Episode 3 The Sample complete walkthrough: crash landing survival, Stafford buckle-in QTE, food storage keypad puzzle, lab evidence locations, specimen containment choices, mimic suspicion tracking, collectible doll guide, and Story Tree branch cleanup.",
  h1: "Directive 8020 Episode 3: The Sample Walkthrough",
  episodeNumber: "Episode 3",
  episodeName: "The Sample",
@@ -276,7 +276,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
  "directive-8020-dragnet-walkthrough": {
  slug: "directive-8020-dragnet-walkthrough",
  title: "Directive 8020 Dragnet Walkthrough",
- metaTitle: "Directive 8020 Dragnet Walkthrough - Episode 4 Stealth Guide",
+ metaTitle: "Directive 8020 Dragnet Walkthrough: Episode 4 Stealth, Mimic Hunt & Evidence Collection",
  description:
  "Directive 8020 Dragnet walkthrough for Episode 4: stealth priorities, scanner use, chase routes, collectibles, QTEs, and Story Tree replay notes.",
  h1: "Directive 8020 Episode 4: Dragnet Walkthrough",
@@ -354,7 +354,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
  "directive-8020-mr-williams-walkthrough": {
  slug: "directive-8020-mr-williams-walkthrough",
  title: "Directive 8020 Mr. Williams Walkthrough",
- metaTitle: "Directive 8020 Mr. Williams Walkthrough - Episode 5 Guide",
+ metaTitle: "Directive 8020 Mr. Williams Walkthrough: Episode 5 Save Anders or Mitchell & Drug Choice",
  description:
  "Directive 8020 Mr. Williams walkthrough for Episode 5: mid-game route audit, survivor state, NPC death risks, collectibles, and Turning Points.",
  h1: "Directive 8020 Episode 5: Mr. Williams Walkthrough",
@@ -433,7 +433,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
  "directive-8020-hostile-takeover-walkthrough": {
  slug: "directive-8020-hostile-takeover-walkthrough",
  title: "Directive 8020 Hostile Takeover Walkthrough",
- metaTitle: "Directive 8020 Hostile Takeover Walkthrough - Episode 6",
+ metaTitle: "Directive 8020 Hostile Takeover Walkthrough: Episode 6 Eisele Test, Shoot Williams & Standoff",
  description:
  "Directive 8020 Hostile Takeover walkthrough for Episode 6: late-game branching, survivor-dependent scenes, choices, QTEs, collectibles, and endings setup.",
  h1: "Directive 8020 Episode 6: Hostile Takeover Walkthrough",
@@ -512,7 +512,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
  "directive-8020-revelation-walkthrough": {
  slug: "directive-8020-revelation-walkthrough",
  title: "Directive 8020 Revelation Walkthrough",
- metaTitle: "Directive 8020 Revelation Walkthrough - Episode 7 Guide",
+ metaTitle: "Directive 8020 Revelation Walkthrough: Episode 7 Search Party, Real vs Fake Anders & SOS",
  description:
  "Directive 8020 Revelation walkthrough for Episode 7: late choices, survivor state, ending setup, collectibles, 50-50 decisions, and Story Tree replay.",
  h1: "Directive 8020 Episode 7: Revelation Walkthrough",
@@ -591,7 +591,7 @@ export const episodeWalkthroughs: Record<string, EpisodeWalkthroughData> = {
  "directive-8020-come-true-walkthrough": {
  slug: "directive-8020-come-true-walkthrough",
  title: "Directive 8020 Come True Walkthrough",
- metaTitle: "Directive 8020 Come True Walkthrough - Episode 8 Finale",
+ metaTitle: "Directive 8020 Come True Walkthrough: Episode 8 Finale — Humanity First, Knock Knock & Best Ending",
  description:
  "Directive 8020 Come True walkthrough for Episode 8: finale route priorities, endings setup, Cycle 13 and Booster Ring context, collectibles, and Story Tree cleanup.",
  h1: "Directive 8020 Episode 8: Come True Walkthrough",

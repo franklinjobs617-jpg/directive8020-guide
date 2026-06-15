@@ -7,9 +7,9 @@ import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { BlufBox, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
- title: 'Directive 8020 Story Tree & Turning Points Guide',
+ title: 'Directive 8020 Story Tree & Turning Points Guide: How to Rewind, Change Choices & See All Outcomes',
  description:
- 'Directive 8020 Story Tree and Turning Points guide: how rewind works, why changed choices require replaying forward, how to track 100% branches, endings, deaths, and hidden paths.',
+ 'Directive 8020 Story Tree and Turning Points explained: how the rewind system works, how to change past choices, why you must replay forward after rewinding, how to track branches for 100% completion, and tips for mapping endings, deaths, and hidden paths.',
  alternates: {
  canonical: '/directive-8020-turning-points-story-tree',
  },
@@ -123,9 +123,9 @@ export default function TurningPointsPage() {
  <>
  <JsonLd
  data={generateArticleSchema({
- title: 'Directive 8020 Story Tree & Turning Points Guide',
+ title: 'Directive 8020 Story Tree & Turning Points Guide: How to Rewind, Change Choices & See All Outcomes',
  description:
- 'Guide to Directive 8020 Turning Points, Story Tree branches, rewind strategy, 100% chart tracking, hidden paths, all endings, and save-everyone planning.',
+ 'Directive 8020 Story Tree and Turning Points explained: how the rewind system works, how to change past choices, why you must replay forward after rewinding, how to track branches for 100% completion, and tips for mapping endings, deaths, and hidden paths.',
  url: '/directive-8020-turning-points-story-tree',
  datePublished: '2026-05-12',
  dateModified: '2026-05-21',

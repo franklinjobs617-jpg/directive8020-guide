@@ -7,9 +7,9 @@ import {
  starminerImages,
 } from "@/lib/starminer";
 
-const title = "Starminer Tech Tree Guide: Research Lab & Best Unlock Order";
+const title = "Starminer Research Points Guide: How to Research Fast, Tech Tree & Best Unlock Order";
 const description =
- "Starminer tech tree and research guide: Research Lab setup, best unlock order, mining, energy, industry, weapons, fleet, leveling fast, and priority modules.";
+ "How to get research points fast in Starminer: Research Lab setup, tech tree unlock priority, best modules to research first, how colonists and credits affect RP generation, and the optimal research order for mining, energy, industry, and weapons.";
 const canonical = "/games/starminer/tech-tree-research";
 
 export const metadata = createStarminerMetadata({

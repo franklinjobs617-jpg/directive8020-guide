@@ -14,7 +14,7 @@ import {
  zeroParadesWorthItRows,
 } from '@/lib/zero-parades';
 
-const title = 'ZERO PARADES Guide: Walkthrough, Best Build, GOG, PS5 & Specs';
+const title = 'ZERO PARADES Guide Hub: Walkthrough, Best Build, Length, PS5, Steam Deck & System Requirements';
 const description =
  'Find ZERO PARADES guides for beginner tips, best build, walkthrough, game length, system requirements, Steam Deck, controller support, and buying advice.';
 const canonical = '/games/zero-parades';

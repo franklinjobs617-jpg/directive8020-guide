@@ -7,9 +7,9 @@ import {
  lunaAbyssImages,
 } from '@/lib/luna-abyss';
 
-const title = 'Luna Abyss Ending Explained - Fawkes, Aylin, Greymont & the Abyss';
+const title = 'Luna Abyss Ending Explained: Secret Ending, Fawkes, Aylin, Greymont & the Mimic Moon Mystery';
 const description =
- 'Spoiler-aware Luna Abyss ending explained guide for Fawkes, Aylin, Greymont, the mimic moon, the Abyss, the Scourge, and replay cleanup.';
+ 'Complete Luna Abyss ending explained with spoilers: all endings including the secret ending, Fawkes and Aylin fate analysis, Greymont colony truth, what the mimic moon really is, the Abyss and Scourge explained, and replay cleanup for all story branches.';
 const canonical = '/games/luna-abyss/ending-explained';
 
 export const metadata = createLunaAbyssMetadata({

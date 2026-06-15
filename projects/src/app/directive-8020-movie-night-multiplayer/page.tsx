@@ -7,9 +7,9 @@ import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { BlufBox, SourceCheckTable } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
- title: 'Directive 8020 Movie Night Mode - Local Co-op & Online Multiplayer',
+ title: 'Directive 8020 Movie Night & Multiplayer: Local Co-op, Online Update & How Many Players?',
  description:
- 'Directive 8020 Movie Night mode guide: local couch co-op for up to five players, online multiplayer update status, character assignment, Remote Play caution, and co-op rules.',
+ 'Directive 8020 Movie Night mode explained: how local couch co-op works for up to 5 players, character assignment rules, online multiplayer update status and release date, Steam Remote Play Together compatibility, and whether you can play the full campaign in co-op mode.',
  alternates: {
  canonical: '/directive-8020-movie-night-multiplayer',
  },

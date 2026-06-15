@@ -18,10 +18,11 @@ import { fatekeeperImages } from "@/lib/fatekeeper";
 import { gateGuardImages } from "@/lib/gate-guard-simulator";
 import { enginefallImages } from "@/lib/enginefall";
 import { voidlingBoundImages } from "@/lib/voidling-bound";
+import { sellLemons } from "@/lib/games";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
- "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, fantasy RPGs, creature collectors, inspection sims, train-based crafting shooters, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, and story-driven games, including Voidling Bound, Enginefall, Gate Guard Simulator, Luna Abyss, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+ "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, Roblox idle tycoon progression, fantasy RPGs, creature collectors, inspection sims, train-based crafting shooters, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, and story-driven games, including Sell Lemons, Voidling Bound, Enginefall, Gate Guard Simulator, Luna Abyss, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
  title: {
@@ -31,8 +32,9 @@ export const metadata: Metadata = {
  keywords: [
  "game guide hubs",
  "survival game guides",
- "horror game guides",
- "Directive 8020 guide",
+"horror game guides",
+"Sell Lemons guide",
+"Directive 8020 guide",
  "Project Mist guide",
  "ZERO PARADES guide",
  "Romestead guide",
@@ -70,6 +72,13 @@ export const metadata: Metadata = {
 };
 
 const gameCards = [
+ {
+ title: "Sell Lemons",
+ href: "/games/sell-lemons",
+ label: "Roblox idle tycoon",
+ body: "Beginner route, money fast priorities, manager upgrades, Sewer Key, UFO Key, Cosmic Farmer, Good Samaritan, and badge cleanup planning.",
+ image: sellLemons.heroImage,
+ },
  {
  title: "Voidling Bound",
  href: "/games/voidling-bound",

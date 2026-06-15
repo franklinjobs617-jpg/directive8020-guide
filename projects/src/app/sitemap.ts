@@ -14,6 +14,7 @@ import {
  enginefall,
  voidlingBound,
  lunaAbyss,
+ sellLemons,
  fearsToFathom,
  type GameConfig,
 } from '@/lib/games';
@@ -90,10 +91,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
  const gameHubs: MetadataRoute.Sitemap = [
  projectMist, thickAsThieves, zeroParades, mechanicusII, romestead,
  paralives, minaTheHollower, firstLight007, jumpKingQuest, starminer,
- fatekeeper, enginefall, voidlingBound, lunaAbyss, fearsToFathom,
+ fatekeeper, enginefall, voidlingBound, lunaAbyss, sellLemons, fearsToFathom,
  ].map((game) => ({
  url: `${BASE_URL}${game.hubPath}`,
- lastModified: game.id === 'enginefall' ? '2026-06-10' : game.id === 'fears-to-fathom' ? '2026-06-11' : today,
+ lastModified: game.id === 'enginefall' ? '2026-06-10' : game.id === 'sell-lemons' ? '2026-06-12' : game.id === 'fears-to-fathom' ? '2026-06-11' : today,
  changeFrequency: 'daily' as const,
  priority: 0.74,
  }));
@@ -114,6 +115,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  ...gameSubPages(enginefall, 0.68, '2026-06-10'),
  ...gameSubPages(voidlingBound, 0.7, '2026-06-10'),
  ...gameSubPages(lunaAbyss),
+ ...gameSubPages(sellLemons, 0.72, '2026-06-12'),
  ...gameSubPages(fearsToFathom, 0.7, '2026-06-11'),
  ];
 

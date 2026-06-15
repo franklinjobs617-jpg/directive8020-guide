@@ -9,9 +9,9 @@ import { SurvivalEndingTracker } from '@/components/tools/survival-ending-tracke
 import { EndingIndex } from '@/components/tools/ending-index';
 
 export const metadata: Metadata = {
- title: 'Directive 8020 All Endings: Best, Secret & Death Spiral',
+ title: 'Directive 8020 All Endings Guide: How Many Endings, Best Ending, Secret Endings & Death Spiral',
  description:
- 'Directive 8020 all endings guide: ending count, best ending route, secret ending checks, Death Spiral, Homeward Bound, Docked, Mask Off, and finale explained.',
+ 'Directive 8020 has 5 major ending families plus variations. Complete endings guide: best ending route step by step, all death scenes, secret Cycle 13 ending, Homeward Bound, Docked, Mask Off, and every choice that changes the finale.',
  alternates: {
  canonical: '/directive-8020-all-endings',
  },
@@ -183,9 +183,9 @@ export default function AllEndingsPage() {
  <>
  <JsonLd
  data={generateArticleSchema({
- title: 'Directive 8020 All Endings: Best, Secret & Death Spiral',
+ title: 'Directive 8020 All Endings Guide: How Many Endings, Best Ending, Secret Endings & Death Spiral',
  description:
- 'Directive 8020 all endings guide with reported ending count, best route, secret ending checks, Death Spiral, Homeward Bound, Docked, Mask Off, and route checklist.',
+ 'Directive 8020 has 5 major ending families plus variations. Complete endings guide: best ending route step by step, all death scenes, secret Cycle 13 ending, Homeward Bound, Docked, Mask Off, and every choice that changes the finale.',
  url: '/directive-8020-all-endings',
  datePublished: '2026-05-12',
  dateModified: '2026-05-21',

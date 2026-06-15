@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Sell Lemons UFO Key lever route</title>
+  <desc id="desc">Lever sequence for the Sell Lemons UFO Key and Good Samaritan route.</desc>
+  <rect width="1200" height="675" fill="#F5F0FF"/>
+  <rect x="54" y="52" width="1092" height="571" rx="28" fill="#FFFFFF" stroke="#C7B4FF" stroke-width="4"/>
+  <text x="90" y="116" fill="#151515" font-family="Arial, sans-serif" font-size="42" font-weight="700">UFO Key Lever Route</text>
+  <text x="90" y="158" fill="#5D5D5D" font-family="Arial, sans-serif" font-size="22">The sequence is longer than the Sewer Key route. Finish the last Red-Green-Red.</text>
+  <g font-family="Arial, sans-serif" font-size="21" font-weight="700" text-anchor="middle">
+    <g transform="translate(90 235)"><rect width="115" height="92" rx="18" fill="#4DA3FF"/><text x="57" y="56" fill="#fff">1 Blue</text></g>
+    <g transform="translate(220 235)"><rect width="115" height="92" rx="18" fill="#F04444"/><text x="57" y="56" fill="#fff">2 Red</text></g>
+    <g transform="translate(350 235)"><rect width="115" height="92" rx="18" fill="#22B66B"/><text x="57" y="56" fill="#fff">3 Green</text></g>
+    <g transform="translate(480 235)"><rect width="115" height="92" rx="18" fill="#F04444"/><text x="57" y="56" fill="#fff">4 Red</text></g>
+    <g transform="translate(610 235)"><rect width="115" height="92" rx="18" fill="#9C5CF5"/><text x="57" y="56" fill="#fff">5 Purple</text></g>
+    <g transform="translate(740 235)"><rect width="115" height="92" rx="18" fill="#F04444"/><text x="57" y="56" fill="#fff">6 Red</text></g>
+    <g transform="translate(870 235)"><rect width="115" height="92" rx="18" fill="#22B66B"/><text x="57" y="56" fill="#fff">7 Green</text></g>
+    <g transform="translate(1000 235)"><rect width="115" height="92" rx="18" fill="#F04444"/><text x="57" y="56" fill="#fff">8 Red</text></g>
+  </g>
+  <path d="M160 380 C275 470, 402 470, 515 392 S760 315, 895 430 S1045 472, 1095 395" fill="none" stroke="#151515" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="160" cy="380" r="12" fill="#151515"/><circle cx="1095" cy="395" r="12" fill="#151515"/>
+  <text x="90" y="518" fill="#151515" font-family="Arial, sans-serif" font-size="25" font-weight="700">Collect UFO Key -> reach alien area -> interact to finish Good Samaritan.</text>
+</svg>

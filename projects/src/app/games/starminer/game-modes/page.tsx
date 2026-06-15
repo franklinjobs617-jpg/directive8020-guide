@@ -19,7 +19,7 @@ import {
   smGameModesStatusItems,
 } from "@/lib/starminer";
 
-const title = "Starminer Game Modes: Campaign vs Sandbox vs Survival";
+const title = "Starminer Game Modes Guide: Which Mode to Pick First — Campaign, Sandbox or Survival";
 const description =
  "Starminer game modes guide: Campaign vs Sandbox vs Survival, best first save, beginner mode choice, replay value, defense testing, and Early Access caveats.";
 const canonical = "/games/starminer/game-modes";

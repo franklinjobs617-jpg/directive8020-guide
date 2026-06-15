@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { ArticleImage } from '@/components/article-media';
 import { createFearsToFathomMetadata, fearsToFathomImages } from '@/lib/fears-to-fathom';
 
-const title = 'Fears to Fathom: Scratch Creek — Can I Play Solo? Co-op Guide & How to Find a Partner';
+const title = 'Can You Play Fears to Fathom Scratch Creek Alone? No — Co-Op Only, Here\'s How to Find a Partner';
 const description =
- 'Fears to Fathom: Scratch Creek is co-op only with no single player mode. Learn how co-op matchmaking works, how to find a partner, and what the co-op experience is like.';
+ 'Fears to Fathom: Scratch Creek is co-op only. No single player, no solo mode, no AI companion. Use built-in matchmaking, Steam friends, or Discord to find a partner. Full co-op setup guide with voice chat, matchmaking, and progress sharing explained.';
 const canonical = '/games/fears-to-fathom/co-op-guide';
 
 export const metadata = createFearsToFathomMetadata({ title, description, canonical, image: fearsToFathomImages.screenshot2 });

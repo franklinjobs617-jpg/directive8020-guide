@@ -10,9 +10,9 @@ import {
  romesteadQuickFacts,
 } from '@/lib/romestead';
 
-const title = 'Romestead Guide: Multiplayer, Co-op, Release Date & Tips';
+const title = 'Romestead Guide: Multiplayer, Split Screen & Co-op, Release Date, Best Profession & Tips';
 const description =
- 'Find Romestead guides for multiplayer co-op, best profession, beginner tips, settlement building, system requirements, Steam Deck, and early access buying advice for 2026.';
+ 'Is Romestead split screen? Find guides for multiplayer co-op (up to 8 players), LAN play, best profession choices, beginner tips, settlement building, system requirements, Steam Deck compatibility, and early access buying advice for 2026.';
 const canonical = '/games/romestead';
 
 export const metadata = createRomesteadMetadata({

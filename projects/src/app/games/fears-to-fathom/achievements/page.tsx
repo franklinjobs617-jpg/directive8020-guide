@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { createFearsToFathomMetadata, fearsToFathomImages } from '@/lib/fears-to-fathom';
 
-const title = 'Fears to Fathom: Scratch Creek — All Achievements & 100% Completion Guide';
+const title = 'Fears to Fathom Scratch Creek Achievements: All Trophies, Secret Achievements & 100% Guide';
 const description =
- 'Full achievement list for Fears to Fathom: Scratch Creek. All unlock conditions, secret achievements, and how to get 100% completion.';
+ 'Every achievement in Fears to Fathom: Scratch Creek with unlock conditions. Includes all secret/hidden achievements, missable trophies, ending-specific unlocks, and a 100% completion roadmap for achievement hunters.';
 const canonical = '/games/fears-to-fathom/achievements';
 
 export const metadata = createFearsToFathomMetadata({ title, description, canonical, image: fearsToFathomImages.screenshot2 });

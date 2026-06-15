@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Sell Lemons Sewer Key lever route</title>
+  <desc id="desc">Lever sequence for the Sell Lemons Sewer Key route.</desc>
+  <rect width="1200" height="675" fill="#F4FFF8"/>
+  <rect x="54" y="52" width="1092" height="571" rx="28" fill="#FFFFFF" stroke="#A6DFC0" stroke-width="4"/>
+  <text x="90" y="116" fill="#151515" font-family="Arial, sans-serif" font-size="42" font-weight="700">Sewer Key Lever Route</text>
+  <text x="90" y="158" fill="#5D5D5D" font-family="Arial, sans-serif" font-size="22">Run this as a checklist. The off switches matter.</text>
+  <g font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">
+    <g transform="translate(110 255)"><circle cx="50" cy="50" r="50" fill="#4DA3FF"/><text x="50" y="58" fill="#fff">Blue</text><text x="50" y="130" fill="#151515">1 Pull</text></g>
+    <g transform="translate(245 255)"><circle cx="50" cy="50" r="50" fill="#F04444"/><text x="50" y="58" fill="#fff">Red</text><text x="50" y="130" fill="#151515">2 Pull</text></g>
+    <g transform="translate(380 255)"><circle cx="50" cy="50" r="50" fill="#22B66B"/><text x="50" y="58" fill="#fff">Green</text><text x="50" y="130" fill="#151515">3 Pull</text></g>
+    <g transform="translate(515 255)"><circle cx="50" cy="50" r="50" fill="#F04444"/><text x="50" y="58" fill="#fff">Red</text><text x="50" y="130" fill="#151515">4 Off</text></g>
+    <g transform="translate(650 255)"><circle cx="50" cy="50" r="50" fill="#4DA3FF"/><text x="50" y="58" fill="#fff">Blue</text><text x="50" y="130" fill="#151515">5 Off</text></g>
+    <g transform="translate(785 255)"><circle cx="50" cy="50" r="50" fill="#9C5CF5"/><text x="50" y="58" fill="#fff">Purple</text><text x="50" y="130" fill="#151515">6 Pull</text></g>
+    <g transform="translate(920 255)"><circle cx="50" cy="50" r="50" fill="#F04444"/><text x="50" y="58" fill="#fff">Red</text><text x="50" y="130" fill="#151515">7 Pull</text></g>
+  </g>
+  <rect x="90" y="474" width="1020" height="78" rx="16" fill="#151515"/>
+  <text x="120" y="523" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="25" font-weight="700">Then collect the Sewer Key, open the Sewer Gate, and harvest the Cosmic Cash Vine.</text>
+</svg>

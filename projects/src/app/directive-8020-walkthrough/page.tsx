@@ -9,9 +9,9 @@ import { EpisodeNavigator } from '@/components/tools/episode-navigator';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
 export const metadata: Metadata = {
- title: 'Directive 8020 Walkthrough: All Episodes & Choices',
+ title: 'Directive 8020 Walkthrough: All 8 Episodes Step by Step, Best Choices & Survival Guide',
  description:
- 'Directive 8020 walkthrough for all 8 episodes, choices, chapters, QTEs, collectibles, Turning Points, endings, deaths, and spoiler-safe route order.',
+ 'Complete Directive 8020 walkthrough covering all 8 episodes from Little Star to Come True. Step-by-step guide with best choices for each episode, QTE timings, collectible locations, mimic detection tips, character survival routes, and spoiler-safe play order for your first run.',
  alternates: {
  canonical: '/directive-8020-walkthrough',
  },
@@ -291,9 +291,9 @@ export default function WalkthroughPage() {
  <>
  <JsonLd
  data={generateArticleSchema({
- title: 'Directive 8020 Walkthrough: All Episodes & Choices',
+ title: 'Directive 8020 Walkthrough: All 8 Episodes Step by Step, Best Choices & Survival Guide',
  description:
- 'Directive 8020 walkthrough for all 8 episodes, choices, QTE and stealth tips, scanner use, collectibles, Turning Points, Destinies, endings prep, and spoiler-safe route order.',
+ 'Complete Directive 8020 walkthrough covering all 8 episodes from Little Star to Come True. Step-by-step guide with best choices for each episode, QTE timings, collectible locations, mimic detection tips, character survival routes, and spoiler-safe play order for your first run.',
  url: '/directive-8020-walkthrough',
  datePublished: '2026-05-12',
  dateModified: '2026-05-21',

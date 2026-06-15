@@ -7,9 +7,9 @@ import { ArticleImage } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
- title: 'How Long Is Directive 8020? Length, Episodes & 100%',
+ title: 'How Long Is Directive 8020? Full Game Length, All 8 Episodes & 100% Completion Time',
  description:
- 'How long is Directive 8020? One playthrough takes about 8 hours, full outcome cleanup can take around 30 hours, with 8 episodes from Little Star to Come True.',
+ 'Directive 8020 length breakdown: how many hours for one playthrough, how long each episode takes, 100% completionist time, how many chapters and episodes, and whether Explorer or Survivor mode affects game length.',
  alternates: {
  canonical: '/directive-8020-how-long-to-beat',
  },
@@ -90,9 +90,9 @@ export default function HowLongToBeatPage() {
  <>
  <JsonLd
  data={generateArticleSchema({
- title: 'How Long Is Directive 8020? Length, Episodes & 100%',
+ title: 'How Long Is Directive 8020? Full Game Length, All 8 Episodes & 100% Completion Time',
  description:
- 'Directive 8020 length guide covering 8-hour main story estimate, 30-hour completion estimate, 8 episodes, collectibles, Movie Night, and Turning Points replay.',
+ 'Directive 8020 length breakdown: how many hours for one playthrough, each episode duration, 100% completionist time, chapter count, and whether Explorer or Survivor mode changes total playtime.',
  url: '/directive-8020-how-long-to-beat',
  datePublished: '2026-05-13',
  dateModified: '2026-05-13',

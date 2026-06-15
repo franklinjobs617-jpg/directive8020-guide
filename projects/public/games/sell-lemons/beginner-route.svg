@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Sell Lemons beginner route</title>
+  <desc id="desc">A simple beginner flow from manual cash to automation, newest activity, events, and key routes.</desc>
+  <rect width="1200" height="675" fill="#FFF9E6"/>
+  <rect x="54" y="52" width="1092" height="571" rx="28" fill="#FFFFFF" stroke="#E6D58B" stroke-width="4"/>
+  <text x="90" y="116" fill="#151515" font-family="Arial, sans-serif" font-size="42" font-weight="700">Sell Lemons Beginner Route</text>
+  <text x="90" y="158" fill="#5D5D5D" font-family="Arial, sans-serif" font-size="22">Do not click forever. Build passive income first, then run key routes.</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(92 230)">
+      <rect width="185" height="150" rx="18" fill="#FFE66D" stroke="#151515" stroke-width="3"/>
+      <text x="24" y="45" font-size="24" font-weight="700" fill="#151515">1. Cash</text>
+      <text x="24" y="84" font-size="18" fill="#151515">Click only until</text>
+      <text x="24" y="110" font-size="18" fill="#151515">automation appears</text>
+    </g>
+    <path d="M292 305 H372" stroke="#151515" stroke-width="6" stroke-linecap="round"/>
+    <path d="M372 305 l-18 -14 v28 z" fill="#151515"/>
+    <g transform="translate(386 230)">
+      <rect width="185" height="150" rx="18" fill="#9BE7C2" stroke="#151515" stroke-width="3"/>
+      <text x="24" y="45" font-size="24" font-weight="700" fill="#151515">2. Automate</text>
+      <text x="24" y="84" font-size="18" fill="#151515">Buy managers</text>
+      <text x="24" y="110" font-size="18" fill="#151515">when affordable</text>
+    </g>
+    <path d="M586 305 H666" stroke="#151515" stroke-width="6" stroke-linecap="round"/>
+    <path d="M666 305 l-18 -14 v28 z" fill="#151515"/>
+    <g transform="translate(680 230)">
+      <rect width="185" height="150" rx="18" fill="#9BD7FF" stroke="#151515" stroke-width="3"/>
+      <text x="24" y="45" font-size="24" font-weight="700" fill="#151515">3. Newest</text>
+      <text x="24" y="84" font-size="18" fill="#151515">Push the latest</text>
+      <text x="24" y="110" font-size="18" fill="#151515">activity unlock</text>
+    </g>
+    <path d="M880 305 H960" stroke="#151515" stroke-width="6" stroke-linecap="round"/>
+    <path d="M960 305 l-18 -14 v28 z" fill="#151515"/>
+    <g transform="translate(974 230)">
+      <rect width="138" height="150" rx="18" fill="#FFB3C7" stroke="#151515" stroke-width="3"/>
+      <text x="20" y="45" font-size="24" font-weight="700" fill="#151515">4. Keys</text>
+      <text x="20" y="84" font-size="18" fill="#151515">Run sewer</text>
+      <text x="20" y="110" font-size="18" fill="#151515">routes later</text>
+    </g>
+  </g>
+  <rect x="92" y="450" width="1020" height="96" rx="18" fill="#151515"/>
+  <text x="124" y="492" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Rule</text>
+  <text x="124" y="526" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="21">If a purchase saves attention or multiplies a full income source, it beats a small manual boost.</text>
+</svg>

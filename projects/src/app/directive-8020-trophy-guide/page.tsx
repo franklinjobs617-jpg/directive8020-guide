@@ -9,9 +9,9 @@ import { TrophyProgressTracker } from '@/components/tools/trophy-progress-tracke
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
 export const metadata: Metadata = {
- title: 'Directive 8020 Platinum Guide: Trophies & 100%',
+ title: 'Directive 8020 Trophy & Achievement Guide: Platinum, 100% Completion & Missable Trophies',
  description:
- 'Directive 8020 Platinum trophy guide: 100% roadmap, Steam achievements, PS5 trophy status, missable trophies, endings, deaths, collectibles, and cleanup order.',
+ 'Complete Directive 8020 trophy and achievement guide for Platinum and 100% completion. Covers all Steam achievements, PS5 trophies, missable trophies by episode, ending-specific unlocks, death-related achievements, collectible cleanup order, and the fastest route to Platinum.',
  alternates: {
  canonical: '/directive-8020-trophy-guide',
  },

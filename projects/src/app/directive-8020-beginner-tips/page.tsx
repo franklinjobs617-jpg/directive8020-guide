@@ -6,9 +6,9 @@ import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/j
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
 
 export const metadata: Metadata = {
- title: 'Directive 8020 Beginner Tips - Spoiler-Free Survival Guide',
+ title: 'Directive 8020 Beginner Tips: First Time Playing? Spoiler-Free Survival Guide & Best Settings',
  description:
- 'Directive 8020 beginner tips and spoiler-free survival guide: first playthrough advice, mimic clues, QTEs, stealth, Story Tree, collectibles, and settings.',
+ 'New to Directive 8020? Spoiler-free beginner guide for your first playthrough: best settings, Explorer vs Survivor mode, essential QTE and stealth tips, early mimic warning signs, Story Tree basics, collectible priorities, and how to avoid common first-run mistakes.',
  alternates: {
  canonical: '/directive-8020-beginner-tips',
  },

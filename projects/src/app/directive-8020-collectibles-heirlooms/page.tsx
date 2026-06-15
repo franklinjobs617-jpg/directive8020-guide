@@ -9,9 +9,9 @@ import { CollectibleChecklist } from '@/components/tools/collectible-checklist';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
 export const metadata: Metadata = {
- title: 'Directive 8020 Collectibles - 65 Secrets, O Death & Heirlooms',
+ title: 'Directive 8020 All 65 Collectibles Guide: Secrets, Heirlooms, O Death & Dark Pictures Dolls',
  description:
- 'Directive 8020 collectibles guide: 65 collectibles, 50 Secrets, 10 Simms Recordings, 5 O Death Secrets, Heirlooms Retrieval, Dark Pictures relics, chapter tracking, and trophy cleanup.',
+ 'Find all 65 Directive 8020 collectibles with chapter-by-chapter locations: 50 Secrets, 10 Simms Recordings, 5 O Death Secrets, Heirlooms Retrieval dolls, Dark Pictures relics, plus how collectibles affect endings and trophy cleanup for 100% completion.',
  alternates: {
  canonical: '/directive-8020-collectibles-heirlooms',
  },

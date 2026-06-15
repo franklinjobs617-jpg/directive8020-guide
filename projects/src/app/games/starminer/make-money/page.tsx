@@ -7,9 +7,9 @@ import {
  starminerImages,
 } from "@/lib/starminer";
 
-const title = "Starminer How to Make Money Fast: Credits, Trade Routes & Debt Clearing 2026";
+const title = "Starminer How to Make Money Fast: Best Resources to Sell, Trade Routes & Debt Clearing 2026";
 const description =
- "How to earn credits fast in Starminer. Best resources to sell (Cobalt 72/unit, Thorium 360/unit), mission efficiency, automated trade routes, debt clearing strategy, and passive income setups.";
+ "How to earn credits fast in Starminer Early Access. Which resources sell for the most, best early-game trade routes, mission efficiency tips, automated income strategies, debt clearing priority, and passive credit setups for beginners and experienced miners.";
 const canonical = "/games/starminer/make-money";
 
 export const metadata = createStarminerMetadata({
