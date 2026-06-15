@@ -87,12 +87,23 @@ export function SiteFooter() {
               <ul className="space-y-2">
                 {group.links.map(([label, href]) => (
                   <li key={href}>
-                    <Link
-                      href={href}
-                      className="text-sm text-white/62 transition-colors hover:text-white"
-                    >
-                      {label}
-                    </Link>
+                    {href.startsWith("http") ? (
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-white/62 transition-colors hover:text-white"
+                      >
+                        {label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={href}
+                        className="text-sm text-white/62 transition-colors hover:text-white"
+                      >
+                        {label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
