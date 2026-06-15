@@ -16,6 +16,7 @@ import {
  lunaAbyss,
  sellLemons,
  fearsToFathom,
+ growAGarden2,
  type GameConfig,
 } from '@/lib/games';
 import { voidlingEntries } from '@/lib/voidling-bound';
@@ -36,7 +37,7 @@ function gameSubPages(
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
- const today = '2026-06-03';
+ const today = '2026-06-15';
 
  const staticPages: MetadataRoute.Sitemap = [
  { url: BASE_URL, lastModified: today, changeFrequency: 'daily', priority: 1.0 },
@@ -91,10 +92,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
  const gameHubs: MetadataRoute.Sitemap = [
  projectMist, thickAsThieves, zeroParades, mechanicusII, romestead,
  paralives, minaTheHollower, firstLight007, jumpKingQuest, starminer,
- fatekeeper, enginefall, voidlingBound, lunaAbyss, sellLemons, fearsToFathom,
+ fatekeeper, enginefall, voidlingBound, lunaAbyss, sellLemons, fearsToFathom, growAGarden2,
  ].map((game) => ({
  url: `${BASE_URL}${game.hubPath}`,
- lastModified: game.id === 'enginefall' ? '2026-06-10' : game.id === 'sell-lemons' ? '2026-06-12' : game.id === 'fears-to-fathom' ? '2026-06-11' : today,
+ lastModified: game.id === 'enginefall' ? '2026-06-10' : game.id === 'sell-lemons' ? '2026-06-12' : game.id === 'fears-to-fathom' ? '2026-06-11' : game.id === 'grow-a-garden-2' ? '2026-06-15' : today,
  changeFrequency: 'daily' as const,
  priority: 0.74,
  }));
@@ -117,6 +118,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  ...gameSubPages(lunaAbyss),
  ...gameSubPages(sellLemons, 0.72, '2026-06-12'),
  ...gameSubPages(fearsToFathom, 0.7, '2026-06-11'),
+ ...gameSubPages(growAGarden2, 0.72, '2026-06-15'),
  ];
 
  const voidlingDetailPages: MetadataRoute.Sitemap = voidlingEntries.map((entry) => ({
