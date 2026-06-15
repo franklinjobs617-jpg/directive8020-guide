@@ -1297,3 +1297,66 @@ export const fearsToFathom: GameConfig = {
  },
  ],
 };
+
+export const growAGarden2: GameConfig = {
+ id: "grow-a-garden-2",
+ slugPrefix: "grow-a-garden-2",
+ hubPath: "/games/grow-a-garden-2",
+ name: "Grow a Garden 2",
+ guidePublisher: "Enjoy4Game Guides",
+ description:
+  "Grow a Garden 2 is a Roblox farming simulator and idle tycoon from Jandel. Plant seeds, harvest crops, collect pets with unique abilities, join guilds, and steal from rivals at night.",
+ platforms: ["Roblox"],
+ genres: ["Farming Simulator", "Idle Tycoon", "Roblox", "Casual", "Multiplayer"],
+ developer: "Jandel (The Garden Game)",
+ publisher: "The Garden Game",
+ releaseDate: "2026-06-12",
+ operatingSystem: "Roblox (PC, Mobile, Xbox)",
+ url: "https://www.roblox.com/games/97598239454123/Grow-a-Garden-2",
+ availability: "https://schema.org/InStock",
+ heroImage: "/games/grow-a-garden-2/icon.webp",
+ guideLinks: [
+  {
+   title: "All Pets Guide",
+   href: "/games/grow-a-garden-2/pets",
+   description:
+    "Complete database of all 12 pets: prices, abilities, rarities, tier rankings, and which pets to buy first.",
+  },
+  {
+   title: "Wheelbarrow Guide",
+   href: "/games/grow-a-garden-2/wheelbarrow",
+   description:
+    "What does the Wheelbarrow do? How to get it (500K Sheckles / 129 Robux), and whether it's worth buying.",
+  },
+  {
+   title: "All Gears Guide",
+   href: "/games/grow-a-garden-2/gears",
+   description:
+    "Every gear: Watering Cans, Sprinklers, Mushrooms, Gnome, Flashbang, Basic Pot, Teleporter, Trowel, Lantern, and more.",
+  },
+  {
+   title: "Seeds & Plants Guide",
+   href: "/games/grow-a-garden-2/seeds",
+   description:
+    "All seeds ranked: Carrot to Dragon's Breath. Prices, harvest types, Acorn drop rate, Venus Fly Trap defense.",
+  },
+  {
+   title: "Codes (Updated Daily)",
+   href: "/games/grow-a-garden-2/codes",
+   description:
+    "All active Grow a Garden 2 codes. TEAMGREENBEAN and more. How to redeem, where new codes drop, expired codes.",
+  },
+  {
+   title: "Guilds Guide",
+   href: "/games/grow-a-garden-2/guild",
+   description:
+    "How to create and join guilds. Rewards, roles (Owner/Elder/Member), invite system, weekly competitions.",
+  },
+  {
+   title: "Seed Packs Guide",
+   href: "/games/grow-a-garden-2/seed-packs",
+   description:
+    "Ghost Pepper Seed Pack: 5 exclusive seeds with drop odds. Robux costs, roll amounts, and is it worth it?",
+  },
+ ],
+};
