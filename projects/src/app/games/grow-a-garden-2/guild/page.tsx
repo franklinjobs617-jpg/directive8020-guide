@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { createGAG2Metadata } from '@/lib/grow-a-garden-2';
+import Image from 'next/image';
+import { createGAG2Metadata, gag2Images } from '@/lib/grow-a-garden-2';
 
 const title = 'Grow a Garden 2 Guilds Guide: How to Create, Join & Earn Rewards';
 const description =
@@ -11,7 +12,13 @@ export const metadata = createGAG2Metadata({ title, description, canonical });
 export default function GAG2GuildPage() {
  return (
   <main className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-8">
-   <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{title}</h1>
+   <div className="flex items-center gap-4 mb-4">
+    <Image src={gag2Images.icon} alt="Grow a Garden 2" width={64} height={64} className="rounded-xl" />
+    <div>
+     <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{title}</h1>
+     <p className="mt-1 text-sm text-muted-foreground">Guilds are teams of up to 50 players competing for weekly rewards</p>
+    </div>
+   </div>
 
    <section className="mt-6">
     <h2 className="text-lg font-bold text-foreground">How to Create a Guild</h2>

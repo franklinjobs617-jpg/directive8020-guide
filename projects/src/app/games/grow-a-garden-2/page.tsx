@@ -17,6 +17,8 @@ const guideCards = [
  { title: 'Active Codes', href: '/games/grow-a-garden-2/codes', desc: 'TEAMGREENBEAN and more. Updated daily.', emoji: '🎫' },
  { title: 'Guilds Guide', href: '/games/grow-a-garden-2/guild', desc: 'Create, join, rewards, roles, weekly competitions.', emoji: '🏛️' },
  { title: 'Seed Packs Guide', href: '/games/grow-a-garden-2/seed-packs', desc: 'Ghost Pepper Pack: odds, costs, exclusive seeds.', emoji: '📦' },
+ { title: 'Night Stealing Guide', href: '/games/grow-a-garden-2/night-stealing', desc: 'How to steal at night & defend your crops.', emoji: '🌙' },
+ { title: 'Beginner Guide', href: '/games/grow-a-garden-2/beginner-guide', desc: 'First hour walkthrough. From 0 to thriving garden.', emoji: '🎯' },
 ];
 
 export default function GAG2HubPage() {

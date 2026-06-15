@@ -119,6 +119,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
  ...gameSubPages(sellLemons, 0.72, '2026-06-12'),
  ...gameSubPages(fearsToFathom, 0.7, '2026-06-11'),
  ...gameSubPages(growAGarden2, 0.72, '2026-06-15'),
+ ...[
+  { url: `${BASE_URL}/games/grow-a-garden-2/night-stealing`, lastModified: '2026-06-15', changeFrequency: 'weekly' as const, priority: 0.7 },
+  { url: `${BASE_URL}/games/grow-a-garden-2/beginner-guide`, lastModified: '2026-06-15', changeFrequency: 'weekly' as const, priority: 0.75 },
+ ],
  ];
 
  const voidlingDetailPages: MetadataRoute.Sitemap = voidlingEntries.map((entry) => ({

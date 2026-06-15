@@ -19,9 +19,15 @@ export default function GAG2WheelbarrowPage() {
     <p className="mt-1 text-sm text-yellow-800">This is currently the #1 most searched Grow a Garden 2 topic — a Breakout trend on Google.</p>
    </div>
 
-   <div className="mt-6 overflow-hidden rounded-lg border border-border bg-white">
-    <Image src={gag2Images.gear('wheelbarrow-gag-2')} alt="Grow a Garden 2 Wheelbarrow gear" width={200} height={200} className="mx-auto" />
-    <p className="border-t border-border bg-mist px-4 py-2 text-xs text-muted-foreground text-center">The Wheelbarrow — Legendary gear (500K Sheckles / 129 Robux)</p>
+   <div className="mt-6 grid gap-4 sm:grid-cols-2">
+    <div className="overflow-hidden rounded-lg border border-border bg-white">
+     <Image src={gag2Images.gear('wheelbarrow-gag-2')} alt="Grow a Garden 2 Wheelbarrow icon" width={200} height={200} className="mx-auto p-4" />
+     <p className="border-t border-border bg-mist px-3 py-2 text-xs text-muted-foreground text-center">Gear icon — 500K Sheckles / 129 Robux</p>
+    </div>
+    <div className="overflow-hidden rounded-lg border border-border bg-white">
+     <Image src={gag2Images.gear('wheelbarrow-scene')} alt="Wheelbarrow gameplay in Grow a Garden 2" width={600} height={338} className="w-full" />
+     <p className="border-t border-border bg-mist px-3 py-2 text-xs text-muted-foreground text-center">Player carrying another player in the Wheelbarrow</p>
+    </div>
    </div>
 
    <section className="mt-6">

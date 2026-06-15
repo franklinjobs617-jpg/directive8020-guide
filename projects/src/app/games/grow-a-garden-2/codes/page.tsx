@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { createGAG2Metadata, gag2Codes } from '@/lib/grow-a-garden-2';
+import Image from 'next/image';
+import { createGAG2Metadata, gag2Codes, gag2Images } from '@/lib/grow-a-garden-2';
 
 const title = 'Grow a Garden 2 Codes (June 2026): All Active Codes & How to Redeem';
 const description =
@@ -12,6 +13,14 @@ export default function GAG2CodesPage() {
  return (
   <main className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-8">
    <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{title}</h1>
+
+   <div className="mt-6 flex items-center gap-4 rounded-lg border border-border bg-gradient-to-r from-green-50 to-blue-50 p-5">
+    <Image src={gag2Images.icon} alt="Grow a Garden 2" width={64} height={64} className="rounded-xl" />
+    <div>
+     <p className="text-sm font-bold text-foreground">Codes verified June 15, 2026</p>
+     <p className="text-xs text-muted-foreground">Codes are case-sensitive. Redeem quickly — they can expire without notice.</p>
+    </div>
+   </div>
 
    <section className="mt-6">
     <h2 className="text-lg font-bold text-foreground">✅ Active Codes</h2>

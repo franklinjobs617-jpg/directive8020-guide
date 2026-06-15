@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { createGAG2Metadata, gag2SeedPacks } from '@/lib/grow-a-garden-2';
+import Image from 'next/image';
+import { createGAG2Metadata, gag2SeedPacks, gag2Images } from '@/lib/grow-a-garden-2';
 
 const title = 'Grow a Garden 2 Seed Packs Guide: Ghost Pepper Pack, Odds & Is It Worth It?';
 const description =
@@ -11,7 +12,13 @@ export const metadata = createGAG2Metadata({ title, description, canonical });
 export default function GAG2SeedPacksPage() {
  return (
   <main className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-8">
-   <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{title}</h1>
+   <div className="flex items-center gap-4 mb-4">
+    <Image src={gag2Images.icon} alt="Grow a Garden 2" width={64} height={64} className="rounded-xl" />
+    <div>
+     <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{title}</h1>
+     <p className="mt-1 text-sm text-muted-foreground">Robux-only packs with exclusive seeds not in the regular shop</p>
+    </div>
+   </div>
 
    <p className="mt-3 text-base text-muted-foreground leading-relaxed">
     Seed Packs are purchased with <strong>Robux only</strong> (not Sheckles).

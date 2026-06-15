@@ -1358,5 +1358,17 @@ export const growAGarden2: GameConfig = {
    description:
     "Ghost Pepper Seed Pack: 5 exclusive seeds with drop odds. Robux costs, roll amounts, and is it worth it?",
   },
+  {
+   title: "Night Stealing Guide",
+   href: "/games/grow-a-garden-2/night-stealing",
+   description:
+    "How night stealing works in Grow a Garden 2: day/night cycle, best stealing strategies, how to defend with pets and gears, and risk vs reward by garden type.",
+  },
+  {
+   title: "Beginner Guide",
+   href: "/games/grow-a-garden-2/beginner-guide",
+   description:
+    "First hour walkthrough for new players: how to start, best first seeds, spending priority, how to make Sheckles fast, which pets to buy first, and common beginner mistakes.",
+  },
  ],
 };

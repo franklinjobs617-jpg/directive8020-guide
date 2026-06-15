@@ -20,7 +20,15 @@ export default function GAG2SeedsPage() {
     </div>
     <div className="overflow-hidden rounded-lg border border-border bg-white">
      <Image src={gag2Images.seed('venus-fly-trap')} alt="Venus Fly Trap in Grow a Garden 2" width={600} height={338} className="w-full" />
-     <p className="border-t border-border bg-mist px-3 py-2 text-xs text-muted-foreground text-center">Player holding a Venus Fly Trap — S-Tier defensive crop</p>
+     <p className="border-t border-border bg-mist px-3 py-2 text-xs text-muted-foreground text-center">Venus Fly Trap — Mythic, eats thieves, S-Tier</p>
+    </div>
+    <div className="overflow-hidden rounded-lg border border-border bg-white">
+     <Image src={gag2Images.seed('mushroom-farm')} alt="Mushroom farming in Grow a Garden 2" width={600} height={338} className="w-full" />
+     <p className="border-t border-border bg-mist px-3 py-2 text-xs text-muted-foreground text-center">Mushrooms provide temporary buffs — Speed, Jump, Shrink, Invisibility</p>
+    </div>
+    <div className="overflow-hidden rounded-lg border border-border bg-white">
+     <Image src={gag2Images.seed('pineapple-plant')} alt="Pineapple plant in Grow a Garden 2" width={600} height={338} className="w-full" />
+     <p className="border-t border-border bg-mist px-3 py-2 text-xs text-muted-foreground text-center">Pineapple — Rare Multi-harvest, 10K Sheckles</p>
     </div>
    </div>
 
@@ -69,6 +77,56 @@ export default function GAG2SeedsPage() {
        ))}
       </tbody>
      </table>
+    </div>
+   </section>
+
+   <section className="mt-8">
+    <h2 className="text-xl font-bold text-foreground">Crop Mutations — How to Multiply Your Income</h2>
+    <p className="mt-2 text-sm text-muted-foreground">
+     Mutations transform a crop's sell value. They are applied randomly when harvesting, but certain pets
+     (Golden Dragonfly, Unicorn) and gears increase your mutation chances.
+    </p>
+    <div className="mt-3 overflow-hidden rounded-lg border border-border bg-white">
+     <table className="w-full text-sm">
+      <thead><tr className="border-b border-border bg-mist"><th className="px-3 py-2 text-left font-medium text-muted-foreground">Mutation</th><th className="px-3 py-2 text-left font-medium text-muted-foreground">Value Multiplier</th><th className="px-3 py-2 text-left font-medium text-muted-foreground">How to Boost</th></tr></thead>
+      <tbody>
+       {[
+        ['Gold', '15× value', 'Golden Dragonfly pet doubles the chance'],
+        ['Rainbow', '40× value', 'Unicorn pet doubles the chance'],
+        ['Electric', '~40× value', 'Weather events (Midas Touch)'],
+        ['Frozen', 'Moderate boost', 'Weather events'],
+        ['Shiny', 'Small boost', 'Random on harvest'],
+       ].map((m) => (
+        <tr key={m[0]} className="border-b border-border last:border-0">
+         <td className="px-3 py-2 font-semibold text-foreground">{m[0]}</td>
+         <td className="px-3 py-2 text-foreground font-bold">{m[1]}</td>
+         <td className="px-3 py-2 text-xs text-muted-foreground">{m[2]}</td>
+        </tr>
+       ))}
+      </tbody>
+     </table>
+    </div>
+    <p className="mt-2 text-xs text-muted-foreground">
+     Example: A Venus Fly Trap sells for ~3,840 base. An Electric Venus Fly Trap = <strong>~159,000 Sheckles</strong>.
+     Stack Unicorn + Golden Dragonfly for maximum mutation income.
+    </p>
+   </section>
+
+   <section className="mt-8">
+    <h2 className="text-xl font-bold text-foreground">Best Crop Progression Path</h2>
+    <div className="mt-2 overflow-hidden rounded-lg border border-border bg-white">
+     {[
+      { stage: 'Early (0-10K Sheckles)', crops: 'Carrot → Strawberry → Blueberry', tip: 'Multi-harvest crops give the best ROI early. Blueberry at 10 Sheckles pays back in 1 harvest.' },
+      { stage: 'Mid (10K-500K)', crops: 'Tomato → Bamboo → Pineapple → Mango', tip: 'Bamboo (700 Sheckles) is the best value crop in the game. Buy 5-10 and let them grow.' },
+      { stage: 'Late (500K-10M)', crops: 'Acorn → Venus Fly Trap → Pomegranate', tip: 'Acorn has only 2.9% stock chance — check Seed Shop every 5 min. Venus Fly Trap defends itself.' },
+      { stage: 'Endgame (10M+)', crops: 'Moon Bloom → Dragon\'s Breath', tip: 'Super-tier crops cost 65-90M each but have built-in defense and massive sell values.' },
+     ].map((s) => (
+      <div key={s.stage} className="border-b border-border p-3 last:border-0">
+       <span className="text-xs font-bold text-foreground">{s.stage}</span>
+       <p className="mt-1 text-sm text-foreground"><strong>{s.crops}</strong></p>
+       <p className="text-xs text-muted-foreground">{s.tip}</p>
+      </div>
+     ))}
     </div>
    </section>
 

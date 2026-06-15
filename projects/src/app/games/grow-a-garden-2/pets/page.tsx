@@ -28,13 +28,72 @@ const tierColors: Record<string, string> = {
 export default function GAG2PetsPage() {
  return (
   <main className="mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-8">
-   <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{title}</h1>
+   <div className="flex items-center gap-4 mb-4">
+    <Image src={gag2Images.pet('bunny')} alt="Grow a Garden 2 pets" width={72} height={72} className="rounded-xl" />
+    <div>
+     <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{title}</h1>
+     <p className="mt-1 text-sm text-muted-foreground">12 pets · spawn randomly · buy before the timer runs out</p>
+    </div>
+   </div>
    <p className="mt-3 text-base text-muted-foreground leading-relaxed">
     There are <strong>12 pets</strong> in Grow a Garden 2. Pets spawn randomly in the lobby with a countdown timer —
     buy them before they despawn. Other players can outbid you by paying double. After purchase,
     escort the pet to your garden to finalize ownership. You start with <strong>3 pet slots</strong>.
     Slot 4 costs 200,000 Sheckles, Slot 5 costs 1,000,000.
    </p>
+
+   <section className="mt-6">
+    <h2 className="text-lg font-bold text-foreground">How Pets Work in Grow a Garden 2</h2>
+    <div className="mt-2 grid gap-3 sm:grid-cols-2">
+     <div className="space-y-2 rounded-lg border border-border bg-white p-4 text-sm text-muted-foreground">
+      <p><strong>1. Spawn System:</strong> Pets do not come from a shop. They randomly spawn in the central lobby with a visible countdown timer. You have limited time to buy them before they despawn.</p>
+      <p><strong>2. Bidding Wars:</strong> If another player buys a pet first, you can contest it by paying <strong>double the base price</strong>. This creates fierce bidding wars for rare pets like the Unicorn and Ice Serpent.</p>
+     </div>
+     <div className="space-y-2 rounded-lg border border-border bg-white p-4 text-sm text-muted-foreground">
+      <p><strong>3. Escort to Garden:</strong> After purchase, you must walk the pet to your garden. During this escort, other players can still steal it — move fast.</p>
+      <p><strong>4. Pet Slots:</strong> Start with <strong>3 slots</strong>. Slot 4 costs <strong>200,000 Sheckles</strong>. Slot 5 costs <strong>1,000,000 Sheckles</strong>. Max 5 equipped at once.</p>
+     </div>
+    </div>
+   </section>
+
+   <section className="mt-6">
+    <h2 className="text-lg font-bold text-foreground">Best Pets by Role</h2>
+    <div className="mt-2 grid gap-3 sm:grid-cols-4">
+     {[
+      { role: '💰 Income', pets: 'Unicorn → Raccoon → Golden Dragonfly', tip: 'Maximize mutation profits' },
+      { role: '🛡️ Defense', pets: 'Bee → Black Dragon → Ice Serpent', tip: 'Protect garden from thieves' },
+      { role: '🌱 Growth', pets: 'Deer (stack multiple!)', tip: '10% faster per Deer — stacks infinitely' },
+      { role: '⚡ Speed', pets: 'Bunny → Frog', tip: 'Move faster, jump higher' },
+     ].map((r) => (
+      <div key={r.role} className="rounded-lg border border-border bg-mist p-3">
+       <span className="text-xs font-bold text-foreground">{r.role}</span>
+       <p className="mt-1 text-xs text-foreground font-medium">{r.pets}</p>
+       <p className="mt-0.5 text-[11px] text-muted-foreground">{r.tip}</p>
+      </div>
+     ))}
+    </div>
+   </section>
+
+   <section className="mt-6">
+    <h2 className="text-lg font-bold text-foreground">Recommended Pet Progression</h2>
+    <div className="mt-2 overflow-hidden rounded-lg border border-border bg-white">
+     {[
+      { step: '1️⃣ First 30 min', buy: 'Bunny (20K)', reason: 'Speed boost helps you escape thieves and move faster between shops and garden.' },
+      { step: '2️⃣ Save 50K', buy: 'Deer (50K)', reason: '10% growth boost stacks. Buy 2-3 Deer for 20-30% faster crops — best early ROI.' },
+      { step: '3️⃣ Save 1M', buy: 'Bee (1M)', reason: 'Auto-defends your garden. At this point thieves become a real threat at night.' },
+      { step: '4️⃣ Endgame', buy: 'Unicorn (4M+) or Raccoon (5M+)', reason: 'Unicorn doubles Rainbow mutations (40× value). Raccoon steals from others at night.' },
+      { step: '5️⃣ Ultimate', buy: 'Black Dragon (~1M) or Ice Serpent (20M)', reason: 'Maximum defense. Black Dragon burns intruders; Ice Serpent freezes them solid.' },
+     ].map((s) => (
+      <div key={s.step} className="flex items-start gap-3 border-b border-border p-3 last:border-0">
+       <span className="mt-0.5 w-24 shrink-0 text-xs font-bold text-foreground">{s.step}</span>
+       <div>
+        <p className="text-sm font-semibold text-foreground">Buy: {s.buy}</p>
+        <p className="text-xs text-muted-foreground">{s.reason}</p>
+       </div>
+      </div>
+     ))}
+    </div>
+   </section>
 
    <section className="mt-6">
     <h2 className="text-lg font-bold text-foreground">Quick Picks</h2>
@@ -143,6 +202,7 @@ export default function GAG2PetsPage() {
      <Link href="/games/grow-a-garden-2/wheelbarrow" className="text-sm text-foreground underline hover:no-underline">Wheelbarrow</Link>
      <Link href="/games/grow-a-garden-2/gears" className="text-sm text-foreground underline hover:no-underline">All Gears</Link>
      <Link href="/games/grow-a-garden-2/seeds" className="text-sm text-foreground underline hover:no-underline">Seeds & Plants</Link>
+     <Link href="/games/grow-a-garden-2/night-stealing" className="text-sm text-foreground underline hover:no-underline">Night Stealing</Link>
      <Link href="/games/grow-a-garden-2/codes" className="text-sm text-foreground underline hover:no-underline">Codes</Link>
     </div>
    </div>
