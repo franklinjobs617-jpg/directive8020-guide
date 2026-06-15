@@ -129,13 +129,41 @@ export default function FearsToFathomWalkthroughPage() {
     </ul>
    </section>
 
+   <div className="mt-8 rounded-lg border-2 border-red-200 bg-red-50 p-5">
+    <h2 className="text-lg font-bold text-red-900">{'⚠'} Final Chase at Bill’s House — Most Players Get Stuck Here</h2>
+    <p className="mt-2 text-sm text-red-800">
+     The final escape is the <strong>#1 frustration point</strong> in Scratch Creek.
+     The game gives zero hints about unhooking the trailer. Here is the exact escape sequence:
+    </p>
+    <ol className="mt-3 space-y-2">
+     {[
+      '<strong>Do NOT run to the car.</strong> Crouch by the tree at the edge of the yard and wait for Bill to go inside.',
+      '<strong>Watch the patrolman’s route.</strong> When he moves to the front of the house, sprint to the trailer. Both players get inside and close the doors.',
+      '<strong>Wait for the man to enter the house,</strong> then both jump out of the trailer.',
+      '<strong>One player MUST unhook the trailer.</strong> Approach the hitch between the car and trailer. An interaction prompt appears. This is the step everyone misses.',
+      '<strong>Both get in the car and drive away.</strong> If the trailer is still attached, the car stalls and you are caught — instant death.',
+      '<strong>Reach the main road.</strong> Call the police. Cutscene triggers and you escape.',
+     ].map((step, i) => (
+      <li key={i} className="flex gap-3">
+       <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-200 text-[11px] font-bold text-red-800">{i + 1}</span>
+       <span className="text-sm text-red-900" dangerouslySetInnerHTML={{ __html: step }} />
+      </li>
+     ))}
+    </ol>
+    <p className="mt-3 text-xs text-red-600">
+     <strong>Pro tip:</strong> Assign one player to unhook the trailer while the other waits in the driver’s seat. Do not crowd the hitch — only one player can interact with it. Do not try to escape on foot — you must use the car.
+    </p>
+   </div>
+
    <div className="mt-8 rounded-lg border border-border bg-mist p-5">
     <h3 className="mb-3 text-sm font-bold text-foreground">More Scratch Creek Guides</h3>
     <div className="flex flex-wrap gap-3">
      <Link href="/games/fears-to-fathom" className="text-sm text-foreground underline hover:no-underline">Guide Hub</Link>
      <Link href="/games/fears-to-fathom/co-op-guide" className="text-sm text-foreground underline hover:no-underline">Co-op & Solo FAQ</Link>
+     <Link href="/games/fears-to-fathom/all-endings" className="text-sm text-foreground underline hover:no-underline">All Endings</Link>
      <Link href="/games/fears-to-fathom/achievements" className="text-sm text-foreground underline hover:no-underline">Achievements</Link>
-     <Link href="/games/fears-to-fathom/is-it-worth-it" className="text-sm text-foreground underline hover:no-underline">Is It Worth It?</Link>
+     <Link href="/games/fears-to-fathom/marcus-vs-tessa" className="text-sm text-foreground underline hover:no-underline">Marcus vs Tessa</Link>
+     <Link href="/games/fears-to-fathom/length" className="text-sm text-foreground underline hover:no-underline">Game Length</Link>
     </div>
    </div>
 

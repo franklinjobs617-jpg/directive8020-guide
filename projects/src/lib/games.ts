@@ -1239,31 +1239,61 @@ export const fearsToFathom: GameConfig = {
  title: "Fears to Fathom Hub",
  href: "/games/fears-to-fathom",
  description:
- "Co-op only horror game from Rayll Studios. Find walkthrough, co-op guide, achievements, and buying advice for Scratch Creek.",
+ "Co-op only horror game from Rayll Studios. Find walkthrough, co-op guide, endings, achievements, character guide, and buying advice for Scratch Creek.",
  },
  {
  title: "Can I Play Solo? + Co-op Guide",
  href: "/games/fears-to-fathom/co-op-guide",
  description:
- "Fears to Fathom: Scratch Creek is co-op only with no single player mode. Learn how co-op works, how to find a partner, and how to play together.",
+ "Fears to Fathom: Scratch Creek is co-op only with no single player mode. Learn how co-op matchmaking works, how to find a partner, and how to play together.",
  },
  {
  title: "Full Walkthrough",
  href: "/games/fears-to-fathom/walkthrough",
  description:
- "Complete walkthrough for Fears to Fathom: Scratch Creek. Chapter-by-chapter guide covering every puzzle, key decision, and ending.",
+ "Complete walkthrough for Fears to Fathom: Scratch Creek. Chapter-by-chapter guide covering every puzzle, key decision, final chase escape, and all endings.",
+ },
+ {
+ title: "All Endings Guide",
+ href: "/games/fears-to-fathom/all-endings",
+ description:
+ "Every ending in Fears to Fathom: Scratch Creek — True Ending, Interstate early ending, Backroads alternate ending, 3:33 AM deaths, and Bill's House finale deaths.",
  },
  {
  title: "All Achievements",
  href: "/games/fears-to-fathom/achievements",
  description:
- "Full achievement list for Fears to Fathom: Scratch Creek. Unlock conditions, secret achievements, and 100% completion guide.",
+ "Full achievement list for Fears to Fathom: Scratch Creek. All 10 unlock conditions, secret achievements, missable trophies, and 100% completion roadmap.",
+ },
+ {
+ title: "Marcus vs Tessa Guide",
+ href: "/games/fears-to-fathom/marcus-vs-tessa",
+ description:
+ "Which character should you pick in Scratch Creek? Compare Marcus and Tessa: scare levels, unique solo scenes, responsibilities, and who should play each role.",
+ },
+ {
+ title: "How Long Is It?",
+ href: "/games/fears-to-fathom/length",
+ description:
+ "Fears to Fathom: Scratch Creek takes 2.5-4 hours. Full length breakdown by playstyle and chapter, comparison to other Fears to Fathom episodes, and 100% completion time.",
  },
  {
  title: "Is It Worth It?",
  href: "/games/fears-to-fathom/is-it-worth-it",
  description:
- "Is Fears to Fathom: Scratch Creek worth buying? Co-op only analysis, price, length, horror level, and who should play.",
+ "Is Fears to Fathom: Scratch Creek worth buying? Co-op only analysis, price, length, horror level, Steam review summary, and who should play versus wait.",
+ },
+ {
+ title: "Story & Ending Explained",
+ href: "/games/fears-to-fathom/story-explained",
+ description:
+ "Full story breakdown of Scratch Creek: the cult, Miss Julia, the church basement, C. Hawkins (Ironbark Lookout) connection, and what every ending means for Marcus and Tessa.",
+ },
+ {
+ title: "Troubleshooting & Bug Fixes",
+ href: "/games/fears-to-fathom/troubleshooting",
+ description:
+ "Fix dark screen, VHS filter, matchmaking errors, stuck at final chase, crashes, voice chat issues, and achievement bugs in Fears to Fathom: Scratch Creek.",
  },
  ],
 };

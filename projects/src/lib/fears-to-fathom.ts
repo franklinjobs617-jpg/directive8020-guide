@@ -7,11 +7,23 @@ export const fearsToFathomSteamUrl = 'https://store.steampowered.com/app/4121170
 export const fearsToFathomImages = {
  hero: '/games/fears-to-fathom/hero.webp',
  capsule: '/games/fears-to-fathom/capsule.webp',
+ // Old screenshots (kept for existing pages)
  screenshot1: '/games/fears-to-fathom/ss1.webp',
  screenshot2: '/games/fears-to-fathom/ss2.webp',
  screenshot3: '/games/fears-to-fathom/ss3.webp',
  screenshot4: '/games/fears-to-fathom/ss4.webp',
  screenshot5: '/games/fears-to-fathom/ss5.webp',
+ // New Steam screenshots (1920x1080, WebP)
+ packing: '/games/fears-to-fathom/ss_0.webp',
+ driving: '/games/fears-to-fathom/ss_1.webp',
+ town: '/games/fears-to-fathom/ss_2.webp',
+ farmhouse: '/games/fears-to-fathom/ss_3.webp',
+ missJulia: '/games/fears-to-fathom/ss_4.webp',
+ churchBasement: '/games/fears-to-fathom/ss_5.webp',
+ escape333: '/games/fears-to-fathom/ss_6.webp',
+ hiding: '/games/fears-to-fathom/ss_7.webp',
+ finalChase: '/games/fears-to-fathom/ss_8.webp',
+ billHouse: '/games/fears-to-fathom/ss_9.webp',
 };
 
 export const fearsToFathomQuickFacts = [
