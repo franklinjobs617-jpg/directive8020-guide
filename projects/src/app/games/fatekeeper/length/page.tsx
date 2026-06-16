@@ -7,9 +7,9 @@ import {
  fatekeeperImages,
 } from "@/lib/fatekeeper";
 
-const title = "How Long Is Fatekeeper? Early Access Length, Full Release Target & How Long to Beat";
+const title = "How Long Is Fatekeeper? — ~2 Hours Now, 15 Hours at Full Release";
 const description =
- "Fatekeeper length breakdown: Early Access main story time, completionist hours, how much content is in the current build, full 1.0 release target, save file location, and whether the Early Access length is worth it right now.";
+ "Fatekeeper playtime: current Early Access build is about 2 hours main route, 3–4 hours completionist. Full 1.0 release targets ~15 hours. HLTB estimate, save file location, and Steam Cloud status.";
 const canonical = "/games/fatekeeper/length";
 
 export const metadata = createFatekeeperMetadata({
