@@ -25,6 +25,7 @@ jobs:
             "romesteadguide.top"
             "minathehollower.base64pro.top"
             "ipooket.com"
+            "growagarden2pet.wiki"
           )
 
           for site in "${SITES[@]}"; do
