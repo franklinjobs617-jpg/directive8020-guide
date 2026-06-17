@@ -931,6 +931,198 @@ export const fatekeeper: GameConfig = {
  ],
 };
 
+export const cursemark: GameConfig = {
+  id: "cursemark",
+  slugPrefix: "cursemark",
+  hubPath: "/games/cursemark",
+  name: "Cursemark",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "A dark fantasy action roguelite from CLYDE Games and Mad Mushroom about rune crafting, soulslite combat, and build experimentation across three handcrafted biomes in Early Access.",
+  platforms: ["PC via Steam"],
+  genres: ["Action Roguelite", "Dark Fantasy", "Soulslite", "Early Access"],
+  developer: "CLYDE Games",
+  publisher: "Mad Mushroom",
+  releaseDate: "2026-06-08",
+  operatingSystem: "Windows 10/11 64-bit",
+  url: "https://store.steampowered.com/app/3219180/Cursemark/",
+  availability: "https://schema.org/InStock",
+  heroImage: "/games/cursemark/hero.webp",
+  guideLinks: [
+    {
+      title: "Release Date & Early Access",
+      href: "/games/cursemark/release-date",
+      description:
+        "June 8, 2026 launch date, Early Access scope, 3-biome content, launch discount, and platform details.",
+    },
+    {
+      title: "Beginner Guide",
+      href: "/games/cursemark/beginner-guide",
+      description:
+        "First runs, best starting weapon (Divine Spear), rune basics, healing, and essential survival tips for new players.",
+    },
+    {
+      title: "Rune Crafting Guide",
+      href: "/games/cursemark/rune-crafting",
+      description:
+        "How the rune system works: socketing, upgrading, elemental synergies, and why rarity does not always equal power.",
+    },
+    {
+      title: "Best Builds Guide",
+      href: "/games/cursemark/best-builds",
+      description:
+        "Top weapon, rune, and talisman synergies. Embershot builds, Voltara chains, and class recommendations for every playstyle.",
+    },
+    {
+      title: "Boss Guide",
+      href: "/games/cursemark/boss-guide",
+      description:
+        "Every boss strategy: attack patterns, weaknesses, recommended runes, and phase-by-phase tactics for all 3 biomes.",
+    },
+    {
+      title: "System Requirements",
+      href: "/games/cursemark/system-requirements",
+      description:
+        "Official minimum and recommended PC specs, Windows and Linux support, and performance expectations.",
+    },
+    {
+      title: "Steam Deck Guide",
+      href: "/games/cursemark/steam-deck",
+      description:
+        "Steam Deck compatibility, performance settings, control setup, and handheld tips for Cursemark.",
+    },
+    {
+      title: "Is Cursemark Worth It?",
+      href: "/games/cursemark/is-it-worth-it",
+      description:
+        "Early Access buying advice: $14.99 price, ~6 hours of content, solo developer, Very Positive reviews, and who should buy or wait.",
+    },
+  ],
+};
+
+export const spacecraft: GameConfig = {
+  id: "spacecraft",
+  slugPrefix: "spacecraft",
+  hubPath: "/games/spacecraft",
+  name: "SpaceCraft",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "An online space survival MMO from Shiro Games about ship construction, asteroid mining, factory automation, interstellar trading, and corporation management in a persistent player-driven galaxy.",
+  platforms: ["PC via Steam"],
+  genres: ["Space Survival MMO", "Automation", "Building", "Exploration", "Early Access"],
+  developer: "Shiro Games",
+  publisher: "Shiro Games",
+  releaseDate: "2026-06-11",
+  operatingSystem: "Windows 10/11 64-bit",
+  url: "https://store.steampowered.com/app/3276050/SpaceCraft/",
+  availability: "https://schema.org/InStock",
+  heroImage: "/games/spacecraft/hero.webp",
+  guideLinks: [
+    {
+      title: "Release Date & Early Access",
+      href: "/games/spacecraft/release-date",
+      description:
+        "June 11, 2026 Early Access launch: price ($29.99), launch discount, server status, platforms, and Shiro Games roadmap.",
+    },
+    {
+      title: "Beginner Guide",
+      href: "/games/spacecraft/beginner-guide",
+      description:
+        "First hour priorities, starter ship building, early mining, resource management, faction safety, and common beginner mistakes to avoid.",
+    },
+    {
+      title: "Ship Building Guide",
+      href: "/games/spacecraft/ship-building",
+      description:
+        "Modular ship design: engines, weapons, cargo, shields, heat management. Best early-game ship builds and meta designs for 2026.",
+    },
+    {
+      title: "Mining Guide",
+      href: "/games/spacecraft/mining-guide",
+      description:
+        "Asteroid mining, resource scanning, mining lasers, best ores to sell, refinery chains, and mining ship loadouts.",
+    },
+    {
+      title: "Factory & Automation",
+      href: "/games/spacecraft/factory-automation",
+      description:
+        "Production lines, conveyor logistics, assembler ratios, power management, drone automation, and industrial scaling strategy.",
+    },
+    {
+      title: "Trading & Economy",
+      href: "/games/spacecraft/trading-economy",
+      description:
+        "Market routes, supply and demand, best items to sell, credit farming, station trading, and interstellar trading strategy.",
+    },
+    {
+      title: "Factions Guide",
+      href: "/games/spacecraft/factions-guide",
+      description:
+        "All faction reputations, alliance benefits, war mechanics, faction-specific ships, and which faction to join first.",
+    },
+    {
+      title: "Combat Guide",
+      href: "/games/spacecraft/combat-guide",
+      description:
+        "Ship-to-ship combat, weapon types (kinetic/thermal/ion), shield management, PvP tactics, and pirate defense strategies.",
+    },
+    {
+      title: "Multiplayer & Co-op",
+      href: "/games/spacecraft/multiplayer-server",
+      description:
+        "How to find servers, play with friends, join Corporations (guilds), PvP zones, safe sectors, and fleet operations.",
+    },
+    {
+      title: "Base Building Guide",
+      href: "/games/spacecraft/base-building",
+      description:
+        "Space station construction, defense turrets, storage depots, docking bays, and expansion strategy in hostile sectors.",
+    },
+    {
+      title: "Tech Tree Guide",
+      href: "/games/spacecraft/tech-tree",
+      description:
+        "Optimal research order, best early unlocks, blueprint acquisition, technology specialization, and Tech Point farming.",
+    },
+    {
+      title: "System Requirements",
+      href: "/games/spacecraft/system-requirements",
+      description:
+        "Minimum and recommended PC specs, performance optimization, FPS settings, and hardware compatibility.",
+    },
+    {
+      title: "Steam Deck Guide",
+      href: "/games/spacecraft/steam-deck",
+      description:
+        "Steam Deck compatibility, performance settings, control mapping, battery expectations, and MMO handheld viability.",
+    },
+    {
+      title: "Crashing & Performance Fix",
+      href: "/games/spacecraft/crashing-fix",
+      description:
+        "Startup crashes, server lag, FPS drops, driver fixes, and common Early Access troubleshooting for SpaceCraft.",
+    },
+    {
+      title: "Is SpaceCraft Worth It?",
+      href: "/games/spacecraft/is-it-worth-it",
+      description:
+        "Early Access buying advice: $29.99 price, Shiro Games track record, Mixed Steam reviews, content scope, and buy or wait verdict.",
+    },
+    {
+      title: "Tips & Tricks",
+      href: "/games/spacecraft/tips-and-tricks",
+      description:
+        "25 things to know before starting: hidden mechanics, power allocation tricks, efficient shortcuts, and advanced strategies.",
+    },
+    {
+      title: "All Ships Database",
+      href: "/games/spacecraft/all-ships",
+      description:
+        "Complete ship list with stats, unlock requirements, tier rankings (S to D), and recommended picks for mining, combat, trading, and exploration.",
+    },
+  ],
+};
+
 export const gateGuardSimulator: GameConfig = {
  id: "gate-guard-simulator",
  slugPrefix: "gate-guard-simulator",

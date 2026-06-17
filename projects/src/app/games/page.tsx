@@ -18,6 +18,8 @@ import { fatekeeperImages } from "@/lib/fatekeeper";
 import { gateGuardImages } from "@/lib/gate-guard-simulator";
 import { enginefallImages } from "@/lib/enginefall";
 import { voidlingBoundImages } from "@/lib/voidling-bound";
+import { spacecraftImages } from "@/lib/spacecraft";
+import { cursemarkImages } from "@/lib/cursemark";
 import { sellLemons } from "@/lib/games";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
@@ -190,6 +192,20 @@ const gameCards = [
  label: "Gothic action-adventure",
  body: "Release timing, platforms, Steam Deck status, PC/Mac/Linux specs, spoiler-light beginner tips, and launch buying advice.",
  image: minaImages.hero,
+ },
+ {
+ title: "SpaceCraft",
+ href: "/games/spacecraft",
+ label: "Space survival MMO",
+ body: "Early Access launch guide for ship building, asteroid mining, factory automation, trading economy, faction wars, and Corporation management from Shiro Games.",
+ image: spacecraftImages.siteHero,
+ },
+ {
+ title: "Cursemark",
+ href: "/games/cursemark",
+ label: "Dark fantasy action roguelite",
+ body: "Early Access guide hub for rune crafting, best builds, boss strategies, weapon choices, and beginner tips for this solo-dev roguelite from CLYDE Games.",
+ image: cursemarkImages.siteHero,
  },
 ];
 
