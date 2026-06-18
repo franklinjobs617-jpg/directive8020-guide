@@ -75,6 +75,13 @@ export const metadata: Metadata = {
 
 const gameCards = [
  {
+ title: "Warhammer 40,000: Rogue Trader",
+ href: "/games/warhammer-40000-rogue-trader/dlc-guide-2026",
+ label: "CRPG DLC guide",
+ body: "Single-page 2026 DLC guide for new saves, DLC start order, Void Shadows, Lex Imperialis, The Infinite Museion, Patch 1.6, and augmentations.",
+ image: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2186680/header.jpg",
+ },
+ {
  title: "Sell Lemons",
  href: "/games/sell-lemons",
  label: "Roblox idle tycoon",

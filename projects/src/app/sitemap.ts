@@ -46,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: `${BASE_URL}/guides`, lastModified: today, changeFrequency: 'daily', priority: 0.9 },
  { url: `${BASE_URL}/games`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
  { url: `${BASE_URL}/steam-deck`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
+ { url: `${BASE_URL}/games/warhammer-40000-rogue-trader/dlc-guide-2026`, lastModified: '2026-06-18', changeFrequency: 'weekly', priority: 0.68 },
  { url: `${BASE_URL}/about`, lastModified: today, changeFrequency: 'monthly', priority: 0.4 },
  { url: `${BASE_URL}/privacy-policy`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },
  { url: `${BASE_URL}/terms-of-use`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },

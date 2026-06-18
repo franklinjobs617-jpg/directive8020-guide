@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { fatekeeper, type GameGuideLink } from "@/lib/games";
 
-export const fatekeeperLastModified = "2026-06-16";
+export const fatekeeperLastModified = "2026-06-18";
 export const fatekeeperSteamUrl =
   "https://store.steampowered.com/app/2186990/Fatekeeper/";
 export const fatekeeperOfficialUrl = "https://fatekeeper.thqnordic.com/";

@@ -7,9 +7,9 @@ import {
  fatekeeperImages,
 } from "@/lib/fatekeeper";
 
-const title = "How Long Is Fatekeeper? — ~2 Hours Now, 15 Hours at Full Release";
+const title = "How Long Is Fatekeeper? Early Access Length, Full Release Target and Save Data";
 const description =
- "Fatekeeper playtime: current Early Access build is about 2 hours main route, 3–4 hours completionist. Full 1.0 release targets ~15 hours. HLTB estimate, save file location, and Steam Cloud status.";
+ "Fatekeeper playtime guide for the current Early Access build, full-release length target, player-type time budget, save file location, and Steam Cloud checks.";
 const canonical = "/games/fatekeeper/length";
 
 export const metadata = createFatekeeperMetadata({
@@ -23,12 +23,12 @@ const faqs = [
  {
  question: "How long is Fatekeeper?",
  answer:
- "Fatekeeper's Early Access launch build contains about 2 hours of content for a focused run through the available areas. Exploring every side path and testing multiple builds may add 1-2 hours.",
+ "Fatekeeper's Early Access build is a short slice. Use about 2 hours as a focused-route planning estimate for the available content, then add time for deaths, side paths, and build testing.",
  },
  {
  question: "What is Fatekeeper HLTB or playtime?",
  answer:
- "Use 2 hours as the current HLTB-style main-route estimate, 3-4 hours for Early Access completionist playtime, and about 15 hours as the full-release target.",
+ "Use 2 hours as a current main-route planning estimate, 3-4 hours for Early Access completionist-style play, and about 15 hours as the full-release target.",
  },
  {
  question: "How long will the full game be?",
@@ -48,32 +48,32 @@ const faqs = [
  {
  question: "Is Fatekeeper worth the price for only 2 hours?",
  answer:
- "At $7-10 with a launch discount, the Early Access build is priced as an early supporter tier rather than a full game purchase. You're buying into the development journey -- the price will increase as more content is added.",
+ "Treat the current build as a short Early Access purchase, not a full-length RPG. Buy if you want to test the foundation now; wait if you need the full campaign, settled balance, or a finished review consensus.",
  },
 ];
 
 const searchIntentRows = [
  {
  query: "Fatekeeper how long to beat",
- answer: "About 2 hours for a focused Early Access run. Full release targets 15 hours.",
+ answer: "About 2 hours as a focused Early Access planning estimate. Full release targets about 15 hours.",
  href: "#current-length",
  label: "Length",
  },
  {
  query: "Fatekeeper game length",
- answer: "EA launch: ~2 hours. Completionist: 3-4 hours. Full release target: ~15 hours.",
+ answer: "Early Access now: about 2 hours focused, 3-4 hours with side paths and build testing. Full release target: about 15 hours.",
  href: "#current-length",
  label: "Hours",
  },
  {
  query: "How long is Fatekeeper?",
- answer: "Main route: about 2 hours right now. Completionist Early Access playtime: 3-4 hours.",
+ answer: "Main route planning estimate: about 2 hours right now. Completionist Early Access playtime: 3-4 hours.",
  href: "#current-length",
  label: "HLTB",
  },
  {
  query: "Fatekeeper HLTB / playtime",
- answer: "Treat HLTB as 2 hours for now, with a 15-hour full-release target.",
+ answer: "Treat current HLTB-style estimates as early and use about 2 hours for planning, with a 15-hour full-release target.",
  href: "#current-length",
  label: "Playtime",
  },
@@ -132,17 +132,17 @@ export default function FatekeeperLengthPage() {
  faqs={faqs}
  >
  <BlufBox title="BLUF">
- Two hours. That's what you get right now -- enough to test the combat, try
- a build, fight the first boss. The full game is aiming for 15 hours, about
- 18 months out. At $7-10, it's cheap. No autosaves -- save manually, and
- back up{" "}
+ Fatekeeper is short in Early Access: plan around a focused 2-hour route
+ through the current content, or 3-4 hours if you test builds, explore side
+ paths, and retry fights. The full 1.0 campaign target is about 15 hours.
+ Back up{" "}
  <strong>%USERPROFILE%\AppData\Local\Fatekeeper\Saved\SaveGames</strong>{" "}
- before patches hit.
+ before major Early Access patches.
  </BlufBox>
 
  <SearchAnswerPanel
  title="Fatekeeper Length & Save Data"
- answer="About 2 hours in the current build, 3-4 hours for Early Access completionist playtime, and about 15 hours at full release. Manual saves only: no autosave."
+ answer="Plan around about 2 hours for a focused current-build route, 3-4 hours for Early Access completionist-style play, and about 15 hours for the full-release target. Back up saves before major patches."
  intentRows={searchIntentRows}
  jumpLinks={jumpLinks}
  />

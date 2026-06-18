@@ -4,7 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
-import { ActionTable, BlufBox, RelatedGuides, StatusPanel } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, RelatedGuides } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
  title: 'Directive 8020 Save Everyone Guide - Keep All Crew Alive',
@@ -58,28 +58,28 @@ const survivalRules = [
 ];
 
 const quickSaveRows = [
- ['Young', 'Maintain high Loyal relationship; choose Help Stafford in Episode 8 and pass the final shuttle QTEs.', 'Primary protagonist and decision maker.'],
- ['Stafford', 'In Episode 3 cabin crash, choose Stay Seated and Buckle In; choose Help Stafford in Episode 8 chase.', 'Will die instantly if standing during crash or left behind in Ep 8.'],
- ['Eisele', 'In Episode 6 imposter scene, choose to Test Eisele and select the newcomer as the real one.', 'Imposter test failure results in immediate death.'],
- ['Cooper', 'Pass all Episode 4 stealth sequences and locker breath QTEs; avoid early injuries.', 'Lethal injuries in chase scenes trigger delayed deaths.'],
- ['Cernan', 'Ensure Young de-escalates the Episode 6 Williams standoff (choose Stand Down/Lower Weapon).', 'Williams survival is required to clear Cernan\'s route dependencies.'],
+ ['Young', 'Keep leadership choices calm, preserve crew trust, and avoid rushing unverified rescue or pursuit scenes.', 'Young is a major decision anchor, so relationship damage and failed action prompts can affect later routes.'],
+ ['Stafford', 'Protect command-route decisions, avoid needless conflict, and treat high-pressure QTE scenes as survival-critical.', 'Stafford can influence group control, rescue timing, and whether the crew stays coordinated.'],
+ ['Eisele', 'Verify identity before trust choices, especially after isolation or scenes involving duplicate information.', 'Eisele is tied to technical and evidence-heavy route checks where false trust can be dangerous.'],
+ ['Cooper', 'Avoid injuries in stealth, chase, and rescue scenes; keep medical information available to the group.', 'Cooper matters for injury outcomes, rescue logic, and later route stability.'],
+ ['Cernan', 'Keep repair routes, access decisions, and engineering support intact before late-game pressure rises.', 'Cernan can affect mechanical access, recovery options, and crew support branches.'],
 ];
 
 const survivorRows = [
- { step: 'Young', doThis: 'Build Loyal trait; choose Help Stafford in Ep 8 and succeed in detonating the oxygen tank QTE.', why: 'Young is the main shuttle pilot; her final action determines crew escape success.' },
- { step: 'Stafford', doThis: 'Must Buckle In during Ep 3 cabin depressurization. Young must choose Help Stafford in Ep 8.', why: 'Scripted cabin impact or abandonment in the final corridor triggers instant death.' },
- { step: 'Eisele', doThis: 'In Ep 6 imposter standoff, choose Test instead of shooting, then select the newcomer.', why: 'Choosing the wrong clone or firing prematurely causes Eisele\'s instant death.' },
- { step: 'Cooper', doThis: 'Pass all Ep 4 stealth corridors and lockers breath QTEs without alerting the hunter.', why: 'Stealth mistakes trigger high-difficulty chases that lead to lethal injuries.' },
- { step: 'Cernan', doThis: 'De-escalate the Ep 6 standoff with Williams by choosing Stand Down / Lower Weapon.', why: 'Williams must survive to verify Cernan\'s bio-signals and secure group trust.' },
+ { step: '1. Before a split', doThis: 'Check who is going alone, who can witness the route, and whether communication remains open.', why: 'Most save-everyone failures start before the death scene, when a character becomes isolated or unverifiable.' },
+ { step: '2. During a trust scene', doThis: 'Choose evidence, identity checks, and group confirmation before loyalty or panic.', why: 'The mimic threat turns ordinary rescue choices into proof checks.' },
+ { step: '3. During action scenes', doThis: 'Treat QTEs, stealth prompts, chases, and improvised combat as survival-critical.', why: 'A failed prompt can create injury, separation, or a later death condition.' },
+ { step: '4. After any injury', doThis: 'Record who was injured, what item or clue was lost, and which relationship changed.', why: 'Delayed deaths can come from a route state that looked minor when it happened.' },
+ { step: '5. After a death', doThis: 'Replay from the earliest relevant Turning Point and change one cause at a time.', why: 'Changing too many choices at once makes it hard to identify the actual survival condition.' },
 ];
 
 const routeMilestones = [
- ['Episodes 1-2', 'Build stable relationships and avoid reckless blame before the mimic threat fully dominates decisions.'],
- ['Episodes 3-4', 'Prioritize evidence, sample context, stealth success, and scanner awareness before the route opens wider.'],
- ['Episode 5: Mr. Williams', 'Audit everyone alive, every clue found, and every unresolved suspicion before mid-game fallout locks in.'],
- ['Episode 6: Hostile Takeover', 'Treat survivor-dependent scenes carefully because who is alive can change what you can save next.'],
- ['Episode 7: Revelation', 'Handle late 50-50 style decisions one at a time and preserve mission-critical information.'],
- ['Episode 8: Come True', 'Use the best-ending base route, then branch for alternate endings only after everyone survives.'],
+ ['Opening chapters', 'Build stable relationships and avoid reckless blame before the mimic threat fully dominates decisions.'],
+ ['First major danger route', 'Prioritize evidence, stealth success, and scanner awareness before the route opens wider.'],
+ ['Mid-game audit', 'Check everyone alive, every clue found, and every unresolved suspicion before fallout locks in.'],
+ ['Identity-pressure scenes', 'Treat survivor-dependent scenes carefully because who is alive can change what you can save next.'],
+ ['Late-game decisions', 'Handle 50-50 style choices one at a time and preserve mission-critical information.'],
+ ['Ending route', 'Use the everyone-lives base route, then branch for alternate endings only after the crew survives.'],
 ];
 
 export default function SaveEveryonePage() {
@@ -92,7 +92,7 @@ export default function SaveEveryonePage() {
  'Directive 8020 survival guide covering how to keep Young, Stafford, Eisele, Cooper, and Cernan alive with mimic trust checks, QTEs, stealth, relationships, and Turning Points recovery.',
  url: '/directive-8020-how-to-save-everyone',
  datePublished: '2026-05-12',
- dateModified: '2026-05-21',
+ dateModified: '2026-06-18',
  imageUrl: '/d8020-screenshot-05.jpg',
  })}
  />
@@ -111,6 +111,9 @@ export default function SaveEveryonePage() {
  verification, group safety, relationship control, clean QTEs, stealth
  discipline, and careful Turning Points replay.
  </p>
+ <p className="mb-8 text-sm font-medium text-muted-foreground">
+ Last updated: June 18, 2026.
+ </p>
 
  <BlufBox>
  <p>
@@ -122,14 +125,20 @@ export default function SaveEveryonePage() {
  </p>
  </BlufBox>
 
- <StatusPanel
- items={[
- { label: 'Playable survivor list', value: 'Young, Eisele, Cernan, Stafford, and Cooper are used as the working route table.', status: 'working' },
- { label: 'Exact save choices', value: 'Use chapter route testing and Turning Points for option-by-option cleanup.', status: 'working' },
- { label: 'Survival method', value: 'QTEs, relationships, evidence, stealth, and Turning Points are reliable guide categories.', status: 'verified' },
- { label: 'NPC deaths', value: 'Supporting-character deaths should be tracked separately from the five playable survivor route.', status: 'working' },
- ]}
- />
+ <div className="my-6 grid gap-3 rounded-lg border border-border bg-mist p-4 sm:grid-cols-2">
+ <div>
+ <h2 className="text-sm font-bold text-foreground">Main survivor list</h2>
+ <p className="mt-1 text-sm text-muted-foreground">
+ Track Young, Stafford, Eisele, Cooper, and Cernan first, then record supporting-character outcomes separately.
+ </p>
+ </div>
+ <div>
+ <h2 className="text-sm font-bold text-foreground">Best recovery tool</h2>
+ <p className="mt-1 text-sm text-muted-foreground">
+ Use Turning Points to replay the earliest likely cause, not only the final death scene.
+ </p>
+ </div>
+ </div>
 
  <div className="prose-game">
  <h2>Quick Crew Survival Table</h2>
@@ -177,10 +186,12 @@ export default function SaveEveryonePage() {
  ))}
  </ul>
 
- <h2>Everyone Lives Route Table</h2>
+ <h2>Everyone Lives Route Checklist</h2>
  <p>
- Use this table to trace the exact choices and requirements for each survivor.
- Replay from the nearest Turning Point if a character dies.
+ Use this checklist to find the route condition that likely broke when a
+ character dies. Replay from the nearest relevant Turning Point once you
+ know whether the issue was separation, trust, evidence, injury, or a
+ failed action prompt.
  </p>
  <ActionTable rows={survivorRows} />
 

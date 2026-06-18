@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { firstLight007, type GameGuideLink } from '@/lib/games';
 
-export const firstLightLastModified = '2026-05-27';
+export const firstLightLastModified = '2026-06-18';
 export const firstLightSteamUrl = 'https://store.steampowered.com/app/3768760/007_First_Light/';
 export const firstLightOfficialUrl = 'https://www.ioi.dk/007-first-light';
 export const firstLightPlayStationUrl =
@@ -662,9 +662,9 @@ export const firstLightMissionJumpLinks = [
 
 export const firstLightEmbargoActionRows = [
  {
- step: '1. Confirm whether reviews are live',
- doThis: 'Check Metacritic, OpenCritic, IGN, and Steam user reviews on launch day before using older embargo countdown wording.',
- why: 'Review status changes fast in the first 24-72 hours. Older wording can mislead you into thinking reviews are not out yet.',
+ step: '1. Start with current reviews',
+ doThis: 'Check current critic coverage and Steam user reviews before using older embargo countdown wording.',
+ why: 'Review status changes quickly. Older wording can mislead you into thinking reviews are not out yet.',
  },
  {
  step: '2. Read review details, not just scores',
@@ -738,9 +738,9 @@ export const firstLightEmbargoSourceRows = [
 export const firstLightEmbargoSearchIntent = [
  {
  query: '007 First Light review embargo',
- answer: 'Treat the embargo question as time-sensitive. After reviews publish, use current critic reviews and Steam user reviews instead of older countdown wording.',
+ answer: 'If you searched for the embargo, switch to current critic reviews and Steam user reviews before deciding whether to buy.',
  href: '#embargo-checklist',
- label: 'Review embargo',
+ label: 'Reviews',
  },
  {
  query: '007 First Light reviews out',
@@ -763,7 +763,7 @@ export const firstLightEmbargoSearchIntent = [
 ];
 
 export const firstLightEmbargoJumpLinks = [
- { href: '#embargo-checklist', label: 'Embargo checklist' },
+ { href: '#embargo-checklist', label: 'Review checklist' },
  { href: '#review-sources', label: 'Review sources' },
  { href: '#buy-or-wait', label: 'Buy or wait' },
  { href: '#denuvo', label: 'Denuvo & Deck' },

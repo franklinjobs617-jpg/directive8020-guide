@@ -3,8 +3,6 @@ import {
  ActionTable,
  BlufBox,
  SearchAnswerPanel,
- SourceCheckTable,
- StatusPanel,
 } from '@/components/guide-blocks';
 import { FirstLightArticle } from '@/components/007-first-light-article';
 import {
@@ -12,17 +10,15 @@ import {
  firstLightEmbargoActionRows,
  firstLightEmbargoJumpLinks,
  firstLightEmbargoSearchIntent,
- firstLightEmbargoSourceRows,
- firstLightEmbargoStatusItems,
  firstLightImages,
  firstLightPlayerConcernRows,
  firstLightReviewRows,
  firstLightReviewSourceRows,
 } from '@/lib/007-first-light';
 
-const title = '007 First Light Review Embargo Lifted? Reviews, Denuvo & Worth It';
+const title = '007 First Light Reviews, Denuvo, Steam Deck and Buyer Notes';
 const description =
- '007 First Light review embargo and buying guide covering whether reviews are out, Steam user reviews, Denuvo, Steam Deck status, PC performance, and who should buy or wait.';
+ '007 First Light buyer guide covering current review checks, Steam user reviews, Denuvo, Steam Deck status, PC performance, and who should buy now or wait.';
 const canonical = '/games/007-first-light/review-embargo';
 
 export const metadata = createFirstLightMetadata({
@@ -70,28 +66,30 @@ export default function FirstLightReviewEmbargoPage() {
  heroImage={firstLightImages.background}
  heroAlt="007 First Light action scene review embargo and buying guide image"
  faqs={faqs}
+ showSources={false}
  >
+ <p className="mb-6 text-sm font-medium text-muted-foreground">Last updated: June 18, 2026.</p>
+
  <BlufBox title="Buy or Wait">
  <p>
- <strong>For 007 First Light, the review question is now about current
- reviews, Steam user reviews, Denuvo, PC performance, and Steam Deck
- proof.</strong> Buy if the published coverage matches the Bond origin
- story you want. Wait if you need broader player reports, handheld
+ <strong>For 007 First Light, do not rely on old embargo wording.</strong>
+ Check current critic coverage, Steam user reviews, Denuvo, PC
+ performance, and Steam Deck proof before buying. Buy if the published
+ coverage matches the Bond origin story you want. Wait if you need
+ broader player reports, handheld
  testing, or more confidence in PC performance.
  </p>
  </BlufBox>
 
  <SearchAnswerPanel
- title="007 First Light Review Embargo Quick Answer"
- answer="Treat the embargo question as time-sensitive. Buy if current reviews match the Bond origin story you want. Wait if you need Steam user volume, Steam Deck proof, or more confidence in Denuvo and PC performance."
+ title="007 First Light Reviews Quick Answer"
+ answer="Use this page as a current buy-or-wait check: reviews and Steam user reports matter first, Denuvo matters for DRM-sensitive PC buyers, and Steam Deck players should wait for a rating or strong handheld reports."
  intentRows={firstLightEmbargoSearchIntent}
  jumpLinks={firstLightEmbargoJumpLinks}
  />
 
- <StatusPanel items={firstLightEmbargoStatusItems} />
-
  <section id="embargo-checklist" className="prose-game">
- <h2>Review Embargo and Buying Checklist</h2>
+ <h2>Reviews and Buying Checklist</h2>
  <ArticleImage
  src={firstLightImages.reviewCombat}
  alt="007 First Light agent close-up review and buying decision image"
@@ -219,8 +217,6 @@ export default function FirstLightReviewEmbargoPage() {
 
  <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Review Plan</h2>
  <ActionTable rows={firstLightEmbargoActionRows} />
-
- <SourceCheckTable title="007 First Light Review Sources" rows={firstLightEmbargoSourceRows} />
  </FirstLightArticle>
  );
 }

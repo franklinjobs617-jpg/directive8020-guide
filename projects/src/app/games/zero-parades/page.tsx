@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArticleImage } from '@/components/article-media';
-import { BlufBox, StatusPanel } from '@/components/guide-blocks';
+import { BlufBox } from '@/components/guide-blocks';
 import { ZeroParadesArticle } from '@/components/zero-parades-article';
 import { zeroParades } from '@/lib/games';
 import {
@@ -14,9 +14,9 @@ import {
  zeroParadesWorthItRows,
 } from '@/lib/zero-parades';
 
-const title = 'ZERO PARADES Guide Hub: Walkthrough, Best Build, Length, PS5, Steam Deck & System Requirements';
+const title = 'ZERO PARADES Guide Hub: Start Here for Builds, Walkthrough, Length and Platform Checks';
 const description =
- 'Find ZERO PARADES guides for beginner tips, best build, walkthrough, game length, system requirements, Steam Deck, controller support, and buying advice.';
+ 'Start with the right ZERO PARADES guide: beginner route, best build, walkthrough, game length, system requirements, Steam Deck, controller support, PS5 status, and buying advice.';
 const canonical = '/games/zero-parades';
 
 export const metadata = createZeroParadesMetadata({
@@ -143,14 +143,13 @@ export default function ZeroParadesHubPage() {
  heroAlt="ZERO PARADES: For Dead Spies official Steam key art"
  faqs={faqs}
  >
- <BlufBox title="Launch Answer">
+ <BlufBox title="Start Here">
  <p>
- <strong>ZERO PARADES: For Dead Spies launched May 21, 2026 on PC.</strong>{' '}
- For quick decisions: it is available on GOG, Steam, and Epic Games
- Store; PS5 is announced for 2026 without an exact date; Steam lists
- partial controller support; and the safest launch-window build advice
- is to choose a role-playable skill direction instead of chasing a
- final best build.
+ <strong>If you are starting ZERO PARADES, choose your next guide by
+ problem, not by release status.</strong> New players should start with
+ beginner tips or the walkthrough. Build-focused players should use the
+ skill/build guide. Platform buyers should check Steam Deck, controller,
+ PS5, and system requirements before buying.
  </p>
  </BlufBox>
 
@@ -175,20 +174,31 @@ export default function ZeroParadesHubPage() {
  </table>
  </div>
 
- <StatusPanel
- items={zeroParadesQuickFacts.slice(0, 8).map(([label, value]) => ({
- label,
- value,
- status: 'verified' as const,
- }))}
- />
+ <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist">
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Quick fact</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player answer</th>
+ </tr>
+ </thead>
+ <tbody>
+ {zeroParadesQuickFacts.slice(0, 8).map(([label, value]) => (
+ <tr key={label} className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">{label}</td>
+ <td className="px-4 py-3 text-muted-foreground">{value}</td>
+ </tr>
+ ))}
+ </tbody>
+ </table>
+ </div>
 
  <section className="my-10">
- <h2 className="mb-4 text-xl font-bold text-foreground">Choose Your Next Step</h2>
+ <h2 className="mb-4 text-xl font-bold text-foreground">What Should You Read First?</h2>
  <ArticleImage
  src={zeroParadesImages.screenshot1}
  alt="ZERO PARADES guide hub screenshot"
- caption="Use this hub to check today's PC launch, then jump to beginner tips, PC specs, Steam Deck setup, or buying advice."
+ caption="Use this hub as a route selector: pick the guide that matches the decision or blocker in front of you."
  />
  <div className="grid gap-4 sm:grid-cols-2">
  {zeroParades.guideLinks.map((guide) => (

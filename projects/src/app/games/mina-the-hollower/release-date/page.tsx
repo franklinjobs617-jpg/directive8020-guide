@@ -3,8 +3,6 @@ import {
  ActionTable,
  BlufBox,
  SearchAnswerPanel,
- SourceCheckTable,
- StatusPanel,
 } from '@/components/guide-blocks';
 import { MinaArticle } from '@/components/mina-the-hollower-article';
 import {
@@ -15,13 +13,11 @@ import {
  minaReleaseActionRows,
  minaReleaseJumpLinks,
  minaReleaseSearchIntent,
- minaReleaseSourceRows,
- minaReleaseStatusItems,
 } from '@/lib/mina-the-hollower';
 
-const title = 'Mina the Hollower Release Date, Platforms, Demo & Unlock Status';
+const title = 'Mina the Hollower Release Date, Platforms, Demo Save and Steam Deck Checks';
 const description =
- 'Mina the Hollower released May 29, 2026 on Steam. Check PC, Mac, Linux, PS5, Xbox, Switch, and Switch 2 platform status and unlock timing.';
+ 'Mina the Hollower release guide covering Steam and official launch dates, PC, Mac, Linux, PS5, Xbox, Switch, Switch 2, demo save transfer, Steam Deck, and buying checks.';
 const canonical = '/games/mina-the-hollower/release-date';
 
 export const metadata = createMinaMetadata({
@@ -64,14 +60,15 @@ export default function MinaReleaseDatePage() {
  heroImage={minaImages.screenshot1}
  heroAlt="Mina the Hollower release date guide image"
  faqs={faqs}
+ showSources={false}
  >
  <BlufBox title="Release Answer">
  <p>
- <strong>Use Steam for your local unlock, but do not ignore the May 29 announcement date.</strong>{' '}
- Steam currently shows May 28, 2026 and coming_soon=true. Yacht Club
- Games and platform coverage announce May 29, 2026. The player-safe
- answer is to check your live storefront near launch because dates can
- display differently by region and platform.
+ <strong>Mina the Hollower uses two date signals: Steam lists May 28,
+ 2026, while Yacht Club Games uses May 29, 2026 in launch messaging.</strong>{' '}
+ Use your live storefront for the exact local timing, price, and platform
+ availability. Do not assume demo progress transfers unless the store or
+ developer explicitly says so.
  </p>
  </BlufBox>
 
@@ -82,10 +79,8 @@ export default function MinaReleaseDatePage() {
  jumpLinks={minaReleaseJumpLinks}
  />
 
- <StatusPanel items={minaReleaseStatusItems} />
-
  <section className="prose-game" id="release-status">
- <h2>Release Date Status</h2>
+ <h2>Release Date and Local Storefront Timing</h2>
  <ArticleImage
  src={minaImages.screenshot1}
  alt="Mina the Hollower release date and storefront status"
@@ -127,11 +122,11 @@ export default function MinaReleaseDatePage() {
  platforms.
  </p>
 
- <h2 id="launch-checklist">Launch-Week Checklist</h2>
+ <h2 id="launch-checklist">Current Buying Checklist</h2>
  <ArticleImage
  src={minaImages.screenshot3}
  alt="Mina the Hollower launch week checklist"
- caption="Close to launch, check date display, price, demo wording, Steam Deck badge, and reviews before making a platform decision."
+ caption="Before buying, check date display, price, demo wording, Steam Deck badge, and current reviews on the platform you plan to use."
  />
  </section>
 
@@ -157,7 +152,6 @@ export default function MinaReleaseDatePage() {
  <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Launch Plan</h2>
  <ActionTable rows={minaReleaseActionRows} />
 
- <SourceCheckTable title="Mina the Hollower Release Sources" rows={minaReleaseSourceRows} />
  </MinaArticle>
  );
 }

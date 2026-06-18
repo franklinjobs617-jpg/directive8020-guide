@@ -10,9 +10,9 @@ import { RelatedGuides, SearchAnswerPanel } from '@/components/guide-blocks';
 import { crewPortraitHero, directiveCharacters } from '@/lib/directive-8020-characters';
 
 export const metadata: Metadata = {
- title: 'Directive 8020 Characters & Cast: All 10 Crew Members, Actors, Face Models & Who Plays Who',
+ title: 'Directive 8020 Characters, Cast, Actors & Face Models Guide',
  description:
- 'Complete Directive 8020 characters and cast guide: all 10 playable and NPC crew members, real actor names, face model details, who plays Brianna Young and Eisele, Samantha Cooper face model, mimic clues by character, and who can die vs survive.',
+ 'Directive 8020 character guide with the playable Cassiopeia crew, cast and actor notes, face model cautions, crew roles, survival relevance, mimic clues, and Movie Night assignment tips.',
  alternates: {
  canonical: '/directive-8020-characters',
  },
@@ -22,7 +22,7 @@ const faqs = [
  {
  question: 'Who are the playable characters in Directive 8020?',
  answer:
- 'The core playable Cassiopeia crew tracked on this page is Brianna Young, Nolan Stafford, Laura Eisele, Dr. Samantha Cooper, and Josef Cernan.',
+ 'The five playable Cassiopeia crew members tracked on this page are Brianna Young, Nolan Stafford, Laura Eisele, Dr. Samantha Cooper, and Josef Cernan.',
  },
  {
  question: 'Who plays Brianna Young in Directive 8020?',
@@ -32,12 +32,12 @@ const faqs = [
  {
  question: 'Is the full Directive 8020 cast confirmed?',
  answer:
- 'No. Treat the full cast as partially confirmed unless a role is backed by official credits, store copy, a platform page, or another trusted role-level source.',
+ 'No. The page separates listed actor information from roles that are not named here yet, so character facts do not get mixed with uncredited actor or face model claims.',
  },
  {
  question: 'Are Directive 8020 face models confirmed?',
  answer:
- 'Do not assume face models from visual similarity. Use official portraits and credited cast sources only, and keep unverified face model claims marked as pending.',
+ 'Do not assume face models from visual similarity. Use official portraits and credited cast sources only, and treat uncredited face model claims as unconfirmed.',
  },
 ];
 
@@ -50,17 +50,17 @@ const suspicionChecklist = [
 ];
 
 const characterQuickRows = [
- ['Brianna Young', 'Lashana Lynch confirmed', 'Yes', 'Pilot / co-pilot', 'Use credited cast and official portraits only', 'Verified lead cast signal'],
- ['Nolan Stafford', 'Danny Sapani reported', 'Yes', 'Commander', 'Do not infer a separate face model without credits', 'Working role-level source'],
- ['Laura Eisele', 'Actor to verify', 'Yes', 'Senior Mission Officer', 'Not confirmed', 'Pending actor confirmation'],
- ['Dr. Samantha Cooper', 'Actor to verify', 'Yes', 'Medical specialist', 'Not confirmed', 'Pending actor confirmation'],
- ['Josef Cernan', 'Actor to verify', 'Yes', 'Technical engineer', 'Not confirmed', 'Pending actor confirmation'],
+ ['Brianna Young', 'Lashana Lynch', 'Yes', 'Pilot / co-pilot', 'Use credited cast and official portraits only', 'Leadership choices, trust, and survival route planning'],
+ ['Nolan Stafford', 'Danny Sapani', 'Yes', 'Commander', 'Do not infer a separate face model without credits', 'Command decisions, crew tension, and rescue outcomes'],
+ ['Laura Eisele', 'Not listed here yet', 'Yes', 'Senior Mission Officer', 'Not confirmed', 'Ship systems, evidence checks, and technical route locks'],
+ ['Dr. Samantha Cooper', 'Not listed here yet', 'Yes', 'Medical specialist', 'Not confirmed', 'Injury outcomes, medical choices, and rescue routes'],
+ ['Josef Cernan', 'Not listed here yet', 'Yes', 'Technical engineer', 'Not confirmed', 'Repairs, access routes, and mechanical route locks'],
 ];
 
 const characterSearchRows = [
  ['Main character', 'Brianna Young is the clearest lead signal because Lashana Lynch is the confirmed headline performer and Young anchors much of the official story framing.'],
  ['Playable characters', 'The core playable Cassiopeia crew is Young, Stafford, Eisele, Cooper, and Cernan. Movie Night supports assigning crew members to different players.'],
- ['Samantha Cooper actress', 'Treat Samantha Cooper actor information as pending unless a platform page, credits capture, or trusted cast source clearly names the performer.'],
+ ['Samantha Cooper actress', 'Treat Samantha Cooper actor information as unnamed unless a platform page, credits capture, or trusted cast source clearly names the performer.'],
  ['Face models', 'Use official portraits and credited cast sources only. Do not assume a face model from visual similarity.'],
  ['Who can die?', 'Any survival route should track the five core crew members first, then supporting characters separately. Deaths can depend on QTEs, trust, relationships, and evidence.'],
 ];
@@ -87,7 +87,7 @@ const searchIntentRows = [
  },
  {
  query: 'Who are the actors and cast?',
- answer: 'Use credited cast sources only; some role-level actor information remains pending until platform credits or trusted cast pages confirm it.',
+ answer: 'Lashana Lynch and Danny Sapani are listed here for the lead roles; other actor entries stay unnamed until a clear role credit is available.',
  href: '/directive-8020-cast-actors',
  label: 'Cast page',
  },
@@ -119,12 +119,12 @@ export default function CharactersPage() {
  <>
  <JsonLd
  data={generateArticleSchema({
- title: 'Directive 8020 Characters & Cast: All 10 Crew Members, Actors, Face Models & Who Plays Who',
+ title: 'Directive 8020 Characters, Cast, Actors and Face Models Guide',
  description:
- 'Complete Directive 8020 characters and cast guide: all 10 playable and NPC crew members, real actor names, face model details, who plays Brianna Young and Eisele, Samantha Cooper face model, mimic clues by character, and who can die vs survive.',
+ 'Directive 8020 character guide with the playable Cassiopeia crew, cast and actor notes, face model cautions, crew roles, survival relevance, mimic clues, and Movie Night assignment tips.',
  url: '/directive-8020-characters',
  datePublished: '2026-05-10',
- dateModified: '2026-05-21',
+ dateModified: '2026-06-18',
  imageUrl: crewPortraitHero,
  })}
  />
@@ -148,10 +148,13 @@ export default function CharactersPage() {
  actor verification, face model cautions, survival roles, Movie Night
  assignment, and mimic suspicion clues.
  </p>
+ <p className="mb-8 text-sm font-medium text-muted-foreground">
+ Last updated: June 18, 2026.
+ </p>
 
  <SearchAnswerPanel
  title="Who are the main Directive 8020 characters?"
- answer="Directive 8020 centers on five playable Cassiopeia crew members: Brianna Young, Nolan Stafford, Laura Eisele, Dr. Samantha Cooper, and Josef Cernan. Actor and face model claims are separated by verification status so players do not confuse confirmed credits with visual guesses."
+ answer="Directive 8020 centers on five playable Cassiopeia crew members: Brianna Young, Nolan Stafford, Laura Eisele, Dr. Samantha Cooper, and Josef Cernan. Lashana Lynch plays Brianna Young, Danny Sapani is listed here for Nolan Stafford, and uncredited face model claims should not be treated as fact."
  intentRows={searchIntentRows}
  jumpLinks={jumpLinks}
  />
@@ -165,7 +168,7 @@ export default function CharactersPage() {
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Playable?</th>
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Crew role</th>
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Face model status</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">Verification</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why it matters</th>
  </tr>
  </thead>
  <tbody>
@@ -193,7 +196,7 @@ export default function CharactersPage() {
  <h2>Quick Character Answers</h2>
  <p>
  Start with the practical facts: who the main character is, which
- crew members are playable, whether an actor is confirmed, whether
+ crew members are playable, which actor names are listed, whether
  face model information is credited, and how each character matters
  in a survival route. For a deeper role-by-role source check,
  use the{' '}
@@ -226,12 +229,19 @@ export default function CharactersPage() {
  <div className="prose-game">
  <h2 id="cast-status">Confirmed Cast and Character Information</h2>
  <p>
- The most clearly confirmed cast detail is <strong>Lashana Lynch as
- Brianna Young</strong>. Official Steam copy describes Young as a
+ The most important cast detail for most players is <strong>Lashana
+ Lynch as Brianna Young</strong>. Official Steam copy describes Young as a
  ground-breaking astronaut and uses her role to frame the game&apos;s
  cinematic storytelling. Because Directive 8020 is choice-driven,
  expect Young&apos;s route to be central to both story decisions and
  survival outcomes.
+ </p>
+ <p>
+ <strong>Danny Sapani</strong> is listed here for Nolan Stafford, the
+ Cassiopeia commander. For Eisele, Cooper, and Cernan, this page keeps
+ the actor field unnamed until a clear role credit is available. That
+ is especially important for face model searches, because visual
+ similarity is not the same as a credited performer or model.
  </p>
  <p>
  The wider cast is the crew of the <strong>Cassiopeia</strong>, a
@@ -364,7 +374,7 @@ export default function CharactersPage() {
  {
  href: '/directive-8020-cast-actors',
  title: 'Cast & Actors',
- description: 'Check role-level actor status, credited performers, and pending cast details.',
+ description: 'Check role-level actor status, credited performers, and cast details that are not named here yet.',
  },
  {
  href: '/directive-8020-death-scenes-guide',

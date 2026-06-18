@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import { ArticleImage } from '@/components/article-media';
-import { ActionTable, BlufBox, SearchAnswerPanel, StatusPanel } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, SearchAnswerPanel } from '@/components/guide-blocks';
 import { MinaArticle } from '@/components/mina-the-hollower-article';
 import {
  createMinaMetadata,
  minaImages,
 } from '@/lib/mina-the-hollower';
 
-const title = 'Mina the Hollower Trophy Guide: All 60 Trinkets, Full Achievement Checklist & 100% Roadmap';
+const title = 'Mina the Hollower Trophy Guide: Achievements, Trinket Checklist and 100% Roadmap';
 const description =
- 'Complete Mina the Hollower trophy and achievement guide. All 60 trinket locations, secret bosses, sidearm unlocks, Steam achievements, and 100% completion roadmap.';
+ 'Mina the Hollower trophy and achievement guide with a two-pass 100% roadmap, trinket cleanup checklist, boss and secret tracking, sidearm notes, and platform trophy cautions.';
 const canonical = '/games/mina-the-hollower/trophy-guide';
 
 export const metadata = createMinaMetadata({
@@ -99,12 +99,12 @@ const faqs = [
  {
  question: 'Is there a Mina the Hollower platinum trophy?',
  answer:
-  'Mina the Hollower launches on PlayStation consoles and should have a full trophy list including a platinum. Open your console profile after launch to confirm the exact trophy names and hidden conditions.',
+  'Check the live PlayStation trophy list on your console profile before planning a platinum route. Do not assume the Steam achievement names and PlayStation trophy names are identical.',
  },
  {
  question: 'What should I track for 100% completion?',
  answer:
-  'Track all 60 trinkets across every region, every boss clear (including secret bosses like Midden and Mirren), all sidearm unlocks, map coverage, upgrade pickups, and every achievement popup. The trinket table below covers all 60 trinkets with effects and regions.',
+  'Track trinkets by region, every boss clear, sidearm unlocks, map coverage, upgrade pickups, secrets, and every achievement popup. Use the trinket table below as a cleanup checklist and confirm missing entries against your in-game inventory.',
  },
  {
  question: 'Should I follow a full trophy route on my first run?',
@@ -128,13 +128,13 @@ const searchIntentRows = [
  },
  {
  query: 'Mina the Hollower 100%',
- answer: 'Track map coverage, all 60 trinkets, secrets, bosses, upgrades, sidearms, and hard-room clears before chasing final cleanup.',
+ answer: 'Track map coverage, trinkets, secrets, bosses, upgrades, sidearms, and hard-room clears before chasing final cleanup.',
  href: '#completion-checklist',
  label: 'Checklist',
  },
  {
  query: 'Mina the Hollower platinum',
- answer: 'PlayStation trophies including platinum should be available at launch. Confirm the exact list on your console profile.',
+ answer: 'Check your console profile for the exact PlayStation trophy list before planning a platinum route.',
  href: '#platform-status',
  label: 'Console',
  },
@@ -147,7 +147,7 @@ const searchIntentRows = [
 ];
 
 const jumpLinks = [
- { href: '#trinket-table', label: 'All 60 Trinkets' },
+ { href: '#trinket-table', label: 'Trinket checklist' },
  { href: '#achievement-status', label: 'Achievement status' },
  { href: '#roadmap', label: 'Roadmap' },
  { href: '#completion-checklist', label: '100% checklist' },
@@ -175,7 +175,7 @@ const roadmapRows = [
  {
  step: 'Equipment cleanup',
  doThis: 'Use the trinket table below to identify missing trinkets. Track sidearms and upgrades region by region.',
- why: 'The trinket table lists all 60 trinkets with their effects and regions, making regional cleanup straightforward.',
+ why: 'Regional cleanup is easier when every missing item is tied to a place, effect, and inventory gap.',
  },
  {
  step: 'Final platform check',
@@ -187,18 +187,11 @@ const roadmapRows = [
 const checklistRows = [
  ['Story progress', 'Main route cleared, credits reached, post-game access checked.'],
  ['Map coverage', 'Unexplored rooms, locked paths, shortcut loops, and suspicious dead ends.'],
- ['Trinkets', 'All 60 trinkets collected using the trinket table below. Cross-reference your inventory region by region.'],
+ ['Trinkets', 'Trinkets collected using the table below. Cross-reference your inventory region by region.'],
  ['Secrets', 'Hidden items, side rooms, secret bosses (Midden, Mirren, Willis), and optional challenge spaces.'],
  ['Combat', 'Boss clears, difficult enemy rooms, sidearm use, and challenge popups.'],
  ['Equipment', 'Sidearms, trinkets, upgrades, and build-changing items.'],
  ['Platform list', 'Steam achievements and console trophy lists checked after launch.'],
-];
-
-const statusItems = [
- { label: 'Steam achievements', value: 'Listed as a Steam feature with a full set of unlockable goals.', status: 'verified' as const },
- { label: 'Exact achievement names', value: 'Check the live Steam list for exact names and hidden requirements.', status: 'needs-check' as const },
- { label: 'Console trophies', value: 'PlayStation trophies including platinum expected at launch.', status: 'working' as const },
- { label: '100% route', value: 'Two-pass cleanup route: story first, then trinkets, bosses, secrets, and map coverage.', status: 'working' as const },
 ];
 
 const regionOrder = [
@@ -227,7 +220,7 @@ export default function MinaTrophyGuidePage() {
  >
  <SearchAnswerPanel
  title="Does Mina the Hollower have trophies or achievements?"
- answer="Yes. Steam lists achievements and PlayStation should have a full trophy list including platinum. The smartest 100% plan is to finish a learning run first, then use the trinket table below to clean up secrets, bosses, map coverage, and platform-specific entries."
+ answer="Yes. Steam lists achievements, and console players should check their live trophy list before planning a platinum route. The smartest 100% plan is to finish a learning run first, then clean up secrets, bosses, map coverage, trinkets, and platform-specific entries."
  intentRows={searchIntentRows}
  jumpLinks={jumpLinks}
  />
@@ -235,14 +228,34 @@ export default function MinaTrophyGuidePage() {
  <BlufBox title="100% Rule">
  <p>
  <strong>Play the story first, clean up with the trinket table second.</strong>{' '}
- The table below lists all 60 trinkets with their effects and regions.
- Use it during your cleanup pass to cross-reference your inventory
+ The table below gives you a trinket cleanup checklist with effects and
+ regions. Use it during your cleanup pass to cross-reference your inventory
  without replaying the entire map.
  </p>
  </BlufBox>
 
- <div id="achievement-status">
- <StatusPanel items={statusItems} />
+ <div id="achievement-status" className="my-6 overflow-x-auto rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist">
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Completion area</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">What to check</th>
+ </tr>
+ </thead>
+ <tbody>
+ {[
+ ['Steam achievements', 'Open the live Steam achievement list after installing and compare hidden entries after your story clear.'],
+ ['Console trophies', 'Open the platform trophy list on your console profile before planning a platinum route.'],
+ ['Trinkets', 'Use the regional table below as an inventory cleanup checklist.'],
+ ['Bosses and secrets', 'Record optional bosses, hidden rooms, sidearms, upgrades, and map gaps before final cleanup.'],
+ ].map(([area, check]) => (
+ <tr key={area} className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">{area}</td>
+ <td className="px-4 py-3 text-muted-foreground">{check}</td>
+ </tr>
+ ))}
+ </tbody>
+ </table>
  </div>
 
  <section className="prose-game">
@@ -263,16 +276,17 @@ export default function MinaTrophyGuidePage() {
  <ActionTable rows={roadmapRows} />
 
  <section className="prose-game">
- <h2 id="trinket-table">All 60 Trinkets — Effects, Regions & Types</h2>
+ <h2 id="trinket-table">Trinket Cleanup Checklist: Effects, Regions and Types</h2>
  <ArticleImage
  src={minaImages.trinket}
- alt="Mina the Hollower all 60 trinkets"
- caption="Trinkets are the core collectible in Mina the Hollower. Each one grants a unique effect that changes how you explore, fight, and survive."
+ alt="Mina the Hollower trinket cleanup checklist"
+ caption="Trinkets are a core collectible in Mina the Hollower. Use the checklist to identify missing effects, regions, and build options."
  />
  <p>
- There are <strong>60 trinkets</strong> hidden across Mina the Hollower&apos;s regions.
- Use this table to track which ones you have and which areas still need exploration.
- Trinkets can be equipped at the Underlab and swapped freely between rests.
+ Use this table to track which trinkets you have and which areas still
+ need exploration. During final cleanup, confirm the table against your
+ live inventory and platform achievement list before assuming a route is
+ complete.
  </p>
  </section>
 

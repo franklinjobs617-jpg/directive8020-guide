@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { minaTheHollower, type GameGuideLink } from '@/lib/games';
 
-export const minaLastModified = '2026-05-20';
+export const minaLastModified = '2026-06-18';
 export const minaSteamUrl = 'https://store.steampowered.com/app/1875580/Mina_the_Hollower/';
 export const minaOfficialUrl = 'https://www.yachtclubgames.com/games/mina-the-hollower';
 export const minaSupportUrl = 'https://www.yachtclubgames.com/support';
@@ -44,8 +44,8 @@ export const minaVideos = [
 ];
 
 export const minaQuickFacts = [
- ['Steam date', 'Steam currently lists May 28, 2026 and coming_soon=true.'],
- ['Announced date', 'Yacht Club Games and platform coverage announce May 29, 2026.'],
+ ['Steam release date', 'Steam lists May 28, 2026. Use your storefront for local unlock and pricing.'],
+ ['Official launch date', 'Yacht Club Games announced May 29, 2026 for the wider launch window.'],
  ['Developer / Publisher', 'Yacht Club Games'],
  ['Genre', 'Gothic action-adventure with 8-bit Game Boy Color-style visuals.'],
  ['Core actions', 'Burrow, dodge, whip enemies with Nightstar, use sidearms, equip trinkets, and explore secrets.'],
@@ -99,11 +99,11 @@ export const minaWorthItRows = [
 ];
 
 export const minaLaunchCheckRows = [
- ['Date wording', 'Use May 28 on Steam and May 29 in announcement coverage; explain the storefront/time-zone difference instead of hiding it.'],
+ ['Date wording', 'Use May 28 on Steam and May 29 in official launch messaging; storefront timing can differ by region.'],
  ['Demo progress', 'Do not promise demo save transfer unless the store or developer confirms it.'],
- ['Steam Deck', 'Check the live Steam Deck rating on launch week even though pre-release coverage reports Verified status.'],
+ ['Steam Deck', 'Check the live Steam Deck rating and run a short readability test before a long session.'],
  ['Price', 'Verify the live regional price on Steam or console storefronts at launch.'],
- ['Reviews', 'Use player and critic reviews only after they are published; do not infer scores from Shovel Knight.'],
+ ['Reviews', 'Use current critic and player reviews for buying decisions; do not infer scores from Shovel Knight.'],
 ];
 
 export const minaSourceRows = [
@@ -417,7 +417,7 @@ export const minaWorthItSearchIntent = [
  },
  {
  query: 'Mina the Hollower Steam Deck',
- answer: 'Pre-launch coverage reports Steam Deck Verified, and Steam lists full controller support plus Steam Cloud.',
+ answer: 'Check the live Steam Deck badge, then test text size, controls, battery, Steam Cloud, and suspend/resume before a long session.',
  href: '#platform-choice',
  label: 'Steam Deck',
  },
@@ -435,14 +435,14 @@ export const minaWorthItJumpLinks = [
 // ---- Release-date exports ----
 export const minaReleaseActionRows = [
  {
- step: '1. Use Steam for your local PC unlock hour',
- doThis: 'Open the Steam page and write down the date and time Steam shows in your local storefront, not the calendar announcement.',
- why: 'Storefront dates and time zones disagree. The local countdown is the player-safe answer for PC buyers.',
+ step: '1. Check your live storefront first',
+ doThis: 'Open the store where you plan to buy and confirm date display, price, platform, and edition wording.',
+ why: 'Steam, console stores, and regional storefronts can display timing differently.',
  },
  {
- step: '2. Treat the May 29 announcement as the official launch',
- doThis: 'Anchor your plans to the May 29, 2026 date from Yacht Club Games and platform coverage, not the Steam storefront date.',
- why: 'Official and platform outlets publish the May 29 launch. Steam sometimes shows the day before because of region timing.',
+ step: '2. Understand the May 28 vs May 29 wording',
+ doThis: 'Use May 28 as the Steam-listed date and May 29 as the official launch messaging date.',
+ why: 'The useful answer for players is local storefront timing, not arguing one calendar date in isolation.',
  },
  {
  step: '3. Verify the platform you intend to buy on',
@@ -450,14 +450,14 @@ export const minaReleaseActionRows = [
  why: 'Console storefronts can lag behind announcements. A live check prevents a wrong-day purchase or refund.',
  },
  {
- step: '4. Decide if you are waiting for reviews',
- doThis: 'If reviews, completion time, or final difficulty matter, mark a launch-week reminder instead of buying on day one.',
- why: 'Day-one buyers accept the unknown. Other buyers should plan to read two or three reviews before paying.',
+ step: '4. Decide if you need more review confidence',
+ doThis: 'If reviews, completion time, or final difficulty matter, check current critic and player reviews before buying.',
+ why: 'Mina is a skill-based action-adventure, so difficulty and completion expectations matter more than the art style alone.',
  },
  {
  step: '5. Plan a short first session',
- doThis: 'Block 2-3 hours, set your usual display settings, and pick a save profile before downloading.',
- why: 'Lightweight specs and short first sessions are the smart way to confirm a clean install on launch day.',
+ doThis: 'Block 30-60 minutes to test controls, text size, burrowing, Nightstar range, sidearms, saves, and handheld comfort.',
+ why: 'A short platform check prevents a long session on the wrong setup.',
  },
 ];
 
@@ -511,7 +511,7 @@ export const minaReleaseSourceRows = [
 export const minaReleaseSearchIntent = [
  {
  query: 'Mina the Hollower release date',
- answer: 'Steam shows May 28, 2026 while official and platform coverage announce May 29, 2026. Check your local storefront for the real unlock hour.',
+ answer: 'Steam shows May 28, 2026 while official launch messaging uses May 29, 2026. Check your local storefront for the real timing.',
  href: '#release-status',
  label: 'Release date',
  },
@@ -536,9 +536,9 @@ export const minaReleaseSearchIntent = [
 ];
 
 export const minaReleaseJumpLinks = [
- { href: '#release-status', label: 'Release status' },
+ { href: '#release-status', label: 'Release date' },
  { href: '#platform-notes', label: 'Platform notes' },
- { href: '#launch-checklist', label: 'Launch checklist' },
+ { href: '#launch-checklist', label: 'Buying checklist' },
  { href: '/games/mina-the-hollower/steam-deck', label: 'Steam Deck' },
  { href: '/games/mina-the-hollower/system-requirements', label: 'System requirements' },
  { href: '/games/mina-the-hollower/beginner-guide', label: 'Beginner guide' },
