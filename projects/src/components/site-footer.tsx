@@ -53,13 +53,20 @@ const footerGroups = [
       ["Contact", "/about#contact"],
     ],
   },
+  // ✅ NEW: Friends 组 - 兄弟站外链
+  {
+    title: "Friends",
+    links: [
+      ["Bombanana ↗", "https://bombanana.online/"],
+    ],
+  },
 ];
 
 export function SiteFooter() {
   return (
     <footer className="mt-16 bg-deep-plum text-white">
       <div className="site-shell py-10">
-        <div className="grid gap-8 lg:grid-cols-[1.15fr_repeat(4,1fr)]">
+        <div className="grid gap-8 lg:grid-cols-[1.15fr_repeat(5,1fr)]">
 
           {/* ✅ CHANGED: brand tagline 从 D8020 专属 → Hub 站定位 */}
           {/* 原来: "Directive 8020 Guides" + "Your comprehensive guide to surviving the Cassiopeia" */}
