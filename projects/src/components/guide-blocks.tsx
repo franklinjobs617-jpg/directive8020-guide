@@ -74,9 +74,9 @@ const statusStyles = {
 };
 
 const statusLabels = {
- verified: 'Confirmed',
- 'needs-check': 'Pending update',
- working: 'Working route',
+ verified: 'Official',
+ 'needs-check': 'Not announced',
+ working: 'May change',
 };
 
 export function BlufBox({ title = 'BLUF', children }: BlufBoxProps) {
@@ -212,7 +212,7 @@ export function RelatedGuides({ guides }: RelatedGuidesProps) {
  );
 }
 
-export function SourceCheckTable({ title = 'Source Check', rows }: SourceCheckTableProps) {
+export function SourceCheckTable({ title = 'Source Notes', rows }: SourceCheckTableProps) {
  return (
  <section className="my-8">
  <h2 className="mb-3 text-xl font-bold tracking-[-0.22px] text-foreground">{title}</h2>
@@ -221,7 +221,7 @@ export function SourceCheckTable({ title = 'Source Check', rows }: SourceCheckTa
  <thead>
  <tr className="border-b border-border bg-mist">
  <th className="px-4 py-3 text-left font-semibold text-foreground">Player question</th>
- <th className="px-4 py-3 text-left font-semibold text-foreground">Official link</th>
+ <th className="px-4 py-3 text-left font-semibold text-foreground">Source</th>
  <th className="px-4 py-3 text-left font-semibold text-foreground">Status</th>
  <th className="px-4 py-3 text-left font-semibold text-foreground">Player note</th>
  </tr>

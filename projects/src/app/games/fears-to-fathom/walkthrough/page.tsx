@@ -86,6 +86,21 @@ const chapters = [
  },
 ];
 
+const coopRoleRows = [
+ ['Navigation lead', 'Carries the map, calls the next objective, and keeps both players on the same route.', 'Arrival, farmhouse route, town traversal, church route'],
+ ['Interaction lead', 'Reads notes, checks doors, handles inventory prompts, and confirms puzzle clues before moving on.', 'Gas station, farmhouse, Julia house, church basement'],
+ ['Light holder', 'Keeps the flashlight on the active objective while the other player reads or interacts.', 'Basement searches, cemetery, church'],
+ ['Decision caller', 'Pauses before major choices and confirms both players agree before voting.', 'Chapter 6 ending choice'],
+];
+
+const recoveryRows = [
+ ['Players split up', 'Stop moving forward and regroup at the last clear landmark.', 'Do not keep triggering objectives while one player is lost.'],
+ ['A partner disconnects', 'Return to the host save or safe checkpoint before continuing.', 'Avoid making ending or puzzle choices while the second player is gone.'],
+ ['Missed a note or clue', 'Backtrack before starting the next chapter objective if the area is still accessible.', 'Notes mainly help route understanding; do not restart unless an objective is blocked.'],
+ ['Totem timing fails', 'Reset both players at the totems, count down, and interact together.', 'One player should call the timing over voice chat.'],
+ ['Wrong ending vote', 'Replay from the latest pre-choice save or chapter checkpoint if available.', 'Keep one clean save before the Chapter 6 decision if you want both endings.'],
+];
+
 export default function FearsToFathomWalkthroughPage() {
  return (
   <main className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-8">
@@ -129,6 +144,60 @@ export default function FearsToFathomWalkthroughPage() {
     </ul>
    </section>
 
+   <section className="mt-8">
+    <h2 className="text-xl font-bold text-foreground">Co-op Role Split</h2>
+    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+     Scratch Creek is easier when both players have a job. Use this split if you are playing with a friend and want fewer missed clues, cleaner navigation, and less confusion during simultaneous interactions.
+    </p>
+    <div className="mt-4 overflow-x-auto rounded-lg border border-border bg-white">
+     <table className="w-full text-sm">
+      <thead>
+       <tr className="border-b border-border bg-mist">
+        <th className="px-4 py-3 text-left font-medium text-muted-foreground">Role</th>
+        <th className="px-4 py-3 text-left font-medium text-muted-foreground">Job</th>
+        <th className="px-4 py-3 text-left font-medium text-muted-foreground">Best chapters</th>
+       </tr>
+      </thead>
+      <tbody>
+       {coopRoleRows.map(([role, job, chapters]) => (
+        <tr key={role} className="border-b border-border last:border-0">
+         <td className="px-4 py-3 font-semibold text-foreground">{role}</td>
+         <td className="px-4 py-3 text-muted-foreground">{job}</td>
+         <td className="px-4 py-3 text-muted-foreground">{chapters}</td>
+        </tr>
+       ))}
+      </tbody>
+     </table>
+    </div>
+   </section>
+
+   <section className="mt-8">
+    <h2 className="text-xl font-bold text-foreground">If Something Goes Wrong</h2>
+    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+     Most failed runs come from separation, missed timing, or continuing after a disconnect. Use this recovery table before restarting the whole episode.
+    </p>
+    <div className="mt-4 overflow-x-auto rounded-lg border border-border bg-white">
+     <table className="w-full text-sm">
+      <thead>
+       <tr className="border-b border-border bg-mist">
+        <th className="px-4 py-3 text-left font-medium text-muted-foreground">Problem</th>
+        <th className="px-4 py-3 text-left font-medium text-muted-foreground">Recovery</th>
+        <th className="px-4 py-3 text-left font-medium text-muted-foreground">Avoid this</th>
+       </tr>
+      </thead>
+      <tbody>
+       {recoveryRows.map(([problem, recovery, avoid]) => (
+        <tr key={problem} className="border-b border-border last:border-0">
+         <td className="px-4 py-3 font-semibold text-foreground">{problem}</td>
+         <td className="px-4 py-3 text-muted-foreground">{recovery}</td>
+         <td className="px-4 py-3 text-muted-foreground">{avoid}</td>
+        </tr>
+       ))}
+      </tbody>
+     </table>
+    </div>
+   </section>
+
    <div className="mt-8 rounded-lg border border-border bg-mist p-5">
     <h3 className="mb-3 text-sm font-bold text-foreground">More Scratch Creek Guides</h3>
     <div className="flex flex-wrap gap-3">
@@ -140,7 +209,7 @@ export default function FearsToFathomWalkthroughPage() {
    </div>
 
    <p className="mt-10 text-xs text-muted-foreground">
-    Data source: Steam store page, Fears to Fathom Fandom Wiki, in-game verification. Last updated June 11, 2026.
+    Source note: This guide uses official store information, route references, and player-facing chapter checks. Last updated June 11, 2026.
    </p>
   </main>
  );

@@ -49,7 +49,7 @@ export function EnginefallArticle({
  heroImage = enginefall.heroImage,
  heroAlt,
  sourceImage = enginefallImages.screenshot8,
- sourceImageAlt = 'Enginefall official source verification image from Steam screenshots',
+ sourceImageAlt = 'Enginefall official source notes image from Steam screenshots',
  sourceImageCaption = 'Enginefall is still in playtest and demo coverage, so the source table separates confirmed official facts from media impressions and community signals.',
  relatedImage = enginefallImages.screenshot9,
  relatedImageAlt = 'Enginefall related guide image showing official train combat',
@@ -110,7 +110,7 @@ export function EnginefallArticle({
  alt={sourceImageAlt}
  caption={sourceImageCaption}
  />
- <SourceCheckTable title="Enginefall Sources and Verification" rows={enginefallSourceRows} />
+ <SourceCheckTable title="Enginefall Source Notes" rows={enginefallSourceRows} />
  </>
  )}
  <ArticleImage

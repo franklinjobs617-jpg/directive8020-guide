@@ -103,8 +103,8 @@ export const enginefallQuickFacts: EnginefallQuickFact[] = [
  ['Current playable access', 'June 2026 playtest and Steam Next Fest demo coverage, not a final launch build.', 'working'],
  ['Developer / Publisher', 'Red Rover Interactive.', 'verified'],
  ['Confirmed platform', 'Windows PC via Steam.', 'verified'],
- ['Console status', 'PS5 and Xbox searches exist, but no official console release is confirmed.', 'needs-check'],
- ['Steam Deck status', 'Not Steam Deck Verified at the time checked; test through the PC build only.', 'needs-check'],
+ ['Console status', 'PS5 and Xbox versions are not officially announced.', 'needs-check'],
+ ['Steam Deck status', 'Steam Deck rating is not officially listed.', 'needs-check'],
  ['Core loop', 'Raid Titan Trains, scavenge, craft, extract, and upgrade a Dagger shuttle home base.', 'verified'],
  ['Main risk', 'PvP and balance details are playtest-sensitive and may change before launch.', 'working'],
 ];
@@ -274,7 +274,7 @@ const commonFaqs = [
  {
  question: 'What platforms are confirmed for Enginefall?',
  answer:
- 'Windows PC via Steam is confirmed. PS5, Xbox, and Steam Deck verification are not confirmed by the official Steam data checked for this guide.',
+ 'Windows PC via Steam is confirmed. PS5, Xbox, and Steam Deck support are not officially announced on the current store listing.',
  },
  {
   question: 'Is PvP forced in Enginefall, or can I play PvE only?',
@@ -303,9 +303,9 @@ export const enginefallPages = {
  heroImage: enginefallImages.hero,
  heroAlt: 'Enginefall official Steam screenshot showing a post-apocalyptic train combat scene',
  sourceImage: enginefallImages.screenshot10,
- sourceImageAlt: 'Enginefall official screenshot for hub source verification',
+ sourceImageAlt: 'Enginefall official screenshot for hub source notes',
  sourceImageCaption:
- 'Official Enginefall sources are strongest for release status, playtest access, platform facts, screenshots, and system names; build-sensitive balance should wait for testing.',
+ 'Use official Enginefall sources for release status, playtest access, platform facts, screenshots, and system names; build-sensitive balance can still change before launch.',
  relatedImage: enginefallImages.screenshot11,
  relatedImageAlt: 'Enginefall official screenshot for hub related guides',
  relatedImageCaption:
@@ -314,7 +314,7 @@ export const enginefallPages = {
  faqImageAlt: 'Enginefall official screenshot for hub FAQ section',
  faqImageCaption:
  'The hub FAQ answers the broad questions first: release state, confirmed platforms, PvP framing, and what not to fake before launch.',
-  blufTitle: 'What Youll Find in This Enginefall Guide',
+  blufTitle: "What You'll Find in This Enginefall Guide",
   bluf: [
     'Enginefall is a train-based PvP crafting and extraction shooter from Red Rover Interactive, set on colossal post-apocalyptic trains. This guide covers everything players need right now: the 2026 release window, how to get playtest and demo access, system requirements for PC/PS5/Xbox, beginner extraction tips, Conductor role mechanics, and Dagger shuttle base building.',
     versionParagraph,
@@ -446,7 +446,7 @@ export const enginefallPages = {
  'Autocomplete shows PS5, Xbox, and Steam Deck interest, but official confirmation is narrower than user demand.',
  paragraphs: [
  'The confirmed platform is Windows PC via Steam. PS5 and Xbox have search demand but no official version is confirmed. PC is confirmed, consoles are not. Check official channels for future announcements.',
- 'A game can support controllers and run on PC without being Steam Deck Verified. Enginefall adds PvP, online play, and text-heavy UI — all harder on a handheld. Do not expect a smooth Deck experience without official verification.',
+ 'A game can support controllers and run on PC without having a Steam Deck rating. Enginefall adds PvP, online play, and text-heavy UI — all harder on a handheld. Do not expect a smooth Deck experience without official handheld support.',
  'Steam lists a minimum baseline and warns that requirements are not final during development. Your machine may be near the current floor, but optimization and requirements can change before launch.',
  ],
  tableHeadings: ['Platform', 'Current status', 'What to do'],
@@ -454,7 +454,7 @@ export const enginefallPages = {
  ['PC Steam', 'Confirmed.', 'Enginefall is listed for Windows PC via Steam.'],
  ['PS5', 'Not confirmed.', 'Search demand exists, but no official PS5 version is confirmed.'],
  ['Xbox', 'Not confirmed.', 'Search demand exists, but no official Xbox version is confirmed.'],
- ['Steam Deck', 'Not verified.', 'Treat as unknown until Valve or official testing confirms it.'],
+ ['Steam Deck', 'Not officially rated.', 'Treat as unknown until Valve or official testing confirms it.'],
  ],
  },
  ],
@@ -481,7 +481,7 @@ export const enginefallPages = {
  heroImage: enginefallImages.screenshot1,
  heroAlt: 'Enginefall official screenshot for playtest access guide',
  sourceImage: enginefallImages.screenshot6,
- sourceImageAlt: 'Enginefall official screenshot for playtest source verification',
+ sourceImageAlt: 'Enginefall official screenshot for playtest source notes',
  sourceImageCaption:
  'Playtest pages must point back to Steam and official Enginefall posts because access windows, demo buttons, and server details can change quickly.',
  relatedImage: enginefallImages.screenshot7,
@@ -571,7 +571,7 @@ export const enginefallPages = {
  caption:
  'Players searching for keys and passwords usually need official access guidance, not risky third-party promises.',
  paragraphs: [
- 'The safest access route is Steam. If you see a playtest request, demo button, or store-page access option on Steam, use it. Do not trust random key sites or unverified Discord posts. Players often search for keys and passwords because they cannot find the button, do not know whether access is automatic, or see discussions about private test servers.',
+ 'The safest access route is Steam. If you see a playtest request, demo button, or store-page access option on Steam, use it. Do not trust random key sites or unofficial Discord posts. Players often search for keys and passwords because they cannot find the button, do not know whether access is automatic, or see discussions about private test servers.',
  'Only trust keys, passwords, or invites from Steam, the official Enginefall team, or official community announcements. If a third-party site claims instant access, treat it as suspicious. This matters because closed tests and public demos may overlap in an unreleased multiplayer game.',
  'Joining the Discord, requesting playtest access, or wishlisting does not guarantee a slot unless the official team says so. If you are searching for a key and cannot find one, you are probably not missing a hidden step — it simply may not be required.',
  ],
@@ -672,7 +672,7 @@ export const enginefallPages = {
  heroImage: enginefallImages.screenshot2,
  heroAlt: 'Enginefall official screenshot for beginner guide',
  sourceImage: enginefallImages.screenshot8,
- sourceImageAlt: 'Enginefall official screenshot for beginner guide source verification',
+ sourceImageAlt: 'Enginefall official screenshot for beginner guide source notes',
  sourceImageCaption:
  'Beginner advice should teach decisions that survive patches: route reading, extraction timing, crafting purpose, and PvP caution.',
  relatedImage: enginefallImages.screenshot9,
@@ -759,6 +759,27 @@ export const enginefallPages = {
  ['Read exits', 'Notice how to leave before looting.', 'Looting with no escape plan.'],
  ['Listen for players', 'Treat noise as information.', 'Assuming every encounter is PvE.'],
  ['Bank learning', 'Extract after useful progress.', 'Staying until the run collapses.'],
+ ],
+ },
+ {
+ id: 'first-run-checklist',
+ title: 'First Run Checklist',
+ image: enginefallImages.screenshot2,
+ imageAlt: 'Enginefall official screenshot for first run checklist',
+ caption:
+ 'Use the first run as a controlled learning route: enter, gather useful value, identify exits, avoid unnecessary fights, and leave before the train turns hostile.',
+ paragraphs: [
+ 'A beginner run should have a finish line before it starts. The goal is not to reach every high-status room; it is to complete one clean loop that teaches movement, looting, crafting, PvP pressure, and extraction timing.',
+ 'Use this checklist as your first-session route. If a step fails, do not force the run deeper. Reset the goal, bank what you learned, and try again with a smaller objective.',
+ ],
+ tableHeadings: ['Phase', 'Do this', 'Leave or reset if'],
+ rows: [
+ ['Before entering', 'Set one goal: learn exits, collect crafting value, or test one fight.', 'You cannot explain what a successful run looks like.'],
+ ['First carriage', 'Move slowly, read doors, listen for players, and mark a retreat path.', 'You are lost before finding a safe way back.'],
+ ['First loot stop', 'Keep survival items, useful materials, and anything tied to Dagger progress.', 'Inventory fills with items you cannot use or extract.'],
+ ['First craft', 'Craft only if the item solves the next obstacle or helps extraction.', 'The area is noisy, contested, or unsafe for menu time.'],
+ ['First player signal', 'Avoid the fight unless the reward is clear and escape is possible.', 'You are outnumbered, low on resources, or unsure of exits.'],
+ ['First extraction', 'Leave once the run has clear value or the risk starts rising.', 'Greed becomes the only reason to stay.'],
  ],
  },
  {
@@ -895,7 +916,7 @@ export const enginefallPages = {
  heroImage: enginefallImages.screenshot3,
  heroAlt: 'Enginefall official screenshot for Conductor guide',
  sourceImage: enginefallImages.screenshot8,
- sourceImageAlt: 'Enginefall official screenshot for Conductor source verification',
+ sourceImageAlt: 'Enginefall official screenshot for Conductor source notes',
  sourceImageCaption:
  'The Conductor page is grounded in the official C00, Breacher, Control Room, Fuel Core, keycard, and extraction guidance.',
  relatedImage: enginefallImages.screenshot9,
@@ -1086,7 +1107,7 @@ export const enginefallPages = {
  heroImage: enginefallImages.screenshot4,
  heroAlt: 'Enginefall official screenshot for Dagger shuttle guide',
  sourceImage: enginefallImages.screenshot8,
- sourceImageAlt: 'Enginefall official screenshot for Dagger source verification',
+ sourceImageAlt: 'Enginefall official screenshot for Dagger source notes',
  sourceImageCaption:
  'Dagger coverage uses official world and playtest language for shuttle, base, fuel, schematics, and Dagger vs Dagger pressure.',
  relatedImage: enginefallImages.screenshot9,
@@ -1276,7 +1297,7 @@ export const enginefallPages = {
  heroImage: enginefallImages.screenshot6,
  heroAlt: 'Enginefall official screenshot for system requirements and platform status',
  sourceImage: enginefallImages.screenshot11,
- sourceImageAlt: 'Enginefall official screenshot for platform source verification',
+ sourceImageAlt: 'Enginefall official screenshot for platform source notes',
  sourceImageCaption:
  'Platform coverage uses Steam for official PC requirements and keeps PS5, Xbox, and Steam Deck claims separate from search demand.',
  relatedImage: enginefallImages.screenshot12,
@@ -1286,7 +1307,7 @@ export const enginefallPages = {
  faqImage: enginefallImages.screenshot13,
  faqImageAlt: 'Enginefall official screenshot for platform FAQ',
  faqImageCaption:
- 'The platform FAQ gives direct answers for PC specs, console status, and Steam Deck verification without overclaiming.',
+ 'The platform FAQ gives direct answers for PC specs, console status, and Steam Deck support without overclaiming.',
   blufTitle: 'Quick Platform Answer',
   bluf: [
     'The confirmed Enginefall platform is Windows PC via Steam. PS5 and Xbox have search demand, but no official version is confirmed yet. Steam Deck playability is unknown until Valve or official testing confirms it. This guide gives direct answers for all three.',
@@ -1299,12 +1320,12 @@ export const enginefallPages = {
  ['Minimum RAM', '16 GB RAM.', 'verified'],
  ['Minimum GPU', 'NVIDIA GTX 1080 or AMD Radeon RX 5700.', 'verified'],
  ['Storage note', 'SSD is strongly recommended by the Steam requirements text.', 'verified'],
- ['PS5 / Xbox', 'Not officially confirmed in checked sources.', 'needs-check'],
- ['Steam Deck', 'Not verified in checked sources.', 'needs-check'],
+ ['PS5 / Xbox', 'Not officially announced.', 'needs-check'],
+ ['Steam Deck', 'No official Steam Deck rating listed.', 'needs-check'],
  ],
  answerTitle: 'What platforms is Enginefall on?',
  answer:
- 'Enginefall is officially listed for Windows PC via Steam. PS5, Xbox, and Steam Deck verification are not confirmed by the checked official sources, even though users are searching for those platforms.',
+ 'Enginefall is officially listed for Windows PC via Steam. PS5, Xbox, and Steam Deck support are not officially announced on the current store listing, even though players are searching for those platforms.',
  intentRows: [
  {
  query: 'enginefall system requirements',
@@ -1314,19 +1335,19 @@ export const enginefallPages = {
  },
  {
  query: 'enginefall ps5',
- answer: 'No official PS5 version is confirmed in the checked sources.',
+ answer: 'No official PS5 version is announced on the current store listing.',
  href: '#console',
  label: 'PS5',
  },
  {
  query: 'enginefall xbox',
- answer: 'No official Xbox version is confirmed in the checked sources.',
+ answer: 'No official Xbox version is announced on the current store listing.',
  href: '#console',
  label: 'Xbox',
  },
  {
  query: 'enginefall steam deck',
- answer: 'Steam Deck verification is not confirmed; treat handheld play as unknown until tested.',
+ answer: 'Steam Deck support is not officially rated; treat handheld play as unknown until tested.',
  href: '#steam-deck',
  label: 'Deck',
  },
@@ -1389,7 +1410,7 @@ export const enginefallPages = {
  'Steam Deck support should not be assumed from PC support alone, especially for an online PvP test build.',
  paragraphs: [
  'Steam Deck is different from PC support. A game listed for Windows can still have text readability, controller mapping, anti-cheat, online, or performance issues on Deck. Enginefall adds multiplayer PvP with extraction pressure, making input reliability and readable UI critical.',
- 'Steam Deck verification is not confirmed. If you test via the demo or playtest, treat it as experimental. Watch for login issues, controller mapping, text size, FPS drops, and network problems. Do not expect a Verified-level experience.',
+ 'Steam Deck support is not officially rated. If you test via the demo or playtest, treat it as experimental. Watch for login issues, controller mapping, text size, FPS drops, and network problems. Do not expect a Verified-level experience.',
  'This is not negative coverage. It is accurate coverage. Steam Deck users often want to know whether a game is playable enough, not whether a marketing page says PC. A cautious page can still be helpful by explaining what to test and what would count as a real confirmation.',
  ],
  tableHeadings: ['Deck check', 'What to test', 'Why it matters'],
@@ -1428,7 +1449,7 @@ export const enginefallPages = {
  caption:
  'Because Enginefall is unreleased, platform advice should help users decide whether to wishlist, test, or wait.',
  paragraphs: [
- 'The practical platform decision is simple. If you have a Windows PC near or above the current Steam minimum and you like PvP survival extraction games, wishlist or test Enginefall through official Steam access. If you are a console-only player, follow official channels and wait. If you are a Steam Deck player, wait for verification or hands-on reports unless you are comfortable experimenting with an unsupported test build.',
+ 'The practical platform decision is simple. If you have a Windows PC near or above the current Steam minimum and you like PvP survival extraction games, wishlist or test Enginefall through official Steam access. If you are a console-only player, follow official channels and wait. If you are a Steam Deck player, wait for an official rating or hands-on reports unless you are comfortable experimenting with an unsupported test build.',
  ],
 
  tableHeadings: ['Player type', 'Best action', 'Reason'],
@@ -1436,7 +1457,7 @@ export const enginefallPages = {
  ['Windows PC above minimum', 'Wishlist and test official demo/playtest access.', 'You match the confirmed platform.'],
  ['Windows PC below minimum', 'Wait for optimization updates or demo reports.', 'Current minimum may be too high.'],
  ['Console-only player', 'Follow official announcements.', 'No PS5 or Xbox version is confirmed.'],
- ['Steam Deck player', 'Wait for verification or test cautiously.', 'Deck status is unknown.'],
+ ['Steam Deck player', 'Wait for an official rating or test cautiously.', 'Deck status is unknown.'],
  ],
  },
  ],
@@ -1450,12 +1471,12 @@ export const enginefallPages = {
  {
  question: 'Is Enginefall on PS5 or Xbox?',
  answer:
- 'No official PS5 or Xbox version is confirmed by the checked sources. PC via Steam is the confirmed platform.',
+ 'No official PS5 or Xbox version is announced on the current store listing. PC via Steam is the confirmed platform.',
  },
  {
  question: 'Is Enginefall Steam Deck Verified?',
  answer:
- 'No Steam Deck verification is confirmed by the checked sources. Treat Deck play as unknown until official verification or reliable hands-on testing exists.',
+ 'No official Steam Deck rating is listed. Treat Deck play as unknown until an official rating or reliable hands-on testing exists.',
  },
  ],
  },

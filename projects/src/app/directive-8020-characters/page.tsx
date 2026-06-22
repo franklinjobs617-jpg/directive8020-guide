@@ -145,7 +145,7 @@ export default function CharactersPage() {
  <strong className="text-foreground"> Dr. Samantha Cooper</strong>,
  and <strong className="text-foreground">Josef Cernan</strong>. This
  guide gives the character list first, then explains cast status,
- actor verification, face model cautions, survival roles, Movie Night
+ actor credits, face model cautions, survival roles, Movie Night
  assignment, and mimic suspicion clues.
  </p>
  <p className="mb-8 text-sm font-medium text-muted-foreground">

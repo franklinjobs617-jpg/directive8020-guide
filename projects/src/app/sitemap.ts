@@ -22,6 +22,7 @@ import {
  type GameConfig,
 } from '@/lib/games';
 import { voidlingEntries } from '@/lib/voidling-bound';
+import { mistfallHunterGuideLinks } from '@/lib/mistfall-hunter';
 
 const BASE_URL = 'https://enjoy4game.com';
 
@@ -45,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: BASE_URL, lastModified: today, changeFrequency: 'daily', priority: 1.0 },
  { url: `${BASE_URL}/guides`, lastModified: today, changeFrequency: 'daily', priority: 0.9 },
  { url: `${BASE_URL}/games`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
+ { url: `${BASE_URL}/games/mistfall-hunter`, lastModified: '2026-06-22', changeFrequency: 'weekly', priority: 0.76 },
  { url: `${BASE_URL}/steam-deck`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
  { url: `${BASE_URL}/games/warhammer-40000-rogue-trader/dlc-guide-2026`, lastModified: '2026-06-18', changeFrequency: 'weekly', priority: 0.68 },
  { url: `${BASE_URL}/about`, lastModified: today, changeFrequency: 'monthly', priority: 0.4 },
@@ -124,6 +126,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
  ...gameSubPages(growAGarden2, 0.72, '2026-06-15'),
  ...gameSubPages(spacecraft, 0.68, '2026-06-17'),
  ...gameSubPages(cursemark, 0.68, '2026-06-17'),
+ ...mistfallHunterGuideLinks
+  .filter((link) => link.href !== '/games/mistfall-hunter')
+  .map((link) => ({
+   url: `${BASE_URL}${link.href}`,
+   lastModified: '2026-06-22',
+   changeFrequency: 'weekly' as const,
+   priority: link.href.endsWith('/how-to-extract') ? 0.74 : 0.7,
+  })),
  ...[
   { url: `${BASE_URL}/games/grow-a-garden-2/night-stealing`, lastModified: '2026-06-15', changeFrequency: 'weekly' as const, priority: 0.7 },
   { url: `${BASE_URL}/games/grow-a-garden-2/beginner-guide`, lastModified: '2026-06-15', changeFrequency: 'weekly' as const, priority: 0.75 },

@@ -338,7 +338,7 @@ export default function RogueTraderDlcGuidePage() {
     <section id="update-log" className="prose-game">
      <h2>Update Log</h2>
      <p>
-      Last updated June 18, 2026. Initial version built around the official Update 1.6 and The Infinite Museion release window. Update this guide after new Owlcat hotfixes, GSC query clusters, player reports, or confirmed route corrections.
+      Last updated June 18, 2026. Initial version built around the official Update 1.6 and The Infinite Museion release window. Update this guide after new Owlcat hotfixes, DLC changes, player-facing bug reports, or confirmed route corrections.
      </p>
     </section>
 
@@ -347,7 +347,7 @@ export default function RogueTraderDlcGuidePage() {
       {
        title: 'Game Guide Hubs',
        href: '/games',
-       description: 'Browse all Enjoy4Game guide hubs and single-page guide tests.',
+       description: 'Browse Enjoy4Game guide hubs for RPGs, horror, tactics, survival, and story-driven games.',
       },
       {
        title: 'Mechanicus II Beginner Guide',

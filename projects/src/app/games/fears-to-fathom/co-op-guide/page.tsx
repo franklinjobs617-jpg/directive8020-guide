@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArticleImage } from '@/components/article-media';
+import { JsonLd, generateFAQSchema } from '@/components/json-ld';
 import { createFearsToFathomMetadata, fearsToFathomImages } from '@/lib/fears-to-fathom';
 
 const title = 'Can You Play Fears to Fathom: Scratch Creek Solo? Co-op Only Answer';
@@ -30,6 +31,14 @@ const partnerRows = [
  ['Random public partner', 'Riskier', 'Works for sampling the game, but story choices and stealth sections are easier with a coordinated partner.'],
 ];
 
+const beforeBuyingRows = [
+ ['Buying for yourself only', 'Wait or choose another episode', 'Scratch Creek does not provide a solo route, so a one-person purchase will not give you the normal Fears to Fathom experience.'],
+ ['Buying for two friends', 'Safe choice', 'Both players should plan to play online at the same time and coordinate story decisions.'],
+ ['Expecting couch co-op', 'Do not buy for that use case', 'The page should be treated as online co-op, not local split-screen.'],
+ ['Expecting random matchmaking', 'Check availability first', 'Matchmaking and partner quality can vary; a friend invite is the cleaner route.'],
+ ['Worried about disconnects', 'Use the host save carefully', 'Stop at a safe moment, re-invite the partner, and avoid forcing major choices after a disconnect.'],
+];
+
 const faqRows = [
  { q: 'Can I play Fears to Fathom: Scratch Creek alone?', a: 'No. Scratch Creek does not have a solo mode. You need another real player online.' },
  { q: 'Is Scratch Creek co-op only?', a: 'Yes. Treat it as an online co-op episode, not a solo Fears to Fathom chapter.' },
@@ -41,6 +50,8 @@ const faqRows = [
 
 export default function FearsToFathomCoopGuidePage() {
  return (
+  <>
+  <JsonLd data={generateFAQSchema(faqRows.map(({ q, a }) => ({ question: q, answer: a })))} />
   <main className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-8">
    <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{title}</h1>
 
@@ -81,6 +92,33 @@ export default function FearsToFathomCoopGuidePage() {
     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
      Treat Scratch Creek like a two-person horror scenario. Communication matters because both players move through the same episode, coordinate objectives, and recover from scares or disconnects together. If you want the normal solo Fears to Fathom rhythm, pick another episode first.
     </p>
+   </section>
+
+   <section className="mt-8">
+    <h2 className="text-xl font-bold text-foreground">Before You Buy on Steam</h2>
+    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+     Use this as the purchase check: Scratch Creek is a two-player online episode. If your plan depends on solo play, local split-screen, or an AI partner, it does not fit that use case.
+    </p>
+    <div className="mt-4 overflow-x-auto rounded-lg border border-border bg-white">
+     <table className="w-full text-sm">
+      <thead>
+       <tr className="border-b border-border bg-mist">
+        <th className="px-4 py-3 text-left font-medium text-muted-foreground">Your plan</th>
+        <th className="px-4 py-3 text-left font-medium text-muted-foreground">Buy decision</th>
+        <th className="px-4 py-3 text-left font-medium text-muted-foreground">Reason</th>
+       </tr>
+      </thead>
+      <tbody>
+       {beforeBuyingRows.map(([plan, decision, reason]) => (
+        <tr key={plan} className="border-b border-border last:border-0">
+         <td className="px-4 py-3 font-semibold text-foreground">{plan}</td>
+         <td className="px-4 py-3 text-muted-foreground">{decision}</td>
+         <td className="px-4 py-3 text-muted-foreground">{reason}</td>
+        </tr>
+       ))}
+      </tbody>
+     </table>
+    </div>
    </section>
 
    <section className="mt-8">
@@ -141,5 +179,6 @@ export default function FearsToFathomCoopGuidePage() {
     Source note: This guide uses official store information and current player question patterns. Recheck after major patches or platform updates.
    </p>
   </main>
+  </>
  );
 }

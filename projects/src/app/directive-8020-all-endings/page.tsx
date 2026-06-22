@@ -31,12 +31,12 @@ const faqs = [
  {
  question: 'Is there a secret ending in Directive 8020?',
  answer:
- 'Players should treat Cycle 13, the Booster Ring, mimic exposure, and unresolved contamination as the main secret-ending checks until exact hidden-ending triggers are verified through controlled Story Tree testing.',
+ 'Players should treat Cycle 13, the Booster Ring, mimic exposure, and unresolved contamination as the main secret-ending checks until exact hidden-ending triggers are mapped through Story Tree route capture.',
  },
  {
  question: 'What is Death Spiral in Directive 8020?',
  answer:
- 'Death Spiral is best treated as a special route concept tied to severe failure or collapse conditions, not a normal all-deaths checklist item. Exact trigger conditions should remain marked as working until verified in multiple runs.',
+ 'Death Spiral is best treated as a special route concept tied to severe failure or collapse conditions, not a normal all-deaths checklist item. Keep it separate from the standard death-scene checklist until the exact trigger path is clear.',
  },
  {
  question: 'What does the Directive 8020 ending mean?',
@@ -50,7 +50,7 @@ const fastAnswerRows = [
  ['Best ending', 'Keep the crew alive, preserve evidence, verify mimic clues, and avoid reckless sacrifice choices.', 'Medium'],
  ['Good ending', 'Aim for a stable crew-and-mission outcome where survivor state and evidence support the finale decision.', 'Medium'],
  ['Secret ending', 'Check Cycle 13, Booster Ring, mimic exposure, and unresolved contamination routes.', 'High'],
- ['Death Spiral', 'Treat it as a special collapse route until the exact trigger is verified through repeated branch testing.', 'High'],
+ ['Death Spiral', 'Treat it as a special collapse route until the exact trigger is mapped through repeated branch testing.', 'High'],
  ['Ending explained', 'Interpret the finale through Andromeda risk, Oracle data, crew state, message choice, and cycle truth.', 'High'],
 ];
 
@@ -73,6 +73,22 @@ const namedEndingRows = [
  ['Horror', 'Bad finale variant', 'Use late Turning Points to test failed rescue, failed warning, or unresolved threat conditions.', 'High'],
 ];
 
+const endingMatrixRows = [
+ ['Best / clean route', 'Crew survival + evidence + correct mimic read', 'Keep everyone alive, preserve evidence, and avoid blind finale trust.', 'Use this as the base save before testing other endings.'],
+ ['Bad route', 'Survivor loss or poor evidence', 'Let one major condition fail after preserving a clean branch.', 'Change only one failure at a time so the trigger stays readable.'],
+ ['Worst route', 'Cascading deaths and failed trust checks', 'Branch from late deaths, failed QTEs, or wrong accusation routes.', 'Do not overwrite your best-route save.'],
+ ['Secret route', 'Hidden late-game conditions', 'Test Cycle 13, Booster Ring, mimic exposure, and unresolved contamination separately.', 'Mark these as spoiler routes and test after one full ending.'],
+ ['Ending explained route', 'Finale context and message choice', 'Record survivor state, Oracle data, Andromeda risk, and the final message.', 'Use this after the credits, not as a spoiler-free route.'],
+];
+
+const recoveryRows = [
+ ['A key character died', 'Keep that branch for bad-ending cleanup, then reload before the death for your clean route.', 'Do not continue the same save as your best-ending base.'],
+ ['The mimic clue was missed', 'Replay from the earliest clue scene, not the finale.', 'Late accusations are harder to interpret without the earlier evidence chain.'],
+ ['A finale choice gave the wrong outcome', 'Reload the last Turning Point and change only the final message or trust decision.', 'Changing multiple variables hides the real trigger.'],
+ ['Death Spiral appears', 'Save it as a collapse-route branch and compare survivor state, panic choices, and failed action scenes.', 'Do not treat it as a normal all-deaths checklist item.'],
+ ['Story Tree branch is still locked', 'Move backward one chapter boundary and test the missing relationship, evidence, or survival condition.', 'Locked branches are often caused by earlier conditions, not the final scene alone.'],
+];
+
 const endingCountRows = [
  ['Reported main ending families', '5 substantial endings', 'Reported by launch review coverage; named finale outcomes and variations should be mapped in the Story Tree.'],
  ['Known named outcomes to test', '7+ named outcomes', 'Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, and Horror are the main named outcomes to track.'],
@@ -86,7 +102,7 @@ const endingIntentRows = [
  ['Best ending', 'Build a clean survivor route first, preserve evidence, verify mimic clues, and avoid sacrifice choices until the finale logic is clear.'],
  ['Good ending', 'Treat a good ending as a stable crew-and-mission outcome, not simply the last dialogue option. Survivor state and evidence matter.'],
  ['Secret ending', 'Use hidden or ambiguous routes such as Cycle 13, Booster Ring, mimic exposure, and unresolved contamination as the main secret-ending checks.'],
- ['Death Spiral', 'Treat Death Spiral as a special collapse route, not a normal all-deaths checklist, until the exact trigger conditions are verified.'],
+ ['Death Spiral', 'Treat Death Spiral as a special collapse route, not a normal all-deaths checklist, until the exact trigger conditions are mapped.'],
  ['Ending explained', 'Read the finale through message choice, Andromeda risk, Oracle data, survivor state, and the cycle reveal.'],
 ];
 
@@ -118,7 +134,7 @@ const sourceRows = [
  source: 'PSU preview + death-route discussion',
  status: 'working' as const,
  href: 'https://www.psu.com/news/directive-8020-hands-on-preview/',
- note: 'Treat death spiral as a special route concept until controlled route tests confirm the trigger conditions.',
+ note: 'Treat Death Spiral as a special route concept until the trigger conditions are clearly mapped.',
  },
  {
  claim: 'Distress call or warning is a finale decision topic.',
@@ -151,7 +167,7 @@ const searchIntentRows = [
  },
  {
  query: 'Is there a secret ending?',
- answer: 'Treat Cycle 13, Booster Ring, mimic exposure, and unresolved contamination as the main hidden-ending checks until triggers are fully verified.',
+ answer: 'Treat Cycle 13, Booster Ring, mimic exposure, and unresolved contamination as the main hidden-ending checks until triggers are fully mapped.',
  href: '#spoiler-topics',
  label: 'Spoilers',
  },
@@ -263,7 +279,7 @@ export default function AllEndingsPage() {
  items={[
  { label: 'Reported ending count', value: 'Review coverage reports 5 major ending families.', status: 'verified' },
  { label: 'Ending names', value: 'Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, and Horror are the key named outcomes to test.', status: 'working' },
- { label: 'Ending method', value: 'Story Tree, Turning Points, survivor state, and evidence are confirmed guide pillars.', status: 'verified' },
+ { label: 'Ending method', value: 'Story Tree, Turning Points, survivor state, and evidence are the core route-tracking pillars.', status: 'verified' },
  { label: 'Route table', value: 'Best, bad, worst, hidden, Booster Ring, and mimic-exposure routes should be filled from controlled branch testing.', status: 'working' },
  ]}
  />
@@ -300,7 +316,7 @@ export default function AllEndingsPage() {
  </table>
  </div>
 
- <SourceCheckTable title="All Endings Source Check" rows={sourceRows} />
+ <SourceCheckTable title="All Endings Source Notes" rows={sourceRows} />
 
  <div className="prose-game">
  <h2 id="known-endings">All Known Ending Names and What to Test</h2>
@@ -336,6 +352,38 @@ export default function AllEndingsPage() {
  </table>
  </div>
 
+ <div className="prose-game">
+ <h2>Ending Matrix: Which Variable Should You Test?</h2>
+ <p>
+ Use the ending matrix before replaying. It keeps best, bad, worst,
+ secret, and explanation routes separate so you do not overwrite the
+ clean save you need for later cleanup.
+ </p>
+ </div>
+
+ <div className="rounded-lg border border-border bg-white overflow-hidden my-6">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist">
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Route type</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Main variable</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">What to change</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Save advice</th>
+ </tr>
+ </thead>
+ <tbody>
+ {endingMatrixRows.map(([route, variable, change, advice]) => (
+ <tr key={route} className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">{route}</td>
+ <td className="px-4 py-3 text-muted-foreground">{variable}</td>
+ <td className="px-4 py-3 text-muted-foreground">{change}</td>
+ <td className="px-4 py-3 text-muted-foreground">{advice}</td>
+ </tr>
+ ))}
+ </tbody>
+ </table>
+ </div>
+
  <SurvivalEndingTracker />
  <EndingIndex />
 
@@ -344,7 +392,7 @@ export default function AllEndingsPage() {
  <p>
  The tracker is intentionally conservative. It does not claim that a
  specific character dies from a single choice unless the route is
- verified in the Story Tree. Use it to decide whether a branch is
+ mapped in the Story Tree. Use it to decide whether a branch is
  clean enough to preserve, risky enough to test separately, or too
  unstable for your best-ending base save.
  </p>
@@ -464,7 +512,7 @@ export default function AllEndingsPage() {
  <div className="prose-game">
  <h2 id="best-ending-route">Best Ending Route: Safe Principles</h2>
  <p>
- A verified best-ending route requires full chapter testing, but the
+ A complete best-ending route requires full chapter testing, but the
  safest principles are clear from the game&apos;s systems. You want the
  most living characters, the strongest evidence base, and the fewest
  decisions made from panic or blind trust.
@@ -499,12 +547,39 @@ export default function AllEndingsPage() {
  another death. When testing endings, treat these as likely red flags:
  </p>
  <ul>
- <li>Trusting a character who recently returned from isolation with no verification.</li>
+ <li>Trusting a character who recently returned from isolation without enough evidence.</li>
  <li>Choosing speed over evidence before a major accusation or rescue.</li>
  <li>Letting two characters with poor relationships decide each other&apos;s fate.</li>
  <li>Ignoring a route that lets the crew communicate or regroup.</li>
  <li>Failing late-game action sequences after a long survival chain.</li>
  </ul>
+
+ <h2>Failure Recovery: What to Do When a Route Breaks</h2>
+ <p>
+ A broken route is still useful if you label it correctly. Use failed
+ branches for bad-ending cleanup, but protect one clean survivor route
+ for best-ending and secret-ending tests.
+ </p>
+ <div className="not-prose overflow-x-auto rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist">
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Problem</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Recovery</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Why</th>
+ </tr>
+ </thead>
+ <tbody>
+ {recoveryRows.map(([problem, recovery, why]) => (
+ <tr key={problem} className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">{problem}</td>
+ <td className="px-4 py-3 text-muted-foreground">{recovery}</td>
+ <td className="px-4 py-3 text-muted-foreground">{why}</td>
+ </tr>
+ ))}
+ </tbody>
+ </table>
+ </div>
 
  <h2>How to Use the Story Tree Efficiently</h2>
  <p>
