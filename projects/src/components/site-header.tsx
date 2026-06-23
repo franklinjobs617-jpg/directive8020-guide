@@ -1,28 +1,28 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Menu, X } from 'lucide-react';
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: '/guides', label: 'Guides' },
-  { href: '/games', label: 'Games' },
-  { href: '/games/fatekeeper', label: 'Fatekeeper' },
-  { href: '/games/mechanicus-ii', label: 'Mechanicus II' },
-  { href: '/games/enginefall', label: 'Enginefall' },
-  { href: '/games/romestead', label: 'Romestead' },
+  { href: "/guides", label: "Guides" },
+  { href: "/games", label: "Games" },
+  { href: "/games/fatekeeper", label: "Fatekeeper" },
+  { href: "/games/mechanicus-ii", label: "Mechanicus II" },
+  { href: "/games/enginefall", label: "Enginefall" },
+  { href: "/games/romestead", label: "Romestead" },
 ];
 
 const mobileGameLinks = [
-  { href: '/games', label: 'All Games' },
-  { href: '/games/fatekeeper', label: 'Fatekeeper' },
-  { href: '/games/mechanicus-ii', label: 'Mechanicus II' },
-  { href: '/games/enginefall', label: 'Enginefall' },
-  { href: '/games/romestead', label: 'Romestead' },
-  { href: '/games/starminer', label: 'Starminer' },
-  { href: '/games/project-mist', label: 'Project: Mist' },
-  { href: '/games/paralives', label: 'Paralives' },
+  { href: "/games", label: "All Games" },
+  { href: "/games/fatekeeper", label: "Fatekeeper" },
+  { href: "/games/mechanicus-ii", label: "Mechanicus II" },
+  { href: "/games/enginefall", label: "Enginefall" },
+  { href: "/games/romestead", label: "Romestead" },
+  { href: "/games/starminer", label: "Starminer" },
+  { href: "/games/project-mist", label: "Project: Mist" },
+  { href: "/games/paralives", label: "Paralives" },
 ];
 
 export function SiteHeader() {
@@ -32,8 +32,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full bg-deep-plum text-white">
       <div className="site-shell flex h-16 items-center justify-between gap-4">
-
-        <Link href="/" className="flex min-w-0 items-center" onClick={closeMobileMenu}>
+        <Link
+          href="/"
+          className="flex min-w-0 items-center"
+          onClick={closeMobileMenu}
+        >
           <Image
             src="/logo-header.png"
             alt="Enjoy4Game — Game Guides for Steam Releases"
@@ -80,7 +83,11 @@ export function SiteHeader() {
           aria-label="Toggle mobile menu"
           aria-expanded={isMobileMenuOpen}
         >
-          {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {isMobileMenuOpen ? (
+            <X className="h-5 w-5" />
+          ) : (
+            <Menu className="h-5 w-5" />
+          )}
         </button>
       </div>
 

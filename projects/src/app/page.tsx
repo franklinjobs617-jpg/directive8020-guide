@@ -46,7 +46,7 @@ const featuredGames = [
     genre: 'Open-World Survival',
     status: 'Early Access',
     href: '/games/project-mist',
-    image: '/games/project-mist/homepage-feature.webp',
+    image: '/games/project-mist/hero.webp',
     desc: 'Co-op setup, lockpicking, train door key, demo saves, building basics, and PC requirements.',
   },
   {
@@ -62,7 +62,7 @@ const featuredGames = [
     genre: 'Life Simulation',
     status: 'Early Access',
     href: '/games/paralives',
-    image: '/games/paralives/hero.webp',
+    image: '/games/paralives/hero.jpg',
     desc: 'Paramaker, grid-less build mode, Mac support, mods, CC, and Sims 4 comparison.',
   },
   {
