@@ -1559,3 +1559,50 @@ export const growAGarden2: GameConfig = {
   },
  ],
 };
+
+export const deltarune: GameConfig = {
+ id: "deltarune",
+ slugPrefix: "deltarune",
+ hubPath: "/games/deltarune",
+ name: "DELTARUNE",
+ guidePublisher: "Enjoy4Game Guides",
+ description:
+  "DELTARUNE is Toby Fox's chapter-based RPG set in a parallel story to UNDERTALE, with bullet-dodging battles, sparing, ACT choices, hidden bosses, and chapters released over time.",
+ platforms: [
+  "PC",
+  "Mac",
+  "Nintendo Switch",
+  "Nintendo Switch 2",
+  "PlayStation 4",
+  "PlayStation 5",
+ ],
+ genres: ["RPG", "Story Rich", "Bullet Hell", "Pixel Graphics", "Episodic"],
+ developer: "Toby Fox",
+ publisher: "Toby Fox",
+ releaseDate: "2025-06-04",
+ operatingSystem: "Windows, macOS, Nintendo Switch, Nintendo Switch 2, PlayStation 4, PlayStation 5",
+ url: "https://store.steampowered.com/app/1671210/DELTARUNE/",
+ availability: "https://schema.org/InStock",
+ heroImage:
+  "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1671210/capsule_616x353.jpg",
+ guideLinks: [
+  {
+   title: "DELTARUNE Guide Hub",
+   href: "/games/deltarune",
+   description:
+    "Current chapter status, platforms, official links, save import notes, and the best guide to read first.",
+  },
+  {
+   title: "Beginner Guide",
+   href: "/games/deltarune/beginner-guide",
+   description:
+    "Spoiler-light first-run route for ACT, Spare, TP, equipment, saves, chapter order, and mistakes to avoid.",
+  },
+  {
+   title: "Chapter 5 Walkthrough & Secrets",
+   href: "/games/deltarune/chapter-5-walkthrough-secrets",
+   description:
+    "Chapter 5 route, checkpoints, secret checklist, Pink Coins, Mystery Key, secret boss, Egg, missables, weird route notes, and stuck fixes.",
+  },
+ ],
+};

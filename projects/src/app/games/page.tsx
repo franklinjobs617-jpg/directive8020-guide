@@ -21,6 +21,7 @@ import { mistfallHunterImages } from "@/lib/mistfall-hunter";
 import { voidlingBoundImages } from "@/lib/voidling-bound";
 import { spacecraftImages } from "@/lib/spacecraft";
 import { cursemarkImages } from "@/lib/cursemark";
+import { deltaruneImages } from "@/lib/deltarune";
 import { sellLemons } from "@/lib/games";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
@@ -36,6 +37,7 @@ export const metadata: Metadata = {
  "game guide hubs",
  "survival game guides",
 "horror game guides",
+"DELTARUNE guide",
 "Sell Lemons guide",
 "Directive 8020 guide",
  "Project Mist guide",
@@ -76,6 +78,13 @@ export const metadata: Metadata = {
 };
 
 const gameCards = [
+ {
+ title: "DELTARUNE",
+ href: "/games/deltarune",
+ label: "Chapter-based RPG",
+ body: "Chapters 1-5 status, platforms, save import notes, beginner route, and Chapter 5 walkthrough with secrets, Pink Coins, Mystery Key, Egg, and weird route checks.",
+ image: deltaruneImages.hero,
+ },
  {
  title: "Mistfall Hunter",
  href: "/games/mistfall-hunter",
