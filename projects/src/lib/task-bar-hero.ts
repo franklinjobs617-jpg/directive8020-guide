@@ -289,7 +289,7 @@ export const taskBarHeroStarterRows = [
 export const taskBarHeroFirstHourRows = [
  {
   step: "0-10 min",
-  doThis: "Clear early stages. Unlock the Rune Tree and Cube (requires level 10 + Digital Awakening quest). Claim obvious rewards. Do not spend everything immediately.",
+  doThis: "Clear early stages. Unlock the Rune Tree at level 3 and the Cube at level 4. Claim obvious rewards. Do not spend everything immediately.",
   why: "Most early mistakes come from spending resources before knowing which bottleneck matters.",
  },
  {
@@ -319,20 +319,20 @@ export const taskBarHeroFirstHourRows = [
 // 8 Cube functions from wiki
 export const taskBarHeroCubeRows = [
  ["Synthesis", "Combines materials into permanent gear and upgrade cores. 5 XP per material.", "Use from the start. Bulk-synthesize Basic Shards (10 shards = 50 XP). Primary XP source for Cube 1-14."],
- ["Crafting", "Uses base materials (wood→copper→bronze→iron→silver→gold→stardust→bloodstone) to create new equipment.", "Use for targeted gear upgrades when you know what the active hero needs."],
- ["Decoration", "Embed gems (ruby, sapphire, topaz, emerald, amethyst) into gear sockets for stat bonuses. 36 gem types.", "Use when you have gear with open sockets and know which stat the wall needs."],
- ["Engraving", "Inscribe rune-like effects onto gear using monster materials (goblin hide, skeleton bone, slime jelly, etc.). 33 engraving materials.", "Use to add custom stat lines that match your hero's role."],
- ["Inscription", "Apply scrolls to gear for special affixes. 10 scroll tiers from Common to Cosmic.", "Use for end-game gear. Save high-tier scrolls (Arcana+) for the best equipment."],
- ["Alchemy", "Converts materials into temporary consumables (potions). 3 XP per material.", "Delay until Cube 15-20. Early Alchemy burns materials at 40% XP efficiency loss."],
- ["Extraction", "Pulls materials or effects from existing items.", "Use when salvaging gear for parts. Check the item database before extracting rare items."],
- ["Offering", "Special exchange using anniversary coins (10 tiers). Sacrifice materials for targeted rewards.", "Use for very specific end-game conversions. Not a beginner system."],
+  ["Crafting", "Uses base materials (wood→copper→bronze→iron→silver→gold→stardust→bloodstone) to create new equipment.", "Use for targeted gear upgrades when you know what the active hero needs."],
+  ["Decoration", "Embed gems (ruby, sapphire, topaz, emerald, amethyst) into gear sockets for stat bonuses. 36 gem types.", "Use when you have gear with open sockets and know which stat the wall needs."],
+  ["Engraving", "Inscribe rune-like effects onto gear using monster materials (goblin hide, skeleton bone, slime jelly, etc.). 33 engraving materials.", "Use to add custom stat lines that match your hero's role."],
+  ["Inscription", "Apply scrolls to gear for special affixes. 10 scroll tiers from Common to Cosmic.", "Use for end-game gear. Save high-tier scrolls (Arcana+) for the best equipment."],
+  ["Alchemy", "Melt unwanted gear into gold + Cube XP. 3 XP per material.", "Delay until Cube 20. Early Alchemy burns materials at 40% XP efficiency loss compared to Synthesis."],
+  ["Extraction", "Pulls materials or effects from existing items.", "Use when salvaging gear for parts. Check the item database before extracting rare items."],
+  ["Offering", "Special exchange using anniversary coins (10 tiers). Sacrifice materials for targeted rewards.", "Use for very specific end-game conversions. Not a beginner system."],
 ] as const;
 
 // Cube XP strategy data (from xmodhub + wiki)
 export const taskBarHeroCubeLevels = [
  { level: "1-14", strategy: "Pure Synthesis. Bulk Basic Shard → Tier 1 Core (10 shards = 50 XP). ~4,500 XP/hour. Keep 100+ basic gems in inventory to prevent offline queue stall.", milestone: "Focus on material flow. Do not touch Alchemy." },
  { level: "15", strategy: "XP multiplier kicks in retroactively for higher-tier materials. Now use saved rare gems (Stellar Rubies etc.).", milestone: "If you burned rare materials before 15, you lost ~40 hours of mid-game grind." },
- { level: "20+", strategy: "Start introducing Alchemy for potions. 80% Synthesis / 20% Alchemy split. Keep saving Arcana+ tier materials.", milestone: "Alchemy becomes viable. Never above 20% of total Cube resource spend." },
+ { level: "20+", strategy: "Start introducing Alchemy for gold income. 80% Synthesis / 20% Alchemy split. Keep saving Arcana+ tier materials.", milestone: "Alchemy becomes viable for gold. Never above 20% of total Cube resource spend." },
 ] as const;
 
 // ========== Boss Check Data ==========

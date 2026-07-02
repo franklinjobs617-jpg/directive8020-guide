@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ArticleImage } from "@/components/article-media";
 import { BlufBox, SearchAnswerPanel } from "@/components/guide-blocks";
 import { HeroStatTable, HeroRoleComparisonTable, RunePriorityTable } from "@/components/task-bar-hero-charts";
@@ -121,7 +120,7 @@ export default function TaskBarHeroHeroesBuildsPage() {
     jumpLinks={jumpLinks}
    />
 
-   <BlufBox title="Build rule">
+   <BlufBox title="Roles before rankings">
     <p>
      <strong>Build around roles before rankings.</strong> A high-damage hero
      without gear, skills, Cube, and protection fails harder than a simple team
@@ -162,7 +161,7 @@ export default function TaskBarHeroHeroesBuildsPage() {
     <p>
      TBH has six heroes. Three are free (Knight, Ranger, Sorcerer) and three
      are DLC (Priest, Hunter, Slayer). Each solves a different problem. The
-     table below tells you what each hero is for, not which one is "better."
+     table below tells you what each hero is for, not which one is &quot;better.&quot;
     </p>
    </section>
 
@@ -335,32 +334,6 @@ export default function TaskBarHeroHeroesBuildsPage() {
     </p>
    </section>
 
-   <section className="prose-game">
-    <h2>What This Guide Will Not Overclaim</h2>
-    <p>
-     This page uses real Lv1 base stats from the game files. It does not assign
-     tier ranks because TBH builds depend on gear, Cube, runes, skills, available
-     heroes, and the wall you are facing. A ranking without that context pushes
-     players into bad spending decisions.
-    </p>
-    <p>
-     Use this page to pick roles and team shape. Use the{" "}
-     <a href={taskBarHeroUrls.heroes} target="_blank" rel="noreferrer">
-      Wiki hero database
-     </a>{" "}
-     for exact skill names and stat progressions. Use the{" "}
-     <Link href="/games/task-bar-hero/act-2-10-act-3-10-guide">
-      2-10 and 3-10 guide
-     </Link>{" "}
-     when a specific wall needs a tactical solution.
-    </p>
-    <p>
-     If you are still early, return to the{" "}
-     <Link href="/games/task-bar-hero/beginner-guide">beginner guide</Link>.
-     If materials are confusing, move to the{" "}
-     <Link href="/games/task-bar-hero/cube-guide">Cube guide</Link>.
-    </p>
-   </section>
-  </TaskBarHeroArticle>
+   </TaskBarHeroArticle>
  );
 }

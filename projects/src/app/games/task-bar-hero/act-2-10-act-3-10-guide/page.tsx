@@ -124,7 +124,7 @@ export default function TaskBarHeroBossWallGuidePage() {
     jumpLinks={jumpLinks}
    />
 
-   <BlufBox title="Boss-wall rule">
+   <BlufBox title="A wall is data, not a dead end">
     <p>
      <strong>A wall is a diagnosis tool, not a punishment.</strong> Die early?
      Stabilize. Survive but time out? Add damage. Both look ok but progress is
@@ -348,17 +348,6 @@ export default function TaskBarHeroBossWallGuidePage() {
     </table>
    </div>
 
-   <section className="prose-game">
-    <h2>Next Step</h2>
-    <p>
-     If Cube changes helped but a boss still blocks, continue with the{" "}
-     <Link href="/games/task-bar-hero/cube-guide">Cube guide</Link>. If the
-     team still has unclear roles, read{" "}
-     <Link href="/games/task-bar-hero/heroes-builds">heroes and builds</Link>.
-     If you are missing basic account rhythm, return to the{" "}
-     <Link href="/games/task-bar-hero/beginner-guide">beginner guide</Link>.
-    </p>
-   </section>
-  </TaskBarHeroArticle>
+   </TaskBarHeroArticle>
  );
 }

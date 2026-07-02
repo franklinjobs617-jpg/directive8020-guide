@@ -27,12 +27,12 @@ const faqs = [
  {
   question: "What should I do first in TBH?",
   answer:
-   "Clear early stages, unlock the Rune Tree and Cube (level 10 + Digital Awakening quest). Pick Knight as your first hero. The safest first Rune point is Rune of Command for the second hero slot.",
+   "Clear early stages, unlock the Rune Tree at level 3 and the Cube at level 4. Pick Knight as your first hero. The safest first Rune point is Rune of Command for the second hero slot.",
  },
  {
   question: "Which hero should beginners pick?",
   answer:
-   "Knight (HP 130, ATK 2) is the safest learning class. Ranger (HP 60, ATK 1) is strong if you can survive early waves. Sorcerer (HP 50, ATK 2) needs Cube and stat support. Do not start with DLC heroes.",
+   "Knight is the safest starter. Ranger clears faster but needs better gear. Sorcerer needs Cube and stat support before it performs. See the heroes and builds guide for full stat comparison.",
  },
  {
   question: "Should I open boxes right away?",
@@ -60,7 +60,7 @@ const searchIntentRows = [
  },
  {
   query: "TBH best starting hero",
-  answer: "Knight for stability. Ranger for faster farming if you survive. Sorcerer only with Cube and gear ready.",
+  answer: "Knight for stability. Ranger for faster farming if you survive. Sorcerer only with Cube and gear ready. See heroes and builds guide for stats.",
   href: "#hero-choice",
   label: "Heroes",
  },
@@ -86,13 +86,13 @@ const jumpLinks = [
  { href: "#third-slot", label: "Third slot" },
 ];
 
-const mistakeRows = [
- ["Replacing every item immediately", "A higher-looking item is not always better if it breaks the role your hero is filling. Compare first."],
- ["Adding heroes with no job", "More slots only help when each hero has gear, skills, and a reason to be in the team."],
- ["Ignoring Cube until late game", "Cube can be the reason a boss wall feels impossible even when hero levels look fine. Start Synthesis at level 10."],
- ["Farming without a question", "If you do not know whether you need damage, survival, or materials, another hour of farming may not fix the problem."],
- ["Following market advice too early", "Market activity is separate from basic progression and can change with live rules."],
-] as const;
+ const mistakeRows = [
+  ["Replacing every item immediately", "A higher-looking item is not always better if it breaks the role your hero is filling. Compare first."],
+  ["Adding heroes with no job", "More slots only help when each hero has gear, skills, and a reason to be in the team."],
+  ["Ignoring Cube until late game", "Cube can be the reason a boss wall feels impossible even when hero levels look fine. Start Synthesis at level 4."],
+  ["Farming without a question", "If you do not know whether you need damage, survival, or materials, another hour of farming may not fix the problem."],
+  ["Following market advice too early", "Market activity is separate from basic progression and can change with live rules."],
+ ] as const;
 
 export default function TaskBarHeroBeginnerGuidePage() {
  return (
@@ -107,12 +107,12 @@ export default function TaskBarHeroBeginnerGuidePage() {
   >
    <SearchAnswerPanel
     title="What should a new TBH player do first?"
-    answer="Push early stages until you see the first real wall. Pick Knight as your starter. Unlock Rune of Command for the second hero slot. Unlock Cube at level 10 and start Synthesis immediately. Improve one system at a time so you know what actually works."
+    answer="Push early stages until you see the first real wall. Pick Knight as your starter. Unlock Rune of Command for the second hero slot. Unlock Cube at level 4 and start Synthesis immediately. Improve one system at a time so you know what actually works."
     intentRows={searchIntentRows}
     jumpLinks={jumpLinks}
    />
 
-   <BlufBox title="Beginner rule">
+   <BlufBox title="Diagnose before you spend">
     <p>
      <strong>Every early choice should answer one question: what is stopping
      progress right now?</strong> Dying? Stabilize. Timing out? Add damage.
@@ -154,11 +154,11 @@ export default function TaskBarHeroBeginnerGuidePage() {
      route around them unless you already own them.
     </p>
     <p>
-     Among the free three, Knight (HP 130, ATK 2) is the safest learning class.
-     High HP and shield+sword give you room to read boss mechanics. Ranger
-     (HP 60, ATK 1) clears faster but dies faster if your gear lags. Sorcerer
-     (HP 50, ATK 2) has the highest burst potential but needs Cube access and
-     cooldown support before it performs.
+     Among the free three, Knight is the safest starter with high HP and a
+     shield. Ranger clears faster but dies faster if your gear lags. Sorcerer
+     has the highest burst potential but needs Cube access and cooldown support
+     before it performs. For detailed stats, see the{" "}
+     <Link href="/games/task-bar-hero/heroes-builds">heroes and builds guide</Link>.
     </p>
    </section>
 
@@ -229,8 +229,8 @@ export default function TaskBarHeroBeginnerGuidePage() {
      one route until the next unlock threshold.
     </p>
     <p>
-     Cube priority: Unlock at level 10. Start with Synthesis (5 XP per
-     material). Do not touch Alchemy (3 XP per material) until Cube 15-20.
+     Cube priority: Unlock at level 4. Start with Synthesis (5 XP per
+     material). Do not touch Alchemy (3 XP per material) until Cube 20.
      Early Alchemy burns resources at 40% XP efficiency loss.
     </p>
    </section>
@@ -301,19 +301,6 @@ export default function TaskBarHeroBeginnerGuidePage() {
     </table>
    </div>
 
-   <section className="prose-game">
-    <h2>Where to Go Next</h2>
-    <p>
-     If your next question is about materials or Cube EXP, read the{" "}
-     <Link href="/games/task-bar-hero/cube-guide">Cube guide</Link>. If the
-     wall is specifically Act 2-10 or Act 3-10, move to the{" "}
-     <Link href="/games/task-bar-hero/act-2-10-act-3-10-guide">
-      boss-wall guide
-     </Link>
-     . If the team feels wrong but you are not sure why, use the{" "}
-     <Link href="/games/task-bar-hero/heroes-builds">heroes and builds guide</Link>.
-    </p>
-   </section>
-  </TaskBarHeroArticle>
+   </TaskBarHeroArticle>
  );
 }

@@ -82,7 +82,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://the.gatekeeperconsent.com" />
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://cdn.pokiter.com" />
         <link rel="dns-prefetch" href="https://ezoicanalytics.com" />
         {/* ========================================================= */}
         {/* 1. Ezoic 隐私合规脚本 */}
@@ -132,11 +131,6 @@ ezstandalone.cmd = ezstandalone.cmd || [];
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3383070348689557"
           strategy="afterInteractive"
-        />
-        <Script
-          src={`https://cdn.pokiter.com/js/swv5.mix.js?t=4game`}
-          strategy="afterInteractive"
-          data-ssp="web-4game"
         />
         <Script
           id="ga-loader"

@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { ArticleIcon, ArticleImage } from "@/components/article-media";
+import { ArticleIcon } from "@/components/article-media";
 import { BlufBox, SearchAnswerPanel } from "@/components/guide-blocks";
 import { CubeEfficiencyTable } from "@/components/task-bar-hero-charts";
 import { TaskBarHeroArticle } from "@/components/task-bar-hero-article";
@@ -42,7 +41,7 @@ const faqs = [
  {
   question: "How many materials does the Cube have?",
   answer:
-   "121+ materials across 6+ categories: Decoration (36 gems), Engraving (33 monster parts), Crafting (22 metals), Inscription (10 scroll tiers), Offering (10 anniversary coins), Soulstones (10 boss drops). Rarity runs from COMMON to COSMIC (10 tiers).",
+   "125 materials across 6+ categories: Decoration (36 gems), Engraving (33 monster parts), Crafting (22 metals), Inscription (10 scroll tiers), Offering (10 anniversary coins), Soulstones (10 boss drops). Rarity runs from COMMON to COSMIC (10 tiers).",
  },
  {
   question: "Where can I check exact Cube and material data?",
@@ -111,7 +110,7 @@ export default function TaskBarHeroCubeGuidePage() {
     jumpLinks={jumpLinks}
    />
 
-   <BlufBox title="Cube rule">
+   <BlufBox title="Synthesis first, questions later">
     <p>
      <strong>Synthesis until 15. Save rares until 15. Ignore Alchemy until 20.</strong>
      That is the shortest path to a Cube that carries your account instead of dragging it.
@@ -119,11 +118,11 @@ export default function TaskBarHeroCubeGuidePage() {
    </BlufBox>
 
    <section id="cube-functions" className="prose-game">
-    <h2>Cube's 8 Functions (and When They Matter)</h2>
+     <h2>Cube&apos;s 8 Functions (and When They Matter)</h2>
     <ArticleIcon
      src={taskBarHeroImages.material}
-     alt="TBH Cube material types — 121+ materials across 6+ categories"
-     caption="The Hero-dric Cube has 8 functions and 121+ materials. The right question is not 'what can I do?' but 'what should I do right now?'"
+     alt="TBH Cube material types — 125 materials across 6+ categories"
+     caption="The Hero-dric Cube has 8 functions and 125 materials. The right question is not 'what can I do?' but 'what should I do right now?'"
     />
     <p>
      The Hero-dric Cube is not one system. It is eight, and they do very different
@@ -229,11 +228,11 @@ export default function TaskBarHeroCubeGuidePage() {
 
     <h3>Alchemy — Delay Until 20</h3>
     <p>
-     Alchemy converts materials into temporary consumables (potions). It gives
+     Alchemy converts materials into gold. It gives
      3 XP per material vs Synthesis at 5 XP. That 40% gap compounds over
      hundreds of materials. At Cube 20, start with a 80/20 split (Synthesis/
      Alchemy). Never go above 20% Alchemy — the XP loss is not worth the
-     temporary potion effects.
+     gold income at early levels.
     </p>
 
     <h3>Decoration, Engraving, Inscription — Mid-to-Late Game</h3>
@@ -276,19 +275,6 @@ export default function TaskBarHeroCubeGuidePage() {
     </table>
    </div>
 
-   <section className="prose-game">
-    <h2>What to Read After Cube</h2>
-    <p>
-     If Cube changes help but a boss still blocks progress, move to the{" "}
-     <Link href="/games/task-bar-hero/act-2-10-act-3-10-guide">
-      Act 2-10 and Act 3-10 guide
-     </Link>
-     . If the issue is which hero deserves materials, read{" "}
-     <Link href="/games/task-bar-hero/heroes-builds">heroes and builds</Link>.
-     If you are still in the first hour, return to the{" "}
-     <Link href="/games/task-bar-hero/beginner-guide">beginner guide</Link>.
-    </p>
-   </section>
-  </TaskBarHeroArticle>
+   </TaskBarHeroArticle>
  );
 }

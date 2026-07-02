@@ -104,7 +104,7 @@ export default function TaskBarHeroHubPage() {
     jumpLinks={jumpLinks}
    />
 
-   <BlufBox title="Best first path">
+   <BlufBox title="Start with the problem, not the page">
     <p>
      <strong>Do not treat TBH as only an idle timer.</strong> Progress comes from
      matching the right hero roles, gear, Cube upgrades, skills, and stage
@@ -151,6 +151,29 @@ export default function TaskBarHeroHubPage() {
      </a>
      . These guide pages focus on the next step: what to upgrade, what to
      stop doing, and what to check when progress slows.
+    </p>
+   </section>
+
+   <section id="why-this-guide" className="prose-game">
+    <h2>Why This Guide Is Different</h2>
+    <p>
+     Most TBH guides fall into two categories: databases that list raw numbers
+     without context, or opinion pieces that push one build without explaining
+     why. This guide takes a third approach — it uses real data from the game
+     files (v1.00.09 datamine) and organizes it by the specific wall you are
+     facing.
+    </p>
+    <p>
+     The hero stat tables come from actual Lv1 base values extracted from the
+     game, not from tier list opinions. The Cube efficiency analysis calculates
+     XP per material across different operations. The Act 3-10 strategy is based
+     on documented boss mechanics that require a specific formation, not generic
+     advice like &quot;level up your gear.&quot;
+    </p>
+    <p>
+     This guide will not tell you which hero is &quot;best&quot; without context. It will
+     tell you which hero solves the specific problem you are stuck on right now.
+     That is a different kind of help.
     </p>
    </section>
 
