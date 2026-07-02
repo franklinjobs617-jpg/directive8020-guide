@@ -1560,6 +1560,51 @@ export const growAGarden2: GameConfig = {
  ],
 };
 
+export const taskBarHero: GameConfig = {
+ id: "task-bar-hero",
+ slugPrefix: "task-bar-hero",
+ hubPath: "/games/task-bar-hero",
+ name: "TBH: Task Bar Hero",
+ guidePublisher: "Enjoy4Game Guides",
+ description:
+  "TBH: Task Bar Hero is a free single-player idle RPG on Steam where players push stages with heroes, gear, runes, Cube upgrades, boxes, drops, and Steam Market-linked items.",
+ platforms: ["PC via Steam"],
+ genres: ["Idle RPG", "RPG", "Loot", "Incremental", "Single-player"],
+ developer: "Nugem Studio / Tesseract Studio",
+ publisher: "Nugem Studio / Tesseract Studio",
+ releaseDate: "2026-05-27",
+ operatingSystem: "Windows",
+ url: "https://store.steampowered.com/app/3678970/TBH_Task_Bar_Hero/",
+ availability: "https://schema.org/InStock",
+ heroImage: "/games/task-bar-hero/og-image.jpg",
+ guideLinks: [
+  {
+   title: "Beginner Guide",
+   href: "/games/task-bar-hero/beginner-guide",
+   description:
+    "First-hour route for heroes, upgrades, boxes, gold, EXP, third-slot planning, and early mistakes to avoid.",
+  },
+  {
+   title: "Cube Guide",
+   href: "/games/task-bar-hero/cube-guide",
+   description:
+    "How Cube leveling, synthesis, crafting, alchemy, materials, and common waste cases work in TBH.",
+  },
+  {
+   title: "Act 2-10 and Act 3-10 Guide",
+   href: "/games/task-bar-hero/act-2-10-act-3-10-guide",
+   description:
+    "Boss-wall checklist for team shape, gear, skills, Cube progress, damage pressure, and recovery when 2-10 or 3-10 blocks progression.",
+  },
+  {
+   title: "Heroes and Builds",
+   href: "/games/task-bar-hero/heroes-builds",
+   description:
+    "Knight, Ranger, Sorcerer, Priest, Hunter, and Slayer roles, team templates, stat priorities, and build limits.",
+  },
+ ],
+};
+
 export const deltarune: GameConfig = {
  id: "deltarune",
  slugPrefix: "deltarune",

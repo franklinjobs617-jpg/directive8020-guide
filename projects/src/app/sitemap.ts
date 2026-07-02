@@ -20,6 +20,7 @@ import {
  spacecraft,
  cursemark,
  deltarune,
+ taskBarHero,
  type GameConfig,
 } from '@/lib/games';
 import { voidlingEntries } from '@/lib/voidling-bound';
@@ -98,10 +99,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
  const gameHubs: MetadataRoute.Sitemap = [
  projectMist, thickAsThieves, zeroParades, mechanicusII, romestead,
  paralives, minaTheHollower, firstLight007, jumpKingQuest, starminer,
- fatekeeper, enginefall, voidlingBound, lunaAbyss, sellLemons, fearsToFathom, growAGarden2, spacecraft, cursemark, deltarune,
+ fatekeeper, enginefall, voidlingBound, lunaAbyss, sellLemons, fearsToFathom, growAGarden2, spacecraft, cursemark, deltarune, taskBarHero,
  ].map((game) => ({
  url: `${BASE_URL}${game.hubPath}`,
- lastModified: game.id === 'enginefall' ? '2026-06-10' : game.id === 'sell-lemons' ? '2026-06-12' : game.id === 'fears-to-fathom' ? '2026-06-11' : game.id === 'grow-a-garden-2' ? '2026-06-15' : game.id === 'spacecraft' ? '2026-06-17' : game.id === 'cursemark' ? '2026-06-17' : game.id === 'deltarune' ? '2026-06-25' : today,
+ lastModified: game.id === 'enginefall' ? '2026-06-10' : game.id === 'sell-lemons' ? '2026-06-12' : game.id === 'fears-to-fathom' ? '2026-06-11' : game.id === 'grow-a-garden-2' ? '2026-06-15' : game.id === 'spacecraft' ? '2026-06-17' : game.id === 'cursemark' ? '2026-06-17' : game.id === 'deltarune' ? '2026-06-25' : game.id === 'task-bar-hero' ? '2026-07-02' : today,
  changeFrequency: 'daily' as const,
  priority: 0.74,
  }));
@@ -128,6 +129,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  ...gameSubPages(spacecraft, 0.68, '2026-06-17'),
  ...gameSubPages(cursemark, 0.68, '2026-06-17'),
  ...gameSubPages(deltarune, 0.74, '2026-06-25'),
+ ...gameSubPages(taskBarHero, 0.74, '2026-07-02'),
  ...mistfallHunterGuideLinks
   .filter((link) => link.href !== '/games/mistfall-hunter')
   .map((link) => ({

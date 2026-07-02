@@ -22,11 +22,12 @@ import { voidlingBoundImages } from "@/lib/voidling-bound";
 import { spacecraftImages } from "@/lib/spacecraft";
 import { cursemarkImages } from "@/lib/cursemark";
 import { deltaruneImages } from "@/lib/deltarune";
+import { taskBarHeroImages } from "@/lib/task-bar-hero";
 import { sellLemons } from "@/lib/games";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
- "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, life simulation, Roblox idle tycoon progression, fantasy RPGs, creature collectors, extraction ARPGs, inspection sims, train-based crafting shooters, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, and story-driven games, including Mistfall Hunter, Sell Lemons, Voidling Bound, Enginefall, Gate Guard Simulator, Luna Abyss, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+ "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, idle RPGs, life simulation, Roblox idle tycoon progression, fantasy RPGs, creature collectors, extraction ARPGs, inspection sims, train-based crafting shooters, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, and story-driven games, including TBH: Task Bar Hero, Mistfall Hunter, Sell Lemons, Voidling Bound, Enginefall, Gate Guard Simulator, Luna Abyss, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
  title: {
@@ -38,6 +39,7 @@ export const metadata: Metadata = {
  "survival game guides",
 "horror game guides",
 "DELTARUNE guide",
+"TBH Task Bar Hero guide",
 "Sell Lemons guide",
 "Directive 8020 guide",
  "Project Mist guide",
@@ -78,6 +80,13 @@ export const metadata: Metadata = {
 };
 
 const gameCards = [
+ {
+ title: "TBH: Task Bar Hero",
+ href: "/games/task-bar-hero",
+ label: "Idle RPG",
+ body: "Beginner route, Cube upgrades, Act 2-10 and Act 3-10 walls, heroes and builds, item lookup, drop finder, and market status for the free Steam idle RPG.",
+ image: taskBarHeroImages.hero,
+ },
  {
  title: "DELTARUNE",
  href: "/games/deltarune",
