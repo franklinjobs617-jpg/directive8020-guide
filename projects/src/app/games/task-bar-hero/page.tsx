@@ -1,8 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArticleImage } from "@/components/article-media";
 import { BlufBox, SearchAnswerPanel, StatusPanel } from "@/components/guide-blocks";
-import { HeroBaseStatsChart } from "@/components/task-bar-hero-charts";
 import { TaskBarHeroArticle } from "@/components/task-bar-hero-article";
 import { taskBarHero } from "@/lib/games";
 import {
@@ -29,22 +27,22 @@ const faqs = [
  {
   question: "Is TBH: Task Bar Hero free?",
   answer:
-   "Yes. TBH: Task Bar Hero is listed as a free-to-play Steam game. Optional market-linked item systems and account rules can change, so check the live Steam page and market page before trading or selling items.",
+   "Yes. Steam lists it as free-to-play. Optional market-linked item systems exist, so check the live Steam page and market page before trading or selling items. Market rules can change.",
  },
  {
   question: "Is TBH: Task Bar Hero single-player?",
   answer:
-   "Steam lists TBH: Task Bar Hero as single-player. The main loop is solo idle RPG progression through heroes, stages, gear, boxes, runes, and Cube upgrades.",
+   "Steam lists it as single-player. The main loop is solo idle RPG progression: heroes, stages, gear, boxes, runes, and Cube upgrades.",
  },
  {
   question: "What guide should I read first?",
   answer:
-   "Read the beginner guide first if you are new, the Cube guide if resources feel confusing, and the Act 2-10 / Act 3-10 guide if a boss wall has stopped progress.",
+   "The beginner guide if you are new, the Cube guide if resources feel confusing, and the Act 2-10 / Act 3-10 guide if a boss wall has stopped progress.",
  },
  {
   question: "Where should I look up items and drops?",
   answer:
-   "Use the Task Bar Hero Hub Wiki item database and drop finder for exact lookup, then use Enjoy4Game guides for route choices and upgrade order.",
+   "Use the Task Bar Hero Hub Wiki item database and drop finder for exact lookup. Come back to Enjoy4Game guides for route choices and upgrade order.",
  },
  {
   question: "Should I follow a tier list immediately?",
@@ -62,40 +60,31 @@ const searchIntentRows = [
  },
  {
   query: "Task Bar Hero beginner guide",
-  answer: "Use the first-hour route for early heroes, upgrades, boxes, gold, EXP, and common mistakes.",
+  answer: "First-hour route for early heroes, upgrades, boxes, gold, EXP, and common mistakes.",
   href: "/games/task-bar-hero/beginner-guide",
   label: "Beginner",
  },
  {
   query: "Task Bar Hero cube guide",
-  answer: "Use the Cube guide before spending materials on synthesis, crafting, or alchemy.",
+  answer: "Covers 8 Cube functions, Synthesis vs Alchemy XP, material routes, and leveling strategy.",
   href: "/games/task-bar-hero/cube-guide",
   label: "Cube",
  },
  {
   query: "Task Bar Hero 2-10 guide",
-  answer: "Use the boss-wall guide when Act 2-10 or Act 3-10 blocks your next stage push.",
+  answer: "Boss-wall checklist and 3-10 boss mechanics (3秒杀机制).",
   href: "/games/task-bar-hero/act-2-10-act-3-10-guide",
   label: "Boss wall",
  },
 ];
 
 const jumpLinks = [
- { href: "#start-here", label: "Start here" },
  { href: "#what-it-is", label: "What it is" },
+ { href: "#start-here", label: "Start here" },
  { href: "#guide-map", label: "Guide map" },
  { href: "#wiki-tools", label: "Wiki tools" },
  { href: "#market", label: "Market" },
 ];
-
-const heroCards = [
- ["Knight", taskBarHeroImages.knight, "Stable melee front line"],
- ["Ranger", taskBarHeroImages.ranger, "Safer physical damage"],
- ["Sorcerer", taskBarHeroImages.sorcerer, "Magic burst pressure"],
- ["Priest", taskBarHeroImages.priest, "Support and sustain"],
- ["Hunter", taskBarHeroImages.hunter, "Damage scaling"],
- ["Slayer", taskBarHeroImages.slayer, "DLC melee pressure"],
-] as const;
 
 export default function TaskBarHeroHubPage() {
  return (
@@ -136,29 +125,27 @@ export default function TaskBarHeroHubPage() {
     <h2>What TBH: Task Bar Hero Actually Is</h2>
     <ArticleImage
      src={taskBarHeroImages.overview}
-     alt="TBH Task Bar Hero overview showing heroes and idle RPG progression"
-     caption="TBH looks simple from the task bar, but the real progression comes from heroes, gear, boxes, runes, Cube upgrades, and stage walls."
+     alt="TBH task bar hero gameplay overview — heroes, stages, and idle RPG systems"
+     caption="TBH looks simple from the task bar, but real progression comes from heroes, gear, boxes, runes, Cube upgrades, and stage walls."
     />
     <p>
-     TBH: Task Bar Hero is a free Steam idle RPG built around small choices
-     that stack over time. The game keeps moving while you push stages, collect
-     boxes, improve heroes, manage gear, and use systems such as runes and Cube.
-     The screen is compact, but the planning feels closer to a loot RPG than a
-     pure idle clicker. A new player can clear early stages by following the
-     obvious upgrades, then suddenly get stuck because one part of the account
-     is behind the rest.
+     TBH is a free Steam idle RPG. The game keeps moving while you push stages,
+     collect boxes, improve heroes, manage gear, and work through systems like
+     runes and the Hero-dric Cube. The screen is compact but the planning
+     feels closer to a loot RPG than a pure idle clicker. New players usually
+     clear early stages by following obvious upgrades, then get stuck because
+     one part of the account fell behind.
     </p>
     <p>
-     That is why this hub is organized by player problems. If you need a clean
-     first hour, go to the beginner guide. If your materials feel expensive or
-     Cube level is lagging, go to the Cube guide. If Act 2-10 or Act 3-10 is
-     blocking you, use the wall checklist before farming randomly. If you are
-     unsure which heroes belong together, read the role-based build page before
-     copying a tier list.
+     That is why this hub is organized by player problems. Need a clean first
+     hour? Go to the beginner guide. Materials feel expensive or Cube level is
+     lagging? Go to the Cube guide. Act 2-10 or Act 3-10 blocking you? Use the
+     wall checklist before farming randomly. Unsure which heroes belong
+     together? Read the role-based build page before copying a tier list.
     </p>
     <p>
-     Exact lookup belongs in a database. For item names, hero pages, rune nodes,
-     stage data, and drop searches, use{" "}
+     Exact lookup belongs in a database. For item names (5,944 items), hero pages,
+     rune nodes (197 runes), stage data (120 stages), and drop searches, use{" "}
      <a href={taskBarHeroUrls.wiki} target="_blank" rel="noreferrer" className="font-semibold underline decoration-border hover:decoration-dribbble-pink">
       Task Bar Hero Hub Wiki
      </a>
@@ -201,33 +188,6 @@ export default function TaskBarHeroHubPage() {
     </div>
    </section>
 
-   <section className="my-10">
-    <h2 className="mb-4 text-xl font-bold text-foreground">Hero Roles at a Glance</h2>
-    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-     {heroCards.map(([name, src, role]) => (
-      <Link
-       key={name}
-       href="/games/task-bar-hero/heroes-builds"
-       className="rounded-lg border border-border bg-white p-4 transition-colors hover:border-dribbble-pink"
-      >
-       <div className="relative mx-auto h-32 w-full">
-        <Image
-         src={src}
-         alt={`TBH Task Bar Hero ${name} hero artwork`}
-         fill
-         className="object-contain"
-         sizes="(max-width: 768px) 50vw, 220px"
-        />
-       </div>
-       <h3 className="mt-3 text-sm font-bold text-foreground">{name}</h3>
-       <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{role}</p>
-      </Link>
-     ))}
-    </div>
-   </section>
-
-   <HeroBaseStatsChart />
-
    <section id="guide-map" className="my-10">
     <h2 className="mb-4 text-xl font-bold text-foreground">Guide Map</h2>
     <div className="grid gap-4 sm:grid-cols-2">
@@ -249,33 +209,33 @@ export default function TaskBarHeroHubPage() {
    <section id="wiki-tools" className="prose-game">
     <h2>Use the Wiki When You Need Exact Lookup</h2>
     <p>
-     Guide pages are strongest when they explain priorities. Database pages are
-     strongest when you already know what you are looking for. If you have an
-     item name, rune name, hero, monster, or stage in mind, jump to the Wiki
-     first and use the filters there. Then return to this hub when the next
-     question is whether the item, rune, or hero is worth using now.
+     Guide pages are for priorities and decisions. Database pages are for
+     finding specific names and numbers. If you have an item, rune, hero,
+     monster, or stage in mind, jump to the Wiki first and use the filters
+     there. Then return here when the next question is whether that thing
+     is worth using right now.
     </p>
     <ul>
      <li>
       Use the{" "}
       <a href={taskBarHeroUrls.items} target="_blank" rel="noreferrer">
-       item database
-      </a>{" "}
-      when you need a full item list instead of a recommendation.
+       item database (5,944 items)
+      </a>
+      {" "} when you need a full item list instead of a recommendation.
      </li>
      <li>
       Use the{" "}
       <a href={taskBarHeroUrls.dropFinder} target="_blank" rel="noreferrer">
        drop finder
-      </a>{" "}
-      when you know the target item but not where to farm.
+      </a>
+      {" "} when you know the target item but not the farming route.
      </li>
      <li>
       Use the{" "}
       <a href={taskBarHeroUrls.stages} target="_blank" rel="noreferrer">
-       stage map
-      </a>{" "}
-      before comparing Act 2-10, Act 3-10, Hell, Nightmare, or Torment walls.
+       stage map (120 stages, 4 difficulties)
+      </a>
+      {" "} before comparing Act 2-10, Act 3-10, Hell, Nightmare, or Torment walls.
      </li>
     </ul>
    </section>
@@ -284,13 +244,13 @@ export default function TaskBarHeroHubPage() {
     <h2>Market and Trade Ship Caution</h2>
     <p>
      TBH has market-linked items, but market rules are not a beginner upgrade
-     path. Treat Market and Trade Ship choices as account-risk choices, not
+     path. Treat Market and Trade Ship choices as account-risk decisions, not
      as the first way to fix progression. If a trade feature is unavailable,
      paused, or under policy changes, do not build a route around it. Check the{" "}
      <a href={taskBarHeroUrls.market} target="_blank" rel="noreferrer">
       Wiki market page
-     </a>{" "}
-     and the live Steam page before making choices that involve selling,
+     </a>
+     {" "} and the live Steam page before making choices that involve selling,
      buying, or moving items.
     </p>
     <p>

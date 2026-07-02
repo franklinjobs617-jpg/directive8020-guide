@@ -1,18 +1,19 @@
 import Link from "next/link";
 import { ArticleImage } from "@/components/article-media";
 import { BlufBox, SearchAnswerPanel } from "@/components/guide-blocks";
-import { CubeSpendChart } from "@/components/task-bar-hero-charts";
+import { CubeEfficiencyTable } from "@/components/task-bar-hero-charts";
 import { TaskBarHeroArticle } from "@/components/task-bar-hero-article";
 import {
  createTaskBarHeroMetadata,
  taskBarHeroCubeRows,
+ taskBarHeroCubeLevels,
  taskBarHeroImages,
  taskBarHeroUrls,
 } from "@/lib/task-bar-hero";
 
 const title = "TBH: Task Bar Hero Cube Guide";
 const description =
- "Learn how Cube leveling, synthesis, crafting, alchemy, materials, item use, and common waste cases work in TBH: Task Bar Hero.";
+ "Learn how the Hero-dric Cube works in TBH: 8 functions, Synthesis vs Alchemy XP, 1-14/15/20 leveling strategy, material routes, and what not to waste.";
 const canonical = "/games/task-bar-hero/cube-guide";
 
 export const metadata = createTaskBarHeroMetadata({
@@ -24,81 +25,72 @@ export const metadata = createTaskBarHeroMetadata({
 
 const faqs = [
  {
-  question: "What does Cube do in TBH: Task Bar Hero?",
+  question: "What does the Cube do in TBH?",
   answer:
-   "Cube is a progression system tied to material use, item handling, and account growth. It matters when normal hero upgrades stop solving stage walls.",
+   "The Hero-dric Cube is an enhancement system with 8 functions: Synthesis, Alchemy, Crafting, Decoration, Engraving, Inscription, Extraction, and Offering. It unlocks at player level 10 after the Digital Awakening quest.",
  },
  {
-  question: "Why is my Cube level not moving fast enough?",
+  question: "Why is my Cube level stuck?",
   answer:
-   "Most Cube stalls come from spending materials without a plan, ignoring duplicate value, or farming stages that do not feed the current Cube need. Check the Cube page and item database before burning rare inputs.",
+   "Most Cube stalls come from using the wrong operation. Synthesis gives 5 XP per material. Alchemy gives only 3 XP per material — a 40% loss. If you have been using Alchemy early, that is probably why progress feels slow.",
  },
  {
-  question: "Should I use synthesis immediately?",
+  question: "Should I use Synthesis or Alchemy?",
   answer:
-   "Use synthesis when duplicates or materials are clearly outside your near-term hero plan. Hold rare inputs when the next upgrade path is unclear.",
+   "Synthesis first, always. Bulk-synthesize Basic Shards until Cube 15. At 15, XP multipliers kick in retroactively for higher-tier materials. Start Alchemy around Cube 20, but keep it under 20% of your total spend.",
  },
  {
-  question: "Is crafting better than alchemy?",
+  question: "How many materials does the Cube have?",
   answer:
-   "Neither is always better. Crafting is useful for targeted item progress, while alchemy is useful when a conversion solves the current bottleneck.",
+   "121+ materials across 6+ categories: Decoration (36 gems), Engraving (33 monster parts), Crafting (22 metals), Inscription (10 scroll tiers), Offering (10 anniversary coins), Soulstones (10 boss drops). Rarity runs from COMMON to COSMIC (10 tiers).",
  },
  {
-  question: "Where can I check exact Cube and item data?",
+  question: "Where can I check exact Cube and material data?",
   answer:
-   "Use the Cube, item database, and tools pages on Task Bar Hero Hub Wiki for lookup, then use this guide to decide what to spend or hold.",
+   "Use the Cube page, item database, and materials guide on Task Bar Hero Hub Wiki for exact lookup. This guide covers what to spend and when.",
  },
 ];
 
 const searchIntentRows = [
  {
   query: "TBH cube guide",
-  answer: "Start with the operation table, then check material spending rules and stall recovery.",
-  href: "#cube-operations",
-  label: "Cube",
+  answer: "Start with the 8-function table, then check XP efficiency, leveling route, and waste cases.",
+  href: "#cube-functions",
+  label: "Functions",
  },
  {
   query: "Task Bar Hero cube leveling",
-  answer: "If Cube EXP feels stuck, check material flow, duplicate use, stage farming, and whether you are spending into the wrong operation.",
+  answer: "Synthesis at 5 XP/material until Cube 15. At 15, XP multiplier activates. Alchemy (3 XP/material) only after 20.",
   href: "#leveling",
   label: "Leveling",
  },
  {
   query: "Task Bar Hero synthesis crafting alchemy",
-  answer: "Use synthesis, crafting, and alchemy for different jobs. Do not spend rare materials just because an operation is available.",
-  href: "#spend-or-hold",
-  label: "Materials",
+  answer: "Synthesis = XP + gear cores. Crafting = targeted equipment. Alchemy = potions (low XP, delay until 20).",
+  href: "#operation-guide",
+  label: "Operations",
  },
  {
   query: "Task Bar Hero materials",
-  answer: "Look up exact material use in the Wiki item database before converting or crafting.",
+  answer: "Look up exact material use in the Wiki item database before converting or crafting rare items.",
   href: taskBarHeroUrls.items,
   label: "Database",
  },
 ];
 
 const jumpLinks = [
- { href: "#cube-operations", label: "Operations" },
- { href: "#leveling", label: "Leveling" },
- { href: "#spend-or-hold", label: "Spend or hold" },
+ { href: "#cube-functions", label: "8 functions" },
+ { href: "#leveling", label: "Leveling route" },
+ { href: "#operation-guide", label: "Operation guide" },
  { href: "#waste-cases", label: "Mistakes" },
- { href: "/games/task-bar-hero/act-2-10-act-3-10-guide", label: "Boss walls" },
 ];
 
-const levelingRows = [
- ["Check the wall first", "Identify whether the account is dying, timing out, or lacking materials.", "Cube cannot fix the wrong problem if you do not know what failed."],
- ["Review active heroes", "Check whether your current team actually benefits from the material path you are considering.", "A Cube spend for unused gear delays the team that is pushing stages."],
- ["Look up material use", "Open the item database before converting rare materials.", "Some materials have more than one possible use."],
- ["Spend in batches", "Make a small controlled improvement, then push again.", "This shows whether Cube was the missing bottleneck."],
- ["Stop if the result is unclear", "Hold rare inputs when the next stage wall does not change.", "Blind spending can make the next correction harder."],
-] as const;
-
 const wasteRows = [
- ["Converting materials without a target", "Decide what stage wall or hero role the spend is supposed to fix."],
- ["Crafting for a bench hero", "Active progression heroes should get the first controlled investments."],
- ["Ignoring duplicates", "Duplicates can be fuel, but only after you know they are not needed for the current plan."],
- ["Treating every material as common", "Rare inputs should be checked in the database before use."],
- ["Changing too many systems at once", "Spend, test, and compare. If you change gear, Cube, skills, and runes together, you will not know what worked."],
+ ["Converting rare materials without checking", "Open the item database first. Some materials (Void Essence, Cosmic Shards) have multiple uses across different operations."],
+ ["Crafting for a bench hero", "Active progression heroes get the first controlled investments. Bench gear can wait."],
+ ["Burning Stellar Rubies before Cube 15", "At Cube 15, XP multipliers apply retroactively to high-tier materials. Burning them early loses thousands of potential XP (~40 hours of grind)."],
+ ["Alchemy before Cube 15", "Alchemy gives 3 XP/material vs Synthesis at 5 XP/material. That is 40% less XP per material. Waiting until Cube 20 costs you nothing."],
+ ["Changing too many things at once", "Spend, test, compare. If you change gear, Cube, skills, and runes together, you will not know what worked."],
 ] as const;
 
 export default function TaskBarHeroCubeGuidePage() {
@@ -113,48 +105,37 @@ export default function TaskBarHeroCubeGuidePage() {
    faqs={faqs}
   >
    <SearchAnswerPanel
-    title="How should you use Cube in TBH?"
-    answer="Use Cube to solve a known progression bottleneck, not as a place to dump every material. Check whether the wall needs survival, damage, skill support, or Cube progress, then spend materials only when the operation helps the active team."
+    title="How does the Hero-dric Cube actually work?"
+    answer="The Cube has 8 functions, but only a few matter before mid-game. Synthesis is your primary XP source (5 XP/material). Alchemy is a trap early on (3 XP/material). Crafting handles targeted gear. Decoration, Engraving, Inscription, Extraction, and Offering are mid-to-late game systems. Do not open every menu and spend everything."
     intentRows={searchIntentRows}
     jumpLinks={jumpLinks}
    />
 
    <BlufBox title="Cube rule">
     <p>
-     <strong>Cube is strongest when it follows a diagnosis.</strong> If the team
-     is timing out, look for damage and item support. If the team dies early,
-     stabilize first. If progress is flat after normal upgrades, Cube and
-     material use become the next serious check.
+     <strong>Synthesis until 15. Save rares until 15. Ignore Alchemy until 20.</strong>
+     That is the shortest path to a Cube that carries your account instead of dragging it.
     </p>
    </BlufBox>
 
-   <section id="cube-operations" className="prose-game">
-    <h2>Cube Operations Explained</h2>
+   <section id="cube-functions" className="prose-game">
+    <h2>Cube's 8 Functions (and When They Matter)</h2>
     <ArticleImage
      src={taskBarHeroImages.material}
-     alt="TBH Task Bar Hero material icon for Cube guide"
-     caption="Cube spending starts with the material. Check what the input is worth before converting it."
+     alt="TBH Cube material types — 121+ materials across 6+ categories"
+     caption="The Hero-dric Cube has 8 functions and 121+ materials. The right question is not 'what can I do?' but 'what should I do right now?'"
     />
     <p>
-     Cube is easy to misuse because several operations look helpful at the same
-     time. Leveling, synthesis, crafting, and alchemy all sound like progress,
-     but they solve different problems. A player who spends everything the
-     moment a menu appears may feel active while making the account harder to
-     steer.
+     The Hero-dric Cube is not one system. It is eight, and they do very different
+     things. A player who opens the Cube menu and sees Synthesis, Alchemy, Crafting,
+     Decoration, Engraving, Inscription, Extraction, and Offering all at once often
+     spends materials on the wrong operation. The result: slow Cube levels, weak
+     gear, and a stalled account.
     </p>
     <p>
-     The better approach is to pick the current account problem first. If a boss
-     is killing the team instantly, a random damage craft may not be the fix. If
-     the team survives but cannot finish, a defensive conversion may not move
-     the wall. If a material has several uses, check the{" "}
-     <a href={taskBarHeroUrls.cube} target="_blank" rel="noreferrer">
-      Cube reference
-     </a>{" "}
-     and{" "}
-     <a href={taskBarHeroUrls.items} target="_blank" rel="noreferrer">
-      item database
-     </a>{" "}
-     before spending it.
+     The fix is simple: ignore 5 of the 8 functions until mid-game. Focus on
+     Synthesis and Crafting. Leave Decoration, Engraving, Inscription, Extraction,
+     and Offering for when you have materials to spare and gear worth enhancing.
     </p>
    </section>
 
@@ -162,15 +143,15 @@ export default function TaskBarHeroCubeGuidePage() {
     <table className="w-full text-sm">
      <thead>
       <tr className="border-b border-border bg-mist">
-       <th className="px-4 py-3 text-left font-semibold text-foreground">Cube action</th>
+       <th className="px-4 py-3 text-left font-semibold text-foreground">Function</th>
        <th className="px-4 py-3 text-left font-semibold text-foreground">What it does</th>
-       <th className="px-4 py-3 text-left font-semibold text-foreground">Use it when</th>
+       <th className="px-4 py-3 text-left font-semibold text-foreground">When to use</th>
       </tr>
      </thead>
      <tbody>
-      {taskBarHeroCubeRows.map(([action, does, when]) => (
-       <tr key={action} className="border-b border-border last:border-0">
-        <td className="px-4 py-3 font-semibold text-foreground">{action}</td>
+      {taskBarHeroCubeRows.map(([func, does, when]) => (
+       <tr key={func} className="border-b border-border last:border-0">
+        <td className="px-4 py-3 font-semibold text-foreground">{func}</td>
         <td className="px-4 py-3 text-muted-foreground">{does}</td>
         <td className="px-4 py-3 text-muted-foreground">{when}</td>
        </tr>
@@ -179,21 +160,23 @@ export default function TaskBarHeroCubeGuidePage() {
     </table>
    </div>
 
+   <CubeEfficiencyTable />
+
    <section id="leveling" className="prose-game">
     <h2>Cube Leveling Route</h2>
     <p>
-     When Cube level falls behind, do not assume the answer is always more
-     farming. First confirm that your current farming route feeds the material
-     or item flow you need. Some players repeat a stage because it is familiar,
-     even after the account has moved to a different bottleneck. A stage can be
-     comfortable and still be inefficient for the current Cube goal.
+     Cube levelling is simple when you know the milestones. Before Cube 15,
+     your only job is to feed Synthesis with Basic Shards. At ~4,500 XP per
+     hour, you reach Cube 15 in about 11 hours of active play. That is where
+     the game changes: XP multipliers kick in retroactively for high-tier
+     materials, so every Stellar Ruby and rare gem you saved starts paying
+     back.
     </p>
     <p>
-     Treat Cube leveling as a loop: identify the wall, check the active heroes,
-     find the relevant material, spend only what supports that plan, then test
-     the same wall again. If nothing changes, stop spending and move to another
-     diagnosis. The account may need skill levels, gear quality, or team role
-     changes instead.
+     If you burned your rare materials before 15, you lose about 40 hours of
+     mid-game grind. That is not an exaggeration — the math is straightforward.
+     A saved Stellar Ruby used after 15 generates thousands more XP than the
+     same Ruby used at level 5.
     </p>
    </section>
 
@@ -201,58 +184,76 @@ export default function TaskBarHeroCubeGuidePage() {
     <table className="w-full text-sm">
      <thead>
       <tr className="border-b border-border bg-mist">
-       <th className="px-4 py-3 text-left font-semibold text-foreground">Step</th>
-       <th className="px-4 py-3 text-left font-semibold text-foreground">Do this</th>
-       <th className="px-4 py-3 text-left font-semibold text-foreground">Why</th>
+       <th className="px-4 py-3 text-left font-semibold text-foreground">Cube level</th>
+       <th className="px-4 py-3 text-left font-semibold text-foreground">Strategy</th>
+       <th className="px-4 py-3 text-left font-semibold text-foreground">Milestone</th>
       </tr>
      </thead>
      <tbody>
-      {levelingRows.map(([step, action, why]) => (
-       <tr key={step} className="border-b border-border last:border-0">
-        <td className="px-4 py-3 font-semibold text-foreground">{step}</td>
-        <td className="px-4 py-3 text-muted-foreground">{action}</td>
-        <td className="px-4 py-3 text-muted-foreground">{why}</td>
+      {taskBarHeroCubeLevels.map(({ level, strategy, milestone }) => (
+       <tr key={level} className="border-b border-border last:border-0">
+        <td className="px-4 py-3 font-semibold text-foreground">{level}</td>
+        <td className="px-4 py-3 text-muted-foreground">{strategy}</td>
+        <td className="px-4 py-3 text-muted-foreground">{milestone}</td>
        </tr>
       ))}
      </tbody>
     </table>
    </div>
 
-   <section id="spend-or-hold" className="prose-game">
-    <h2>When to Spend Materials and When to Hold</h2>
+   <section id="operation-guide" className="prose-game">
+    <h2>Operation Guide: What Each Function Is Actually For</h2>
     <ArticleImage
      src={taskBarHeroImages.sword}
-     alt="TBH Task Bar Hero gear icon for Cube material choices"
-     caption="A material spend should make an active hero stronger for a current stage wall, not just create a new item."
+     alt="TBH gear and material management — what to craft and when"
+     caption="Crafting paths follow a material ladder: Wood → Copper → Bronze → Iron → Silver → Gold → Stardust/Void Iron → Bloodstone/Thunderstone. Know where your materials sit on that ladder before spending."
     />
+
+    <h3>Synthesis — Your Main XP Engine</h3>
     <p>
-     Spend materials when the result is clear, immediate, and connected to the
-     team pushing stages. Hold materials when the output is uncertain, the item
-     belongs to a hero you are not using, or the next wall has not been
-     diagnosed. This is especially important for players jumping between
-     beginner advice, build advice, and market advice at the same time.
+     Synthesis combines materials into permanent upgrade cores. The simplest
+     recipe: 10x Basic Shard = Tier 1 Core = 50 XP (5 XP per material). This
+     is the most efficient XP source in the game. Keep at least 100 basic gems
+     in your inventory at all times so the offline crafting queue does not stall
+     when it runs out of material. Synthesis stays relevant even after Cube 15.
     </p>
+
+    <h3>Crafting — Targeted Gear Upgrades</h3>
     <p>
-     If you are unsure, open the{" "}
-     <a href={taskBarHeroUrls.tools} target="_blank" rel="noreferrer">
-      Wiki tools page
-     </a>{" "}
-     and look up the target item, material, or drop route. Then return to your
-     current guide path. A database tells you what exists; the next step is
-      whether it solves the current problem.
+     Crafting uses base materials along a known rarity ladder: wood, stone,
+     leather → copper nuggets → bronze ingots → iron ingots → silver ingots →
+     gold ingots → stardust ingots / void iron → bloodstone / thunderstone.
+     Each tier unlocks stronger equipment. Craft when you know exactly what
+     the active hero needs. Do not craft for bench heroes.
+    </p>
+
+    <h3>Alchemy — Delay Until 20</h3>
+    <p>
+     Alchemy converts materials into temporary consumables (potions). It gives
+     3 XP per material vs Synthesis at 5 XP. That 40% gap compounds over
+     hundreds of materials. At Cube 20, start with a 80/20 split (Synthesis/
+     Alchemy). Never go above 20% Alchemy — the XP loss is not worth the
+     temporary potion effects.
+    </p>
+
+    <h3>Decoration, Engraving, Inscription — Mid-to-Late Game</h3>
+    <p>
+     Decoration: 36 gem types (ruby, sapphire, topaz, emerald, amethyst) go
+     into gear sockets for stat bonuses. Engraving: 33 monster materials
+     (goblin hide, skeleton bone, slime jelly) inscribe rune-like effects.
+     Inscription: 10 scroll tiers from Common to Cosmic apply special affixes.
+     None of these matter before you have good gear to socket. Do not rush them.
     </p>
    </section>
 
-   <CubeSpendChart />
-
    <section id="waste-cases" className="prose-game">
-    <h2>Common Cube Waste Cases</h2>
+    <h2>Common Cube Mistakes</h2>
     <p>
-     Cube mistakes usually come from impatience, not from a lack of buttons.
-     The player sees a material pile, a craft option, or a synthesis path and
-     wants to turn it into progress immediately. That can work when the target
-     is obvious. It can also consume the exact input needed for the next real
-     upgrade.
+     Cube mistakes usually come from opening every menu and trying everything
+     at once. The player sees materials piling up, a craft option, a synthesis
+     path, and an alchemy recipe — and wants to turn them into progress
+     immediately. Sometimes that works. Usually it consumes the exact input
+     needed for the next real upgrade.
     </p>
    </section>
 
@@ -260,7 +261,7 @@ export default function TaskBarHeroCubeGuidePage() {
     <table className="w-full text-sm">
      <thead>
       <tr className="border-b border-border bg-mist">
-       <th className="px-4 py-3 text-left font-semibold text-foreground">Waste case</th>
+       <th className="px-4 py-3 text-left font-semibold text-foreground">Mistake</th>
        <th className="px-4 py-3 text-left font-semibold text-foreground">Better rule</th>
       </tr>
      </thead>
@@ -285,8 +286,7 @@ export default function TaskBarHeroCubeGuidePage() {
      . If the issue is which hero deserves materials, read{" "}
      <Link href="/games/task-bar-hero/heroes-builds">heroes and builds</Link>.
      If you are still in the first hour, return to the{" "}
-     <Link href="/games/task-bar-hero/beginner-guide">beginner guide</Link> and
-     tighten the basic upgrade loop before spending deeper.
+     <Link href="/games/task-bar-hero/beginner-guide">beginner guide</Link>.
     </p>
    </section>
   </TaskBarHeroArticle>
