@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArticleImage } from "@/components/article-media";
+import { ArticleIcon, ArticleImage } from "@/components/article-media";
 import { BlufBox, SearchAnswerPanel } from "@/components/guide-blocks";
 import { CubeEfficiencyTable } from "@/components/task-bar-hero-charts";
 import { TaskBarHeroArticle } from "@/components/task-bar-hero-article";
@@ -120,7 +120,7 @@ export default function TaskBarHeroCubeGuidePage() {
 
    <section id="cube-functions" className="prose-game">
     <h2>Cube's 8 Functions (and When They Matter)</h2>
-    <ArticleImage
+    <ArticleIcon
      src={taskBarHeroImages.material}
      alt="TBH Cube material types — 121+ materials across 6+ categories"
      caption="The Hero-dric Cube has 8 functions and 121+ materials. The right question is not 'what can I do?' but 'what should I do right now?'"
@@ -203,7 +203,7 @@ export default function TaskBarHeroCubeGuidePage() {
 
    <section id="operation-guide" className="prose-game">
     <h2>Operation Guide: What Each Function Is Actually For</h2>
-    <ArticleImage
+    <ArticleIcon
      src={taskBarHeroImages.sword}
      alt="TBH gear and material management — what to craft and when"
      caption="Crafting paths follow a material ladder: Wood → Copper → Bronze → Iron → Silver → Gold → Stardust/Void Iron → Bloodstone/Thunderstone. Know where your materials sit on that ladder before spending."

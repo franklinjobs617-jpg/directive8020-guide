@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArticleImage } from "@/components/article-media";
+import { ArticleIcon, ArticleImage } from "@/components/article-media";
 import { ActionTable, BlufBox, SearchAnswerPanel } from "@/components/guide-blocks";
 import { TaskBarHeroArticle } from "@/components/task-bar-hero-article";
 import {
@@ -237,7 +237,7 @@ export default function TaskBarHeroBeginnerGuidePage() {
 
    <section id="boxes" className="prose-game">
     <h2>Boxes, Items, and Drop Lookup</h2>
-    <ArticleImage
+    <ArticleIcon
      src={taskBarHeroImages.box}
      alt="TBH item box icon — box management for beginners"
      caption="Boxes are progression fuel, but the value comes from comparing what the item does for your active team, not from opening more boxes."

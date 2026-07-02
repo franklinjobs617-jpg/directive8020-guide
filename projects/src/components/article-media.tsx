@@ -7,6 +7,12 @@ interface ArticleImageProps {
  caption: string;
 }
 
+interface ArticleIconProps {
+ src: string;
+ alt: string;
+ caption: string;
+}
+
 interface VideoEmbedProps {
  videoId: string;
  title: string;
@@ -27,6 +33,27 @@ export function ArticleImage({ src, alt, caption }: ArticleImageProps) {
  />
  </div>
  <figcaption className="border-t border-border bg-white px-4 py-3 text-xs leading-relaxed text-muted-foreground">
+ {caption}
+ </figcaption>
+ </figure>
+ );
+}
+
+/** For small icons (e.g. 64x64 or 16x16) that should not be stretched to 16:9. */
+export function ArticleIcon({ src, alt, caption }: ArticleIconProps) {
+ return (
+ <figure className="my-8 rounded-lg border border-border bg-white p-4">
+ <div className="flex items-center justify-center py-4">
+ <Image
+ src={src}
+ alt={alt}
+ width={64}
+ height={64}
+ className="object-contain"
+ quality={85}
+ />
+ </div>
+ <figcaption className="border-t border-border pt-3 text-xs leading-relaxed text-muted-foreground">
  {caption}
  </figcaption>
  </figure>
