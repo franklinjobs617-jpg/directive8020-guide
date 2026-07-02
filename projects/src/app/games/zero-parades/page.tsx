@@ -80,12 +80,12 @@ const faqs = [
  {
  question: 'Does ZERO PARADES have a time limit?',
  answer:
- 'Some quests and assignments use time-sensitive mechanics. The game does not always make these limits explicit, so save before major conversations and pay attention to case urgency in the dialogue. Community reports suggest certain events advance when you rest or move between areas.',
+ 'Some quests and assignments use time-sensitive mechanics. The game does not always make these limits explicit, so save before major conversations, watch case urgency in dialogue, and be careful before resting or moving between areas.',
  },
  {
  question: 'Are there bugs in ZERO PARADES?',
  answer:
- 'Launch-day player reports mention technical issues including crashes, progression blockers, and UI glitches. ZA/UM is likely to patch these during the post-launch window. Check the Steam Community hub and recent patch notes before starting a long session.',
+ 'Check recent patch notes and player threads before starting a long session. If you are worried about crashes, progression blockers, or UI issues, make a manual save before major assignments and keep your first session short enough to test stability.',
  },
  {
  question: 'How does crafting work in ZERO PARADES?',
@@ -285,10 +285,10 @@ export default function ZeroParadesHubPage() {
  </div>
 
  <section className="prose-game">
- <h2>Launch-Day Player Questions</h2>
+ <h2>Platform and First-Run Checks</h2>
  <ArticleImage
  src={zeroParadesImages.screenshot3}
- alt="ZERO PARADES launch-day player questions screenshot"
+ alt="ZERO PARADES platform and first-run checks screenshot"
  caption="Check PC availability, PS5 timing, price, languages, controller support, and Steam Deck setup before you commit to a platform."
  />
  </section>

@@ -185,10 +185,10 @@ export default function ChoicesConsequencesPage() {
  Directive 8020: All Choices &amp; Consequences
  </h1>
  <p className="text-lg text-muted-foreground leading-relaxed mb-8">
- Directive 8020 choices are dangerous because the obvious human answer
- may be the wrong survival answer. This guide explains how to identify
- major decisions, what consequences to track, and how to use the Story
- Tree to build a complete decision map.
+ Directive 8020 choices are dangerous because a kind answer can still
+ be the wrong survival answer. Use this page to separate harmless
+ dialogue from decisions that change deaths, trust, mimic exposure,
+ Story Tree branches, and endings.
  </p>
 
  <SearchAnswerPanel
@@ -212,12 +212,10 @@ export default function ChoicesConsequencesPage() {
  <div className="prose-game">
  <h2 id="choice-logic">Directive 8020 Choices and Consequences: What Matters?</h2>
  <p>
- This is the biggest post-launch community question. The practical
- answer is yes, but with a caveat: Directive 8020 has both small
- flavor choices and route-changing choices. A short conversation
- option may only adjust tone, while a Destiny, trust check, failed
- QTE, stealth result, or separation choice can change deaths,
- relationships, locked branches, and endings.
+ Yes, choices matter, but not every line has the same weight. A short
+ conversation option may only change tone. A Destiny, trust check,
+ failed QTE, stealth result, evidence choice, or separation decision
+ can change deaths, relationships, locked branches, and endings.
  </p>
  </div>
 
@@ -237,11 +235,11 @@ export default function ChoicesConsequencesPage() {
  <SourceCheckTable title="High-Intent Choice Source Check" rows={sourceRows} />
 
  <div className="prose-game">
- <h2 id="choice-examples">Concrete Choice Examples from the Full-Game Transcript</h2>
+ <h2 id="choice-examples">Concrete Choice Examples to Track</h2>
  <p>
- The transcript gives useful route examples without needing to copy
- dialogue. Use these as categories when you decide whether a choice
- is flavor text, a trust branch, a rescue branch, or an ending
+ Use these examples as categories while you play. The important part is
+ not the exact line of dialogue; it is whether the scene creates a
+ trust branch, a rescue branch, a survival check, or an ending
  condition.
  </p>
  </div>
@@ -274,8 +272,10 @@ export default function ChoicesConsequencesPage() {
  <p>
  There is no universal good dialogue button, but the safest route
  pattern is consistent: gather evidence, avoid needless isolation,
- verify identities, and keep relationships functional before the
- finale. Use these examples when the game asks for a fast decision.
+ verify identities, keep relationships functional, and preserve a
+ clean save before the finale. When the game asks for a fast decision,
+ choose the option that keeps more witnesses alive and more evidence
+ available.
  </p>
  </div>
 
@@ -376,9 +376,9 @@ export default function ChoicesConsequencesPage() {
 
  <h2 id="choice-mapping">Choice Mapping Method</h2>
  <p>
- To build a real all-choices guide, do not replay randomly. Change
- one variable at a time. If you change a trust choice and also fail a
- QTE, you will not know which action caused the new outcome.
+ Do not replay randomly when you are checking consequences. Change one
+ variable at a time. If you change a trust choice and also fail a QTE,
+ you will not know which action caused the new outcome.
  </p>
  <ol>
  <li>Play a scene once and record the choice, timer, characters present, and immediate result.</li>

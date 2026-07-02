@@ -45,7 +45,7 @@ export const zeroParadesVideos = [
  id: 'p540bCD_Hac',
  title: 'ZERO PARADES - Release Date Trailer',
  caption:
- 'Official release date trailer announcing the May 21 PC launch window.',
+ 'Official release date trailer announcing the May 21 PC release.',
  },
 ];
 
@@ -97,7 +97,7 @@ export const zeroParadesBeginnerRows = [
 
 export const zeroParadesWorthItRows = [
  ['Buy now if', 'You want a ZA/UM narrative RPG with Disco Elysium lineage, espionage, skill checks, failure states, and dense political weirdness.'],
- ['Wait if', 'You need the PS5 version, more player reviews, regional price confirmation, or proof that launch bugs are resolved.'],
+ ['Wait if', 'You need the PS5 version, more player reviews, regional price confirmation, or a steadier patch history before starting.'],
  ['Best fit', 'Players who enjoy reading, investigation, internal character systems, and consequence-heavy dialogue.'],
  ['Poor fit', 'Players looking for action combat, co-op, loot grinding, or a short linear spy thriller.'],
  ['Price check', 'The US price is $39.99; check local Steam, Epic, or GOG pricing before buying.'],
@@ -107,7 +107,7 @@ export const zeroParadesLaunchCheckRows = [
  ['PC availability', 'May 21, 2026 PC launch is announced for Steam, Epic Games Store, and GOG; check the live buy button in your region.'],
  ['PS5 timing', 'PS5 is announced for 2026, but no exact PS5 launch date is public yet.'],
  ['Price', 'The US price is $39.99; local storefront prices can differ.'],
- ['Known issues', 'Launch-day reports include crashes, progression blockers, and UI glitches. Check Steam Community and recent patch notes before a long session.'],
+ ['Known issues', 'Check recent patch notes and player threads before a long session if crashes, progression blockers, or UI glitches would ruin your run.'],
  ['Language', 'English has full audio; launch text support includes German, Russian, Simplified Chinese, and Spanish - Latin America.'],
  ['Controller', 'Steam lists partial controller support, so test controls and UI readability early.'],
  ['Steam Deck', 'Steam Deck Verified; test text size, menus, and cloud saves before a long session.'],
@@ -147,17 +147,17 @@ export const zeroParadesLengthRows = [
 ];
 
 export const zeroParadesTimeLimitRows = [
- ['Resting', 'Some events advance when Hershel rests; save before sleeping', 'Community reports'],
- ['Area transitions', 'Moving between zones can trigger time-sensitive events', 'Community reports'],
+ ['Resting', 'Some events may advance when Hershel rests; save before sleeping', 'Player route checks'],
+ ['Area transitions', 'Moving between zones can trigger time-sensitive events', 'Player route checks'],
  ['Assignment urgency', 'Main cases may have implicit deadlines expressed through dialogue', 'Steam description'],
- ['Dialogue consequences', 'Certain conversations lock out options if not completed in sequence', 'Community reports'],
+ ['Dialogue consequences', 'Certain conversations can lock out options if not completed in sequence', 'Player route checks'],
 ];
 
 export const zeroParadesControllerRows = [
  ['Movement', 'Works with controller; standard stick movement', 'Verified'],
- ['Dialogue navigation', 'Controller can navigate dialogue trees; test responsiveness', 'Community reports'],
+ ['Dialogue navigation', 'Controller can navigate dialogue trees; test responsiveness', 'Player comfort check'],
  ['Skill menus', 'Partial support; some UI elements may require mouse precision', 'Steam listing'],
- ['Inventory / Journal', 'May feel less precise than mouse; test before committing', 'Community reports'],
+ ['Inventory / Journal', 'May feel less precise than mouse; test before committing', 'Player comfort check'],
  ['Combat / encounters', 'Controller works for basic interactions; complex checks may favor mouse', 'Steam listing'],
  ['Text readability', 'Adjustable text size listed on Steam; important for controller on TV', 'Steam listing'],
 ];

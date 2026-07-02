@@ -144,9 +144,10 @@ export default function CharactersPage() {
  <strong className="text-foreground"> Laura Eisele</strong>,
  <strong className="text-foreground"> Dr. Samantha Cooper</strong>,
  and <strong className="text-foreground">Josef Cernan</strong>. This
- guide gives the character list first, then explains cast status,
- actor credits, face model cautions, survival roles, Movie Night
- assignment, and mimic suspicion clues.
+ page puts the playable crew first, then separates confirmed cast
+ details from face model claims that do not have a credit. Use it while
+ tracking survival roles, Movie Night assignments, and mimic suspicion
+ clues.
  </p>
  <p className="mb-8 text-sm font-medium text-muted-foreground">
  Last updated: June 18, 2026.
@@ -154,7 +155,7 @@ export default function CharactersPage() {
 
  <SearchAnswerPanel
  title="Who are the main Directive 8020 characters?"
- answer="Directive 8020 centers on five playable Cassiopeia crew members: Brianna Young, Nolan Stafford, Laura Eisele, Dr. Samantha Cooper, and Josef Cernan. Lashana Lynch plays Brianna Young, Danny Sapani is listed here for Nolan Stafford, and uncredited face model claims should not be treated as fact."
+ answer="Directive 8020 centers on five playable Cassiopeia crew members: Brianna Young, Nolan Stafford, Laura Eisele, Dr. Samantha Cooper, and Josef Cernan. Treat credited cast as character fact, but do not treat lookalike face model claims as confirmed unless an official credit backs them."
  intentRows={searchIntentRows}
  jumpLinks={jumpLinks}
  />
@@ -197,8 +198,9 @@ export default function CharactersPage() {
  <p>
  Start with the practical facts: who the main character is, which
  crew members are playable, which actor names are listed, whether
- face model information is credited, and how each character matters
- in a survival route. For a deeper role-by-role source check,
+ face model information is credited, and how each character can affect
+ survival, trust, Movie Night assignments, and ending cleanup. For a
+ deeper role-by-role cast page,
  use the{' '}
  <Link href="/directive-8020-cast-actors" className="text-foreground hover:underline">
  Directive 8020 cast and actors
@@ -239,9 +241,10 @@ export default function CharactersPage() {
  <p>
  <strong>Danny Sapani</strong> is listed here for Nolan Stafford, the
  Cassiopeia commander. For Eisele, Cooper, and Cernan, this page keeps
- the actor field unnamed until a clear role credit is available. That
- is especially important for face model searches, because visual
- similarity is not the same as a credited performer or model.
+ the actor field unnamed until a clear role credit is available.
+ Visual similarity is not enough for face model searches: a character
+ looking like someone does not make that person a credited performer,
+ scan model, or likeness source.
  </p>
  <p>
  The wider cast is the crew of the <strong>Cassiopeia</strong>, a

@@ -90,7 +90,7 @@ export default function FearsToFathomCoopGuidePage() {
    <section className="mt-8">
     <h2 className="text-xl font-bold text-foreground">How Co-op Works</h2>
     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-     Treat Scratch Creek like a two-person horror scenario. Communication matters because both players move through the same episode, coordinate objectives, and recover from scares or disconnects together. If you want the normal solo Fears to Fathom rhythm, pick another episode first.
+     Treat Scratch Creek as a two-player episode from the start. One player cannot fill the second role later, and there is no AI partner to cover missing objectives. If you want the usual solo Fears to Fathom rhythm, play another episode first and come back when you have a partner ready.
     </p>
    </section>
 
@@ -124,7 +124,7 @@ export default function FearsToFathomCoopGuidePage() {
    <section className="mt-8">
     <h2 className="text-xl font-bold text-foreground">How to Find a Partner</h2>
     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-     Since the game requires a partner, finding someone to play with is the biggest barrier. Use this order:
+     The hardest part is not the controls; it is finding someone who can stay through the whole session. Use this order:
     </p>
     <div className="mt-4 overflow-x-auto rounded-lg border border-border bg-white">
      <table className="w-full text-sm">
@@ -176,7 +176,7 @@ export default function FearsToFathomCoopGuidePage() {
    </section>
 
    <p className="mt-10 text-xs text-muted-foreground">
-    Source note: This guide uses official store information and current player question patterns. Recheck after major patches or platform updates.
+    Recheck the Steam page after major patches or platform updates if you are buying specifically for crossplay, matchmaking, or a different co-op setup.
    </p>
   </main>
   </>

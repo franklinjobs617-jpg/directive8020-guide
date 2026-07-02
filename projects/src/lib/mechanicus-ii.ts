@@ -73,7 +73,7 @@ export const mechanicusIIPlayerQuestionRows = [
 export const mechanicusIIIntentRows = [
  ['Release, price, and platforms', 'Mechanicus II is out now on Steam PC, PS5, and Xbox Series X|S; use the release page for current store facts.', '/games/mechanicus-ii/release-date'],
  ['Walkthrough and stuck objectives', 'Use the walkthrough for green console checks, marked tile logic, leader safety, and mission-flow troubleshooting.', '/games/mechanicus-ii/walkthrough'],
- ['Units, factions, and builds', 'Use the factions page for role-based unit guidance and launch-window build rules without pretending the meta is solved.', '/games/mechanicus-ii/factions'],
+ ['Units, factions, and builds', 'Use the factions page for role-based unit guidance without pretending one solved meta fits every patch, difficulty, and campaign side.', '/games/mechanicus-ii/factions'],
  ['Steam Deck and performance', 'Use the performance page before a Deck-first purchase because Steam Deck is unsupported at launch.', '/games/mechanicus-ii/steam-deck-performance'],
  ['Buy now or wait', 'Use the worth-it page if Mixed Steam reviews, platform performance, or comparison with Mechanicus 1 affect your decision.', '/games/mechanicus-ii/is-it-worth-it'],
 ];
@@ -113,7 +113,7 @@ export const mechanicusIIWalkthroughProblemRows = [
  ['The squad is wiped quickly', 'Stop trading damage from open ground; use cover first, then spend faction resources after checking enemy activation order.'],
  ['A mission feels bugged', 'Before restarting, test interactable range, line of sight, camera angle, remaining enemies, and whether the map expects a specific unit.'],
  ['The campaign route feels unclear', 'Stay on one faction long enough to learn its resource loop, then use mission failure notes to identify the real bottleneck.'],
- ['A build guide conflicts with your run', 'Trust repeatable role value over launch-window tier claims until completed campaign data is more stable.'],
+ ['A build guide conflicts with your run', 'Trust repeatable role value over tier claims that do not match your patch, difficulty, or campaign side.'],
 ];
 
 export const mechanicusIIFactionRows = [
@@ -121,7 +121,7 @@ export const mechanicusIIFactionRows = [
  ['Necrons', 'Best first fit for players who want ancient machine-legion fantasy, awakening tomb-world pressure, and a campaign from the other side of the war.'],
  ['Leagues of Votann', 'Public preview coverage says the Leagues of Votann appear in the story, but they are not presented as a playable third campaign faction.'],
  ['Resource identity', 'Adeptus Mechanicus players should expect Cognition decisions; Necron players should expect Dominion decisions.'],
- ['Not yet safe to claim', 'Final best units, optimal army compositions, and hardest-mission counters still need hands-on campaign verification.'],
+ ['Do not overstate yet', 'Final best units, optimal army compositions, and hardest-mission counters should match patch version, difficulty, and campaign side.'],
 ];
 
 export const mechanicusIIFactionComparisonRows = [
@@ -304,12 +304,12 @@ export const m2FactionsActionRows = [
   {
     step: '1. Read the campaign fantasy before the meta',
     doThis: 'Pick Adeptus Mechanicus for tech-priest Cognition decisions or Necrons for Dominion-based pressure plays. Stay with the side for at least several missions before judging the campaign.',
-    why: 'Both factions have distinct resource systems. Final best-faction claims are not safe during launch week, and learning one side first prevents shallow first impressions.',
+    why: 'Both factions have distinct resource systems. Learning one side first prevents shallow first impressions and makes later faction comparisons more useful.',
   },
   {
     step: '2. Judge units by role, not damage screenshots',
     doThis: 'Evaluate each unit by leader safety, objective interaction, resource contribution, durability, and repeatable mission value before chasing tier-list rankings.',
-    why: 'Launch-window tier claims depend on patch version, difficulty, and campaign side. Role-based evaluation survives balance updates better than single-number rankings.',
+    why: 'Tier claims depend on patch version, difficulty, and campaign side. Role-based evaluation survives balance updates better than single-number rankings.',
   },
   {
     step: '3. Track Leagues of Votann as story, not campaign',
@@ -332,9 +332,9 @@ export const m2FactionsStatusItems = [
   { label: 'Playable campaigns', value: 'Adeptus Mechanicus and Necrons each have a distinct campaign per Steam store copy.', status: 'verified' as const },
   { label: 'Adeptus leader', value: 'Steam names Magos Dominus Faustinius as the Adeptus Mechanicus commander.', status: 'verified' as const },
   { label: 'Necron leader', value: 'Steam names Vargard Nefershah as the Necron campaign commander.', status: 'verified' as const },
-  { label: 'Leagues of Votann', value: 'Preview coverage says Votann appear in the story, not as a third playable campaign.', status: 'working' as const },
-  { label: 'Final best-faction call', value: 'Not safe during launch week. Wait for completed campaign data and balance patches.', status: 'needs-check' as const },
-  { label: 'Space Marine allies', value: 'Show up in battle context per previews. Do not treat as a third army.', status: 'working' as const },
+  { label: 'Leagues of Votann', value: 'Preview coverage says Votann appear in the story, not as a third playable campaign.', status: 'needs-check' as const },
+  { label: 'Best-faction call', value: 'Pick by resource loop and leader style; exact strength depends on patch version, difficulty, and campaign side.', status: 'needs-check' as const },
+  { label: 'Space Marine allies', value: 'Show up in battle context per previews. Do not treat as a third army.', status: 'needs-check' as const },
 ];
 
 export const m2FactionsSourceRows = [
@@ -355,7 +355,7 @@ export const m2FactionsSourceRows = [
   {
     claim: 'Leagues of Votann appear in the story, not as a playable third campaign',
     source: 'Epic Games Store preview',
-    status: 'working' as const,
+    status: 'needs-check' as const,
     href: 'https://store.epicgames.com/en-US/blog/warhammer-40000-mechanicus-2-preview-leagues-of-votann',
     note: 'Use as story and lore context, not as a campaign choice.',
   },
@@ -378,13 +378,13 @@ export const m2FactionsSourceRows = [
 export const m2FactionsSearchIntent = [
   {
     query: 'Mechanicus 2 factions',
-    answer: 'Steam lists two playable campaigns: Adeptus Mechanicus and Necrons. Choose by campaign fantasy and resource identity, not by launch-week tier chatter.',
+    answer: 'Steam lists two playable campaigns: Adeptus Mechanicus and Necrons. Choose by campaign fantasy and resource identity, not by tier chatter.',
     href: '#faction-anchor',
     label: 'Factions',
   },
   {
     query: 'Mechanicus 2 best faction',
-    answer: 'Not safe to call at launch. Pick the side whose resource loop sounds more interesting and learn its economy before judging.',
+    answer: 'Pick the side whose resource loop sounds more interesting and learn its economy before judging strength.',
     href: '#faction-anchor',
     label: 'Best faction',
   },

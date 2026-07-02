@@ -21,7 +21,7 @@ const faqs = [
  {
  question: 'How many endings does Directive 8020 have?',
  answer:
- 'Directive 8020 has five major ending families reported by review coverage, with named finale outcomes and variations such as Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, and Horror.',
+ 'Use five major ending families as the practical route checklist, then track named finale outcomes such as Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, and Horror as variations to test through the Story Tree.',
  },
  {
  question: 'What is the best ending in Directive 8020?',
@@ -46,7 +46,7 @@ const faqs = [
 ];
 
 const fastAnswerRows = [
- ['How many endings?', 'Five major ending families are currently reported, with several named finale outcomes and variations.', 'Low'],
+ ['How many endings?', 'Use five major ending families as the route checklist, then test named finale outcomes and variations.', 'Low'],
  ['Best ending', 'Keep the crew alive, preserve evidence, verify mimic clues, and avoid reckless sacrifice choices.', 'Medium'],
  ['Good ending', 'Aim for a stable crew-and-mission outcome where survivor state and evidence support the finale decision.', 'Medium'],
  ['Secret ending', 'Check Cycle 13, Booster Ring, mimic exposure, and unresolved contamination routes.', 'High'],
@@ -90,7 +90,7 @@ const recoveryRows = [
 ];
 
 const endingCountRows = [
- ['Reported main ending families', '5 substantial endings', 'Reported by launch review coverage; named finale outcomes and variations should be mapped in the Story Tree.'],
+ ['Main ending families', '5 substantial endings', 'Use these as the route checklist, then map named finale outcomes and variations in the Story Tree.'],
  ['Known named outcomes to test', '7+ named outcomes', 'Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, and Horror are the main named outcomes to track.'],
  ['Death scenes', '44 death scenes', 'Useful for endings because dead characters can close or change finale paths.'],
  ['Collectibles', '65 collectibles', '50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets can affect lore and cleanup routes.'],
@@ -98,7 +98,7 @@ const endingCountRows = [
 ];
 
 const endingIntentRows = [
- ['How many endings?', 'Five major ending families are currently reported, with several named finale outcomes and variations.'],
+ ['How many endings?', 'Use five major ending families as the route checklist, then test named finale outcomes and variations.'],
  ['Best ending', 'Build a clean survivor route first, preserve evidence, verify mimic clues, and avoid sacrifice choices until the finale logic is clear.'],
  ['Good ending', 'Treat a good ending as a stable crew-and-mission outcome, not simply the last dialogue option. Survivor state and evidence matter.'],
  ['Secret ending', 'Use hidden or ambiguous routes such as Cycle 13, Booster Ring, mimic exposure, and unresolved contamination as the main secret-ending checks.'],
@@ -123,23 +123,23 @@ const transcriptEndingRows = [
 
 const sourceRows = [
  {
- claim: 'Directive 8020 has 5 reported substantial ending families plus named finale outcomes and variations.',
+ claim: 'Directive 8020 endings are easiest to track as five major route families plus named finale variations.',
  source: 'Destructoid review and endings coverage',
  status: 'verified' as const,
  href: 'https://www.destructoid.com/directive-8020-endings-guide-all-destinies-choices-and-variations/',
- note: 'Use this row when you need the reported ending count and the most common named finale outcomes.',
+ note: 'Use this when you need a practical ending checklist before testing exact Story Tree variables.',
  },
  {
  claim: 'Death spiral is a special ending concept, not a normal all-deaths checklist item.',
  source: 'PSU preview + death-route discussion',
- status: 'working' as const,
+ status: 'needs-check' as const,
  href: 'https://www.psu.com/news/directive-8020-hands-on-preview/',
  note: 'Treat Death Spiral as a special route concept until the trigger conditions are clearly mapped.',
  },
  {
  claim: 'Distress call or warning is a finale decision topic.',
  source: 'Full-game transcript route notes',
- status: 'working' as const,
+ status: 'needs-check' as const,
  href: '/directive-8020-choices-consequences',
  note: 'Use as a finale condition category until exact ending outcomes are confirmed.',
  },
@@ -155,7 +155,7 @@ const endingRouteRows = [
 const searchIntentRows = [
  {
  query: 'How many endings does Directive 8020 have?',
- answer: 'Current launch coverage reports five major ending families, with several named finale outcomes and route variants.',
+ answer: 'Use five major ending families as the route checklist, then test named finale outcomes and route variants.',
  href: '#ending-count',
  label: 'Low spoiler',
  },
@@ -218,7 +218,7 @@ export default function AllEndingsPage() {
  Directive 8020 All Endings: Best, Secret and Death Spiral
  </h1>
  <p className="text-lg text-muted-foreground leading-relaxed mb-8">
- Directive 8020 has <strong className="text-foreground">5 reported
+ Directive 8020 is easiest to map through <strong className="text-foreground">5
  major ending families</strong>, with named finale outcomes players
  search for including <strong className="text-foreground">Homeward
  Bound</strong>, <strong className="text-foreground">Docked</strong>,
@@ -240,12 +240,11 @@ export default function AllEndingsPage() {
 
  <BlufBox>
  <p>
- <strong>Short answer:</strong> launch review coverage reports
- <strong> five major ending families</strong> in Directive 8020,
- while ending guides and player discussions surface named outcomes such
- as Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not
- Alone, and Horror. Start from one clean completed route, then branch
- from late Turning Points to test survivor count, mission choices,
+ <strong>Short answer:</strong> organize Directive 8020 endings around
+ <strong> five major route families</strong>, then test named outcomes
+ such as Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not
+ Alone, and Horror from late Turning Points. Start with one clean
+ completed route, then change survivor count, mission choices,
  evidence, Booster Ring state, and mimic identification one variable
  at a time.
  </p>
@@ -277,10 +276,10 @@ export default function AllEndingsPage() {
 
  <StatusPanel
  items={[
- { label: 'Reported ending count', value: 'Review coverage reports 5 major ending families.', status: 'verified' },
- { label: 'Ending names', value: 'Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, and Horror are the key named outcomes to test.', status: 'working' },
+ { label: 'Ending route count', value: 'Use 5 major ending families as the route checklist.', status: 'verified' },
+ { label: 'Ending names', value: 'Homeward Bound, Docked, Mask Off, Hitchhiker, Massacre, Not Alone, and Horror are the key named outcomes to test.', status: 'needs-check' },
  { label: 'Ending method', value: 'Story Tree, Turning Points, survivor state, and evidence are the core route-tracking pillars.', status: 'verified' },
- { label: 'Route table', value: 'Best, bad, worst, hidden, Booster Ring, and mimic-exposure routes should be filled from controlled branch testing.', status: 'working' },
+ { label: 'Route table', value: 'Best, bad, worst, hidden, Booster Ring, and mimic-exposure routes should be filled from controlled branch testing.', status: 'needs-check' },
  ]}
  />
 
@@ -289,7 +288,7 @@ export default function AllEndingsPage() {
  How Many Endings?
  </p>
  <p className="text-sm text-muted-foreground leading-relaxed">
- Directive 8020 is currently reported to have <strong className="text-foreground">5
+ Directive 8020 is cleanest to organize around <strong className="text-foreground">5
  major ending families</strong>. Treat Homeward Bound, Docked, Mask
  Off, Hitchhiker, Massacre, Not Alone, and Horror as the named finale
  outcomes to test, then use the Story Tree to verify hidden variants
@@ -316,7 +315,7 @@ export default function AllEndingsPage() {
  </table>
  </div>
 
- <SourceCheckTable title="All Endings Source Notes" rows={sourceRows} />
+ <SourceCheckTable title="All Endings Reference Check" rows={sourceRows} />
 
  <div className="prose-game">
  <h2 id="known-endings">All Known Ending Names and What to Test</h2>
@@ -400,8 +399,8 @@ export default function AllEndingsPage() {
  <h2 id="ending-count">Ending Count and Completion Facts</h2>
  <p>
  The key completion numbers help players understand the scale of the
- ending hunt. They also keep quick references precise: five reported main
- endings, forty-four death scenes, sixty-five collectibles, and eight
+ ending hunt. They also keep quick references precise: five main
+ ending families to track, forty-four death scenes, sixty-five collectibles, and eight
  episodes to track.
  </p>
  </div>

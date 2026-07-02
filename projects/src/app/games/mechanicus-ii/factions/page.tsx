@@ -86,15 +86,16 @@ export default function MechanicusIIFactionsPage() {
  <p>
  <strong>Mechanicus 2 lets players experience both the Adeptus
  Mechanicus and the Necrons through distinct campaigns.</strong> That
- is the central faction answer. The unsafe claim is calling one side
- the best before enough campaign data, difficulty reports, and balance
- updates exist.
+ is the central faction answer. The better first question is not
+ which side wins a tier list, but which resource loop you want to
+ learn first: Cognition for Adeptus Mechanicus or Dominion pressure
+ for Necrons.
  </p>
  </BlufBox>
 
  <SearchAnswerPanel
  title="Mechanicus II Factions Quick Answer"
- answer="Two playable campaigns: Adeptus Mechanicus led by Magos Dominus Faustinius and Necrons led by Vargard Nefershah. The Leagues of Votann appear in the story, not as a third playable campaign. Final best-faction claims are not safe during launch week."
+ answer="Two playable campaigns: Adeptus Mechanicus led by Magos Dominus Faustinius and Necrons led by Vargard Nefershah. The Leagues of Votann appear in the story, not as a third playable campaign. Pick your first side by resource identity, leader style, and how much new rules pressure you want."
  intentRows={m2FactionsSearchIntent}
  jumpLinks={m2FactionsJumpLinks}
  />
@@ -174,13 +175,13 @@ export default function MechanicusIIFactionsPage() {
  <ArticleImage
  src={mechanicusIIImages.screenshot3}
  alt="Warhammer 40,000 Mechanicus II units and builds image"
- caption="Early unit value should be judged by battlefield role, faction resource pressure, and campaign consistency, not only launch-week damage numbers."
+ caption="Unit value should be judged by battlefield role, faction resource pressure, and campaign consistency, not only damage numbers."
  />
  <p>
- Unit and build questions are already common, but final best-unit
- claims are still risky during the launch window. Use the table below
- to evaluate units by role and repeatable value while more complete
- campaign data develops.
+ Best-unit questions are useful only when they include the job a unit
+ needs to do. Use the table below to judge units by role, resource
+ stability, leader protection, objective pressure, and whether the
+ same value repeats across missions.
  </p>
  </section>
 

@@ -62,7 +62,7 @@ const patchRows = [
  ['Uralon rework', 'Party and enemy assumptions around Uralon can shift.', 'Check whether a build guide was updated for 1.6 before copying it.'],
  ['Pasqal / Forge World changes', 'Tech-focused and origin-based choices may have different value.', 'Delay irreversible build decisions until your current patch is clear.'],
  ['Talent UI quality-of-life', 'Build planning should be easier to read in-game.', 'Use the in-game tooltips before trusting a spreadsheet or old Steam guide.'],
- ['Bug fixes and hotfixes', 'The DLC launch window can still receive fixes.', 'Check current patch notes if a quest, puzzle, or achievement behaves differently.'],
+ ['Bug fixes and hotfixes', 'The current patch can change quest behavior, builds, and DLC triggers.', 'Check current patch notes if a quest, puzzle, or achievement behaves differently.'],
 ];
 
 const augmentationRows = [
@@ -220,7 +220,7 @@ export default function RogueTraderDlcGuidePage() {
       />
      </div>
      <figcaption className="border-t border-border bg-white px-4 py-3 text-xs leading-relaxed text-muted-foreground">
-      Rogue Trader is now a better DLC decision than a simple release-date question: the 2026 run depends on save timing, DLC order, and Patch 1.6 build context.
+      Rogue Trader DLC decisions now depend on save timing, DLC order, and Patch 1.6 build context, not only whether the base game is installed.
      </figcaption>
     </figure>
 
@@ -239,7 +239,7 @@ export default function RogueTraderDlcGuidePage() {
     <section id="status" className="prose-game">
      <h2>2026 Status: What Is Actually New?</h2>
      <p>
-      The reason Rogue Trader deserves a fresh 2026 check is not the base release date. The practical question is how the active DLC set and Update 1.6 change a first run or returning save. Use the table below before buying, restarting, or copying a build from an older patch.
+      The practical question is how the active DLC set and Update 1.6 change a first run or returning save. Use the table below before buying, restarting, or copying a build from an older patch.
      </p>
     </section>
     <SimpleTable columns={['Item', '2026 status', 'What it means for your run']} rows={statusRows} />
@@ -303,7 +303,7 @@ export default function RogueTraderDlcGuidePage() {
     <section id="bug-check" className="prose-game">
      <h2>Bug, Crash, and Hotfix Check</h2>
      <p>
-      The safest troubleshooting path is simple: check the current Owlcat patch notes first, then the Steam community known-issues thread, then your save state. In a DLC launch window, a quest that looks broken may be a patch issue, a missing trigger, or an old save edge case.
+      The safest troubleshooting path is simple: check the current Owlcat patch notes first, then your save state, then recent player bug threads. A quest that looks broken may be a patch issue, a missing trigger, or an old save edge case.
      </p>
      <ul>
       <li>Check whether your game is on Update 1.6 or a later hotfix.</li>
@@ -338,7 +338,7 @@ export default function RogueTraderDlcGuidePage() {
     <section id="update-log" className="prose-game">
      <h2>Update Log</h2>
      <p>
-      Last updated June 18, 2026. Initial version built around the official Update 1.6 and The Infinite Museion release window. Update this guide after new Owlcat hotfixes, DLC changes, player-facing bug reports, or confirmed route corrections.
+      Last updated June 18, 2026. Recheck current Owlcat patch notes before committing an old save, copying a pre-1.6 build, or starting The Infinite Museion on a late-campaign file.
      </p>
     </section>
 

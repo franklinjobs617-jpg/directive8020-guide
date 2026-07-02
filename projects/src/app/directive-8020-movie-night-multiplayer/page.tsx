@@ -24,7 +24,7 @@ const faqs = [
  {
  question: 'Does Directive 8020 have online multiplayer?',
  answer:
- 'Not at launch. The official Dark Pictures site says five-player online multiplayer is coming in a free post-launch update, mirroring the couch co-op Movie Night mode.',
+ 'Check the current patch before planning a remote run. The official Dark Pictures wording separates five-player online multiplayer from local Movie Night and describes it as a free update.',
  },
  {
  question: 'How many players can play Directive 8020 Movie Night?',
@@ -34,7 +34,7 @@ const faqs = [
  {
  question: 'Can you play Directive 8020 Movie Night online right now?',
  answer:
- 'Online availability depends on the current patch. The official launch wording says online multiplayer is a free post-launch update, so remote groups should check the latest storefront or patch notes before buying for online play.',
+ 'Online availability depends on the current patch. Remote groups should check the latest storefront or patch notes before buying specifically for online play.',
  },
  {
  question: 'Does Steam Remote Play replace online multiplayer?',
@@ -58,17 +58,17 @@ const coOpRules = [
 
 const coOpQuestionRows = [
  ['Is Movie Night local co-op?', 'Yes. Movie Night is local couch co-op for up to five players.'],
- ['Is online multiplayer live?', 'Check the current patch notes before planning a remote run; launch wording described online multiplayer as a free post-launch update.'],
+ ['Is online multiplayer live?', 'Check the current patch notes before planning a remote run; online multiplayer is separate from local Movie Night.'],
  ['Can Steam Remote Play replace it?', 'Treat Steam Remote Play as an unofficial workaround, not the official online multiplayer mode.'],
  ['How many players?', 'Movie Night supports up to five local players, matching the five core playable crew structure.'],
  ['Best group setup', 'Assign one player to track Story Tree notes and one player to watch mimic suspicion while assigned players make character choices.'],
 ];
 
 const multiplayerStatus = [
- ['Single-player', 'Available at launch', 'One player controls the story route and every crew perspective.'],
- ['Movie Night couch co-op', 'Available at launch', 'Up to five local players share one screen and pass control between assigned crew members.'],
- ['Online multiplayer', 'Check current patch', 'Official launch wording says five-player online multiplayer is a free post-launch update. Verify whether it is live before planning a remote run.'],
- ['Shared Story replacement', 'Not the same at launch', 'Remote groups should wait for the online Movie Night update or check current patch notes.'],
+ ['Single-player', 'Available', 'One player controls the story route and every crew perspective.'],
+ ['Movie Night couch co-op', 'Available', 'Up to five local players share one screen and pass control between assigned crew members.'],
+ ['Online multiplayer', 'Check current patch', 'Verify whether the five-player online update is live before planning a remote run.'],
+ ['Shared Story replacement', 'Separate question', 'Remote groups should wait for the online Movie Night update or check current patch notes.'],
  ['Steam Remote Play', 'Unofficial workaround', 'Treat it as a workaround only, not a confirmed replacement for the official online mode.'],
 ];
 
@@ -78,7 +78,7 @@ const sourceRows = [
  source: 'Steam store',
  status: 'verified' as const,
  href: 'https://store.steampowered.com/app/2255370/Directive_8020/',
- note: 'Use this for launch-day local co-op setup and character assignment advice.',
+ note: 'Use this for local co-op setup and character assignment advice.',
  },
  {
  claim: 'Online multiplayer is planned after launch as a free update.',
@@ -90,7 +90,7 @@ const sourceRows = [
  {
  claim: 'Players are searching for online co-op and remote play workarounds.',
  source: 'Reddit demand signals',
- status: 'working' as const,
+ status: 'needs-check' as const,
  href: 'https://www.reddit.com/r/DarkPicturesAnthology/search/?q=Directive%208020%20online%20co-op&restrict_sr=1',
  note: 'Treat Reddit as demand and troubleshooting signal, not as official feature confirmation.',
  },
@@ -129,10 +129,9 @@ export default function MovieNightPage() {
  <BlufBox title="Multiplayer Answer">
  <p>
  <strong>Movie Night is local couch co-op for up to five players.</strong>{' '}
- If you are searching for online co-op, check current patch notes:
- official launch wording said five-player online multiplayer would
- arrive later as a free update. Steam Remote Play should be treated
- as a workaround, not the official online mode.
+ If you are searching for online co-op, check current patch notes and
+ storefront details first. Steam Remote Play should be treated as a
+ workaround, not the official online mode.
  </p>
  </BlufBox>
 
@@ -159,10 +158,9 @@ export default function MovieNightPage() {
  <h2>Is Directive 8020 Multiplayer?</h2>
  <p>
  Yes, but the answer depends on what kind of multiplayer you mean.
- Directive 8020 launched with solo play and local Movie Night couch
- co-op. Online multiplayer is officially planned as a free
- post-launch update, so remote groups should check the latest patch
- notes before scheduling a run.
+ Directive 8020 has solo play and local Movie Night couch co-op.
+ Online multiplayer is a separate update path, so remote groups should
+ check the latest patch notes before scheduling a run.
  </p>
  </div>
 
@@ -224,12 +222,10 @@ export default function MovieNightPage() {
 
  <h2>Online Multiplayer Note</h2>
  <p>
- The official Dark Pictures multiplayer announcement says online
- multiplayer will support five players and mirror the couch co-op
- experience, but it arrives after launch. That means guide readers
- should not assume launch-day online co-op is available. If you are
- planning a remote group run, check the current patch notes and
- storefront details first.
+ The official Dark Pictures multiplayer wording says online multiplayer
+ supports five players and mirrors the couch co-op experience. Treat it
+ as separate from local Movie Night: if you are planning a remote group
+ run, check the current patch notes and storefront details first.
  </p>
 
  <h2>Remote Group Checklist</h2>
