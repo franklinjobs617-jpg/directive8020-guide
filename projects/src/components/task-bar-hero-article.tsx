@@ -9,12 +9,13 @@ import {
  generateFAQSchema,
  generateVideoGameSchema,
 } from "@/components/json-ld";
-import { RelatedGuides } from "@/components/guide-blocks";
+import { RelatedGuides, SourceCheckTable } from "@/components/guide-blocks";
 import { taskBarHero } from "@/lib/games";
 import {
  getTaskBarHeroRelated,
  taskBarHeroImages,
  taskBarHeroLastModified,
+ taskBarHeroSourceRows,
 } from "@/lib/task-bar-hero";
 
 interface FAQItem {
@@ -31,6 +32,7 @@ interface TaskBarHeroArticleProps {
  heroAlt: string;
  faqs: FAQItem[];
  children: ReactNode;
+ showSources?: boolean;
 }
 
 export function TaskBarHeroArticle({
@@ -42,6 +44,7 @@ export function TaskBarHeroArticle({
  heroAlt,
  faqs,
  children,
+ showSources = true,
 }: TaskBarHeroArticleProps) {
  const breadcrumbItems =
   canonical === taskBarHero.hubPath
@@ -91,6 +94,12 @@ export function TaskBarHeroArticle({
 
     {children}
 
+    {showSources && (
+     <SourceCheckTable
+      title="Official Links and Source Checks"
+      rows={taskBarHeroSourceRows}
+     />
+    )}
     <RelatedGuides guides={getTaskBarHeroRelated(canonical)} />
     <FAQSection faqs={faqs} />
    </article>

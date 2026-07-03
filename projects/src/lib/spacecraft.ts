@@ -6,6 +6,24 @@ export const spacecraftSteamUrl =
   "https://store.steampowered.com/app/3276050/SpaceCraft/";
 export const spacecraftOfficialUrl = "https://shirogames.com/";
 
+export const spacecraftSourceRows = [
+  {
+    claim: "When did SpaceCraft enter Early Access, and what does Steam list for requirements and price?",
+    source: "Steam store",
+    status: "verified" as const,
+    href: spacecraftSteamUrl,
+    note: "Use Steam for Early Access date (Jun 11, 2026), PC requirements, price, and current review signal.",
+  },
+  {
+    claim: "Who developed SpaceCraft, and what other games does the studio make?",
+    source: "Shiro Games official site",
+    status: "verified" as const,
+    href: spacecraftOfficialUrl,
+    note: "Use the developer page for studio background and official announcements about SpaceCraft's roadmap.",
+  },
+];
+
+
 export const spacecraftImages = {
   hero: "/games/spacecraft/hero.webp",
   card: "/games/spacecraft/card.webp",

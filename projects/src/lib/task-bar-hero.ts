@@ -21,6 +21,23 @@ export const taskBarHeroUrls = {
  classGuide: "https://taskbarherohub.wiki/guides/beginner/class-guide",
 };
 
+// NOTE (2026-07): only the Steam store link is used as an outbound citation
+// in SourceCheckTable. The taskbarherohub.wiki links above are used
+// elsewhere in this file for internal reference/comparison content, but a
+// third-party fan wiki is not an "authoritative source" for the citation
+// pattern used on other game hubs (Steam / official publisher site) and its
+// URLs have not been independently verified — do not promote it to
+// taskBarHeroSourceRows without checking it's a real, live, appropriate site.
+export const taskBarHeroSourceRows = [
+  {
+    claim: "When did TBH: Task Bar Hero release, and what does Steam list for reviews and DLC pricing?",
+    source: "Steam store",
+    status: "verified" as const,
+    href: taskBarHeroUrls.steam,
+    note: "Use Steam for release date (May 27, 2026), current review score, class/DLC pricing, and patch notes.",
+  },
+];
+
 export const taskBarHeroImages = {
  hero: "/games/task-bar-hero/og-image.jpg",
  overview: "/games/task-bar-hero/hero-overview.png",

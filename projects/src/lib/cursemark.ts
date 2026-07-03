@@ -6,6 +6,24 @@ export const cursemarkSteamUrl =
   "https://store.steampowered.com/app/3219180/Cursemark/";
 export const cursemarkOfficialUrl = "https://www.madmushroom.gg/games/cursemark";
 
+export const cursemarkSourceRows = [
+  {
+    claim: "When did Cursemark enter Early Access, and what does Steam list for reviews and pricing?",
+    source: "Steam store",
+    status: "verified" as const,
+    href: cursemarkSteamUrl,
+    note: "Use Steam for Early Access date (Jun 8, 2026), review score, price, and platform/Deck support.",
+  },
+  {
+    claim: "Who developed and published Cursemark, and what does the official game page say?",
+    source: "Mad Mushroom official site",
+    status: "verified" as const,
+    href: cursemarkOfficialUrl,
+    note: "Use the publisher page for official feature descriptions, screenshots, and dev-blog links.",
+  },
+];
+
+
 export const cursemarkImages = {
   hero: "/games/cursemark/hero.webp",
   card: "/games/cursemark/card.webp",

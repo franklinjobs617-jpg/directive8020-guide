@@ -9,11 +9,12 @@ import {
   generateFAQSchema,
   generateVideoGameSchema,
 } from "@/components/json-ld";
-import { RelatedGuides } from "@/components/guide-blocks";
+import { RelatedGuides, SourceCheckTable } from "@/components/guide-blocks";
 import { spacecraft } from "@/lib/games";
 import {
   spacecraftImages,
   spacecraftLastModified,
+  spacecraftSourceRows,
   getSpacecraftRelated,
 } from "@/lib/spacecraft";
 
@@ -31,6 +32,7 @@ interface SpacecraftArticleProps {
   heroAlt: string;
   faqs: FAQItem[];
   children: ReactNode;
+  showSources?: boolean;
 }
 
 export function SpacecraftArticle({
@@ -42,6 +44,7 @@ export function SpacecraftArticle({
   heroAlt,
   faqs,
   children,
+  showSources = true,
 }: SpacecraftArticleProps) {
   const breadcrumbItems =
     canonical === spacecraft.hubPath
@@ -83,6 +86,12 @@ export function SpacecraftArticle({
 
         {children}
 
+        {showSources && (
+          <SourceCheckTable
+            title="Official Links and Source Checks"
+            rows={spacecraftSourceRows}
+          />
+        )}
         <ArticleImage
           src={spacecraftImages.automation}
           alt="SpaceCraft automated production facility with drones and conveyors"

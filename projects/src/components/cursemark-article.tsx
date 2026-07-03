@@ -9,11 +9,12 @@ import {
   generateFAQSchema,
   generateVideoGameSchema,
 } from "@/components/json-ld";
-import { RelatedGuides } from "@/components/guide-blocks";
+import { RelatedGuides, SourceCheckTable } from "@/components/guide-blocks";
 import { cursemark } from "@/lib/games";
 import {
   cursemarkImages,
   cursemarkLastModified,
+  cursemarkSourceRows,
   getCursemarkRelated,
 } from "@/lib/cursemark";
 
@@ -31,6 +32,7 @@ interface CursemarkArticleProps {
   heroAlt: string;
   faqs: FAQItem[];
   children: ReactNode;
+  showSources?: boolean;
 }
 
 export function CursemarkArticle({
@@ -42,6 +44,7 @@ export function CursemarkArticle({
   heroAlt,
   faqs,
   children,
+  showSources = true,
 }: CursemarkArticleProps) {
   const breadcrumbItems =
     canonical === cursemark.hubPath
@@ -83,6 +86,12 @@ export function CursemarkArticle({
 
         {children}
 
+        {showSources && (
+          <SourceCheckTable
+            title="Official Links and Source Checks"
+            rows={cursemarkSourceRows}
+          />
+        )}
         <ArticleImage
           src={cursemarkImages.runes}
           alt="Cursemark rune crafting interface showing elemental combinations"
