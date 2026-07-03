@@ -31,7 +31,7 @@ const BASE_URL = 'https://enjoy4game.com';
 function gameSubPages(
  game: GameConfig,
  priorityBase = 0.68,
- lastModified = '2026-06-03',
+  lastModified = '2026-07-03',
 ): MetadataRoute.Sitemap {
  return game.guideLinks.map((link) => ({
  url: `${BASE_URL}${link.href}`,
@@ -42,7 +42,7 @@ function gameSubPages(
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
- const today = '2026-06-15';
+  const today = '2026-07-03';
 
  const staticPages: MetadataRoute.Sitemap = [
  { url: BASE_URL, lastModified: today, changeFrequency: 'daily', priority: 1.0 },
