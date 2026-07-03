@@ -258,7 +258,12 @@ export default function TrophyGuidePage() {
  <li>Only chase specific hidden achievements once the Story Tree is mostly mapped.</li>
  </ol>
 
- <h2 id="platinum-roadmap">Recommended Platinum Route</h2>
+ <h2 id="platinum-roadmap">What Is the Best Route to Platinum in Directive 8020?</h2>
+ <p>
+ <strong>Short answer:</strong> finish one clean playthrough first, then
+ use Turning Points to mop up alternate deaths, trust routes, and
+ endings in the order below instead of replaying from scratch.
+ </p>
  <ActionTable rows={platinumRows} />
 
  <h2>Platform Trophy Issues Players Are Searching</h2>
@@ -296,11 +301,11 @@ export default function TrophyGuidePage() {
  </div>
 
  <div className="prose-game">
- <h2 id="missable-cleanup">Missable Trophy Planning</h2>
+ <h2 id="missable-cleanup">Which Directive 8020 Trophies Are Missable?</h2>
  <p>
- The most expensive trophies in this genre are not the automatic
- chapter trophies. They are the route-specific trophies that require
- a character to be alive, dead, trusted, blamed, or present at a
+ <strong>Short answer:</strong> the missable trophies are the
+ route-specific ones, not the automatic chapter trophies — they depend
+ on a character being alive, dead, trusted, blamed, or present at a
  particular scene. Track these conditions from the start:
  </p>
  <ul>

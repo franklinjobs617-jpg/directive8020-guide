@@ -210,7 +210,7 @@ export default function ChoicesConsequencesPage() {
  <ChoiceImpactFilter />
 
  <div className="prose-game">
- <h2 id="choice-logic">Directive 8020 Choices and Consequences: What Matters?</h2>
+ <h2 id="choice-logic">Do Choices Matter in Directive 8020?</h2>
  <p>
  Yes, choices matter, but not every line has the same weight. A short
  conversation option may only change tone. A Destiny, trust check,
@@ -235,7 +235,7 @@ export default function ChoicesConsequencesPage() {
  <SourceCheckTable title="High-Intent Choice Source Check" rows={sourceRows} />
 
  <div className="prose-game">
- <h2 id="choice-examples">Concrete Choice Examples to Track</h2>
+ <h2 id="choice-examples">All Directive 8020 Choices and Consequences: Concrete Examples</h2>
  <p>
  Use these examples as categories while you play. The important part is
  not the exact line of dialogue; it is whether the scene creates a
@@ -268,7 +268,12 @@ export default function ChoicesConsequencesPage() {
  </div>
 
  <div className="prose-game">
- <h2 id="best-choices">Best Directive 8020 Choices for a Safer First Route</h2>
+ <h2 id="best-choices">What Are the Best Choices in Directive 8020?</h2>
+ <p>
+ <strong>Short answer:</strong> gather evidence, avoid needless
+ isolation, verify identities before trusting a returned or isolated
+ character, and keep relationships functional going into the finale.
+ </p>
  <p>
  There is no universal good dialogue button, but the safest route
  pattern is consistent: gather evidence, avoid needless isolation,
@@ -334,7 +339,13 @@ export default function ChoicesConsequencesPage() {
  </div>
 
  <div className="prose-game">
- <h2 id="mimic-choice-logic">Mimic Choice Logic: Who Can You Trust?</h2>
+ <h2 id="mimic-choice-logic">Mimic Trust Decisions: Who Can You Trust in Directive 8020?</h2>
+ <p>
+ <strong>Short answer:</strong> do not trust a returned or isolated
+ character until memory, witness, scanner, or evidence context
+ supports them — the alien organism&apos;s whole threat is that it can
+ imitate your crew.
+ </p>
  <p>
  In a normal branching drama, helping a frightened ally is usually a
  positive action. In Directive 8020, that same action can be a trap.
@@ -374,7 +385,12 @@ export default function ChoicesConsequencesPage() {
  <li><strong>Resource state:</strong> weapon, tool, access card, communication route, or ship system changed.</li>
  </ul>
 
- <h2 id="choice-mapping">Choice Mapping Method</h2>
+ <h2 id="choice-mapping">Can You Undo a Choice in Directive 8020? Choice Mapping Method</h2>
+ <p>
+ <strong>Short answer:</strong> yes — use Turning Points in the Story
+ Tree to revisit a branch, but change one variable at a time so the
+ consequence is clear.
+ </p>
  <p>
  Do not replay randomly when you are checking consequences. Change one
  variable at a time. If you change a trust choice and also fail a QTE,

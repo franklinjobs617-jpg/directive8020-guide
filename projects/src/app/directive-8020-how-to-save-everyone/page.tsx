@@ -4,7 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
-import { ActionTable, BlufBox, RelatedGuides } from '@/components/guide-blocks';
+import { ActionTable, BlufBox, RelatedGuides, SourceCheckTable } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
  title: 'Directive 8020 Save Everyone Guide - Keep All Crew Alive',
@@ -80,6 +80,23 @@ const routeMilestones = [
  ['Identity-pressure scenes', 'Treat survivor-dependent scenes carefully because who is alive can change what you can save next.'],
  ['Late-game decisions', 'Handle 50-50 style choices one at a time and preserve mission-critical information.'],
  ['Ending route', 'Use the everyone-lives base route, then branch for alternate endings only after the crew survives.'],
+];
+
+const sourceRows = [
+ {
+ claim: 'Directive 8020 is a branching, choice-driven survival game with a Steam achievement list tied to route outcomes.',
+ source: 'Steam store',
+ status: 'verified' as const,
+ href: 'https://store.steampowered.com/app/2255370/Directive_8020/',
+ note: 'Use for platform availability and the current achievement list; exact everyone-lives conditions still require route testing.',
+ },
+ {
+ claim: 'Trust, separation, evidence, and QTE choices are the categories that actually change survival outcomes.',
+ source: 'Choices & Consequences (this site)',
+ status: 'verified' as const,
+ href: '/directive-8020-choices-consequences',
+ note: 'Cross-reference the full choice-type breakdown before treating any single decision as the only cause of a death.',
+ },
 ];
 
 export default function SaveEveryonePage() {
@@ -170,6 +187,8 @@ export default function SaveEveryonePage() {
  </tbody>
  </table>
  </div>
+
+ <SourceCheckTable title="Save-Everyone Source Check" rows={sourceRows} />
 
  <div className="prose-game">
  <h2>Core Survival Rules</h2>
