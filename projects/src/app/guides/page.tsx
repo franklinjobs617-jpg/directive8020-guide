@@ -2,6 +2,36 @@ import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { GuideCard } from "@/components/guide-card";
 import { JsonLd, generateArticleSchema } from "@/components/json-ld";
+import {
+  fatekeeper,
+  mechanicusII,
+  starminer,
+  romestead,
+  zeroParades,
+  projectMist,
+} from "@/lib/games";
+
+// ✅ ADDED (2026-07-03): this page's title/H1/meta already claimed to be an
+// "All Game Guides" hub, but every single card below was Directive 8020
+// content — zero other games were actually represented. That mismatch is
+// exactly the kind of thing an AdSense reviewer (or a search engine judging
+// niche-expertise/hub-and-spoke structure) would flag. otherGameSections
+// pulls real, already-existing guideLinks data from each game's config in
+// games.ts (same data the individual game hub pages use) so this page's
+// content actually matches what it claims to be.
+const otherGameSections = [
+  { game: fatekeeper, label: "Fatekeeper" },
+  { game: mechanicusII, label: "Warhammer 40,000: Mechanicus II" },
+  { game: starminer, label: "Starminer" },
+  { game: romestead, label: "Romestead" },
+  { game: zeroParades, label: "ZERO PARADES" },
+  { game: projectMist, label: "Project: Mist" },
+].map(({ game, label }) => ({
+  label,
+  hubPath: game.hubPath,
+  heroImage: game.heroImage,
+  guides: game.guideLinks.slice(0, 4),
+}));
 
 // ✅ CHANGED: title 和 description 完全改写
 // 原来: "All Guides - Complete Directive 8020 Walkthrough & Tips"
@@ -349,7 +379,7 @@ export default function GuidesPage() {
             "Browse all game guides on Enjoy4Game. Walkthroughs, build guides, endings, trophy lists, and release coverage for survival, RPG, horror, strategy, and indie games.",
           url: "/guides",
           datePublished: "2026-05-10",
-          dateModified: "2026-06-12",
+          dateModified: "2026-07-03",
           imageUrl: "/d8020-screenshot-01.jpg",
         })}
       />
@@ -389,9 +419,9 @@ export default function GuidesPage() {
           Looking for a different game?
         </h2>
         <p className="mb-4 text-sm leading-6 text-muted-foreground">
-          This page shows all Directive 8020 guides. For other games — including
-          Fatekeeper, Project: Mist, Starminer, Paralives, Romestead, and more
-          recent releases — visit the full game hub directory.
+          Below is a sample of guides from other active hubs, plus the full
+          Directive 8020 guide library. For the complete directory of every
+          game covered on Enjoy4Game, visit the game hub page.
         </p>
         <a
           href="/games"
@@ -399,6 +429,46 @@ export default function GuidesPage() {
         >
           View all game hubs →
         </a>
+      </section>
+
+      {/* ── Other Games: real guide cards, not just a link-out ── */}
+      <section className="mb-14">
+        <div className="mb-6">
+          <p className="section-label text-dribbble-pink">More Games</p>
+          <h2 className="mt-1 text-[26px] font-bold leading-tight tracking-[-0.29px] text-foreground">
+            Guides From Other Games on Enjoy4Game
+          </h2>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            A sample of guides from other active hubs. Visit each game&apos;s
+            full hub for the complete guide list.
+          </p>
+        </div>
+        <div className="grid gap-10">
+          {otherGameSections.map((section) => (
+            <div key={section.hubPath}>
+              <div className="mb-4 flex items-center justify-between">
+                <h3 className="text-lg font-bold text-foreground">{section.label}</h3>
+                <a
+                  href={section.hubPath}
+                  className="text-sm font-medium text-dribbble-pink underline underline-offset-2"
+                >
+                  View full hub →
+                </a>
+              </div>
+              <div className="shot-grid">
+                {section.guides.map((guide) => (
+                  <GuideCard
+                    key={guide.href}
+                    href={guide.href}
+                    title={guide.title}
+                    description={guide.description}
+                    image={section.heroImage}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* ── Directive 8020: Quick Start ── */}

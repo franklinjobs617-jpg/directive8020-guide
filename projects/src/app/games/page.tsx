@@ -23,11 +23,11 @@ import { spacecraftImages } from "@/lib/spacecraft";
 import { cursemarkImages } from "@/lib/cursemark";
 import { deltaruneImages } from "@/lib/deltarune";
 import { taskBarHeroImages } from "@/lib/task-bar-hero";
-import { sellLemons } from "@/lib/games";
+import { sellLemons, fearsToFathom, growAGarden2 } from "@/lib/games";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
- "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, idle RPGs, life simulation, Roblox idle tycoon progression, fantasy RPGs, creature collectors, extraction ARPGs, inspection sims, train-based crafting shooters, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, and story-driven games, including TBH: Task Bar Hero, Mistfall Hunter, Sell Lemons, Voidling Bound, Enginefall, Gate Guard Simulator, Luna Abyss, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+ "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, idle RPGs, life simulation, Roblox idle tycoon progression, fantasy RPGs, creature collectors, extraction ARPGs, inspection sims, train-based crafting shooters, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, farming simulation, and story-driven games, including TBH: Task Bar Hero, Mistfall Hunter, Sell Lemons, Grow a Garden 2, Voidling Bound, Enginefall, Gate Guard Simulator, Luna Abyss, Fears to Fathom, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
  title: {
@@ -116,6 +116,13 @@ const gameCards = [
  image: sellLemons.heroImage,
  },
  {
+ title: "Grow a Garden 2",
+ href: "/games/grow-a-garden-2",
+ label: "Roblox farming simulator",
+ body: "Beginner guide, seeds, gears, pets, guild info, night-stealing mechanics, wheelbarrow use, and active codes for the Jandel farming/idle tycoon game.",
+ image: growAGarden2.heroImage,
+ },
+ {
  title: "Voidling Bound",
  href: "/games/voidling-bound",
  label: "Creature collector RPG",
@@ -142,6 +149,13 @@ const gameCards = [
  label: "Sci-fi FPS",
  body: "Post-launch hub for Game Pass, Steam Deck settings, system requirements, achievements, walkthrough, ending explained, crash fixes, and buying advice.",
  image: lunaAbyssImages.hero,
+ },
+ {
+ title: "Fears to Fathom: Scratch Creek",
+ href: "/games/fears-to-fathom",
+ label: "Co-op psychological horror",
+ body: "Walkthrough, co-op setup, all endings, story explained, troubleshooting, achievements, and length for the Rayll Studios co-op-only horror game.",
+ image: fearsToFathom.heroImage,
  },
  {
  title: "Fatekeeper",
