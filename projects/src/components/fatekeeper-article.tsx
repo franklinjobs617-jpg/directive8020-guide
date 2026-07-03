@@ -9,11 +9,12 @@ import {
  generateFAQSchema,
  generateVideoGameSchema,
 } from "@/components/json-ld";
-import { RelatedGuides } from "@/components/guide-blocks";
+import { RelatedGuides, SourceCheckTable } from "@/components/guide-blocks";
 import { fatekeeper } from "@/lib/games";
 import {
  fatekeeperImages,
  fatekeeperLastModified,
+ fatekeeperSourceRows,
  getFatekeeperRelated,
 } from "@/lib/fatekeeper";
 
@@ -31,6 +32,7 @@ interface FatekeeperArticleProps {
  heroAlt: string;
  faqs: FAQItem[];
  children: ReactNode;
+ showSources?: boolean;
 }
 
 export function FatekeeperArticle({
@@ -42,6 +44,7 @@ export function FatekeeperArticle({
  heroAlt,
  faqs,
  children,
+ showSources = true,
 }: FatekeeperArticleProps) {
  const breadcrumbItems =
  canonical === fatekeeper.hubPath
@@ -83,6 +86,12 @@ export function FatekeeperArticle({
 
  {children}
 
+ {showSources && (
+ <SourceCheckTable
+ title="Official Links and Source Checks"
+ rows={fatekeeperSourceRows}
+ />
+ )}
  <ArticleImage
  src={fatekeeperImages.exploration}
  alt="Fatekeeper handcrafted world with ruins, caves, and forests to explore"

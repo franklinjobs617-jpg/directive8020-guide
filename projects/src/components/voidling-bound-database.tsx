@@ -91,7 +91,16 @@ export function VoidlingBoundDatabase({
  const [compareSlugs, setCompareSlugs] = useState<string[]>(() => getParam(searchParams, 'compare').split(',').filter(Boolean).slice(0, 3));
  const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
 
+ // NOTE (2026-07): This sync used to call router.replace() on every single
+ // filter/sort/page change with no debounce. GA4's default Enhanced
+ // Measurement automatically fires a page_view on browser history changes,
+ // so a user filtering this database for a few minutes could generate
+ // dozens of inflated "Views" for one real session (confirmed against GA4
+ // export: this page showed ~97 views per active user, far above any other
+ // page on the site). Debouncing collapses rapid changes into a single
+ // history update so the URL stays shareable without spamming page_view.
  useEffect(() => {
+ const timeoutId = window.setTimeout(() => {
  const params = new URLSearchParams();
  if (query) params.set('q', query);
  if (species) params.set('species', species);
@@ -109,6 +118,9 @@ export function VoidlingBoundDatabase({
  if (compareSlugs.length > 0) params.set('compare', compareSlugs.join(','));
  const queryString = params.toString();
  router.replace(queryString ? `${pathname}?${queryString}` : pathname, { scroll: false });
+ }, 500);
+
+ return () => window.clearTimeout(timeoutId);
  }, [query, species, rarity, element, slot, size, moduleName, statusEffect, imageStatus, view, sort, dir, page, compareSlugs, pathname, router]);
 
  const filteredEntries = useMemo(() => {

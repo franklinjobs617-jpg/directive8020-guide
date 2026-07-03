@@ -6,6 +6,23 @@ export const fatekeeperSteamUrl =
   "https://store.steampowered.com/app/2186990/Fatekeeper/";
 export const fatekeeperOfficialUrl = "https://fatekeeper.thqnordic.com/";
 
+export const fatekeeperSourceRows = [
+  {
+    claim: "When did Fatekeeper enter Early Access, and what does Steam list for platform and pricing?",
+    source: "Steam store",
+    status: "verified" as const,
+    href: fatekeeperSteamUrl,
+    note: "Use Steam for Early Access date, PC requirements, price, discounts, and current review signal.",
+  },
+  {
+    claim: "Who developed and published Fatekeeper, and what is the official roadmap messaging?",
+    source: "THQ Nordic official site",
+    status: "verified" as const,
+    href: fatekeeperOfficialUrl,
+    note: "Use the publisher page for official positioning, screenshots, and studio background on Paraglacial.",
+  },
+];
+
 export const fatekeeperImages = {
   hero: "/games/fatekeeper/hero.webp",
   card: "/games/fatekeeper/card.webp",
