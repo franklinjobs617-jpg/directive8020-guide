@@ -6,6 +6,7 @@ const footerGroups = [
   {
     title: "Quick Links",
     links: [
+      ["Best Of Guides", "/best-of"],
       ["All Game Hubs", "/games"],
       ["Full Walkthrough", "/directive-8020-walkthrough"],
       ["All Endings Guide", "/directive-8020-all-endings"],

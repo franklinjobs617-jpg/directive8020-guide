@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
+  { href: "/best-of", label: "Best Of" },
   { href: "/guides", label: "Guides" },
   { href: "/games", label: "Games" },
   { href: "/games/fatekeeper", label: "Fatekeeper" },
@@ -15,6 +16,7 @@ const navLinks = [
 ];
 
 const mobileGameLinks = [
+  { href: "/best-of", label: "Best Of" },
   { href: "/games", label: "All Games" },
   { href: "/games/fatekeeper", label: "Fatekeeper" },
   { href: "/games/mechanicus-ii", label: "Mechanicus II" },
