@@ -31,7 +31,7 @@ const BASE_URL = 'https://enjoy4game.com';
 function gameSubPages(
  game: GameConfig,
  priorityBase = 0.68,
- lastModified = '2026-06-03',
+  lastModified = '2026-07-03',
 ): MetadataRoute.Sitemap {
  return game.guideLinks.map((link) => ({
  url: `${BASE_URL}${link.href}`,
@@ -42,7 +42,7 @@ function gameSubPages(
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
- const today = '2026-06-15';
+  const today = '2026-07-03';
 
  const staticPages: MetadataRoute.Sitemap = [
  { url: BASE_URL, lastModified: today, changeFrequency: 'daily', priority: 1.0 },
@@ -51,7 +51,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: `${BASE_URL}/games/mistfall-hunter`, lastModified: '2026-06-22', changeFrequency: 'weekly', priority: 0.76 },
  { url: `${BASE_URL}/steam-deck`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
  { url: `${BASE_URL}/games/warhammer-40000-rogue-trader/dlc-guide-2026`, lastModified: '2026-06-18', changeFrequency: 'weekly', priority: 0.68 },
- { url: `${BASE_URL}/about`, lastModified: today, changeFrequency: 'monthly', priority: 0.4 },
+  { url: `${BASE_URL}/best-of`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
+  { url: `${BASE_URL}/best-survival-games-steam-2026`, lastModified: today, changeFrequency: 'weekly', priority: 0.76 },
+  { url: `${BASE_URL}/best-free-games-steam-2026`, lastModified: today, changeFrequency: 'weekly', priority: 0.76 },
+  { url: `${BASE_URL}/about`, lastModified: today, changeFrequency: 'monthly', priority: 0.4 },
  { url: `${BASE_URL}/privacy-policy`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },
  { url: `${BASE_URL}/terms-of-use`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },
  { url: `${BASE_URL}/copyright-infringement`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },

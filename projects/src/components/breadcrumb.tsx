@@ -3,7 +3,10 @@ import { JsonLd, generateBreadcrumbSchema } from '@/components/json-ld';
 
 const SITE_URL = 'https://enjoy4game.com';
 const LABEL_PATHS: Record<string, string> = {
- 'All Endings': '/directive-8020-all-endings',
+  'Best Of': '/best-of',
+  'Best Survival Games on Steam 2026': '/best-survival-games-steam-2026',
+  'Best Free Games on Steam 2026': '/best-free-games-steam-2026',
+  'All Endings': '/directive-8020-all-endings',
  'Beginner Tips': '/directive-8020-beginner-tips',
  'Cast and Actors': '/directive-8020-cast-actors',
  Characters: '/directive-8020-characters',
