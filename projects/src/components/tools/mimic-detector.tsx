@@ -1,12 +1,13 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import { AlertTriangle, RotateCcw, ScanSearch, ShieldCheck } from 'lucide-react';
 import {
  directiveCharacters,
  type DirectiveCharacterId,
 } from '@/lib/directive-8020-characters';
+import { trackEvent } from '@/lib/analytics';
 
 type PlayMode = 'Explorer' | 'Survival';
 
@@ -136,6 +137,23 @@ export function MimicDetector() {
  }, [checks]);
 
  const topSuspect = ranked[0];
+
+ // Fire one GA4 custom event the first time the user actually uses the
+ // tool (checks at least one clue for any character), not on every
+ // checkbox click. This is the concrete "tool completion" signal referenced
+ // in the 网站迭代指南 section 6.1 — mark `tool_complete` as a Key event in
+ // GA4 Admin > Events once it starts appearing.
+ const hasTrackedUse = useRef(false);
+ useEffect(() => {
+ const totalCluesChecked = Object.values(checks).reduce((sum, list) => sum + list.length, 0);
+ if (totalCluesChecked > 0 && !hasTrackedUse.current) {
+ hasTrackedUse.current = true;
+ trackEvent('tool_complete', {
+ tool_name: 'mimic_detector',
+ top_suspect: topSuspect?.id ?? 'unknown',
+ });
+ }
+ }, [checks, topSuspect]);
 
  function toggleClue(characterId: DirectiveCharacterId, clueId: string) {
  setChecks((current) => {
