@@ -1688,6 +1688,18 @@ export const palworld: GameConfig = {
       description:
         "Whether existing worlds and dedicated servers carry over to 1.0, and why Pocketpair still recommends a fresh start.",
     },
+    {
+      title: "Everything New in Palworld 1.0",
+      href: "/games/palworld/1-0-everything-new",
+      description:
+        "Full rundown of confirmed 1.0 additions: World Tree, Sky Islands, Wing Pack, PvP, Paint Mode, new Pals, Tower Boss rework, and Genetic Recombination breeding.",
+    },
+    {
+      title: "World Tree & Sky Islands Preview",
+      href: "/games/palworld/world-tree-sky-islands",
+      description:
+        "Deep dive on Palworld's new endgame region — the World Tree's story role, the Sky Islands, and what is confirmed vs. still unofficial.",
+    },
   ],
 };
 
