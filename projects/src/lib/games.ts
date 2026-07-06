@@ -1700,6 +1700,12 @@ export const palworld: GameConfig = {
       description:
         "Deep dive on Palworld's new endgame region — the World Tree's story role, the Sky Islands, and what is confirmed vs. still unofficial.",
     },
+    {
+      title: "Genetic Recombination Breeding Preview",
+      href: "/games/palworld/genetic-recombination-breeding",
+      description:
+        "What's confirmed about Palworld 1.0's new Legendary-gene-fusion breeding system, plus classic breeding basics — upgrading to a full breeding calculator after July 10.",
+    },
   ],
 };
 
