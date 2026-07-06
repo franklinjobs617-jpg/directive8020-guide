@@ -27,7 +27,7 @@ export default function FearsToFathomAchievementsPage() {
    <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{title}</h1>
 
    <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-    Fears to Fathom: Scratch Creek has {achievementList.length} Steam achievements. None are missable in the traditional sense â?you can replay chapters to get what you missed â?but some require specific co-op coordination.
+    Fears to Fathom: Scratch Creek has {achievementList.length} Steam achievements. None are missable in the traditional sense -you can replay chapters to get what you missed -but some require specific co-op coordination.
    </p>
 
    <div className="mt-6 overflow-x-auto rounded-lg border border-border bg-white">
@@ -55,7 +55,7 @@ export default function FearsToFathomAchievementsPage() {
     <h2 className="text-lg font-bold text-foreground">100% Completion Tips</h2>
     <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
      <li className="flex gap-2"><span className="text-foreground">\u2022</span> Play through once with Ending A (Escape), then replay Chapter 6-7 for Ending B (The Deal).</li>
-     <li className="flex gap-2"><span className="text-foreground">\u2022</span> Down in the Dark is the hardest achievement. Complete the church basement section without using your flashlight. The path is linear â?memorize the layout on a first playthrough, then attempt it blind.</li>
+     <li className="flex gap-2"><span className="text-foreground">\u2022</span> Down in the Dark is the hardest achievement. Complete the church basement section without using your flashlight. The path is linear -memorize the layout on a first playthrough, then attempt it blind.</li>
      <li className="flex gap-2"><span className="text-foreground">\u2022</span> Totem Buster requires both players to destroy their totem within 10 seconds. Count down over voice chat.</li>
      <li className="flex gap-2"><span className="text-foreground">\u2022</span> Together requires no disconnects. Play during a stable connection window.</li>
     </ul>

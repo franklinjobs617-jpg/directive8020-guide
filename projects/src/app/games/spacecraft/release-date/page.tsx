@@ -87,14 +87,14 @@ const releaseFacts = [
   ["Platform", "PC via Steam (Windows 10/11 64-bit)"],
   ["Developer", "Shiro Games (Northgard, Wartales)"],
   ["Publisher", "Shiro Games"],
-  ["Server Status", "Online â?always-online MMO (check Discord for outages)"],
+  ["Server Status", "Online -always-online MMO (check Discord for outages)"],
   ["Early Access Duration", "At least 6 months planned before 1.0"],
 ];
 
 const platformRows = [
-  ["PC (Windows 10/11)", "Confirmed â?Steam Early Access"],
-  ["Mac", "Not supported â?no announcement"],
-  ["Linux / SteamOS", "Not supported â?Proton compatibility not listed"],
+  ["PC (Windows 10/11)", "Confirmed -Steam Early Access"],
+  ["Mac", "Not supported -no announcement"],
+  ["Linux / SteamOS", "Not supported -Proton compatibility not listed"],
   ["PlayStation 5", "Not announced"],
   ["Xbox Series X|S", "Not announced"],
   ["Nintendo Switch / Switch 2", "Not announced"],
@@ -174,7 +174,7 @@ export default function SpacecraftReleaseDatePage() {
           </li>
           <li className="flex items-start gap-2">
             <span className="mt-1 text-foreground font-bold">2.</span>
-            <span><strong>Verify system requirements</strong> against your PC specs. SpaceCraft needs a stable broadband connection â?Wi-Fi dropouts will disconnect you. See our{" "}
+            <span><strong>Verify system requirements</strong> against your PC specs. SpaceCraft needs a stable broadband connection -Wi-Fi dropouts will disconnect you. See our{" "}
               <Link href="/games/spacecraft/system-requirements" className="text-foreground underline">system requirements guide</Link> for full details.</span>
           </li>
           <li className="flex items-start gap-2">

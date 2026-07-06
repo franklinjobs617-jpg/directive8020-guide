@@ -40,13 +40,13 @@ const faqs = [
 ];
 
 const deckFacts = [
-  ["Steam Deck compatibility", "No â?not listed as ready as of June 2026"],
+  ["Steam Deck compatibility", "No -not listed as ready as of June 2026"],
   ["Proton Compatibility", "Proton Experimental recommended (community tested)"],
   ["Performance (Low Settings)", "25-35 FPS reported in starter sectors; drops to 15-20 FPS in busy sectors"],
   ["Battery Life", "1.5-2.5 hours (always-online Wi-Fi drains battery faster)"],
-  ["UI Readability", "Small text and complex menus â?no UI scaling option available"],
-  ["Control Support", "Partial â?keyboard and mouse recommended for ship building and market menus"],
-  ["Offline Play", "Not possible â?always-online requirement makes Deck play dependent on stable Wi-Fi"],
+  ["UI Readability", "Small text and complex menus -no UI scaling option available"],
+  ["Control Support", "Partial -keyboard and mouse recommended for ship building and market menus"],
+  ["Offline Play", "Not possible -always-online requirement makes Deck play dependent on stable Wi-Fi"],
   ["Recommendation", "Not recommended in current Early Access state. Wait for official verification or performance patches."],
 ];
 
@@ -124,7 +124,7 @@ export default function SpacecraftSteamDeckPage() {
         />
         <ul className="space-y-3 text-sm leading-relaxed text-muted-foreground">
           <li><strong>Graphics preset:</strong> Low (all settings at minimum)</li>
-          <li><strong>Resolution:</strong> 1280x720 (native Deck resolution â?do not upscale)</li>
+          <li><strong>Resolution:</strong> 1280x720 (native Deck resolution -do not upscale)</li>
           <li><strong>FPS cap:</strong> 30 FPS (via Steam Deck performance overlay)</li>
           <li><strong>Proton version:</strong> Proton Experimental (force in game properties under Compatibility)</li>
           <li><strong>TDP limit:</strong> 10W (reduces heat and extends battery with minimal FPS loss)</li>

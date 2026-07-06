@@ -9,42 +9,42 @@ const canonical = '/games/fears-to-fathom/length';
 export const metadata = createFearsToFathomMetadata({ title, description, canonical, image: fearsToFathomImages.driving });
 
 const playstyles = [
- { style: 'Main story (standard co-op)', time: '2.5â? hours', note: 'Following objectives without exploring side areas.' },
- { style: 'Exploring everything', time: '3â? hours', note: 'Reading all notes, searching every building, trying both character perspectives.' },
- { style: 'Achievement hunting (100%)', time: '4â? hours', note: 'Includes Cow Clicker minigame grind (~30 min) and replaying sections for missable achievements.' },
- { style: 'Speedrun / replay', time: '1.5â? hours', note: 'Skipping cutscenes, knowing all puzzle solutions, optimal routes.' },
+ { style: 'Main story (standard co-op)', time: '2.5- hours', note: 'Following objectives without exploring side areas.' },
+ { style: 'Exploring everything', time: '3- hours', note: 'Reading all notes, searching every building, trying both character perspectives.' },
+ { style: 'Achievement hunting (100%)', time: '4- hours', note: 'Includes Cow Clicker minigame grind (~30 min) and replaying sections for missable achievements.' },
+ { style: 'Speedrun / replay', time: '1.5- hours', note: 'Skipping cutscenes, knowing all puzzle solutions, optimal routes.' },
 ];
 
 const chapterTimes = [
- { chapter: 'Packing Up & Trailer Hookup', time: '15â?0 min', note: 'Tutorial section. Largely unskippable.' },
- { chapter: 'Interstate Driving (7:40 PM)', time: '10â?5 min', note: 'GPS navigation. Shorter if you take the early ending.' },
- { chapter: 'Backroads (8:08 PM) â?Fallen Tree', time: '15â?0 min', note: 'Tree puzzle, trailer tampering, road fork choice.' },
- { chapter: 'Buck\'s Repair Shop (8:52 PM)', time: '15â?0 min', note: 'Meet Harry & Buck, drive to Bill\'s.' },
- { chapter: 'Bill\'s House & the Trail', time: '15â?0 min', note: 'Conversations, trail walk to Miss Julia\'s.' },
- { chapter: 'Miss Julia\'s House (9:58 PM)', time: '30â?0 min', note: 'Longest chapter: bath, church basement, towels, sleep.' },
- { chapter: '3:33 AM Escape Sequence', time: '20â?0 min', note: 'Can take longer if you die repeatedly (no checkpoints mid-chase).' },
- { chapter: 'Bill\'s House Finale', time: '10â?0 min', note: 'Patrol section + trailer unhook + drive away.' },
+ { chapter: 'Packing Up & Trailer Hookup', time: '15-0 min', note: 'Tutorial section. Largely unskippable.' },
+ { chapter: 'Interstate Driving (7:40 PM)', time: '10-5 min', note: 'GPS navigation. Shorter if you take the early ending.' },
+ { chapter: 'Backroads (8:08 PM) -Fallen Tree', time: '15-0 min', note: 'Tree puzzle, trailer tampering, road fork choice.' },
+ { chapter: 'Buck\'s Repair Shop (8:52 PM)', time: '15-0 min', note: 'Meet Harry & Buck, drive to Bill\'s.' },
+ { chapter: 'Bill\'s House & the Trail', time: '15-0 min', note: 'Conversations, trail walk to Miss Julia\'s.' },
+ { chapter: 'Miss Julia\'s House (9:58 PM)', time: '30-0 min', note: 'Longest chapter: bath, church basement, towels, sleep.' },
+ { chapter: '3:33 AM Escape Sequence', time: '20-0 min', note: 'Can take longer if you die repeatedly (no checkpoints mid-chase).' },
+ { chapter: 'Bill\'s House Finale', time: '10-0 min', note: 'Patrol section + trailer unhook + drive away.' },
 ];
 
 const episodeComparison = [
- { episode: 'Home Alone', time: '30â?5 min', note: 'The shortest episode in the series.' },
- { episode: 'Norwood Hitchhike', time: '1â?.5 hrs', note: '' },
- { episode: 'Carson House', time: '1â? hrs', note: '' },
- { episode: 'Ironbark Lookout', time: '1â? hrs', note: 'Fan-favorite episode.' },
- { episode: 'Woodbury Getaway', time: '2â? hrs', note: 'Previously the longest episode.' },
- { episode: 'Scratch Creek', time: '2.5â? hrs', note: 'The longest episode â?co-op adds length.' },
+ { episode: 'Home Alone', time: '30-5 min', note: 'The shortest episode in the series.' },
+ { episode: 'Norwood Hitchhike', time: '1-.5 hrs', note: '' },
+ { episode: 'Carson House', time: '1- hrs', note: '' },
+ { episode: 'Ironbark Lookout', time: '1- hrs', note: 'Fan-favorite episode.' },
+ { episode: 'Woodbury Getaway', time: '2- hrs', note: 'Previously the longest episode.' },
+ { episode: 'Scratch Creek', time: '2.5- hrs', note: 'The longest episode -co-op adds length.' },
 ];
 
 const faqs = [
  {
   question: 'How long is Fears to Fathom: Scratch Creek?',
   answer:
-   'A standard co-op playthrough takes 2.5 to 3 hours. Exploring every area and reading all documents can extend this to 3â? hours. Achievement hunters should budget 4â? hours including replays for missable achievements.',
+   'A standard co-op playthrough takes 2.5 to 3 hours. Exploring every area and reading all documents can extend this to 3- hours. Achievement hunters should budget 4- hours including replays for missable achievements.',
  },
  {
   question: 'Is Scratch Creek longer than other Fears to Fathom episodes?',
   answer:
-   'Yes. Scratch Creek is the longest episode in the series at 2.5â? hours. The previous longest was Woodbury Getaway at 2â? hours. The co-op structure, driving sections, and larger environments contribute to the longer playtime.',
+   'Yes. Scratch Creek is the longest episode in the series at 2.5- hours. The previous longest was Woodbury Getaway at 2- hours. The co-op structure, driving sections, and larger environments contribute to the longer playtime.',
  },
  {
   question: 'How many chapters are in Scratch Creek?',
@@ -54,7 +54,7 @@ const faqs = [
  {
   question: 'Can you save mid-chapter?',
   answer:
-   'The game uses automatic checkpoint saves. You can save and quit between chapters, but there is no manual save during a chapter. The 3:33 AM chase has no mid-sequence checkpoints â?dying sends you back to the start of the chase.',
+   'The game uses automatic checkpoint saves. You can save and quit between chapters, but there is no manual save during a chapter. The 3:33 AM chase has no mid-sequence checkpoints -dying sends you back to the start of the chase.',
  },
 ];
 

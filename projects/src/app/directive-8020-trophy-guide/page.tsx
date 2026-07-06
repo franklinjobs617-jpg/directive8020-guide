@@ -307,7 +307,7 @@ export default function TrophyGuidePage() {
  <h2 id="missable-cleanup">Which Directive 8020 Trophies Are Missable?</h2>
  <p>
  <strong>Short answer:</strong> the missable trophies are the
- route-specific ones, not the automatic chapter trophies â?they depend
+ route-specific ones, not the automatic chapter trophies -they depend
  on a character being alive, dead, trusted, blamed, or present at a
  particular scene. Track these conditions from the start:
  </p>

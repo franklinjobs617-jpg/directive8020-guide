@@ -92,14 +92,14 @@ export default function GAG2GearsPage() {
 
    <p className="mt-3 text-base text-muted-foreground leading-relaxed">
     Gears are purchased from <strong>George</strong> at the Gear Shop in the central hub.
-    The shop <strong>rotates every 5 minutes</strong> â?not all gears are available at once.
+    The shop <strong>rotates every 5 minutes</strong> -not all gears are available at once.
     Some gears can also be bought with <strong>Robux</strong>. There are <strong>{gag2Gears.length} Sheckles-purchasable gears</strong> plus 4 Robux-only gears.
    </p>
 
    <div className="mt-4 rounded-lg border-2 border-blue-200 bg-blue-50 p-4">
     <p className="text-sm font-bold text-blue-900">ð Search Note</p>
     <p className="mt-1 text-sm text-blue-800">
-     Players searching for "Speed Hub" or "Magnet" â?these items <strong>do not exist</strong> in Grow a Garden 2.
+     Players searching for "Speed Hub" or "Magnet" -these items <strong>do not exist</strong> in Grow a Garden 2.
      "Speed Hub" is likely the <strong>Speed Mushroom</strong>. "Magnet" is not a feature in this game.
     </p>
    </div>

@@ -68,7 +68,7 @@ export default function VoidlingBoundHubPage() {
  >
  <BlufBox title="Worth Doing?">
  <p>
- <strong>Voidling Bound has over 120 named evolutions across 9 species.</strong> You need fast lookup to identify creatures, compare ability slots, and plan evolution paths â?not read every wiki page manually. This hub gives you a searchable database, beginner route, and system guides (evolution, breeding, elements, attributes) in one place.
+ <strong>Voidling Bound has over 120 named evolutions across 9 species.</strong> You need fast lookup to identify creatures, compare ability slots, and plan evolution paths -not read every wiki page manually. This hub gives you a searchable database, beginner route, and system guides (evolution, breeding, elements, attributes) in one place.
  </p>
  </BlufBox>
 
