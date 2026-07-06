@@ -18,7 +18,7 @@ export default function GAG2CodesPage() {
     <Image src={gag2Images.icon} alt="Grow a Garden 2" width={64} height={64} className="rounded-xl" />
     <div>
      <p className="text-sm font-bold text-foreground">Codes checked June 15, 2026</p>
-     <p className="text-xs text-muted-foreground">Codes are case-sensitive. Redeem quickly â?they can expire without notice.</p>
+     <p className="text-xs text-muted-foreground">Codes are case-sensitive. Redeem quickly -they can expire without notice.</p>
     </div>
    </div>
 
@@ -52,7 +52,7 @@ export default function GAG2CodesPage() {
      {[
       'Launch <strong>Grow a Garden 2</strong> on Roblox.',
       'Click the <strong>Settings cog</strong> (gear icon) in the top-left corner.',
-      'Type or paste the code into the <strong>code box</strong>. Codes are case-sensitive â?copy exactly.',
+      'Type or paste the code into the <strong>code box</strong>. Codes are case-sensitive -copy exactly.',
       'Click <strong>Claim!</strong> to receive your reward.',
      ].map((step, i) => (
       <li key={i} className="flex gap-3">
@@ -66,13 +66,13 @@ export default function GAG2CodesPage() {
    <section className="mt-6">
     <h2 className="text-lg font-bold text-foreground">Where New Codes Are Announced</h2>
     <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-     <li>â?<strong>Official Discord Server</strong> â?announcements channel (primary source)</li>
-     <li>â?<strong>X/Twitter:</strong> @GrowaGardenRblx</li>
-     <li>â?<strong>YouTube:</strong> @GrowaGarden</li>
-     <li>â?<strong>Roblox Group:</strong> The Garden Game</li>
+     <li>-<strong>Official Discord Server</strong> -announcements channel (primary source)</li>
+     <li>-<strong>X/Twitter:</strong> @GrowaGardenRblx</li>
+     <li>-<strong>YouTube:</strong> @GrowaGarden</li>
+     <li>-<strong>Roblox Group:</strong> The Garden Game</li>
     </ul>
     <p className="mt-3 text-xs text-muted-foreground">
-     This page was last checked on June 15, 2026. Codes can expire without notice â?redeem them ASAP.
+     This page was last checked on June 15, 2026. Codes can expire without notice -redeem them ASAP.
      Bookmark this page and check back for updates.
     </p>
    </section>

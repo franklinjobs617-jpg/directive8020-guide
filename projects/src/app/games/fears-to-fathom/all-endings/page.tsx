@@ -11,23 +11,23 @@ export const metadata = createFearsToFathomMetadata({ title, description, canoni
 
 const endings = [
  {
-  name: 'True Ending â?Escape & Call the Police',
+  name: 'True Ending -Escape & Call the Police',
   type: 'Good',
-  chapter: 'Finale â?Bill\'s House',
+  chapter: 'Finale -Bill\'s House',
   steps: [
    'Crouch by the tree at the edge of Bill\'s yard. Wait for Bill to finish talking to the truck driver and go inside.',
    'Watch the patrolman\'s route. When he moves to the front of the house, sprint to the trailer and both get inside.',
    'Close the trailer doors. Wait for the man to enter the house.',
    'Both jump out. One player MUST unhook the trailer (approach the hitch between car and trailer). The other gets in the driver\'s seat.',
-   'If you skip unhooking: the trailer weight stalls the car and you\'re caught â?instant death.',
+   'If you skip unhooking: the trailer weight stalls the car and you\'re caught -instant death.',
    'Once unhooked, both get in the car and drive away. Reach the main road and call the police.',
   ],
   result: 'You escape Scratch Creek. The police are notified. Both Marcus and Tessa survive.',
  },
  {
-  name: 'Interstate Ending â?"We Arrived Late, But Safely"',
+  name: 'Interstate Ending -"We Arrived Late, But Safely"',
   type: 'Alternate Good',
-  chapter: 'Interstate â?7:40 PM',
+  chapter: 'Interstate -7:40 PM',
   steps: [
    'During the highway driving section, the passenger uses the NavGo app to give directions.',
    'When the traffic warning appears, do NOT reroute the GPS. Stay on 5 North.',
@@ -36,9 +36,9 @@ const endings = [
   result: 'An early "good" ending. You never reach Scratch Creek, but both characters are safe.',
  },
  {
-  name: 'Backroads Ending â?"We Took a Wrong Turn..."',
+  name: 'Backroads Ending -"We Took a Wrong Turn..."',
   type: 'Alternate Good',
-  chapter: 'Backroads â?8:08 PM',
+  chapter: 'Backroads -8:08 PM',
   steps: [
    'After the fallen tree scene, you reach a fork in the road.',
    'The GPS says turn RIGHT onto Roseburg Road. The road sign points LEFT.',
@@ -47,22 +47,22 @@ const endings = [
   result: 'An alternate good ending. You get lost but eventually find the highway again, avoiding the cult.',
  },
  {
-  name: 'Death â?3:33 AM at Miss Julia\'s',
+  name: 'Death -3:33 AM at Miss Julia\'s',
   type: 'Death',
-  chapter: 'Miss Julia\'s House â?3:33 AM',
+  chapter: 'Miss Julia\'s House -3:33 AM',
   steps: [
-   'As Marcus: opening the bathroom door (instant death â?a man is inside).',
+   'As Marcus: opening the bathroom door (instant death -a man is inside).',
    'As Marcus: hiding in the wardrobe instead of under the bed (you will be found).',
-   'During the chase: running to the church (the door is locked â?you get cornered).',
+   'During the chase: running to the church (the door is locked -you get cornered).',
    'During the chase: not hiding in the coffins when C. Hawkins enters the room.',
    'Getting caught during any part of the escape sequence.',
   ],
   result: 'Game over. You must restart from the 3:33 AM checkpoint.',
  },
  {
-  name: 'Death â?Bill\'s House Finale',
+  name: 'Death -Bill\'s House Finale',
   type: 'Death',
-  chapter: 'Finale â?Bill\'s House',
+  chapter: 'Finale -Bill\'s House',
   steps: [
    'Getting spotted by Bill or his accomplice during the escape.',
    'Running to the car instead of hiding in the trailer first.',
@@ -82,7 +82,7 @@ const faqs = [
  {
   question: 'What is the True Ending in Scratch Creek?',
   answer:
-   'The True Ending requires surviving both the 3:33 AM escape and the Bill\'s House finale. You must unhook the trailer before driving away â?this is the step most players miss because the game does not tell you to do it.',
+   'The True Ending requires surviving both the 3:33 AM escape and the Bill\'s House finale. You must unhook the trailer before driving away -this is the step most players miss because the game does not tell you to do it.',
  },
  {
   question: 'Can you get all endings in one playthrough?',
@@ -92,7 +92,7 @@ const faqs = [
  {
   question: 'Is there a secret ending?',
   answer:
-   'There is no hidden/secret ending beyond the 5 documented ones. Some guides refer to the Interstate and Backroads endings as "secret" because they are easy to miss, but they are not hidden â?they are alternate early endings triggered by specific navigation choices.',
+   'There is no hidden/secret ending beyond the 5 documented ones. Some guides refer to the Interstate and Backroads endings as "secret" because they are easy to miss, but they are not hidden -they are alternate early endings triggered by specific navigation choices.',
  },
 ];
 
@@ -103,13 +103,13 @@ export default function FearsToFathomAllEndingsPage() {
 
    <p className="mt-4 text-base text-muted-foreground leading-relaxed">
     Scratch Creek has <strong>5 distinct endings</strong>: one True Ending, two alternate early endings,
-    and two death endings. The True Ending is missable because the game never tells you to unhook the trailer â?    this guide covers every step so you do not miss it.
+    and two death endings. The True Ending is missable because the game never tells you to unhook the trailer -    this guide covers every step so you do not miss it.
    </p>
 
    <ArticleImage
     src={fearsToFathomImages.finalChase}
     alt="Fears to Fathom: Scratch Creek final chase at Bill's House"
-    caption="The True Ending requires unhooking the trailer before driving away â?a step the game never tells you about."
+    caption="The True Ending requires unhooking the trailer before driving away -a step the game never tells you about."
    />
 
    {endings.map((ending, i) => (

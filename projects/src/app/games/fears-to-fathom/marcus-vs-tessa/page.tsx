@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ArticleImage } from '@/components/article-media';
 import { createFearsToFathomMetadata, fearsToFathomImages } from '@/lib/fears-to-fathom';
 
-const title = 'Fears to Fathom Scratch Creek: Marcus vs Tessa â?Which Character Should You Pick?';
+const title = 'Fears to Fathom Scratch Creek: Marcus vs Tessa -Which Character Should You Pick?';
 const description =
  'Marcus vs Tessa character guide for Fears to Fathom: Scratch Creek. Compare scare levels, individual tasks, unique scenes, and which character each player should choose for the best co-op experience.';
 const canonical = '/games/fears-to-fathom/marcus-vs-tessa';
@@ -10,7 +10,7 @@ const canonical = '/games/fears-to-fathom/marcus-vs-tessa';
 export const metadata = createFearsToFathomMetadata({ title, description, canonical, image: fearsToFathomImages.hiding });
 
 const comparisonRows = [
- ['Scare level', 'ð´ Higher â?more dangerous solo sections', 'ð¢ Lower â?tense but less frightening'],
+ ['Scare level', 'ð´ Higher -more dangerous solo sections', 'ð¢ Lower -tense but less frightening'],
  ['Horror style', 'Direct threats, chase sequences, hiding', 'Atmospheric tension, eavesdropping, stealth'],
  ['Key solo scene', 'Church basement towel run. Bathroom encounter at 3:33 AM.', 'Downstairs for water. Overhearing the cult conversation.'],
  ['Chase role', 'Hides under the bed. Unlocks door for Tessa.', 'Knocks on the door. Leads the run to the tunnel.'],
@@ -20,17 +20,17 @@ const comparisonRows = [
 ];
 
 const tessaSoloScenes = [
- 'Bath scene at Miss Julia\'s â?running water while alone in the bathroom.',
- 'Going downstairs for water at 3:33 AM â?overhearing the cult conversation.',
+ 'Bath scene at Miss Julia\'s -running water while alone in the bathroom.',
+ 'Going downstairs for water at 3:33 AM -overhearing the cult conversation.',
  'Signing the guest book at the desk near the stairs.',
  'Getting water from the kitchen while separated from Marcus.',
 ];
 
 const marcusSoloScenes = [
- 'Church basement â?retrieving towels alone in the dark.',
- 'Door locks behind you â?finding the secret tunnel alone.',
- '3:33 AM bathroom encounter â?a man is inside. Do NOT open the door.',
- 'Hiding under the bed â?waiting for Tessa to knock while the stalker checks the wardrobe.',
+ 'Church basement -retrieving towels alone in the dark.',
+ 'Door locks behind you -finding the secret tunnel alone.',
+ '3:33 AM bathroom encounter -a man is inside. Do NOT open the door.',
+ 'Hiding under the bed -waiting for Tessa to knock while the stalker checks the wardrobe.',
 ];
 
 const faqs = [
@@ -42,7 +42,7 @@ const faqs = [
  {
   question: 'Which character has the scarier experience?',
   answer:
-   'Marcus has the scarier individual sections. His solo tasks involve direct threats: the dark church basement, the locked door trap, the bathroom encounter, and hiding from the stalker. Tessa\'s solo sections are more atmospheric â?eavesdropping, stealth, and tension without direct confrontation.',
+   'Marcus has the scarier individual sections. His solo tasks involve direct threats: the dark church basement, the locked door trap, the bathroom encounter, and hiding from the stalker. Tessa\'s solo sections are more atmospheric -eavesdropping, stealth, and tension without direct confrontation.',
  },
  {
   question: 'Can you swap characters mid-game?',
@@ -62,7 +62,7 @@ export default function FearsToFathomMarcusVsTessaPage() {
    <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{title}</h1>
 
    <p className="mt-4 text-base text-muted-foreground leading-relaxed">
-    Scratch Creek requires <strong>two players</strong> â?one as Marcus Reed, one as Tessa Langley.
+    Scratch Creek requires <strong>two players</strong> -one as Marcus Reed, one as Tessa Langley.
     Each character has unique solo scenes, different scare levels, and distinct responsibilities.
     Here is how to decide who plays which role.
    </p>
@@ -73,19 +73,19 @@ export default function FearsToFathomMarcusVsTessaPage() {
      <div className="rounded-lg border border-red-200 bg-red-50 p-5">
       <h3 className="text-base font-bold text-red-900">Pick Marcus if you...</h3>
       <ul className="mt-2 space-y-1 text-sm text-red-800">
-       <li>â?Enjoy direct horror and chase sequences</li>
-       <li>â?Are comfortable with hiding and stealth</li>
-       <li>â?Want the more intense experience</li>
-       <li>â?Have played horror games before</li>
+       <li>-Enjoy direct horror and chase sequences</li>
+       <li>-Are comfortable with hiding and stealth</li>
+       <li>-Want the more intense experience</li>
+       <li>-Have played horror games before</li>
       </ul>
      </div>
      <div className="rounded-lg border border-green-200 bg-green-50 p-5">
       <h3 className="text-base font-bold text-green-900">Pick Tessa if you...</h3>
       <ul className="mt-2 space-y-1 text-sm text-green-800">
-       <li>â?Prefer atmospheric tension over jump scares</li>
-       <li>â?Get scared easily</li>
-       <li>â?Want the slightly safer experience</li>
-       <li>â?Are new to horror games</li>
+       <li>-Prefer atmospheric tension over jump scares</li>
+       <li>-Get scared easily</li>
+       <li>-Want the slightly safer experience</li>
+       <li>-Are new to horror games</li>
       </ul>
      </div>
     </div>
@@ -93,7 +93,7 @@ export default function FearsToFathomMarcusVsTessaPage() {
 
    <ArticleImage
     src={fearsToFathomImages.hiding}
-    alt="Fears to Fathom: Scratch Creek â?Marcus and Tessa hiding during the escape sequence"
+    alt="Fears to Fathom: Scratch Creek -Marcus and Tessa hiding during the escape sequence"
     caption="Marcus (left) faces more direct threats, while Tessa (right) experiences more atmospheric tension."
    />
 

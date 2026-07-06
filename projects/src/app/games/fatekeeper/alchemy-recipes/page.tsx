@@ -196,7 +196,7 @@ export default function FatekeeperAlchemyPage() {
 
  <h3 className="mb-3 text-lg font-bold text-foreground">Known Potion Effects (Custom Brewing)</h3>
  <p className="mb-3 text-sm leading-relaxed text-muted-foreground">
- Fatekeeper uses a <strong>custom ingredient combination system</strong> â?you mix ingredients to
+ Fatekeeper uses a <strong>custom ingredient combination system</strong> -you mix ingredients to
  create potions with multiple effects. Recipe documents found on tables inside the Alchemy Lab
  reveal specific combinations. Use <strong>middle mouse button</strong> to auto-fill ingredients
  from a discovered recipe.
@@ -231,9 +231,9 @@ export default function FatekeeperAlchemyPage() {
  <h3 className="mb-3 text-lg font-bold text-foreground">Ingredient Gathering Tips</h3>
  <div className="mb-4 grid gap-2">
  {[
- 'Collect every mushroom, flower, and gathering node you see during exploration â?inventory is generous.',
+ 'Collect every mushroom, flower, and gathering node you see during exploration -inventory is generous.',
  'The Alchemy Lab itself has scattered materials around the room; check every corner.',
- 'Recipe documents are found on tables inside the Alchemy Lab â?read them to unlock auto-fill combinations.',
+ 'Recipe documents are found on tables inside the Alchemy Lab -read them to unlock auto-fill combinations.',
  'Experiment freely: the custom brewing system encourages trying different ingredient mixes.',
  'Note which effects each ingredient contributes so you can recreate useful potions later.',
  'Early Access caveat: exact ingredient names and drop rates may change between patches.',
