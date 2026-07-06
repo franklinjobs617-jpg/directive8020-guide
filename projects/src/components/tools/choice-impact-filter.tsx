@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Filter } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 type ChoiceGoal =
  | "Best Route"
@@ -61,6 +62,18 @@ export function ChoiceImpactFilter() {
  const [goal, setGoal] = useState<ChoiceGoal>("Best Route");
  const visibleRows = rows.filter((row) => row.goal === goal);
 
+ const hasTrackedUse = useRef(false);
+ function handleGoalChange(next: ChoiceGoal) {
+ setGoal(next);
+ if (!hasTrackedUse.current) {
+ hasTrackedUse.current = true;
+ trackEvent('tool_complete', {
+ tool_name: 'choice_impact_filter',
+ goal: next,
+ });
+ }
+ }
+
  return (
  <section
  aria-labelledby="choice-impact-filter"
@@ -86,7 +99,7 @@ export function ChoiceImpactFilter() {
  <button
  key={item}
  type="button"
- onClick={() => setGoal(item)}
+ onClick={() => handleGoalChange(item)}
  className={`shrink-0 rounded-md border px-3 py-2 text-sm transition-colors ${
  goal === item
  ? "border-border bg-mist text-foreground"

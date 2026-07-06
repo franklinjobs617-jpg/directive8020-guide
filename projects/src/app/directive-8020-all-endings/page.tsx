@@ -5,6 +5,7 @@ import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
+import { MobileStickyToc } from '@/components/mobile-sticky-toc';
 import { SurvivalEndingTracker } from '@/components/tools/survival-ending-tracker';
 import { EndingIndex } from '@/components/tools/ending-index';
 
@@ -230,6 +231,8 @@ export default function AllEndingsPage() {
  maps what each ending name appears to mean and how to test routes
  through the Story Tree.
  </p>
+
+ <MobileStickyToc links={jumpLinks} />
 
  <SearchAnswerPanel
  title="How many Directive 8020 endings are there?"

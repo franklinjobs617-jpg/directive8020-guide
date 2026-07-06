@@ -93,7 +93,7 @@ export default function AboutPage() {
             with game studios.
           </p>
           <p className="mt-3 text-muted-foreground">
-            The site runs Google AdSense and Ezoic to support ongoing
+            The site runs Google AdSense to support ongoing
             maintenance and coverage of new releases. No sponsored content or
             paid placements are published without clear disclosure.
           </p>

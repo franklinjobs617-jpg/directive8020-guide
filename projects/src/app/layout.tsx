@@ -77,55 +77,20 @@ export default function RootLayout({
         {/* ========================================================= */}
         {/* 0. Resource hints for third-party origins */}
         {/* ========================================================= */}
-        <link rel="preconnect" href="https://www.ezojs.com" />
-        <link rel="preconnect" href="https://cmp.gatekeeperconsent.com" />
-        <link rel="preconnect" href="https://the.gatekeeperconsent.com" />
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://ezoicanalytics.com" />
-        {/* ========================================================= */}
-        {/* 1. Ezoic 隐私合规脚本 */}
-        {/* ========================================================= */}
+        {/* Bing Webmaster Tools site verification (unrelated to Ezoic — kept) */}
         <meta name="msvalidate.01" content="AF7A71774B31B882258DD5FDB265DB04" />
-        <Script
-          id="ezoic-cmp-1"
-          src="https://cmp.gatekeeperconsent.com/min.js"
-          strategy="beforeInteractive"
-          data-cfasync="false"
-        />
-        <Script
-          id="ezoic-cmp-2"
-          src="https://the.gatekeeperconsent.com/cmp.min.js"
-          strategy="beforeInteractive"
-          data-cfasync="false"
-        />
-        {/* ========================================================= */}
-        {/* 2. Ezoic 核心初始化脚本 */}
-        {/* ========================================================= */}
-        <Script
-          id="ezoic-sa"
-          src="https://www.ezojs.com/ezoic/sa.min.js"
-          strategy="beforeInteractive"
-        />
-        <Script id="ezoic-analytics-init" strategy="beforeInteractive">
-          {`
-window.ezstandalone = window.ezstandalone || {};
-ezstandalone.cmd = ezstandalone.cmd || [];
-`}
-        </Script>
-        <Script
-          id="ezoic-analytics"
-          src="https://ezoicanalytics.com/analytics.js"
-          strategy="beforeInteractive"
-        />
       </head>
 
       <body className="antialiased min-h-screen flex flex-col">
         {/*
-          ⚠️  AdSense + Ezoic 并存注意事项:
-          如果你已经在用 Ezoic 变现, 暂时不需要同时跑 AdSense 脚本。
-          等 AdSense 审核通过后, 根据你选择的变现平台保留其中一个。
-          目前两个都保留不影响审核, 但 Ezoic 会接管广告位。
+          2026-07-06: Ezoic application was rejected, so the Ezoic scripts
+          that used to run here (Standalone ads script, consent-management
+          scripts, Ezoic Analytics) have been removed entirely — they were
+          dead weight (extra network requests + render-blocking beforeInteractive
+          scripts) with zero ad revenue benefit. AdSense (Auto ads) is the
+          only monetization script now.
         */}
         <Script
           async

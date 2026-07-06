@@ -5,6 +5,7 @@ import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
 import { ActionTable, BlufBox, RelatedGuides, SearchAnswerPanel, SourceCheckTable, StatusPanel } from '@/components/guide-blocks';
+import { MobileStickyToc } from '@/components/mobile-sticky-toc';
 import { TrophyProgressTracker } from '@/components/tools/trophy-progress-tracker';
 import { MyProgressPanel } from '@/components/tools/my-progress-panel';
 
@@ -187,6 +188,8 @@ export default function TrophyGuidePage() {
  achievements are source checked; exact PS5 trophy names and hidden
  unlocks still need platform confirmation.
  </p>
+
+ <MobileStickyToc links={jumpLinks} />
 
  <SearchAnswerPanel
  title="What is the fastest Directive 8020 trophy route?"

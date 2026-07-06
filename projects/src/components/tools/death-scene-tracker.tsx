@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { RotateCcw, Skull } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics';
 
 const STORAGE_KEY = 'd8020:death-scenes:v1';
 
@@ -33,8 +34,24 @@ export function DeathSceneTracker() {
  setReady(true);
  }, []);
 
+ const initialCheckedCount = useRef<number | null>(null);
+ const hasTrackedUse = useRef(false);
+
  useEffect(() => {
- if (ready) window.localStorage.setItem(STORAGE_KEY, JSON.stringify(checked));
+ if (!ready) return;
+ window.localStorage.setItem(STORAGE_KEY, JSON.stringify(checked));
+
+ if (initialCheckedCount.current === null) {
+ initialCheckedCount.current = checked.length;
+ return;
+ }
+ if (!hasTrackedUse.current && checked.length > initialCheckedCount.current) {
+ hasTrackedUse.current = true;
+ trackEvent('tool_complete', {
+ tool_name: 'death_scene_tracker',
+ checked_count: checked.length,
+ });
+ }
  }, [checked, ready]);
 
  return (

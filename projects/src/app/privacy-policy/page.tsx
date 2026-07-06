@@ -3,7 +3,7 @@ import { Breadcrumb } from '@/components/breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'Privacy Policy for Enjoy4Game. Learn how we collect, use, and protect your data, including our use of Google AdSense, Ezoic, and Google Analytics.',
+  description: 'Privacy Policy for Enjoy4Game. Learn how we collect, use, and protect your data, including our use of Google AdSense and Google Analytics.',
   alternates: {
     canonical: '/privacy-policy',
   },
@@ -58,7 +58,7 @@ export default function PrivacyPolicyPage() {
             </li>
             <li>
               <strong className="text-foreground">Advertising data:</strong> ad impressions,
-              clicks, and interaction data collected by Google AdSense and Ezoic for the
+              clicks, and interaction data collected by Google AdSense for the
               purpose of serving and measuring advertisements.
             </li>
             <li>
@@ -111,25 +111,6 @@ export default function PrivacyPolicyPage() {
                   className="underline underline-offset-2"
                 >
                   Google's advertising policy
-                </a>
-                .
-              </p>
-            </div>
-
-            <div className="rounded-lg border border-border bg-mist/40 p-5">
-              <h3 className="mb-2 text-base font-bold text-foreground">Ezoic</h3>
-              <p className="text-sm leading-6 text-muted-foreground">
-                We use Ezoic to optimize ad placement and site performance. Ezoic may use
-                cookies and similar tracking technologies to collect usage data for this
-                purpose. Ezoic is GDPR and CCPA compliant and uses a consent management
-                platform. For more information, see{' '}
-                <a
-                  href="https://www.ezoic.com/privacy-policy/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="underline underline-offset-2"
-                >
-                  Ezoic's Privacy Policy
                 </a>
                 .
               </p>

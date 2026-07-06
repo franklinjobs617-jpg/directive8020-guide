@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { CheckCircle2, RotateCcw, Search, Trophy } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics';
 
 interface TrophyItem {
  id: string;
@@ -114,9 +115,24 @@ export function TrophyProgressTracker() {
  setReady(true);
  }, []);
 
+ const initialCompletedCount = useRef<number | null>(null);
+ const hasTrackedUse = useRef(false);
+
  useEffect(() => {
  if (!ready) return;
  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(completed));
+
+ if (initialCompletedCount.current === null) {
+ initialCompletedCount.current = completed.length;
+ return;
+ }
+ if (!hasTrackedUse.current && completed.length > initialCompletedCount.current) {
+ hasTrackedUse.current = true;
+ trackEvent('tool_complete', {
+ tool_name: 'trophy_progress_tracker',
+ completed_count: completed.length,
+ });
+ }
  }, [completed, ready]);
 
  const completedSet = useMemo(() => new Set(completed), [completed]);

@@ -3,11 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Breadcrumb } from '@/components/breadcrumb';
-import { FAQSection } from '@/components/faq-section';
 import {
  JsonLd,
  generateArticleSchema,
- generateFAQSchema,
  generateVideoGameSchema,
 } from '@/components/json-ld';
 import { RelatedGuides } from '@/components/guide-blocks';
@@ -20,7 +18,6 @@ import {
  getVoidlingBySlug,
  voidlingBoundLastModified,
  voidlingEntries,
- voidlingGuideFaqs,
 } from '@/lib/voidling-bound';
 
 interface PageProps {
@@ -55,6 +52,20 @@ export default async function VoidlingDetailPage({ params }: PageProps) {
  const description = `${entry.name} is a ${entry.rarity} ${entry.species} Voidling with ${entry.element} element data in the current wiki-derived database snapshot.`;
  const imageCoverage = entry.imageStatus === 'exact' ? 'Exact wiki image' : 'Species fallback image';
 
+ // Data-quality fix (2026-07): the wiki scraper that produced
+ // voidling-bound-wiki-data.ts has a known bug affecting ~65 of 294
+ // entries (22%) — for some rows, the `pattern` field captured the source
+ // table's own header row ("Size X Element Y Color Z Eye W Pattern")
+ // instead of the actual pattern name. Rather than edit the 21k-line data
+ // file entry by entry, detect the bug's signature here and fall back to
+ // the same "Not parsed" state used elsewhere on this page for genuinely
+ // missing fields. This is intentionally a template-level fix so it
+ // covers all affected rows in one change and stays correct if the data
+ // file is regenerated from a fresh scrape later.
+ const looksLikeScraperHeaderArtifact = (value: string | null | undefined) =>
+ !!value && /^Size .* Element .* Color .* Eye .* Pattern$/.test(value);
+ const patternValue = looksLikeScraperHeaderArtifact(entry.pattern) ? null : entry.pattern;
+
  return (
  <>
  <JsonLd data={generateVideoGameSchema(voidlingBound)} />
@@ -69,7 +80,11 @@ export default async function VoidlingDetailPage({ params }: PageProps) {
  game: voidlingBound,
  })}
  />
- <JsonLd data={generateFAQSchema(voidlingGuideFaqs.database)} />
+ {/* Data-quality fix (2026-07): removed the per-entry generateFAQSchema
+ call that was here. It rendered the exact same voidlingGuideFaqs.database
+ content and FAQPage schema on all ~294 generated pages verbatim — a
+ genuine duplicate-content pattern, not a per-page value-add. The FAQ
+ content still exists once, on /games/voidling-bound/database. */}
 
  <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
  <Breadcrumb
@@ -127,7 +142,7 @@ export default async function VoidlingDetailPage({ params }: PageProps) {
  ['Element', entry.element],
  ['Color', entry.color || 'Not parsed'],
  ['Eye', entry.eye || 'Not parsed'],
- ['Pattern', entry.pattern || 'Not parsed'],
+ ['Pattern', patternValue || 'Not parsed'],
  ['Size', entry.size || 'Not parsed'],
  ['Primary ability', entry.primaryAbility || 'Not parsed'],
  ['Secondary ability', entry.secondaryAbility || 'Not parsed'],
@@ -276,7 +291,10 @@ export default async function VoidlingDetailPage({ params }: PageProps) {
  </section>
 
  <RelatedGuides guides={getVoidlingBoundRelated(canonical)} />
- <FAQSection faqs={voidlingGuideFaqs.database} />
+ {/* Data-quality fix (2026-07): removed the visible <FAQSection> that was
+ here for the same reason as the schema above — it showed the identical
+ voidlingGuideFaqs.database content on all ~294 generated pages. The FAQ
+ is still visible once, on the /database hub page. */}
  </main>
  </>
  );

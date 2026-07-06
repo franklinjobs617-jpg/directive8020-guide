@@ -82,10 +82,10 @@ export default function TermsPage() {
         <section>
           <h2 className="mb-3 text-xl font-bold text-foreground">5. Advertising</h2>
           <p className="text-muted-foreground">
-            This site displays advertisements served by Google AdSense and Ezoic. These ads
+            This site displays advertisements served by Google AdSense. These ads
             help fund free guide content. We do not control the specific ads displayed and
             are not responsible for third-party advertiser content. Ad targeting is governed
-            by Google's and Ezoic's respective privacy and advertising policies.
+            by Google's respective privacy and advertising policies.
           </p>
         </section>
 

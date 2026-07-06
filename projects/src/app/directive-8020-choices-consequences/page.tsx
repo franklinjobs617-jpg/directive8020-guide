@@ -5,6 +5,7 @@ import { FAQSection } from '@/components/faq-section';
 import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/json-ld';
 import { ArticleImage } from '@/components/article-media';
 import { BlufBox, RelatedGuides, SearchAnswerPanel, SourceCheckTable } from '@/components/guide-blocks';
+import { MobileStickyToc } from '@/components/mobile-sticky-toc';
 import { MimicDetector } from '@/components/tools/mimic-detector';
 import { ChoiceImpactFilter } from '@/components/tools/choice-impact-filter';
 
@@ -190,6 +191,8 @@ export default function ChoicesConsequencesPage() {
  dialogue from decisions that change deaths, trust, mimic exposure,
  Story Tree branches, and endings.
  </p>
+
+ <MobileStickyToc links={jumpLinks} />
 
  <SearchAnswerPanel
  title="Do Directive 8020 choices really matter?"

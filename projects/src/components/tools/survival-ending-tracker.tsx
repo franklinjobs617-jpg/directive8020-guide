@@ -1,8 +1,9 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import { AlertTriangle, RotateCcw, ShieldCheck, Skull, UserRoundCheck } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics';
 import {
  directiveCharacters,
  type DirectiveCharacterId,
@@ -106,6 +107,18 @@ export function SurvivalEndingTracker() {
  evidence: 'safe',
  finale: 'safe',
  });
+
+ const hasTrackedUse = useRef(false);
+ function handleAnswerChange(choiceId: string, value: ChoiceValue) {
+ setAnswers((current) => ({ ...current, [choiceId]: value }));
+ if (!hasTrackedUse.current) {
+ hasTrackedUse.current = true;
+ trackEvent('tool_complete', {
+ tool_name: 'survival_ending_tracker',
+ choice_id: choiceId,
+ });
+ }
+ }
 
  const riskScore = Object.values(answers).reduce((score, value) => {
  if (value === 'fatal') return score + 3;
@@ -273,7 +286,7 @@ export function SurvivalEndingTracker() {
  <button
  key={option.value}
  type="button"
- onClick={() => setAnswers((current) => ({ ...current, [choice.id]: option.value }))}
+ onClick={() => handleAnswerChange(choice.id, option.value)}
  className={`rounded-md border p-3 text-left transition-colors ${
  selected
  ? 'border-border bg-mist text-foreground'
