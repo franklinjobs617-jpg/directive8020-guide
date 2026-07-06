@@ -1668,7 +1668,7 @@ export const palworld: GameConfig = {
   operatingSystem: "Windows 10 64-bit",
   url: "https://store.steampowered.com/app/1623730/Palworld/",
   availability: "https://schema.org/InStock",
-  heroImage: "/best-of/games/palworld.webp",
+  heroImage: "/games/palworld/hero.webp",
   guideLinks: [
     {
       title: "Palworld 1.0 Release Date & Time",

@@ -23,7 +23,8 @@ import { spacecraftImages } from "@/lib/spacecraft";
 import { cursemarkImages } from "@/lib/cursemark";
 import { deltaruneImages } from "@/lib/deltarune";
 import { taskBarHeroImages } from "@/lib/task-bar-hero";
-import { sellLemons, fearsToFathom, growAGarden2, palworld } from "@/lib/games";
+import { sellLemons, fearsToFathom, growAGarden2 } from "@/lib/games";
+import { palworldImages } from "@/lib/palworld";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
@@ -85,7 +86,7 @@ const gameCards = [
  href: "/games/palworld",
  label: "Creature Collector Survival — 1.0 launches July 10",
  body: "1.0 release date and time, system requirements, and save-data guidance for Pocketpair's creature-collector survival game as it leaves Early Access.",
- image: palworld.heroImage,
+ image: palworldImages.card,
  },
  {
  title: "TBH: Task Bar Hero",

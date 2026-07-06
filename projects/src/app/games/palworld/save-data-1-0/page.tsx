@@ -87,7 +87,7 @@ export default function PalworldSaveDataPage() {
       description={description}
       canonical={canonical}
       label="Save Data & 1.0"
-      heroImage={palworldImages.siteHero}
+      heroImage={palworldImages.hero}
       heroAlt="Palworld save data and 1.0 update guidance"
       faqs={faqs}
     >

@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { PageHero } from "@/components/page-hero";
 import { FAQSection } from "@/components/faq-section";
+import { ArticleImage } from "@/components/article-media";
 import {
   JsonLd,
   generateArticleSchema,
@@ -11,6 +12,7 @@ import {
 import { RelatedGuides, SourceCheckTable } from "@/components/guide-blocks";
 import { palworld } from "@/lib/games";
 import {
+  palworldImages,
   palworldLastModified,
   palworldSourceRows,
   getPalworldRelated,
@@ -33,14 +35,11 @@ interface PalworldArticleProps {
   showSources?: boolean;
 }
 
-// NOTE (2026-07-06): only one real image asset exists for Palworld right
-// now (public/best-of/games/palworld.webp, reused for every image slot via
-// palworldImages in src/lib/palworld.ts) — unlike spacecraft-article.tsx,
-// this template does NOT insert extra <ArticleImage> blocks with distinct
-// captions, since repeating the same thumbnail with different captions
-// would look broken. Add real screenshots (Steam press kit / Pocketpair
-// media kit — check usage terms first) and then bring this in line with
-// the other game article templates.
+// UPDATE (2026-07-06): real official Steam screenshots/capsule art were
+// provided and are now in public/games/palworld/ (see palworldImages in
+// src/lib/palworld.ts for the source note). This template now includes one
+// <ArticleImage>, matching the pattern used by other game article
+// templates (e.g. spacecraft-article.tsx).
 export function PalworldArticle({
   title,
   description,
@@ -91,6 +90,12 @@ export function PalworldArticle({
         </p>
 
         {children}
+
+        <ArticleImage
+          src={palworldImages.campfire}
+          alt="Palworld characters and Pals gathered at a campfire crafting station"
+          caption="Palworld blends base-building, crafting, and creature-collecting — Pals help fight, farm, and work alongside players across the Palpagos Islands."
+        />
 
         {showSources && (
           <SourceCheckTable

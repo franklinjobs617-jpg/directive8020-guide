@@ -24,16 +24,17 @@ export const palworldSourceRows = [
   },
 ];
 
-// NOTE: no dedicated Palworld art assets exist in this repo yet — every
-// image slot below points at the one existing asset
-// (public/best-of/games/palworld.webp, added for the Best Free Games
-// listicle). Replace with official Steam press-kit or Pocketpair media-kit
-// assets before/soon after the 1.0 launch; do not source real game
-// screenshots yourself without checking the press-kit's usage terms.
+// Images sourced 2026-07-06 from Palworld's official Steam store page
+// (header/capsule art + official screenshots) — this is the standard,
+// low-risk source game guide/wiki sites use for editorial coverage of a
+// game, as opposed to random user-submitted Reddit/review screenshots.
+// Resized to 1280px wide and converted to webp to match this site's
+// existing image convention (see public/games/palworld/).
 export const palworldImages = {
-  hero: "/best-of/games/palworld.webp",
-  card: "/best-of/games/palworld.webp",
-  siteHero: "/best-of/games/palworld.webp",
+  hero: "/games/palworld/hero.webp",
+  card: "/games/palworld/card.webp",
+  siteHero: "/games/palworld/site-hero.webp",
+  campfire: "/games/palworld/campfire.webp",
 };
 
 export const palworldQuickFacts = [

@@ -104,7 +104,7 @@ export default function PalworldReleaseDatePage() {
       description={description}
       canonical={canonical}
       label="1.0 Release Date"
-      heroImage={palworldImages.siteHero}
+      heroImage={palworldImages.hero}
       heroAlt="Palworld 1.0 release date announcement"
       faqs={faqs}
     >
