@@ -23,11 +23,11 @@ import { spacecraftImages } from "@/lib/spacecraft";
 import { cursemarkImages } from "@/lib/cursemark";
 import { deltaruneImages } from "@/lib/deltarune";
 import { taskBarHeroImages } from "@/lib/task-bar-hero";
-import { sellLemons, fearsToFathom, growAGarden2 } from "@/lib/games";
+import { sellLemons, fearsToFathom, growAGarden2, palworld } from "@/lib/games";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
- "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, idle RPGs, life simulation, Roblox idle tycoon progression, fantasy RPGs, creature collectors, extraction ARPGs, inspection sims, train-based crafting shooters, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, farming simulation, and story-driven games, including TBH: Task Bar Hero, Mistfall Hunter, Sell Lemons, Grow a Garden 2, Voidling Bound, Enginefall, Gate Guard Simulator, Luna Abyss, Fears to Fathom, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+ "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, idle RPGs, life simulation, Roblox idle tycoon progression, fantasy RPGs, creature collectors, extraction ARPGs, inspection sims, train-based crafting shooters, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, farming simulation, and story-driven games, including Palworld, TBH: Task Bar Hero, Mistfall Hunter, Sell Lemons, Grow a Garden 2, Voidling Bound, Enginefall, Gate Guard Simulator, Luna Abyss, Fears to Fathom, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
  title: {
@@ -80,6 +80,13 @@ export const metadata: Metadata = {
 };
 
 const gameCards = [
+ {
+ title: "Palworld",
+ href: "/games/palworld",
+ label: "Creature Collector Survival — 1.0 launches July 10",
+ body: "1.0 release date and time, system requirements, and save-data guidance for Pocketpair's creature-collector survival game as it leaves Early Access.",
+ image: palworld.heroImage,
+ },
  {
  title: "TBH: Task Bar Hero",
  href: "/games/task-bar-hero",

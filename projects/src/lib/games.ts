@@ -1651,3 +1651,43 @@ export const deltarune: GameConfig = {
   },
  ],
 };
+
+export const palworld: GameConfig = {
+  id: "palworld",
+  slugPrefix: "palworld",
+  hubPath: "/games/palworld",
+  name: "Palworld",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "Palworld is Pocketpair's open-world creature-collector survival game where players catch, breed, and work alongside 'Pals' to fight, farm, build, and automate. Version 1.0 leaves Early Access on July 10, 2026 with the World Tree endgame region, a second island, Genetic Recombination breeding, and Server Clustering.",
+  platforms: ["PC via Steam", "PlayStation 5", "Xbox Series X|S / Xbox One", "iOS/Android (mobile)"],
+  genres: ["Creature Collector", "Survival", "Open World", "Multiplayer", "Automation", "Action"],
+  developer: "Pocketpair",
+  publisher: "Pocketpair",
+  releaseDate: "2024-01-19",
+  operatingSystem: "Windows 10 64-bit",
+  url: "https://store.steampowered.com/app/1623730/Palworld/",
+  availability: "https://schema.org/InStock",
+  heroImage: "/best-of/games/palworld.webp",
+  guideLinks: [
+    {
+      title: "Palworld 1.0 Release Date & Time",
+      href: "/games/palworld/1-0-release-date",
+      description:
+        "July 10, 2026 full release: exact time by region, platforms, price, and what changes when Early Access ends.",
+    },
+    {
+      title: "System Requirements",
+      href: "/games/palworld/system-requirements",
+      description:
+        "Official minimum and recommended PC specs, mobile/console support, and whether your rig can run the bigger 1.0 map.",
+    },
+    {
+      title: "Does Palworld 1.0 Wipe Your Save?",
+      href: "/games/palworld/save-data-1-0",
+      description:
+        "Whether existing worlds and dedicated servers carry over to 1.0, and why Pocketpair still recommends a fresh start.",
+    },
+  ],
+};
+
