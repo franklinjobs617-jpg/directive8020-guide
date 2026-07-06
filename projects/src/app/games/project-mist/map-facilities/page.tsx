@@ -335,7 +335,7 @@ export default function ProjectMistMapFacilitiesPage() {
  <ArticleImage
  src={projectMistImages.screenshot4}
  alt="Project: Mist greenhouse and laboratory route image"
- caption="The greenhouse and laboratory path should be treated as progression content with resource checks, not as a casual first detour."
+ caption="The greenhouse and laboratory path should be treated as progression content with replayer references, not as a casual first detour."
  />
  <p>
  The early route points from the train and mech-part objective toward

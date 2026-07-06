@@ -218,7 +218,7 @@ export default function Directive8020ReviewPage() {
  </p>
  </div>
 
- <SourceCheckTable title="Review Source Check" rows={sourceRows} />
+ <SourceCheckTable title="Review Player Reference Notes" rows={sourceRows} />
 
  <div className="rounded-lg border border-border bg-white overflow-hidden my-8">
  <table className="w-full text-sm">
@@ -355,7 +355,7 @@ export default function Directive8020ReviewPage() {
  lists an RTX 2060 or RX 5700 and 16 GB RAM as the minimum baseline,
  with a 40 GB install and SSD recommended. That is not impossible,
  but it is higher than many players expect from a cinematic horror
- game. Steam Deck buyers should wait for verified reports or be ready
+ game. Steam Deck buyers should wait for recent player notes or be ready
  to use low settings and a 30 FPS cap.
  </p>
  <p>

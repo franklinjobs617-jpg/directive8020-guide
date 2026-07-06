@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 
 const faqs = [
  {
- question: 'Is Directive 8020 Steam Deck verified?',
+ question: 'Is Directive 8020 Steam Deck rated for Steam Deck?',
  answer:
- 'At launch planning time, treat Steam Deck support as unverified unless the Steam store shows a Deck rating for your region. The official minimum GPU is RTX 2060 or RX 5700, which is above Steam Deck-class hardware.',
+ 'Treat Steam Deck support as not rated unless the Steam store shows a Deck badge for your region. The official minimum GPU is RTX 2060 or RX 5700, which is above Steam Deck-class hardware.',
  },
  {
  question: 'Can Directive 8020 run on Steam Deck?',
@@ -55,7 +55,7 @@ export default function SteamDeckPage() {
  data={generateArticleSchema({
  title: 'Directive 8020 Steam Deck & Low-End PC Guide',
  description:
- 'Directive 8020 Steam Deck and low-end PC guide with verified status, official specs, best settings, controller support, and troubleshooting.',
+ 'Directive 8020 Steam Deck and low-end PC guide with current Deck status, official specs, best settings, controller support, and troubleshooting.',
  url: '/directive-8020-steam-deck',
  datePublished: '2026-05-12',
  dateModified: '2026-05-12',

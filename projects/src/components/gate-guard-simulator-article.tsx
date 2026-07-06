@@ -88,10 +88,10 @@ export function GateGuardArticle({
  <>
  <ArticleImage
  src={gateGuardImages.decision}
- alt="Gate Guard Simulator source check and decision screen"
+ alt="Gate Guard Simulator player reference and decision screen"
  caption="Because Gate Guard Simulator is not fully released, the source table separates confirmed Steam facts from third-party media and demand signals."
  />
- <SourceCheckTable title="Gate Guard Simulator Sources and Verification" rows={gateGuardSourceRows} />
+ <SourceCheckTable title="Gate Guard Simulator Reference Notes" rows={gateGuardSourceRows} />
  </>
  )}
  <ArticleImage

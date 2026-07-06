@@ -227,7 +227,7 @@ export default function DeluxeEditionPage() {
  </div>
 
  <div className="prose-game">
- <h2>Deluxe Edition Source Check</h2>
+ <h2>Deluxe Edition Player Reference Notes</h2>
  <p>
  Steam localized store data and the official Dark Pictures launch
  post both describe the Deluxe upgrade as a content bundle, not a
@@ -269,7 +269,7 @@ export default function DeluxeEditionPage() {
  </table>
  </div>
 
- <SourceCheckTable title="Price and Deluxe Source Check" rows={sourceRows} />
+ <SourceCheckTable title="Price and Deluxe Player Reference Notes" rows={sourceRows} />
 
  <div className="prose-game">
  <h2>Who Should Get Deluxe?</h2>

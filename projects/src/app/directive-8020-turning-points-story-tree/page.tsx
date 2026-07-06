@@ -313,7 +313,7 @@ export default function TurningPointsPage() {
  </table>
  </div>
 
- <SourceCheckTable title="Decision Tree Source Check" rows={sourceRows} />
+ <SourceCheckTable title="Decision Tree Player Reference Notes" rows={sourceRows} />
 
  <div className="prose-game">
  <h2>Best Route Testing Method for 100% Story Tree</h2>

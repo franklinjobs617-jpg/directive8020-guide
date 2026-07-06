@@ -48,7 +48,7 @@ const faqs = [
 const playableCrew = directiveCharacters;
 
 const widerCrew = [
- ['Noah Mitchell', 'Pilot / flight crew', 'Non-playable or supporting status should be verified in route capture.'],
+ ['Noah Mitchell', 'Pilot / flight crew', 'Track this as a supporting role unless the current credits or platform copy list him as playable.'],
  ['Zoe Anders', 'Science officer', 'Useful for science, samples, and ethical discovery decisions.'],
  ['Tomas Carter', 'Hypersleep technician', 'Useful for hypersleep operations and early ship-state context.'],
  ['Pari Simms', 'Hypersleep technician', 'Useful for crew logs, support systems, and long-journey context.'],
@@ -73,7 +73,7 @@ const sourceChecks = [
 const castStatusRows = [
  ['Playable crew', 'Five Cassiopeia crew members are treated as playable because current platform copy lists them together.'],
  ['Confirmed lead', 'Lashana Lynch as Brianna Young is the strongest role-level cast confirmation.'],
- ['Pending roles', 'Remaining actor rows stay cautious until official credits, platform pages, or trusted coverage confirm the role.'],
+ ['Other roles', 'Remaining actor rows stay cautious until official credits, platform pages, or trusted coverage confirm the role.'],
 ];
 
 export default function CastActorsPage() {
@@ -132,8 +132,8 @@ export default function CastActorsPage() {
  <div className="prose-game">
  <h2>Playable Cast and Character Table</h2>
  <p>
- The table below helps you separate confirmed crew information from
- roles that still need stronger actor confirmation. Each row covers
+ The table below helps you separate current crew information from
+ roles that still need stronger actor details. Each row covers
  the character, current actor status, crew role, and gameplay reason
  the character matters.
  </p>
@@ -205,7 +205,7 @@ export default function CastActorsPage() {
  For gameplay, treat Young as a central route-tracking character.
  Record when she makes command decisions, when she separates from
  other crew members, and when she witnesses information that can
- verify or challenge a later trust choice.
+ support or challenge a later trust choice.
  </p>
 
  <ArticleImage
@@ -249,8 +249,8 @@ export default function CastActorsPage() {
  <p>
  Directive 8020 is not only a cast list. Character identity becomes a
  survival mechanic because the alien threat can mimic its prey. A
- character who appears safe may still need verification through
- memory, location, witnesses, and behavior.
+ character who appears safe may still need a memory, location,
+ witness, or behavior check.
  </p>
  <ul>
  <li><strong>Survival routes:</strong> each playable character can affect deaths, rescues, and late-game options.</li>
@@ -260,12 +260,12 @@ export default function CastActorsPage() {
  <li><strong>Trophy cleanup:</strong> character-specific outcomes often become missable achievements.</li>
  </ul>
 
- <h2>Source and Verification Notes</h2>
+ <h2>Reference Notes</h2>
  <p>
  Cast pages are high-risk for misinformation because preview sites,
  databases, and platform pages may update at different times. This
- guide uses verification status labels so role-level claims can be
- updated without rewriting the whole page.
+ guide keeps role-level claims cautious so updates can be folded in
+ without rewriting the whole page.
  </p>
  </div>
 
@@ -317,7 +317,7 @@ export default function CastActorsPage() {
  </div>
 
  <div className="prose-game">
- <h2>Sources Used for Cast Verification</h2>
+ <h2>Cast Reference Links</h2>
  <p>
  These links support the cast, character, and platform claims on this
  page. Actor rows marked as pending should not be upgraded until one

@@ -129,24 +129,24 @@ export default function ThickAsThievesSoloCoopPage() {
  <tr className="border-b border-border bg-mist">
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Feature</th>
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current answer</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">Confidence</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player note</th>
  </tr>
  </thead>
  <tbody>
  {[
- ['Solo play', 'Confirmed. Official FAQ says the game can be played solo.', 'Verified'],
- ['Online co-op', 'Confirmed. Steam lists co-op and online co-op.', 'Verified'],
- ['Player count', 'Safest answer: two-player partner co-op based on official FAQ wording.', 'Working'],
+ ['Solo play', 'Confirmed. Official FAQ says the game can be played solo.', 'Listed in official FAQ'],
+ ['Online co-op', 'Confirmed. Steam lists co-op and online co-op.', 'Listed on Steam'],
+ ['Player count', 'Safest answer: two-player partner co-op based on official FAQ wording.', 'Plan around two players'],
  ['Split screen', 'Not confirmed in current public materials.', 'Not confirmed'],
  ['Couch co-op', 'Not confirmed. Official wording focuses on online co-op.', 'Not confirmed'],
  ['Local co-op', 'Not confirmed. Public materials focus on online co-op.', 'Not confirmed'],
  ['Crossplay', 'Not confirmed in current public materials.', 'Not confirmed'],
  ['PS5 co-op', 'No PS5 version is confirmed.', 'Not confirmed'],
- ].map(([feature, answer, confidence]) => (
+ ].map(([feature, answer, note]) => (
  <tr key={feature} className="border-b border-border last:border-0">
  <td className="px-4 py-3 font-semibold text-foreground">{feature}</td>
  <td className="px-4 py-3 text-muted-foreground">{answer}</td>
- <td className="px-4 py-3 text-muted-foreground">{confidence}</td>
+ <td className="px-4 py-3 text-muted-foreground">{note}</td>
  </tr>
  ))}
  </tbody>

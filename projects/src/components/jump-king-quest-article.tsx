@@ -105,11 +105,11 @@ export function JumpKingQuestArticle({
  <>
  <ArticleImage
  src={jumpKingQuestImages.phantom}
- alt="JUMP KING QUEST official source check image"
+ alt="JUMP KING QUEST official player reference image"
  caption="Use official Steam pages, Steam news, and player discussions for release timing, platform labels, feature support, and launch-week questions."
  />
  <SourceCheckTable
- title="Official Links and Source Checks"
+ title="Official Links and Player Notes"
  rows={jumpKingQuestSourceRows}
  />
  </>

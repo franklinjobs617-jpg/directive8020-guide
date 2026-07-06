@@ -83,7 +83,7 @@ export default function FearsToFathomWorthItPage() {
    </div>
 
    <p className="mt-10 text-xs text-muted-foreground">
-    Data source: Steam store page, Steam Community discussions, Fears to Fathom Fandom Wiki. Last updated June 11, 2026.
+    Reference note: Steam store page, Steam Community discussions, Fears to Fathom Fandom Wiki. Last updated June 11, 2026.
    </p>
   </main>
  );

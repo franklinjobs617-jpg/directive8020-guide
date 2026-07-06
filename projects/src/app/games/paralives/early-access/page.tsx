@@ -71,7 +71,7 @@ export default function ParalivesEarlyAccessPage() {
  </BlufBox>
 
  <section className="prose-game">
- <h2>What to Verify Before Starting a Long Save</h2>
+ <h2>What to Check Before Starting a Long Save</h2>
  <ArticleImage
  src={paralivesImages.town}
  alt="Paralives Early Access open world town screenshot"

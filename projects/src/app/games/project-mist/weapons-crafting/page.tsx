@@ -135,7 +135,7 @@ export default function ProjectMistWeaponsPage() {
  >
  <BlufBox title="Gear Rule">
  <p>
- <strong>Do not build around unverified perfect-loadout claims.</strong>{" "}
+ <strong>Do not build around perfect-loadout claims that can mislead players.</strong>{" "}
  Build around the next route: facility, boss, co-op run, or train
  return. The Gravity Gun, ammo, healing, repairs, and inventory space
  matter together.
@@ -276,7 +276,7 @@ export default function ProjectMistWeaponsPage() {
  </section>
 
  <section className="mt-10">
- <h2 className="mb-4 text-2xl font-bold text-foreground">What to Verify in Your Build</h2>
+ <h2 className="mb-4 text-2xl font-bold text-foreground">What to Check in Your Build</h2>
  <p className="mb-4 leading-relaxed text-muted-foreground">
  Project: Mist is exactly the type of Early Access game where bad
  guides become harmful: a recipe changes, a weapon is tuned, an

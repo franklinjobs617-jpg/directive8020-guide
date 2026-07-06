@@ -43,7 +43,7 @@ const faqs = [
  'Yes. Steam lists Mina the Hollower as single-player and does not list co-op or multiplayer.',
  },
  {
- question: 'Is Mina the Hollower Steam Deck Verified?',
+ question: 'Is Mina the Hollower Steam Deck compatibility?',
  answer:
  'Check the live Steam Deck badge before buying for handheld play, then test text size, controller comfort, battery, and suspend/resume in a short first session.',
  },
@@ -137,7 +137,7 @@ export default function MinaHubPage() {
  <ArticleImage
  src={minaImages.background}
  alt="Mina the Hollower guide hub background"
- caption="Start with the guide that matches your current problem: first-hour survival, trophies, platform checks, or buying confidence."
+ caption="Start with the guide that matches your current problem: first-hour survival, trophies, platform checks, or buying clarity."
  />
  <div className="grid gap-4 sm:grid-cols-2">
  {minaTheHollower.guideLinks.map((guide) => (
@@ -272,7 +272,7 @@ export default function MinaHubPage() {
  <thead>
  <tr className="border-b border-border bg-mist">
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Check</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">What to verify</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">What to check</th>
  </tr>
  </thead>
  <tbody>
@@ -288,3 +288,4 @@ export default function MinaHubPage() {
  </MinaArticle>
  );
 }
+

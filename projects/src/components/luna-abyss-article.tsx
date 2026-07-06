@@ -123,10 +123,10 @@ export function LunaAbyssArticle({
  <>
  <ArticleImage
  src={lunaAbyssImages.screenshot6}
- alt="Luna Abyss source check and platform reference screenshot"
+ alt="Luna Abyss player reference and platform reference screenshot"
  caption="Steam, Xbox, official site, review pages, and player reports should be separated so current facts do not get mixed with community troubleshooting signals."
  />
- <SourceCheckTable title="Luna Abyss Sources and Status" rows={lunaAbyssSourceRows} />
+ <SourceCheckTable title="Luna Abyss Reference Notes" rows={lunaAbyssSourceRows} />
  </>
  )}
 

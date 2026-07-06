@@ -59,12 +59,12 @@ const faqs = [
  {
  question: 'Does Romestead have crossplay?',
  answer:
- 'Crossplay is not confirmed right now because PC via Steam is the only verified public platform.',
+ 'Crossplay is not listed right now because PC via Steam is the only public platform covered here.',
  },
  {
  question: 'Who should host a Romestead co-op world?',
  answer:
- 'Host-save behavior needs launch testing. Until it is verified, let the most reliable player host and avoid switching machines without checking save behavior.',
+ 'Let the most reliable player host the first long world, then test save behavior before switching machines.',
  },
 ];
 
@@ -123,15 +123,15 @@ export default function RomesteadMultiplayerCoopPage() {
  <tr className="border-b border-border bg-mist">
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Feature</th>
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current answer</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">Confidence</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player note</th>
  </tr>
  </thead>
  <tbody>
- {romesteadCoopRows.map(([feature, answer, confidence]) => (
+ {romesteadCoopRows.map(([feature, answer, note]) => (
  <tr key={feature} className="border-b border-border last:border-0">
  <td className="px-4 py-3 font-semibold text-foreground">{feature}</td>
  <td className="px-4 py-3 text-muted-foreground">{answer}</td>
- <td className="px-4 py-3 text-muted-foreground">{confidence}</td>
+ <td className="px-4 py-3 text-muted-foreground">{note}</td>
  </tr>
  ))}
  </tbody>
@@ -179,7 +179,7 @@ export default function RomesteadMultiplayerCoopPage() {
  <p>
  Split-screen and couch co-op are not in the current Steam feature
  labels, even though LAN Co-op is. Crossplay is also not confirmed
- because only PC via Steam is verified right now. Do not assume
+ because only PC via Steam is listed right now. Do not assume
  couch co-op or crossplay works until the developer announces it or
  Steam updates its feature list.
  </p>
@@ -201,7 +201,7 @@ export default function RomesteadMultiplayerCoopPage() {
  <p>
  Console versions (Xbox, PlayStation) are not confirmed in current
  official store data. Crossplay is therefore not confirmed, because
- there is no second verified platform to play across. Wait for an
+ there is no second listed platform to play across. Wait for an
  official announcement before buying for cross-platform play.
  </p>
  </section>

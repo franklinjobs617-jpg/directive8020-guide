@@ -18,7 +18,7 @@ export const metadata = createFatekeeperMetadata({
 
 const faqs = [
  {
- question: "Is Fatekeeper Steam Deck Verified?",
+ question: "Is Fatekeeper Steam Deck compatibility?",
  answer:
  "Treat Steam Deck status as unconfirmed until the live compatibility badge and stable player reports are available.",
  },

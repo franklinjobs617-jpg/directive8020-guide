@@ -307,7 +307,7 @@ export function TrophyProgressTracker() {
 
  <div className="border-t border-border p-4">
  <p className="text-xs leading-relaxed text-muted-foreground">
- Found a trophy mismatch or a newly verified unlock condition? Email{' '}
+ Found a trophy mismatch or a new unlock condition? Email{' '}
  <a href="mailto:stephen@enjoy4game.com" className="text-foreground underline underline-offset-4">
  stephen@enjoy4game.com
  </a>{' '}

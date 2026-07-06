@@ -66,7 +66,7 @@ const platformRows = [
  ['Windows 10/11', 'Confirmed in the minimum system requirements.', 'Check your CPU, RAM, GPU, and storage against the system requirements page.'],
  ['Xbox', 'Not confirmed by the current Steam listing or official store data.', 'Do not wait on an Xbox version unless Chicken Launcher announces one.'],
  ['PS5 / PlayStation', 'Not confirmed by the current Steam listing or official store data.', 'Treat PS5 and PlayStation as unannounced until an official store page appears.'],
- ['Console version', 'Not confirmed.', 'Use PC Steam as the only verified platform for now.'],
+ ['Console version', 'Not confirmed.', 'Use PC Steam as the only public platform for now.'],
  ['Cross-play', 'Not confirmed; do not assume cross-platform co-op.', 'Plan co-op only around Steam PC players until cross-platform support is announced.'],
 ];
 
@@ -79,7 +79,7 @@ const searchIntentRows = [
  },
  {
  query: 'Project: Mist Xbox',
- answer: 'Xbox is not confirmed by current official store data. Treat PC Steam as the verified platform.',
+ answer: 'Xbox is not confirmed by current official store data. Treat PC Steam as the current platform.',
  href: '#platform-status',
  label: 'Console',
  },
@@ -186,7 +186,7 @@ export default function ProjectMistReleaseDatePage() {
  <thead>
  <tr className="border-b border-border bg-mist">
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Item</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">Verified snapshot</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current status</th>
  </tr>
  </thead>
  <tbody>

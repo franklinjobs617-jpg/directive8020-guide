@@ -94,7 +94,7 @@ export function StarminerArticle({
  caption="Starminer is an Early Access systems sandbox, so release timing, price, reviews, compatibility, and planned features should be checked against official sources before making long-session decisions."
  />
  <SourceCheckTable
- title="Starminer Official Links and Source Checks"
+ title="Starminer Official Links and Player Notes"
  rows={starminerSourceRows}
  />
  </>

@@ -160,7 +160,7 @@ export default function StarminerWorthItPage() {
  </div>
 
  <section className="prose-game">
- <h2>What to Verify Before Buying</h2>
+ <h2>What to Check Before Buying</h2>
  <p>
  Start with the{" "}
  <Link href="/games/starminer/release-date">release date page</Link>{" "}

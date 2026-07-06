@@ -19,12 +19,12 @@ const faqs = [
  {
  question: 'Does Directive 8020 have a trophy list?',
  answer:
- 'Directive 8020 has Steam achievements listed on its Steam page, but the full public PS5 trophy list and individual trophy names should be verified from platform data before publishing exact names.',
+ 'Directive 8020 has Steam achievements listed on its Steam page. For PS5, use the live PlayStation trophy list before relying on exact trophy names.',
  },
  {
  question: 'Does Directive 8020 have a Platinum trophy on PS5?',
  answer:
- 'A PS5 Platinum trophy should be treated as pending verification until the PlayStation trophy list is captured from a trusted platform source. Use this page as a Platinum roadmap, not as a final name list.',
+ 'Use this page as a Platinum roadmap, then check the current PlayStation trophy list before relying on the final PS5 Platinum name.',
  },
  {
  question: 'Are Directive 8020 achievements missable?',
@@ -47,13 +47,13 @@ const platformRows = [
  ['Steam achievements', 'Confirmed store feature', 'Steam lists Steam Achievements for Directive 8020. Exact public names still need platform capture.'],
  ['PS5 trophies', 'Needs capture', 'Use PlayStation trophy data before writing exact Bronze, Silver, Gold, or Platinum names.'],
  ['Xbox achievements', 'Needs capture', 'Use Xbox achievement data before writing exact score values or unlock names.'],
- ['Platinum trophy', 'Needs capture', 'Plan for a Platinum route, but do not claim the final PS5 Platinum name until verified.'],
+ ['Platinum trophy', 'Needs capture', 'Plan for a Platinum route, then check the live PS5 trophy list for the final Platinum name.'],
 ];
 
-const verificationRows = [
+const trophyRules = [
  ['Exact trophy name', 'Wait for platform list capture', 'Avoid treating a Bronze, Silver, Gold, Platinum, or achievement name as final without platform data.'],
- ['Unlock condition', 'Use in-game or platform evidence', 'Write the exact action only when the condition is visible in platform data or verified play.'],
- ['Missable status', 'Verify by route testing', 'A trophy is missable only when a Story Tree branch, death, relationship, or collectible state can block it.'],
+ ['Unlock condition', 'Use the live game or platform list', 'Write the exact action only when the condition is visible in the game or on a platform list.'],
+ ['Missable status', 'Test from route branches', 'A trophy is missable only when a Story Tree branch, death, relationship, or collectible state can block it.'],
  ['Platinum time', 'Estimate after list capture', 'Avoid hour estimates until the final trophy count, collectibles, and replay requirements are known.'],
 ];
 
@@ -102,8 +102,8 @@ const sources = [
 const updateLog = [
  ['2026-05-12', 'Added a trophy and achievement hub for Steam, PS5, Xbox, and Platinum planning.'],
  ['2026-05-13', 'Updated collectible signal to 65 total collectibles: 50 normal Secrets, 10 Simms Recordings, and 5 O Death Secrets.'],
- ['2026-05-12', 'Added verified completion signals: 5 substantial endings, 44 death scenes, and 8 episodes.'],
- ['2026-05-12', 'Marked exact PS5 trophy names, Xbox achievement values, and Platinum name as pending platform capture.'],
+ ['2026-05-12', 'Added completion signals: 5 substantial endings, 44 death scenes, and 8 episodes.'],
+ ['2026-05-12', 'Marked exact PS5 trophy names, Xbox achievement values, and Platinum name as live-list items.'],
 ];
 
 export default function TrophyListPage() {
@@ -132,16 +132,16 @@ export default function TrophyListPage() {
  <p className="text-lg text-muted-foreground leading-relaxed mb-8">
  This Directive 8020 trophy list hub tracks Steam achievements, PS5
  trophies, Xbox achievements, Platinum planning, missable routes, and
- Story Tree cleanup. It separates verified platform facts from trophy
- names that still need direct capture.
+ Story Tree cleanup. It separates current platform features from trophy
+ names that should be checked on live platform lists.
  </p>
 
  <BlufBox>
  <p>
  <strong>Short answer:</strong> Steam lists achievements for
  Directive 8020. The full PS5 trophy list, Xbox achievement list,
- exact trophy names, and Platinum name should be verified from
- platform data before they are treated as final.
+ exact trophy names, and Platinum name should be checked on live
+ platform lists before they are treated as final.
  </p>
  </BlufBox>
 
@@ -252,11 +252,11 @@ export default function TrophyListPage() {
  caption="Collectible cleanup should be tracked by episode, room, nearby objective, and whether the item persists after a Turning Point rewind."
  />
 
- <h2>Evidence and Source Notes</h2>
+ <h2>Platform Notes</h2>
  <p>
- This page uses source-aware status labels so players and AI systems
- can distinguish confirmed facts from checklist planning. Exact
- trophy names should be added only after platform-level verification.
+ This page keeps platform facts separate from route planning. Exact
+ trophy names should be added only after the live platform lists are
+ available to players.
  </p>
  </div>
 
@@ -265,12 +265,12 @@ export default function TrophyListPage() {
  <thead>
  <tr className="border-b border-border bg-mist">
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Claim type</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">Verification rule</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player rule</th>
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Publishing note</th>
  </tr>
  </thead>
  <tbody>
- {verificationRows.map(([claim, rule, note]) => (
+ {trophyRules.map(([claim, rule, note]) => (
  <tr key={claim} className="border-b border-border last:border-0">
  <td className="px-4 py-3 font-semibold text-foreground">{claim}</td>
  <td className="px-4 py-3 text-muted-foreground">{rule}</td>
@@ -285,7 +285,7 @@ export default function TrophyListPage() {
  <h2>Update Log</h2>
  <p>
  The trophy list should change as platform data becomes available.
- Each update should name what changed, what source verified it, and
+ Each update should name what changed, where players can check it, and
  whether old route advice needs revision.
  </p>
  </div>
@@ -310,9 +310,9 @@ export default function TrophyListPage() {
  </div>
 
  <div className="prose-game">
- <h2>Sources Used for Trophy Verification</h2>
+ <h2>Reference Links for Trophy Planning</h2>
  <p>
- These links are used to verify platform features, completion scale,
+ These links are used for platform features, completion scale,
  and route systems. They should be checked again before exact trophy
  names or unlock requirements are published.
  </p>
@@ -323,7 +323,7 @@ export default function TrophyListPage() {
  <thead>
  <tr className="border-b border-border bg-mist">
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Source</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">What it verifies</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">What it helps with</th>
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Link</th>
  </tr>
  </thead>
@@ -334,7 +334,7 @@ export default function TrophyListPage() {
  <td className="px-4 py-3 text-muted-foreground">{use}</td>
  <td className="px-4 py-3">
  <a href={href} className="text-foreground underline underline-offset-4 hover:text-foreground" target="_blank" rel="noreferrer">
- Open source
+ Open link
  </a>
  </td>
  </tr>

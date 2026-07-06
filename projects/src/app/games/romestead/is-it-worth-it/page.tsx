@@ -44,7 +44,7 @@ const faqs = [
  {
  question: 'Should Steam Deck users buy Romestead now?',
  answer:
- 'Steam Deck-first users should wait for verified compatibility or strong launch reports because Deck support is not confirmed at this check.',
+ 'Steam Deck-first users should wait for clear compatibility or strong launch reports because Deck support is not confirmed at this check.',
  },
  {
  question: 'Is Romestead good for solo players?',

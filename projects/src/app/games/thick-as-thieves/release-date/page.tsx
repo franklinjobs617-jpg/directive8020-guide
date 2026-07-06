@@ -131,7 +131,7 @@ export default function ThickAsThievesReleaseDatePage() {
  </div>
 
  <section className="prose-game">
- <h2 id="launch-day-verification">Launch-Day Verification</h2>
+ <h2 id="launch-day-verification">Launch-Day Checklist</h2>
  <ArticleImage
  src={thickAsThievesImages.screenshot4}
  alt="Thick As Thieves launch verification image"

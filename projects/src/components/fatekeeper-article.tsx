@@ -88,7 +88,7 @@ export function FatekeeperArticle({
 
  {showSources && (
  <SourceCheckTable
- title="Official Links and Source Checks"
+ title="Official Links and Player Notes"
  rows={fatekeeperSourceRows}
  />
  )}

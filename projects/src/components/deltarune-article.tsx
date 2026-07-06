@@ -109,7 +109,7 @@ export function DeltaruneArticle({
        caption="This guide separates official facts from working route notes. Official pages cover chapter status, platforms, price, demo saves, and future chapter plans; route-specific secrets need gameplay proof before they are treated as final."
       />
       <SourceCheckTable
-       title="Official Links and Source Checks"
+       title="Official Links and Player Notes"
        rows={deltaruneSourceRows}
       />
      </>

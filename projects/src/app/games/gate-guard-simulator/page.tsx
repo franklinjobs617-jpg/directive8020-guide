@@ -13,7 +13,7 @@ import {
 
 const title = 'Gate Guard Simulator Release Date, Playtest, Platforms & Gameplay';
 const description =
- 'Gate Guard Simulator is a 2026 Steam coming-soon inspection sim with a Playtest request. Check release status, PC specs, platforms, gameplay, and source-verified facts.';
+ 'Gate Guard Simulator is a 2026 Steam coming-soon inspection sim with a Playtest request. Check release status, PC specs, platforms, gameplay, and store facts.';
 const canonical = '/games/gate-guard-simulator';
 
 export const metadata = createGateGuardMetadata({
@@ -55,7 +55,7 @@ const searchIntentRows = [
  {
  query: 'Gate Guard Simulator release date',
  answer:
- 'Steam official data currently gives a 2026 release window, not a precise day. Treat exact-date claims as unverified unless Steam or the publisher updates the page.',
+ 'Steam official data currently gives a 2026 release window, not a precise day. Treat exact-date claims as not final unless Steam or the publisher updates the page.',
  href: '#release-status',
  label: 'Release',
  },
@@ -147,10 +147,10 @@ export default function GateGuardSimulatorPage() {
  real search intent.
  </p>
  <p>
- The correct content model is therefore a pre-release verification hub.
- It should give a direct answer in the first screen, separate official
- facts from third-party estimates, show screenshots from the official
- Steam assets, and explain what should wait until players can test a
+ The useful page for players right now is a pre-release status hub.
+ It should give a direct answer in the first screen, separate store
+ facts from estimates, show screenshots from the official
+ Steam assets, and explain what should wait until players can try a
  stable build. This is also safer for future updates: when the release
  date becomes precise, the Playtest changes, or the platform list
  expands, this page can be updated without undoing fabricated guide

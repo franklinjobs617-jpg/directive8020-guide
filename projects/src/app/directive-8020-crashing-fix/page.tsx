@@ -224,7 +224,7 @@ export default function CrashingFixPage() {
  <thead>
  <tr className="border-b border-border bg-mist">
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Issue players search for</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">Evidence level</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Fix basis</th>
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">How to use this guide</th>
  </tr>
  </thead>
@@ -325,7 +325,7 @@ export default function CrashingFixPage() {
  </ul>
  </div>
 
- <SourceCheckTable title="Bug and Fix Source Check" rows={sourceRows} />
+ <SourceCheckTable title="Bug and Fix Player Reference Notes" rows={sourceRows} />
 
  <FAQSection faqs={faqs} />
  </article>

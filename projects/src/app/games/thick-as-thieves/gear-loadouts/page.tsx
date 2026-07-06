@@ -49,7 +49,7 @@ const faqs = [
  {
  question: 'Are gear stats confirmed from live testing?',
  answer:
- 'Exact cooldowns and unlock costs need in-game verification after launch. The tier list here is based on role utility analysis - information tools are universally useful, commitment tools are situational. Let live testing confirm exact numbers.',
+ 'Exact cooldowns and unlock costs need playthrough checks after launch. The tier list here is based on role utility analysis - information tools are universally useful, commitment tools are situational. Let live testing confirm exact numbers.',
  },
 ];
 

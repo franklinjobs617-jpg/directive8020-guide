@@ -134,7 +134,7 @@ export default function OverviewPage() {
  </table>
  </div>
 
- <SourceCheckTable title="Overview Source Check" rows={sourceRows} />
+ <SourceCheckTable title="Overview Player Reference Notes" rows={sourceRows} />
 
  <div className="prose-game">
  <h2>The Premise: A Colony Mission Becomes a Trust Test</h2>

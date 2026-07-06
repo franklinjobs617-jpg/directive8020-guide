@@ -261,7 +261,7 @@ export default function DeltaruneHubPage() {
      videos, and forum discussions are useful for player pain and route
      discovery, but they should not replace official facts. For Chapter 5
      secrets, this site uses community demand as a signal and keeps any
-     unverified route details labeled until a stable screenshot or timestamped
+     unfinished route details labeled until a stable screenshot or timestamped
      video confirms them.
     </p>
     <div className="not-prose grid gap-3 sm:grid-cols-2">

@@ -139,7 +139,7 @@ export default function HomePage() {
           {
             question: 'Is Directive 8020 on Steam Deck?',
             answer:
-              'Directive 8020 has Steam Deck support. Check the Steam Deck guide for verified settings, handheld expectations, and low-end PC advice.',
+              'Directive 8020 has Steam Deck support. Check the Steam Deck guide for settings, handheld expectations, and low-end PC advice.',
           },
         ])}
       />

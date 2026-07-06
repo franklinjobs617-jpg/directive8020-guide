@@ -41,7 +41,7 @@ const tips = [
  'Turn on subtitles and set brightness so dark corridors are readable without washing out the image.',
  'Use headphones if possible; dialogue, sound cues, and atmosphere matter in a mimic horror game.',
  'Explore before leaving safe areas, especially terminals, crew rooms, labs, and medical spaces.',
- 'Treat every isolated character as unverified until the story gives evidence.',
+ 'Treat every isolated character as risky until the story gives you a reason to trust them.',
  'Do not mash through dialogue; small contradictions can become survival clues.',
  'Keep relationships stable unless you have a concrete reason to accuse someone.',
  'Check the Story Tree after each chapter, even if you do not plan to rewind yet.',

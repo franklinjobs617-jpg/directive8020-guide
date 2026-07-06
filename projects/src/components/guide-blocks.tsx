@@ -212,17 +212,20 @@ export function RelatedGuides({ guides }: RelatedGuidesProps) {
  );
 }
 
-export function SourceCheckTable({ title = 'Source Notes', rows }: SourceCheckTableProps) {
+export function SourceCheckTable({ title = 'Reference Notes', rows }: SourceCheckTableProps) {
+ const displayTitle = /source|check|verification|verified/i.test(title)
+ ? 'Player Reference Notes'
+ : title;
+
  return (
  <section className="my-8">
- <h2 className="mb-3 text-xl font-bold tracking-[-0.22px] text-foreground">{title}</h2>
+ <h2 className="mb-3 text-xl font-bold tracking-[-0.22px] text-foreground">{displayTitle}</h2>
  <div className="overflow-x-auto rounded-lg border border-border bg-white">
  <table className="w-full text-sm">
  <thead>
  <tr className="border-b border-border bg-mist">
  <th className="px-4 py-3 text-left font-semibold text-foreground">Player question</th>
- <th className="px-4 py-3 text-left font-semibold text-foreground">Source</th>
- <th className="px-4 py-3 text-left font-semibold text-foreground">Status</th>
+ <th className="px-4 py-3 text-left font-semibold text-foreground">Where to check</th>
  <th className="px-4 py-3 text-left font-semibold text-foreground">Player note</th>
  </tr>
  </thead>
@@ -234,11 +237,6 @@ export function SourceCheckTable({ title = 'Source Notes', rows }: SourceCheckTa
  <a href={row.href} target="_blank" rel="noreferrer" className="font-medium text-foreground underline decoration-border hover:decoration-dribbble-pink">
  {row.source}
  </a>
- </td>
- <td className="px-4 py-3">
- <span className={`inline-flex rounded px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.12px] ${statusStyles[row.status]}`}>
- {statusLabels[row.status]}
- </span>
  </td>
  <td className="px-4 py-3 text-muted-foreground">{row.note}</td>
  </tr>

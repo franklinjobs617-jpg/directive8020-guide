@@ -132,7 +132,7 @@ export default function StealthGuidePage() {
  <strong>Stealth is a survival system, not flavor.</strong> Move
  slowly in threat zones, break line of sight before reacting, and
  record whether failures cause injury, death, separation, or route
- changes. Exact noise values still need in-game verification.
+ changes. Exact noise values still need playthrough checks.
  </p>
  </BlufBox>
 

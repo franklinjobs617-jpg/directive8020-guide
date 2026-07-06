@@ -54,12 +54,12 @@ const faqs = [
  {
  question: 'Is Romestead Steam Deck verified?',
  answer:
- 'Steam Deck Verified status is not confirmed at this check, so Deck-first players should wait for launch testing.',
+ 'Steam Deck compatibility status is not confirmed at this check, so Deck-first players should wait for launch testing.',
  },
  {
  question: 'Can Romestead run on Steam Deck?',
  answer:
- 'Romestead may be playable because the PC specs are modest, but Steam Deck Verified status is not confirmed. Check text size, controls, building placement, and co-op performance before committing.',
+ 'Romestead may be playable because the PC specs are modest, but Steam Deck compatibility status is not confirmed. Check text size, controls, building placement, and co-op performance before committing.',
  },
  {
  question: 'Does Romestead need internet?',
@@ -92,7 +92,7 @@ export default function RomesteadSystemRequirementsPage() {
 
  <SearchAnswerPanel
  title="Romestead System Requirements Quick Answer"
- answer="Minimum: Windows 10, Intel Core i5, 8 GB RAM, DirectX 11, broadband internet, 2 GB storage. Recommended: Intel Core i7, 16 GB RAM, 4 GB storage. Steam Deck Verified is not confirmed."
+ answer="Minimum: Windows 10, Intel Core i5, 8 GB RAM, DirectX 11, broadband internet, 2 GB storage. Recommended: Intel Core i7, 16 GB RAM, 4 GB storage. Steam Deck compatibility is not confirmed."
  intentRows={rmSpecSearchIntent}
  jumpLinks={rmSpecJumpLinks}
  />
@@ -144,7 +144,7 @@ export default function RomesteadSystemRequirementsPage() {
  caption="Handheld and controller comfort should be verified after unlock because store feature labels alone do not prove readable UI, stable controls, or late-game comfort."
  />
  <p>
- If Steam Deck is your main platform, wait for verified compatibility
+ If Steam Deck is your main platform, wait for clear compatibility
  or strong player reports. Check text readability, camera control,
  inventory navigation, building placement, combat responsiveness, and
  battery-friendly settings. If co-op is your main reason to buy, test

@@ -37,7 +37,7 @@ const clues: Clue[] = [
  id: 'pushes-split',
  label: 'Pushes the group to split up',
  weight: 2,
- why: 'Forced separation makes witnesses, rescue routes, and verification harder.',
+ why: 'Forced separation makes witnesses, rescue routes, and safe identity checks harder.',
  },
  {
  id: 'avoids-evidence',
@@ -141,7 +141,7 @@ export function MimicDetector() {
  // Fire one GA4 custom event the first time the user actually uses the
  // tool (checks at least one clue for any character), not on every
  // checkbox click. This is the concrete "tool completion" signal referenced
- // in the 网站迭代指南 section 6.1 — mark `tool_complete` as a Key event in
+ // in the ç½ç«è¿­ä»£æå section 6.1 â?mark `tool_complete` as a Key event in
  // GA4 Admin > Events once it starts appearing.
  const hasTrackedUse = useRef(false);
  useEffect(() => {

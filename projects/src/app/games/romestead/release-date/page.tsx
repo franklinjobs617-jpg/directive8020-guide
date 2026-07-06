@@ -49,7 +49,7 @@ const faqs = [
  {
  question: 'Is Romestead Steam Deck verified?',
  answer:
- 'Steam Deck Verified support is not confirmed at this check, so Deck-first buyers should wait for launch reports or an official compatibility label.',
+ 'Steam Deck Support is not confirmed at this check, so Deck-first buyers should wait for launch reports or an official compatibility label.',
  },
 ];
 
@@ -133,7 +133,7 @@ export default function RomesteadReleaseDatePage() {
  worker behavior, combat tuning, co-op stability, dungeon rewards, and
  performance. Buy during Early Access only if you are comfortable with
  iteration. Wait for 1.0 or broader player reports if you need stable
- late-game balance, final content depth, or verified handheld play.
+ late-game balance, final content depth, or comfortable handheld play.
  </p>
  </section>
  </RomesteadArticle>

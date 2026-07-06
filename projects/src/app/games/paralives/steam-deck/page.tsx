@@ -26,9 +26,9 @@ export const metadata = createParalivesMetadata({
 
 const faqs = [
  {
- question: 'Is Paralives Steam Deck Verified?',
+ question: 'Is Paralives Steam Deck compatibility?',
  answer:
- 'No Steam Deck Verified claim is available in the checked Steam data. Treat Deck play as unverified until Steam or player reports confirm it.',
+ 'No Steam Deck compatibility claim is available in the checked Steam data. Treat Deck play as a test-first setup until Steam or player reports clarify it.',
  },
  {
  question: 'Can Paralives run on Steam Deck?',
@@ -60,7 +60,7 @@ export default function ParalivesSteamDeckPage() {
  >
  <BlufBox title="Deck Answer">
  <p>
- <strong>Paralives is not Steam Deck Verified based on the checked Steam data.</strong>{' '}
+ <strong>Paralives is not Steam Deck compatibility based on the checked Steam data.</strong>{' '}
  The game has Windows support, Mac support, mouse-friendly life-sim
  tools, Paramaker, build mode, and Workshop systems, but no Steam Deck
  Verified claim appears in the checked official Steam data.
@@ -69,7 +69,7 @@ export default function ParalivesSteamDeckPage() {
 
  <SearchAnswerPanel
  title="Paralives Steam Deck Quick Answer"
- answer="No Steam Deck Verified claim appears in the checked official Steam data. Test trackpad, build mode, framerate, and text size within Steam refund rules."
+ answer="No Steam Deck compatibility claim appears in the checked official Steam data. Test trackpad, build mode, framerate, and text size within Steam refund rules."
  intentRows={paralivesDeckSearchIntent}
  jumpLinks={paralivesDeckJumpLinks}
  />

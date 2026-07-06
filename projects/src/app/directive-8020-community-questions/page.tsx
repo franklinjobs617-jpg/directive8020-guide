@@ -55,7 +55,7 @@ const questions = [
  },
  {
  q: 'Can Steam Deck handle it?',
- a: 'Treat Deck support as unverified until Steam shows a rating. The official minimum GPU is above handheld-class hardware, so test with low settings and a 30 FPS cap.',
+ a: 'Treat Deck support as not rated until Steam shows a Deck badge. The official minimum GPU is above handheld-class hardware, so test with low settings and a 30 FPS cap.',
  href: '/directive-8020-steam-deck',
  },
 ];

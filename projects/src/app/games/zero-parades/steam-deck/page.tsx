@@ -20,7 +20,7 @@ import {
 
 const title = 'ZERO PARADES Steam Deck Guide - Compatibility, Controls & Text';
 const description =
- 'ZERO PARADES Steam Deck guide: Steam Deck Verified context, GTX 1060 PC baseline, partial controller support, text readability, Save Anytime, Steam Cloud, and handheld setup checks.';
+ 'ZERO PARADES Steam Deck guide: Steam Deck compatibility context, GTX 1060 PC baseline, partial controller support, text readability, Save Anytime, Steam Cloud, and handheld setup checks.';
 const canonical = '/games/zero-parades/steam-deck';
 
 export const metadata = createZeroParadesMetadata({
@@ -32,9 +32,9 @@ export const metadata = createZeroParadesMetadata({
 
 const faqs = [
  {
- question: 'Is ZERO PARADES Steam Deck Verified?',
+ question: 'Is ZERO PARADES Steam Deck compatibility?',
  answer:
- 'Yes, ZERO PARADES is listed as Steam Deck Verified. Still test text size, controller prompts, and Steam Cloud sync before a long handheld session.',
+ 'Yes, ZERO PARADES is listed as Steam Deck compatibility. Still test text size, controller prompts, and Steam Cloud sync before a long handheld session.',
  },
  {
  question: 'Can ZERO PARADES work well on handheld?',
@@ -54,7 +54,7 @@ const faqs = [
 ];
 
 const deckRows = [
- ['Steam Deck status', 'Steam Deck Verified.', 'Check the live badge on your own Steam account.'],
+ ['Steam Deck status', 'Steam Deck compatibility.', 'Check the live badge on your own Steam account.'],
  ['Controls', 'Partial controller support is listed.', 'Test dialogue, menus, and skill screens.'],
  ['Text', 'Adjustable text size is listed.', 'Increase text size before a long handheld session.'],
  ['Saving', 'Save Anytime and Steam Cloud are listed.', 'Make one test save and confirm cloud sync.'],
@@ -74,7 +74,7 @@ export default function ZeroParadesSteamDeckPage() {
  >
       <BlufBox title="Steam Deck Answer">
         <p>
-          <strong>ZERO PARADES is listed as Steam Deck Verified.</strong>{' '}
+          <strong>ZERO PARADES is listed as Steam Deck compatibility.</strong>{' '}
           The handheld-friendly features are Save Anytime, adjustable text size,
           Steam Cloud, and no timed-input requirement. Still test menu prompts,
           text size, and cloud sync before moving a long save between devices.
@@ -83,7 +83,7 @@ export default function ZeroParadesSteamDeckPage() {
 
       <SearchAnswerPanel
         title="ZERO PARADES Steam Deck Quick Answer"
-        answer="Steam Deck Verified is listed. The handheld-friendly features are Save Anytime, adjustable text size, Steam Cloud, and no timed-input. Still test text size, prompts, and cloud sync within the refund window before committing to a long handheld run."
+        answer="Steam Deck compatibility is listed. The handheld-friendly features are Save Anytime, adjustable text size, Steam Cloud, and no timed-input. Still test text size, prompts, and cloud sync within the refund window before committing to a long handheld run."
         intentRows={zpSteamDeckSearchIntent}
         jumpLinks={zpSteamDeckJumpLinks}
       />
@@ -95,7 +95,7 @@ export default function ZeroParadesSteamDeckPage() {
  <ArticleImage
  src={zeroParadesImages.screenshot4}
  alt="ZERO PARADES Steam Deck readiness screenshot"
- caption="Steam Deck Verified is useful, but narrative RPG comfort still depends on text size, menus, saves, and controller prompts."
+ caption="Steam Deck compatibility is useful, but narrative RPG comfort still depends on text size, menus, saves, and controller prompts."
  />
  </section>
 

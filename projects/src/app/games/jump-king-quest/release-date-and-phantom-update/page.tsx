@@ -99,15 +99,15 @@ export default function JumpKingQuestReleasePage() {
  <tr className="border-b border-border bg-mist">
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Release fact</th>
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current answer</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">Confidence</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player note</th>
  </tr>
  </thead>
  <tbody>
- {jumpKingQuestReleaseRows.map(([fact, answer, confidence]) => (
+ {jumpKingQuestReleaseRows.map(([fact, answer, note]) => (
  <tr key={fact} className="border-b border-border last:border-0">
  <td className="px-4 py-3 font-semibold text-foreground">{fact}</td>
  <td className="px-4 py-3 text-muted-foreground">{answer}</td>
- <td className="px-4 py-3 text-muted-foreground">{confidence}</td>
+ <td className="px-4 py-3 text-muted-foreground">{note}</td>
  </tr>
  ))}
  </tbody>

@@ -100,11 +100,11 @@ export function RomesteadArticle({
  <>
  <ArticleImage
  src={romesteadImages.screenshot5}
- alt="Romestead official source check screenshot"
+ alt="Romestead official player reference screenshot"
  caption="Use official Steam and SteamDB pages for release timing, Early Access status, platform support, features, language support, and PC requirements."
  />
  <SourceCheckTable
- title="Official Links and Source Checks"
+ title="Official Links and Player Notes"
  rows={romesteadSourceRows}
  />
  </>
