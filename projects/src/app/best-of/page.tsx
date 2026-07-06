@@ -43,6 +43,15 @@ const entries: BestOfEntry[] = [
     image: '/best-of/games/counter-strike-2.webp',
     accent: 'from-blue-900/80 to-indigo-900/60',
   },
+  {
+    title: 'Best Co-op Games on Steam 2026',
+    href: '/best-co-op-games-steam-2026',
+    description: 'Top 15 co-op games for two-player campaigns, four-player squads, cozy farms, horror nights, RPG groups, and party chaos.',
+    gameCount: 15,
+    category: 'By Playstyle',
+    image: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2001120/header.jpg?t=1763484567',
+    accent: 'from-rose-900/80 to-slate-900/60',
+  },
 ];
 
 const faqs = [
@@ -64,7 +73,7 @@ const faqs = [
   {
     question: 'Can I suggest a game for a Best Of list?',
     answer:
-      'Contact us through the Enjoy4Game community channels with your suggestion. Lists are data-driven, so including Steam rating evidence strengthens your recommendation.',
+      'Contact us through the Enjoy4Game community channels with your suggestion. Lists are data-driven, so including Steam rating context strengthens your recommendation.',
   },
 ];
 

@@ -6,6 +6,7 @@ const LABEL_PATHS: Record<string, string> = {
   'Best Of': '/best-of',
   'Best Survival Games on Steam 2026': '/best-survival-games-steam-2026',
   'Best Free Games on Steam 2026': '/best-free-games-steam-2026',
+  'Best Co-op Games on Steam 2026': '/best-co-op-games-steam-2026',
   'All Endings': '/directive-8020-all-endings',
  'Beginner Tips': '/directive-8020-beginner-tips',
  'Cast and Actors': '/directive-8020-cast-actors',

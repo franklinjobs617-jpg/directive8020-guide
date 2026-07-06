@@ -54,6 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   { url: `${BASE_URL}/best-of`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
   { url: `${BASE_URL}/best-survival-games-steam-2026`, lastModified: today, changeFrequency: 'weekly', priority: 0.76 },
   { url: `${BASE_URL}/best-free-games-steam-2026`, lastModified: today, changeFrequency: 'weekly', priority: 0.76 },
+  { url: `${BASE_URL}/best-co-op-games-steam-2026`, lastModified: today, changeFrequency: 'weekly', priority: 0.76 },
   { url: `${BASE_URL}/about`, lastModified: today, changeFrequency: 'monthly', priority: 0.4 },
  { url: `${BASE_URL}/privacy-policy`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },
  { url: `${BASE_URL}/terms-of-use`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },

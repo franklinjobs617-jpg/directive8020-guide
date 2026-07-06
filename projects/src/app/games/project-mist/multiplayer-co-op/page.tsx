@@ -4,7 +4,6 @@ import {
   ActionTable,
   BlufBox,
   SearchAnswerPanel,
-  SourceCheckTable,
   StatusPanel,
 } from '@/components/guide-blocks';
 import {
@@ -12,12 +11,11 @@ import {
   pmCoopActionRows,
   pmCoopJumpLinks,
   pmCoopSearchIntent,
-  pmCoopSourceRows,
   pmCoopStatusItems,
   projectMistImages,
 } from '@/lib/project-mist';
 
-const title = 'Project: Mist Multiplayer Co-op - 1-4 Players, Solo & Crossplay Status';
+const title = 'Project: Mist Co-op Guide: Solo, 1-4 Players, Online Multiplayer & Crossplay Status';
 const description =
  'Project: Mist multiplayer and co-op guide: Steam 1-4 player online co-op, solo play, host checks, crossplay status, console caution, and Early Access group roles.';
 const canonical = '/games/project-mist/multiplayer-co-op';
@@ -204,11 +202,11 @@ export default function ProjectMistMultiplayerPage() {
  </div>
 
  <section className="prose-game">
- <h2>What to Verify After Launch</h2>
+ <h2>Before a Long Co-op Run</h2>
  <ArticleImage
  src={projectMistImages.screenshot5}
- alt="Project: Mist multiplayer verification screenshot"
- caption="Early Access multiplayer pages should update once host saves, difficulty scaling, disconnect behavior, and inventory sharing are tested."
+ alt="Project: Mist multiplayer session setup screenshot"
+ caption="Use a short first session to check host saves, difficulty scaling, disconnect behavior, and inventory sharing before committing many hours."
  />
  <ul>
  <li>Whether hosts and clients share story progress in the same way.</li>
@@ -241,7 +239,6 @@ export default function ProjectMistMultiplayerPage() {
  </p>
  </section>
 
- <SourceCheckTable title="Project: Mist Multiplayer Sources" rows={pmCoopSourceRows} />
  </ProjectMistArticle>
  );
 }

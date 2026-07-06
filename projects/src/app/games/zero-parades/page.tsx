@@ -95,14 +95,14 @@ const faqs = [
  {
  question: 'Can I play ZERO PARADES on GeForce Now?',
  answer:
- 'GeForce Now support has not been officially confirmed by ZA/UM. Some players report attempting to stream via GeForce Now with mixed results. Check the GeForce Now library and Steam Community for the latest compatibility reports.',
+ 'GeForce Now support is not listed in ZA/UM store messaging. Check the current GeForce Now library before planning to stream the game.',
  },
 ];
 
 const zeroParadesDecisionRows = [
  ['Want to play now', 'Use PC storefronts first: Steam, Epic Games Store, or GOG. Check the live buy button, regional price, and refund policy before purchase.'],
  ['Waiting for PS5', 'PS5 is announced for 2026, but no exact PlayStation launch date is public yet. Do not buy on PC if you only want the console version.'],
- ['Playing on Steam Deck', 'Steam Deck Verified support is listed, but text-heavy RPGs still deserve a readability and battery check before a long session.'],
+ ['Playing on Steam Deck', 'Steam Deck support is listed, but text-heavy RPGs still deserve a readability and battery check before a long session.'],
  ['Comparing to Disco Elysium', 'Expect dense writing, skills, checks, failure states, and political pressure, not a combat-first action RPG.'],
  ['Unsure about price', 'The US price is $39.99. Regional prices can differ, so check the storefront you actually plan to use.'],
 ];

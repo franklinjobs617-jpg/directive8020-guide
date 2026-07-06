@@ -57,7 +57,7 @@ export const zeroParadesQuickFacts = [
  ['Main character', 'Hershel Wilk, alias CASCADE, a burnt-out operant.'],
  ['Core systems', '15 skills, Conditioning, split-second decisions, Exertion, Fatigue, Anxiety, and Delirium.'],
  ['PC storefronts', 'Available through Steam, Epic Games Store, and GOG.'],
- ['Steam Deck', 'Steam Deck Verified; text size and controller comfort are still worth checking during the first session.'],
+ ['Steam Deck', 'Steam Deck support is listed; text size and controller comfort are still worth checking during the first session.'],
  ['PS5', 'PlayStation pages say 2026, but no exact PS5 date is confirmed.'],
  ['Price', '$39.99 in the US; local storefront prices can differ by region.'],
  ['Languages', 'English audio; text support includes English, German, Russian, Simplified Chinese, and Spanish - Latin America.'],
@@ -110,7 +110,7 @@ export const zeroParadesLaunchCheckRows = [
  ['Known issues', 'Check recent patch notes and player threads before a long session if crashes, progression blockers, or UI glitches would ruin your run.'],
  ['Language', 'English has full audio; launch text support includes German, Russian, Simplified Chinese, and Spanish - Latin America.'],
  ['Controller', 'Steam lists partial controller support, so test controls and UI readability early.'],
- ['Steam Deck', 'Steam Deck Verified; test text size, menus, and cloud saves before a long session.'],
+ ['Steam Deck', 'Steam Deck support is listed; test text size, menus, and cloud saves before a long session.'],
  ['Later localization', 'French, Italian, Japanese, Korean, Polish, Portuguese (Brazilian), Traditional Chinese, and Turkish are planned as free updates later in 2026.'],
 ];
 
@@ -739,9 +739,9 @@ export const zpLengthActionRows = [
     why: 'A single playthrough sees only a fraction of the routes. Replay value is built into the structure, not a side feature.',
   },
   {
-    step: '5. Use community reports to calibrate expectations',
-    doThis: 'Check recent Steam community threads and discussion posts for the latest playtime estimates from real players.',
-    why: 'The first week of community reports is the most useful playtime signal. Store copy and pre-launch estimates can differ from real runs.',
+    step: '5. Recheck recent player discussions before a long run',
+    doThis: 'Check recent Steam discussions for current playtime ranges, patch notes, and route blockers before planning a completionist save.',
+    why: 'Early playtime ranges can move after patches, route discoveries, and bug fixes.',
   },
 ] as const;
 
@@ -756,14 +756,14 @@ export const zpLengthStatusItems = [
 export const zpLengthSourceRows = [
   {
     claim: 'How long is a single playthrough of ZERO PARADES?',
-    source: 'Steam store / community reports',
+    source: 'Steam store and player discussions',
     status: 'verified' as const,
     href: zeroParadesSteamUrl,
-    note: '20-30 hours for a main-story run. Estimates from early community playthroughs are still being refined.',
+    note: 'Use 20-30 hours as a planning range for one focused run, then add time for dialogue depth and route changes.',
   },
   {
     claim: 'Does ZERO PARADES have a time limit?',
-    source: 'Steam description / community reports',
+    source: 'Steam description and player discussions',
     status: 'verified' as const,
     href: zeroParadesSteamUrl,
     note: 'Some assignments use time-sensitive mechanics. The game communicates urgency through dialogue, not always explicit timers.',
@@ -773,11 +773,11 @@ export const zpLengthSourceRows = [
     source: 'Steam store / community discussion',
     status: 'working' as const,
     href: zeroParadesOfficialUrl,
-    note: 'Multiple endings are confirmed. The exact count and full trigger list are still being mapped by the community.',
+    note: 'Multiple endings are part of the game structure. Use the walkthrough before chasing a full route list.',
   },
   {
     claim: 'What affects total playtime the most?',
-    source: 'Steam store / community reports',
+    source: 'Steam store and player discussions',
     status: 'working' as const,
     href: zeroParadesRedditLaunchUrl,
     note: 'Dialogue depth, skill-check reroutes, Conditioning experiments, and reload habits are the biggest playtime drivers.',

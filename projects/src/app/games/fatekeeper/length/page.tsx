@@ -7,9 +7,9 @@ import {
  fatekeeperImages,
 } from "@/lib/fatekeeper";
 
-const title = "How Long Is Fatekeeper? Early Access Length, Full Release Target and Save Data";
+const title = "How Long Is Fatekeeper? 2-Hour Early Access & 15-Hour Full Game Target";
 const description =
- "Fatekeeper playtime guide for the current Early Access build, full-release length target, player-type time budget, save file location, and Steam Cloud checks.";
+ "Fatekeeper playtime guide for the current 2-hour Early Access build, 3-4 hour completionist route, 15-hour full-release target, time budget, save folder, and Steam Cloud setup.";
 const canonical = "/games/fatekeeper/length";
 
 export const metadata = createFatekeeperMetadata({
@@ -43,7 +43,7 @@ const faqs = [
  {
  question: "Does Fatekeeper support Steam Cloud saves?",
  answer:
- "Steam Cloud is listed on the Fatekeeper store page. Verify sync is working before switching PCs. Manually back up your save folder as a precaution during Early Access.",
+ "Steam Cloud is listed on the Fatekeeper store page. Before switching PCs, open Steam Cloud settings and back up the save folder as a precaution during Early Access.",
  },
  {
  question: "Is Fatekeeper worth the price for only 2 hours?",
@@ -93,7 +93,7 @@ const jumpLinks = [
 ];
 
 const playerRows = [
- ["New player", "Plan for 2 hours on the main Early Access route, then add time if you die while learning melee timing.", "The first run includes learning cost: dodge rhythm, spell timing, relic reading, and route confidence."],
+ ["New player", "Plan for 2 hours on the main Early Access route, then add time if you die while learning melee timing.", "The first run includes learning cost: dodge rhythm, spell timing, relic reading, and route familiarity."],
  ["Build tester", "Plan for 3-4 hours if you want to compare melee, spellblade, relic, and alchemy options.", "Testing a build properly means fighting similar enemies more than once instead of judging from one lucky room."],
  ["Completionist", "Plan for 3-4 hours in the current build, plus future revisits after major patches.", "Early Access content changes, so 100% completion is a moving target until 1.0."],
  ["Buyer checking value", "Treat current length as a short paid slice, not a full 15-hour RPG.", "The price and value question depends on whether you want to support and test the foundation now."],
@@ -105,6 +105,12 @@ const timeBudgetRows = [
  ["2 hours", "Current main Early Access route and core systems.", "The best estimate for a focused HLTB-style main run."],
  ["3-4 hours", "Side paths, build tests, relic comparisons, alchemy checks, and repeated boss attempts.", "Best estimate for completionist-style Early Access playtime."],
  ["15 hours target", "Expected full-release campaign scope, subject to Early Access changes.", "Useful for long-term value, not current content size."],
+];
+
+const topLengthRows = [
+ ["Current Early Access", "about 2 hours", "Use this for a focused route through the current build."],
+ ["Completionist Early Access", "3-4 hours", "Use this if you test side paths, builds, relics, alchemy, and repeated fights."],
+ ["Full 1.0 target", "about 15 hours", "Use this for long-term value, not the current amount of playable content."],
 ];
 
 export default function FatekeeperLengthPage() {
@@ -132,6 +138,27 @@ export default function FatekeeperLengthPage() {
  intentRows={searchIntentRows}
  jumpLinks={jumpLinks}
  />
+
+ <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist">
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Version / route</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Time to plan</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Use this estimate for</th>
+ </tr>
+ </thead>
+ <tbody>
+ {topLengthRows.map(([route, time, useCase]) => (
+ <tr key={route} className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">{route}</td>
+ <td className="px-4 py-3 text-muted-foreground">{time}</td>
+ <td className="px-4 py-3 text-muted-foreground">{useCase}</td>
+ </tr>
+ ))}
+ </tbody>
+ </table>
+ </div>
 
  <section id="current-length">
  <h2 className="mb-4 text-2xl font-bold text-foreground">Current Early Access Length</h2>
@@ -260,12 +287,12 @@ export default function FatekeeperLengthPage() {
  <p className="leading-relaxed text-muted-foreground">
  Steam Cloud is listed as a supported feature on the Fatekeeper store page.
  However, during Early Access, always <strong>manually back up your save
- folder</strong> as a precaution. To verify Steam Cloud is working:
+ folder</strong> as a precaution before switching PCs:
  </p>
  <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-relaxed text-muted-foreground">
  <li>Launch Fatekeeper and create a manual save.</li>
  <li>Exit the game and wait for the Steam client to finish syncing (check the game's Library page for the cloud sync indicator).</li>
- <li>On a second PC (or after verifying via Steam's remote storage), confirm the save is accessible.</li>
+ <li>On a second PC, open Steam Cloud settings and confirm the save is accessible before deleting any local backup.</li>
  </ol>
  </section>
  </FatekeeperArticle>

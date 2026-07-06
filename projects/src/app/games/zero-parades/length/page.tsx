@@ -3,8 +3,6 @@ import {
   ActionTable,
   BlufBox,
   SearchAnswerPanel,
-  SourceCheckTable,
-  StatusPanel,
 } from '@/components/guide-blocks';
 import { ZeroParadesArticle } from '@/components/zero-parades-article';
 import {
@@ -12,16 +10,14 @@ import {
   zpLengthActionRows,
   zpLengthJumpLinks,
   zpLengthSearchIntent,
-  zpLengthSourceRows,
-  zpLengthStatusItems,
   zeroParadesImages,
   zeroParadesLengthRows,
   zeroParadesTimeLimitRows,
 } from '@/lib/zero-parades';
 
-const title = 'ZERO PARADES Game Length - How Long to Beat & Time Limits';
+const title = 'ZERO PARADES Length & Time Limit Guide: How Long to Beat and What Advances Time';
 const description =
- 'ZERO PARADES takes 20-30 hours for a single playthrough. Check game length by playstyle, time-sensitive mechanics, missable content, and completionist hours.';
+ 'ZERO PARADES playtime planning guide: 20-30 hour first-run estimate, 30-40 hour thorough route, 40+ hour completionist route, time-sensitive events, and replay value.';
 const canonical = '/games/zero-parades/length';
 
 export const metadata = createZeroParadesMetadata({
@@ -45,12 +41,12 @@ const faqs = [
  {
  question: 'Are time-limited quests explicit in ZERO PARADES?',
  answer:
- 'Not always. Community reports suggest certain events advance when you rest or move between areas. The game may warn through dialogue urgency rather than explicit timers.',
+ 'Not always. Some events may advance after rests, travel, or major case decisions, so save before committing to a new lead.',
  },
  {
  question: 'How many endings does ZERO PARADES have?',
  answer:
- 'ZERO PARADES has multiple endings determined by skill checks, Conditioning choices, dialogue decisions, and faction relationships. The exact number is still being confirmed by the community.',
+ 'ZERO PARADES has multiple endings determined by skill checks, Conditioning choices, dialogue decisions, and faction relationships. Use the walkthrough before chasing a full route list.',
  },
  {
  question: 'How long is a completionist playthrough?',
@@ -62,6 +58,14 @@ const faqs = [
  answer:
  'Dialogue depth, exploration thoroughness, skill-check reroutes, Conditioning experiments, and how often you reload failed checks all affect total playtime.',
  },
+];
+
+const lengthPlanningRows = [
+  ['Focused run', '20-30 hours', 'Use this for one playthrough with moderate dialogue exploration.'],
+  ['Thorough run', '30-40 hours', 'Use this if you read deeply, explore side content, and follow reroutes.'],
+  ['Completionist planning', '40+ hours', 'Use this if you want multiple endings, Conditioning experiments, and route comparison.'],
+  ['Time-sensitive events', 'Save before rests and major decisions', 'Some events can advance without an obvious timer.'],
+  ['Replay value', 'Different builds change outcomes', 'A second archetype can reveal routes the first playthrough missed.'],
 ];
 
 export default function ZeroParadesLengthPage() {
@@ -77,7 +81,7 @@ export default function ZeroParadesLengthPage() {
  >
       <BlufBox title="Length Answer">
         <p>
-          <strong>ZERO PARADES takes 20-30 hours per playthrough.</strong>{' '}
+          <strong>Plan around 20-30 hours for one ZERO PARADES playthrough.</strong>{' '}
           Completionist runs with multiple endings and full exploration can take
           40+ hours. Some quests are time-sensitive, and the game does not
           always make these limits explicit. Save before resting and pay
@@ -87,12 +91,31 @@ export default function ZeroParadesLengthPage() {
 
       <SearchAnswerPanel
         title="ZERO PARADES Length Quick Answer"
-        answer="A single playthrough is 20-30 hours. Thorough runs are 30-40 hours. Completionist runs with multiple endings and Conditioning experiments are 40+ hours. Some events are time-sensitive but the game does not always flag them with explicit timers."
+        answer="Plan around 20-30 hours for one playthrough. Thorough runs are 30-40 hours. Completionist runs with multiple endings and Conditioning experiments are 40+ hours. Some events are time-sensitive but the game does not always flag them with explicit timers."
         intentRows={zpLengthSearchIntent}
         jumpLinks={zpLengthJumpLinks}
       />
 
-      <StatusPanel items={zpLengthStatusItems} />
+      <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border bg-mist">
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Planning point</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player answer</th>
+              <th className="px-4 py-3 text-left font-medium text-muted-foreground">How to use it</th>
+            </tr>
+          </thead>
+          <tbody>
+            {lengthPlanningRows.map(([point, answer, guidance]) => (
+              <tr key={point} className="border-b border-border last:border-0">
+                <td className="px-4 py-3 font-semibold text-foreground">{point}</td>
+                <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+                <td className="px-4 py-3 text-muted-foreground">{guidance}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <section className="prose-game">
         <h2 id="game-length-by-playstyle">Game Length by Playstyle</h2>
@@ -175,12 +198,11 @@ export default function ZeroParadesLengthPage() {
  caption="Some events advance when you rest or move between areas. The game warns through dialogue urgency, not always explicit timers."
  />
  <p>
- Community reports indicate that certain events in ZERO PARADES are
- time-sensitive. The game does not always make these limits explicit
- with a visible timer. Instead, urgency may be communicated through
- dialogue tone, case framing, or NPC behavior. This means you should
- save before resting and before moving between areas if you have
- unfinished business.
+ Some events may advance after rests, travel, or major case decisions.
+ The game does not always make these limits explicit with a visible
+ timer. Instead, urgency may be communicated through dialogue tone,
+ case framing, or NPC behavior. Save before resting, changing areas, or
+ committing to a new lead if you have unfinished business.
  </p>
  </section>
 
@@ -260,10 +282,6 @@ export default function ZeroParadesLengthPage() {
       <h2 className="mb-4 mt-10 text-2xl font-bold text-foreground">5-Step Length Plan</h2>
       <ActionTable rows={zpLengthActionRows} />
 
-      <SourceCheckTable
-        title="ZERO PARADES Length Sources"
-        rows={zpLengthSourceRows}
-      />
     </ZeroParadesArticle>
  );
 }
