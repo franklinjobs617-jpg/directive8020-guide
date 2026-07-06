@@ -34,7 +34,7 @@ const faqs = [
  {
  question: 'What is the biggest survival risk in Directive 8020?',
  answer:
- 'The mimic is the biggest new risk because trust decisions are no longer simple relationship choices. A crew member who looks safe may be an alien copy, so verification matters before rescue, pursuit, or separation choices.',
+ 'The mimic is the biggest new risk because trust decisions are no longer simple relationship choices. A crew member who looks safe may be an alien copy, so identity checks matter before rescue, pursuit, or separation choices.',
  },
  {
  question: 'Should I rewind with Turning Points immediately after a death?',
@@ -58,7 +58,7 @@ const survivalRules = [
 ];
 
 const quickSaveRows = [
- ['Young', 'Keep leadership choices calm, preserve crew trust, and avoid rushing unverified rescue or pursuit scenes.', 'Young is a major decision anchor, so relationship damage and failed action prompts can affect later routes.'],
+ ['Young', 'Keep leadership choices calm, preserve crew trust, and avoid rushing risky rescue or pursuit scenes.', 'Young is a major decision anchor, so relationship damage and failed action prompts can affect later routes.'],
  ['Stafford', 'Protect command-route decisions, avoid needless conflict, and treat high-pressure QTE scenes as survival-critical.', 'Stafford can influence group control, rescue timing, and whether the crew stays coordinated.'],
  ['Eisele', 'Verify identity before trust choices, especially after isolation or scenes involving duplicate information.', 'Eisele is tied to technical and evidence-heavy route checks where false trust can be dangerous.'],
  ['Cooper', 'Avoid injuries in stealth, chase, and rescue scenes; keep medical information available to the group.', 'Cooper matters for injury outcomes, rescue logic, and later route stability.'],
@@ -188,7 +188,7 @@ export default function SaveEveryonePage() {
  </table>
  </div>
 
- <SourceCheckTable title="Save-Everyone Source Check" rows={sourceRows} />
+ <SourceCheckTable title="Save-Everyone Player Reference Notes" rows={sourceRows} />
 
  <div className="prose-game">
  <h2>Core Survival Rules</h2>
@@ -242,7 +242,7 @@ export default function SaveEveryonePage() {
  moral or relationship-positive option. In Directive 8020, the same
  instinct can be dangerous. If a character has been isolated, appears
  suddenly, or asks you to separate from the group, treat the scene as
- a verification test.
+ a identity test.
  </p>
 
  <ArticleImage

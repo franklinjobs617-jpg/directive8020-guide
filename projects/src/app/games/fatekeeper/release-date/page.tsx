@@ -194,7 +194,7 @@ export default function FatekeeperReleaseDatePage() {
  <thead>
  <tr className="border-b border-border bg-mist">
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Check</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">What to verify</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">What to check</th>
  </tr>
  </thead>
  <tbody>

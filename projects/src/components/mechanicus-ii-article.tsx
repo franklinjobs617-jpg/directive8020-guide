@@ -90,11 +90,11 @@ export function MechanicusIIArticle({
  <>
  <ArticleImage
  src={mechanicusIIImages.screenshot5}
- alt="Warhammer 40,000 Mechanicus II official source check image"
+ alt="Warhammer 40,000 Mechanicus II official player reference image"
  caption="Use official store pages for release status, platform support, features, system requirements, and current review signals."
  />
  <SourceCheckTable
- title="Official Links and Source Checks"
+ title="Official Links and Player Notes"
  rows={mechanicusIISourceRows}
  />
  </>

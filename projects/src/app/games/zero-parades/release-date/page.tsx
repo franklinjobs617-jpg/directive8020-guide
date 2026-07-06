@@ -80,7 +80,7 @@ export default function ZeroParadesReleaseDatePage() {
         <p>
           <strong>ZERO PARADES: For Dead Spies is a May 21, 2026 PC launch.</strong>{' '}
           Steam, Epic Games Store, and GOG are the PC storefronts. The US price
-          is $39.99, Steam Deck Verified support is listed, and PS5 is announced
+          is $39.99, Steam Deck Support is listed, and PS5 is announced
           for 2026 without an exact date yet.
         </p>
       </BlufBox>

@@ -52,7 +52,7 @@ const faqs = [
  {
  question: 'Is 007 First Light Steam Deck verified?',
  answer:
- 'No Steam Deck Verified label is confirmed in this guide. Treat handheld performance as settings-dependent until Steam or broad player reports settle.',
+ 'No Steam Deck compatibility label is confirmed in this guide. Treat handheld performance as settings-dependent until Steam or broad player reports settle.',
  },
  {
  question: 'Does Denuvo affect 007 First Light PC performance?',
@@ -83,7 +83,7 @@ export default function FirstLightSystemRequirementsPage() {
 
  <SearchAnswerPanel
  title="007 First Light System Requirements Quick Answer"
- answer="Minimum is Windows 10/11, i5-9500 or Ryzen 5 3500, 16 GB RAM, GTX 1660 or RX 5700, 80 GB SSD. Recommended moves to i5-13500, Ryzen 5 7600, RTX 3060 Ti or RX 6700 XT. Steam Deck is unverified, DLSS 4.5 is at launch, and path tracing is Summer 2026."
+ answer="Minimum is Windows 10/11, i5-9500 or Ryzen 5 3500, 16 GB RAM, GTX 1660 or RX 5700, 80 GB SSD. Recommended moves to i5-13500, Ryzen 5 7600, RTX 3060 Ti or RX 6700 XT. Steam Deck is not rated, DLSS 4.5 is at launch, and path tracing is Summer 2026."
  intentRows={firstLightSpecSearchIntent}
  jumpLinks={firstLightSpecJumpLinks}
  />

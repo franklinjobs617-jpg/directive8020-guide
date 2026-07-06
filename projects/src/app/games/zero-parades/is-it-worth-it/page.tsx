@@ -57,7 +57,7 @@ const comparisonRows = [
  ['Disco Elysium fans', 'Strong fit', 'Same studio lineage and dense narrative RPG positioning, but not a direct sequel.'],
  ['CRPG / tabletop fans', 'Strong fit', 'Skill checks, dice pressure, failure, and consequence systems are central.'],
  ['Action players', 'Weak fit', 'The appeal is investigation and dialogue, not real-time combat.'],
- ['Steam Deck users', 'Good fit, test first', 'Steam Deck Verified is listed, but text size and prompts still matter.'],
+ ['Steam Deck users', 'Good fit, test first', 'Steam Deck compatibility is listed, but text size and prompts still matter.'],
  ['PS5 players', 'Wait', 'PS5 is announced for 2026, but no exact launch date is public yet.'],
 ];
 

@@ -61,9 +61,9 @@ const steamDeckGames = [
  {
  title: "Directive 8020",
  href: "/directive-8020-steam-deck",
- status: "Unverified",
+ status: "Not Rated",
  statusColor: "text-muted-foreground border-border bg-mist",
- body: "Steam Deck and low-end PC guide. Start with low settings, 30 FPS cap, and treat Deck support as unverified until Steam rating appears.",
+ body: "Steam Deck and low-end PC guide. Start with low settings, 30 FPS cap, and treat Deck support as not rated until Steam shows a Deck badge.",
  image: "/hero-banner.jpg",
  },
  {
@@ -95,15 +95,15 @@ const steamDeckGames = [
  href: "/games/mina-the-hollower/steam-deck",
  status: "Likely Good Fit",
  statusColor: "text-foreground border-border bg-mist",
- body: "Steam Deck Verified context, controls, cloud saves, display expectations, and pre-launch checks for the pixel-art action-adventure.",
+ body: "Steam Deck compatibility context, controls, cloud saves, display expectations, and pre-launch checks for the pixel-art action-adventure.",
  image: "/games/mina-the-hollower/hero.jpg",
  },
  {
  title: "ZERO PARADES",
  href: "/games/zero-parades/steam-deck",
- status: "Verified",
+ status: "Deck Rated",
  statusColor: "text-foreground border-border bg-mist",
- body: "Steam Deck Verified context, controller support, text readability, saves, and handheld checks for the espionage RPG.",
+ body: "Steam Deck compatibility context, controller support, text readability, saves, and handheld checks for the espionage RPG.",
  image: "/games/zero-parades/hero.jpg",
  },
  {
@@ -119,7 +119,7 @@ const steamDeckGames = [
  href: "/games/jump-king-quest/multiplayer-controller",
  status: "Likely Good Fit",
  statusColor: "text-foreground border-border bg-mist",
- body: "Controller support confirmed. Lightweight pixel-art platformer should run well on Steam Deck - verify after 1.0 launch.",
+ body: "Controller support confirmed. Lightweight pixel-art platformer should run well on Steam Deck - check again after 1.0 launch.",
  image: "/games/jump-king-quest/hero.webp",
  },
  {
@@ -163,7 +163,7 @@ export default function SteamDeckPage() {
  </h2>
  <div className="flex flex-wrap gap-3 text-xs">
  <span className="rounded border border-border bg-mist px-2.5 py-1 font-semibold text-foreground">
- Verified / Likely Good Fit
+ Deck Rated / Likely Good Fit
  </span>
  <span className="rounded border border-border bg-mist px-2.5 py-1 font-semibold text-muted-foreground">
  Needs Testing / Unknown
@@ -215,7 +215,7 @@ export default function SteamDeckPage() {
  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
  {[
  {
- title: "Verified Status",
+ title: "Steam Deck Rating",
  body: "Whether Valve has officially rated the game for Steam Deck.",
  },
  {

@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import { ArticleImage } from '@/components/article-media';
-import { JsonLd, generateFAQSchema } from '@/components/json-ld';
-import { createFearsToFathomMetadata, fearsToFathomImages } from '@/lib/fears-to-fathom';
+import { Breadcrumb } from '@/components/breadcrumb';
+import { JsonLd, generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema, generateVideoGameSchema } from '@/components/json-ld';
+import { fearsToFathom } from '@/lib/games';
+import { createFearsToFathomMetadata, fearsToFathomImages, fearsToFathomLastModified } from '@/lib/fears-to-fathom';
 
-const title = 'Can You Play Fears to Fathom: Scratch Creek Solo? Co-op Only Answer';
+const title = 'Can You Play Fears to Fathom: Scratch Creek Alone? Solo, Co-op & Crossplay Answer';
 const description =
- 'No, Fears to Fathom: Scratch Creek cannot be played solo. Learn how online co-op works, whether there is an AI companion, how to find a partner, and what happens if someone disconnects.';
+ 'No, Fears to Fathom: Scratch Creek cannot be played alone. It is online co-op only, with no solo mode, no AI partner, no split-screen, and no console crossplay.';
 const canonical = '/games/fears-to-fathom/co-op-guide';
 
 export const metadata = createFearsToFathomMetadata({
@@ -51,12 +53,38 @@ const faqRows = [
 export default function FearsToFathomCoopGuidePage() {
  return (
   <>
+  <JsonLd data={generateVideoGameSchema(fearsToFathom)} />
+  <JsonLd
+   data={generateArticleSchema({
+    title,
+    description,
+    url: canonical,
+    datePublished: fearsToFathom.releaseDate,
+    dateModified: fearsToFathomLastModified,
+    imageUrl: fearsToFathomImages.screenshot2,
+    game: fearsToFathom,
+   })}
+  />
+  <JsonLd
+   data={generateBreadcrumbSchema([
+    { name: 'Games', url: '/games' },
+    { name: 'Fears to Fathom: Scratch Creek', url: '/games/fears-to-fathom' },
+    { name: 'Co-op Guide', url: canonical },
+   ])}
+  />
   <JsonLd data={generateFAQSchema(faqRows.map(({ q, a }) => ({ question: q, answer: a })))} />
   <main className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-8">
+   <Breadcrumb
+    items={[
+     { label: 'Games', href: '/games' },
+     { label: 'Fears to Fathom', href: '/games/fears-to-fathom' },
+     { label: 'Co-op Guide', href: canonical },
+    ]}
+   />
    <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{title}</h1>
 
    <p className="mt-4 text-base font-semibold text-foreground">
-    No. Fears to Fathom: Scratch Creek cannot be played solo. It is online co-op only, with no single-player mode and no AI companion, so you need another real player before starting.
+    No. Scratch Creek is online co-op only, with no solo mode and no AI partner. You need another real player online before starting.
    </p>
    <p className="mt-3 text-sm text-muted-foreground">Last updated: June 18, 2026.</p>
 

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ProjectMistArticle } from '@/components/project-mist-article';
 import { ArticleImage, VideoEmbed } from '@/components/article-media';
-import { BlufBox, StatusPanel } from '@/components/guide-blocks';
+import { BlufBox } from '@/components/guide-blocks';
 import { projectMist } from '@/lib/games';
 import {
  projectMistDemoLootRows,
@@ -19,7 +19,7 @@ import {
 
 const title = 'Project: Mist Guide 2026: Is It on Xbox & PS5? Release Date, Co-op & Beginner Tips';
 const description =
- 'Is Project: Mist on Xbox or PS5? Currently PC Steam Early Access only — consoles not confirmed. Find guides for beginner tips, boss fights, train base building, weapons crafting, co-op, system requirements, crashing fixes, and Early Access buying advice.';
+ 'Is Project: Mist on Xbox or PS5? Currently PC Steam Early Access only; consoles are not announced. Find beginner tips, train base help, weapons, co-op, specs, crashing fixes, and buying advice.';
 const canonical = '/games/project-mist';
 
 export const metadata = createProjectMistMetadata({
@@ -92,6 +92,13 @@ const projectMistSessionRows = [
  ['Returning demo player', 'Check save behavior, changed routes, and patch notes before assuming demo habits still work in the live Early Access build.'],
 ];
 
+const projectMistTopStatusRows = [
+ ['Current release', 'Live in Steam Early Access on PC as of 19 May, 2026.'],
+ ['Solo and co-op', 'Steam lists single-player, co-op, and online co-op, with store copy describing 1-4 player co-op.'],
+ ['PS5 and Xbox', 'No PlayStation or Xbox version is announced on the current public store information.'],
+ ['Start here', 'New players should read beginner tips, co-op setup, train base priorities, and system requirements before a long run.'],
+];
+
 function getProjectMistGuideImage(href: string) {
  if (href.includes('system')) return projectMistImages.facilities;
  if (href.includes('map-facilities')) return projectMistImages.facilities;
@@ -127,13 +134,30 @@ export default function ProjectMistHubPage() {
  </p>
  </BlufBox>
 
- <StatusPanel
- items={projectMistQuickFacts.map(([label, value]) => ({
- label,
- value,
- status: 'verified' as const,
- }))}
- />
+ <div className="my-6 overflow-hidden rounded-lg border border-border bg-white">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-border bg-mist">
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Question</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player answer</th>
+ </tr>
+ </thead>
+ <tbody>
+ {projectMistTopStatusRows.map(([question, answer]) => (
+ <tr key={question} className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">{question}</td>
+ <td className="px-4 py-3 text-muted-foreground">{answer}</td>
+ </tr>
+ ))}
+ {projectMistQuickFacts.slice(0, 4).map(([label, value]) => (
+ <tr key={label} className="border-b border-border last:border-0">
+ <td className="px-4 py-3 font-semibold text-foreground">{label}</td>
+ <td className="px-4 py-3 text-muted-foreground">{value}</td>
+ </tr>
+ ))}
+ </tbody>
+ </table>
+ </div>
 
  <section className="my-10">
  <h2 className="mb-4 text-xl font-bold text-foreground">Project: Mist Guide Map</h2>
@@ -330,19 +354,18 @@ export default function ProjectMistHubPage() {
  </section>
 
  <section className="prose-game">
- <h2>Community and Video Signals</h2>
+ <h2>What Players Ask Before Starting</h2>
  <ArticleImage
  src={projectMistImages.demo}
  alt="Project: Mist demo and player-count guide image"
- caption="Steam Community and video coverage point to the same early questions: demo access, co-op, performance, Gravity Gun, and train-base progression."
+ caption="Start with the practical questions that affect your first session: demo access, co-op, performance, Gravity Gun, and train-base progression."
  />
  <p>
- Steam Community launch news adds useful context beyond the store page:
- the updated demo, multiplayer testing, feedback collection, and a
- large wishlist milestone all indicate active launch-day interest. Video
- coverage reinforces the same themes players search for first: demo
- availability, Early Access timing, Gravity Gun combat, creatures, and
- the mobile train base.
+ Before starting, focus on the questions that change your first run:
+ whether the demo or Early Access build fits your save plan, how co-op
+ is organized, whether your PC can handle the game, how the Gravity Gun
+ changes combat, and how quickly you should return to the mobile train
+ base.
  </p>
  </section>
 
@@ -379,7 +402,7 @@ export default function ProjectMistHubPage() {
  <ArticleImage
  src={projectMistImages.firstSteps}
  alt="Project: Mist first-hour gameplay findings image"
- caption="The demo footage gives practical route signals: starter room, train objective, mech part, greenhouse, facility hazards, and boss preparation."
+ caption="The demo footage shows practical route details: starter room, train objective, mech part, greenhouse, facility hazards, and boss preparation."
  />
  <p>
  Early gameplay footage is useful because it shows where a new player

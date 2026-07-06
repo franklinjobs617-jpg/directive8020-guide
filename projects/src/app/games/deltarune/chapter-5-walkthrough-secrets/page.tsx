@@ -28,10 +28,10 @@ const faqs = [
  {
   question: "Should Pink Coins, Mystery Key, and the secret boss be on one page?",
   answer:
-   "Yes. Current player demand connects these topics, so they should stay in one Chapter 5 walkthrough until verified route data proves a standalone page is useful.",
+   "Yes. Current player demand connects these topics, so they should stay in one Chapter 5 walkthrough until a stable route makes a standalone page useful.",
  },
  {
-  question: "Are all Chapter 5 secret locations verified here?",
+  question: "Are all Chapter 5 secret locations final here?",
   answer:
    "No. If a Chapter 5 secret still needs in-game confirmation, this page says so. Exact locations should be added only after matching screenshots or timestamped videos.",
  },
@@ -58,7 +58,7 @@ const searchIntentRows = [
  {
   query: "DELTARUNE Chapter 5 secret boss",
   answer:
-   "Keep the secret boss with Pink Coins and Mystery Key until the complete prerequisite chain is verified with screenshots or video timestamps.",
+   "Keep the secret boss with Pink Coins and Mystery Key until the complete prerequisite chain is backed by screenshots or video timestamps.",
   href: "#secret-boss",
   label: "Secret boss",
  },
@@ -122,10 +122,10 @@ const walkthroughSections = [
 
 const missableRows = [
  ["NPC dialogue sweep", "Before leaving each hub-like area", "May be unavailable after story progress", "Save before major gates and revisit nearby NPCs."],
- ["Suspicious doors and rooms", "When first seen and after local state changes", "Unknown until route is verified", "Inspect before assuming a later return is possible."],
- ["Pink Coins", "During the Chapter 5 secret chain", "Verification needed", "Track coin count and source timestamp before publishing exact locations."],
- ["Mystery Key", "After confirming the Pink Coin / secret chain", "Verification needed", "Do not use a single unverified post as final proof."],
- ["Egg / hidden room", "When a room behaves unlike normal progress", "Verification needed", "Document entry condition with screenshot or video timestamp."],
+ ["Suspicious doors and rooms", "When first seen and after local state changes", "Unknown until the route is stable", "Inspect before assuming a later return is possible."],
+ ["Pink Coins", "During the Chapter 5 secret chain", "Needs route notes", "Track coin count and timestamp before publishing exact locations."],
+ ["Mystery Key", "After confirming the Pink Coin / secret chain", "Needs route notes", "Do not use a single loose post as final proof."],
+ ["Egg / hidden room", "When a room behaves unlike normal progress", "Needs route notes", "Document entry condition with screenshot or video timestamp."],
  ["Weird route trigger", "Only on a test save", "Potentially route-changing", "Normal clear first, test route second."],
 ];
 
@@ -147,14 +147,14 @@ export default function DeltaruneChapter5WalkthroughSecretsPage() {
     jumpLinks={jumpLinks}
    />
 
-   <BlufBox title="Important Verification Note">
+   <BlufBox title="Important Route Note">
     <p>
-     <strong>This page is built to help without overstating unconfirmed secrets.</strong>{" "}
+      <strong>This page is built to help without overstating secret routes.</strong>{" "}
      Chapter 5 demand is confirmed around walkthrough, secret boss, Pink Coins,
      Mystery Key, Egg, and weird route, but exact secret locations should only
-     be published after matching in-game screenshots or timestamped videos. Any
-     unconfirmed secret detail is labeled until it can be checked against
-     gameplay proof.
+      be published after matching in-game screenshots or timestamped videos. Any
+      uncertain secret detail stays out of the route until players can reproduce
+      it in-game.
     </p>
    </BlufBox>
 
@@ -268,7 +268,7 @@ export default function DeltaruneChapter5WalkthroughSecretsPage() {
      unless the prerequisite chain is visible.
     </p>
     <p>
-     When the route is verified, update this section with a numbered path:
+      When the route is stable, update this section with a numbered path:
      entry point, coin 1, coin 2, coin 3, any NPC or object requirement, Mystery
      Key acquisition or use point, and the exact moment the secret-boss route
      becomes available. Each step should include a recovery note: can you return
@@ -280,7 +280,7 @@ export default function DeltaruneChapter5WalkthroughSecretsPage() {
    <ArticleImage
     src={deltaruneImages.screenshot2}
     alt="DELTARUNE Pink Coins Mystery Key and secret chain planning visual"
-    caption="Keep Pink Coins, Mystery Key, Egg, and secret boss in one checklist until the full prerequisite chain is verified."
+     caption="Keep Pink Coins, Mystery Key, Egg, and secret boss in one checklist until the full prerequisite chain is stable."
    />
 
    <section id="secret-boss" className="prose-game">
@@ -290,8 +290,8 @@ export default function DeltaruneChapter5WalkthroughSecretsPage() {
      demand is already visible in search behavior. That is enough reason to
      include the topic on this page, but not enough reason to invent a final
      route. A useful launch-window secret boss section should help players
-     prepare safely: keep a save before the suspected entry point, verify every
-     prerequisite, document the key item chain, and avoid consuming route items
+      prepare safely: keep a save before the suspected entry point, check every
+      prerequisite, document the key item chain, and avoid consuming route items
      without proof.
     </p>
     <p>
@@ -299,7 +299,7 @@ export default function DeltaruneChapter5WalkthroughSecretsPage() {
      survivability equipment if available, enter with a save nearby, watch the
      first attack cycle instead of rushing damage, and decide whether your goal
      is a normal clear or a route-specific outcome. Once the exact boss route
-     and battle details are verified, this section should be upgraded with
+      and battle details are stable, this section should be upgraded with
      attack pattern notes, TP spending recommendations, healing windows, and
      recovery advice after failure.
     </p>
@@ -312,11 +312,10 @@ export default function DeltaruneChapter5WalkthroughSecretsPage() {
      this walkthrough. It should not become a thin standalone page at launch.
      The right format is a hidden-room subsection with entry condition, room
      cue, required interaction, result, and whether the player can return. If
-     any of those details are not verified, the row stays marked verification
-     needed.
+      any of those details are not stable, the row stays as a route note.
     </p>
     <p>
-     When updating the Egg route, prefer evidence that a player can reproduce:
+      When updating the Egg route, prefer proof that a player can reproduce:
      a screenshot of the entry area, the exact interaction prompt, a timestamp
      showing the path into the room, and the result after leaving. If there is
      debate between community posts, keep both claims out of the public route

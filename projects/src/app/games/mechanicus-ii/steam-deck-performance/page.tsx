@@ -35,7 +35,7 @@ export const metadata = createMechanicusIIMetadata({
 
 const faqs = [
  {
- question: 'Is Warhammer 40,000: Mechanicus II Steam Deck Verified?',
+ question: 'Is Warhammer 40,000: Mechanicus II Steam Deck compatibility?',
  answer:
  'No. The official Steam FAQ and Steam Deck compatibility data list Mechanicus II as unsupported on Steam Deck at launch.',
  },
@@ -102,7 +102,7 @@ export default function MechanicusIISteamDeckPerformancePage() {
  Unsupported status should be read carefully. It does not prove that
  every Deck user will fail to open the game, and it does not replace
  later patch testing. It does mean the game should not be treated as a
- verified handheld experience at launch. For Mechanicus II, that
+ comfortable handheld experience at launch. For Mechanicus II, that
  matters because long tactical sessions depend on readable text,
  reliable menu navigation, clear controller labels, and a camera that
  remains comfortable during repeated battles.

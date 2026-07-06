@@ -208,7 +208,7 @@ export default function CollectiblesPage() {
  can track real completion categories now. Individual item locations
  are marked as pending until they are verified against chapter
  captures, screenshots, or reliable video routes. This avoids mixing
- confirmed counts with unverified room names.
+ confirmed counts with unfinished room names.
  </p>
 
  <h2 id="what-to-track">What to Track</h2>
@@ -300,7 +300,7 @@ export default function CollectiblesPage() {
  </table>
  </div>
 
- <SourceCheckTable title="Dark Pictures Dolls and Heirlooms Source Check" rows={sourceRows} />
+ <SourceCheckTable title="Dark Pictures Dolls and Heirlooms Player Reference Notes" rows={sourceRows} />
 
  <RelatedGuides
  guides={[

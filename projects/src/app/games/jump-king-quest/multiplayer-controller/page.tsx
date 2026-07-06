@@ -53,7 +53,7 @@ const faqs = [
  {
  question: 'Does JUMP KING QUEST have crossplay?',
  answer:
- 'Crossplay is not confirmed because PC via Steam is the verified public platform covered in this guide.',
+ 'Crossplay is not confirmed because PC via Steam is the public platform covered here covered in this guide.',
  },
 ];
 
@@ -110,15 +110,15 @@ export default function JumpKingQuestMultiplayerControllerPage() {
  <tr className="border-b border-border bg-mist">
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Feature</th>
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Current answer</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">Confidence</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player note</th>
  </tr>
  </thead>
  <tbody>
- {jumpKingQuestMultiplayerRows.map(([feature, answer, confidence]) => (
+ {jumpKingQuestMultiplayerRows.map(([feature, answer, note]) => (
  <tr key={feature} className="border-b border-border last:border-0">
  <td className="px-4 py-3 font-semibold text-foreground">{feature}</td>
  <td className="px-4 py-3 text-muted-foreground">{answer}</td>
- <td className="px-4 py-3 text-muted-foreground">{confidence}</td>
+ <td className="px-4 py-3 text-muted-foreground">{note}</td>
  </tr>
  ))}
  </tbody>

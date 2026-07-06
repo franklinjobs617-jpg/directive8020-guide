@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "What is the official Steam Deck compatibility rating for Cursemark?",
     answer:
-      "At launch, Cursemark was listed as Playable on Steam Deck, with the only caveat being that some text in the rune crafting interface may appear small on the 7-inch screen. Valve's review notes that all functionality is accessible using the default controller configuration, and the game launches and runs without any manual tweaking required. Full Verified status is expected as the developer addresses UI scaling in a future update.",
+      "At launch, Cursemark was listed as Playable on Steam Deck, with the only caveat being that some text in the rune crafting interface may appear small on the 7-inch screen. Valve's review notes that all functionality is accessible using the default controller configuration, and the game launches and runs without any manual tweaking required. A stronger Deck rating may follow if the developer improves UI scaling in a future update.",
   },
   {
     question: "How many hours of battery life does Cursemark get on Steam Deck?",

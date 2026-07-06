@@ -18,7 +18,7 @@ export const metadata = createRomesteadMetadata({
 
 const faqs = [
  {
- question: 'Is Romestead Steam Deck Verified?',
+ question: 'Is Romestead Steam Deck compatibility?',
  answer:
  'Treat Steam Deck support as unconfirmed until the live compatibility badge and player reports are stable. Test the demo or refund-window opening hour before planning a long handheld save.',
  },

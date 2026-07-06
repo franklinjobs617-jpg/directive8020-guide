@@ -90,17 +90,17 @@ export function VoidlingBoundArticle({
  <>
  <ArticleImage
  src={voidlingBoundImages.screenshot2}
- alt="Voidling Bound source-backed guide screenshot"
- caption="Voidling Bound pages use Steam for store facts and the wiki.gg database as the structured source for species, evolutions, elements, and abilities."
+ alt="Voidling Bound guide screenshot"
+ caption="Voidling Bound pages use Steam for store facts and the wiki.gg database for species, evolutions, elements, and abilities."
  />
- <SourceCheckTable title="Voidling Bound Sources and Verification" rows={voidlingSourceRows} />
+ <SourceCheckTable title="Voidling Bound Data Notes" rows={voidlingSourceRows} />
  </>
  )}
 
  <section className="my-8 rounded-lg border border-border bg-card p-5">
  <h2 className="mb-3 text-lg font-medium text-foreground">Data and Image Attribution</h2>
  <p className="text-sm leading-relaxed text-muted-foreground">
- Voidling data and creature images are derived from the{' '}
+ Creature data and images are credited to the{' '}
  <Link href="https://voidlingbound.wiki.gg/wiki/Voidling_Bound_Wiki" target="_blank" rel="noreferrer" className="text-foreground underline decoration-border hover:decoration-foreground">
  Voidling Bound Wiki
  </Link>{' '}
@@ -108,7 +108,7 @@ export function VoidlingBoundArticle({
  <Link href={voidlingBoundWikiData.wiki.licenseUrl} target="_blank" rel="noreferrer" className="text-foreground underline decoration-border hover:decoration-foreground">
  {voidlingBoundWikiData.wiki.license}
  </Link>
- . Steam images are used for store-level visual context. Snapshot generated on {voidlingBoundWikiData.generatedAt.slice(0, 10)}.
+ . Steam images are used for store-level visual context.
  </p>
  </section>
 

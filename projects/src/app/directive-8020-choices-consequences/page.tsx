@@ -235,7 +235,7 @@ export default function ChoicesConsequencesPage() {
  </table>
  </div>
 
- <SourceCheckTable title="High-Intent Choice Source Check" rows={sourceRows} />
+ <SourceCheckTable title="High-Intent Choice Player Reference Notes" rows={sourceRows} />
 
  <div className="prose-game">
  <h2 id="choice-examples">All Directive 8020 Choices and Consequences: Concrete Examples</h2>
@@ -346,7 +346,7 @@ export default function ChoicesConsequencesPage() {
  <p>
  <strong>Short answer:</strong> do not trust a returned or isolated
  character until memory, witness, scanner, or evidence context
- supports them — the alien organism&apos;s whole threat is that it can
+ supports them â?the alien organism&apos;s whole threat is that it can
  imitate your crew.
  </p>
  <p>
@@ -390,7 +390,7 @@ export default function ChoicesConsequencesPage() {
 
  <h2 id="choice-mapping">Can You Undo a Choice in Directive 8020? Choice Mapping Method</h2>
  <p>
- <strong>Short answer:</strong> yes — use Turning Points in the Story
+ <strong>Short answer:</strong> yes â?use Turning Points in the Story
  Tree to revisit a branch, but change one variable at a time so the
  consequence is clear.
  </p>

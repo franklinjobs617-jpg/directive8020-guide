@@ -25,7 +25,7 @@ const choices: Choice[] = [
  label: 'Trust check',
  prompt: 'An isolated crew member returns with a weak explanation.',
  options: [
- { value: 'safe', label: 'Verify first', helper: 'Best for a clean route: look for evidence before trust.' },
+ { value: 'safe', label: 'Check first', helper: 'Best for a clean route: look for evidence before trust.' },
  { value: 'risky', label: 'Trust quickly', helper: 'Route risk: weaker evidence before a mimic check.' },
  { value: 'fatal', label: 'Split the team', helper: 'Critical risk: isolation can remove later safety options.' },
  ],
@@ -45,7 +45,7 @@ const choices: Choice[] = [
  label: 'Finale discipline',
  prompt: 'The finale asks for a high-pressure mission decision.',
  options: [
- { value: 'safe', label: 'Protect crew and mission', helper: 'Safest verified-style planning principle.' },
+ { value: 'safe', label: 'Protect crew and mission', helper: 'Safest safe planning principle.' },
  { value: 'risky', label: 'Sacrifice one variable', helper: 'Useful for controlled alternate ending tests.' },
  { value: 'fatal', label: 'Panic choice', helper: 'Critical risk for bad-ending cleanup branches.' },
  ],
@@ -79,7 +79,7 @@ function getRoute(riskScore: number) {
  label: 'Critical route risk',
  tone: 'danger',
  feedback:
- 'Use this only as an alternate cleanup branch. Do not treat it as a verified worst-ending trigger until the Story Tree confirms the result.',
+ 'Use this only as an alternate cleanup branch. Do not treat it as a final worst-ending trigger until the Story Tree confirms the result.',
  };
  }
 
@@ -88,7 +88,7 @@ function getRoute(riskScore: number) {
  label: 'Mixed ending risk',
  tone: 'warning',
  feedback:
- 'This path may still be useful for alternate endings, but verify survivor state, evidence, and relationship changes before continuing.',
+ 'This path may still be useful for alternate endings, but check survivor state, evidence, and relationship changes before continuing.',
  };
  }
 

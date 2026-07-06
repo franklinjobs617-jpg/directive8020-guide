@@ -4,7 +4,7 @@ import { createGAG2Metadata, gag2Codes, gag2Images } from '@/lib/grow-a-garden-2
 
 const title = 'Grow a Garden 2 Codes (June 2026): All Active Codes & How to Redeem';
 const description =
- 'All working Grow a Garden 2 codes for June 2026. TEAMGREENBEAN gives 3× Green Bean Seeds. How to redeem codes, where new codes are announced (Discord, X/Twitter, YouTube), and expired codes list. Updated daily.';
+ 'All working Grow a Garden 2 codes for June 2026. TEAMGREENBEAN gives 3Ã Green Bean Seeds. How to redeem codes, where new codes are announced (Discord, X/Twitter, YouTube), and expired codes list. Updated daily.';
 const canonical = '/games/grow-a-garden-2/codes';
 
 export const metadata = createGAG2Metadata({ title, description, canonical });
@@ -17,13 +17,13 @@ export default function GAG2CodesPage() {
    <div className="mt-6 flex items-center gap-4 rounded-lg border border-border bg-gradient-to-r from-green-50 to-blue-50 p-5">
     <Image src={gag2Images.icon} alt="Grow a Garden 2" width={64} height={64} className="rounded-xl" />
     <div>
-     <p className="text-sm font-bold text-foreground">Codes verified June 15, 2026</p>
-     <p className="text-xs text-muted-foreground">Codes are case-sensitive. Redeem quickly — they can expire without notice.</p>
+     <p className="text-sm font-bold text-foreground">Codes checked June 15, 2026</p>
+     <p className="text-xs text-muted-foreground">Codes are case-sensitive. Redeem quickly â?they can expire without notice.</p>
     </div>
    </div>
 
    <section className="mt-6">
-    <h2 className="text-lg font-bold text-foreground">✅ Active Codes</h2>
+    <h2 className="text-lg font-bold text-foreground">â?Active Codes</h2>
     <div className="mt-3 overflow-hidden rounded-lg border border-border bg-white">
      <table className="w-full text-sm">
       <thead>
@@ -52,7 +52,7 @@ export default function GAG2CodesPage() {
      {[
       'Launch <strong>Grow a Garden 2</strong> on Roblox.',
       'Click the <strong>Settings cog</strong> (gear icon) in the top-left corner.',
-      'Type or paste the code into the <strong>code box</strong>. Codes are case-sensitive — copy exactly.',
+      'Type or paste the code into the <strong>code box</strong>. Codes are case-sensitive â?copy exactly.',
       'Click <strong>Claim!</strong> to receive your reward.',
      ].map((step, i) => (
       <li key={i} className="flex gap-3">
@@ -66,13 +66,13 @@ export default function GAG2CodesPage() {
    <section className="mt-6">
     <h2 className="text-lg font-bold text-foreground">Where New Codes Are Announced</h2>
     <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-     <li>• <strong>Official Discord Server</strong> — announcements channel (primary source)</li>
-     <li>• <strong>X/Twitter:</strong> @GrowaGardenRblx</li>
-     <li>• <strong>YouTube:</strong> @GrowaGarden</li>
-     <li>• <strong>Roblox Group:</strong> The Garden Game</li>
+     <li>â?<strong>Official Discord Server</strong> â?announcements channel (primary source)</li>
+     <li>â?<strong>X/Twitter:</strong> @GrowaGardenRblx</li>
+     <li>â?<strong>YouTube:</strong> @GrowaGarden</li>
+     <li>â?<strong>Roblox Group:</strong> The Garden Game</li>
     </ul>
     <p className="mt-3 text-xs text-muted-foreground">
-     This page was last verified on June 15, 2026. Codes can expire without notice — redeem them ASAP.
+     This page was last checked on June 15, 2026. Codes can expire without notice â?redeem them ASAP.
      Bookmark this page and check back for updates.
     </p>
    </section>

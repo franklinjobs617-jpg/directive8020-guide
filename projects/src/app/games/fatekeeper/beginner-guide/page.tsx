@@ -170,7 +170,7 @@ export default function FatekeeperBeginnerGuidePage() {
  <ArticleImage
  src={fatekeeperImages.siteGearPoster}
  alt="Fatekeeper relic and upgrade inspection image"
- caption="Upgrade the tool you use every fight before building around rare situations or unverified late-game assumptions."
+ caption="Upgrade the tool you use every fight before building around rare situations or late-game assumptions."
  />
  <p>
  Your first upgrade priority should support the action you repeat most:

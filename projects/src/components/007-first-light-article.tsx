@@ -85,7 +85,7 @@ export function FirstLightArticle({
  <>
  <ArticleImage
  src={firstLightImages.background}
- alt="007 First Light source check and launch guide image"
+ alt="007 First Light player reference and launch guide image"
  caption="Use official store, support, and video sources for release timing, early access, system requirements, and gameplay claims."
  />
  <SourceCheckTable title="007 First Light Official Links and References" rows={firstLightSourceRows} />

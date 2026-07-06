@@ -10,15 +10,15 @@ const canonical = '/games/grow-a-garden-2';
 export const metadata = createGAG2Metadata({ title, description, canonical });
 
 const guideCards = [
- { title: 'All Pets Guide', href: '/games/grow-a-garden-2/pets', desc: '12 pets with prices, abilities, rarities, and tier rankings.', emoji: '🐾' },
- { title: 'Wheelbarrow Guide', href: '/games/grow-a-garden-2/wheelbarrow', desc: 'What it does, how to get it, and is it worth 500K?', emoji: '🛒' },
- { title: 'All Gears Guide', href: '/games/grow-a-garden-2/gears', desc: '20+ gears: Sprinklers, Mushrooms, Gnome, Teleporter, more.', emoji: '🔧' },
- { title: 'Seeds & Plants Guide', href: '/games/grow-a-garden-2/seeds', desc: 'Carrot to Dragon\'s Breath. Best crops for every stage.', emoji: '🌱' },
- { title: 'Active Codes', href: '/games/grow-a-garden-2/codes', desc: 'TEAMGREENBEAN and more. Updated daily.', emoji: '🎫' },
- { title: 'Guilds Guide', href: '/games/grow-a-garden-2/guild', desc: 'Create, join, rewards, roles, weekly competitions.', emoji: '🏛️' },
- { title: 'Seed Packs Guide', href: '/games/grow-a-garden-2/seed-packs', desc: 'Ghost Pepper Pack: odds, costs, exclusive seeds.', emoji: '📦' },
- { title: 'Night Stealing Guide', href: '/games/grow-a-garden-2/night-stealing', desc: 'How to steal at night & defend your crops.', emoji: '🌙' },
- { title: 'Beginner Guide', href: '/games/grow-a-garden-2/beginner-guide', desc: 'First hour walkthrough. From 0 to thriving garden.', emoji: '🎯' },
+ { title: 'All Pets Guide', href: '/games/grow-a-garden-2/pets', desc: '12 pets with prices, abilities, rarities, and tier rankings.', emoji: 'Pets' },
+ { title: 'Wheelbarrow Guide', href: '/games/grow-a-garden-2/wheelbarrow', desc: 'What it does, how to get it, and is it worth 500K?', emoji: 'Cart' },
+ { title: 'All Gears Guide', href: '/games/grow-a-garden-2/gears', desc: '20+ gears: Sprinklers, Mushrooms, Gnome, Teleporter, more.', emoji: 'Gear' },
+ { title: 'Seeds & Plants Guide', href: '/games/grow-a-garden-2/seeds', desc: 'Carrot to Dragon\'s Breath. Best crops for every stage.', emoji: 'Seeds' },
+ { title: 'Active Codes', href: '/games/grow-a-garden-2/codes', desc: 'TEAMGREENBEAN and more. Updated daily.', emoji: 'Codes' },
+ { title: 'Guilds Guide', href: '/games/grow-a-garden-2/guild', desc: 'Create, join, rewards, roles, weekly competitions.', emoji: 'Guild' },
+ { title: 'Seed Packs Guide', href: '/games/grow-a-garden-2/seed-packs', desc: 'Ghost Pepper Pack: odds, costs, exclusive seeds.', emoji: 'Packs' },
+ { title: 'Night Stealing Guide', href: '/games/grow-a-garden-2/night-stealing', desc: 'How to steal at night & defend your crops.', emoji: 'Night' },
+ { title: 'Beginner Guide', href: '/games/grow-a-garden-2/beginner-guide', desc: 'First hour walkthrough. From 0 to thriving garden.', emoji: 'Start' },
 ];
 
 export default function GAG2HubPage() {
@@ -29,7 +29,7 @@ export default function GAG2HubPage() {
     <div>
      <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{title}</h1>
      <p className="mt-1 text-sm text-muted-foreground">
-      By <strong>Jandel</strong> (The Garden Game) · Released June 12, 2026 · 124M+ Visits · Roblox
+      By <strong>Jandel</strong> (The Garden Game) - Released June 12, 2026 - 124M+ Visits - Roblox
      </p>
     </div>
    </div>
@@ -62,7 +62,7 @@ export default function GAG2HubPage() {
    </section>
 
    <p className="mt-10 text-xs text-muted-foreground">
-    Data verified across 12 sources. Last updated June 15, 2026. Game launched June 12, 2026 — 124M+ visits.
+    Reference note: checked against 12 sources. Last updated June 15, 2026. Game launched June 12, 2026 - 124M+ visits.
    </p>
   </main>
  );

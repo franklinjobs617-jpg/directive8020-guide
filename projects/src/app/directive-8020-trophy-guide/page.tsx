@@ -185,7 +185,7 @@ export default function TrophyGuidePage() {
  Directive 8020 trophy guide short answer: build one clean route first,
  then use Turning Points for Platinum cleanup, all endings, all deaths,
  collectibles, Movie Night, and hidden achievement checks. Steam
- achievements are source checked; exact PS5 trophy names and hidden
+ achievements are player referenceed; exact PS5 trophy names and hidden
  unlocks still need platform confirmation.
  </p>
 
@@ -210,7 +210,7 @@ export default function TrophyGuidePage() {
  </BlufBox>
 
  <div id="platform-status">
- <SourceCheckTable title="Trophy and Platinum Source Check" rows={sourceRows} />
+ <SourceCheckTable title="Trophy and Platinum Player Reference Notes" rows={sourceRows} />
  </div>
 
  <StatusPanel
@@ -307,7 +307,7 @@ export default function TrophyGuidePage() {
  <h2 id="missable-cleanup">Which Directive 8020 Trophies Are Missable?</h2>
  <p>
  <strong>Short answer:</strong> the missable trophies are the
- route-specific ones, not the automatic chapter trophies — they depend
+ route-specific ones, not the automatic chapter trophies â?they depend
  on a character being alive, dead, trusted, blamed, or present at a
  particular scene. Track these conditions from the start:
  </p>

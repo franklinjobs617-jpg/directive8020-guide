@@ -60,10 +60,10 @@ const categories = [
 ];
 
 const robuxGears = [
- { name: 'Rainbow Carpet', emoji: '🪄', cost: '599 Robux', effect: 'Fly anywhere on the map' },
- { name: 'Vine Wrapper', emoji: '🌿', cost: '499 Robux', effect: 'Wraps players in vines, immobilizing them' },
- { name: 'Freeze Ray', emoji: '❄️', cost: '749 Robux', effect: 'Freezes a player into an ice cube' },
- { name: 'Power Hose', emoji: '🔫', cost: '299 Robux', effect: 'Sprays and pushes players away' },
+ { name: 'Rainbow Carpet', emoji: 'ðª', cost: '599 Robux', effect: 'Fly anywhere on the map' },
+ { name: 'Vine Wrapper', emoji: 'ð¿', cost: '499 Robux', effect: 'Wraps players in vines, immobilizing them' },
+ { name: 'Freeze Ray', emoji: 'âï¸', cost: '749 Robux', effect: 'Freezes a player into an ice cube' },
+ { name: 'Power Hose', emoji: 'ð«', cost: '299 Robux', effect: 'Sprays and pushes players away' },
 ];
 
 const faqs = [
@@ -92,21 +92,21 @@ export default function GAG2GearsPage() {
 
    <p className="mt-3 text-base text-muted-foreground leading-relaxed">
     Gears are purchased from <strong>George</strong> at the Gear Shop in the central hub.
-    The shop <strong>rotates every 5 minutes</strong> — not all gears are available at once.
+    The shop <strong>rotates every 5 minutes</strong> â?not all gears are available at once.
     Some gears can also be bought with <strong>Robux</strong>. There are <strong>{gag2Gears.length} Sheckles-purchasable gears</strong> plus 4 Robux-only gears.
    </p>
 
    <div className="mt-4 rounded-lg border-2 border-blue-200 bg-blue-50 p-4">
-    <p className="text-sm font-bold text-blue-900">🔍 Search Note</p>
+    <p className="text-sm font-bold text-blue-900">ð Search Note</p>
     <p className="mt-1 text-sm text-blue-800">
-     Players searching for "Speed Hub" or "Magnet" — these items <strong>do not exist</strong> in Grow a Garden 2.
+     Players searching for "Speed Hub" or "Magnet" â?these items <strong>do not exist</strong> in Grow a Garden 2.
      "Speed Hub" is likely the <strong>Speed Mushroom</strong>. "Magnet" is not a feature in this game.
     </p>
    </div>
 
    <div className="mt-6 grid gap-2 sm:grid-cols-3">
     {[
-     { label: 'Best Early Buy', item: 'Common Sprinkler (3K)', reason: '2 min of 1.5× growth' },
+     { label: 'Best Early Buy', item: 'Common Sprinkler (3K)', reason: '2 min of 1.5Ã growth' },
      { label: 'Best Value', item: 'Speed Mushroom (1.5K)', reason: 'Cheap speed for night raids' },
      { label: 'Best Defense', item: 'Gnome (50K)', reason: 'Auto-defends at night' },
     ].map((pick) => (
@@ -204,7 +204,7 @@ export default function GAG2GearsPage() {
    </div>
 
    <p className="mt-8 text-xs text-muted-foreground">
-    Data verified across TheGamer, IGN, ProGameGuides, TechWiser, AllThingsHow, Beebom, and Roonby. Last updated June 15, 2026.
+    Reference note: checked against TheGamer, IGN, ProGameGuides, TechWiser, AllThingsHow, Beebom, and Roonby. Last updated June 15, 2026.
    </p>
   </main>
  );

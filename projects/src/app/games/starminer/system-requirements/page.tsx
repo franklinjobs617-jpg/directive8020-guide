@@ -48,7 +48,7 @@ const faqs = [
  "Steam lists 7 GB of available storage.",
  },
  {
- question: "Is Starminer Steam Deck Verified?",
+ question: "Is Starminer Steam Deck compatibility?",
  answer:
  "Steam Deck compatibility is not confirmed in the current store data. Treat Steam Deck support as unknown until Valve or the developer lists a compatibility result.",
  },

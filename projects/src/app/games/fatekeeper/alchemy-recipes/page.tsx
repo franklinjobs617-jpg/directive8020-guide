@@ -9,7 +9,7 @@ import {
 
 const title = "Fatekeeper Alchemy, Spells & Crafting Guide";
 const description =
- "Fatekeeper spells, alchemy, crafting, consumable timing, and environmental combat guide for Early Access players who need verified facts and practical testing rules.";
+ "Fatekeeper spells, alchemy, crafting, consumable timing, and environmental combat guide for Early Access players who need store facts and practical testing rules.";
 const canonical = "/games/fatekeeper/alchemy-recipes";
 
 export const metadata = createFatekeeperMetadata({
@@ -85,7 +85,7 @@ const keyFacts = [
  { label: "Known spell names", value: "Telekinesis, Fireball, Frost Bolt, Wind Push", status: "verified" as const },
  { label: "Alchemy system", value: "Confirmed as a feature, but recipe details are not final here", status: "needs-check" as const },
  { label: "Consumable timing", value: "Plan use before combat or after creating distance", status: "working" as const },
- { label: "Ingredient locations", value: "No complete verified route list yet", status: "needs-check" as const },
+ { label: "Ingredient locations", value: "No complete route list yet", status: "needs-check" as const },
  { label: "Best first spell", value: "Telekinesis because it uses hazards and positioning", status: "working" as const },
  { label: "Patch risk", value: "Damage, mana, and recipe values can change during Early Access", status: "verified" as const },
 ];
@@ -103,7 +103,7 @@ export default function FatekeeperAlchemyPage() {
  >
  <BlufBox title="BLUF">
  Fatekeeper spell and alchemy advice has one hard rule: do not treat
- unverified recipes as facts. The useful first-run answer is simple.
+ unfinished recipe notes as facts. The useful first-run answer is simple.
  Use Telekinesis to turn ledges, spike walls, and enemy spacing into
  damage. Treat Fireball, Frost Bolt, and Wind Push as tools to test
  against specific problems. Use consumables before a fight or after you
@@ -196,7 +196,7 @@ export default function FatekeeperAlchemyPage() {
 
  <h3 className="mb-3 text-lg font-bold text-foreground">Known Potion Effects (Custom Brewing)</h3>
  <p className="mb-3 text-sm leading-relaxed text-muted-foreground">
- Fatekeeper uses a <strong>custom ingredient combination system</strong> — you mix ingredients to
+ Fatekeeper uses a <strong>custom ingredient combination system</strong> â?you mix ingredients to
  create potions with multiple effects. Recipe documents found on tables inside the Alchemy Lab
  reveal specific combinations. Use <strong>middle mouse button</strong> to auto-fill ingredients
  from a discovered recipe.
@@ -231,9 +231,9 @@ export default function FatekeeperAlchemyPage() {
  <h3 className="mb-3 text-lg font-bold text-foreground">Ingredient Gathering Tips</h3>
  <div className="mb-4 grid gap-2">
  {[
- 'Collect every mushroom, flower, and gathering node you see during exploration — inventory is generous.',
+ 'Collect every mushroom, flower, and gathering node you see during exploration â?inventory is generous.',
  'The Alchemy Lab itself has scattered materials around the room; check every corner.',
- 'Recipe documents are found on tables inside the Alchemy Lab — read them to unlock auto-fill combinations.',
+ 'Recipe documents are found on tables inside the Alchemy Lab â?read them to unlock auto-fill combinations.',
  'Experiment freely: the custom brewing system encourages trying different ingredient mixes.',
  'Note which effects each ingredient contributes so you can recreate useful potions later.',
  'Early Access caveat: exact ingredient names and drop rates may change between patches.',
@@ -328,3 +328,4 @@ export default function FatekeeperAlchemyPage() {
  </FatekeeperArticle>
  );
 }
+

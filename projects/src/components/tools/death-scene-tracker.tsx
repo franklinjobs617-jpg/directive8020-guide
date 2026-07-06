@@ -66,7 +66,7 @@ export function DeathSceneTracker() {
  Directive 8020 Death Scene Tracker
  </h2>
  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
- Mark each captured death while the exact victim and trigger list is being verified.
+ Mark each captured death while the exact victim and trigger list is being mapped.
  </p>
  </div>
  <button

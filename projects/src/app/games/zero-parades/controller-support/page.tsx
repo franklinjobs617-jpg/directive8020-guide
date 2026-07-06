@@ -45,7 +45,7 @@ const faqs = [
  {
  question: 'Can I play ZERO PARADES on Steam Deck with a controller?',
  answer:
- 'Yes. ZERO PARADES is Steam Deck Verified. The built-in controls work, but text-heavy RPGs benefit from testing font size and controller readability before a long session.',
+ 'Yes. ZERO PARADES is Steam Deck compatibility. The built-in controls work, but text-heavy RPGs benefit from testing font size and controller readability before a long session.',
  },
  {
  question: 'Is keyboard or controller better for ZERO PARADES?',
@@ -112,15 +112,15 @@ export default function ZeroParadesControllerSupportPage() {
  <tr className="border-b border-border bg-mist">
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Input area</th>
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Controller status</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">Confidence</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player note</th>
  </tr>
  </thead>
  <tbody>
- {zeroParadesControllerRows.map(([area, status, confidence]) => (
+ {zeroParadesControllerRows.map(([area, status, note]) => (
  <tr key={area} className="border-b border-border last:border-0">
  <td className="px-4 py-3 font-semibold text-foreground">{area}</td>
  <td className="px-4 py-3 text-muted-foreground">{status}</td>
- <td className="px-4 py-3 text-muted-foreground">{confidence}</td>
+ <td className="px-4 py-3 text-muted-foreground">{note}</td>
  </tr>
  ))}
  </tbody>
@@ -170,10 +170,10 @@ export default function ZeroParadesControllerSupportPage() {
  <ArticleImage
  src={zeroParadesImages.screenshot8}
  alt="ZERO PARADES Steam Deck controller tips screenshot"
- caption="Steam Deck Verified means the game runs, but text-heavy RPGs still benefit from font size and readability checks before a long session."
+ caption="Steam Deck compatibility means the game runs, but text-heavy RPGs still benefit from font size and readability checks before a long session."
  />
  <p>
- ZERO PARADES is Steam Deck Verified, which means the game runs
+ ZERO PARADES is Steam Deck compatibility, which means the game runs
  well on the hardware. However, text-heavy RPGs present a specific
  challenge on handheld devices: small text. Before starting a long
  session on Steam Deck, check the in-game text size settings and

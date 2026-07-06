@@ -8,9 +8,9 @@ import {
  romesteadImages,
 } from '@/lib/romestead';
 
-const title = 'Romestead Beginner Guide: Best Profession, First Day Survival & Tips 2026';
+const title = 'Romestead Beginner Guide: First Day Route, Jobs, Food, Defense & Co-op Tips';
 const description =
- 'Start Romestead with the best profession, survive your first day, gather resources, build a base, assign jobs, and prepare night defense. Complete beginner guide for 2026 Early Access.';
+ 'Start Romestead with a clear first-day route: gather food and materials, build storage and workstations, assign jobs, choose a useful role, and prepare night defense.';
 const canonical = '/games/romestead/beginner-guide';
 
 export const metadata = createRomesteadMetadata({
@@ -134,7 +134,7 @@ export default function RomesteadBeginnerGuidePage() {
  >
  <SearchAnswerPanel
  title="What should you do first in Romestead?"
- answer="For the first day, build a compact working settlement before chasing dungeons: gather food, wood, stone, and basic materials; place storage and workstations; assign survivors to repeated chores; choose a role that fixes your first shortage; and prepare night defense."
+ answer="For the first day, build a compact functional settlement before chasing dungeons: gather food, wood, stone, and basic materials; place storage and workstations; assign survivors to repeated chores; choose a role that fixes your first shortage; and prepare night defense."
  intentRows={searchIntentRows}
  jumpLinks={jumpLinks}
  />
@@ -155,7 +155,7 @@ export default function RomesteadBeginnerGuidePage() {
  <ArticleImage
  src={romesteadImages.screenshot2}
  alt="Romestead first day base building screenshot"
- caption="Your first day should create a working settlement core: resources, storage, crafting, food, and a layout that can be defended when night pressure starts."
+ caption="Your first day should create a functional settlement core: resources, storage, crafting, food, and a layout that can be defended when night pressure starts."
  />
  <p>
  Romestead mixes personal survival with settlement management. That
@@ -289,8 +289,8 @@ export default function RomesteadBeginnerGuidePage() {
  If you are always short on basic materials, assign help around
  gathering and production. If nights feel dangerous, use layout and
  roles to improve defense before exploring farther. God blessings
- should be treated as flexible support until players verify final
- balance, strongest combinations, and late-game builds.
+ should be treated as flexible support until late-game balance and
+ stronger build routes settle.
  </p>
  <p>
  If you are playing with friends, use the{' '}

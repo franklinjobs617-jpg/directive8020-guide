@@ -109,7 +109,7 @@ export function EpisodeWalkthroughPage({ data }: { data: EpisodeWalkthroughData 
  <h2>{data.episodeName} Quick Facts</h2>
  <p>
  This page is written as a focused chapter guide, not a copied
- transcript. It uses verified episode structure and collectible
+ transcript. It uses the episode structure and collectible
  coverage, then tells you what to watch for while playing.
  </p>
  </div>
@@ -146,7 +146,7 @@ export function EpisodeWalkthroughPage({ data }: { data: EpisodeWalkthroughData 
  <>
  <h2>Source-Checked Route Notes</h2>
  <p>
- These rows separate verified searchable details from route notes
+ These rows separate searchable details from route notes
  that still need in-game confirmation. Use them as a quick answer
  surface for chapter-specific searches, not as copied transcript
  text.
@@ -161,8 +161,8 @@ export function EpisodeWalkthroughPage({ data }: { data: EpisodeWalkthroughData 
  <thead>
  <tr className="border-b border-border bg-mist">
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Claim</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">Source</th>
- <th className="px-4 py-3 text-left font-medium text-muted-foreground">Status</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Where to check</th>
+ <th className="px-4 py-3 text-left font-medium text-muted-foreground">Player note</th>
  <th className="px-4 py-3 text-left font-medium text-muted-foreground">Guide use</th>
  </tr>
  </thead>
@@ -172,7 +172,7 @@ export function EpisodeWalkthroughPage({ data }: { data: EpisodeWalkthroughData 
  <td className="px-4 py-3 font-semibold text-foreground">{row.claim}</td>
  <td className="px-4 py-3 text-foreground">{row.source}</td>
  <td className="px-4 py-3 text-muted-foreground">
- {row.status === 'verified' ? 'Source checked' : row.status === 'needs-check' ? 'Needs verification' : 'Working route'}
+ {row.status === 'verified' ? 'Official note' : row.status === 'needs-check' ? 'Check before routing' : 'Route note'}
  </td>
  <td className="px-4 py-3 text-muted-foreground">{row.note}</td>
  </tr>

@@ -221,7 +221,7 @@ export default function VoidlingBoundDatabasePage() {
  </p>
  </section>
 
- <SourceCheckTable title="Voidling Bound Sources and Verification" rows={voidlingSourceRows} />
+ <SourceCheckTable title="Voidling Bound Reference Notes" rows={voidlingSourceRows} />
  <RelatedGuides guides={getVoidlingBoundRelated(canonical)} />
  <FAQSection faqs={voidlingGuideFaqs.database} />
  </main>

@@ -33,7 +33,7 @@ const endings: EndingCard[] = [
  label: 'Mask Off',
  intent: 'Mimic exposure or identity-reveal outcome that depends on evidence and trust handling.',
  status: 'Route pending',
- checklist: ['Verify mimic clues', 'Use scanner/evidence notes', 'Avoid blind trust near finale'],
+ checklist: ['Check mimic clues', 'Use scanner/evidence notes', 'Avoid blind trust near finale'],
  },
  {
  id: 'hitchhiker',
@@ -74,7 +74,7 @@ export function EndingIndex() {
  Directive 8020 Ending Index
  </h2>
  <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
- Pick an ending intent to see what to preserve, what to test, and what still needs verification.
+ Pick an ending intent to see what to preserve, what to test, and what still needs route work.
  </p>
  </div>
  <span className="rounded-md border border-border px-3 py-2 text-xs text-muted-foreground">

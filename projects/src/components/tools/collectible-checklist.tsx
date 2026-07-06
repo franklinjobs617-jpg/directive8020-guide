@@ -20,7 +20,7 @@ const normalSecrets: CollectibleItem[] = Array.from({ length: 50 }, (_, index) =
  episode: 'Main Story',
  type: 'Normal Secret',
  label: `Normal Secret ${index + 1}`,
- note: 'Location pending item-by-item verification. Use this slot to track the confirmed 50-secret route.',
+ note: 'Location pending item-by-item routing. Use this slot to track the 50-secret route.',
 }));
 
 const simmsRecordings: CollectibleItem[] = Array.from({ length: 10 }, (_, index) => ({
@@ -28,7 +28,7 @@ const simmsRecordings: CollectibleItem[] = Array.from({ length: 10 }, (_, index)
  episode: 'Main Story',
  type: 'Simms Recording',
  label: `Simms Recording ${index + 1}`,
- note: 'Location pending item-by-item verification. Track separately from normal Secrets.',
+ note: 'Location pending item-by-item routing. Track separately from normal Secrets.',
 }));
 
 const oDeathSecrets: CollectibleItem[] = Array.from({ length: 5 }, (_, index) => ({
@@ -36,7 +36,7 @@ const oDeathSecrets: CollectibleItem[] = Array.from({ length: 5 }, (_, index) =>
  episode: 'Main Story',
  type: 'O Death Secret',
  label: `O Death Secret ${index + 1}`,
- note: 'Location pending item-by-item verification. Keep Curator-style cleanup separate.',
+ note: 'Location pending item-by-item routing. Keep Curator-style cleanup separate.',
 }));
 
 const collectibles: CollectibleItem[] = [
@@ -140,7 +140,7 @@ export function CollectibleChecklist() {
  </h2>
  <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
  Use this as a cleanup scratchpad while the full item-by-item map is
- being verified. It saves progress locally and reflects the current
+ being mapped. It saves progress locally and reflects the current
  65-item structure: 50 normal Secrets, 10 Simms Recordings, and 5
  O Death Secrets, plus a separate Deluxe Heirlooms slot.
  </p>

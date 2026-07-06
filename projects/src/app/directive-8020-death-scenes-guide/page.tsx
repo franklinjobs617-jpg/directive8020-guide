@@ -290,7 +290,7 @@ export default function DeathScenesPage() {
  </div>
 
  <div id="death-spiral">
- <SourceCheckTable title="Death Spiral Source Check" rows={sourceRows} />
+ <SourceCheckTable title="Death Spiral Player Reference Notes" rows={sourceRows} />
  </div>
 
  <div className="prose-game">
@@ -353,7 +353,7 @@ export default function DeathScenesPage() {
  trying to prevent a specific death.
  </p>
  <ul>
- <li><strong>Death number:</strong> 1 of 44 after verification.</li>
+ <li><strong>Death number:</strong> 1 of 44 after route capture.</li>
  <li><strong>Episode:</strong> Little Star, Dragnet, or the verified chapter title.</li>
  <li><strong>Victim:</strong> Young, Eisele, Cernan, Stafford, Cooper, or other confirmed character.</li>
  <li><strong>Trigger:</strong> choice, QTE, stealth, relationship, evidence, or finale branch.</li>

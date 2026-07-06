@@ -245,7 +245,7 @@ export default function MovieNightPage() {
  </ul>
  </div>
 
- <SourceCheckTable title="Co-op Source Check" rows={sourceRows} />
+ <SourceCheckTable title="Co-op Player Reference Notes" rows={sourceRows} />
 
  <FAQSection faqs={faqs} />
  </article>

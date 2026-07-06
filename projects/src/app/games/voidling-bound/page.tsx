@@ -42,7 +42,7 @@ const searchIntentRows = [
  },
  {
  query: 'voidling bound creatures wiki',
- answer: 'This hub uses the wiki as source data, then restructures it into filters, comparison, summaries, and source checks.',
+ answer: 'This hub uses the wiki as source data, then restructures it into filters, comparison, summaries, and player references.',
  href: '#sources',
  label: 'Sources',
  },
@@ -68,7 +68,7 @@ export default function VoidlingBoundHubPage() {
  >
  <BlufBox title="Worth Doing?">
  <p>
- <strong>Voidling Bound has over 120 named evolutions across 9 species.</strong> You need fast lookup to identify creatures, compare ability slots, and plan evolution paths — not read every wiki page manually. This hub gives you a searchable database, beginner route, and system guides (evolution, breeding, elements, attributes) in one place.
+ <strong>Voidling Bound has over 120 named evolutions across 9 species.</strong> You need fast lookup to identify creatures, compare ability slots, and plan evolution paths â?not read every wiki page manually. This hub gives you a searchable database, beginner route, and system guides (evolution, breeding, elements, attributes) in one place.
  </p>
  </BlufBox>
 
@@ -105,7 +105,7 @@ export default function VoidlingBoundHubPage() {
  <Link href="/games/voidling-bound/database">All Voidlings Database</Link>
  {' '}when you know a name, element, rarity, or ability. Use the{' '}
  <Link href="/games/voidling-bound/voidlings">All Voidlings List</Link>
- {' '}when you want a crawlable species-by-species view. Use guide pages when the question is not “what is this??but “what should I do with this?? </p>
+ {' '}when you want a crawlable species-by-species view. Use guide pages when the question is not âwhat is this??but âwhat should I do with this?? </p>
  </section>
 
  <section id="steam-status" className="prose-game">

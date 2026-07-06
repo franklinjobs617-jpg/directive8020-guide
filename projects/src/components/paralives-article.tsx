@@ -100,7 +100,7 @@ export function ParalivesArticle({
  <>
  <ArticleImage
  src={paralivesImages.town}
- alt="Paralives official source check town screenshot"
+ alt="Paralives official player reference town screenshot"
  caption="Use official Steam and Paralives channels for release status, supported platforms, requirements, roadmap features, and Workshop support."
  />
  <SourceCheckTable

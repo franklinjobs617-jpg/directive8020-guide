@@ -64,7 +64,7 @@ const faqs = [
  {
  question: "Can you rename ships in Starminer?",
  answer:
- "Use the live build to confirm ship naming and management details. This hub focuses on confirmed systems and practical setup rather than unverified interface claims.",
+ "Use the live build to confirm ship naming and management details. This hub focuses on confirmed systems and practical setup rather than unclear interface claims.",
  },
 ];
 

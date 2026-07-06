@@ -37,7 +37,7 @@ const statusRows = [
  ['Lex Imperialis', 'Campaign-integrated DLC', 'Plan around party and story timing instead of treating it as a post-game add-on.'],
  ['The Infinite Museion', 'Released June 11, 2026', 'Adds Trazyn-linked content, Eogunn Februs, rare artefacts, puzzles, and augmentations.'],
  ['Update 1.6', 'Live with the June 2026 DLC window', 'Changes several build assumptions, including Operative, Assassin, Uralon, Pasqal, Forge World, and fixes.'],
- ['Steam Deck', 'Listed as Steam Deck Verified on Steam', 'Still test text comfort and long-session battery expectations before committing a long campaign.'],
+ ['Steam Deck', 'Listed as Steam Deck compatibility on Steam', 'Still test text comfort and long-session battery expectations before committing a long campaign.'],
 ];
 
 const saveRows = [

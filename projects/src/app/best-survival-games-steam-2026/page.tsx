@@ -9,7 +9,7 @@ import { JsonLd, generateArticleSchema, generateFAQSchema } from '@/components/j
 export const metadata: Metadata = {
   title: 'Best Survival Games on Steam 2026: Top 15 Picks for Solo & Co-op',
   description:
-    'The best survival games on Steam in 2026 ranked by Steam rating, price, and player count. From Valheim to Project Zomboid — find your next survival adventure.',
+    'The best survival games on Steam in 2026 ranked by Steam rating, price, and player count. From Valheim to Project Zomboid â?find your next survival adventure.',
   alternates: {
     canonical: '/best-survival-games-steam-2026',
   },
@@ -57,10 +57,10 @@ const survivalGames: GameEntry[] = [
     imageName: 'valheim.webp',
     appId: '892970',
     bestFor: 'Best Viking Survival Crafting',
-    tagline: '10 million players, 96% positive, and still in Early Access — Valheim is the survival game that defined the genre this decade.',
+    tagline: '10 million players, 96% positive, and still in Early Access â?Valheim is the survival game that defined the genre this decade.',
     verdict: 'If you want the best all-round survival experience on Steam with friends, start here.',
-    forSolo: 'Works well solo — enemies scale to player count, and the world is just as rewarding alone.',
-    forCoop: 'Up to 10 players. Co-op is the intended way to play — building a Viking longhouse with friends is unmatched.',
+    forSolo: 'Works well solo â?enemies scale to player count, and the world is just as rewarding alone.',
+    forCoop: 'Up to 10 players. Co-op is the intended way to play â?building a Viking longhouse with friends is unmatched.',
     tradeoff: 'Still in Early Access since 2021. The Mistlands and Ashlands updates add content, but the "finished" game is not here yet.',
     genre: 'Survival Crafting',
     developer: 'Iron Gate Studio',
@@ -76,7 +76,7 @@ const survivalGames: GameEntry[] = [
     imageName: 'subnautica.webp',
     appId: '264710',
     bestFor: 'Best Ocean Survival Exploration',
-    tagline: 'The only survival game where the deepest fear is not running out of food — it is what is waiting in the dark.',
+    tagline: 'The only survival game where the deepest fear is not running out of food â?it is what is waiting in the dark.',
     verdict: 'The best single-player survival game on Steam. Play it before any sequel or spin-off.',
     forSolo: 'Solo-only and deliberately designed for it. The isolation is part of the experience.',
     forCoop: 'No co-op. Subnautica is a crafted single-player story designed for solo play.',
@@ -96,9 +96,9 @@ const survivalGames: GameEntry[] = [
     appId: '242760',
     bestFor: 'Best Horror Survival Co-op',
     tagline: 'The game that proved horror survival works in co-op. Still the scariest survival game on Steam.',
-    verdict: 'The best entry point for horror survival. Play it before Sons of the Forest — the sequel assumes you know the story.',
+    verdict: 'The best entry point for horror survival. Play it before Sons of the Forest â?the sequel assumes you know the story.',
     forSolo: 'Playable solo and still scary, but the tension hits harder alone. Cave exploration is genuinely stressful.',
-    forCoop: 'Up to 4 players. Co-op reduces fear but adds strategy — one player builds while another scouts.',
+    forCoop: 'Up to 4 players. Co-op reduces fear but adds strategy â?one player builds while another scouts.',
     tradeoff: 'Graphics show its age. The sequel is better-looking, but The Forest has tighter pacing.',
     genre: 'Survival Horror',
     developer: 'Endnight Games',
@@ -134,7 +134,7 @@ const survivalGames: GameEntry[] = [
     appId: '815370',
     bestFor: 'Best Realistic Jungle Survival',
     tagline: 'The most unforgiving survival simulation on Steam. A single infected scratch can end your run.',
-    verdict: 'For players who want survival to feel real. Not for casual players — this game punishes mistakes brutally.',
+    verdict: 'For players who want survival to feel real. Not for casual players â?this game punishes mistakes brutally.',
     forSolo: 'Designed for solo. The story is about isolation, and the sanity system only works when you are alone.',
     forCoop: 'Up to 4 players in co-op mode, but the story campaign is single-player only. Co-op is sandbox.',
     tradeoff: 'Steep learning curve. The crafting system requires trial and error without a guide. Many players quit before the first hour.',
@@ -171,11 +171,11 @@ const survivalGames: GameEntry[] = [
     imageName: 'project-zomboid.webp',
     appId: '108600',
     bestFor: 'Best Zombie Survival Simulator',
-    tagline: 'The most detailed zombie survival game ever made. Moodles, injuries, infections — every system is simulated.',
+    tagline: 'The most detailed zombie survival game ever made. Moodles, injuries, infections â?every system is simulated.',
     verdict: 'For simulation fans who want depth over graphics. The learning curve is brutal but rewarding.',
     forSolo: 'Solo is the intended way to play. The game pauses when you open menus, making it a thinking game.',
     forCoop: 'Up to 4 players in co-op. Works well but the game does not pause for inventory management in multiplayer.',
-    tradeoff: 'Graphics are dated (isometric 2D). The tutorial is minimal — expect to die repeatedly before you understand the systems.',
+    tradeoff: 'Graphics are dated (isometric 2D). The tutorial is minimal â?expect to die repeatedly before you understand the systems.',
     genre: 'Zombie Survival',
     developer: 'The Indie Stone',
     releaseDate: 'Nov 2013 (EA)',
@@ -194,7 +194,7 @@ const survivalGames: GameEntry[] = [
     verdict: 'Best for relaxed survival sessions. Perfect for players who want building without constant threat.',
     forSolo: 'Works fine solo. The raft management is calmer alone, and hooking debris is meditative.',
     forCoop: 'Up to 8 players. Co-op makes raft expansion fast and island exploration more fun.',
-    tradeoff: 'The early game is slow — you spend the first few hours just hooking debris. Some players find it boring.',
+    tradeoff: 'The early game is slow â?you spend the first few hours just hooking debris. Some players find it boring.',
     genre: 'Ocean Survival',
     developer: 'Redbeet Interactive',
     releaseDate: 'Jun 2022',
@@ -212,7 +212,7 @@ const survivalGames: GameEntry[] = [
     tagline: 'Obsidian Entertainment made a survival game about being shrunk in a backyard. It is as good as it sounds.',
     verdict: 'The most polished survival game on this list. A full release with a complete story and no Early Access baggage.',
     forSolo: 'Good solo with adjustable difficulty. The story and quests give direction that other survival games lack.',
-    forCoop: 'Up to 4 players. Co-op progression is shared — everyone advances together.',
+    forCoop: 'Up to 4 players. Co-op progression is shared â?everyone advances together.',
     tradeoff: 'Arachnophobia mode exists, but if you have real fear of spiders, some boss fights will still be hard.',
     genre: 'Micro-Scale Survival',
     developer: 'Obsidian Entertainment',
@@ -250,7 +250,7 @@ const survivalGames: GameEntry[] = [
     tagline: 'Every seven days, a blood moon horde attacks. If your base is not ready, your run is over.',
     verdict: 'The best base-building survival game. The voxel system gives you total creative freedom.',
     forSolo: 'Works solo but the horde nights are brutal. Expect to die multiple times before your first blood moon.',
-    forCoop: 'Up to 8 players. Co-op is strongly recommended — dividing build tasks makes horde prep manageable.',
+    forCoop: 'Up to 8 players. Co-op is strongly recommended â?dividing build tasks makes horde prep manageable.',
     tradeoff: 'Over a decade in Early Access. The core loop is solid, but the "1.0" release keeps getting pushed.',
     genre: 'Zombie Survival',
     developer: 'The Fun Pimps',
@@ -288,7 +288,7 @@ const survivalGames: GameEntry[] = [
     tagline: 'A dark fantasy survival RPG with voxel building, parkour traversal, and a deadly magical fog.',
     verdict: 'Best for Valheim fans who want more structured combat and quests. Up to 16-player co-op is a standout feature.',
     forSolo: 'Playable solo but clearly designed for co-op. The world scale is large for one person.',
-    forCoop: 'Up to 16 players — the highest player cap on this list. Building a shared settlement with a large group is the highlight.',
+    forCoop: 'Up to 16 players â?the highest player cap on this list. Building a shared settlement with a large group is the highlight.',
     tradeoff: 'Early Access since Jan 2024. Content updates are regular, but the map has clear unfinished areas.',
     genre: 'Fantasy Survival',
     developer: 'Keen Games',
@@ -304,7 +304,7 @@ const survivalGames: GameEntry[] = [
     imageName: 'palworld.webp',
     appId: '1623730',
     bestFor: 'Best Creature Collector Survival',
-    tagline: 'Pokémon with guns, automation, and base building. The biggest survival game launch in Steam history.',
+    tagline: 'PokÃ©mon with guns, automation, and base building. The biggest survival game launch in Steam history.',
     verdict: 'Play this if you want creature collecting with real survival mechanics. Skip if you want a cohesive story.',
     forSolo: 'Works solo. The automation systems let you build production lines that run without you.',
     forCoop: 'Up to 4 players in co-op, plus dedicated servers for larger groups.',
@@ -327,7 +327,7 @@ const survivalGames: GameEntry[] = [
     verdict: 'Only if you are specifically looking for a dinosaur survival game. The scope is unmatched, but so are the technical issues.',
     forSolo: 'Solo is possible with boosted settings. The default grind is balanced for large tribes.',
     forCoop: 'Co-op servers with PvE mode are the best way to play. Taming and building with friends reduces the grind.',
-    tradeoff: '60% Steam rating for a reason — performance is rough even on high-end PCs, and the UI is a mess.',
+    tradeoff: '60% Steam rating for a reason â?performance is rough even on high-end PCs, and the UI is a mess.',
     genre: 'Dinosaur Survival',
     developer: 'Studio Wildcard',
     releaseDate: 'Oct 2023',
@@ -347,7 +347,7 @@ const faqs = [
   {
     question: 'Is Subnautica still worth playing in 2026?',
     answer:
-      'Absolutely. Subnautica is a finished game with a 97% Steam rating — the highest on this list. It has no co-op, so solo players get the full experience. The graphics hold up well, and the story-driven exploration remains unmatched in the genre.',
+      'Absolutely. Subnautica is a finished game with a 97% Steam rating â?the highest on this list. It has no co-op, so solo players get the full experience. The graphics hold up well, and the story-driven exploration remains unmatched in the genre.',
   },
   {
     question: 'Should I play The Forest or Sons of the Forest?',
@@ -455,8 +455,7 @@ function GameCard({ game }: { game: GameEntry }) {
           rel="noopener noreferrer"
           className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-foreground underline underline-offset-2 hover:opacity-70"
         >
-          View on Steam →
-        </a>
+          View on Steam â?        </a>
       </div>
     </section>
   );
@@ -469,7 +468,7 @@ export default function BestSurvivalGamesPage() {
         data={generateArticleSchema({
           title: 'Best Survival Games on Steam 2026: Top 15 Picks for Solo & Co-op',
           description:
-            'The best survival games on Steam in 2026 ranked by Steam rating, price, and player count. From Valheim to Project Zomboid — find your next survival adventure.',
+            'The best survival games on Steam in 2026 ranked by Steam rating, price, and player count. From Valheim to Project Zomboid â?find your next survival adventure.',
           url: 'https://enjoy4game.com/best-survival-games-steam-2026',
           datePublished: '2026-07-03',
           dateModified: '2026-07-03',
@@ -490,13 +489,13 @@ export default function BestSurvivalGamesPage() {
         </h1>
 
         <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
-          Survival games are the most rewarding genre on Steam — if you pick the right one. The
+          Survival games are the most rewarding genre on Steam â?if you pick the right one. The
           problem is too many Early Access titles, mixed ratings, and no way to compare them
           quickly. We built this list using <strong>live Steam data</strong>: each game&apos;s
-          current rating score, concurrent player count trends, and verified player counts from the
+          current rating score, concurrent player count trends, and player-count data from the
           Steam store page. Every recommendation is backed by <strong>actual player reviews</strong>,
           not editorial opinion. Our goal is simple: give you the data you need to decide whether a
-          game is worth your time — and your money.
+          game is worth your time â?and your money.
         </p>
 
         <div className="mb-8 overflow-hidden rounded-lg border border-border bg-mist/30 p-4">
@@ -507,10 +506,10 @@ export default function BestSurvivalGamesPage() {
             list fair and useful, we evaluated every candidate against four consistent criteria:
           </p>
           <ul className="space-y-1.5 text-sm text-foreground">
-            <li><strong>Steam rating</strong> — we use the current player rating (not critic scores), because survival games live or die by community reception. Every game on this list has at least 10,000 reviews.</li>
-            <li><strong>Solo &amp; co-op quality</strong> — some survival games excel at one but fail at the other. We call out the difference clearly so you don&apos;t buy a &ldquo;co-op&rdquo; game that requires a dedicated server.</li>
-            <li><strong>Content depth</strong> — measured by average playtime before repetition sets in. A great survival game keeps you engaged for 50+ hours, not 10.</li>
-            <li><strong>Ongoing support</strong> — active development, regular patches, and a healthy community. We flag games that have been abandoned or are stuck in perpetual Early Access.</li>
+            <li><strong>Steam rating</strong> â?we use the current player rating (not critic scores), because survival games live or die by community reception. Every game on this list has at least 10,000 reviews.</li>
+            <li><strong>Solo &amp; co-op quality</strong> â?some survival games excel at one but fail at the other. We call out the difference clearly so you don&apos;t buy a &ldquo;co-op&rdquo; game that requires a dedicated server.</li>
+            <li><strong>Content depth</strong> â?measured by average playtime before repetition sets in. A great survival game keeps you engaged for 50+ hours, not 10.</li>
+            <li><strong>Ongoing support</strong> â?active development, regular patches, and a healthy community. We flag games that have been abandoned or are stuck in perpetual Early Access.</li>
           </ul>
         </div>
 
@@ -566,11 +565,11 @@ export default function BestSurvivalGamesPage() {
           <h3>Step 2: Pick Your Experience Type</h3>
           <p>Not all survival games feel the same. Pick the flavor that matches your mood:</p>
           <ul>
-            <li><strong>Exploration-driven:</strong> Subnautica, Raft, The Long Dark — the world is the content.</li>
-            <li><strong>Building-driven:</strong> Valheim, 7 Days to Die, Grounded — base building is the main loop.</li>
-            <li><strong>Combat-driven:</strong> Sons of the Forest, V Rising, Enshrouded — fighting is as important as surviving.</li>
-            <li><strong>Survival simulation:</strong> Project Zomboid, Green Hell — realism over fun, punishment over convenience.</li>
-            <li><strong>Casual / creative:</strong> Don&apos;t Starve Together, Palworld — lower stress, more experimentation.</li>
+            <li><strong>Exploration-driven:</strong> Subnautica, Raft, The Long Dark â?the world is the content.</li>
+            <li><strong>Building-driven:</strong> Valheim, 7 Days to Die, Grounded â?base building is the main loop.</li>
+            <li><strong>Combat-driven:</strong> Sons of the Forest, V Rising, Enshrouded â?fighting is as important as surviving.</li>
+            <li><strong>Survival simulation:</strong> Project Zomboid, Green Hell â?realism over fun, punishment over convenience.</li>
+            <li><strong>Casual / creative:</strong> Don&apos;t Starve Together, Palworld â?lower stress, more experimentation.</li>
           </ul>
 
           <h3>Step 3: Check Your Budget and PC</h3>
@@ -612,14 +611,12 @@ export default function BestSurvivalGamesPage() {
               href="/best-of"
               className="rounded-md border border-border bg-white px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-mist"
             >
-              View all Best Of guides →
-            </Link>
+              View all Best Of guides â?            </Link>
             <Link
               href="/games"
               className="rounded-md border border-border bg-white px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-mist"
             >
-              Browse all games →
-            </Link>
+              Browse all games â?            </Link>
           </div>
         </div>
 
