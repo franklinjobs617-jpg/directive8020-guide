@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { GameDirectorySearch } from "@/components/game-directory-search";
 import { JsonLd, generateWebPageSchema } from "@/components/json-ld";
 import { projectMistImages } from "@/lib/project-mist";
 import { thickAsThievesImages } from "@/lib/thick-as-thieves";
@@ -292,23 +292,8 @@ export default function GamesPage() {
  beginner routes, choices, endings, co-op setup, PC specs,
  Steam Deck checks, and troubleshooting.
  </p>
- <div className="mt-5 flex max-w-xl overflow-hidden rounded-xl bg-mist">
- <div className="flex min-h-11 flex-1 items-center px-4 text-sm text-fog">
- Search by game, genre, database, Steam Deck
- </div>
- <Link
- href="#current-hubs"
- className="flex min-h-11 items-center justify-center bg-dribbble-pink px-4 text-sm font-bold text-white"
- >
- Browse
- </Link>
- </div>
- <div className="mt-5 flex flex-wrap gap-2">
- {["Database", "Survival", "RPG", "Steam Deck", "New Releases"].map((label) => (
- <span key={label} className="ui-pill">
- {label}
- </span>
- ))}
+ <div className="mt-5 max-w-xl">
+ <GameDirectorySearch games={gameCards} />
  </div>
  </div>
 
@@ -322,57 +307,6 @@ export default function GamesPage() {
  className="object-cover"
  sizes="(max-width: 768px) 100vw, 640px"
  />
- </div>
- </div>
- </section>
-
- <section id="current-hubs" className="mb-12 scroll-mt-24">
- <div className="mb-6">
- <h2 className="text-[26px] font-bold leading-tight tracking-[-0.29px] text-foreground">
- Current Hubs
- </h2>
- <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
- Start with the game you are playing, then move to the guide that
- matches your next question. Each hub keeps the most useful
- articles close together so you do not have to search the site
- page by page.
- </p>
- </div>
- <div>
- <div>
- <div className="shot-grid">
- {gameCards.map((game) => (
- <Link
- key={game.href}
- href={game.href}
- className="shot-card"
- >
- <div className="shot-thumb aspect-[4/3]">
- <Image
- src={game.image}
- alt={`${game.title} guide hub`}
- fill
- className="object-cover"
- sizes="(max-width: 768px) 100vw, 50vw"
- />
- </div>
- <div className="shot-meta">
- <div className="min-w-0">
- <div className="mb-1 flex items-center gap-2">
- <h3 className="truncate text-sm font-bold text-foreground group-hover:text-dribbble-pink">
- {game.title}
- </h3>
- <span className="ui-pink-badge">HUB</span>
- </div>
- <p className="text-xs font-semibold text-muted-foreground">{game.label}</p>
- <p className="mt-1 line-clamp-2 text-sm leading-5 text-muted-foreground">
- {game.body}
- </p>
- </div>
- </div>
- </Link>
- ))}
- </div>
  </div>
  </div>
  </section>

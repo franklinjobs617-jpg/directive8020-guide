@@ -26,6 +26,14 @@ export const metadata: Metadata = {
 // ── 当前覆盖的游戏 hub 列表（首页展示用）──
 const featuredGames = [
   {
+    title: 'Palworld',
+    genre: 'Creature Collector Survival',
+    status: '1.0 Launches July 10',
+    href: '/games/palworld',
+    image: '/games/palworld/card.webp',
+    desc: '1.0 release date and time, system requirements, save-data guidance, everything new (World Tree, Sky Islands), and breeding coverage as Early Access ends.',
+  },
+  {
     title: 'Directive 8020',
     genre: 'Story Horror',
     status: 'Full Coverage',
@@ -139,7 +147,7 @@ export default function HomePage() {
           {
             question: 'Is Directive 8020 on Steam Deck?',
             answer:
-              'Directive 8020 has Steam Deck support. Check the Steam Deck guide for settings, handheld expectations, and low-end PC advice.',
+              'Directive 8020 has Steam Deck support. Check the Steam Deck guide for verified settings, handheld expectations, and low-end PC advice.',
           },
         ])}
       />

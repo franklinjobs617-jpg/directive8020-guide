@@ -85,8 +85,15 @@ export function PalworldArticle({
         <h1 className="mb-4 text-[36px] font-bold leading-[1.06] tracking-[-1.1px] text-foreground sm:text-[54px] sm:leading-[1.08] sm:tracking-[-1.39px]">
           {title}
         </h1>
-        <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
+        <p className="mb-2 text-lg leading-relaxed text-muted-foreground">
           {description}
+        </p>
+        <p className="mb-8 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+          Last updated: {new Date(palworldLastModified).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
         </p>
 
         {children}

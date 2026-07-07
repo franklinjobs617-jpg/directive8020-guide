@@ -59,7 +59,7 @@ export const mistfallHunterGame: GameSchemaConfig = {
  platforms: ['PC via Steam'],
  genres: ['Action RPG', 'Extraction', 'PvPvE', 'Dark Fantasy', 'Multiplayer'],
  developer: 'Bellring Games',
- publisher: 'Bellring Games',
+ publisher: 'Skystone Games',
  releaseDate: '2026-07-29',
  operatingSystem: 'Windows',
  url: mistfallHunterSteamUrl,
@@ -488,12 +488,33 @@ export const mistfallHunterPages = {
   heroCaption:
    'Class value depends on what you are trying to survive: first run learning, solo extraction, trio role coverage, or PvP pressure.',
   quickAnswer:
-   'Do not choose Mistfall Hunter classes from one global tier list yet. For the demo and launch window, pick by task: beginner comfort, solo self-sufficiency, trio role coverage, or PvP engagement style.',
+   'Mistfall Hunter\'s full class roster is confirmed: Mercenary, Sorcerer, Blackarrow, Shadowstrix, Seer, and the newly revealed Withered Knight. Exact numbers and a stable tier list still are not public — pick by task (beginner comfort, solo self-sufficiency, trio role coverage, or PvP style) until launch balance settles.',
   updatedNote:
-   'Last updated June 22, 2026. Update after official class notes, balance patches, launch build changes, or stable player data.',
+   'Last updated July 7, 2026, after Bellring Games confirmed the full 6-class roster and Withered Knight kit details. Update again after official class notes, balance patches, launch build changes, or stable player data once the game launches July 29, 2026.',
   sourceNote: sharedSourceNote,
   related: getMistfallRelated('/games/mistfall-hunter/best-classes'),
   sections: [
+   {
+    id: 'confirmed-roster',
+    title: 'The Confirmed Class Roster',
+    image: mistfallHunterImages.screenshot2,
+    imageAlt: 'Mistfall Hunter official screenshot showing the class roster',
+    imageCaption:
+     'All six classes are now named. Only the Withered Knight has a fully detailed public kit as of this writing.',
+    paragraphs: [
+     'Bellring Games has confirmed all six Mistfall Hunter classes: Mercenary, Sorcerer, Blackarrow, Shadowstrix, Seer, and Withered Knight, the newest addition revealed for the June 2026 open beta. Official marketing has not published full skill breakdowns for the first five classes yet — treat their playstyles as name-implied genre conventions (melee fighter, spellcaster, ranged archer, agile striker, support/utility) rather than confirmed mechanics until Bellring publishes class-specific detail.',
+     'The Withered Knight is the one class with a fully detailed public kit: a two-handed greatsword fighter built around a mark-and-detonate loop. Its core kit is Withering Sigils + Reckoning (mark enemies, then detonate the sigils for layered damage), a timing-based Parry, and Thorn Guide, a grapple that drags enemies out of formation for teammates to punish. Bellring describes its defining mechanic, Withering Talent, as a choice between grinding enemies down with sigils or breaking enemy lines at a decisive moment.',
+    ],
+    columns: ['Class', 'What\'s Confirmed'],
+    rows: [
+     ['Mercenary', 'Name confirmed; official kit details not yet public.'],
+     ['Sorcerer', 'Name confirmed; official kit details not yet public.'],
+     ['Blackarrow', 'Name confirmed; official kit details not yet public.'],
+     ['Shadowstrix', 'Name confirmed; official kit details not yet public.'],
+     ['Seer', 'Name confirmed; official kit details not yet public.'],
+     ['Withered Knight', 'Greatsword class: Withering Sigils + Reckoning, Parry, Thorn Guide grapple, Withering Talent.'],
+    ],
+   },
    {
     id: 'class-matrix',
     title: 'Class Decision Matrix',
@@ -502,7 +523,7 @@ export const mistfallHunterPages = {
     imageCaption:
      'Use the class matrix to pick a role direction first. Exact rankings should wait for stable launch balance.',
     paragraphs: [
-     'The official description says Mistfall Hunter has six distinct classes, two weapon stances per class, talent trees, and gem affixes. That is enough to plan by role, but not enough to claim a permanent final meta.',
+     'With the roster confirmed but full kits still limited to one class, plan by role first and slot in the confirmed classes as more detail becomes public.',
     ],
     columns: ['Player goal', 'Prioritize', 'Avoid'],
     rows: [
@@ -550,6 +571,11 @@ export const mistfallHunterPages = {
   ],
   faqs: [
    ...sharedFaqs,
+   {
+    question: 'What classes are in Mistfall Hunter?',
+    answer:
+     'Six classes are confirmed: Mercenary, Sorcerer, Blackarrow, Shadowstrix, Seer, and Withered Knight (a greatsword class revealed for the June 2026 open beta). Full kit details are public only for the Withered Knight so far.',
+   },
    {
     question: 'What is the best Mistfall Hunter class for beginners?',
     answer:
