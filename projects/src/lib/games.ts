@@ -1709,3 +1709,30 @@ export const palworld: GameConfig = {
   ],
 };
 
+export const moonlightPeaks: GameConfig = {
+  id: "moonlight-peaks",
+  slugPrefix: "moonlight-peaks",
+  hubPath: "/games/moonlight-peaks",
+  name: "Moonlight Peaks",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "Moonlight Peaks is Little Chicken Game Company's cozy gothic life-sim where players take on the role of a young vampire building a new life — and a nocturnal farm — in a magical mountain town. Released July 7, 2026 on PC (Steam), Nintendo Switch, Switch 2, and Android.",
+  platforms: ["PC via Steam", "Nintendo Switch", "Nintendo Switch 2", "Android (Google Play)"],
+  genres: ["Life Simulation", "Farming Sim", "Cozy", "Supernatural", "Single-player"],
+  developer: "Little Chicken Game Company",
+  publisher: "XSEED Games",
+  releaseDate: "2026-07-07",
+  operatingSystem: "Windows 10 64-bit",
+  url: "https://store.steampowered.com/app/2209900/Moonlight_Peaks/",
+  availability: "https://schema.org/InStock",
+  heroImage: "/games/moonlight-peaks/hero.webp",
+  guideLinks: [
+    {
+      title: "Release Date, Platforms & Price",
+      href: "/games/moonlight-peaks/release-date-platforms",
+      description:
+        "Confirmed July 7, 2026 launch across PC, Switch, Switch 2, and Android — price by platform, launch discount, demo access, and what's not confirmed (PS5, Xbox, iOS).",
+    },
+  ],
+};
+

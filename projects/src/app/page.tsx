@@ -26,6 +26,14 @@ export const metadata: Metadata = {
 // ── 当前覆盖的游戏 hub 列表（首页展示用）──
 const featuredGames = [
   {
+    title: 'Moonlight Peaks',
+    genre: 'Cozy Gothic Life-Sim',
+    status: 'Released July 7, 2026',
+    href: '/games/moonlight-peaks',
+    image: '/games/moonlight-peaks/card.webp',
+    desc: 'Release date, platforms (PC, Switch, Switch 2, Android), pricing by edition, and demo access for this vampire farming life-sim.',
+  },
+  {
     title: 'Palworld',
     genre: 'Creature Collector Survival',
     status: '1.0 Launches July 10',

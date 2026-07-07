@@ -22,6 +22,7 @@ import {
  deltarune,
  taskBarHero,
  palworld,
+ moonlightPeaks,
  type GameConfig,
 } from '@/lib/games';
 import { voidlingEntries } from '@/lib/voidling-bound';
@@ -55,7 +56,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   { url: `${BASE_URL}/best-of`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
   { url: `${BASE_URL}/best-survival-games-steam-2026`, lastModified: today, changeFrequency: 'weekly', priority: 0.76 },
   { url: `${BASE_URL}/best-free-games-steam-2026`, lastModified: today, changeFrequency: 'weekly', priority: 0.76 },
-  { url: `${BASE_URL}/best-co-op-games-steam-2026`, lastModified: today, changeFrequency: 'weekly', priority: 0.76 },
   { url: `${BASE_URL}/about`, lastModified: today, changeFrequency: 'monthly', priority: 0.4 },
  { url: `${BASE_URL}/privacy-policy`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },
  { url: `${BASE_URL}/terms-of-use`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },
@@ -104,12 +104,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
  const gameHubs: MetadataRoute.Sitemap = [
  projectMist, thickAsThieves, zeroParades, mechanicusII, romestead,
  paralives, minaTheHollower, firstLight007, jumpKingQuest, starminer,
- fatekeeper, enginefall, voidlingBound, lunaAbyss, sellLemons, fearsToFathom, growAGarden2, spacecraft, cursemark, deltarune, taskBarHero, palworld,
+ fatekeeper, enginefall, voidlingBound, lunaAbyss, sellLemons, fearsToFathom, growAGarden2, spacecraft, cursemark, deltarune, taskBarHero, palworld, moonlightPeaks,
  ].map((game) => ({
  url: `${BASE_URL}${game.hubPath}`,
- lastModified: game.id === 'enginefall' ? '2026-06-10' : game.id === 'sell-lemons' ? '2026-06-12' : game.id === 'fears-to-fathom' ? '2026-06-11' : game.id === 'grow-a-garden-2' ? '2026-06-15' : game.id === 'spacecraft' ? '2026-06-17' : game.id === 'cursemark' ? '2026-06-17' : game.id === 'deltarune' ? '2026-06-25' : game.id === 'task-bar-hero' ? '2026-07-02' : game.id === 'palworld' ? '2026-07-06' : today,
+ lastModified: game.id === 'enginefall' ? '2026-06-10' : game.id === 'sell-lemons' ? '2026-06-12' : game.id === 'fears-to-fathom' ? '2026-06-11' : game.id === 'grow-a-garden-2' ? '2026-06-15' : game.id === 'spacecraft' ? '2026-06-17' : game.id === 'cursemark' ? '2026-06-17' : game.id === 'deltarune' ? '2026-06-25' : game.id === 'task-bar-hero' ? '2026-07-02' : game.id === 'palworld' ? '2026-07-06' : game.id === 'moonlight-peaks' ? '2026-07-07' : today,
  changeFrequency: 'daily' as const,
- priority: game.id === 'palworld' ? 0.8 : 0.74,
+ priority: game.id === 'palworld' || game.id === 'moonlight-peaks' ? 0.8 : 0.74,
  }));
 
  // Auto-generate sub-pages from each game config
@@ -136,6 +136,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  ...gameSubPages(deltarune, 0.74, '2026-06-25'),
  ...gameSubPages(taskBarHero, 0.74, '2026-07-02'),
  ...gameSubPages(palworld, 0.78, '2026-07-06'),
+ ...gameSubPages(moonlightPeaks, 0.78, '2026-07-07'),
  ...mistfallHunterGuideLinks
   .filter((link) => link.href !== '/games/mistfall-hunter')
   .map((link) => ({
