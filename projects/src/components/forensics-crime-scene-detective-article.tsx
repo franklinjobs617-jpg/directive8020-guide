@@ -8,9 +8,11 @@ import {
   generateFAQSchema,
   generateVideoGameSchema,
 } from "@/components/json-ld";
+import { ArticleImage } from "@/components/article-media";
 import { RelatedGuides, SourceCheckTable } from "@/components/guide-blocks";
 import { forensicsCrimeSceneDetective } from "@/lib/games";
 import {
+  forensicsCrimeSceneDetectiveImages,
   forensicsCrimeSceneDetectiveLastModified,
   forensicsCrimeSceneDetectiveSourceRows,
   getForensicsCrimeSceneDetectiveRelated,
@@ -90,6 +92,12 @@ export function ForensicsCrimeSceneDetectiveArticle({
         </p>
 
         {children}
+
+        <ArticleImage
+          src={forensicsCrimeSceneDetectiveImages.evidenceRoom}
+          alt="Forensics: Crime Scene Detective evidence markers and forensic equipment at a crime scene"
+          caption="Numbered evidence markers, cameras, and laser trajectory tools — the game's crime scene investigation loop before cases move to lab analysis."
+        />
 
         {showSources && (
           <SourceCheckTable

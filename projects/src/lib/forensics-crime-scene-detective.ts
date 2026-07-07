@@ -24,15 +24,15 @@ export const forensicsCrimeSceneDetectiveSourceRows = [
   },
 ];
 
-// NOTE (2026-07-07): no official screenshots/key art exist in this repo yet
-// — every image slot is a plain generated placeholder graphic (not
-// copyrighted game art), so nothing 404s while real assets are sourced.
-// Replace with official Steam screenshots before/soon after launch,
-// following the same process used for Palworld and Moonlight Peaks.
+// Images sourced 2026-07-07 directly from you (Steam capsule/header art +
+// 3 official screenshots), following the same low-risk sourcing process
+// used for Palworld and Moonlight Peaks. Resized to 1280px wide and
+// converted to webp.
 export const forensicsCrimeSceneDetectiveImages = {
   hero: "/games/forensics-crime-scene-detective/hero.webp",
   card: "/games/forensics-crime-scene-detective/card.webp",
   siteHero: "/games/forensics-crime-scene-detective/site-hero.webp",
+  evidenceRoom: "/games/forensics-crime-scene-detective/evidence-room.webp",
 };
 
 export const forensicsCrimeSceneDetectiveQuickFacts = [
