@@ -26,6 +26,14 @@ export const metadata: Metadata = {
 // ── 当前覆盖的游戏 hub 列表（首页展示用）──
 const featuredGames = [
   {
+    title: 'Forensics: Crime Scene Detective',
+    genre: 'Realistic Crime Lab Simulator',
+    status: 'Releases July 13, 2026',
+    href: '/games/forensics-crime-scene-detective',
+    image: '/games/forensics-crime-scene-detective/card.webp',
+    desc: 'Release date, platforms (PC, PS5, Xbox), and pre-launch momentum for this LKA RLP-backed forensic investigation sim.',
+  },
+  {
     title: 'Moonlight Peaks',
     genre: 'Cozy Gothic Life-Sim',
     status: 'Released July 7, 2026',

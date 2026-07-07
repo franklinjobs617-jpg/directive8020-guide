@@ -1709,6 +1709,33 @@ export const palworld: GameConfig = {
   ],
 };
 
+export const forensicsCrimeSceneDetective: GameConfig = {
+  id: "forensics-crime-scene-detective",
+  slugPrefix: "forensics-crime-scene-detective",
+  hubPath: "/games/forensics-crime-scene-detective",
+  name: "Forensics: Crime Scene Detective",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "Forensics: Crime Scene Detective is a realistic forensic investigation simulator from Binary Impact and Alchemical Works, developed with Germany's State Criminal Police Office Rhineland-Palatinate (LKA RLP). Investigate crime scenes, analyze evidence in the lab, and decide whether to incriminate or exonerate. Releases July 13, 2026 on PC (Steam), PS5, and Xbox Series X|S.",
+  platforms: ["PC via Steam", "PlayStation 5", "Xbox Series X|S"],
+  genres: ["Simulation", "Investigation", "Crime", "Choices Matter", "Detective", "Singleplayer"],
+  developer: "Binary Impact / Alchemical Works",
+  publisher: "Aerosoft GmbH",
+  releaseDate: "2026-07-13",
+  operatingSystem: "Windows",
+  url: "https://store.steampowered.com/app/3765010/Forensics_Crime_Scene_Detective/",
+  availability: "https://schema.org/PreOrder",
+  heroImage: "/games/forensics-crime-scene-detective/hero.webp",
+  guideLinks: [
+    {
+      title: "Release Date, Platforms & Price",
+      href: "/games/forensics-crime-scene-detective/release-date-platforms",
+      description:
+        "Confirmed July 13, 2026 launch on PC (Steam), PS5, and Xbox Series X|S — demo access, wishlist/demo momentum, and what's not yet announced (price, system requirements).",
+    },
+  ],
+};
+
 export const moonlightPeaks: GameConfig = {
   id: "moonlight-peaks",
   slugPrefix: "moonlight-peaks",
