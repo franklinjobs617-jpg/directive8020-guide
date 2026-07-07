@@ -8,9 +8,11 @@ import {
   generateFAQSchema,
   generateVideoGameSchema,
 } from "@/components/json-ld";
+import { ArticleImage } from "@/components/article-media";
 import { RelatedGuides, SourceCheckTable } from "@/components/guide-blocks";
 import { moonlightPeaks } from "@/lib/games";
 import {
+  moonlightPeaksImages,
   moonlightPeaksLastModified,
   moonlightPeaksSourceRows,
   getMoonlightPeaksRelated,
@@ -90,6 +92,12 @@ export function MoonlightPeaksArticle({
         </p>
 
         {children}
+
+        <ArticleImage
+          src={moonlightPeaksImages.dungeon}
+          alt="Moonlight Peaks nighttime exploration screenshot with a bat companion"
+          caption="Beyond the farm, Moonlight Peaks has nighttime exploration areas with their own atmosphere and secrets to uncover."
+        />
 
         {showSources && (
           <SourceCheckTable

@@ -87,7 +87,7 @@ export default function MoonlightPeaksReleaseDatePage() {
       description={description}
       canonical={canonical}
       label="Release Date & Platforms"
-      heroImage={moonlightPeaksImages.siteHero}
+      heroImage={moonlightPeaksImages.hero}
       heroAlt="Moonlight Peaks release date and platforms"
       faqs={faqs}
     >

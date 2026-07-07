@@ -23,16 +23,14 @@ export const moonlightPeaksSourceRows = [
   },
 ];
 
-// NOTE (2026-07-07): no official screenshots/key art exist in this repo yet
-// — every image slot below is a plain generated placeholder graphic (not
-// copyrighted game art), so nothing 404s while real assets are sourced.
-// Replace with official Steam screenshots or the publisher's press kit
-// before/soon after this goes live, following the same process used for
-// Palworld (see src/lib/palworld.ts for the source note on that process).
+// Images sourced 2026-07-07 directly from you (Steam capsule/header art +
+// 3 official screenshots), following the same low-risk sourcing process
+// used for Palworld. Resized to 1280px wide and converted to webp.
 export const moonlightPeaksImages = {
   hero: "/games/moonlight-peaks/hero.webp",
   card: "/games/moonlight-peaks/card.webp",
   siteHero: "/games/moonlight-peaks/site-hero.webp",
+  dungeon: "/games/moonlight-peaks/dungeon.webp",
 };
 
 export const moonlightPeaksQuickFacts = [
