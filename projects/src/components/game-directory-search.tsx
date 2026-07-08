@@ -66,6 +66,7 @@ const TAG_HREFS: Record<string, string[]> = {
     '/games/task-bar-hero',
     '/games/moonlight-peaks',
     '/games/forensics-crime-scene-detective',
+    '/games/cat-mail-co',
   ],
 };
 

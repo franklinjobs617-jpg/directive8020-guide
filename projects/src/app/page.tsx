@@ -26,6 +26,14 @@ export const metadata: Metadata = {
 // ── 当前覆盖的游戏 hub 列表（首页展示用）──
 const featuredGames = [
   {
+    title: 'Cat Mail Co.',
+    genre: 'Cozy Postal Management Sim',
+    status: 'Releases July 9, 2026',
+    href: '/games/cat-mail-co',
+    image: '/games/cat-mail-co/card.webp',
+    desc: 'Release date, price, system requirements, and co-op details for this cat-themed postal sim from Maracas Studio.',
+  },
+  {
     title: 'Forensics: Crime Scene Detective',
     genre: 'Realistic Crime Lab Simulator',
     status: 'Releases July 13, 2026',

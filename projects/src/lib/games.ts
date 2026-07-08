@@ -1763,3 +1763,30 @@ export const moonlightPeaks: GameConfig = {
   ],
 };
 
+export const catMailCo: GameConfig = {
+  id: "cat-mail-co",
+  slugPrefix: "cat-mail-co",
+  hubPath: "/games/cat-mail-co",
+  name: "Cat Mail Co.",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "Cat Mail Co. is Maracas Studio's cozy postal management sim where players restore a cat-run island post office — weighing parcels, applying stamps and labels, and uncovering a day/night mystery. Releases July 9, 2026 on PC (Steam), with up to 4-player co-op.",
+  platforms: ["PC via Steam"],
+  genres: ["Simulation", "Management", "Cozy", "Life Sim", "Co-op", "Singleplayer"],
+  developer: "Maracas Studio",
+  publisher: "Maracas Studio / Gamersky Games",
+  releaseDate: "2026-07-09",
+  operatingSystem: "Windows 10/11 64-bit",
+  url: "https://store.steampowered.com/app/4380490/Cat_Mail_Co/",
+  availability: "https://schema.org/PreOrder",
+  heroImage: "/games/cat-mail-co/hero.webp",
+  guideLinks: [
+    {
+      title: "Release Date, Price & System Requirements",
+      href: "/games/cat-mail-co/release-date-price",
+      description:
+        "Confirmed July 9, 2026 launch, price, co-op details, demo save compatibility, and official PC system requirements.",
+    },
+  ],
+};
+
