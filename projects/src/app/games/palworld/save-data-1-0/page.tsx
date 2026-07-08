@@ -17,6 +17,11 @@ export const metadata = createPalworldMetadata({
 
 const faqs = [
   {
+    question: "Palworld 1.0 wipe — does it happen?",
+    answer:
+      "No wipe. Palworld's 1.0 update on July 10, 2026 does not force-wipe existing saves, worlds, or dedicated servers. This has been confirmed by Pocketpair — a fresh start is optional, not required.",
+  },
+  {
     question: "Will I lose my Palworld save when 1.0 releases?",
     answer:
       "No. Multiple official sources confirm existing worlds and dedicated servers are not force-wiped by the 1.0 update on July 10, 2026. Your base, Pals, and progress will still be there after updating.",

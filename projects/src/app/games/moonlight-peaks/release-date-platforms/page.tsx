@@ -21,6 +21,26 @@ const faqs = [
       "PC via Steam, Nintendo Switch, Nintendo Switch 2, and Android via Google Play — all launched simultaneously on July 7, 2026. No PlayStation, Xbox, or iOS version has been announced.",
   },
   {
+    question: "Is Moonlight Peaks on PS5?",
+    answer:
+      "No. As of launch on July 7, 2026, Moonlight Peaks has not been announced for PlayStation 5 or any other PlayStation console. Confirmed platforms are PC (Steam), Nintendo Switch, Nintendo Switch 2, and Android.",
+  },
+  {
+    question: "Is Moonlight Peaks on Xbox?",
+    answer:
+      "No. No Xbox version — Series X|S or Xbox One — has been announced. If that changes, we'll update this page.",
+  },
+  {
+    question: "Is Moonlight Peaks on iOS?",
+    answer:
+      "No. Android via Google Play is the only confirmed mobile platform. An iOS version has not been announced.",
+  },
+  {
+    question: "When is the Moonlight Peaks Android release date?",
+    answer:
+      "Android released alongside every other confirmed platform on July 7, 2026 — there was no separate or delayed mobile rollout.",
+  },
+  {
     question: "How much does Moonlight Peaks cost on each platform?",
     answer:
       "The standard edition (PC and original Nintendo Switch) is $34.99. The dedicated Nintendo Switch 2 Edition, with higher-resolution assets and smoother frame rates, is $39.99. A 15% discount applies during launch week, and regional pricing may vary.",
@@ -139,11 +159,24 @@ export default function MoonlightPeaksReleaseDatePage() {
       </section>
 
       <section id="not-confirmed" className="my-10">
-        <h2 className="mb-4 text-xl font-bold text-foreground">What's Not Confirmed</h2>
+        <h2 className="mb-4 text-xl font-bold text-foreground">Is Moonlight Peaks on PS5, Xbox, or iOS?</h2>
+        <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+          <strong>No, not for any of the three.</strong> As of the July 7, 2026 launch:
+        </p>
+        <ul className="mb-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
+          <li>
+            <strong className="text-foreground">PS5:</strong> No PlayStation version has been announced.
+          </li>
+          <li>
+            <strong className="text-foreground">Xbox:</strong> No Xbox Series X|S or Xbox One version has been announced.
+          </li>
+          <li>
+            <strong className="text-foreground">iOS:</strong> No iPhone/iPad version has been announced — Android via Google Play is the only confirmed mobile platform, and it released the same day as PC and Switch, with no separate mobile rollout schedule.
+          </li>
+        </ul>
         <p className="text-sm leading-relaxed text-muted-foreground">
-          No PlayStation, Xbox, or iOS release has been announced for Moonlight Peaks. If you only own those
-          platforms, there is currently no official way to play. We will update this page if that changes —
-          nothing here is an assumption about future ports.
+          We will update this page immediately if any of that changes. If you only own a PlayStation, Xbox, or iPhone,
+          there is currently no official way to play Moonlight Peaks.
         </p>
       </section>
 
