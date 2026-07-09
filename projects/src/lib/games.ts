@@ -1790,3 +1790,30 @@ export const catMailCo: GameConfig = {
   ],
 };
 
+export const theMoundOmenOfCthulhu: GameConfig = {
+  id: "the-mound-omen-of-cthulhu",
+  slugPrefix: "the-mound-omen-of-cthulhu",
+  hubPath: "/games/the-mound-omen-of-cthulhu",
+  name: "The Mound: Omen of Cthulhu",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "The Mound: Omen of Cthulhu is ACE Team and Nacon's four-player co-op Lovecraftian horror game, dropping explorers into a cursed jungle where a madness system distorts what your squad sees and hears. Releases July 15, 2026 on PC (Steam), PlayStation 5, and Xbox Series X|S.",
+  platforms: ["PC via Steam", "PlayStation 5", "Xbox Series X|S"],
+  genres: ["Co-op Horror", "Survival", "Adventure", "Extraction", "Lovecraftian"],
+  developer: "ACE Team",
+  publisher: "Nacon",
+  releaseDate: "2026-07-15",
+  operatingSystem: "Windows",
+  url: "https://store.steampowered.com/app/2569760/The_Mound_Omen_of_Cthulhu/",
+  availability: "https://schema.org/PreOrder",
+  heroImage: "/games/the-mound-omen-of-cthulhu/hero.webp",
+  guideLinks: [
+    {
+      title: "Release Date, Platforms & Price",
+      href: "/games/the-mound-omen-of-cthulhu/release-date-platforms",
+      description:
+        "Confirmed July 15, 2026 launch on PC, PS5, and Xbox Series X|S — price, crossplay, co-op player count, demo history, and content rating.",
+    },
+  ],
+};
+

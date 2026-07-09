@@ -26,6 +26,14 @@ export const metadata: Metadata = {
 // ── 当前覆盖的游戏 hub 列表（首页展示用）──
 const featuredGames = [
   {
+    title: 'The Mound: Omen of Cthulhu',
+    genre: 'Co-op Lovecraftian Horror',
+    status: 'Releases July 15, 2026',
+    href: '/games/the-mound-omen-of-cthulhu',
+    image: '/games/the-mound-omen-of-cthulhu/card.webp',
+    desc: 'Release date, platforms (PC, PS5, Xbox), crossplay, and content rating for ACE Team and Nacon\'s 4-player co-op horror expedition game.',
+  },
+  {
     title: 'Cat Mail Co.',
     genre: 'Cozy Postal Management Sim',
     status: 'Releases July 9, 2026',
