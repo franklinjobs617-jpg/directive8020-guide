@@ -21,9 +21,9 @@ import {
   m2FactionsStatusItems,
 } from '@/lib/mechanicus-ii';
 
-const title = 'Mechanicus 2 Factions & Best Units: Necrons vs Adeptus';
+const title = 'Mechanicus 2 Factions Guide: Necron Units, Best Leaders & Adeptus Campaign';
 const description =
- 'Mechanicus 2 factions and best units guide: Adeptus Mechanicus vs Necrons, playable campaigns, unit roles, builds, leaders, and first-campaign choice.';
+ 'Mechanicus 2 factions guide: best Necron units, Necron leaders ranking, Adeptus Mechanicus vs Necrons campaign comparison, builds, and first-campaign pick for new players.';
 const canonical = '/games/mechanicus-ii/factions';
 
 export const metadata = createMechanicusIIMetadata({
@@ -69,7 +69,16 @@ const faqs = [
  answer:
  'Current store descriptions focus playable campaigns on Adeptus Mechanicus and Necrons. Preview coverage says the Leagues of Votann appear in the story, but not as a playable third campaign faction.',
  },
-];
+ {
+ question: 'What are the best Necron units in Mechanicus II?',
+ answer:
+ 'Necron Warriors are the most reliable backbone — Dominion-stable infantry that benefit most from Reanimation Protocols. Canoptek Wraiths excel as mobile screeners that protect your leaders without heavy Dominion investment. Immortals are the step up when you need heavier ranged output that can still hold ground. Build around one clear attack axis per mission rather than spreading Dominion thin.',
+ },
+ {
+ question: 'Who are the best Necron leaders in Mechanicus II?',
+ answer:
+ 'Vargard Nefershah is your primary campaign anchor — his loss means campaign failure, so protection is always first. For secondary lords, prioritize passive Dominion generation over frontline damage output; a lord that builds economy reliably is more valuable than a damage dealer across a full campaign.',
+ },];
 
 export default function MechanicusIIFactionsPage() {
  return (
@@ -226,6 +235,22 @@ export default function MechanicusIIFactionsPage() {
  </tbody>
  </table>
  </div>
+
+ <section className="prose-game">
+ <h2 id="necron-units-leaders">Necron Units and Best Leaders</h2>
+ <p>
+  Players searching for Necron unit builds and leader rankings land on this page most often, so this section addresses those directly.
+ </p>
+ <p>
+  <strong>Best Necron leaders:</strong> Vargard Nefershah (the campaign commander) is your primary anchor — his loss triggers a campaign failure state, so protecting him is always the first priority. Evaluate secondary lords by their passive Dominion generation rather than frontline damage output; Dominion pressure is what makes the Necron economy work, and a lord that generates it without needing kills is more reliable across a full campaign than one who only contributes when winning.
+ </p>
+ <p>
+  <strong>Best Necron units by role:</strong> Necron Warriors are the backbone — the most Dominion-stable infantry and the primary beneficiary of Reanimation Protocols. Canoptek Wraiths are the best mobile screeners: they keep your leaders alive, apply flank pressure, and do not draw Dominion investment the way heavier units do. Immortals step up from Warriors when you need heavier ranged output that can still hold a position. Avoid stacking Cryptek support units early — they amplify an already-working force, not a struggling one.
+ </p>
+ <p>
+  <strong>Common Necron mistake:</strong> Spreading Dominion across multiple aggressive units simultaneously. Pick one axis of attack per mission — Warriors hold, Wraiths screen, one Immortal or lord pushes the objective — and funnel Dominion there rather than diluting it.
+ </p>
+ </section>
 
  <section className="prose-game">
  <h2 id="votann-status">Are the Leagues of Votann Playable?</h2>
