@@ -26,6 +26,14 @@ export const metadata: Metadata = {
 // ── 当前覆盖的游戏 hub 列表（首页展示用）──
 const featuredGames = [
   {
+    title: 'Mothkeep',
+    genre: 'Cozy Nature Documentation',
+    status: 'Releases July 10, 2026',
+    href: '/games/mothkeep',
+    image: '/games/mothkeep/card.webp',
+    desc: 'Release date, length (2-4 hours), and price for this short, cozy moth-documenting game by solo developer Ivette Schmidt.',
+  },
+  {
     title: 'The Mound: Omen of Cthulhu',
     genre: 'Co-op Lovecraftian Horror',
     status: 'Releases July 15, 2026',

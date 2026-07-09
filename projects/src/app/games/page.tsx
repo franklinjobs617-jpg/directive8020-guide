@@ -29,10 +29,11 @@ import { moonlightPeaksImages } from "@/lib/moonlight-peaks";
 import { forensicsCrimeSceneDetectiveImages } from "@/lib/forensics-crime-scene-detective";
 import { catMailCoImages } from "@/lib/cat-mail-co";
 import { theMoundImages } from "@/lib/the-mound-omen-of-cthulhu";
+import { mothkeepImages } from "@/lib/mothkeep";
 
 const title = "Game Guide Hubs - Enjoy4Game Guides";
 const description =
- "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, idle RPGs, life simulation, cozy gothic vampire farming, forensic crime investigation, cozy postal management, co-op Lovecraftian horror, Roblox idle tycoon progression, fantasy RPGs, creature collectors, extraction ARPGs, inspection sims, train-based crafting shooters, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, farming simulation, and story-driven games, including The Mound: Omen of Cthulhu, Cat Mail Co., Forensics: Crime Scene Detective, Moonlight Peaks, Palworld, TBH: Task Bar Hero, Mistfall Hunter, Sell Lemons, Grow a Garden 2, Voidling Bound, Enginefall, Gate Guard Simulator, Luna Abyss, Fears to Fathom, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
+ "Browse Enjoy4Game guide hubs for horror, survival, stealth, tactics, idle RPGs, life simulation, cozy gothic vampire farming, forensic crime investigation, cozy postal management, co-op Lovecraftian horror, cozy nature documentation, Roblox idle tycoon progression, fantasy RPGs, creature collectors, extraction ARPGs, inspection sims, train-based crafting shooters, space mining sandboxes, punishment platforming, James Bond action-adventure, espionage RPG, gothic action-adventure, sci-fi FPS, Roman survival town building, farming simulation, and story-driven games, including Mothkeep, The Mound: Omen of Cthulhu, Cat Mail Co., Forensics: Crime Scene Detective, Moonlight Peaks, Palworld, TBH: Task Bar Hero, Mistfall Hunter, Sell Lemons, Grow a Garden 2, Voidling Bound, Enginefall, Gate Guard Simulator, Luna Abyss, Fears to Fathom, Fatekeeper, Starminer, Paralives, JUMP KING QUEST, 007 First Light, Directive 8020, Project: Mist, Romestead, Warhammer 40,000: Mechanicus II, ZERO PARADES, Thick As Thieves, and Mina the Hollower.";
 
 export const metadata: Metadata = {
  title: {
@@ -85,6 +86,13 @@ export const metadata: Metadata = {
 };
 
 const gameCards = [
+ {
+ title: "Mothkeep",
+ href: "/games/mothkeep",
+ label: "Cozy nature documentation",
+ body: "Release date, length (2-4 hours), and price for this short, cozy moth-documenting game by solo developer Ivette Schmidt launching July 10, 2026.",
+ image: mothkeepImages.card,
+ },
  {
  title: "The Mound: Omen of Cthulhu",
  href: "/games/the-mound-omen-of-cthulhu",

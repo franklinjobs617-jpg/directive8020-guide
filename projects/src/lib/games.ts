@@ -1817,3 +1817,30 @@ export const theMoundOmenOfCthulhu: GameConfig = {
   ],
 };
 
+export const mothkeep: GameConfig = {
+  id: "mothkeep",
+  slugPrefix: "mothkeep",
+  hubPath: "/games/mothkeep",
+  name: "Mothkeep",
+  guidePublisher: "Enjoy4Game Guides",
+  description:
+    "Mothkeep is a short, cozy singleplayer moth-documenting game by solo developer Ivette Schmidt, where players explore a peaceful nature sanctuary and record native Central European moth species, one journal entry at a time. Releases July 10, 2026 on PC (Steam).",
+  platforms: ["PC via Steam"],
+  genres: ["Casual", "Creature Collector", "Nature", "Cozy", "Education", "Hidden Object", "Singleplayer"],
+  developer: "Ivette Schmidt",
+  publisher: "Ivette Schmidt",
+  releaseDate: "2026-07-10",
+  operatingSystem: "Windows",
+  url: "https://store.steampowered.com/app/3920300/Mothkeep/",
+  availability: "https://schema.org/PreOrder",
+  heroImage: "/games/mothkeep/hero.webp",
+  guideLinks: [
+    {
+      title: "Release Date, Price & Length",
+      href: "/games/mothkeep/release-date-length",
+      description:
+        "Confirmed July 10, 2026 launch, how long Mothkeep takes to complete, demo save compatibility, and what's not yet announced (price).",
+    },
+  ],
+};
+
