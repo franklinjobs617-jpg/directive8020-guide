@@ -4,7 +4,7 @@ import { createFearsToFathomMetadata, fearsToFathomImages } from '@/lib/fears-to
 
 const title = 'Fears to Fathom Scratch Creek Walkthrough: All 7 Chapters, Puzzles, Choices & Endings';
 const description =
- 'Complete step-by-step walkthrough for Fears to Fathom: Scratch Creek. Covers all 7 chapters with puzzle solutions, key decisions, character choices, how to unlock every ending, and co-op tips for both Marcus and Tessa.';
+ 'Can you play Fears to Fathom: Scratch Creek alone? No — it is online co-op only. Full chapter-by-chapter walkthrough covering all 7 chapters, puzzle solutions, key decisions, both endings, and co-op tips for Marcus and Tessa.';
 const canonical = '/games/fears-to-fathom/walkthrough';
 
 export const metadata = createFearsToFathomMetadata({ title, description, canonical, image: fearsToFathomImages.screenshot3 });
@@ -109,6 +109,32 @@ export default function FearsToFathomWalkthroughPage() {
    <p className="mt-4 text-base leading-relaxed text-muted-foreground">
     Fears to Fathom: Scratch Creek has 7 chapters and takes approximately 2-3 hours to complete. There are two endings. Below is the full chapter-by-chapter walkthrough. The game is co-op only — both players must participate in key decisions.
    </p>
+
+   {/* Quick-answer panel — directly targets the top GSC queries for this page */}
+   <div className="mt-6 rounded-lg border border-border bg-white overflow-hidden">
+    <div className="border-b border-border bg-mist/40 px-5 py-3">
+     <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Quick answers</p>
+    </div>
+    <div className="divide-y divide-border">
+     <div className="px-5 py-3">
+      <p className="text-sm font-semibold text-foreground">Can you play Fears to Fathom: Scratch Creek alone?</p>
+      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+       No — Scratch Creek is online co-op only. It has no solo mode and no AI partner. You need a second real player. If you want to play alone, choose a different Fears to Fathom episode.{' '}
+       <Link href="/games/fears-to-fathom/co-op-guide" className="text-foreground underline">Full co-op &amp; solo FAQ →</Link>
+      </p>
+     </div>
+     <div className="px-5 py-3">
+      <p className="text-sm font-semibold text-foreground">How many chapters does Scratch Creek have?</p>
+      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">7 chapters, 2 endings, roughly 2–3 hours for a first playthrough.</p>
+     </div>
+     <div className="px-5 py-3">
+      <p className="text-sm font-semibold text-foreground">How do you get both endings in Scratch Creek?</p>
+      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+       Save before the Chapter 6 vote. Both players must agree on a choice — if they disagree, the game defaults to Ending A (Escape). Load that save to vote differently and unlock Ending B (The Deal).
+      </p>
+     </div>
+    </div>
+   </div>
 
    <ArticleImage
     src={fearsToFathomImages.screenshot3}
