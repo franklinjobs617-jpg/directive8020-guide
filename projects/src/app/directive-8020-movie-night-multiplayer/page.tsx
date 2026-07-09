@@ -7,15 +7,30 @@ import { ArticleImage, VideoEmbed } from '@/components/article-media';
 import { BlufBox, SourceCheckTable } from '@/components/guide-blocks';
 
 export const metadata: Metadata = {
- title: 'Directive 8020 Movie Night & Multiplayer: Local Co-op, Online Update & How Many Players?',
+ title: 'Is Directive 8020 Multiplayer? Online Co-op & Movie Night Explained',
  description:
- 'Directive 8020 Movie Night mode explained: how local couch co-op works for up to 5 players, character assignment rules, online multiplayer update status and release date, Steam Remote Play Together compatibility, and whether you can play the full campaign in co-op mode.',
+ 'Directive 8020 has local Movie Night couch co-op for up to 5 players but no online multiplayer at launch — online is a confirmed free post-launch update with no release date yet. Here is what works now and how to play with remote friends.',
  alternates: {
  canonical: '/directive-8020-movie-night-multiplayer',
  },
 };
 
 const faqs = [
+ {
+ question: 'Is Directive 8020 multiplayer?',
+ answer:
+ 'Yes, but local only at launch. Directive 8020 has Movie Night couch co-op for up to five local players. Online multiplayer is confirmed as a free post-launch update with no release date yet.',
+ },
+ {
+ question: 'Can you play Directive 8020 online?',
+ answer:
+ 'Not natively at launch. Online Movie Night multiplayer is confirmed as a free post-launch update, but it was not live on the May 12, 2026 launch date. Remote groups can use Steam Remote Play Together, PlayStation Share Play, or Xbox screen sharing as unofficial workarounds in the meantime.',
+ },
+ {
+ question: 'Does Directive 8020 have online co-op?',
+ answer:
+ 'Not yet. Supermassive Games confirmed five-player online multiplayer is coming as a free update after launch, mirroring the local Movie Night experience. No release date has been provided.',
+ },
  {
  question: 'Does Directive 8020 have Movie Night multiplayer?',
  answer:
@@ -117,14 +132,33 @@ export default function MovieNightPage() {
  <PageHero src="/d8020-screenshot-01.jpg" alt="Directive 8020 Movie Night crew co-op screenshot" />
 
  <h1 className="mb-4 text-[42px] font-bold leading-[1.08] tracking-[-1.39px] text-foreground sm:text-[54px]">
- Directive 8020 Movie Night Mode: Local Co-op and Online Multiplayer
+ Is Directive 8020 Online Multiplayer? Movie Night Co-op Explained
  </h1>
- <p className="text-lg text-muted-foreground leading-relaxed mb-8">
- Directive 8020 supports Movie Night as a local couch co-op mode for
- up to five players. Online multiplayer is a separate patch-status
- question, so remote groups should verify the current update before
- buying copies for an online run.
+ <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+ Directive 8020 supports local couch co-op (Movie Night, up to 5 players) but launched without online multiplayer.
+ Online play is officially confirmed as a free post-launch update — no release date has been given yet.
  </p>
+
+ {/* Quick-answer panel — directly targets top GSC queries for this page */}
+ <div className="mb-8 rounded-lg border border-border bg-white overflow-hidden">
+  <div className="border-b border-border bg-mist/40 px-5 py-3">
+   <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Quick answers</p>
+  </div>
+  <div className="divide-y divide-border">
+   <div className="px-5 py-3">
+    <p className="text-sm font-semibold text-foreground">Is Directive 8020 online multiplayer?</p>
+    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">Not yet. Directive 8020 launched on May 12, 2026 with local Movie Night co-op only. Supermassive confirmed online multiplayer is coming as a free update, but no release date has been given.</p>
+   </div>
+   <div className="px-5 py-3">
+    <p className="text-sm font-semibold text-foreground">Can you play Directive 8020 online with friends right now?</p>
+    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">Only via platform workarounds — Steam Remote Play Together, PlayStation Share Play, or Xbox screen sharing. These are unofficial stopgaps, not native online multiplayer. Expect input lag and host-only saves.</p>
+   </div>
+   <div className="px-5 py-3">
+    <p className="text-sm font-semibold text-foreground">Is Directive 8020 couch co-op (local)?</p>
+    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">Yes. Movie Night supports up to 5 local players on one screen, passing the controller between assigned crew members.</p>
+   </div>
+  </div>
+ </div>
 
  <BlufBox title="Multiplayer Answer">
  <p>
@@ -245,7 +279,7 @@ export default function MovieNightPage() {
  </ul>
  </div>
 
- <SourceCheckTable title="Co-op Player Reference Notes" rows={sourceRows} />
+ <SourceCheckTable title="Co-op Source Check" rows={sourceRows} />
 
  <FAQSection faqs={faqs} />
  </article>
