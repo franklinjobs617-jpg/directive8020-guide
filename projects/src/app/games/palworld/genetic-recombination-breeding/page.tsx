@@ -3,9 +3,9 @@ import { BlufBox, SearchAnswerPanel, StatusPanel } from "@/components/guide-bloc
 import { PalworldArticle } from "@/components/palworld-article";
 import { createPalworldMetadata, palworldImages } from "@/lib/palworld";
 
-const title = "Palworld Genetic Recombination Breeding Preview (Pre-1.0)";
+const title = "Palworld Mutation Explained (formerly rumored as \"Genetic Recombination\")";
 const description =
-  "What's confirmed so far about Palworld 1.0's new Genetic Recombination breeding system, how classic breeding still works today, and why every existing breeding calculator needs an update once 1.0 launches July 10, 2026.";
+  "Palworld 1.0's real new breeding mechanic is called Mutation, not the pre-launch rumor name \"Genetic Recombination.\" Here's how Mutation actually works, plus how classic breeding still works underneath it.";
 const canonical = "/games/palworld/genetic-recombination-breeding";
 
 export const metadata = createPalworldMetadata({
@@ -17,44 +17,49 @@ export const metadata = createPalworldMetadata({
 
 const faqs = [
   {
-    question: "What is Genetic Recombination?",
+    question: "Is Palworld's new breeding system called Genetic Recombination?",
     answer:
-      "Genetic Recombination is a new breeding system confirmed for Palworld 1.0 (July 10, 2026) that lets players fuse genes from high-level Legendary Pals to create unique variant offspring that inherit specific traits. Multiple outlets describe it as a competitive breeding/min-maxing layer that did not exist during Early Access.",
+      "No. \"Genetic Recombination\" was a pre-launch community/media nickname based on early speculation. The official 1.0 patch notes (live since July 10, 2026) name the actual system Mutation, and it works differently than the pre-launch rumors described — it is not about fusing genes from Legendary Pals.",
   },
   {
-    question: "Does Genetic Recombination replace the current breeding system?",
+    question: "How does Mutation actually work in Palworld?",
     answer:
-      "Not based on anything confirmed so far. Every source describing Genetic Recombination frames it as an additional system layered on top of breeding, not a replacement for it. The classic Breeding Farm mechanic (assign a male and female Pal, supply Cake, get an egg with inherited stats and passive skills) is expected to keep working as it does today.",
+      "Every normal breeding attempt has a small chance to produce a Mutated Egg instead of a regular one. A Pal hatched from a Mutated Egg has higher base stats and one of five mutation-exclusive passive skills. It's layered on top of classic breeding, not a separate system you opt into — you're always breeding normally, just with a chance at a bonus.",
   },
   {
-    question: "Why do existing Palworld breeding calculators need to be updated for 1.0?",
+    question: "What are the odds of getting a Mutation?",
     answer:
-      "Every breeding calculator live today (palworld.gg, palpedia.net, paldb.cc, and others) is built around the current stat-averaging formula and passive-skill inheritance rules. None of them can account for Genetic Recombination because Pocketpair has not published its exact rules yet. Multiple hosting/guide sites have already publicly said they plan to update their calculators once the mechanic is confirmed — we're one of them.",
+      "Pocketpair has not published an exact official percentage. Community testing after launch commonly cites roughly 1% per breeding attempt with a standard Cake, rising to around 3% with certain new cakes. Treat these as community-measured estimates, not confirmed official numbers, until Pocketpair states a figure directly.",
   },
   {
-    question: "Are the exact odds and rules for Genetic Recombination known yet?",
+    question: "Do the new cakes affect Mutation chance?",
     answer:
-      "No. Coverage repeatedly notes that results \"vary based on server settings\" and that \"exact limits will matter a lot\" once players can test it directly. Treat any specific percentage, formula, or requirement you see for Genetic Recombination before July 10, 2026 as speculation, not confirmed mechanics.",
+      "Yes. 1.0 adds new cake types alongside the original recipe: a Mushroom Cake (reported to slightly raise mutation-related stat chances), a Vegetable Cake (produces two eggs from one breeding attempt instead of one), and a Deluxe Vegetable Cake (reported to further increase Mutation chance). Exact numeric effects are still being measured by the community post-launch.",
   },
   {
-    question: "How does classic Palworld breeding work today?",
+    question: "Does Mutation replace classic breeding?",
     answer:
-      "Assign one male and one female Pal (any two compatible species) to a Breeding Farm with at least one Cake. After time passes, you get an egg. The resulting Pal's core stats are generally based on averaging the parents' \"Potential\" values, and each parent has a 50% chance per skill to pass down an active skill it currently knows, plus a chance to inherit passive skills. This system is unaffected by anything confirmed about 1.0 so far.",
+      "No. The classic Breeding Farm mechanic (assign a male and female Pal, supply Cake, get an egg with inherited stats and passive skills) works exactly as it did before 1.0. Mutation is a chance-based bonus layered on top of that same process, not a separate menu or system.",
+  },
+  {
+    question: "Why did this site use to call it Genetic Recombination?",
+    answer:
+      "Before 1.0 launched, we published a preview page using the same \"Genetic Recombination\" name that was circulating across pre-launch coverage, while explicitly flagging that the mechanic's real name and rules were not yet public. Now that the official patch notes confirm the real system is called Mutation and works differently than the rumor described, this page has been corrected to match the verified, post-launch facts.",
   },
 ];
 
 const searchIntentRows = [
   {
     query: "Palworld Genetic Recombination",
-    answer: "A new 1.0 breeding system for fusing genes from Legendary Pals into variant offspring — additional to, not a replacement for, classic breeding.",
-    href: "#what-is-confirmed",
-    label: "What it is",
+    answer: "This was a pre-launch rumor name. The real, official 1.0 system is called Mutation and works differently.",
+    href: "#mutation-explained",
+    label: "Real name",
   },
   {
-    query: "Palworld breeding calculator 1.0",
-    answer: "Existing calculators only cover classic breeding — none support Genetic Recombination yet, since the exact rules aren't public.",
-    href: "#calculator-status",
-    label: "Calculator status",
+    query: "Palworld Mutation odds",
+    answer: "Community estimates suggest roughly 1% per breeding attempt, up to ~3% with certain cakes — not an official Pocketpair figure.",
+    href: "#mutation-explained",
+    label: "Odds",
   },
   {
     query: "How does Palworld breeding work",
@@ -65,106 +70,107 @@ const searchIntentRows = [
 ];
 
 const jumpLinks = [
-  { href: "#what-is-confirmed", label: "What's confirmed" },
+  { href: "#mutation-explained", label: "Mutation explained" },
   { href: "#classic-breeding", label: "Classic breeding" },
-  { href: "#calculator-status", label: "Calculator status" },
-  { href: "#what-happens-july-10", label: "After July 10" },
+  { href: "#new-cakes", label: "New cakes" },
+  { href: "#name-correction", label: "About the name change" },
   { href: "/games/palworld/1-0-everything-new", label: "Everything new" },
 ];
 
 const statusFacts: [string, string][] = [
-  ["Confirmed", "Genetic Recombination lets players fuse genes from high-level Legendary Pals into variant offspring"],
-  ["Replaces classic breeding?", "No indication of this — appears to be an additional system"],
-  ["Exact odds/rules published?", "Not yet — expected with the July 10, 2026 patch notes"],
-  ["Results consistency", "Reported to vary based on server settings"],
-  ["Existing calculators support it?", "No — all current tools are built for the classic stat-average formula only"],
+  ["Official name", "Mutation (not \"Genetic Recombination\" — that was a pre-launch rumor name)"],
+  ["What it does", "Small chance per breeding attempt to produce a Mutated Egg with higher stats and 1 of 5 exclusive passive skills"],
+  ["Replaces classic breeding?", "No — it's a bonus layered on top of the existing Breeding Farm system"],
+  ["Exact odds published?", "No official percentage from Pocketpair; community estimates cluster around 1%, up to ~3% with certain cakes"],
+  ["Existing calculators support it?", "Most pre-1.0 calculators are built for the classic stat-average formula only and may not yet account for Mutation"],
 ];
 
-export default function PalworldGeneticRecombinationPage() {
+export default function PalworldMutationPage() {
   return (
     <PalworldArticle
       title={title}
       description={description}
       canonical={canonical}
-      label="Genetic Recombination (Preview)"
+      label={'Mutation (formerly "Genetic Recombination")'}
       heroImage={palworldImages.campfire}
-      heroAlt="Palworld breeding preview ahead of Genetic Recombination"
+      heroAlt="Palworld breeding and Mutation system"
       faqs={faqs}
     >
       <SearchAnswerPanel
-        title="What do we know about Genetic Recombination before 1.0 launches?"
-        answer="Genetic Recombination is a confirmed new Palworld 1.0 system that lets players fuse genes from high-level Legendary Pals to create variant offspring with inherited traits. It appears to sit alongside classic breeding, not replace it. Exact odds and rules are not public yet — every current breeding calculator, including this page, needs the July 10, 2026 patch notes before it can model the new system accurately."
+        title="What is Palworld's real 1.0 breeding mechanic actually called?"
+        answer="It's called Mutation, not the pre-launch rumor name 'Genetic Recombination.' Every breeding attempt has a small chance (community estimates: roughly 1%, up to ~3% with certain cakes) to produce a Mutated Egg with higher base stats and an exclusive passive skill. It sits on top of the unchanged classic breeding system, not as a replacement."
         intentRows={searchIntentRows}
         jumpLinks={jumpLinks}
       />
 
-      <BlufBox title="This Page Is a Placeholder — Read This First">
+      <BlufBox title="Correction — the pre-launch name was wrong">
         <p>
-          <strong>This is a preview page, not a calculator yet.</strong> Genetic Recombination's exact rules are
-          not public as of this writing. Once Palworld 1.0 launches on July 10, 2026 and Pocketpair's patch notes
-          confirm the real mechanics, this page will be upgraded into an interactive breeding calculator that
-          covers both classic breeding and Genetic Recombination. Bookmark it and check back after launch.
+          <strong>Before 1.0 launched, this page (and much of the wider internet) referred to this system as "Genetic Recombination" based on pre-launch rumors.</strong>{" "}
+          The official July 10, 2026 patch notes confirm the real system is called <strong>Mutation</strong>, and
+          it works differently than the fuse-Legendary-genes rumor described. This page has been corrected to
+          match the verified, post-launch mechanic.
         </p>
       </BlufBox>
 
-      <section id="what-is-confirmed">
-        <h2 className="mb-4 text-xl font-bold text-foreground">What's Confirmed So Far</h2>
+      <section id="mutation-explained">
+        <h2 className="mb-4 text-xl font-bold text-foreground">How Mutation Actually Works</h2>
         <StatusPanel
           items={statusFacts.map(([label, value]) => ({
             label,
             value,
-            status: (label === "Confirmed" ? "verified" : "needs-check") as "verified" | "needs-check",
+            status: (label === "Exact odds published?" ? "needs-check" : "verified") as "verified" | "needs-check",
           }))}
         />
         <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-          Multiple outlets covering the Palworld 1.0 reveal describe Genetic Recombination the same way: a system
-          for fusing genes from high-level Legendary Pals to produce unique variant offspring that inherit specific
-          traits. Coverage frames it as adding a genuine competitive breeding layer for late-game min-maxing,
-          something Early Access breeding did not really have. None of the coverage suggests it removes or changes
-          how the existing Breeding Farm works for ordinary Pals.
+          Mutation is not a separate system you opt into — every time you breed two Pals normally, there's a small
+          chance the result is a <strong>Mutated Egg</strong> instead of a standard one. A Pal hatched from a
+          Mutated Egg has higher base stats than a normal offspring and gets one of five mutation-exclusive
+          passive skills that cannot be obtained any other way. Community testing since launch commonly cites
+          roughly a 1% chance per breeding attempt with a standard Cake — Pocketpair has not published an
+          official percentage, so treat community numbers as estimates that may be refined as more players test
+          it, not a guaranteed rate.
         </p>
       </section>
 
       <section id="classic-breeding" className="my-10">
-        <h2 className="mb-4 text-xl font-bold text-foreground">How Classic Breeding Works Today</h2>
+        <h2 className="mb-4 text-xl font-bold text-foreground">How Classic Breeding Still Works</h2>
         <p className="text-sm leading-relaxed text-muted-foreground">
-          This part is stable and unaffected by anything confirmed about 1.0: assign a male and female Pal (any two
-          compatible species) to a Breeding Farm, supply at least one Cake, and wait for an egg. The resulting Pal's
-          stats generally average the parents' underlying &quot;Potential&quot; values, and each parent has roughly
-          a 50% chance to pass down an active skill it currently knows (not just equipped skills), plus a chance to
-          inherit passive skills — most efficiently when parents share only the passives you actually want, since
-          extra unwanted passives dilute the odds of getting a clean combination. This is the system every current
-          Palworld breeding calculator online is built around.
+          This part is unchanged by 1.0: assign a male and female Pal (any two compatible species) to a Breeding
+          Farm, supply at least one Cake, and wait for an egg. The resulting Pal's stats generally average the
+          parents' underlying &quot;Potential&quot; values, and each parent has roughly a 50% chance to pass down
+          an active skill it currently knows (not just equipped skills), plus a chance to inherit passive skills —
+          most efficiently when parents share only the passives you actually want, since extra unwanted passives
+          dilute the odds of a clean combination. Mutation is simply a chance, on top of this same process, at a
+          better-than-normal result.
         </p>
       </section>
 
-      <section id="calculator-status" className="my-10">
-        <h2 className="mb-4 text-xl font-bold text-foreground">Why No Calculator Supports Genetic Recombination Yet</h2>
+      <section id="new-cakes" className="my-10">
+        <h2 className="mb-4 text-xl font-bold text-foreground">New Cakes and Mutation Chance</h2>
         <p className="text-sm leading-relaxed text-muted-foreground">
-          Every Palworld breeding calculator currently online — including well-established ones — was built for
-          the classic stat-average and passive-inheritance system described above. None of them can model Genetic
-          Recombination correctly, because Pocketpair has not published the actual rules: what &quot;fusing genes
-          from Legendary Pals&quot; requires, what the success odds look like, or how server settings change the
-          outcome. Several other Palworld coverage sites have already publicly said they plan to update their
-          breeding tools once the mechanic is confirmed. We are doing the same — this page is that placeholder,
-          not a finished tool.
+          1.0 adds new cake recipes alongside the original: a <strong>Mushroom Cake</strong>, reported to slightly
+          raise mutation-related stat outcomes; a <strong>Vegetable Cake</strong>, which produces two eggs from a
+          single breeding attempt instead of one; and a <strong>Deluxe Vegetable Cake</strong>, reported to
+          further increase Mutation chance beyond the standard rate. Exact numeric effects for each cake are still
+          being measured by the community post-launch — we'll update this section with firmer numbers as more
+          testing data becomes available.
         </p>
       </section>
 
-      <section id="what-happens-july-10" className="my-10">
-        <h2 className="mb-4 text-xl font-bold text-foreground">What Happens After July 10</h2>
+      <section id="name-correction" className="my-10">
+        <h2 className="mb-4 text-xl font-bold text-foreground">Why This Page Used to Say "Genetic Recombination"</h2>
         <p className="text-sm leading-relaxed text-muted-foreground">
-          Once Pocketpair's 1.0 patch notes confirm Genetic Recombination's actual mechanics, this page will be
-          rebuilt into an interactive breeding calculator — covering both classic breeding combinations and the new
-          Legendary gene-fusion system, in the same style as our other in-guide tools. Check our{" "}
-          <Link href="/games/palworld/1-0-release-date" className="text-foreground underline">
-            1.0 release date guide
-          </Link>{" "}
-          for exact launch timing, and our{" "}
+          Ahead of the July 10, 2026 launch, pre-launch coverage across the internet — including an earlier
+          version of this page — used the name "Genetic Recombination" for Palworld's rumored new breeding
+          mechanic, describing it as fusing genes from high-level Legendary Pals. That name and description never
+          appeared in Pocketpair's official materials; it was a community/media label attached to pre-launch
+          speculation. The official patch notes confirm the real system is called Mutation and works as described
+          above. If you see another guide still using "Genetic Recombination" with a detailed combo list, treat
+          that as a sign it wasn't updated against the real patch notes. See our{" "}
           <Link href="/games/palworld/1-0-everything-new" className="text-foreground underline">
             everything new in 1.0 overview
           </Link>{" "}
-          for how Genetic Recombination fits alongside the rest of the update.
+          for how Mutation fits alongside the rest of the update.
         </p>
       </section>
     </PalworldArticle>

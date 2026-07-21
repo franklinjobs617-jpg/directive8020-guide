@@ -1701,10 +1701,10 @@ export const palworld: GameConfig = {
         "Confirmed from the official 1.0 patch notes: the World Tree's Panthalus questline and Awakening system, and Sunreach — the region formerly known as Sky Islands.",
     },
     {
-      title: "Genetic Recombination Breeding Preview",
+      title: "Mutation Breeding Explained (was \"Genetic Recombination\")",
       href: "/games/palworld/genetic-recombination-breeding",
       description:
-        "What's confirmed about Palworld 1.0's new Legendary-gene-fusion breeding system, plus classic breeding basics — upgrading to a full breeding calculator after July 10.",
+        "The real name is Mutation, not the pre-launch rumor \"Genetic Recombination.\" How the chance-based Mutated Egg system actually works, plus classic breeding basics.",
     },
   ],
 };
