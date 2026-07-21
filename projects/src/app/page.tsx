@@ -133,7 +133,7 @@ const d8020QuickLinks = [
   { label: 'All 44 Death Scenes', href: '/directive-8020-death-scenes-guide' },
   { label: 'Cycle 13 Explained', href: '/directive-8020-cycle-13-explained' },
   { label: 'Collectibles & Heirlooms', href: '/directive-8020-collectibles-heirlooms' },
-  { label: 'Cast & Actors', href: '/directive-8020-cast-actors' },
+  { label: 'Cast & Actors', href: '/directive-8020-characters' },
   { label: 'Crash & Performance Fix', href: '/directive-8020-crashing-fix' },
   { label: 'Steam Deck & Low-End PC', href: '/directive-8020-steam-deck' },
   { label: 'Review / Worth Buying?', href: '/directive-8020-review' },

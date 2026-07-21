@@ -72,7 +72,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: `${BASE_URL}/directive-8020-system-requirements`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
  { url: `${BASE_URL}/directive-8020-release-time`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
  { url: `${BASE_URL}/directive-8020-characters`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 },
- { url: `${BASE_URL}/directive-8020-cast-actors`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
  { url: `${BASE_URL}/directive-8020-review`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
  { url: `${BASE_URL}/directive-8020-beginner-tips`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
  { url: `${BASE_URL}/directive-8020-turning-points-story-tree`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },

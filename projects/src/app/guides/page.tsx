@@ -123,15 +123,6 @@ const d8020Guides = [
     image: "/d8020-screenshot-03.jpg",
   },
   {
-    href: "/directive-8020-cast-actors",
-    title: "Cast & Actors",
-    description:
-      "Lashana Lynch as Brianna Young, Danny Sapani as Stafford, playable crew roles, and cast verification notes.",
-    tag: "Cast",
-    tagColor: "text-foreground bg-mist border-border",
-    image: "/characters-lineup.jpg",
-  },
-  {
     href: "/directive-8020-all-endings",
     title: "All Endings: Homeward Bound, Docked, Mask Off",
     description:
