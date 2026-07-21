@@ -5,9 +5,9 @@ import { JsonLd, generateArticleSchema, generateBreadcrumbSchema, generateFAQSch
 import { fearsToFathom } from '@/lib/games';
 import { createFearsToFathomMetadata, fearsToFathomImages, fearsToFathomLastModified } from '@/lib/fears-to-fathom';
 
-const title = 'Can You Play Fears to Fathom: Scratch Creek Alone? Solo, Co-op & Crossplay Answer';
+const title = 'Fears to Fathom: Scratch Creek Co-op Guide — Solo Answer, Finding a Partner & Disconnect Fixes';
 const description =
- 'No, Fears to Fathom: Scratch Creek cannot be played alone. It is online co-op only, with no solo mode, no AI partner, no split-screen, and no console crossplay.';
+ 'Scratch Creek is online co-op only — no solo mode, no AI partner. Here is how to find a reliable co-op partner, what to avoid before buying, and what to do if your partner disconnects mid-run.';
 const canonical = '/games/fears-to-fathom/co-op-guide';
 
 export const metadata = createFearsToFathomMetadata({
