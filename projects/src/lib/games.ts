@@ -1695,10 +1695,10 @@ export const palworld: GameConfig = {
         "Full rundown of confirmed 1.0 additions: World Tree, Sky Islands, Wing Pack, PvP, Paint Mode, new Pals, Tower Boss rework, and Genetic Recombination breeding.",
     },
     {
-      title: "World Tree & Sky Islands Preview",
+      title: "World Tree & Sunreach (Sky Islands) Explained",
       href: "/games/palworld/world-tree-sky-islands",
       description:
-        "Deep dive on Palworld's new endgame region — the World Tree's story role, the Sky Islands, and what is confirmed vs. still unofficial.",
+        "Confirmed from the official 1.0 patch notes: the World Tree's Panthalus questline and Awakening system, and Sunreach — the region formerly known as Sky Islands.",
     },
     {
       title: "Genetic Recombination Breeding Preview",

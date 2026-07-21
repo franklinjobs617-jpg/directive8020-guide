@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { palworld, type GameGuideLink } from "@/lib/games";
 
-export const palworldLastModified = "2026-07-07";
+export const palworldLastModified = "2026-07-20";
 export const palworldSteamUrl =
   "https://store.steampowered.com/app/1623730/Palworld/";
 export const palworldOfficialUrl =
