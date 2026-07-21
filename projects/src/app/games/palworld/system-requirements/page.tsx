@@ -3,9 +3,9 @@ import { BlufBox, SearchAnswerPanel, StatusPanel } from "@/components/guide-bloc
 import { PalworldArticle } from "@/components/palworld-article";
 import { createPalworldMetadata, palworldImages, palworldSpecRows } from "@/lib/palworld";
 
-const title = "Palworld System Requirements: Minimum & Recommended PC Specs";
+const title = "Palworld System Requirements: PC Specs & How Many GB It Needs";
 const description =
-  "Official Palworld minimum and recommended PC specs from Steam, plus console and mobile support, and what the bigger 1.0 map might mean for performance.";
+  "Official Palworld minimum and recommended PC specs from Steam, how many GB the game needs (40GB), Steam Deck and mobile support, and what the bigger 1.0 map means for performance.";
 const canonical = "/games/palworld/system-requirements";
 
 export const metadata = createPalworldMetadata({
@@ -22,14 +22,19 @@ const faqs = [
       "Officially: Windows 10 64-bit, an Intel Core i5-3570K (or equivalent quad-core), 16GB RAM, an Nvidia GeForce GTX 1050 (2GB), DirectX 11, and 40GB of storage. This is a modest bar by 2026 standards — most gaming PCs from the last decade should meet it.",
   },
   {
+    question: "How many GB is Palworld? How much storage does it need?",
+    answer:
+      "Palworld's official Steam listing requires 40GB of free storage space (SSD strongly recommended), the same figure for both minimum and recommended specs. This covers the base install — Pocketpair has not published a separate, larger download size specifically for the 1.0 update, so budget for roughly 40GB total unless Steam shows a different number on your account.",
+  },
+  {
     question: "What are the recommended specs for smooth performance?",
     answer:
       "Officially: an Intel Core i9-9900K (or equivalent 8-core), 32GB RAM, and an Nvidia GeForce RTX 2070. The jump from minimum to recommended is unusually large — 32GB RAM in particular is a high bar most mid-range gaming PCs from this era do not meet.",
   },
   {
-    question: "Will Palworld 1.0 need a beefier PC than the current version?",
+    question: "Did Palworld 1.0 need a beefier PC than the Early Access version?",
     answer:
-      "Pocketpair has not announced any change to the official system requirements for 1.0 as of this writing. However, the World Tree region and second island roughly double the map, so real-world performance (not the official minimum bar) may be more demanding, especially with a full base and many Pals active. Confirm official spec updates on Steam closer to July 10, 2026.",
+      "No official change to the published minimum/recommended specs came with the July 10, 2026 1.0 launch. That said, the World Tree region and Sky Islands roughly double the map, so real-world performance (not the official minimum bar) can be more demanding than Early Access, especially with a full base and many Pals active.",
   },
   {
     question: "Can Palworld run on Steam Deck?",

@@ -3,9 +3,9 @@ import { BlufBox, SearchAnswerPanel, StatusPanel } from "@/components/guide-bloc
 import { PalworldArticle } from "@/components/palworld-article";
 import { createPalworldMetadata, palworldImages } from "@/lib/palworld";
 
-const title = "Does Palworld 1.0 Wipe Your Save? Fresh Start vs. Carry Over Explained";
+const title = "Palworld Save Data & 1.0: Backup Checklist, Dedicated Servers & Mod Compatibility";
 const description =
-  "Palworld's July 10, 2026 1.0 update does not force-wipe existing saves or dedicated servers. Here is what actually carries over, why Pocketpair still recommends starting fresh, and how to back up first.";
+  "No, Palworld 1.0 does not force-wipe saves. Here's the backup checklist before you update, what happens to dedicated servers, whether mods still work, and whether a fresh start is worth it.";
 const canonical = "/games/palworld/save-data-1-0";
 
 export const metadata = createPalworldMetadata({
