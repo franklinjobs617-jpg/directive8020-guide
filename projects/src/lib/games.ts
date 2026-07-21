@@ -1692,7 +1692,7 @@ export const palworld: GameConfig = {
       title: "Everything New in Palworld 1.0",
       href: "/games/palworld/1-0-everything-new",
       description:
-        "Full rundown of confirmed 1.0 additions: World Tree, Sky Islands, Wing Pack, PvP, Paint Mode, new Pals, Tower Boss rework, and Genetic Recombination breeding.",
+        "Full rundown of confirmed 1.0 additions: 72 new Pals, World Tree, Sunreach, Wing Pack, PvP, Paint Mode, Tower Boss rework, and the new Mutation breeding system.",
     },
     {
       title: "World Tree & Sunreach (Sky Islands) Explained",
