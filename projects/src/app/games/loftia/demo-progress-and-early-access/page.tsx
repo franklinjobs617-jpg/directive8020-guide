@@ -62,8 +62,8 @@ export default function LoftiaDemoContinuityPage() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Loftia · Early Access</p>
           <h1 className="mb-4 text-3xl font-bold leading-tight text-foreground sm:text-4xl">Loftia Demo Progress: What Carries Into Early Access?</h1>
           <p className="text-sm leading-7 text-muted-foreground">
-            Sources checked <time dateTime="2026-11-05">November 5, 2026</time>. Loftia entered Early Access on November 3, 2026,
-            confirmed by its <a href="https://store.steampowered.com/app/2320980/Loftia/" className="underline">official Steam listing</a>.
+            Sources checked <time dateTime="2026-11-05">November 5, 2026</time>. According to the{" "}
+            <a href={faqUrl} className="underline">official developer FAQ</a>, Loftia entered Early Access on November 3, 2026 at 1 p.m. EST.
             The rules below come from official announcements; account linking and migration have not been tested in-game for this guide.
           </p>
         </header>

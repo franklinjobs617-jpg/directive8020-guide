@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { GameDirectorySearch } from "@/components/game-directory-search";
 import { JsonLd, generateWebPageSchema } from "@/components/json-ld";
@@ -377,6 +378,12 @@ export default function GamesPage() {
  pages depending on what you need next. If you are waiting for
  Mina the Hollower, start with release timing, specs, Steam Deck,
  beginner tips, or buying advice.
+ </p>
+ <p>
+ For Lightyear Frontier 1.0, compare whether to{" "}
+ <Link href="/games/lightyear-frontier/1-0-save-or-restart">keep your existing save or start fresh</Link>.
+ If you played the Loftia Demo, check{" "}
+ <Link href="/games/loftia/demo-progress-and-early-access">what carries into Early Access and the name and reward requirements</Link>.
  </p>
  <ul>
  <li>

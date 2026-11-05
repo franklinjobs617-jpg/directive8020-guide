@@ -147,7 +147,7 @@ export default function LightyearSaveDecisionPage() {
           <ul className="list-disc space-y-3 pl-5 text-sm leading-7 text-muted-foreground">
             <li><a href={faqUrl} className="underline">1.0 Frequently Asked Questions — October 26, 2026</a>: save compatibility, optional restart, achievements, Automation Update continuity and Legacy branch status.</li>
             <li><a href={launchUrl} className="underline">Lightyear Frontier 1.0 OUT NOW! — November 4, 2026</a>: release confirmation, progression changes and equipment carryover details. Use this newer post for release-day changes.</li>
-            <li><a href="https://store.steampowered.com/app/1677110/Lightyear_Frontier/" className="underline">Official Steam listing</a>: confirms the November 4 release date.</li>
+            <li><a href="https://store.steampowered.com/app/1677110/Lightyear_Frontier/" className="underline">Official Steam listing</a>: store and platform reference. The November 4 launch date follows the developer&apos;s official 1.0 release announcement linked above.</li>
           </ul>
           <p className="mt-4 text-sm leading-7 text-muted-foreground"><strong className="text-foreground">Not tested:</strong> an actual old-save upgrade, individual achievement triggers, platform-specific save handling, cloud conflicts or a later hotfix. No manual file-copy, backup-directory or conversion steps are verified here. Check newer official notes if your installed build differs or a specific save fails.</p>
         </section>
