@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { FAQSection } from "@/components/faq-section";
 import { JsonLd, generateFAQSchema } from "@/components/json-ld";
@@ -94,10 +95,10 @@ export default function LightyearSaveDecisionPage() {
         </section>
 
         <nav aria-label="On this page" className="mb-10 flex flex-wrap gap-x-5 gap-y-3 text-sm underline">
-          <a href="#decision-table">Compare your options</a>
-          <a href="#version-changes">Changes that matter</a>
-          <a href="#checklist">Before you choose</a>
-          <a href="#sources">Sources and limits</a>
+          <Link href="#decision-table">Compare your options</Link>
+          <Link href="#version-changes">Changes that matter</Link>
+          <Link href="#checklist">Before you choose</Link>
+          <Link href="#sources">Sources and limits</Link>
         </nav>
 
         <section id="decision-table" className="mb-10">

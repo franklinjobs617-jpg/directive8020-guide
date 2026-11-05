@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { FAQSection } from "@/components/faq-section";
 import { JsonLd, generateFAQSchema } from "@/components/json-ld";
@@ -78,11 +79,11 @@ export default function LoftiaDemoContinuityPage() {
         </section>
 
         <nav aria-label="On this page" className="mb-10 flex flex-wrap gap-x-5 gap-y-3 text-sm underline">
-          <a href="#carryover">What carries over</a>
-          <a href="#name-window">Name retention window</a>
-          <a href="#account-checklist">Account and rewards checklist</a>
-          <a href="#platforms">Servers and platforms</a>
-          <a href="#sources">Sources and limits</a>
+          <Link href="#carryover">What carries over</Link>
+          <Link href="#name-window">Name retention window</Link>
+          <Link href="#account-checklist">Account and rewards checklist</Link>
+          <Link href="#platforms">Servers and platforms</Link>
+          <Link href="#sources">Sources and limits</Link>
         </nav>
 
         <section id="carryover" className="mb-10">
