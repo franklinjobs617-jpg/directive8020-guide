@@ -74,25 +74,49 @@ export default function LightyearSaveDecisionPage() {
         <div className="[&_ol]:flex-wrap">
           <Breadcrumb items={[{ label: "Games", href: "/games" }, { label: "Lightyear Frontier save decision", href: canonical }]} />
         </div>
-        <header className="mb-8 max-w-3xl">
+        <header className="mb-5 max-w-3xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Lightyear Frontier · 1.0</p>
           <h1 className="mb-4 text-3xl font-bold leading-tight text-foreground sm:text-4xl">Lightyear Frontier 1.0: Keep Your Save or Start Fresh?</h1>
-          <p className="text-sm leading-7 text-muted-foreground">
-            Sources checked <time dateTime="2026-11-05">November 5, 2026</time>. Version 1.0 released on November 4 for Steam and Xbox,
-            according to the <a href={launchUrl} className="underline">official launch post</a>.
-            This guide uses developer statements; it does not claim hands-on save migration testing.
-          </p>
+          <p className="text-base leading-7 text-muted-foreground">Keep your save; restarting is optional, according to the <a href={faqUrl} className="underline">developer&apos;s FAQ</a>.</p>
         </header>
 
-        <section aria-labelledby="quick-answer" className="mb-8 rounded-lg border border-border bg-mist p-5">
-          <h2 id="quick-answer" className="mb-3 text-xl font-bold text-foreground">The short answer: restarting is optional</h2>
-          <p className="text-sm leading-7 text-muted-foreground">
-            <strong className="text-foreground">Keep your existing save if preserving your farm and continuing toward the endgame is your priority.</strong>{" "}
-            Start fresh if you want to experience the rebalanced progression from the beginning.
-            The <a href={faqUrl} className="underline">official 1.0 FAQ</a> confirms old saves remain playable and can earn the new achievements.
-            Its recommendation to restart is about the overall experience, not a mandatory reset.
-          </p>
+        <section aria-labelledby="quick-answer" className="mb-6 overflow-hidden rounded-xl border border-border bg-mist">
+          <div className="border-b border-border px-4 py-4 sm:px-5">
+            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Save decision · 1.0</p>
+            <h2 id="quick-answer" className="text-xl font-bold text-foreground">Your save works. Choose your goal.</h2>
+            <p className="mt-2 text-sm leading-6 text-muted-foreground">Old saves remain playable. <a href={faqUrl} className="underline">Official FAQ</a>.</p>
+          </div>
+          <ol aria-label="Save decision flow" className="grid gap-3 p-3 sm:grid-cols-2 sm:p-4">
+            <li className="rounded-lg border border-emerald-200 bg-white p-4">
+              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-emerald-800">01 · Keep existing save</p>
+              <h3 className="mb-2 text-base font-semibold text-foreground">Keep the farm. Reach the new endgame.</h3>
+              <p className="text-sm leading-6 text-muted-foreground">Best fit if preserving your work matters most. The <a href={faqUrl} className="underline">FAQ</a> says 1.0 continues from the Automation Update.</p>
+              <Link href="#decision-table" className="mt-3 inline-block text-sm font-semibold text-emerald-800 underline">Compare continuing</Link>
+            </li>
+            <li className="rounded-lg border border-amber-200 bg-white p-4">
+              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-amber-900">02 · Start fresh — optional</p>
+              <h3 className="mb-2 text-base font-semibold text-foreground">Relearn the revised progression.</h3>
+              <p className="text-sm leading-6 text-muted-foreground">Best fit if you want the rebalanced experience from the beginning. This is the developer&apos;s <a href={faqUrl} className="underline">recommendation, not a requirement</a>.</p>
+              <Link href="#version-changes" className="mt-3 inline-block text-sm font-semibold text-amber-900 underline">Review what changed</Link>
+            </li>
+            <li className="rounded-lg border border-border bg-white p-4">
+              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">03 · Achievements</p>
+              <h3 className="mb-2 text-base font-semibold text-foreground">No restart needed for eligibility.</h3>
+              <p className="text-sm leading-6 text-muted-foreground">The developer <a href={faqUrl} className="underline">confirms new achievements work on old saves</a>. Individual triggers have not been tested here.</p>
+            </li>
+            <li className="rounded-lg border border-dashed border-border bg-white p-4">
+              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">04 · Legacy branch — unknown procedure</p>
+              <h3 className="mb-2 text-base font-semibold text-foreground">Do not guess a migration method.</h3>
+              <p className="text-sm leading-6 text-muted-foreground">The <a href={faqUrl} className="underline">FAQ</a> says Legacy gets no 1.0 changes. It does not give a verified Legacy-to-1.0 transfer procedure.</p>
+            </li>
+          </ol>
         </section>
+
+        <p className="mb-6 max-w-3xl text-sm leading-7 text-muted-foreground">
+          Sources checked <time dateTime="2026-11-05">November 5, 2026</time>. Version 1.0 released on November 4 for Steam and Xbox,
+          according to the <a href={launchUrl} className="underline">official launch post</a>.
+          This guide uses developer statements; it does not claim hands-on save migration testing.
+        </p>
 
         <nav aria-label="On this page" className="mb-10 flex flex-wrap gap-x-5 gap-y-3 text-sm underline">
           <Link href="#decision-table">Compare your options</Link>
@@ -141,6 +165,14 @@ export default function LightyearSaveDecisionPage() {
             <li><strong className="text-foreground">If continuing, read the automation and mech sections first.</strong> Save compatibility is confirmed; an unchanged layout or identical behavior for every old setup is not.</li>
             <li><strong className="text-foreground">If restarting, treat it as a preference.</strong> A new run follows the developer&apos;s experience recommendation. Nothing in that recommendation instructs you to delete your existing save.</li>
           </ol>
+        </section>
+
+        <section aria-labelledby="trailer-overview" className="mb-10 rounded-xl border border-border bg-mist p-5">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Launch overview · external video</p>
+          <h2 id="trailer-overview" className="mb-3 text-xl font-bold text-foreground">See the 1.0 launch overview</h2>
+          <p className="mb-4 max-w-3xl text-sm leading-7 text-muted-foreground">The publisher-linked launch trailer is a promotional overview, not evidence of save migration or an old-save upgrade test.</p>
+          <a href="https://www.youtube.com/watch?v=HibMuWXqszs" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center rounded-lg border border-border bg-white px-4 py-2 text-sm font-semibold text-foreground underline">Watch the launch trailer on YouTube <span className="ml-2 text-xs">(new tab)</span></a>
+          <p className="mt-3 text-xs leading-6 text-muted-foreground">Video linked by the <a href="https://www.mynewsdesk.com/uk/swipe-right/pressreleases/open-world-farming-adventure-lightyear-frontier-releases-into-1-dot-0-on-pc-and-xbox-series-x-s-3476160" className="underline">publisher&apos;s 1.0 press release</a>. Opens on YouTube; no player or thumbnail is loaded here.</p>
         </section>
 
         <section id="sources" className="mb-10 rounded-lg border border-border p-5 scroll-mt-20">

@@ -59,24 +59,66 @@ export default function LoftiaDemoContinuityPage() {
         <div className="[&_ol]:flex-wrap">
           <Breadcrumb items={[{ label: "Games", href: "/games" }, { label: "Loftia Demo progress", href: canonical }]} />
         </div>
-        <header className="mb-8 max-w-3xl">
+        <header className="mb-5 max-w-3xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Loftia · Early Access</p>
           <h1 className="mb-4 text-3xl font-bold leading-tight text-foreground sm:text-4xl">Loftia Demo Progress: What Carries Into Early Access?</h1>
-          <p className="text-sm leading-7 text-muted-foreground">
-            Sources checked <time dateTime="2026-11-05">November 5, 2026</time>. According to the{" "}
-            <a href={faqUrl} className="underline">official developer FAQ</a>, Loftia entered Early Access on November 3, 2026 at 1 p.m. EST.
-            The rules below come from official announcements; account linking and migration have not been tested in-game for this guide.
-          </p>
+          <p className="text-base leading-7 text-muted-foreground">Your Demo progress carries over; names and rewards have conditions. The <a href={demoNews} className="underline">developer&apos;s announcement</a> sets out the differences.</p>
         </header>
 
-        <section aria-labelledby="quick-answer" className="mb-8 rounded-lg border border-border bg-mist p-5">
-          <h2 id="quick-answer" className="mb-3 text-xl font-bold text-foreground">Your Demo progress and character name carry over</h2>
-          <p className="text-sm leading-7 text-muted-foreground">
-            The <a href={demoNews} className="underline">developer&apos;s October 8 Demo announcement</a> confirms that what you complete or collect stays with your character in Early Access.
-            Your name carries over too, but the announcement says it becomes available to others if you do not log into Early Access during the three months between November 3, 2026 and February 3, 2027.
-            <strong className="text-foreground"> That is a name reservation rule, not a statement that all progress will be deleted.</strong>
-          </p>
+        <section aria-labelledby="quick-answer" className="mb-6 overflow-hidden rounded-xl border border-border bg-mist">
+          <div className="border-b border-border px-4 py-4 sm:px-5">
+            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Demo → Early Access</p>
+            <h2 id="quick-answer" className="text-xl font-bold text-foreground">Progress, names and rewards have different rules.</h2>
+          </div>
+          <ul aria-label="Carryover status summary" className="grid gap-3 p-3 sm:p-4 lg:grid-cols-3">
+            <li className="rounded-lg border border-emerald-200 bg-white p-4">
+              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-emerald-800">Confirmed carryover</p>
+              <h3 className="mb-2 text-base font-semibold text-foreground">Completed and collected progress</h3>
+              <p className="text-sm leading-6 text-muted-foreground">What you complete or collect stays with your character, per the <a href={demoNews} className="underline">Demo announcement</a>.</p>
+              <Link href="#carryover" className="mt-3 inline-block text-sm font-semibold text-emerald-800 underline">Check the carryover table</Link>
+            </li>
+            <li className="rounded-lg border border-amber-200 bg-white p-4">
+              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-amber-900">Conditional</p>
+              <h3 className="mb-2 text-base font-semibold text-foreground">Your name and Demo Banner</h3>
+              <p className="text-sm leading-6 text-muted-foreground">Names have an Early Access login window. The Banner had event, email-link and website-claim requirements in the <a href={demoNews} className="underline">announcement</a>.</p>
+              <Link href="#account-checklist" className="mt-3 inline-block text-sm font-semibold text-amber-900 underline">Check account requirements</Link>
+            </li>
+            <li className="rounded-lg border border-dashed border-border bg-white p-4">
+              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">Unknown / unverified</p>
+              <h3 className="mb-2 text-base font-semibold text-foreground">Transfers, crossplay and late claims</h3>
+              <p className="text-sm leading-6 text-muted-foreground">The <a href={demoNews} className="underline">announcement</a> does not establish cross-account transfers or late reward claims. The <a href={faqUrl} className="underline">FAQ checked November 5</a> does not promise crossplay.</p>
+              <Link href="#platforms" className="mt-3 inline-block text-sm font-semibold text-foreground underline">Read platform limits</Link>
+            </li>
+          </ul>
+          <div className="border-t border-border px-4 py-4 sm:px-5">
+            <h3 className="mb-4 text-base font-semibold text-foreground">The dates that matter</h3>
+            <ol aria-label="Demo to Early Access timeline" className="grid gap-4 sm:grid-cols-3">
+              <li className="border-l-2 border-emerald-700 pl-3">
+                <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Demo event</p>
+                <a href={demoNews} className="text-sm font-semibold leading-7 text-foreground underline"><time dateTime="2026-10-19">Oct 19</time>–<time dateTime="2026-10-26">26, 2026</time></a>
+                <p className="text-sm leading-6 text-muted-foreground">The announced Demo and reward event period.</p>
+              </li>
+              <li className="border-l-2 border-emerald-700 pl-3">
+                <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Early Access begins</p>
+                <a href={faqUrl} className="text-sm font-semibold leading-7 text-foreground underline"><time dateTime="2026-11-03">Nov 3, 2026</time></a>
+                <p className="text-sm leading-6 text-muted-foreground">The name retention window begins.</p>
+              </li>
+              <li className="border-l-2 border-amber-700 pl-3">
+                <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Name window boundary</p>
+                <a href={demoNews} className="text-sm font-semibold leading-7 text-foreground underline"><time dateTime="2027-02-03">Feb 3, 2027</time></a>
+                <p className="text-sm leading-6 text-muted-foreground">Exact cutoff time and timezone: UNKNOWN.</p>
+              </li>
+            </ol>
+            <p className="mt-4 text-sm leading-6 text-muted-foreground">Plan to log into <strong className="text-foreground">Early Access</strong> well before February 3 to protect your Demo name. The <a href={demoNews} className="underline">name-release rule</a> does not say all progress is deleted or verify that a website login alone meets the condition.</p>
+          </div>
         </section>
+
+        <p className="mb-3 max-w-3xl text-sm leading-7 text-muted-foreground">
+          Sources checked <time dateTime="2026-11-05">November 5, 2026</time>. According to the{" "}
+          <a href={faqUrl} className="underline">official developer FAQ</a>, Loftia entered Early Access on November 3, 2026 at 1 p.m. EST.
+          The rules below come from official announcements; account linking and migration have not been tested in-game for this guide.
+        </p>
+        <p className="mb-6 text-xs leading-6 text-muted-foreground">This is an independent guide, not affiliated with or endorsed by Qloud Games. Loftia belongs to Qloud Games.</p>
 
         <nav aria-label="On this page" className="mb-10 flex flex-wrap gap-x-5 gap-y-3 text-sm underline">
           <Link href="#carryover">What carries over</Link>
@@ -131,6 +173,14 @@ export default function LoftiaDemoContinuityPage() {
             <li><strong className="text-foreground">Multiple stores do not establish crossplay.</strong> The FAQ lists Steam and Epic on PC/Mac, plus Steam Deck support, but still describes crossplay as being researched and tested without a promise. Cross-store character access and shared saves remain unverified.</li>
             <li><strong className="text-foreground">Check hardware requirements separately.</strong> The <a href="https://store.steampowered.com/app/2320980/Loftia/" className="underline">Steam listing</a> lists Windows and macOS; its Mac requirements specify Apple Silicon and exclude Intel Macs. The FAQ describes Switch as a future 2027 plan, not a currently verified release.</li>
           </ul>
+        </section>
+
+        <section aria-labelledby="trailer-overview" className="mb-10 rounded-xl border border-border bg-mist p-5">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Launch overview · external video</p>
+          <h2 id="trailer-overview" className="mb-3 text-xl font-bold text-foreground">See the Early Access announcement overview</h2>
+          <p className="mb-4 max-w-3xl text-sm leading-7 text-muted-foreground">The publisher-linked trailer introduces the game. It is not a demonstration of Demo data migration, reward claims or account linking.</p>
+          <a href="https://www.youtube.com/watch?v=NBb2QUQrh_I" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center rounded-lg border border-border bg-white px-4 py-2 text-sm font-semibold text-foreground underline">Watch the announcement trailer on YouTube <span className="ml-2 text-xs">(new tab)</span></a>
+          <p className="mt-3 text-xs leading-6 text-muted-foreground">Video linked in the <a href="https://www.gamespress.com/en-US/Highly-Anticipated-Life-Sim-MMO-Loftia-Launches-into-Early-Access-on-N" className="underline">Qloud Games launch press release</a>. Opens on YouTube; no player or thumbnail is loaded here.</p>
         </section>
 
         <section id="sources" className="mb-10 rounded-lg border border-border p-5 scroll-mt-20">
