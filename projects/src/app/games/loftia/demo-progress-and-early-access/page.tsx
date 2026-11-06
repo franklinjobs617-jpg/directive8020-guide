@@ -86,7 +86,7 @@ export default function LoftiaDemoContinuityPage() {
           <Link href="#sources">Sources and limits</Link>
         </nav>
 
-        <section id="carryover" className="mb-10">
+        <section id="carryover" className="mb-10 scroll-mt-20">
           <h2 className="mb-4 text-2xl font-bold text-foreground">What carries over, and what needs a check?</h2>
           <p className="mb-4 text-sm leading-7 text-muted-foreground">The <a href={demoNews} className="underline">Demo announcement</a> supports the progress, name and reward rows below. It described one character per account during the Demo and multiple characters after Early Access began; it did not give a current numeric character limit.</p>
           <p className="mb-3 text-xs text-muted-foreground">On small screens, scroll the table sideways to compare all columns.</p>
@@ -105,13 +105,13 @@ export default function LoftiaDemoContinuityPage() {
           </div>
         </section>
 
-        <section id="name-window" className="mb-10 max-w-3xl">
+        <section id="name-window" className="mb-10 max-w-3xl scroll-mt-20">
           <h2 className="mb-4 text-2xl font-bold text-foreground">Protect your name during the announced window</h2>
           <p className="mb-4 text-sm leading-7 text-muted-foreground">If you claimed a name during the Steam Next Fest Demo and want to keep it, plan to log into Early Access well before <time dateTime="2027-02-03">February 3, 2027</time>. The official window begins on <time dateTime="2026-11-03">November 3, 2026</time>.</p>
           <p className="text-sm leading-7 text-muted-foreground"><strong className="text-foreground">UNKNOWN:</strong> the exact cutoff time, timezone, treatment of a login on the final boundary, and a recovery process after a name is released. The announcement does not say that a website login alone satisfies the Early Access login condition. Do not apply this deadline to every item, quest or reward.</p>
         </section>
 
-        <section id="account-checklist" className="mb-10 max-w-3xl">
+        <section id="account-checklist" className="mb-10 max-w-3xl scroll-mt-20">
           <h2 className="mb-4 text-2xl font-bold text-foreground">Account and Demo reward checklist</h2>
           <p className="mb-4 text-sm leading-7 text-muted-foreground">The Demo ran October 19–26, 2026. The announcement&apos;s event requirements describe eligibility during that period; they are not a promise that a new player can unlock an exclusive Demo reward now.</p>
           <ol className="list-decimal space-y-4 pl-5 text-sm leading-7 text-muted-foreground">
@@ -123,7 +123,7 @@ export default function LoftiaDemoContinuityPage() {
           <p className="mt-4 text-sm leading-7 text-muted-foreground">For unresolved account or reward issues, use the support contact linked in the <a href={faqUrl} className="underline">official FAQ</a>. Late reward eligibility, recovery of a released name and account-link changes remain UNKNOWN here.</p>
         </section>
 
-        <section id="platforms" className="mb-10 max-w-3xl">
+        <section id="platforms" className="mb-10 max-w-3xl scroll-mt-20">
           <h2 className="mb-4 text-2xl font-bold text-foreground">Servers, platforms and crossplay are separate questions</h2>
           <ul className="list-disc space-y-4 pl-5 text-sm leading-7 text-muted-foreground">
             <li><strong className="text-foreground">Online access is required.</strong> The <a href={faqUrl} className="underline">FAQ</a> says Loftia needs an internet connection even when playing solo.</li>
@@ -133,7 +133,7 @@ export default function LoftiaDemoContinuityPage() {
           </ul>
         </section>
 
-        <section id="sources" className="mb-10 rounded-lg border border-border p-5">
+        <section id="sources" className="mb-10 rounded-lg border border-border p-5 scroll-mt-20">
           <h2 className="mb-4 text-xl font-bold text-foreground">Official sources and verification limits</h2>
           <ul className="list-disc space-y-3 pl-5 text-sm leading-7 text-muted-foreground">
             <li><a href={demoNews} className="underline">Developer Steam Next Fest Demo announcement — October 8, 2026</a>: progress, items, character names, the three-month name condition and Demo Banner requirements.</li>

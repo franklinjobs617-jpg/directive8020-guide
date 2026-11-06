@@ -101,7 +101,7 @@ export default function LightyearSaveDecisionPage() {
           <Link href="#sources">Sources and limits</Link>
         </nav>
 
-        <section id="decision-table" className="mb-10">
+        <section id="decision-table" className="mb-10 scroll-mt-20">
           <h2 className="mb-4 text-2xl font-bold text-foreground">Keep Existing Save vs Start Fresh</h2>
           <p className="mb-4 text-sm leading-7 text-muted-foreground">These choices are editorial guidance based on the official FAQ and launch notes, rather than results from a tested playthrough.</p>
           <p className="mb-3 text-xs text-muted-foreground">On small screens, scroll the table sideways to compare all columns.</p>
@@ -122,7 +122,7 @@ export default function LightyearSaveDecisionPage() {
           </div>
         </section>
 
-        <section id="version-changes" className="mb-10 max-w-3xl">
+        <section id="version-changes" className="mb-10 max-w-3xl scroll-mt-20">
           <h2 className="mb-4 text-2xl font-bold text-foreground">What changed enough to affect the decision?</h2>
           <p className="mb-4 text-sm leading-7 text-muted-foreground">The <a href={launchUrl} className="underline">November 4 release notes</a> explain why a compatible old save may still feel different:</p>
           <ul className="list-disc space-y-4 pl-5 text-sm leading-7 text-muted-foreground">
@@ -133,7 +133,7 @@ export default function LightyearSaveDecisionPage() {
           </ul>
         </section>
 
-        <section id="checklist" className="mb-10 max-w-3xl">
+        <section id="checklist" className="mb-10 max-w-3xl scroll-mt-20">
           <h2 className="mb-4 text-2xl font-bold text-foreground">Before you choose</h2>
           <ol className="list-decimal space-y-4 pl-5 text-sm leading-7 text-muted-foreground">
             <li><strong className="text-foreground">Check the version and branch you are using.</strong> These recommendations concern the 1.0 release. The FAQ says the Legacy branch receives no changes; it does not establish a Legacy-to-1.0 migration procedure.</li>
@@ -143,7 +143,7 @@ export default function LightyearSaveDecisionPage() {
           </ol>
         </section>
 
-        <section id="sources" className="mb-10 rounded-lg border border-border p-5">
+        <section id="sources" className="mb-10 rounded-lg border border-border p-5 scroll-mt-20">
           <h2 className="mb-4 text-xl font-bold text-foreground">Official sources and what remains unverified</h2>
           <ul className="list-disc space-y-3 pl-5 text-sm leading-7 text-muted-foreground">
             <li><a href={faqUrl} className="underline">1.0 Frequently Asked Questions — October 26, 2026</a>: save compatibility, optional restart, achievements, Automation Update continuity and Legacy branch status.</li>
