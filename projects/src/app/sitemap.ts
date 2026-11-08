@@ -57,6 +57,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: `${BASE_URL}/games/mistfall-hunter`, lastModified: '2026-06-22', changeFrequency: 'weekly', priority: 0.76 },
  { url: `${BASE_URL}/steam-deck`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
  { url: `${BASE_URL}/games/warhammer-40000-rogue-trader/dlc-guide-2026`, lastModified: '2026-06-18', changeFrequency: 'weekly', priority: 0.68 },
+ { url: `${BASE_URL}/games/lightyear-frontier/1-0-save-or-restart`, lastModified: '2026-11-05', changeFrequency: 'weekly', priority: 0.68 },
+ { url: `${BASE_URL}/games/loftia/demo-progress-and-early-access`, lastModified: '2026-11-05', changeFrequency: 'weekly', priority: 0.68 },
   { url: `${BASE_URL}/best-of`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
   { url: `${BASE_URL}/best-survival-games-steam-2026`, lastModified: today, changeFrequency: 'weekly', priority: 0.76 },
   { url: `${BASE_URL}/best-free-games-steam-2026`, lastModified: today, changeFrequency: 'weekly', priority: 0.76 },
