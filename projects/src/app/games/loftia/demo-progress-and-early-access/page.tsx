@@ -128,6 +128,24 @@ export default function LoftiaDemoContinuityPage() {
           <Link href="#sources">Sources and limits</Link>
         </nav>
 
+        <section aria-labelledby="official-steam-card" className="mb-10 rounded-xl border border-border bg-mist p-4 sm:p-5">
+          <h2 id="official-steam-card" className="mb-3 text-xl font-bold text-foreground">Official Steam game card</h2>
+          <p className="mb-3 text-sm leading-6 text-muted-foreground">Game artwork, details and pricing are provided by Steam. Opening the card connects to Steam, which may use cookies. <a href="https://store.steampowered.com/privacy_agreement/" className="underline">Steam privacy policy</a>.</p>
+          <details className="rounded-lg border border-border bg-white p-3">
+            <summary className="min-h-11 cursor-pointer py-3 text-sm font-semibold text-foreground">Show Loftia on Steam</summary>
+            <iframe
+              src="https://store.steampowered.com/widget/2320980/"
+              title="Loftia — official Steam game card"
+              width="646"
+              height="190"
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              className="mt-3 block h-[190px] w-full min-w-0 border-0"
+            />
+          </details>
+          <a href="https://store.steampowered.com/app/2320980/" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-foreground underline">Open the official Steam listing <span className="ml-2 text-xs">(new tab)</span></a>
+        </section>
+
         <section id="carryover" className="mb-10 scroll-mt-20">
           <h2 className="mb-4 text-2xl font-bold text-foreground">What carries over, and what needs a check?</h2>
           <p className="mb-4 text-sm leading-7 text-muted-foreground">The <a href={demoNews} className="underline">Demo announcement</a> supports the progress, name and reward rows below. It described one character per account during the Demo and multiple characters after Early Access began; it did not give a current numeric character limit.</p>
@@ -176,11 +194,28 @@ export default function LoftiaDemoContinuityPage() {
         </section>
 
         <section aria-labelledby="trailer-overview" className="mb-10 rounded-xl border border-border bg-mist p-5">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Launch overview · external video</p>
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Official trailer · YouTube</p>
           <h2 id="trailer-overview" className="mb-3 text-xl font-bold text-foreground">See the Early Access announcement overview</h2>
           <p className="mb-4 max-w-3xl text-sm leading-7 text-muted-foreground">The publisher-linked trailer introduces the game. It is not a demonstration of Demo data migration, reward claims or account linking.</p>
+          <p className="mb-3 text-xs leading-6 text-muted-foreground">Opening the player connects to YouTube in privacy-enhanced mode. Playback may use cookies. <a href="https://policies.google.com/privacy" className="underline">Google privacy policy</a>.</p>
+          <details className="mb-3 rounded-lg border border-border bg-white p-3">
+            <summary className="min-h-11 cursor-pointer py-3 text-sm font-semibold text-foreground">Show the official trailer</summary>
+            <div className="mt-3 aspect-video w-full overflow-hidden rounded-lg bg-black">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/NBb2QUQrh_I?rel=0"
+                title="Loftia - Official Release Date Trailer"
+                width="560"
+                height="315"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="block h-full w-full border-0"
+              />
+            </div>
+          </details>
           <a href="https://www.youtube.com/watch?v=NBb2QUQrh_I" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center rounded-lg border border-border bg-white px-4 py-2 text-sm font-semibold text-foreground underline">Watch the announcement trailer on YouTube <span className="ml-2 text-xs">(new tab)</span></a>
-          <p className="mt-3 text-xs leading-6 text-muted-foreground">Video linked in the <a href="https://www.gamespress.com/en-US/Highly-Anticipated-Life-Sim-MMO-Loftia-Launches-into-Early-Access-on-N" className="underline">Qloud Games launch press release</a>. Opens on YouTube; no player or thumbnail is loaded here.</p>
+          <p className="mt-3 text-xs leading-6 text-muted-foreground">Video linked in the <a href="https://www.gamespress.com/en-US/Highly-Anticipated-Life-Sim-MMO-Loftia-Launches-into-Early-Access-on-N" className="underline">Qloud Games launch press release</a>. Official video by Loftia. If the player is unavailable, use the YouTube link above.</p>
         </section>
 
         <section id="sources" className="mb-10 rounded-lg border border-border p-5 scroll-mt-20">

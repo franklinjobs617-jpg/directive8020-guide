@@ -125,6 +125,24 @@ export default function LightyearSaveDecisionPage() {
           <Link href="#sources">Sources and limits</Link>
         </nav>
 
+        <section aria-labelledby="official-steam-card" className="mb-10 rounded-xl border border-border bg-mist p-4 sm:p-5">
+          <h2 id="official-steam-card" className="mb-3 text-xl font-bold text-foreground">Official Steam game card</h2>
+          <p className="mb-3 text-sm leading-6 text-muted-foreground">Game artwork, details and pricing are provided by Steam. Opening the card connects to Steam, which may use cookies. <a href="https://store.steampowered.com/privacy_agreement/" className="underline">Steam privacy policy</a>.</p>
+          <details className="rounded-lg border border-border bg-white p-3">
+            <summary className="min-h-11 cursor-pointer py-3 text-sm font-semibold text-foreground">Show Lightyear Frontier on Steam</summary>
+            <iframe
+              src="https://store.steampowered.com/widget/1677110/"
+              title="Lightyear Frontier — official Steam game card"
+              width="646"
+              height="190"
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              className="mt-3 block h-[190px] w-full min-w-0 border-0"
+            />
+          </details>
+          <a href="https://store.steampowered.com/app/1677110/" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-foreground underline">Open the official Steam listing <span className="ml-2 text-xs">(new tab)</span></a>
+        </section>
+
         <section id="decision-table" className="mb-10 scroll-mt-20">
           <h2 className="mb-4 text-2xl font-bold text-foreground">Keep Existing Save vs Start Fresh</h2>
           <p className="mb-4 text-sm leading-7 text-muted-foreground">These choices are editorial guidance based on the official FAQ and launch notes, rather than results from a tested playthrough.</p>
@@ -168,11 +186,28 @@ export default function LightyearSaveDecisionPage() {
         </section>
 
         <section aria-labelledby="trailer-overview" className="mb-10 rounded-xl border border-border bg-mist p-5">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Launch overview · external video</p>
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Official trailer · YouTube</p>
           <h2 id="trailer-overview" className="mb-3 text-xl font-bold text-foreground">See the 1.0 launch overview</h2>
           <p className="mb-4 max-w-3xl text-sm leading-7 text-muted-foreground">The publisher-linked launch trailer is a promotional overview, not evidence of save migration or an old-save upgrade test.</p>
+          <p className="mb-3 text-xs leading-6 text-muted-foreground">Opening the player connects to YouTube in privacy-enhanced mode. Playback may use cookies. <a href="https://policies.google.com/privacy" className="underline">Google privacy policy</a>.</p>
+          <details className="mb-3 rounded-lg border border-border bg-white p-3">
+            <summary className="min-h-11 cursor-pointer py-3 text-sm font-semibold text-foreground">Show the official trailer</summary>
+            <div className="mt-3 aspect-video w-full overflow-hidden rounded-lg bg-black">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/HibMuWXqszs?rel=0"
+                title="Lightyear Frontier - 1.0 Launch Trailer"
+                width="560"
+                height="315"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="block h-full w-full border-0"
+              />
+            </div>
+          </details>
           <a href="https://www.youtube.com/watch?v=HibMuWXqszs" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center rounded-lg border border-border bg-white px-4 py-2 text-sm font-semibold text-foreground underline">Watch the launch trailer on YouTube <span className="ml-2 text-xs">(new tab)</span></a>
-          <p className="mt-3 text-xs leading-6 text-muted-foreground">Video linked by the <a href="https://www.mynewsdesk.com/uk/swipe-right/pressreleases/open-world-farming-adventure-lightyear-frontier-releases-into-1-dot-0-on-pc-and-xbox-series-x-s-3476160" className="underline">publisher&apos;s 1.0 press release</a>. Opens on YouTube; no player or thumbnail is loaded here.</p>
+          <p className="mt-3 text-xs leading-6 text-muted-foreground">Video linked by the <a href="https://www.mynewsdesk.com/uk/swipe-right/pressreleases/open-world-farming-adventure-lightyear-frontier-releases-into-1-dot-0-on-pc-and-xbox-series-x-s-3476160" className="underline">publisher&apos;s 1.0 press release</a>. Official video by Lightyear Frontier. If the player is unavailable, use the YouTube link above.</p>
         </section>
 
         <section id="sources" className="mb-10 rounded-lg border border-border p-5 scroll-mt-20">
